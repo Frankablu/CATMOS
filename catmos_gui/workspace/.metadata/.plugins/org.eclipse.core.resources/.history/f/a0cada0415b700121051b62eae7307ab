@@ -1,0 +1,79 @@
+
+	/*
+ * 
+ */
+package Scenario.diagram.sheet;
+
+/**
+ * @generated
+ */
+public class ScenarioSheetLabelProvider extends org.eclipse.jface.viewers.BaseLabelProvider implements org.eclipse.jface.viewers.ILabelProvider {
+
+
+	/**
+ * @generated
+ */
+	public String getText(Object element) {
+		element = unwrap(element);
+		if (element instanceof Scenario.diagram.navigator.ScenarioNavigatorGroup) {
+			return ((Scenario.diagram.navigator.ScenarioNavigatorGroup) element).getGroupName();
+		}
+		org.eclipse.gmf.runtime.emf.type.core.IElementType etype = getElementType(getView(element));
+		return etype == null ? "" : etype.getDisplayName();
+	}
+
+
+	/**
+ * @generated
+ */
+	public org.eclipse.swt.graphics.Image getImage(Object element) {
+		org.eclipse.gmf.runtime.emf.type.core.IElementType etype = getElementType(getView(unwrap(element)));
+		return etype == null ? null : Scenario.diagram.providers.ScenarioElementTypes.getImage(etype);
+	}
+
+
+	/**
+ * @generated
+ */
+	private Object unwrap(Object element) {
+		if (element instanceof org.eclipse.jface.viewers.IStructuredSelection) {
+			return ((org.eclipse.jface.viewers.IStructuredSelection) element).getFirstElement();
+		}
+		return element;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.notation.View getView(Object element) {
+		if (element instanceof org.eclipse.gmf.runtime.notation.View) {
+			return (org.eclipse.gmf.runtime.notation.View) element;
+		}
+		if (element instanceof org.eclipse.core.runtime.IAdaptable) {
+			return (org.eclipse.gmf.runtime.notation.View)
+					((org.eclipse.core.runtime.IAdaptable) element).getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+		}
+		return null;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.emf.type.core.IElementType getElementType(org.eclipse.gmf.runtime.notation.View view) {
+		// For intermediate views climb up the containment hierarchy to find the one associated with an element type.
+		while (view != null) {
+			int vid = Scenario.diagram.part.ScenarioVisualIDRegistry.getVisualID(view);
+			org.eclipse.gmf.runtime.emf.type.core.IElementType etype =
+					Scenario.diagram.providers.ScenarioElementTypes.getElementType(vid);
+			if (etype != null) {
+				return etype;
+			}
+			view = view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View ?
+					(org.eclipse.gmf.runtime.notation.View) view.eContainer() : null;
+		}
+		return null;
+	}
+
+
+
+}

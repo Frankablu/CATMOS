@@ -1,0 +1,154 @@
+
+FindTradeOffs DataCenter
+{
+	popSize 100
+	genCount 100
+	
+	ExistingComponent Room 1
+	
+	AcquirableComponent ServerCabinet24u 16
+	AcquirableComponent ServerBladeCPU 100
+	AcquirableComponent ServerBladeStorage 100
+	AcquirableComponent CoolingSystem 1
+	
+	DesireLow "Money"
+}
+
+searchObjective
+Capability cpuUnits
+{
+	accumulation coreCount
+	
+	Measurement coreCount
+	{
+		criticalValue 0.0
+		benchmarkValue 100.0
+	}
+}
+
+searchObjective
+Capability storageUnits
+{
+	accumulation terraBytesStorage
+	
+	Measurement terraBytesStorage
+	{
+		criticalValue 0.0
+		benchmarkValue 50.0
+	}
+}
+
+standAlone
+searchObjective
+Capability sufficentCooling
+{
+	Measurement coolingDifference
+	{
+		criticalValue 0.0
+		benchmarkValue 2000.0
+		
+		script "output = getGlobalMeasure(\"coolingWatts\") - getGlobalMeasure(\"powerConsumption\")"
+	}
+}
+
+standAlone
+Capability powerUsage
+{
+	Measurement totalPowerUsage
+	{
+		criticalValue 10000.0
+		benchmarkValue 0.0
+		
+		script "power = getAllMeasures(\"powerConsumption\") output = 0.0 for i,v in ipairs(power) do output = output + v end"
+	}
+}
+
+Capability cooling
+{
+	Measurement coolingWatts
+	{
+		criticalValue 0.0
+		benchmarkValue 10000.0
+	}
+}
+
+Component Room
+{
+	CapabilityProvision CabinetSpace
+	{
+		reuse 16
+	}
+}
+
+Component ServerCabinet24u
+{
+	CapabilityProvision RackSpace
+	{
+		reuse 24
+	}
+	
+	Capability CabinetSpace {}
+	Cost Money 500.0
+}
+
+Component ServerBladeCPU
+{
+	CapabilityProvision cpuUnits
+	{
+		reuse 1
+		
+		Measurement coreCount
+		{
+			providedValue 16.0
+		}
+	}
+	
+	CapabilityProvision powerUsage
+	{
+		Measurement powerConsumption
+		{
+			providedValue 100.0
+		}
+	}
+	
+	Capability RackSpace {}
+	Cost Money 5000.0
+}
+
+Component ServerBladeStorage
+{
+	CapabilityProvision storageUnits
+	{
+		reuse 1
+		
+		Measurement terraBytesStorage
+		{
+			providedValue 10.0
+		}
+	}
+	
+	CapabilityProvision powerUsage
+	{
+		Measurement powerConsumption
+		{
+			providedValue 150.0
+		}
+	}
+	
+	Capability RackSpace {}
+	Cost Money 8000.0
+}
+
+Component CoolingSystem
+{
+	CapabilityProvision cooling
+	{
+		Measurement coolingWatts
+		{
+			providedValue 20000.0
+		}
+	}
+	
+	Cost Money 10000.0
+}
+

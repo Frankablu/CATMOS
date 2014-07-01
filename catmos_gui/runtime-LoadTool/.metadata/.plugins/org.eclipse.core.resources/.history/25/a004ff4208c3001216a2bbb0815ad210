@@ -1,0 +1,4 @@
+
+
+var runTool = new Native("org.eclipse.epsilon.examples.tools.RunTool");
+runTool.connectToNetworkClient("127.0.0.1", 11100);

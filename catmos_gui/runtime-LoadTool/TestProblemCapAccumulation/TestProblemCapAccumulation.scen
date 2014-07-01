@@ -1,0 +1,60 @@
+
+//This problem is just to test capability accumulation
+FindTradeOffs TestProblemCapAccumulation
+{
+	popSize 100
+	genCount 100
+	
+	AcquirableComponent FireFightingTruck 1
+	AcquirableComponent "Fire sprinkler" 1
+	AcquirableComponent "Fire extinguisher" 1
+	
+	DesireLow "Money"
+}
+
+searchObjective
+Capability FireFightingForce
+{
+	accumulation waterFlow
+	Measurement waterFlow
+	{
+		criticalValue 100.0
+		benchmarkValue 750.0
+	}
+}
+
+Component FireFightingTruck
+{
+	CapabilityProvision FireFightingForce
+	{
+		reuse 1
+		Measurement waterFlow
+		{
+			providedValue 400.0
+		}
+	}
+}
+
+Component "Fire sprinkler"
+{
+	CapabilityProvision FireFightingForce
+	{
+		reuse 1
+		Measurement waterFlow
+		{
+			providedValue 200.0
+		}
+	}
+}
+
+Component "Fire extinguisher"
+{
+	CapabilityProvision FireFightingForce
+	{
+		reuse 1
+		Measurement waterFlow
+		{
+			providedValue 50.0
+		}
+	}
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="ScenarioModel">
+  <OurObjects xsi:type="p:Capability" name="ourMainGoal" searchObjective="true" startDate="0" endDate="334" status="0.814371" colour="Red" satisfiedBy="//@OurObjects.2/@provides.0">
+    <measurements name="satisfactionLevel" criticalValue="5.0" benchmarkValue="20.0" providedValue="7.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="myGlobalMeasure" searchObjective="true" standAlone="true" startDate="119" endDate="334" status="0.0" colour="Red">
+    <measurements name="globalMeasurement" criticalValue="4.0" benchmarkValue="5.0" providedValue="5.0" script="output = getAllMeasures(&quot;globalMeasure&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentB" startDate="1" endDate="361">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="7.0"/>
+    </provides>
+    <requires name="supportSystem" startDate="-1" endDate="-1" satisfiedBy="//@OurObjects.3/@provides.0">
+      <measurements name="SupportLevel">
+        <criticalValues name="not good"/>
+        <benchmarkValues name="good"/>
+        <providedValues name="not good"/>
+      </measurements>
+    </requires>
+    <costs name="Money" amount="15.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentC" startDate="1" endDate="241">
+    <provides xsi:type="p:CapabilityProvision" name="supportSystem" satisfies="//@OurObjects.2/@requires.0">
+      <measurements name="SupportLevel">
+        <providedValues name="not good"/>
+      </measurements>
+    </provides>
+    <upgrades name="ourUpgrade" targetComponent="ComponentB" upgrading="//@OurObjects.2">
+      <capabilityChanges name="add"/>
+    </upgrades>
+    <costs name="Money" amount="15.0"/>
+  </OurObjects>
+</p:Scenario>

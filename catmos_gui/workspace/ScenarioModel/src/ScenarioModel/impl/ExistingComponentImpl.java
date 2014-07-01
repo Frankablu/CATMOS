@@ -1,0 +1,236 @@
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+package ScenarioModel.impl;
+
+import ScenarioModel.ExistingComponent;
+import ScenarioModel.ScenarioModelPackage;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Existing Component</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link ScenarioModel.impl.ExistingComponentImpl#getStartDate <em>Start Date</em>}</li>
+ *   <li>{@link ScenarioModel.impl.ExistingComponentImpl#getEndDate <em>End Date</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class ExistingComponentImpl extends ComponentUImpl implements ExistingComponent
+{
+  /**
+   * The default value of the '{@link #getStartDate() <em>Start Date</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getStartDate()
+   * @generated
+   * @ordered
+   */
+  protected static final String START_DATE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getStartDate() <em>Start Date</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getStartDate()
+   * @generated
+   * @ordered
+   */
+  protected String startDate = START_DATE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getEndDate() <em>End Date</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getEndDate()
+   * @generated
+   * @ordered
+   */
+  protected static final String END_DATE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getEndDate() <em>End Date</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getEndDate()
+   * @generated
+   * @ordered
+   */
+  protected String endDate = END_DATE_EDEFAULT;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected ExistingComponentImpl()
+  {
+    super();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  protected EClass eStaticClass()
+  {
+    return ScenarioModelPackage.Literals.EXISTING_COMPONENT;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getStartDate()
+  {
+    return startDate;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setStartDate(String newStartDate)
+  {
+    String oldStartDate = startDate;
+    startDate = newStartDate;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ScenarioModelPackage.EXISTING_COMPONENT__START_DATE, oldStartDate, startDate));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getEndDate()
+  {
+    return endDate;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setEndDate(String newEndDate)
+  {
+    String oldEndDate = endDate;
+    endDate = newEndDate;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ScenarioModelPackage.EXISTING_COMPONENT__END_DATE, oldEndDate, endDate));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Object eGet(int featureID, boolean resolve, boolean coreType)
+  {
+    switch (featureID)
+    {
+      case ScenarioModelPackage.EXISTING_COMPONENT__START_DATE:
+        return getStartDate();
+      case ScenarioModelPackage.EXISTING_COMPONENT__END_DATE:
+        return getEndDate();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eSet(int featureID, Object newValue)
+  {
+    switch (featureID)
+    {
+      case ScenarioModelPackage.EXISTING_COMPONENT__START_DATE:
+        setStartDate((String)newValue);
+        return;
+      case ScenarioModelPackage.EXISTING_COMPONENT__END_DATE:
+        setEndDate((String)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eUnset(int featureID)
+  {
+    switch (featureID)
+    {
+      case ScenarioModelPackage.EXISTING_COMPONENT__START_DATE:
+        setStartDate(START_DATE_EDEFAULT);
+        return;
+      case ScenarioModelPackage.EXISTING_COMPONENT__END_DATE:
+        setEndDate(END_DATE_EDEFAULT);
+        return;
+    }
+    super.eUnset(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public boolean eIsSet(int featureID)
+  {
+    switch (featureID)
+    {
+      case ScenarioModelPackage.EXISTING_COMPONENT__START_DATE:
+        return START_DATE_EDEFAULT == null ? startDate != null : !START_DATE_EDEFAULT.equals(startDate);
+      case ScenarioModelPackage.EXISTING_COMPONENT__END_DATE:
+        return END_DATE_EDEFAULT == null ? endDate != null : !END_DATE_EDEFAULT.equals(endDate);
+    }
+    return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (startDate: ");
+    result.append(startDate);
+    result.append(", endDate: ");
+    result.append(endDate);
+    result.append(')');
+    return result.toString();
+  }
+
+} //ExistingComponentImpl

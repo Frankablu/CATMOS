@@ -1,0 +1,172 @@
+	/*
+ * 
+ */
+package Scenario.diagram.edit.policies;
+
+/**
+ * @generated
+ */
+public class Measurement2ItemSemanticEditPolicy extends Scenario.diagram.edit.policies.ScenarioBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public Measurement2ItemSemanticEditPolicy() {
+				super(Scenario.diagram.providers.ScenarioElementTypes.Measurement_3026);
+	}
+
+	
+	/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getDestroyElementCommand(org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest req) {
+	org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) getHost().getModel();
+	org.eclipse.gmf.runtime.emf.commands.core.command.CompositeTransactionalCommand cmd = new org.eclipse.gmf.runtime.emf.commands.core.command.CompositeTransactionalCommand(getEditingDomain(), null);
+	cmd.setTransactionNestingEnabled(false);
+		for (java.util.Iterator<?> it = view.getTargetEdges().iterator(); it.hasNext();) {
+		org.eclipse.gmf.runtime.notation.Edge incomingLink = (org.eclipse.gmf.runtime.notation.Edge) it.next();
+		if (Scenario.diagram.part.ScenarioVisualIDRegistry.getVisualID(incomingLink) == Scenario.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID) {
+			org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest r = new org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest(incomingLink.getSource().getElement(), null, incomingLink.getTarget().getElement(), false);
+			cmd.add(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyReferenceCommand(r));
+			cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), incomingLink));
+			continue;
+		}
+		if (Scenario.diagram.part.ScenarioVisualIDRegistry.getVisualID(incomingLink) == Scenario.diagram.edit.parts.MeasurementAggregatesEditPart.VISUAL_ID) {
+			org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest r = new org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest(incomingLink.getSource().getElement(), null, incomingLink.getTarget().getElement(), false);
+			cmd.add(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyReferenceCommand(r));
+			cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), incomingLink));
+			continue;
+		}
+	}
+	for (java.util.Iterator<?> it = view.getSourceEdges().iterator(); it.hasNext();) {
+		org.eclipse.gmf.runtime.notation.Edge outgoingLink = (org.eclipse.gmf.runtime.notation.Edge) it.next();
+		if (Scenario.diagram.part.ScenarioVisualIDRegistry.getVisualID(outgoingLink) == Scenario.diagram.edit.parts.MeasurementAggregatesEditPart.VISUAL_ID) {
+			org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest r = new org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest(outgoingLink.getSource().getElement(), null, outgoingLink.getTarget().getElement(), false);
+			cmd.add(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyReferenceCommand(r));
+			cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), outgoingLink));
+			continue;
+		}
+	}
+	org.eclipse.emf.ecore.EAnnotation annotation = view.getEAnnotation("Shortcut"); //$NON-NLS-1$
+	if (annotation == null) {
+		// there are indirectly referenced children, need extra commands: false
+		addDestroyChildNodesCommand(cmd);
+		addDestroyShortcutsCommand(cmd, view);
+		// delete host element
+		cmd.add(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand(req));
+	} else {
+		cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), view));
+	}
+	return getGEFWrapper(cmd.reduce());
+}
+			
+	/**
+ * @generated
+ */
+	private void addDestroyChildNodesCommand(org.eclipse.gmf.runtime.common.core.command.ICompositeCommand cmd) {
+		org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) getHost().getModel();
+		for (java.util.Iterator<?> nit = view.getChildren().iterator(); nit.hasNext();) {
+			org.eclipse.gmf.runtime.notation.Node node = (org.eclipse.gmf.runtime.notation.Node) nit.next();
+			switch (Scenario.diagram.part.ScenarioVisualIDRegistry.getVisualID(node)) {
+									case Scenario.diagram.edit.parts.MeasurementMeasurementCriticalValuesCompartment2EditPart.VISUAL_ID:
+				for (java.util.Iterator<?> cit = node.getChildren().iterator(); cit.hasNext();) {
+					org.eclipse.gmf.runtime.notation.Node cnode = (org.eclipse.gmf.runtime.notation.Node) cit.next();
+					switch (Scenario.diagram.part.ScenarioVisualIDRegistry.getVisualID(cnode)) {
+					case Scenario.diagram.edit.parts.QualitativeValueEditPart.VISUAL_ID:
+		cmd.add(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand(new org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest(getEditingDomain(), cnode.getElement(), false))); // directlyOwned: true
+	// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
+	// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
+	break;
+					}
+				}
+				break;
+						case Scenario.diagram.edit.parts.MeasurementMeasurementBenchmarkValuesCompartment2EditPart.VISUAL_ID:
+				for (java.util.Iterator<?> cit = node.getChildren().iterator(); cit.hasNext();) {
+					org.eclipse.gmf.runtime.notation.Node cnode = (org.eclipse.gmf.runtime.notation.Node) cit.next();
+					switch (Scenario.diagram.part.ScenarioVisualIDRegistry.getVisualID(cnode)) {
+					case Scenario.diagram.edit.parts.QualitativeValue2EditPart.VISUAL_ID:
+		cmd.add(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand(new org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest(getEditingDomain(), cnode.getElement(), false))); // directlyOwned: true
+	// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
+	// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
+	break;
+					}
+				}
+				break;
+						case Scenario.diagram.edit.parts.MeasurementMeasurementProvidedValuesCompartment2EditPart.VISUAL_ID:
+				for (java.util.Iterator<?> cit = node.getChildren().iterator(); cit.hasNext();) {
+					org.eclipse.gmf.runtime.notation.Node cnode = (org.eclipse.gmf.runtime.notation.Node) cit.next();
+					switch (Scenario.diagram.part.ScenarioVisualIDRegistry.getVisualID(cnode)) {
+					case Scenario.diagram.edit.parts.QualitativeValue3EditPart.VISUAL_ID:
+		cmd.add(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand(new org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest(getEditingDomain(), cnode.getElement(), false))); // directlyOwned: true
+	// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
+	// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
+	break;
+					}
+				}
+				break;
+						}
+		}
+	}
+					
+/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getCreateRelationshipCommand(
+		org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest req) {
+	org.eclipse.gef.commands.Command command = req.getTarget() == null ?
+			getStartCreateRelationshipCommand(req) : getCompleteCreateRelationshipCommand(req);
+	return command != null ? command : super.getCreateRelationshipCommand(req);
+}
+
+/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getStartCreateRelationshipCommand(
+		org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest req) {
+	if (Scenario.diagram.providers.ScenarioElementTypes.CapabilityAccumulation_4001 == req.getElementType()) {
+		return null;
+	}
+if (Scenario.diagram.providers.ScenarioElementTypes.MeasurementAggregates_4004 == req.getElementType()) {
+		return getGEFWrapper(new Scenario.diagram.edit.commands.MeasurementAggregatesCreateCommand(req,
+					req.getSource(), req.getTarget()
+			));
+	}
+	return null;
+}
+
+/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getCompleteCreateRelationshipCommand(
+		org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest req) {
+	if (Scenario.diagram.providers.ScenarioElementTypes.CapabilityAccumulation_4001 == req.getElementType()) {
+		return getGEFWrapper(new Scenario.diagram.edit.commands.CapabilityAccumulationCreateCommand(req,
+					req.getSource(), req.getTarget()
+			));
+	}
+if (Scenario.diagram.providers.ScenarioElementTypes.MeasurementAggregates_4004 == req.getElementType()) {
+		return getGEFWrapper(new Scenario.diagram.edit.commands.MeasurementAggregatesCreateCommand(req,
+					req.getSource(), req.getTarget()
+			));
+	}
+	return null;
+}
+					
+/**
+ * Returns command to reorient EReference based link. New link target or source
+ * should be the domain model element associated with this node.
+ * 
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getReorientReferenceRelationshipCommand(
+		org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelationshipRequest req) {
+	switch (getVisualID(req)) {
+	case Scenario.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID:
+	return getGEFWrapper(new Scenario.diagram.edit.commands.CapabilityAccumulationReorientCommand(req));
+case Scenario.diagram.edit.parts.MeasurementAggregatesEditPart.VISUAL_ID:
+	return getGEFWrapper(new Scenario.diagram.edit.commands.MeasurementAggregatesReorientCommand(req));
+	}
+	return super.getReorientReferenceRelationshipCommand(req);
+}
+	
+	}

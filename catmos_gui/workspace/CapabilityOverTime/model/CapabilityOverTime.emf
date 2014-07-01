@@ -1,0 +1,77 @@
+@namespace(
+	uri="CapOverTime",
+	prefix="p")
+package CapOverTime;
+
+@gmf.diagram(foo="bar")
+class CapabilityOverTime
+{
+	@gmf.compartment(foo="bar")
+	val TimePeriod[*] timePeriods;
+}
+
+@gmf.node(label="startDate,endDate",label.pattern="{0} - {1}")
+class TimePeriod
+{
+	attr String name;
+	attr String startDate;
+	attr String endDate;
+    
+    @gmf.compartment(foo="bar")
+    val OurObject[*] ourObjects;
+}
+
+class OurObject
+{
+   
+}
+
+@gmf.node(label="name,colour",label.pattern="{0} : {1}")
+class Capability extends OurObject
+{
+   attr String name;
+   attr Boolean searchObjective;
+   attr Boolean standAlone; //Nothing satisfies
+   attr Integer reuse;
+   attr String startDate;
+   attr String endDate;
+   attr Float status;
+   attr String colour;
+   
+   @gmf.link(target.decoration="arrow", style="dash", color="0,0,255")
+   ref Measurement[0..1] accumulation;
+   
+   @gmf.compartment(foo="bar")
+   val Measurement[*] measurements;
+   
+   @gmf.link(target.decoration="arrow", style="dash", color="0,0,255")
+   ref Capability[*] decomposes;
+   
+   ref Capability[*]#satisfies satisfiedBy;
+   @gmf.link(target.decoration="arrow", style="dash", color="0,0,255")
+   ref Capability[*]#satisfiedBy satisfies;
+}
+
+@gmf.node(label="name")
+class Measurement
+{
+   attr String name;
+   attr Float criticalValue;
+   attr Float benchmarkValue;
+   attr Float providedValue;
+   
+   @gmf.compartment(foo="bar")
+   val QualitativeValue[*] criticalValues;
+   @gmf.compartment(foo="bar")
+   val QualitativeValue[*] benchmarkValues;
+   @gmf.compartment(foo="bar")
+   val QualitativeValue[*] providedValues;
+   
+   attr String script;
+}
+
+@gmf.node(label="name")
+class QualitativeValue
+{
+   attr String name;
+}

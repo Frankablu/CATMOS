@@ -1,0 +1,308 @@
+	/*
+ * 
+ */
+package capOverTime.diagram.part;
+
+	/**
+ * @generated
+ */
+public class CapOverTimeDiagramEditor  extends org.eclipse.gmf.runtime.diagram.ui.resources.editor.parts.DiagramDocumentEditor implements org.eclipse.ui.ide.IGotoMarker {
+
+		/**
+ * @generated
+ */
+public static final String ID = "capOverTime.diagram.part.CapOverTimeDiagramEditorID";  //$NON-NLS-1$
+	
+	/**
+ * @generated
+ */
+public static final String CONTEXT_ID = "capOverTime.diagram.ui.diagramContext";  //$NON-NLS-1$
+	
+		/**
+ * @generated
+ */
+public CapOverTimeDiagramEditor() {
+	super(true);
+}
+	
+		/**
+ * @generated
+ */
+protected String getContextID() {
+	return CONTEXT_ID;
+}
+	
+	/**
+ * @generated
+ */
+protected org.eclipse.gef.palette.PaletteRoot createPaletteRoot(org.eclipse.gef.palette.PaletteRoot existingPaletteRoot) {
+	org.eclipse.gef.palette.PaletteRoot root = super.createPaletteRoot(existingPaletteRoot);
+	new capOverTime.diagram.part.CapOverTimePaletteFactory().fillPalette(root);
+	return root;
+}
+	
+		/**
+ * @generated
+ */
+protected org.eclipse.gmf.runtime.diagram.core.preferences.PreferencesHint getPreferencesHint() {
+	return capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT;
+}
+	
+		/**
+ * @generated
+ */
+public String getContributorId() {
+	return capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.ID;
+}
+		
+/**
+ * @generated
+ */
+@SuppressWarnings("rawtypes")
+public Object getAdapter(Class type) {
+			if (type == org.eclipse.ui.part.IShowInTargetList.class) {
+		return new org.eclipse.ui.part.IShowInTargetList() {
+			public String[] getShowInTargetIds() {
+				return new String[] { org.eclipse.ui.navigator.resources.ProjectExplorer.VIEW_ID };
+			}
+		};
+	}
+		return super.getAdapter(type);
+}
+	
+		/**
+ * @generated
+ */
+protected org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDocumentProvider getDocumentProvider(org.eclipse.ui.IEditorInput input) {
+	if (input instanceof org.eclipse.ui.IFileEditorInput || input instanceof org.eclipse.emf.common.ui.URIEditorInput) {
+		return capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().getDocumentProvider();
+	}
+	return super.getDocumentProvider(input);
+}
+	
+		/**
+ * @generated
+ */
+public org.eclipse.emf.transaction.TransactionalEditingDomain getEditingDomain() {
+	org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDocument document = getEditorInput() != null ? getDocumentProvider().getDocument(getEditorInput()) : null;
+	if (document instanceof org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDiagramDocument) {
+		return ((org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDiagramDocument) document).getEditingDomain();
+	}
+	return super.getEditingDomain();
+}
+	
+		/**
+ * @generated
+ */
+protected void setDocumentProvider(org.eclipse.ui.IEditorInput input) {
+	if (input instanceof org.eclipse.ui.IFileEditorInput || input instanceof org.eclipse.emf.common.ui.URIEditorInput) {
+		setDocumentProvider(capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().getDocumentProvider());
+	} else {
+		super.setDocumentProvider(input);
+	}
+}
+		
+			/**
+ * @generated
+ */
+public void gotoMarker(org.eclipse.core.resources.IMarker marker) {
+	org.eclipse.gmf.runtime.common.ui.services.marker.MarkerNavigationService.getInstance().gotoMarker(this, marker);
+}
+		
+			/**
+ * @generated
+ */
+public boolean isSaveAsAllowed() {
+	return true;
+}
+		
+			/**
+ * @generated
+ */
+public void doSaveAs() {
+	performSaveAs(new org.eclipse.core.runtime.NullProgressMonitor());
+}
+		
+			/**
+ * @generated
+ */
+protected void performSaveAs(org.eclipse.core.runtime.IProgressMonitor progressMonitor) {
+	org.eclipse.swt.widgets.Shell shell = getSite().getShell();
+	org.eclipse.ui.IEditorInput input = getEditorInput();
+	org.eclipse.ui.dialogs.SaveAsDialog dialog = new org.eclipse.ui.dialogs.SaveAsDialog(shell);
+	org.eclipse.core.resources.IFile original = input instanceof org.eclipse.ui.IFileEditorInput ? ((org.eclipse.ui.IFileEditorInput) input).getFile() : null;
+	if (original != null) {
+		dialog.setOriginalFile(original);
+	}
+	dialog.create();
+	org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDocumentProvider provider = getDocumentProvider();
+	if (provider == null) {
+		// editor has been programmatically closed while the dialog was open
+		return;
+	}
+	if (provider.isDeleted(input) && original != null) {
+		String message = org.eclipse.osgi.util.NLS.bind(capOverTime.diagram.part.Messages.CapOverTimeDiagramEditor_SavingDeletedFile, original.getName());
+		dialog.setErrorMessage(null);
+		dialog.setMessage(message, org.eclipse.jface.dialogs.IMessageProvider.WARNING);
+	}
+	if (dialog.open() == org.eclipse.jface.window.Window.CANCEL) {
+		if (progressMonitor != null) {
+			progressMonitor.setCanceled(true);
+		}
+		return;
+	}
+	org.eclipse.core.runtime.IPath filePath = dialog.getResult();
+	if (filePath == null) {
+		if (progressMonitor != null) {
+			progressMonitor.setCanceled(true);
+		}
+		return;
+	}
+	org.eclipse.core.resources.IWorkspaceRoot workspaceRoot = org.eclipse.core.resources.ResourcesPlugin.getWorkspace().getRoot();
+	org.eclipse.core.resources.IFile file = workspaceRoot.getFile(filePath);
+	final org.eclipse.ui.IEditorInput newInput = new org.eclipse.ui.part.FileEditorInput(file);
+	// Check if the editor is already open
+	org.eclipse.ui.IEditorMatchingStrategy matchingStrategy = getEditorDescriptor().getEditorMatchingStrategy();
+	org.eclipse.ui.IEditorReference[] editorRefs = org.eclipse.ui.PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getEditorReferences();
+	for (int i = 0; i < editorRefs.length; i++) {
+		if (matchingStrategy.matches(editorRefs[i], newInput)) {
+			org.eclipse.jface.dialogs.MessageDialog.openWarning(shell, capOverTime.diagram.part.Messages.CapOverTimeDiagramEditor_SaveAsErrorTitle, capOverTime.diagram.part.Messages.CapOverTimeDiagramEditor_SaveAsErrorMessage);
+			return;
+		}
+	}
+	boolean success = false;
+	try {
+		provider.aboutToChange(newInput);
+		getDocumentProvider(newInput).saveDocument(progressMonitor, newInput, getDocumentProvider().getDocument(getEditorInput()), true);
+		success = true;
+	} catch (org.eclipse.core.runtime.CoreException x) {
+		org.eclipse.core.runtime.IStatus status = x.getStatus();
+		if (status == null || status.getSeverity() != org.eclipse.core.runtime.IStatus.CANCEL) {
+			org.eclipse.jface.dialogs.ErrorDialog.openError(shell, capOverTime.diagram.part.Messages.CapOverTimeDiagramEditor_SaveErrorTitle, capOverTime.diagram.part.Messages.CapOverTimeDiagramEditor_SaveErrorMessage, x.getStatus());
+		}
+	} finally {
+		provider.changed(newInput);
+		if (success) {
+			setInput(newInput);
+		}
+	}
+	if (progressMonitor != null) {
+		progressMonitor.setCanceled(!success);
+	}
+}
+		
+			/**
+ * @generated
+ */
+public org.eclipse.ui.part.ShowInContext getShowInContext() {
+	return new org.eclipse.ui.part.ShowInContext(getEditorInput(), getNavigatorSelection());
+}
+			
+	/**
+ * @generated
+ */
+private org.eclipse.jface.viewers.ISelection getNavigatorSelection() {
+	org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDiagramDocument document = getDiagramDocument();
+		if (document == null) {
+	return org.eclipse.jface.viewers.StructuredSelection.EMPTY;
+}
+org.eclipse.gmf.runtime.notation.Diagram diagram = document.getDiagram();
+if (diagram == null || diagram.eResource() == null) {
+	return org.eclipse.jface.viewers.StructuredSelection.EMPTY;
+}
+org.eclipse.core.resources.IFile file = org.eclipse.emf.workspace.util.WorkspaceSynchronizer.getFile(diagram.eResource());
+if (file != null) {
+		capOverTime.diagram.navigator.CapOverTimeNavigatorItem item = new capOverTime.diagram.navigator.CapOverTimeNavigatorItem(diagram, file, false);
+		return new org.eclipse.jface.viewers.StructuredSelection(item);
+}
+	return org.eclipse.jface.viewers.StructuredSelection.EMPTY;
+}
+	
+		/**
+ * @generated
+ */
+	protected void configureGraphicalViewer() {
+		super.configureGraphicalViewer();
+		capOverTime.diagram.part.DiagramEditorContextMenuProvider provider =
+				new capOverTime.diagram.part.DiagramEditorContextMenuProvider(this, getDiagramGraphicalViewer());
+		getDiagramGraphicalViewer().setContextMenu(provider);
+		getSite().registerContextMenu(org.eclipse.gmf.runtime.diagram.ui.actions.ActionIds.DIAGRAM_EDITOR_CONTEXT_MENU, provider, getDiagramGraphicalViewer());
+	}
+
+		
+			/**
+ * @generated
+ */
+protected void initializeGraphicalViewer() {
+	super.initializeGraphicalViewer();
+	getDiagramGraphicalViewer().addDropTargetListener(new DropTargetListener(getDiagramGraphicalViewer(), org.eclipse.jface.util.LocalSelectionTransfer.getTransfer()) {
+
+	protected Object getJavaObject(org.eclipse.swt.dnd.TransferData data) {
+		return org.eclipse.jface.util.LocalSelectionTransfer.getTransfer().nativeToJava(data);
+	}
+
+});
+	getDiagramGraphicalViewer().addDropTargetListener(new DropTargetListener(getDiagramGraphicalViewer(), org.eclipse.emf.edit.ui.dnd.LocalTransfer.getInstance()) {
+
+	protected Object getJavaObject(org.eclipse.swt.dnd.TransferData data) {
+		return org.eclipse.emf.edit.ui.dnd.LocalTransfer.getInstance().nativeToJava(data);
+	}
+
+});
+}
+		
+			/**
+ * @generated
+ */
+private abstract class DropTargetListener extends org.eclipse.gmf.runtime.diagram.ui.parts.DiagramDropTargetListener {
+
+		/**
+ * @generated
+ */
+public DropTargetListener(org.eclipse.gef.EditPartViewer viewer, org.eclipse.swt.dnd.Transfer xfer) {
+	super(viewer, xfer);
+}
+
+		/**
+ * @generated
+ */
+protected java.util.List getObjectsBeingDropped() {
+	org.eclipse.swt.dnd.TransferData data = getCurrentEvent().currentDataType;
+	java.util.HashSet<org.eclipse.emf.common.util.URI> uris = new java.util.HashSet<org.eclipse.emf.common.util.URI>();
+
+	Object transferedObject = getJavaObject(data);
+	if (transferedObject instanceof org.eclipse.jface.viewers.IStructuredSelection) {
+		org.eclipse.jface.viewers.IStructuredSelection selection = (org.eclipse.jface.viewers.IStructuredSelection) transferedObject;
+		for (java.util.Iterator<?> it = selection.iterator(); it.hasNext();) {
+			Object nextSelectedObject = it.next();
+			if (nextSelectedObject instanceof capOverTime.diagram.navigator.CapOverTimeNavigatorItem) {
+				org.eclipse.gmf.runtime.notation.View view = ((capOverTime.diagram.navigator.CapOverTimeNavigatorItem) nextSelectedObject).getView();
+				nextSelectedObject = view.getElement();
+			} else if (nextSelectedObject instanceof org.eclipse.core.runtime.IAdaptable) {
+				org.eclipse.core.runtime.IAdaptable adaptable = (org.eclipse.core.runtime.IAdaptable) nextSelectedObject;
+				nextSelectedObject = adaptable.getAdapter(org.eclipse.emf.ecore.EObject.class);
+			}
+
+			if (nextSelectedObject instanceof org.eclipse.emf.ecore.EObject) {
+				org.eclipse.emf.ecore.EObject modelElement = (org.eclipse.emf.ecore.EObject) nextSelectedObject;
+				uris.add(org.eclipse.emf.ecore.util.EcoreUtil.getURI(modelElement));	
+			}
+		}
+	}
+
+	java.util.ArrayList<org.eclipse.emf.ecore.EObject> result = new java.util.ArrayList<org.eclipse.emf.ecore.EObject>(uris.size());
+	for (org.eclipse.emf.common.util.URI nextURI : uris) {
+		org.eclipse.emf.ecore.EObject modelObject = getEditingDomain().getResourceSet().getEObject(nextURI, true);
+		result.add(modelObject);
+	}
+	return result;
+}
+
+		/**
+ * @generated
+ */
+protected abstract Object getJavaObject(org.eclipse.swt.dnd.TransferData data);
+
+	}
+	
+	}

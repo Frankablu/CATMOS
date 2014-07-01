@@ -1,0 +1,80 @@
+
+FindTradeOffs NextReleaseProblem
+{
+	popSize 100
+	genCount 100
+	
+	AcquirableComponent ComponentA 1
+	AcquirableComponent ComponentB 1
+	AcquirableComponent ComponentC 1
+	
+	DesireLow "Money"
+}
+
+searchObjective
+Capability ourMainGoal
+{
+	Measurement satisfactionLevel
+	{
+		criticalValue 1.0
+		benchmarkValue 10.0 
+	}
+}
+
+Component ComponentA
+{
+	CapabilityProvision ourMainGoal
+	{
+		Measurement satisfactionLevel
+		{
+			providedValue 0.0
+			script "output = 7"
+		}
+	}
+	
+	Cost Money 10.0
+}
+
+Component ComponentB
+{	
+	Capability supportSystem
+	{
+		Measurement SupportLevel
+		{
+			criticalValues ("not good")
+			benchmarkValues ("good")
+		}
+	}
+	
+	Cost Money 15.0
+}
+
+Component ComponentC
+{
+	CapabilityProvision supportSystem
+	{
+		Measurement SupportLevel
+		{
+			providedValues ("not good")
+		}
+	}
+	
+	CapabilityUpgrade ourUpgrade
+	{
+		targetComponent ComponentB
+		
+		CapabilityChange 'add'
+		{
+			CapabilityProvision ourMainGoal
+			{
+				Measurement satisfactionLevel
+				{
+					providedValue 15.0
+				}
+			}
+		}
+		
+	}
+	
+	Cost Money 15.0
+}

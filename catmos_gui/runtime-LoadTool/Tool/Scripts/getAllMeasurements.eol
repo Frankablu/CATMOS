@@ -1,0 +1,19 @@
+
+var runTool = new Native("org.eclipse.epsilon.examples.tools.RunTool");
+
+var name : String = RunConfiguration.all().first.name;
+var solutionList : Bag = 0.to(internal!ValuePair.all().selectOne(x|x.name=="NumberOfSolutions").value.asInteger());
+
+for (num in solutionList)
+{
+	runTool.setupEOL();
+	runTool.eolLoadModel("scenario","/"+name+"/Results/Solution"+num.asString()+".ScenarioModel","ScenarioModel","rw");
+	if (internal!ValuePair.all().selectOne(x|x.name == "ThroughLife").value == "true")
+	{
+		runTool.eolLoadModel("capovertime","/"+name+"/Results/Solution"+num.asString()+".capovertime","CapOverTime","rw");
+	}
+	runTool.eolLoadModel("internal","/Tool/Models/Internal.internalusage","internalusage","rw");
+	runTool.eolLoadModel("ourScenario","/"+name+"/"+name+".scen","ScenarioModel","r");
+	runTool.runEOL("/Tool/Scripts/getMeasurements.eol");
+}
+

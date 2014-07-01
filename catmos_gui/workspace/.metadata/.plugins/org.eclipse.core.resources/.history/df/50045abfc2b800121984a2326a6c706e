@@ -1,0 +1,28 @@
+/*
+ * 
+ */
+package capOverTime.diagram.providers;
+
+/**
+ * @generated
+ */
+public class ElementInitializers {
+
+	protected ElementInitializers() {
+		// use #getInstance to access cached instance
+	} 
+
+			
+	
+	
+	/**
+ * @generated
+ */
+	public static ElementInitializers getInstance() {
+		ElementInitializers cached = capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().getElementInitializers();
+		if (cached == null) {
+			capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().setElementInitializers(cached = new ElementInitializers());
+		}
+		return cached;
+	}
+}

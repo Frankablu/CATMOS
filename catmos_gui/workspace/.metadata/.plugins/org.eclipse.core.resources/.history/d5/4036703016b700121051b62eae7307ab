@@ -1,0 +1,28 @@
+/*
+ * 
+ */
+package Scenario.diagram.providers;
+
+/**
+ * @generated
+ */
+public class ScenarioIconProvider extends org.eclipse.gmf.runtime.common.core.service.AbstractProvider
+		implements org.eclipse.gmf.runtime.common.ui.services.icon.IIconProvider {
+
+	/**
+ * @generated
+ */
+	public org.eclipse.swt.graphics.Image getIcon(org.eclipse.core.runtime.IAdaptable hint, int flags) {
+		return Scenario.diagram.providers.ScenarioElementTypes.getImage(hint);
+	}
+
+	/**
+ * @generated
+ */
+	public boolean provides(org.eclipse.gmf.runtime.common.core.service.IOperation operation) {
+		if (operation instanceof org.eclipse.gmf.runtime.common.ui.services.icon.GetIconOperation) {
+			return ((org.eclipse.gmf.runtime.common.ui.services.icon.GetIconOperation) operation).execute(this) != null;
+		}
+		return false;
+	}
+	}

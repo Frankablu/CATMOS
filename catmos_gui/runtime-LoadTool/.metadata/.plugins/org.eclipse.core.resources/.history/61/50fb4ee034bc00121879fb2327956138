@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:CapabilityOverTime xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="CapOverTime">
+  <timePeriods startDate="0" endDate="1199">
+    <ourObjects xsi:type="p:Capability" name="Roaches" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="1200" endDate="1200">
+    <ourObjects xsi:type="p:Capability" name="Roaches" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+</p:CapabilityOverTime>

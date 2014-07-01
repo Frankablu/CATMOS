@@ -1,0 +1,89 @@
+		/*
+ * 
+ */
+package capOverTime.diagram.navigator;
+
+	/**
+ * @generated
+ */
+public class CapOverTimeDomainNavigatorLabelProvider implements org.eclipse.ui.navigator.ICommonLabelProvider {
+
+		/**
+ * @generated
+ */
+private org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider myAdapterFactoryLabelProvider = new org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider(capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().getItemProvidersAdapterFactory());
+	
+		/**
+ * @generated
+ */
+public void init(org.eclipse.ui.navigator.ICommonContentExtensionSite aConfig) {
+}
+	
+			/**
+ * @generated
+ */
+public org.eclipse.swt.graphics.Image getImage(Object element) {
+	if (element instanceof capOverTime.diagram.navigator.CapOverTimeDomainNavigatorItem) {
+		return myAdapterFactoryLabelProvider.getImage(((capOverTime.diagram.navigator.CapOverTimeDomainNavigatorItem) element).getEObject());
+	}
+	return null;
+}
+	
+		/**
+ * @generated
+ */
+public String getText(Object element) {
+	if (element instanceof capOverTime.diagram.navigator.CapOverTimeDomainNavigatorItem) {
+		return myAdapterFactoryLabelProvider.getText(((capOverTime.diagram.navigator.CapOverTimeDomainNavigatorItem) element).getEObject());
+	}
+	return null;
+}
+	
+			/**
+ * @generated
+ */
+public void addListener(org.eclipse.jface.viewers.ILabelProviderListener listener) {
+	myAdapterFactoryLabelProvider.addListener(listener);
+}
+
+		/**
+ * @generated
+ */
+public void dispose() {
+	myAdapterFactoryLabelProvider.dispose();
+}
+
+		/**
+ * @generated
+ */
+public boolean isLabelProperty(Object element, String property) {
+	return myAdapterFactoryLabelProvider.isLabelProperty(element, property);
+}
+
+		/**
+ * @generated
+ */
+public void removeListener(org.eclipse.jface.viewers.ILabelProviderListener listener) {
+	myAdapterFactoryLabelProvider.removeListener(listener);
+}
+	
+	/**
+ * @generated
+ */
+public void restoreState(org.eclipse.ui.IMemento aMemento) {
+}
+
+/**
+ * @generated
+ */
+public void saveState(org.eclipse.ui.IMemento aMemento) {
+}
+	
+		/**
+ * @generated
+ */
+public String getDescription(Object anElement) {
+	return null;
+}
+	
+    }

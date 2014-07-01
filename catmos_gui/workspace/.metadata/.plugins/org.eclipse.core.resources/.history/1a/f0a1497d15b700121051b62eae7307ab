@@ -1,0 +1,48 @@
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+package Scenario;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Scenario</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link Scenario.Scenario#getObjects <em>Objects</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see Scenario.ScenarioPackage#getScenario()
+ * @model annotation="gmf.diagram foo='bar'"
+ * @generated
+ */
+public interface Scenario extends EObject
+{
+  /**
+   * Returns the value of the '<em><b>Objects</b></em>' containment reference list.
+   * The list contents are of type {@link Scenario.Object}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Objects</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Objects</em>' containment reference list.
+   * @see Scenario.ScenarioPackage#getScenario_Objects()
+   * @model containment="true"
+   *        annotation="gmf.compartment foo='bar'"
+   * @generated
+   */
+  EList<Scenario.Object> getObjects();
+
+} // Scenario

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:CapabilityOverTime xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="CapOverTime">
+  <timePeriods name="base">
+    <ourObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf">
+      <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" script="output = 0 if getGlobalMeasure(&quot;Mining Drone count&quot;) == countComponent(&quot;Mining Drone&quot;) then output = 2 end"/>
+    </ourObjects>
+    <ourObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" accumulation="//@timePeriods.0/@ourObjects.1/@measurements.0">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0"/>
+    </ourObjects>
+  </timePeriods>
+</p:CapabilityOverTime>

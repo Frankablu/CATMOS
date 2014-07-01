@@ -1,0 +1,6 @@
+
+var runTool = new Native("org.eclipse.epsilon.examples.tools.RunTool");
+
+runTool.setGanntName("7 Roach Rush");
+runTool.createGanntChart();
+

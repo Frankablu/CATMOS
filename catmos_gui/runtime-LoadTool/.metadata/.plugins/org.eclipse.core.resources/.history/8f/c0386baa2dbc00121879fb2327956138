@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:p="ScenarioModel" xmi:id="_FAIZsLwlEeKAI6EvwIMZ8A" type="ScenarioModel" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_FCtzoLwlEeKAI6EvwIMZ8A" type="2004" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_FCtzo7wlEeKAI6EvwIMZ8A" type="5020"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCuasLwlEeKAI6EvwIMZ8A" type="7009"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_FCtzobwlEeKAI6EvwIMZ8A"/>
+    <element xmi:type="p:Capability" href="Solution0.ScenarioModel#//@OurObjects.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FCtzorwlEeKAI6EvwIMZ8A"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_FCuasbwlEeKAI6EvwIMZ8A" type="2004" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_FCuatLwlEeKAI6EvwIMZ8A" type="5020"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCuatbwlEeKAI6EvwIMZ8A" type="7009"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_FCuasrwlEeKAI6EvwIMZ8A"/>
+    <element xmi:type="p:Capability" href="Solution0.ScenarioModel#//@OurObjects.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FCuas7wlEeKAI6EvwIMZ8A" x="126" y="288"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_FCvBwLwlEeKAI6EvwIMZ8A" type="2006" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_FCvBw7wlEeKAI6EvwIMZ8A" type="5032"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCvBxLwlEeKAI6EvwIMZ8A" type="7010"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCvBxbwlEeKAI6EvwIMZ8A" type="7011"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCvBxrwlEeKAI6EvwIMZ8A" type="7012"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCvBx7wlEeKAI6EvwIMZ8A" type="7013"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCvByLwlEeKAI6EvwIMZ8A" type="7014"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_FCvBwbwlEeKAI6EvwIMZ8A"/>
+    <element xmi:type="p:Component" href="Solution0.ScenarioModel#//@OurObjects.2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FCvBwrwlEeKAI6EvwIMZ8A" x="361"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_FCvo0LwlEeKAI6EvwIMZ8A" type="2006" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_FCvo07wlEeKAI6EvwIMZ8A" type="5032"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCvo1LwlEeKAI6EvwIMZ8A" type="7010"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCvo1bwlEeKAI6EvwIMZ8A" type="7011"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCvo1rwlEeKAI6EvwIMZ8A" type="7012"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCvo17wlEeKAI6EvwIMZ8A" type="7013"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCvo2LwlEeKAI6EvwIMZ8A" type="7014"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_FCvo0bwlEeKAI6EvwIMZ8A"/>
+    <element xmi:type="p:Component" href="Solution0.ScenarioModel#//@OurObjects.3"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FCvo0rwlEeKAI6EvwIMZ8A" x="568"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_FCwP4LwlEeKAI6EvwIMZ8A" type="2006" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_FCwP47wlEeKAI6EvwIMZ8A" type="5032"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCwP5LwlEeKAI6EvwIMZ8A" type="7010"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCwP5bwlEeKAI6EvwIMZ8A" type="7011"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCwP5rwlEeKAI6EvwIMZ8A" type="7012"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCwP57wlEeKAI6EvwIMZ8A" type="7013"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCwP6LwlEeKAI6EvwIMZ8A" type="7014"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_FCwP4bwlEeKAI6EvwIMZ8A"/>
+    <element xmi:type="p:Component" href="Solution0.ScenarioModel#//@OurObjects.4"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FCwP4rwlEeKAI6EvwIMZ8A" x="762"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_FCw28LwlEeKAI6EvwIMZ8A" type="2006" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_FCw287wlEeKAI6EvwIMZ8A" type="5032"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCw29LwlEeKAI6EvwIMZ8A" type="7010"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCw29bwlEeKAI6EvwIMZ8A" type="7011"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCw29rwlEeKAI6EvwIMZ8A" type="7012"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCw297wlEeKAI6EvwIMZ8A" type="7013"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCxeALwlEeKAI6EvwIMZ8A" type="7014"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_FCw28bwlEeKAI6EvwIMZ8A"/>
+    <element xmi:type="p:Component" href="Solution0.ScenarioModel#//@OurObjects.5"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FCw28rwlEeKAI6EvwIMZ8A" x="980"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_FCxeAbwlEeKAI6EvwIMZ8A" type="2006" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_FCxeBLwlEeKAI6EvwIMZ8A" type="5032"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCxeBbwlEeKAI6EvwIMZ8A" type="7010"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCxeBrwlEeKAI6EvwIMZ8A" type="7011"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCxeB7wlEeKAI6EvwIMZ8A" type="7012"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCxeCLwlEeKAI6EvwIMZ8A" type="7013"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCyFELwlEeKAI6EvwIMZ8A" type="7014"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_FCxeArwlEeKAI6EvwIMZ8A"/>
+    <element xmi:type="p:Component" href="Solution0.ScenarioModel#//@OurObjects.6"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FCxeA7wlEeKAI6EvwIMZ8A" x="1198"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_FCyFEbwlEeKAI6EvwIMZ8A" type="2006" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_FCyFFLwlEeKAI6EvwIMZ8A" type="5032"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCyFFbwlEeKAI6EvwIMZ8A" type="7010"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCyFFrwlEeKAI6EvwIMZ8A" type="7011"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCyFF7wlEeKAI6EvwIMZ8A" type="7012"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCyFGLwlEeKAI6EvwIMZ8A" type="7013"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCysILwlEeKAI6EvwIMZ8A" type="7014"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_FCyFErwlEeKAI6EvwIMZ8A"/>
+    <element xmi:type="p:Component" href="Solution0.ScenarioModel#//@OurObjects.7"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FCyFE7wlEeKAI6EvwIMZ8A" x="1416"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_FCysIbwlEeKAI6EvwIMZ8A" type="2006" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_FCysJLwlEeKAI6EvwIMZ8A" type="5032"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCysJbwlEeKAI6EvwIMZ8A" type="7010"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCysJrwlEeKAI6EvwIMZ8A" type="7011"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCysJ7wlEeKAI6EvwIMZ8A" type="7012"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCysKLwlEeKAI6EvwIMZ8A" type="7013"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCzTMLwlEeKAI6EvwIMZ8A" type="7014"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_FCysIrwlEeKAI6EvwIMZ8A"/>
+    <element xmi:type="p:Component" href="Solution0.ScenarioModel#//@OurObjects.8"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FCysI7wlEeKAI6EvwIMZ8A" x="1689"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_FCzTMbwlEeKAI6EvwIMZ8A" type="2006" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_FCzTNLwlEeKAI6EvwIMZ8A" type="5032"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCzTNbwlEeKAI6EvwIMZ8A" type="7010"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCzTNrwlEeKAI6EvwIMZ8A" type="7011"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCzTN7wlEeKAI6EvwIMZ8A" type="7012"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCz6QLwlEeKAI6EvwIMZ8A" type="7013"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCz6QbwlEeKAI6EvwIMZ8A" type="7014"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_FCzTMrwlEeKAI6EvwIMZ8A"/>
+    <element xmi:type="p:Component" href="Solution0.ScenarioModel#//@OurObjects.9"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FCzTM7wlEeKAI6EvwIMZ8A" x="1962"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_FCz6QrwlEeKAI6EvwIMZ8A" type="2006" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_FCz6RbwlEeKAI6EvwIMZ8A" type="5032"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCz6RrwlEeKAI6EvwIMZ8A" type="7010"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FCz6R7wlEeKAI6EvwIMZ8A" type="7011"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC0hULwlEeKAI6EvwIMZ8A" type="7012"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC0hUbwlEeKAI6EvwIMZ8A" type="7013"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC0hUrwlEeKAI6EvwIMZ8A" type="7014"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_FCz6Q7wlEeKAI6EvwIMZ8A"/>
+    <element xmi:type="p:Component" href="Solution0.ScenarioModel#//@OurObjects.10"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FCz6RLwlEeKAI6EvwIMZ8A" x="2235"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_FC0hU7wlEeKAI6EvwIMZ8A" type="2006" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_FC0hVrwlEeKAI6EvwIMZ8A" type="5032"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC0hV7wlEeKAI6EvwIMZ8A" type="7010"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC0hWLwlEeKAI6EvwIMZ8A" type="7011"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC1IYLwlEeKAI6EvwIMZ8A" type="7012"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC1IYbwlEeKAI6EvwIMZ8A" type="7013"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC1IYrwlEeKAI6EvwIMZ8A" type="7014"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_FC0hVLwlEeKAI6EvwIMZ8A"/>
+    <element xmi:type="p:Component" href="Solution0.ScenarioModel#//@OurObjects.11"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FC0hVbwlEeKAI6EvwIMZ8A" x="2508"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_FC1IY7wlEeKAI6EvwIMZ8A" type="2006" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_FC1IZrwlEeKAI6EvwIMZ8A" type="5032"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC1IZ7wlEeKAI6EvwIMZ8A" type="7010"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC1vcLwlEeKAI6EvwIMZ8A" type="7011"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC1vcbwlEeKAI6EvwIMZ8A" type="7012"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC1vcrwlEeKAI6EvwIMZ8A" type="7013"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC1vc7wlEeKAI6EvwIMZ8A" type="7014"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_FC1IZLwlEeKAI6EvwIMZ8A"/>
+    <element xmi:type="p:Component" href="Solution0.ScenarioModel#//@OurObjects.12"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FC1IZbwlEeKAI6EvwIMZ8A" x="2781"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_FC1vdLwlEeKAI6EvwIMZ8A" type="2006" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_FC1vd7wlEeKAI6EvwIMZ8A" type="5032"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC2WgLwlEeKAI6EvwIMZ8A" type="7010"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC2WgbwlEeKAI6EvwIMZ8A" type="7011"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC2WgrwlEeKAI6EvwIMZ8A" type="7012"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC2Wg7wlEeKAI6EvwIMZ8A" type="7013"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC2WhLwlEeKAI6EvwIMZ8A" type="7014"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_FC1vdbwlEeKAI6EvwIMZ8A"/>
+    <element xmi:type="p:Component" href="Solution0.ScenarioModel#//@OurObjects.13"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FC1vdrwlEeKAI6EvwIMZ8A" x="3054"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_FC2WhbwlEeKAI6EvwIMZ8A" type="2006" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_FC29kLwlEeKAI6EvwIMZ8A" type="5032"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC29kbwlEeKAI6EvwIMZ8A" type="7010"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC29krwlEeKAI6EvwIMZ8A" type="7011"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC29k7wlEeKAI6EvwIMZ8A" type="7012"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC29lLwlEeKAI6EvwIMZ8A" type="7013"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC29lbwlEeKAI6EvwIMZ8A" type="7014"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_FC2WhrwlEeKAI6EvwIMZ8A"/>
+    <element xmi:type="p:Component" href="Solution0.ScenarioModel#//@OurObjects.14"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FC2Wh7wlEeKAI6EvwIMZ8A" x="3327"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_FC3koLwlEeKAI6EvwIMZ8A" type="2006" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_FC3ko7wlEeKAI6EvwIMZ8A" type="5032"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC3kpLwlEeKAI6EvwIMZ8A" type="7010"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC3kpbwlEeKAI6EvwIMZ8A" type="7011"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC3kprwlEeKAI6EvwIMZ8A" type="7012"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC4LsLwlEeKAI6EvwIMZ8A" type="7013"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC4LsbwlEeKAI6EvwIMZ8A" type="7014"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_FC3kobwlEeKAI6EvwIMZ8A"/>
+    <element xmi:type="p:Component" href="Solution0.ScenarioModel#//@OurObjects.15"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FC3korwlEeKAI6EvwIMZ8A" x="3600"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_FC4LsrwlEeKAI6EvwIMZ8A" type="2006" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_FC4LtbwlEeKAI6EvwIMZ8A" type="5032"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC4LtrwlEeKAI6EvwIMZ8A" type="7010"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC4ywLwlEeKAI6EvwIMZ8A" type="7011"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC4ywbwlEeKAI6EvwIMZ8A" type="7012"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC4ywrwlEeKAI6EvwIMZ8A" type="7013"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC4yw7wlEeKAI6EvwIMZ8A" type="7014"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_FC4Ls7wlEeKAI6EvwIMZ8A"/>
+    <element xmi:type="p:Component" href="Solution0.ScenarioModel#//@OurObjects.16"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FC4LtLwlEeKAI6EvwIMZ8A" x="3873"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_FC4yxLwlEeKAI6EvwIMZ8A" type="2006" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_FC5Z0LwlEeKAI6EvwIMZ8A" type="5032"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC5Z0bwlEeKAI6EvwIMZ8A" type="7010"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC5Z0rwlEeKAI6EvwIMZ8A" type="7011"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC5Z07wlEeKAI6EvwIMZ8A" type="7012"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC5Z1LwlEeKAI6EvwIMZ8A" type="7013"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC5Z1bwlEeKAI6EvwIMZ8A" type="7014"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_FC4yxbwlEeKAI6EvwIMZ8A"/>
+    <element xmi:type="p:Component" href="Solution0.ScenarioModel#//@OurObjects.17"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FC4yxrwlEeKAI6EvwIMZ8A" x="4068"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_FC5Z1rwlEeKAI6EvwIMZ8A" type="2006" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_FC6A4LwlEeKAI6EvwIMZ8A" type="5032"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC6A4bwlEeKAI6EvwIMZ8A" type="7010"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC6A4rwlEeKAI6EvwIMZ8A" type="7011"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC6A47wlEeKAI6EvwIMZ8A" type="7012"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC6A5LwlEeKAI6EvwIMZ8A" type="7013"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC6A5bwlEeKAI6EvwIMZ8A" type="7014"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_FC5Z17wlEeKAI6EvwIMZ8A"/>
+    <element xmi:type="p:Component" href="Solution0.ScenarioModel#//@OurObjects.18"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FC5Z2LwlEeKAI6EvwIMZ8A" x="4263"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_FC6A5rwlEeKAI6EvwIMZ8A" type="2006" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_FC6n8rwlEeKAI6EvwIMZ8A" type="5032"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC6n87wlEeKAI6EvwIMZ8A" type="7010"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC6n9LwlEeKAI6EvwIMZ8A" type="7011"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC6n9bwlEeKAI6EvwIMZ8A" type="7012"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC6n9rwlEeKAI6EvwIMZ8A" type="7013"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FC6n97wlEeKAI6EvwIMZ8A" type="7014"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_FC6n8LwlEeKAI6EvwIMZ8A"/>
+    <element xmi:type="p:Component" href="Solution0.ScenarioModel#//@OurObjects.19"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FC6n8bwlEeKAI6EvwIMZ8A" x="4458"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_FAIZsbwlEeKAI6EvwIMZ8A"/>
+  <element xmi:type="p:Scenario" href="Solution0.ScenarioModel#/"/>
+</notation:Diagram>

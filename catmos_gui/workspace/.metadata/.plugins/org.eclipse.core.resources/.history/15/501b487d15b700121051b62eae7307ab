@@ -1,0 +1,252 @@
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+package Scenario;
+
+import org.eclipse.emf.common.util.EList;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Capability</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link Scenario.Capability#getName <em>Name</em>}</li>
+ *   <li>{@link Scenario.Capability#getSearchObjective <em>Search Objective</em>}</li>
+ *   <li>{@link Scenario.Capability#getStandAlone <em>Stand Alone</em>}</li>
+ *   <li>{@link Scenario.Capability#getReuse <em>Reuse</em>}</li>
+ *   <li>{@link Scenario.Capability#getStartDate <em>Start Date</em>}</li>
+ *   <li>{@link Scenario.Capability#getEndDate <em>End Date</em>}</li>
+ *   <li>{@link Scenario.Capability#getAccumulation <em>Accumulation</em>}</li>
+ *   <li>{@link Scenario.Capability#getMeasurements <em>Measurements</em>}</li>
+ *   <li>{@link Scenario.Capability#getDecomposes <em>Decomposes</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see Scenario.ScenarioPackage#getCapability()
+ * @model annotation="gmf.node label='name'"
+ * @generated
+ */
+public interface Capability extends Scenario.Object
+{
+  /**
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see Scenario.ScenarioPackage#getCapability_Name()
+   * @model
+   * @generated
+   */
+  String getName();
+
+  /**
+   * Sets the value of the '{@link Scenario.Capability#getName <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
+   * @generated
+   */
+  void setName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Search Objective</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Search Objective</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Search Objective</em>' attribute.
+   * @see #setSearchObjective(Boolean)
+   * @see Scenario.ScenarioPackage#getCapability_SearchObjective()
+   * @model
+   * @generated
+   */
+  Boolean getSearchObjective();
+
+  /**
+   * Sets the value of the '{@link Scenario.Capability#getSearchObjective <em>Search Objective</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Search Objective</em>' attribute.
+   * @see #getSearchObjective()
+   * @generated
+   */
+  void setSearchObjective(Boolean value);
+
+  /**
+   * Returns the value of the '<em><b>Stand Alone</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Stand Alone</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Stand Alone</em>' attribute.
+   * @see #setStandAlone(Boolean)
+   * @see Scenario.ScenarioPackage#getCapability_StandAlone()
+   * @model
+   * @generated
+   */
+  Boolean getStandAlone();
+
+  /**
+   * Sets the value of the '{@link Scenario.Capability#getStandAlone <em>Stand Alone</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Stand Alone</em>' attribute.
+   * @see #getStandAlone()
+   * @generated
+   */
+  void setStandAlone(Boolean value);
+
+  /**
+   * Returns the value of the '<em><b>Reuse</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Reuse</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Reuse</em>' attribute.
+   * @see #setReuse(Integer)
+   * @see Scenario.ScenarioPackage#getCapability_Reuse()
+   * @model
+   * @generated
+   */
+  Integer getReuse();
+
+  /**
+   * Sets the value of the '{@link Scenario.Capability#getReuse <em>Reuse</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Reuse</em>' attribute.
+   * @see #getReuse()
+   * @generated
+   */
+  void setReuse(Integer value);
+
+  /**
+   * Returns the value of the '<em><b>Start Date</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Start Date</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Start Date</em>' attribute.
+   * @see #setStartDate(String)
+   * @see Scenario.ScenarioPackage#getCapability_StartDate()
+   * @model
+   * @generated
+   */
+  String getStartDate();
+
+  /**
+   * Sets the value of the '{@link Scenario.Capability#getStartDate <em>Start Date</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Start Date</em>' attribute.
+   * @see #getStartDate()
+   * @generated
+   */
+  void setStartDate(String value);
+
+  /**
+   * Returns the value of the '<em><b>End Date</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>End Date</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>End Date</em>' attribute.
+   * @see #setEndDate(String)
+   * @see Scenario.ScenarioPackage#getCapability_EndDate()
+   * @model
+   * @generated
+   */
+  String getEndDate();
+
+  /**
+   * Sets the value of the '{@link Scenario.Capability#getEndDate <em>End Date</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>End Date</em>' attribute.
+   * @see #getEndDate()
+   * @generated
+   */
+  void setEndDate(String value);
+
+  /**
+   * Returns the value of the '<em><b>Accumulation</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Accumulation</em>' reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Accumulation</em>' reference.
+   * @see #setAccumulation(Measurement)
+   * @see Scenario.ScenarioPackage#getCapability_Accumulation()
+   * @model annotation="gmf.link target.decoration='arrow' style='dash' color='0,0,255'"
+   * @generated
+   */
+  Measurement getAccumulation();
+
+  /**
+   * Sets the value of the '{@link Scenario.Capability#getAccumulation <em>Accumulation</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Accumulation</em>' reference.
+   * @see #getAccumulation()
+   * @generated
+   */
+  void setAccumulation(Measurement value);
+
+  /**
+   * Returns the value of the '<em><b>Measurements</b></em>' containment reference list.
+   * The list contents are of type {@link Scenario.Measurement}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Measurements</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Measurements</em>' containment reference list.
+   * @see Scenario.ScenarioPackage#getCapability_Measurements()
+   * @model containment="true"
+   *        annotation="gmf.compartment foo='bar'"
+   * @generated
+   */
+  EList<Measurement> getMeasurements();
+
+  /**
+   * Returns the value of the '<em><b>Decomposes</b></em>' reference list.
+   * The list contents are of type {@link Scenario.Capability}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Decomposes</em>' reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Decomposes</em>' reference list.
+   * @see Scenario.ScenarioPackage#getCapability_Decomposes()
+   * @model annotation="gmf.link target.decoration='arrow' style='dash' color='0,0,255'"
+   * @generated
+   */
+  EList<Capability> getDecomposes();
+
+} // Capability

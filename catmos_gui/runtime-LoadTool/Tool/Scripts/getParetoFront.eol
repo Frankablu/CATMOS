@@ -1,0 +1,46 @@
+
+import "networkSettings.eol";
+
+"Pareto Front Drawing Script".println();
+"You need to set objective 1 & 2 in the file before usage".println();
+
+var objective1 : Integer = 1;
+var objective2 : Integer = 2;
+var colours : Boolean = true;
+
+var runTool = new Native("org.eclipse.epsilon.examples.tools.RunTool");
+runTool.connectToNetworkClient(getAddress(), getPort());
+
+var paretoFront : String = runTool.getParetoFront();
+
+var solutionLine : Collection = paretoFront.split("%");
+
+for (line in solutionLine)
+{
+	if (line <> "Done")
+	{
+		line.println();
+		var part : Collection = line.split(",");
+		var part1R : Real = part.at(objective1).asReal();
+		part1R = (part1R * 1000.0) - 1000.0;
+		if (part1R < 0)
+		{
+			part1R = 0.0;
+		}
+		var part2 : Integer = (part.at(objective2)).asReal().asInteger();
+		var part1 : Integer = part1R.asInteger();
+		var name : String = "";
+		
+		if (colours)
+		{
+			name = part.at(0);
+		}
+		
+		runTool.addPFScatterPoint(part.at(0),part1,part2);
+		
+	}
+}
+
+runTool.setPFname(internal!ValuePair.all().selectOne(x|x.name == "name").value);
+runTool.createPFScatterPlot();
+

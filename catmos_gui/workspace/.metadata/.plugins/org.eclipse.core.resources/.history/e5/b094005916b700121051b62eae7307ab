@@ -1,0 +1,22 @@
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+package Scenario;
+
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Capability Provision</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ *
+ * @see Scenario.ScenarioPackage#getCapabilityProvision()
+ * @model annotation="gmf.node label='name'"
+ * @generated
+ */
+public interface CapabilityProvision extends Capability
+{
+} // CapabilityProvision

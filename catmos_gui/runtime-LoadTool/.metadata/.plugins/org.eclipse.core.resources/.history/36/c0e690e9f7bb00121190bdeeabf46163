@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="ScenarioModel">
+  <OurObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf">
+    <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" script="output = 0 if getGlobalMeasure(&quot;Mining Drone count&quot;) == countComponent(&quot;Mining Drone&quot;) then output = 2 end"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Mineral Mining" startDate="0" endDate="inf" accumulation="//@OurObjects.1/@measurements.0">
+    <measurements name="Mining Drone count" criticalValue="0.0" benchmarkValue="20.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Gas Mineral Mining" startDate="0" endDate="inf" accumulation="//@OurObjects.2/@measurements.0">
+    <measurements name="Gas Mining Drone count" criticalValue="0.0" benchmarkValue="3.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Larva Production" startDate="0" endDate="inf" accumulation="//@OurObjects.3/@measurements.0">
+    <measurements name="Extra Larva" criticalValue="0.0" benchmarkValue="4.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" accumulation="//@OurObjects.4/@measurements.0">
+    <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Roach">
+    <provides xsi:type="p:CapabilityProvision" name="Roach" reuse="1">
+      <measurements name="Roach count" providedValue="1.0"/>
+    </provides>
+    <requires name="Supply"/>
+    <requires name="Roach Production" sequentialScheduling="true"/>
+    <costs name="Minerals" amount="75.0"/>
+    <costs name="Gas" amount="25.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Roach Warren">
+    <provides xsi:type="p:CapabilityProvision" name="Roach Production"/>
+    <provides xsi:type="p:CapabilityProvision" name="Freed Supply" reuse="1"/>
+    <requires name="Spawning Pool" sequentialScheduling="true"/>
+    <requires name="Drone" sequentialScheduling="true"/>
+    <costs name="Minerals" amount="150.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Spawning Pool">
+    <provides xsi:type="p:CapabilityProvision" name="Spawning Pool"/>
+    <provides xsi:type="p:CapabilityProvision" name="Freed Supply" reuse="1"/>
+    <requires name="Drone" sequentialScheduling="true"/>
+    <costs name="Minerals" amount="200.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining">
+      <measurements name="Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Drone"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone Freed">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining">
+      <measurements name="Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Freed Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Starting Drone">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Hatchery">
+    <provides xsi:type="p:CapabilityProvision" name="Supply" reuse="2"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Gas Mining Drone">
+    <provides xsi:type="p:CapabilityProvision" name="Gas Mineral Mining">
+      <measurements name="Gas Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Drone"/>
+    <requires name="Extractor"/>
+    <costs name="Gas" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Extractor">
+    <provides xsi:type="p:CapabilityProvision" name="Extractor"/>
+    <provides xsi:type="p:CapabilityProvision" name="Freed Supply" reuse="1"/>
+    <requires name="Drone"/>
+    <costs name="Minerals" amount="25.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Starting Overlord">
+    <provides xsi:type="p:CapabilityProvision" name="Supply" reuse="8"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Overlord">
+    <provides xsi:type="p:CapabilityProvision" name="Supply" reuse="8"/>
+    <costs name="Minerals" amount="100.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Queen">
+    <provides xsi:type="p:CapabilityProvision" name="Larva Production">
+      <measurements name="Extra Larva" providedValue="1.0"/>
+    </provides>
+    <requires name="Spawning Pool" sequentialScheduling="true"/>
+    <requires name="Supply"/>
+    <requires name="Supply"/>
+    <costs name="Larva" amount="-4.0" startAfter="40" repeatDuration="40"/>
+    <costs name="Minerals" amount="150.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="LarvaProduction">
+    <provides xsi:type="p:CapabilityProvision" name="Larva"/>
+    <provides xsi:type="p:CapabilityProvision" name="LarvaProduction"/>
+    <requires name="LarvaProduction" sequentialScheduling="true"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Starting Drone:1">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Starting Drone:2">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Starting Drone:3">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Starting Drone:4">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Starting Drone:5">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:1">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:2">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:3">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:4">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:5">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:6">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:7">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:8">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:9">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:10">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:11">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:12">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:13">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:14">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:15">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:16">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:17">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:18">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:19">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:20">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:21">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:22">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:23">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:24">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:25">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:26">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:27">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:28">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:29">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Drone:30">
+    <provides xsi:type="p:CapabilityProvision" name="Drone" reuse="1"/>
+    <requires name="Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone Freed:1">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining">
+      <measurements name="Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Freed Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone Freed:2">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining">
+      <measurements name="Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Freed Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone Freed:3">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining">
+      <measurements name="Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Freed Supply"/>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Larva" amount="1.0"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:1">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining">
+      <measurements name="Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Drone"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:2">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining">
+      <measurements name="Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Drone"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:3">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining">
+      <measurements name="Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Drone"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:4">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining">
+      <measurements name="Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Drone"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:5">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining">
+      <measurements name="Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Drone"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:6">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining">
+      <measurements name="Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Drone"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:7">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining">
+      <measurements name="Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Drone"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:8">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining">
+      <measurements name="Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Drone"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:9">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining">
+      <measurements name="Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Drone"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:10">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining">
+      <measurements name="Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Drone"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:11">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining">
+      <measurements name="Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Drone"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:12">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining">
+      <measurements name="Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Drone"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:13">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining">
+      <measurements name="Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Drone"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:14">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining">
+      <measurements name="Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Drone"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:15">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining">
+      <measurements name="Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Drone"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:16">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining">
+      <measurements name="Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Drone"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:17">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining">
+      <measurements name="Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Drone"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:18">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining">
+      <measurements name="Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Drone"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:19">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining">
+      <measurements name="Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Drone"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:20">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining">
+      <measurements name="Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Drone"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Gas Mining Drone:1">
+    <provides xsi:type="p:CapabilityProvision" name="Gas Mineral Mining">
+      <measurements name="Gas Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Drone"/>
+    <requires name="Extractor"/>
+    <costs name="Gas" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Gas Mining Drone:2">
+    <provides xsi:type="p:CapabilityProvision" name="Gas Mineral Mining">
+      <measurements name="Gas Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Drone"/>
+    <requires name="Extractor"/>
+    <costs name="Gas" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Gas Mining Drone:3">
+    <provides xsi:type="p:CapabilityProvision" name="Gas Mineral Mining">
+      <measurements name="Gas Mining Drone count" providedValue="1.0"/>
+    </provides>
+    <requires name="Drone"/>
+    <requires name="Extractor"/>
+    <costs name="Gas" amount="-5.0" startAfter="7" repeatDuration="7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Roach:1">
+    <provides xsi:type="p:CapabilityProvision" name="Roach" reuse="1">
+      <measurements name="Roach count" providedValue="1.0"/>
+    </provides>
+    <requires name="Supply"/>
+    <requires name="Roach Production" sequentialScheduling="true"/>
+    <costs name="Minerals" amount="75.0"/>
+    <costs name="Gas" amount="25.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Roach:2">
+    <provides xsi:type="p:CapabilityProvision" name="Roach" reuse="1">
+      <measurements name="Roach count" providedValue="1.0"/>
+    </provides>
+    <requires name="Supply"/>
+    <requires name="Roach Production" sequentialScheduling="true"/>
+    <costs name="Minerals" amount="75.0"/>
+    <costs name="Gas" amount="25.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Roach:3">
+    <provides xsi:type="p:CapabilityProvision" name="Roach" reuse="1">
+      <measurements name="Roach count" providedValue="1.0"/>
+    </provides>
+    <requires name="Supply"/>
+    <requires name="Roach Production" sequentialScheduling="true"/>
+    <costs name="Minerals" amount="75.0"/>
+    <costs name="Gas" amount="25.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Roach:4">
+    <provides xsi:type="p:CapabilityProvision" name="Roach" reuse="1">
+      <measurements name="Roach count" providedValue="1.0"/>
+    </provides>
+    <requires name="Supply"/>
+    <requires name="Roach Production" sequentialScheduling="true"/>
+    <costs name="Minerals" amount="75.0"/>
+    <costs name="Gas" amount="25.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Roach:5">
+    <provides xsi:type="p:CapabilityProvision" name="Roach" reuse="1">
+      <measurements name="Roach count" providedValue="1.0"/>
+    </provides>
+    <requires name="Supply"/>
+    <requires name="Roach Production" sequentialScheduling="true"/>
+    <costs name="Minerals" amount="75.0"/>
+    <costs name="Gas" amount="25.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Roach:6">
+    <provides xsi:type="p:CapabilityProvision" name="Roach" reuse="1">
+      <measurements name="Roach count" providedValue="1.0"/>
+    </provides>
+    <requires name="Supply"/>
+    <requires name="Roach Production" sequentialScheduling="true"/>
+    <costs name="Minerals" amount="75.0"/>
+    <costs name="Gas" amount="25.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Roach:7">
+    <provides xsi:type="p:CapabilityProvision" name="Roach" reuse="1">
+      <measurements name="Roach count" providedValue="1.0"/>
+    </provides>
+    <requires name="Supply"/>
+    <requires name="Roach Production" sequentialScheduling="true"/>
+    <costs name="Minerals" amount="75.0"/>
+    <costs name="Gas" amount="25.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Overlord:1">
+    <provides xsi:type="p:CapabilityProvision" name="Supply" reuse="8"/>
+    <costs name="Minerals" amount="100.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Overlord:2">
+    <provides xsi:type="p:CapabilityProvision" name="Supply" reuse="8"/>
+    <costs name="Minerals" amount="100.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Overlord:3">
+    <provides xsi:type="p:CapabilityProvision" name="Supply" reuse="8"/>
+    <costs name="Minerals" amount="100.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Overlord:4">
+    <provides xsi:type="p:CapabilityProvision" name="Supply" reuse="8"/>
+    <costs name="Minerals" amount="100.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Overlord:5">
+    <provides xsi:type="p:CapabilityProvision" name="Supply" reuse="8"/>
+    <costs name="Minerals" amount="100.0"/>
+    <costs name="Larva" amount="1.0"/>
+  </OurObjects>
+</p:Scenario>

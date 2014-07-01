@@ -1,0 +1,35 @@
+
+FindTradeOffs TestProblemAcc
+{
+	popSize 100
+	genCount 100
+	
+	AcquirableComponent ComponentA 100
+	
+	DesireLow "Money"
+}
+
+searchObjective
+Capability ourMainGoal
+{
+	accumulation satisfactionLevel
+	Measurement satisfactionLevel
+	{
+		criticalValue 0.0
+		benchmarkValue 100.0 
+	}
+}
+
+Component ComponentA
+{
+	CapabilityProvision ourMainGoal
+	{
+		reuse 1
+		Measurement satisfactionLevel
+		{
+			providedValue 1.0
+		}
+	}
+	
+}
+

@@ -1,0 +1,263 @@
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+package Scenario;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Measurement</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link Scenario.Measurement#getName <em>Name</em>}</li>
+ *   <li>{@link Scenario.Measurement#getCriticalValue <em>Critical Value</em>}</li>
+ *   <li>{@link Scenario.Measurement#getBenchmarkValue <em>Benchmark Value</em>}</li>
+ *   <li>{@link Scenario.Measurement#getProvidedValue <em>Provided Value</em>}</li>
+ *   <li>{@link Scenario.Measurement#getCriticalValues <em>Critical Values</em>}</li>
+ *   <li>{@link Scenario.Measurement#getBenchmarkValues <em>Benchmark Values</em>}</li>
+ *   <li>{@link Scenario.Measurement#getProvidedValues <em>Provided Values</em>}</li>
+ *   <li>{@link Scenario.Measurement#getAggregationType <em>Aggregation Type</em>}</li>
+ *   <li>{@link Scenario.Measurement#getScript <em>Script</em>}</li>
+ *   <li>{@link Scenario.Measurement#getAggregates <em>Aggregates</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see Scenario.ScenarioPackage#getMeasurement()
+ * @model annotation="gmf.node label='name'"
+ * @generated
+ */
+public interface Measurement extends EObject
+{
+  /**
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see Scenario.ScenarioPackage#getMeasurement_Name()
+   * @model
+   * @generated
+   */
+  String getName();
+
+  /**
+   * Sets the value of the '{@link Scenario.Measurement#getName <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
+   * @generated
+   */
+  void setName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Critical Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Critical Value</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Critical Value</em>' attribute.
+   * @see #setCriticalValue(Float)
+   * @see Scenario.ScenarioPackage#getMeasurement_CriticalValue()
+   * @model
+   * @generated
+   */
+  Float getCriticalValue();
+
+  /**
+   * Sets the value of the '{@link Scenario.Measurement#getCriticalValue <em>Critical Value</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Critical Value</em>' attribute.
+   * @see #getCriticalValue()
+   * @generated
+   */
+  void setCriticalValue(Float value);
+
+  /**
+   * Returns the value of the '<em><b>Benchmark Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Benchmark Value</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Benchmark Value</em>' attribute.
+   * @see #setBenchmarkValue(Float)
+   * @see Scenario.ScenarioPackage#getMeasurement_BenchmarkValue()
+   * @model
+   * @generated
+   */
+  Float getBenchmarkValue();
+
+  /**
+   * Sets the value of the '{@link Scenario.Measurement#getBenchmarkValue <em>Benchmark Value</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Benchmark Value</em>' attribute.
+   * @see #getBenchmarkValue()
+   * @generated
+   */
+  void setBenchmarkValue(Float value);
+
+  /**
+   * Returns the value of the '<em><b>Provided Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Provided Value</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Provided Value</em>' attribute.
+   * @see #setProvidedValue(Float)
+   * @see Scenario.ScenarioPackage#getMeasurement_ProvidedValue()
+   * @model
+   * @generated
+   */
+  Float getProvidedValue();
+
+  /**
+   * Sets the value of the '{@link Scenario.Measurement#getProvidedValue <em>Provided Value</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Provided Value</em>' attribute.
+   * @see #getProvidedValue()
+   * @generated
+   */
+  void setProvidedValue(Float value);
+
+  /**
+   * Returns the value of the '<em><b>Critical Values</b></em>' containment reference list.
+   * The list contents are of type {@link Scenario.QualitativeValue}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Critical Values</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Critical Values</em>' containment reference list.
+   * @see Scenario.ScenarioPackage#getMeasurement_CriticalValues()
+   * @model containment="true"
+   *        annotation="gmf.compartment foo='bar'"
+   * @generated
+   */
+  EList<QualitativeValue> getCriticalValues();
+
+  /**
+   * Returns the value of the '<em><b>Benchmark Values</b></em>' containment reference list.
+   * The list contents are of type {@link Scenario.QualitativeValue}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Benchmark Values</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Benchmark Values</em>' containment reference list.
+   * @see Scenario.ScenarioPackage#getMeasurement_BenchmarkValues()
+   * @model containment="true"
+   *        annotation="gmf.compartment foo='bar'"
+   * @generated
+   */
+  EList<QualitativeValue> getBenchmarkValues();
+
+  /**
+   * Returns the value of the '<em><b>Provided Values</b></em>' containment reference list.
+   * The list contents are of type {@link Scenario.QualitativeValue}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Provided Values</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Provided Values</em>' containment reference list.
+   * @see Scenario.ScenarioPackage#getMeasurement_ProvidedValues()
+   * @model containment="true"
+   *        annotation="gmf.compartment foo='bar'"
+   * @generated
+   */
+  EList<QualitativeValue> getProvidedValues();
+
+  /**
+   * Returns the value of the '<em><b>Aggregation Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Aggregation Type</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Aggregation Type</em>' attribute.
+   * @see #setAggregationType(String)
+   * @see Scenario.ScenarioPackage#getMeasurement_AggregationType()
+   * @model
+   * @generated
+   */
+  String getAggregationType();
+
+  /**
+   * Sets the value of the '{@link Scenario.Measurement#getAggregationType <em>Aggregation Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Aggregation Type</em>' attribute.
+   * @see #getAggregationType()
+   * @generated
+   */
+  void setAggregationType(String value);
+
+  /**
+   * Returns the value of the '<em><b>Script</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Script</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Script</em>' attribute.
+   * @see #setScript(String)
+   * @see Scenario.ScenarioPackage#getMeasurement_Script()
+   * @model
+   * @generated
+   */
+  String getScript();
+
+  /**
+   * Sets the value of the '{@link Scenario.Measurement#getScript <em>Script</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Script</em>' attribute.
+   * @see #getScript()
+   * @generated
+   */
+  void setScript(String value);
+
+  /**
+   * Returns the value of the '<em><b>Aggregates</b></em>' reference list.
+   * The list contents are of type {@link Scenario.Measurement}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Aggregates</em>' reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Aggregates</em>' reference list.
+   * @see Scenario.ScenarioPackage#getMeasurement_Aggregates()
+   * @model annotation="gmf.link target.decoration='arrow' style='dash' color='0,0,255'"
+   * @generated
+   */
+  EList<Measurement> getAggregates();
+
+} // Measurement

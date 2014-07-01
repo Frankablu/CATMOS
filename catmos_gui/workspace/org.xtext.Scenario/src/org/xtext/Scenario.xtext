@@ -1,0 +1,229 @@
+
+grammar org.xtext.Scenario with org.eclipse.xtext.common.Terminals
+
+import "ScenarioModel"
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+Scenario returns Scenario:
+	{Scenario}
+		(OurObjects+=OurObject ( OurObjects+=OurObject)* )?
+	;
+
+
+OurObject returns OurObject:
+	OurObject_Impl | Capability_Impl | CapabilityProvision | QualitativeValueDictionary | Component | RunConfiguration_Impl | FindTradeOffs | ThroughLifePlanning;
+
+
+Capability returns Capability:
+	Capability_Impl | CapabilityProvision;
+
+Cost returns Cost:
+	Cost_Impl;
+
+ComponentU returns ComponentU:
+	ComponentU_Impl | ExistingComponent | AcquirableComponent;
+
+Constraint returns Constraint:
+	Constraint_Impl | DesireHigh | DesireLow | Budget;
+
+
+OurObject_Impl returns OurObject:
+	{OurObject}
+	'OurObject'
+	;
+
+Capability_Impl returns Capability:
+	{Capability}
+	(standAlone?='standAlone')?
+	(searchObjective?='searchObjective')?
+	(sequentialScheduling?='sequentialScheduling')?
+	'Capability'
+	name=EString
+	'{'
+		('reuse' reuse=EIntegerObject)?
+		('accumulation' accumulation=[Measurement|EString])?
+		('startDate' startDate=EString)?
+		('endDate' endDate=EString)?
+		( measurements+=Measurement ( measurements+=Measurement)*  )?
+		('decomposes' '(' decomposes+=[Capability|EString] ( "," decomposes+=[Capability|EString])* ')' )?
+		('satisfiedBy' '(' satisfiedBy+=[Capability|EString] ( "," satisfiedBy+=[Capability|EString])* ')' )?
+	'}';
+
+CapabilityProvision returns CapabilityProvision:
+	{CapabilityProvision}
+	(searchObjective?='searchObjective')?
+	'CapabilityProvision'
+	name=EString
+	'{'
+		('reuse' reuse=EIntegerObject)?
+		('startDate' startDate=EString)?
+		('endDate' endDate=EString)?
+		( measurements+=Measurement ( measurements+=Measurement)*  )?
+	'}';
+
+QualitativeValueDictionary returns QualitativeValueDictionary:
+	'Value'
+	name=EString
+	('<' lessThan=[QualitativeValueDictionary|EString])?
+	('>' greaterThan=[QualitativeValueDictionary|EString])?
+	;
+
+Component returns Component:
+	{Component}
+	'Component'
+	name=EString
+	'{'
+		( provides+=CapabilityProvision ( provides+=CapabilityProvision)* )?
+		( upgrades+=CapabilityUpgrade ( upgrades+=CapabilityUpgrade)* )?
+		( requires+=Capability ( requires+=Capability)* )?
+		( costs+=Cost ( costs+=Cost)* )?
+	'}';
+
+RunConfiguration_Impl returns RunConfiguration:
+	{RunConfiguration}
+	'RunConfiguration'
+	name=EString
+	'{'
+		('popSize' popSize=EIntegerObject)?
+		('genCount' genCount=EIntegerObject)?
+	'}';
+
+FindTradeOffs returns FindTradeOffs:
+	{FindTradeOffs}
+	'FindTradeOffs'
+	name=EString
+	'{'
+		('popSize' popSize=EIntegerObject)?
+		('genCount' genCount=EIntegerObject)?
+		(components+=ComponentU ( components+=ComponentU)* )?
+		(constraints+=Constraint ( constraints+=Constraint)* )?
+	'}';
+
+ThroughLifePlanning returns ThroughLifePlanning:
+	{ThroughLifePlanning}
+	'ThroughLifePlanning'
+	name=EString
+	'{'
+		('popSize' popSize=EIntegerObject)?
+		('genCount' genCount=EIntegerObject)?
+		('startDate' startDate=EString)?
+		('endDate' endDate=EString)?
+		(components+=ComponentU ( components+=ComponentU)* )?
+		(constraints+=Constraint ( constraints+=Constraint)* )?
+	'}';
+
+EString returns ecore::EString:
+	STRING | ID;
+
+EBooleanObject returns ecore::EBooleanObject:
+	'true' | 'false';
+
+EIntegerObject returns ecore::EIntegerObject:
+	'-'? INT;
+
+Measurement returns Measurement:
+	{Measurement}
+	'Measurement'
+	name=EString
+	'{'
+		('criticalValue' criticalValue=EFloatOurObject)?
+		('benchmarkValue' benchmarkValue=EFloatOurObject)?
+		('providedValue' providedValue=EFloatOurObject)?
+		('criticalValues' '(' criticalValues+=QualitativeValue ( "," criticalValues+=QualitativeValue)* ')' )?
+		('benchmarkValues' '(' benchmarkValues+=QualitativeValue ( "," benchmarkValues+=QualitativeValue)* ')' )?
+		('providedValues' '(' providedValues+=QualitativeValue ( "," providedValues+=QualitativeValue)* ')' )?
+		('script' script=EString)?
+	'}';
+
+EFloatOurObject returns ecore::EFloatObject:
+	'-'? INT? '.' INT (('E'|'e') '-'? INT)?;
+
+QualitativeValue returns QualitativeValue:
+	{QualitativeValue}
+	name=EString;
+
+CapabilityUpgrade returns CapabilityUpgrade:
+	{CapabilityUpgrade}
+	'CapabilityUpgrade'
+	name=EString
+	'{'
+		('targetComponent' targetComponent=EString)?
+		('upgrading' upgrading=[Component|EString])?
+		(capabilityChanges+=CapabilityChange ( capabilityChanges+=CapabilityChange)* )?
+	'}';
+
+Cost_Impl returns Cost:
+	{Cost}
+	'Cost'
+	name=EString
+		(amount=EFloatOurObject)?
+	('{'
+	('startAfter' startAfter=EString)?
+	('repeatDuration' repeatDuration=EString)?
+	('stopAfter' stopAfter=EString)?
+	'}')?
+	;
+
+CapabilityChange returns CapabilityChange:
+	{CapabilityChange}
+	'CapabilityChange'
+	name=EString
+	'{'
+		( capabilities+=CapabilityProvision ( capabilities+=CapabilityProvision)* )?
+	'}';
+
+
+ComponentU_Impl returns ComponentU:
+	{ComponentU}
+	'Component'
+	name=EString
+		(quantity=EIntegerObject)?
+	;
+
+ExistingComponent returns ExistingComponent:
+	{ExistingComponent}
+	'ExistingComponent'
+	name=EString
+		(quantity=EIntegerObject)?
+		('startDate' startDate=EString)?
+		('endDate' endDate=EString)?
+	;
+
+AcquirableComponent returns AcquirableComponent:
+	{AcquirableComponent}
+	'AcquirableComponent'
+	name=EString
+		(quantity=EIntegerObject)?
+		('acquisitionTime' acquisitionTime=EString)?
+		('lifeSpan' lifeSpan=EString)?
+	;
+	
+
+Constraint_Impl returns Constraint:
+	{Constraint}
+	'Constraint'
+	;
+
+DesireHigh returns DesireHigh:
+	{DesireHigh}
+	'DesireHigh'
+	name=EString;
+
+DesireLow returns DesireLow:
+	{DesireLow}
+	'DesireLow'
+	name=EString;
+
+Budget returns Budget:
+	{Budget}
+	'Budget'
+	name=EString
+	'{'
+		('amount' amount=EFloatOurObject)?
+		('startDate' startDate=EString)?
+		('repeatDuration' repeatDuration=EString)?
+		('endDate' endDate=EString)?
+	'}';
+
+EDoubleObject returns ecore::EDoubleObject:
+	'-'? INT? '.' INT (('E'|'e') '-'? INT)?;

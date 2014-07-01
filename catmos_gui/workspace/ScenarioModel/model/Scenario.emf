@@ -1,0 +1,221 @@
+@namespace(
+	uri="ScenarioModel",
+	prefix="p")
+package ScenarioModel;
+
+@gmf.diagram(foo="bar")
+class Scenario
+{
+   @gmf.compartment(foo="bar")
+   val OurObject[*] OurObjects;
+}
+
+class OurObject
+{
+   
+}
+
+@gmf.node(label="name,colour",label.pattern="{0} : {1}")
+class Capability extends OurObject
+{
+   attr String name;
+   attr Boolean searchObjective;
+   attr Boolean standAlone; //Nothing satisfies
+   attr Integer reuse;
+   attr String startDate;
+   attr String endDate;
+   attr Float status;
+   attr String colour;
+   attr Boolean sequentialScheduling;
+   
+   @gmf.link(target.decoration="arrow", style="dash", color="0,0,255")
+   ref Measurement[0..1] accumulation;
+   
+   @gmf.compartment(foo="bar")
+   val Measurement[*] measurements;
+   
+   @gmf.link(target.decoration="arrow", style="dash", color="0,0,255")
+   ref Capability[*] decomposes;
+   
+   ref Capability[*]#satisfies satisfiedBy;
+   @gmf.link(target.decoration="arrow", style="dash", color="0,0,255")
+   ref Capability[*]#satisfiedBy satisfies;
+}
+
+@gmf.node(label="name")
+class CapabilityProvision extends Capability
+{
+   
+}
+
+@gmf.node(label="name")
+class Measurement
+{
+   attr String name;
+   attr Float criticalValue;
+   attr Float benchmarkValue;
+   attr Float providedValue;
+   
+   @gmf.compartment(foo="bar")
+   val QualitativeValue[*] criticalValues;
+   @gmf.compartment(foo="bar")
+   val QualitativeValue[*] benchmarkValues;
+   @gmf.compartment(foo="bar")
+   val QualitativeValue[*] providedValues;
+   
+   attr String script;
+}
+
+@gmf.node(label="name")
+class QualitativeValue
+{
+   attr String name;
+}
+
+@gmf.node(label="name")
+class QualitativeValueDictionary extends OurObject
+{
+   attr String name;
+   
+   @gmf.link(target.decoration="arrow", style="dash", color="0,56,186")
+   ref QualitativeValueDictionary[0..1]#lessThan greaterThan;
+   ref QualitativeValueDictionary[0..1]#greaterThan lessThan;
+}
+
+@gmf.node(label="name")
+class Component extends OurObject
+{
+   attr String name;
+   
+   //For output from scheduler
+   attr String startDate;
+   attr String endDate;
+   
+   @gmf.compartment(foo="bar")
+   val Capability[*] provides;
+   
+   @gmf.compartment(foo="bar")
+   val CapabilityUpgrade[*] upgrades;
+   
+   @gmf.compartment(foo="bar")
+   val Capability[*] requires;
+   
+   @gmf.compartment(foo="bar")
+   val Cost[*] costs;
+}
+
+@gmf.node(label="name,amount", label.pattern="{0} : {1}")
+class Cost
+{
+	attr String name;
+	attr Float amount;
+	attr String startAfter;
+	attr String repeatDuration;
+	attr String stopAfter;
+}
+
+@gmf.node(label="name")
+class CapabilityUpgrade
+{
+   attr String name;
+   attr String targetComponent;
+   
+   @gmf.link(target.decoration="arrow", style="dash", color="0,0,255")
+   ref Component[0..1] upgrading;
+   
+   @gmf.compartment(foo="bar")
+   val CapabilityChange[*] capabilityChanges;
+}
+
+@gmf.node(label="name")
+class CapabilityChange
+{
+   attr String name; //Type
+   
+   @gmf.compartment(foo="bar")
+   val Capability[*] capabilities;
+}
+
+
+
+class RunConfiguration extends OurObject
+{
+   attr String name;
+   
+   attr Integer popSize;
+   attr Integer genCount;
+}
+
+@gmf.node(label="name")
+class FindTradeOffs extends RunConfiguration
+{
+   @gmf.compartment(foo="bar")
+   val ComponentU[*] components;
+   
+   @gmf.compartment(foo="bar")
+   val Constraint[*] constraints;
+}
+
+@gmf.node(label="name")
+class ThroughLifePlanning extends RunConfiguration
+{
+   @gmf.compartment(foo="bar")
+   val ComponentU[*] components;
+   
+   attr String startDate;
+   attr String endDate;
+   
+   @gmf.compartment(foo="bar")
+   val Constraint[*] constraints;
+}
+
+@gmf.node(label="name")
+class ComponentU
+{
+   attr String name;
+   attr Integer quantity;
+}
+
+@gmf.node(label="name")
+class ExistingComponent extends ComponentU
+{
+   attr String startDate;
+   attr String endDate;
+}
+
+@gmf.node(label="name")
+class AcquirableComponent extends ComponentU
+{
+   attr String acquisitionTime;
+   attr String lifeSpan;
+}
+
+class Constraint
+{
+   
+}
+
+@gmf.node(label="name")
+class DesireHigh extends Constraint
+{
+   attr String name;
+}
+
+@gmf.node(label="name")
+class DesireLow extends Constraint
+{
+   attr String name;
+}
+
+@gmf.node(label="name")
+class Budget extends Constraint
+{
+	attr String name;
+	attr Float amount;
+	attr String startDate;
+	attr String repeatDuration;
+	attr String endDate;
+}
+
+
+

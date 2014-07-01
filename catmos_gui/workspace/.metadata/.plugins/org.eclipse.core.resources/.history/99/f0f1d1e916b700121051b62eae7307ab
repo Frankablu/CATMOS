@@ -1,0 +1,17 @@
+/*
+ * 
+ */
+package ScenarioModel.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramPrintingPreferencePage extends org.eclipse.gmf.runtime.diagram.ui.preferences.PrintingPreferencePage {
+
+	/**
+ * @generated
+ */
+	public DiagramPrintingPreferencePage() {
+		setPreferenceStore(ScenarioModel.diagram.part.ScenarioModelDiagramEditorPlugin.getInstance().getPreferenceStore());
+	}
+}

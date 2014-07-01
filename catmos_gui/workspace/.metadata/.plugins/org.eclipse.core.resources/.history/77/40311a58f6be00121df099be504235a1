@@ -1,0 +1,510 @@
+/*
+ * 
+ */
+package ScenarioModel.diagram.part;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import org.eclipse.gef.Tool;
+import org.eclipse.gef.palette.PaletteContainer;
+import org.eclipse.gef.palette.PaletteDrawer;
+import org.eclipse.gef.palette.PaletteRoot;
+import org.eclipse.gef.palette.ToolEntry;
+import org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeConnectionTool;
+import org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeCreationTool;
+import org.eclipse.gmf.runtime.emf.type.core.IElementType;
+
+/**
+ * @generated
+ */
+public class ScenarioModelPaletteFactory {
+
+	/**
+	 * @generated
+	 */
+	public void fillPalette(PaletteRoot paletteRoot) {
+		paletteRoot.add(createObjects1Group());
+		paletteRoot.add(createConnections2Group());
+	}
+
+	/**
+	 * Creates "Objects" palette tool group
+	 * @generated
+	 */
+	private PaletteContainer createObjects1Group() {
+		PaletteDrawer paletteContainer = new PaletteDrawer(
+				ScenarioModel.diagram.part.Messages.Objects1Group_title);
+		paletteContainer.setId("createObjects1Group"); //$NON-NLS-1$
+		paletteContainer.add(createAcquirableComponent1CreationTool());
+		paletteContainer.add(createBudget2CreationTool());
+		paletteContainer.add(createCapability3CreationTool());
+		paletteContainer.add(createCapabilityChange4CreationTool());
+		paletteContainer.add(createCapabilityProvision5CreationTool());
+		paletteContainer.add(createCapabilityUpgrade6CreationTool());
+		paletteContainer.add(createComponent7CreationTool());
+		paletteContainer.add(createComponentU8CreationTool());
+		paletteContainer.add(createCost9CreationTool());
+		paletteContainer.add(createDesireHigh10CreationTool());
+		paletteContainer.add(createDesireLow11CreationTool());
+		paletteContainer.add(createExistingComponent12CreationTool());
+		paletteContainer.add(createFindTradeOffs13CreationTool());
+		paletteContainer.add(createMeasurement14CreationTool());
+		paletteContainer.add(createQualitativeValue15CreationTool());
+		paletteContainer.add(createQualitativeValueDictionary16CreationTool());
+		paletteContainer.add(createThroughLifePlanning17CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+	 * Creates "Connections" palette tool group
+	 * @generated
+	 */
+	private PaletteContainer createConnections2Group() {
+		PaletteDrawer paletteContainer = new PaletteDrawer(
+				ScenarioModel.diagram.part.Messages.Connections2Group_title);
+		paletteContainer.setId("createConnections2Group"); //$NON-NLS-1$
+		paletteContainer.add(createAccumulation1CreationTool());
+		paletteContainer.add(createDecomposes2CreationTool());
+		paletteContainer.add(createGreaterThan3CreationTool());
+		paletteContainer.add(createSatisfies4CreationTool());
+		paletteContainer.add(createUpgrading5CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createAcquirableComponent1CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(ScenarioModel.diagram.providers.ScenarioModelElementTypes.AcquirableComponent_3006);
+		types.add(ScenarioModel.diagram.providers.ScenarioModelElementTypes.AcquirableComponent_3012);
+		NodeToolEntry entry = new NodeToolEntry(
+				ScenarioModel.diagram.part.Messages.AcquirableComponent1CreationTool_title,
+				ScenarioModel.diagram.part.Messages.AcquirableComponent1CreationTool_desc,
+				types);
+		entry.setId("createAcquirableComponent1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ScenarioModel.diagram.providers.ScenarioModelElementTypes
+				.getImageDescriptor(ScenarioModel.diagram.providers.ScenarioModelElementTypes.AcquirableComponent_3006));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createBudget2CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(ScenarioModel.diagram.providers.ScenarioModelElementTypes.Budget_3009);
+		types.add(ScenarioModel.diagram.providers.ScenarioModelElementTypes.Budget_3015);
+		NodeToolEntry entry = new NodeToolEntry(
+				ScenarioModel.diagram.part.Messages.Budget2CreationTool_title,
+				ScenarioModel.diagram.part.Messages.Budget2CreationTool_desc,
+				types);
+		entry.setId("createBudget2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ScenarioModel.diagram.providers.ScenarioModelElementTypes
+				.getImageDescriptor(ScenarioModel.diagram.providers.ScenarioModelElementTypes.Budget_3009));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createCapability3CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
+		types.add(ScenarioModel.diagram.providers.ScenarioModelElementTypes.Capability_2004);
+		types.add(ScenarioModel.diagram.providers.ScenarioModelElementTypes.Capability_3019);
+		types.add(ScenarioModel.diagram.providers.ScenarioModelElementTypes.Capability_3020);
+		types.add(ScenarioModel.diagram.providers.ScenarioModelElementTypes.Capability_3024);
+		NodeToolEntry entry = new NodeToolEntry(
+				ScenarioModel.diagram.part.Messages.Capability3CreationTool_title,
+				ScenarioModel.diagram.part.Messages.Capability3CreationTool_desc,
+				types);
+		entry.setId("createCapability3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ScenarioModel.diagram.providers.ScenarioModelElementTypes
+				.getImageDescriptor(ScenarioModel.diagram.providers.ScenarioModelElementTypes.Capability_2004));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createCapabilityChange4CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(
+				ScenarioModel.diagram.part.Messages.CapabilityChange4CreationTool_title,
+				ScenarioModel.diagram.part.Messages.CapabilityChange4CreationTool_desc,
+				Collections
+						.singletonList(ScenarioModel.diagram.providers.ScenarioModelElementTypes.CapabilityChange_3022));
+		entry.setId("createCapabilityChange4CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ScenarioModel.diagram.providers.ScenarioModelElementTypes
+				.getImageDescriptor(ScenarioModel.diagram.providers.ScenarioModelElementTypes.CapabilityChange_3022));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createCapabilityProvision5CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
+		types.add(ScenarioModel.diagram.providers.ScenarioModelElementTypes.CapabilityProvision_2001);
+		types.add(ScenarioModel.diagram.providers.ScenarioModelElementTypes.CapabilityProvision_3017);
+		types.add(ScenarioModel.diagram.providers.ScenarioModelElementTypes.CapabilityProvision_3018);
+		types.add(ScenarioModel.diagram.providers.ScenarioModelElementTypes.CapabilityProvision_3023);
+		NodeToolEntry entry = new NodeToolEntry(
+				ScenarioModel.diagram.part.Messages.CapabilityProvision5CreationTool_title,
+				ScenarioModel.diagram.part.Messages.CapabilityProvision5CreationTool_desc,
+				types);
+		entry.setId("createCapabilityProvision5CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ScenarioModel.diagram.providers.ScenarioModelElementTypes
+				.getImageDescriptor(ScenarioModel.diagram.providers.ScenarioModelElementTypes.CapabilityProvision_2001));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createCapabilityUpgrade6CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(
+				ScenarioModel.diagram.part.Messages.CapabilityUpgrade6CreationTool_title,
+				ScenarioModel.diagram.part.Messages.CapabilityUpgrade6CreationTool_desc,
+				Collections
+						.singletonList(ScenarioModel.diagram.providers.ScenarioModelElementTypes.CapabilityUpgrade_3021));
+		entry.setId("createCapabilityUpgrade6CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ScenarioModel.diagram.providers.ScenarioModelElementTypes
+				.getImageDescriptor(ScenarioModel.diagram.providers.ScenarioModelElementTypes.CapabilityUpgrade_3021));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createComponent7CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(
+				ScenarioModel.diagram.part.Messages.Component7CreationTool_title,
+				ScenarioModel.diagram.part.Messages.Component7CreationTool_desc,
+				Collections
+						.singletonList(ScenarioModel.diagram.providers.ScenarioModelElementTypes.Component_2006));
+		entry.setId("createComponent7CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ScenarioModel.diagram.providers.ScenarioModelElementTypes
+				.getImageDescriptor(ScenarioModel.diagram.providers.ScenarioModelElementTypes.Component_2006));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createComponentU8CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(ScenarioModel.diagram.providers.ScenarioModelElementTypes.ComponentU_3010);
+		types.add(ScenarioModel.diagram.providers.ScenarioModelElementTypes.ComponentU_3016);
+		NodeToolEntry entry = new NodeToolEntry(
+				ScenarioModel.diagram.part.Messages.ComponentU8CreationTool_title,
+				ScenarioModel.diagram.part.Messages.ComponentU8CreationTool_desc,
+				types);
+		entry.setId("createComponentU8CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ScenarioModel.diagram.providers.ScenarioModelElementTypes
+				.getImageDescriptor(ScenarioModel.diagram.providers.ScenarioModelElementTypes.ComponentU_3010));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createCost9CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(
+				ScenarioModel.diagram.part.Messages.Cost9CreationTool_title,
+				ScenarioModel.diagram.part.Messages.Cost9CreationTool_desc,
+				Collections
+						.singletonList(ScenarioModel.diagram.providers.ScenarioModelElementTypes.Cost_3025));
+		entry.setId("createCost9CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ScenarioModel.diagram.providers.ScenarioModelElementTypes
+				.getImageDescriptor(ScenarioModel.diagram.providers.ScenarioModelElementTypes.Cost_3025));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createDesireHigh10CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(ScenarioModel.diagram.providers.ScenarioModelElementTypes.DesireHigh_3007);
+		types.add(ScenarioModel.diagram.providers.ScenarioModelElementTypes.DesireHigh_3013);
+		NodeToolEntry entry = new NodeToolEntry(
+				ScenarioModel.diagram.part.Messages.DesireHigh10CreationTool_title,
+				ScenarioModel.diagram.part.Messages.DesireHigh10CreationTool_desc,
+				types);
+		entry.setId("createDesireHigh10CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ScenarioModel.diagram.providers.ScenarioModelElementTypes
+				.getImageDescriptor(ScenarioModel.diagram.providers.ScenarioModelElementTypes.DesireHigh_3007));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createDesireLow11CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(ScenarioModel.diagram.providers.ScenarioModelElementTypes.DesireLow_3008);
+		types.add(ScenarioModel.diagram.providers.ScenarioModelElementTypes.DesireLow_3014);
+		NodeToolEntry entry = new NodeToolEntry(
+				ScenarioModel.diagram.part.Messages.DesireLow11CreationTool_title,
+				ScenarioModel.diagram.part.Messages.DesireLow11CreationTool_desc,
+				types);
+		entry.setId("createDesireLow11CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ScenarioModel.diagram.providers.ScenarioModelElementTypes
+				.getImageDescriptor(ScenarioModel.diagram.providers.ScenarioModelElementTypes.DesireLow_3008));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createExistingComponent12CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(ScenarioModel.diagram.providers.ScenarioModelElementTypes.ExistingComponent_3005);
+		types.add(ScenarioModel.diagram.providers.ScenarioModelElementTypes.ExistingComponent_3011);
+		NodeToolEntry entry = new NodeToolEntry(
+				ScenarioModel.diagram.part.Messages.ExistingComponent12CreationTool_title,
+				ScenarioModel.diagram.part.Messages.ExistingComponent12CreationTool_desc,
+				types);
+		entry.setId("createExistingComponent12CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ScenarioModel.diagram.providers.ScenarioModelElementTypes
+				.getImageDescriptor(ScenarioModel.diagram.providers.ScenarioModelElementTypes.ExistingComponent_3005));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createFindTradeOffs13CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(
+				ScenarioModel.diagram.part.Messages.FindTradeOffs13CreationTool_title,
+				ScenarioModel.diagram.part.Messages.FindTradeOffs13CreationTool_desc,
+				Collections
+						.singletonList(ScenarioModel.diagram.providers.ScenarioModelElementTypes.FindTradeOffs_2002));
+		entry.setId("createFindTradeOffs13CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ScenarioModel.diagram.providers.ScenarioModelElementTypes
+				.getImageDescriptor(ScenarioModel.diagram.providers.ScenarioModelElementTypes.FindTradeOffs_2002));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createMeasurement14CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(ScenarioModel.diagram.providers.ScenarioModelElementTypes.Measurement_3001);
+		types.add(ScenarioModel.diagram.providers.ScenarioModelElementTypes.Measurement_3026);
+		NodeToolEntry entry = new NodeToolEntry(
+				ScenarioModel.diagram.part.Messages.Measurement14CreationTool_title,
+				ScenarioModel.diagram.part.Messages.Measurement14CreationTool_desc,
+				types);
+		entry.setId("createMeasurement14CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ScenarioModel.diagram.providers.ScenarioModelElementTypes
+				.getImageDescriptor(ScenarioModel.diagram.providers.ScenarioModelElementTypes.Measurement_3001));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createQualitativeValue15CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
+		types.add(ScenarioModel.diagram.providers.ScenarioModelElementTypes.QualitativeValue_3002);
+		types.add(ScenarioModel.diagram.providers.ScenarioModelElementTypes.QualitativeValue_3003);
+		types.add(ScenarioModel.diagram.providers.ScenarioModelElementTypes.QualitativeValue_3004);
+		NodeToolEntry entry = new NodeToolEntry(
+				ScenarioModel.diagram.part.Messages.QualitativeValue15CreationTool_title,
+				ScenarioModel.diagram.part.Messages.QualitativeValue15CreationTool_desc,
+				types);
+		entry.setId("createQualitativeValue15CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ScenarioModel.diagram.providers.ScenarioModelElementTypes
+				.getImageDescriptor(ScenarioModel.diagram.providers.ScenarioModelElementTypes.QualitativeValue_3002));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createQualitativeValueDictionary16CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(
+				ScenarioModel.diagram.part.Messages.QualitativeValueDictionary16CreationTool_title,
+				ScenarioModel.diagram.part.Messages.QualitativeValueDictionary16CreationTool_desc,
+				Collections
+						.singletonList(ScenarioModel.diagram.providers.ScenarioModelElementTypes.QualitativeValueDictionary_2005));
+		entry.setId("createQualitativeValueDictionary16CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ScenarioModel.diagram.providers.ScenarioModelElementTypes
+				.getImageDescriptor(ScenarioModel.diagram.providers.ScenarioModelElementTypes.QualitativeValueDictionary_2005));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createThroughLifePlanning17CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(
+				ScenarioModel.diagram.part.Messages.ThroughLifePlanning17CreationTool_title,
+				ScenarioModel.diagram.part.Messages.ThroughLifePlanning17CreationTool_desc,
+				Collections
+						.singletonList(ScenarioModel.diagram.providers.ScenarioModelElementTypes.ThroughLifePlanning_2003));
+		entry.setId("createThroughLifePlanning17CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ScenarioModel.diagram.providers.ScenarioModelElementTypes
+				.getImageDescriptor(ScenarioModel.diagram.providers.ScenarioModelElementTypes.ThroughLifePlanning_2003));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createAccumulation1CreationTool() {
+		LinkToolEntry entry = new LinkToolEntry(
+				ScenarioModel.diagram.part.Messages.Accumulation1CreationTool_title,
+				ScenarioModel.diagram.part.Messages.Accumulation1CreationTool_desc,
+				Collections
+						.singletonList(ScenarioModel.diagram.providers.ScenarioModelElementTypes.CapabilityAccumulation_4001));
+		entry.setId("createAccumulation1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ScenarioModel.diagram.providers.ScenarioModelElementTypes
+				.getImageDescriptor(ScenarioModel.diagram.providers.ScenarioModelElementTypes.CapabilityAccumulation_4001));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createDecomposes2CreationTool() {
+		LinkToolEntry entry = new LinkToolEntry(
+				ScenarioModel.diagram.part.Messages.Decomposes2CreationTool_title,
+				ScenarioModel.diagram.part.Messages.Decomposes2CreationTool_desc,
+				Collections
+						.singletonList(ScenarioModel.diagram.providers.ScenarioModelElementTypes.CapabilityDecomposes_4002));
+		entry.setId("createDecomposes2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ScenarioModel.diagram.providers.ScenarioModelElementTypes
+				.getImageDescriptor(ScenarioModel.diagram.providers.ScenarioModelElementTypes.CapabilityDecomposes_4002));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createGreaterThan3CreationTool() {
+		LinkToolEntry entry = new LinkToolEntry(
+				ScenarioModel.diagram.part.Messages.GreaterThan3CreationTool_title,
+				ScenarioModel.diagram.part.Messages.GreaterThan3CreationTool_desc,
+				Collections
+						.singletonList(ScenarioModel.diagram.providers.ScenarioModelElementTypes.QualitativeValueDictionaryGreaterThan_4004));
+		entry.setId("createGreaterThan3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ScenarioModel.diagram.providers.ScenarioModelElementTypes
+				.getImageDescriptor(ScenarioModel.diagram.providers.ScenarioModelElementTypes.QualitativeValueDictionaryGreaterThan_4004));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createSatisfies4CreationTool() {
+		LinkToolEntry entry = new LinkToolEntry(
+				ScenarioModel.diagram.part.Messages.Satisfies4CreationTool_title,
+				ScenarioModel.diagram.part.Messages.Satisfies4CreationTool_desc,
+				Collections
+						.singletonList(ScenarioModel.diagram.providers.ScenarioModelElementTypes.CapabilitySatisfies_4003));
+		entry.setId("createSatisfies4CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ScenarioModel.diagram.providers.ScenarioModelElementTypes
+				.getImageDescriptor(ScenarioModel.diagram.providers.ScenarioModelElementTypes.CapabilitySatisfies_4003));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createUpgrading5CreationTool() {
+		LinkToolEntry entry = new LinkToolEntry(
+				ScenarioModel.diagram.part.Messages.Upgrading5CreationTool_title,
+				ScenarioModel.diagram.part.Messages.Upgrading5CreationTool_desc,
+				Collections
+						.singletonList(ScenarioModel.diagram.providers.ScenarioModelElementTypes.CapabilityUpgradeUpgrading_4005));
+		entry.setId("createUpgrading5CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ScenarioModel.diagram.providers.ScenarioModelElementTypes
+				.getImageDescriptor(ScenarioModel.diagram.providers.ScenarioModelElementTypes.CapabilityUpgradeUpgrading_4005));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static class NodeToolEntry extends ToolEntry {
+
+		/**
+		 * @generated
+		 */
+		private final List<IElementType> elementTypes;
+
+		/**
+		 * @generated
+		 */
+		private NodeToolEntry(String title, String description,
+				List<IElementType> elementTypes) {
+			super(title, description, null, null);
+			this.elementTypes = elementTypes;
+		}
+
+		/**
+		 * @generated
+		 */
+		public Tool createTool() {
+			Tool tool = new UnspecifiedTypeCreationTool(elementTypes);
+			tool.setProperties(getToolProperties());
+			return tool;
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private static class LinkToolEntry extends ToolEntry {
+
+		/**
+		 * @generated
+		 */
+		private final List<IElementType> relationshipTypes;
+
+		/**
+		 * @generated
+		 */
+		private LinkToolEntry(String title, String description,
+				List<IElementType> relationshipTypes) {
+			super(title, description, null, null);
+			this.relationshipTypes = relationshipTypes;
+		}
+
+		/**
+		 * @generated
+		 */
+		public Tool createTool() {
+			Tool tool = new UnspecifiedTypeConnectionTool(relationshipTypes);
+			tool.setProperties(getToolProperties());
+			return tool;
+		}
+	}
+}

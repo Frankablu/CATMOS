@@ -1,0 +1,184 @@
+
+ThroughLifePlanning "7RoachRushTemp"
+{
+	popSize 100
+	genCount 10
+	
+	startDate "0"
+	endDate "1200"
+	
+	ExistingComponent "Hatchery" 1 startDate "0" endDate "inf"
+	ExistingComponent "Starting Drone" 5 startDate "0" endDate "inf"
+	ExistingComponent "Starting Overlord" 1 startDate "0" endDate "inf"
+	
+	AcquirableComponent "Drone" 30 acquisitionTime "5" lifeSpan "inf"
+	AcquirableComponent "Mining Drone" 20 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent "Gas Mining Drone" 3 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent "Roach" 7 acquisitionTime "27" lifeSpan "inf"
+	AcquirableComponent "Roach Warren" 1 acquisitionTime "55" lifeSpan "inf"
+	AcquirableComponent "Spawning Pool" 1 acquisitionTime "65" lifeSpan "inf"
+	AcquirableComponent "Extractor" 1 acquisitionTime "30" lifeSpan "inf"
+	AcquirableComponent "Overload" 5 acquisitionTime "25" lifeSpan "inf"
+	
+	Budget Minerals
+	{
+		amount 50.0
+		startDate "0"
+	}
+	
+	Budget Larva
+	{
+		amount 1.0
+		startDate "0"
+		repeatDuration "15"
+	}
+}
+
+//Income Capabilities
+//Strictly speaking the tool does not support negative costs (Building something generates more money)
+//Hence these capabilities are needed to make the tool select these for inclusion
+Capability "Mineral Mining"
+{	
+	accumulation "Mining Drone count"
+	
+	startDate "0"
+	endDate "inf"
+	
+	Measurement "Mining Drone count"
+	{
+		criticalValue 0.0
+		benchmarkValue 20.0
+	}
+}
+
+Capability "Gas Mineral Mining"
+{
+	accumulation "Gas Mining Drone count"
+	
+	startDate "0"
+	endDate "inf"
+	
+	Measurement "Gas Mining Drone count"
+	{
+		criticalValue 0.0
+		benchmarkValue 3.0
+	}
+}
+
+//We want 7 roaches as early as possible!
+searchObjective
+Capability "Roach"
+{	
+	accumulation "Roach count"
+	
+	startDate "0"
+	endDate "inf"
+	
+	Measurement "Roach count"
+	{
+		criticalValue 0.0
+		benchmarkValue 7.0
+	}
+}
+
+Component "Roach"
+{
+	CapabilityProvision "Roach"
+	{
+		reuse 1
+		Measurement "Roach count"
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability "Supply" {}
+	sequentialScheduling
+	Capability "Roach Production" {}
+	
+	Cost Larva 1.0
+}
+
+Component "Roach Warren"
+{
+	CapabilityProvision "Roach Production" {}
+	CapabilityProvision "Supply" {}
+	
+	sequentialScheduling
+	Capability "Spawning Pool" {}
+	
+	sequentialScheduling
+	Capability "Drone" {}
+	
+	Cost Minerals 150.0
+}
+
+Component "Spawning Pool"
+{
+	CapabilityProvision "Spawning Pool" {}
+	CapabilityProvision "Supply" {}
+	
+	sequentialScheduling
+	Capability "Drone" {}
+	
+	Cost Minerals 200.0
+}
+
+Component "Mining Drone"
+{
+	CapabilityProvision "Mineral Mining" { Measurement "Mining Drone count" { providedValue 1.0 }}
+	Capability "Drone" {}
+	
+	Cost Minerals -5.0
+	{
+		startAfter "7"
+		repeatDuration "7"
+	}
+}
+
+Component "Drone"
+{
+	CapabilityProvision "Drone" { reuse 1 }
+	Capability "Supply" {}
+	
+	Cost Minerals 50.0
+	Cost Larva 1.0
+}
+
+Component "Starting Drone" { CapabilityProvision "Drone"{ reuse 1 }}
+Component "Hatchery" { CapabilityProvision "Supply" { reuse 2 } }
+Component "Gas Mining Drone"
+{
+	CapabilityProvision "Gas Mineral Mining" { Measurement "Gas Mining Drone count" { providedValue 1.0 }}
+	
+	Capability "Drone" {}
+	Capability "Extractor" {}
+	
+	Cost Gas -5.0
+	{
+		startAfter "7"
+		repeatDuration "7"
+	}
+}
+
+Component "Extractor"
+{
+	CapabilityProvision "Extractor" {}
+	CapabilityProvision "Supply" { reuse 1 } //Freed Up Supply
+	Capability "Drone" {}
+	
+	Cost Minerals 25.0
+}
+
+Component "Starting Overlord"
+{
+	CapabilityProvision "Supply" { reuse 8 }
+}
+
+Component "Overlord"
+{
+	CapabilityProvision "Supply" { reuse 8 }
+	
+	Cost Minerals 100.0
+	Cost Larva 1.0
+}

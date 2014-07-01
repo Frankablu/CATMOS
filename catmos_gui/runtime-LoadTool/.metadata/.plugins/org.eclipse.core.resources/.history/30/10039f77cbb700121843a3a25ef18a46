@@ -1,0 +1,391 @@
+
+
+var runTool = new Native("org.eclipse.epsilon.examples.tools.RunTool");
+
+var capNo : Integer = 0;
+var measureNo : Integer = 0;
+
+var throughLife : Boolean = (ThroughLifePlanning.all().size() > 0);
+
+runTool.connectToNetworkClient("127.0.0.1", 1234);
+runTool.sendCommand("start");
+
+var base : Real = 0;
+
+if (throughLife)
+{
+	base = runTool.convertDateTime(ThroughLifePlanning.all().first.startDate);
+
+	runTool.startCommandList();
+	runTool.addCommand("throughlife"); //Server accepts additional arguments for creation calls for scheduling purposes
+	runTool.addCommand("0");
+	runTool.addCommand(ThroughLifePlanning.all().first.endDate.convert(base));
+	runTool.sendCommands();
+}
+
+//Scenario Capabilities First
+for (cap in Capability.all().select(x|x.isTypeOf(Capability)))
+{
+	if (Component.all().collect(x|x.requires).flatten().contains(cap) == false)
+	{
+		if (throughLife == false)
+		{
+			runTool.createCapability(cap.name,cap.searchObjective==true);
+		}
+		else
+		{
+			runTool.startCommandList();
+			if (cap.searchObjective==true)
+			{
+				runTool.addCommand("createCapabilitySO");
+				runTool.addCommand(cap.name);
+				if (cap.standAlone == true)
+				{
+					runTool.addCommand("true");
+				}
+				else
+				{
+					runTool.addCommand("false");
+				}
+				runTool.addCommand(cap.startDate.convert(base));
+				runTool.addCommand(cap.endDate.convert(base));
+			}
+			else
+			{
+				runTool.addCommand("createCapability"); //"createCapabilitySeq" Future Support Option
+				
+				runTool.addCommand(cap.name);
+			}
+			runTool.sendCommands();
+		}
+		
+		//Measures For Each Cap
+		cap.measurements.createAllMeasurements(cap);
+	}
+}
+
+//Components - Notice Creating a Component Disables Creating Any More Scenario Capabilities
+for (ourComponent in Component.all())
+{
+	//Decide How Many Times We Need To Make The Component
+	var times : Integer = 1;
+	var componentDetails : ComponentU = ComponentU.all().selectOne(x|x.name==ourComponent.name);
+	
+	if (componentDetails <> null)
+	{
+		times = componentDetails.quantity;
+	}
+	
+	for (componentUsage in 1.to(times))
+	{
+		
+		if (times > 1)
+		{
+			if (throughLife == false)
+			{
+				runTool.createComponent(ourComponent.name+":"+componentUsage.asString());
+			}
+			else
+			{
+				runTool.startCommandList();
+				if (componentDetails.isTypeOf(ExistingComponent))
+				{
+					runTool.addCommand("createExistingComponent");
+					runTool.addCommand(ourComponent.name+":"+componentUsage.asString());
+					runTool.addCommand(componentDetails.startDate.convert(base));
+					runTool.addCommand(componentDetails.endDate.convert(base));
+				}
+				else
+				{
+					runTool.addCommand("createAcquirableComponent");
+					runTool.addCommand(ourComponent.name+":"+componentUsage.asString());
+					runTool.addCommand(componentDetails.acquisitionTime.convertDuration());
+					runTool.addCommand(componentDetails.lifeSpan.convertDuration());
+				}
+				runTool.sendCommands();
+				
+			}
+        }
+        else
+        {
+        	if (throughLife == false)
+			{
+				runTool.createComponent(ourComponent.name);
+			}
+			else
+			{
+				runTool.startCommandList();
+				if (componentDetails.isTypeOf(ExistingComponent))
+				{
+					runTool.addCommand("createExistingComponent");
+					runTool.addCommand(ourComponent.name);
+					runTool.addCommand(componentDetails.startDate.convert(base));
+					runTool.addCommand(componentDetails.endDate.convert(base));
+				}
+				else
+				{
+					runTool.addCommand("createAcquirableComponent");
+					runTool.addCommand(ourComponent.name);
+					runTool.addCommand(componentDetails.acquisitionTime.convertDuration());
+					runTool.addCommand(componentDetails.lifeSpan.convertDuration());
+				}
+				runTool.sendCommands();
+				
+			}
+        }
+        
+        for (provision in ourComponent.provides)
+        {
+        	runTool.createCapabilityProvision(provision.name,provision.reuse.asString());
+      		
+        	provision.measurements.createAllMeasurements(null);
+        }
+        
+        for (dependency in ourComponent.requires)
+        {
+        	runTool.createCapability(dependency.name,dependency.searchObjective==true);
+        	
+        	dependency.measurements.createAllMeasurements(null);
+        }
+        for (upgrade in ourComponent.upgrades)
+        {
+        	runTool.createCapabilityUpgrade(upgrade.name, upgrade.targetComponent);
+        	
+        	for (capabilityChange in upgrade.capabilityChanges)
+        	{
+        		runTool.sendCommand(capabilityChange.name);
+        		
+        		for (provision in capabilityChange.capabilities)
+        		{
+        			runTool.createCapabilityProvision(provision.name,provision.reuse.asString());
+        			provision.measurements.createAllMeasurements(null);
+        		}
+        	}
+        	
+        	runTool.sendCommand("end");
+        }
+        for (cost in ourComponent.costs)
+        {
+        	if (throughLife == false)
+        	{
+        		runTool.createCost(cost.name,cost.amount.asString());
+        	}
+        	else
+        	{
+        		runTool.startCommandList();
+        		runTool.addCommand("createCost");
+        		runTool.addCommand(cost.name);
+        		runTool.addCommand(cost.amount.asString());
+        		
+        		if (cost.startAfter <> null)
+        		{
+        			runTool.addCommand(cost.startAfter.convertDuration());
+        		}
+        		else
+        		{
+        			runTool.addCommand("0");
+        		}
+        		
+        		if (cost.repeatDuration <> null)
+        		{
+        			runTool.addCommand(cost.repeatDuration.convertDuration());
+        			
+        			if (cost.endAfter <> null)
+        			{
+        				 runTool.addCommand(cost.endAfter.convertDuration());
+        			}
+        			else
+        			{
+        				cost.startAfter.convertDuration() - 1;
+        			}
+        		}
+        		else
+        		{
+        			runTool.addCommand("0");
+        			runTool.addCommand("0");
+        		}
+        		
+        		runTool.sendCommands();
+        	}
+        	
+        }
+    }
+}
+
+for (entry in QualitativeValueDictionary.all())
+{
+     if (runTool.greaterThan <> null)
+     {
+     	runTool.createQVD(entry.name, entry.greaterThan.name);
+     }
+}
+
+
+for (income in Budget.all())
+{
+	runTool.startCommandList();
+	runTool.addCommand("createIncome");
+	runTool.addCommand(income.name);
+	runTool.addCommand(income.amount.asString());
+	
+	if (income.startDate <> null)
+	{
+		runTool.addCommand(income.startDate.convert(base));
+	}
+	else
+	{
+		runTool.addCommand("0");
+	}
+	
+	if (income.repeatDuration <> null)
+	{
+		runTool.addCommand(income.repeatDuration.convertDuration());
+		
+		if (income.endData <> null)
+		{
+			runTool.addCommand(income.endDate.convert(base));
+		}
+		else
+		{
+			runTool.addCommand(income.startDate.convert(base) - 1);
+		}
+	}
+	else
+	{
+		runTool.addCommand("0");
+		runTool.addCommand(income.startDate.convert(base));
+	}
+	runTool.sendCommands();
+}
+
+for (desire in DesireLow.all())
+{
+	runTool.startCommandList();
+	runTool.addCommand("desireLow");
+	runTool.addCommand(desire.name);
+	runTool.sendCommands();
+}
+
+for (desire in DesireHigh.all())
+{
+	runTool.startCommandList();
+	runTool.addCommand("desireHigh");
+	runTool.addCommand(desire.name);
+	runTool.sendCommands();
+}
+
+
+runTool.startCommandList();
+runTool.addCommand("startGA");
+runTool.addCommand(RunConfiguration.all().first.popSize.asString());
+runTool.addCommand(RunConfiguration.all().first.genCount.asString());
+runTool.sendCommands();
+
+
+
+operation Collection createAllMeasurements(cap : Capability)
+{
+	var acc : Boolean;
+	for (measurement in self)
+    {
+    	acc = false;
+    	if (cap <> null and cap.accumulation==measurement)
+    	{
+    		acc = true;
+    	}
+    	
+    	if (measurement.script == null)
+    	{
+    		measurement.script = "";
+    	}
+    
+    	if (measurement.criticalValue <> null or measurement.providedValue <> null)
+       	{
+        	runTool.createMeasurement(measurement.name,measurement.criticalValue.asString(),measurement.benchmarkValue.asString(),measurement.providedValue.asString(),measurement.script,acc);
+        }
+        else
+        {
+        	var criticalValues : String = "";
+        	var benchmarkValues : String = "";
+        	var providedValues : String = "";
+        	
+        	var loop : Integer = 0;
+        	for (value in measurement.criticalValues)
+        	{
+        			loop = loop + 1;
+        			criticalValues = criticalValues + value.name;
+        			if (loop < measurement.criticalValues.size())
+        			{
+        				criticalValues = criticalValues = ",";
+        			}
+        	}
+        	
+        	loop = 0;
+        	for (value in measurement.benchmarkValues)
+        	{
+        			loop = loop + 1;
+        			benchmarkValues = benchmarkValues + value.name;
+        			if (loop < measurement.benchmarkValues.size())
+        			{
+        				benchmarkValues = benchmarkValues = ",";
+        			}
+        	}
+        	
+        	loop = 0;
+        	for (value in measurement.providedValues)
+        	{
+        			loop = loop + 1;
+        			providedValues = providedValues + value.name;
+        			if (loop < measurement.criticalValues.size())
+        			{
+        				providedValues = providedValues = ",";
+        			}
+        	}
+        	
+        	runTool.createMeasurement(measurement.name,criticalValues,benchmarkValues,providedValues,measurement.script,acc);
+		}
+    }
+}
+
+
+operation String convert(base : Real)
+{
+	var runTool = new Native("org.eclipse.epsilon.examples.tools.RunTool");
+	
+	return ((runTool.convertDateTime(self) - base) / (1000 * 60 * 60 * 24)).asString(); //Nearest Day
+}
+
+operation String convertDuration()
+{
+	var splitDur : Collection = self.split(" ");
+	var days : Integer;
+	
+	if (self == null)
+	{
+		return "";
+	}
+	
+	if (self <> "inf" and self <> "infinite")
+	{
+		days = splitDur.first().asInteger();
+		
+		if (splitDur.last() == "weeks")
+		{
+			days = days * 7;
+		}
+		
+		if (splitDur.last() == "months")
+		{
+			days = days * 30;
+		}
+		
+	}
+	
+	if (self == "inf" or self == "infinite")
+	{
+		return ThroughLifePlanning.all().first.endDate.convert(base); //Total Run Time, I.e It will expire after the evaluation is finished
+	}
+	
+	return days.asString();
+}
+

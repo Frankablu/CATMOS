@@ -1,0 +1,6 @@
+
+catmos: main.cpp capability.cpp capabilityprovision.cpp capabilityupgrade.cpp component.cpp connection.cpp cost.cpp createInitialSolution.cpp evaluator.cpp geneIndex.cpp geneticAlgorithm.cpp genotype.cpp luascripts.cpp  measurement.cpp mobject.cpp network.cpp networkConnection.cpp problem.cpp probleminstance.cpp qvd.cpp scheduleBudget.cpp scheduleCapability.cpp scheduleCapabilityProvision.cpp scheduleComponent.cpp scheduleCost.cpp scheduleIncome.cpp scheduleObject.cpp scheduler.cpp main.h geneticAlgorithm.h
+	g++ main.cpp capability.cpp capabilityprovision.cpp capabilityupgrade.cpp component.cpp connection.cpp cost.cpp createInitialSolution.cpp evaluator.cpp geneIndex.cpp geneticAlgorithm.cpp genotype.cpp luascripts.cpp  measurement.cpp mobject.cpp network.cpp networkConnection.cpp problem.cpp probleminstance.cpp qvd.cpp scheduleBudget.cpp scheduleCapability.cpp  scheduleCapabilityProvision.cpp scheduleComponent.cpp scheduleCost.cpp scheduleIncome.cpp scheduleObject.cpp scheduler.cpp -lboost_system -ldl -pthread -llua -o catmos_server
+
+install:
+	cp catmos_server /usr/bin/

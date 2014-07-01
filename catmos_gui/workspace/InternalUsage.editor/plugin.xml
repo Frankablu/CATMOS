@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="internalusage.presentation.InternalusageModelWizardID"
+            name="%_UI_InternalusageModelWizard_label"
+            class="internalusage.presentation.InternalusageModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/InternalusageModelFile.gif">
+         <description>%_UI_InternalusageModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="internalusage.presentation.InternalusageEditorID"
+            name="%_UI_InternalusageEditor_label"
+            icon="icons/full/obj16/InternalusageModelFile.gif"
+            extensions="internalusage"
+            class="internalusage.presentation.InternalusageEditor"
+            contributorClass="internalusage.presentation.InternalusageActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

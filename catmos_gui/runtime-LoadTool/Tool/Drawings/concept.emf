@@ -1,0 +1,34 @@
+@namespace(
+	uri="ConceptDrawing",
+	prefix="p")
+package ConceptDrawing;
+
+class Capability
+{
+   val Measurement[*] wantedMeasurements;
+   val Capability[*] decomposes;
+   ref CapabilityProvision[*]#satisfies satisfiedBy;
+}
+
+class CapabilityProvision
+{
+   val Measurement[*] providedMeasurements;
+   ref Capability[*]#satisfiedBy satisfies;
+}
+
+class Component
+{
+   val CapabilityProvision[*] providedCapabilities;
+   val Capability[*] wantedCapabilities;
+   val Cost[*] componentCosts;
+}
+
+class Measurement
+{
+   
+}
+
+class Cost
+{
+   
+}

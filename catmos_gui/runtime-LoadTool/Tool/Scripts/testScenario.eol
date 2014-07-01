@@ -1,0 +1,43 @@
+
+"Testing Scenario File".println();
+
+var allCap : Collection = Capability.all();
+var errorCount : Integer = 0;
+
+for (cap in allCap)
+{
+	var matchingCapProv : Collection = CapabilityProvision.all().select(x|x.name == cap.name);
+	if (matchingCapProv.size() == 0 and cap.standAlone <> true)
+	{
+		"Error".println();
+		"No matching capability provision for ".print();
+		cap.println();
+		errorCount = errorCount + 1;
+	}
+	
+	var providedMeasurements : Collection = CapabilityProvision.all().collect(x|x.measurements).flatten();
+	var desiredMeasurements : Collection = Capability.all().select(x|x.isTypeOf(Capability)).collect(x|x.measurements).flatten();
+	
+	for (desired in desiredMeasurements)
+	{
+		if (providedMeasurements.select(x|x.name == desired.name).size() == 0 and desired.script.size() == 0)
+		{
+			"Error".println();
+			"No matching measurement for ".print();
+			desired.println();
+			"Alternative problem: Missing script".println();
+			
+			errorCount = errorCount + 1;
+		}
+	}
+}
+
+"Tests Complete".println();
+
+if (errorCount > 0)
+{
+	errorCount.print();
+	" errors detected".println();
+	
+	"Aborting Run!".println();
+}

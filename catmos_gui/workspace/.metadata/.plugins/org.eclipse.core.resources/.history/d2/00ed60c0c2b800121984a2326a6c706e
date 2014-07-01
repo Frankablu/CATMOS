@@ -1,0 +1,33 @@
+	/*
+ * 
+ */
+package capOverTime.diagram.part;
+
+	/**
+ * @generated
+ */
+public class CapOverTimeShortcutPropertyTester extends org.eclipse.core.expressions.PropertyTester {
+
+		/**
+ * @generated
+ */
+protected static final String SHORTCUT_PROPERTY = "isShortcut";  //$NON-NLS-1$
+
+		/**
+ * @generated
+ */
+public boolean test(Object receiver, String method, Object[] args, Object expectedValue) {
+	if (false == receiver instanceof org.eclipse.gmf.runtime.notation.View) {
+		return false;
+	}
+	org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) receiver;
+	if (SHORTCUT_PROPERTY.equals(method)) {
+		org.eclipse.emf.ecore.EAnnotation annotation = view.getEAnnotation("Shortcut");  //$NON-NLS-1$
+		if (annotation != null) {
+			return capOverTime.diagram.edit.parts.CapabilityOverTimeEditPart.MODEL_ID.equals(annotation.getDetails().get("modelID"));  //$NON-NLS-1$
+		}
+	}
+	return false;
+}
+
+	}

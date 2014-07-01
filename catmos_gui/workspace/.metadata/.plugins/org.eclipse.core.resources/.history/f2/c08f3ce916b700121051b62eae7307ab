@@ -1,0 +1,108 @@
+/*
+ * 
+ */
+package ScenarioModel.diagram.edit.parts;
+
+/**
+ * @generated
+ */
+public class ScenarioEditPart extends org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart  {
+
+		/**
+ * @generated
+ */
+	public final static String MODEL_ID = "ScenarioModel";  //$NON-NLS-1$
+	
+		/**
+ * @generated
+ */
+	public static final int VISUAL_ID = 1000;
+	
+		/**
+ * @generated
+ */
+	public ScenarioEditPart(org.eclipse.gmf.runtime.notation.View view) {
+		super(view);
+	}
+	
+		/**
+ * @generated
+ */
+	protected void createDefaultEditPolicies() {
+			super.createDefaultEditPolicies();
+		installEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.SEMANTIC_ROLE, new ScenarioModel.diagram.edit.policies.ScenarioItemSemanticEditPolicy());
+			installEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CANONICAL_ROLE, new ScenarioModel.diagram.edit.policies.ScenarioCanonicalEditPolicy());
+				installEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.DRAG_DROP_ROLE, new org.eclipse.gmf.runtime.diagram.ui.editpolicies.DiagramDragDropEditPolicy() {
+			public org.eclipse.gef.commands.Command getDropObjectsCommand(org.eclipse.gmf.runtime.diagram.ui.requests.DropObjectsRequest dropRequest) {
+				java.util.ArrayList<org.eclipse.gmf.runtime.diagram.ui.requests.CreateViewRequest.ViewDescriptor> viewDescriptors = new java.util.ArrayList<org.eclipse.gmf.runtime.diagram.ui.requests.CreateViewRequest.ViewDescriptor>();
+				for (java.util.Iterator<?> it = dropRequest.getObjects().iterator(); it.hasNext();) {
+					Object nextObject = it.next();
+					if (false == nextObject instanceof org.eclipse.emf.ecore.EObject) {
+						continue;
+					}
+					viewDescriptors.add(new org.eclipse.gmf.runtime.diagram.ui.requests.CreateViewRequest.ViewDescriptor(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter((org.eclipse.emf.ecore.EObject) nextObject), org.eclipse.gmf.runtime.notation.Node.class, null, getDiagramPreferencesHint()));
+				}
+				return createShortcutsCommand(dropRequest, viewDescriptors);
+			}
+
+			private org.eclipse.gef.commands.Command createShortcutsCommand(org.eclipse.gmf.runtime.diagram.ui.requests.DropObjectsRequest dropRequest, java.util.List<org.eclipse.gmf.runtime.diagram.ui.requests.CreateViewRequest.ViewDescriptor> viewDescriptors) {
+				org.eclipse.gef.commands.Command command = createViewsAndArrangeCommand(dropRequest, viewDescriptors);
+				if (command != null) {
+					return command.chain(new org.eclipse.gmf.runtime.diagram.ui.commands.ICommandProxy(new ScenarioModel.diagram.edit.commands.ScenarioModelCreateShortcutDecorationsCommand(getEditingDomain(), (org.eclipse.gmf.runtime.notation.View) getModel(), viewDescriptors)));
+				}
+				return null;
+			}
+		});
+					// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.POPUPBAR_ROLE);
+	}
+	
+		
+		/**
+ * @generated
+ */
+	/*package-local*/ static class NodeLabelDragPolicy extends org.eclipse.gef.editpolicies.NonResizableEditPolicy {
+
+		/**
+ * @generated
+ */
+		@SuppressWarnings("rawtypes")
+		protected java.util.List createSelectionHandles() {
+			org.eclipse.gef.handles.MoveHandle h = new org.eclipse.gef.handles.MoveHandle((org.eclipse.gef.GraphicalEditPart) getHost());
+			h.setBorder(null);
+			return java.util.Collections.singletonList(h);
+		}
+
+		/**
+ * @generated
+ */
+		public org.eclipse.gef.commands.Command getCommand(org.eclipse.gef.Request request) {
+			return null;
+		}
+
+		/**
+ * @generated
+ */
+		public boolean understandsRequest(org.eclipse.gef.Request request) {
+			return false;
+		}
+	}
+
+
+		/**
+ * @generated
+ */
+	/*package-local*/ static class LinkLabelDragPolicy extends org.eclipse.gmf.runtime.diagram.ui.editpolicies.NonResizableLabelEditPolicy {
+
+		/**
+ * @generated
+ */
+		@SuppressWarnings("rawtypes")
+		protected java.util.List createSelectionHandles() {
+			org.eclipse.gef.handles.MoveHandle mh = new org.eclipse.gef.handles.MoveHandle((org.eclipse.gef.GraphicalEditPart) getHost());
+			mh.setBorder(null);
+			return java.util.Collections.singletonList(mh);
+		}
+	}
+
+
+	}

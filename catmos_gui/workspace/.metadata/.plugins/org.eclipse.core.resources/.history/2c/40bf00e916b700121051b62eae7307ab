@@ -1,0 +1,141 @@
+/*
+ * 
+ */
+package ScenarioModel.diagram.edit.commands;
+
+/**
+ * @generated
+ */
+public class MeasurementAggregatesReorientCommand extends org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand {
+
+	/**
+ * @generated
+ */
+	private final int reorientDirection;
+
+	/**
+ * @generated
+ */
+	private final org.eclipse.emf.ecore.EObject referenceOwner;
+
+	/**
+ * @generated
+ */
+	private final org.eclipse.emf.ecore.EObject oldEnd;
+
+	/**
+ * @generated
+ */
+	private final org.eclipse.emf.ecore.EObject newEnd;
+
+	/**
+ * @generated
+ */
+	public MeasurementAggregatesReorientCommand(org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelationshipRequest request) {
+		super(request.getLabel(), null, request);
+		reorientDirection = request.getDirection();
+		referenceOwner = request.getReferenceOwner();
+		oldEnd = request.getOldRelationshipEnd();
+		newEnd = request.getNewRelationshipEnd();
+	}
+	
+	/**
+ * @generated
+ */
+	public boolean canExecute() {
+			if (false == referenceOwner instanceof ScenarioModel.Measurement) {
+		return false;
+	}
+		if (reorientDirection == org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest.REORIENT_SOURCE) {
+			return canReorientSource();
+		}
+		if (reorientDirection == org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest.REORIENT_TARGET) {
+			return canReorientTarget();
+		}
+		return false;
+	}
+
+	/**
+ * @generated
+ */
+	protected boolean canReorientSource() {
+			if (!(oldEnd instanceof ScenarioModel.Measurement && newEnd instanceof ScenarioModel.Measurement)) {
+		return false;
+	}
+	return ScenarioModel.diagram.edit.policies.ScenarioModelBaseItemSemanticEditPolicy.getLinkConstraints().canExistMeasurementAggregates_4004(getNewSource(), getOldTarget());
+	}
+
+	/**
+ * @generated
+ */
+	protected boolean canReorientTarget() {
+			if (!(oldEnd instanceof ScenarioModel.Measurement && newEnd instanceof ScenarioModel.Measurement)) {
+		return false;
+	}
+	return ScenarioModel.diagram.edit.policies.ScenarioModelBaseItemSemanticEditPolicy.getLinkConstraints().canExistMeasurementAggregates_4004(getOldSource(), getNewTarget());
+	}
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.core.command.CommandResult doExecuteWithResult(
+			org.eclipse.core.runtime.IProgressMonitor monitor, org.eclipse.core.runtime.IAdaptable info)
+			throws org.eclipse.core.commands.ExecutionException {
+		if (!canExecute()) {
+			throw new org.eclipse.core.commands.ExecutionException("Invalid arguments in reorient link command");  //$NON-NLS-1$
+		}
+		if (reorientDirection == org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest.REORIENT_SOURCE) {
+			return reorientSource();
+		}
+		if (reorientDirection == org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest.REORIENT_TARGET) {
+			return reorientTarget();
+		}
+		throw new IllegalStateException();
+	}
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.core.command.CommandResult reorientSource() throws org.eclipse.core.commands.ExecutionException {
+				getOldSource().getAggregates().remove(getOldTarget());
+	getNewSource().getAggregates().add(getOldTarget());
+	return org.eclipse.gmf.runtime.common.core.command.CommandResult.newOKCommandResult(referenceOwner);
+	}
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.core.command.CommandResult reorientTarget() throws org.eclipse.core.commands.ExecutionException {
+				getOldSource().getAggregates().remove(getOldTarget());
+	getOldSource().getAggregates().add(getNewTarget());
+	return org.eclipse.gmf.runtime.common.core.command.CommandResult.newOKCommandResult(referenceOwner);
+	}
+			
+	/**
+ * @generated
+ */
+	protected ScenarioModel.Measurement getOldSource() {
+		return (ScenarioModel.Measurement) referenceOwner;
+	}
+	
+	/**
+ * @generated
+ */
+	protected ScenarioModel.Measurement getNewSource() {
+		return (ScenarioModel.Measurement) newEnd;
+	}
+	
+	/**
+ * @generated
+ */
+	protected ScenarioModel.Measurement getOldTarget() {
+		return (ScenarioModel.Measurement) oldEnd;
+	}
+	
+	/**
+ * @generated
+ */
+	protected ScenarioModel.Measurement getNewTarget() {
+		return (ScenarioModel.Measurement) newEnd;
+	}
+}

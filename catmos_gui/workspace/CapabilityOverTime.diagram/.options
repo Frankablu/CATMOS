@@ -1,0 +1,7 @@
+# Tracing options for the CapabilityOverTime.diagram plug-in
+
+# Common issues
+CapabilityOverTime.diagram/debug=false
+
+# Visual IDs
+CapabilityOverTime.diagram/debug/visualID=false

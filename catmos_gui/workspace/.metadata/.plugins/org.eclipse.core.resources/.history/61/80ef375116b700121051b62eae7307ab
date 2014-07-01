@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/Scenario/src"
+    modelPluginID="Scenario" modelName="Scenario" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>Scenario.emf</foreignModel>
+  <genPackages prefix="Scenario" disposableProviderFactory="true" ecorePackage="Scenario.ecore#/">
+    <genClasses ecoreClass="Scenario.ecore#//Scenario">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Scenario.ecore#//Scenario/OurObjects"/>
+    </genClasses>
+    <genClasses ecoreClass="Scenario.ecore#//OurObject"/>
+    <genClasses ecoreClass="Scenario.ecore#//Capability">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//Capability/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//Capability/searchOurObjective"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//Capability/standAlone"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//Capability/reuse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//Capability/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//Capability/endDate"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Scenario.ecore#//Capability/accumulation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Scenario.ecore#//Capability/measurements"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Scenario.ecore#//Capability/decomposes"/>
+    </genClasses>
+    <genClasses ecoreClass="Scenario.ecore#//CapabilityProvision"/>
+    <genClasses ecoreClass="Scenario.ecore#//Measurement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//Measurement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//Measurement/criticalValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//Measurement/benchmarkValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//Measurement/providedValue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Scenario.ecore#//Measurement/criticalValues"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Scenario.ecore#//Measurement/benchmarkValues"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Scenario.ecore#//Measurement/providedValues"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//Measurement/aggregationType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//Measurement/script"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Scenario.ecore#//Measurement/aggregates"/>
+    </genClasses>
+    <genClasses ecoreClass="Scenario.ecore#//QualitativeValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//QualitativeValue/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Scenario.ecore#//QualitativeValueDictionary">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//QualitativeValueDictionary/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Scenario.ecore#//QualitativeValueDictionary/greaterThan"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Scenario.ecore#//QualitativeValueDictionary/lessThan"/>
+    </genClasses>
+    <genClasses ecoreClass="Scenario.ecore#//Component">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//Component/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Scenario.ecore#//Component/provides"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Scenario.ecore#//Component/upgrades"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Scenario.ecore#//Component/requires"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Scenario.ecore#//Component/costs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Scenario.ecore#//Component/properties"/>
+    </genClasses>
+    <genClasses ecoreClass="Scenario.ecore#//Cost">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//Cost/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//Cost/amount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//Cost/startAfter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//Cost/repeatDuration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//Cost/stopAfter"/>
+    </genClasses>
+    <genClasses ecoreClass="Scenario.ecore#//CapabilityUpgrade">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//CapabilityUpgrade/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//CapabilityUpgrade/targetComponent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Scenario.ecore#//CapabilityUpgrade/upgrading"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Scenario.ecore#//CapabilityUpgrade/capabilityChanges"/>
+    </genClasses>
+    <genClasses ecoreClass="Scenario.ecore#//CapabilityChange">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//CapabilityChange/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Scenario.ecore#//CapabilityChange/capabilities"/>
+    </genClasses>
+    <genClasses ecoreClass="Scenario.ecore#//RunConfiguration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//RunConfiguration/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//RunConfiguration/popSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//RunConfiguration/genCount"/>
+    </genClasses>
+    <genClasses ecoreClass="Scenario.ecore#//FindTradeOffs">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Scenario.ecore#//FindTradeOffs/components"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Scenario.ecore#//FindTradeOffs/constraints"/>
+    </genClasses>
+    <genClasses ecoreClass="Scenario.ecore#//ThroughLifePlanning">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Scenario.ecore#//ThroughLifePlanning/components"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//ThroughLifePlanning/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//ThroughLifePlanning/endDate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Scenario.ecore#//ThroughLifePlanning/constraints"/>
+    </genClasses>
+    <genClasses ecoreClass="Scenario.ecore#//ComponentU">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//ComponentU/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//ComponentU/quantity"/>
+    </genClasses>
+    <genClasses ecoreClass="Scenario.ecore#//ExistingComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//ExistingComponent/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//ExistingComponent/endDate"/>
+    </genClasses>
+    <genClasses ecoreClass="Scenario.ecore#//AcquirableComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//AcquirableComponent/acquisitionTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//AcquirableComponent/lifeSpan"/>
+    </genClasses>
+    <genClasses ecoreClass="Scenario.ecore#//Constraint"/>
+    <genClasses ecoreClass="Scenario.ecore#//DesireHigh">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//DesireHigh/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Scenario.ecore#//DesireLow">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//DesireLow/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Scenario.ecore#//Budget">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//Budget/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//Budget/amount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//Budget/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//Budget/repeatDuration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Scenario.ecore#//Budget/endDate"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

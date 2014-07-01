@@ -1,0 +1,12 @@
+
+var runTool = new Native("org.eclipse.epsilon.examples.tools.RunTool");
+
+runTool.setGanntChartName("7 Roach Rush");
+
+for (component in solution!Component.all())
+{
+	runTool.addGanntComponent(component.name, component.startDate, component.endDate);
+}
+
+runTool.createGanntChart();
+

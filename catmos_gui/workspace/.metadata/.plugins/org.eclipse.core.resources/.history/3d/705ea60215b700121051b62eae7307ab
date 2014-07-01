@@ -1,0 +1,481 @@
+/*
+ * 
+ */
+package Scenario.diagram.providers;
+
+/**
+ * @generated
+ */
+public class ScenarioModelingAssistantProvider
+		extends org.eclipse.gmf.runtime.emf.ui.services.modelingassistant.ModelingAssistantProvider {
+
+		/**
+ * @generated
+ */
+	public java.util.List getTypesForPopupBar(org.eclipse.core.runtime.IAdaptable host) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart editPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) host.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+							if (editPart instanceof Scenario.diagram.edit.parts.ScenarioEditPart) {
+			java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(6);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.CapabilityProvision_2001);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.FindTradeOffs_2002);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.ThroughLifePlanning_2003);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.Capability_2004);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.QualitativeValueDictionary_2005);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.Component_2006);
+							return types;
+		}
+																																																																																																																																																																										if (editPart instanceof Scenario.diagram.edit.parts.CapabilityProvisionCapabilityProvisionMeasurementsCompartmentEditPart) {
+			java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(1);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.Measurement_3001);
+							return types;
+		}
+										if (editPart instanceof Scenario.diagram.edit.parts.MeasurementMeasurementCriticalValuesCompartmentEditPart) {
+			java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(1);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.QualitativeValue_3002);
+							return types;
+		}
+										if (editPart instanceof Scenario.diagram.edit.parts.MeasurementMeasurementBenchmarkValuesCompartmentEditPart) {
+			java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(1);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.QualitativeValue_3003);
+							return types;
+		}
+										if (editPart instanceof Scenario.diagram.edit.parts.MeasurementMeasurementProvidedValuesCompartmentEditPart) {
+			java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(1);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.QualitativeValue_3004);
+							return types;
+		}
+										if (editPart instanceof Scenario.diagram.edit.parts.FindTradeOffsFindTradeOffsComponentsCompartmentEditPart) {
+			java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(3);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.ExistingComponent_3005);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.AcquirableComponent_3006);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.ComponentU_3010);
+							return types;
+		}
+										if (editPart instanceof Scenario.diagram.edit.parts.FindTradeOffsFindTradeOffsConstraintsCompartmentEditPart) {
+			java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(3);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.DesireHigh_3007);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.DesireLow_3008);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.Budget_3009);
+							return types;
+		}
+										if (editPart instanceof Scenario.diagram.edit.parts.ThroughLifePlanningThroughLifePlanningComponentsCompartmentEditPart) {
+			java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(3);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.ExistingComponent_3011);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.AcquirableComponent_3012);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.ComponentU_3016);
+							return types;
+		}
+										if (editPart instanceof Scenario.diagram.edit.parts.ThroughLifePlanningThroughLifePlanningConstraintsCompartmentEditPart) {
+			java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(3);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.DesireHigh_3013);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.DesireLow_3014);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.Budget_3015);
+							return types;
+		}
+										if (editPart instanceof Scenario.diagram.edit.parts.CapabilityCapabilityMeasurementsCompartmentEditPart) {
+			java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(1);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.Measurement_3001);
+							return types;
+		}
+										if (editPart instanceof Scenario.diagram.edit.parts.ComponentComponentProvidesCompartmentEditPart) {
+			java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(2);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.CapabilityProvision_3017);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.Capability_3019);
+							return types;
+		}
+										if (editPart instanceof Scenario.diagram.edit.parts.ComponentComponentUpgradesCompartmentEditPart) {
+			java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(1);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.CapabilityUpgrade_3021);
+							return types;
+		}
+										if (editPart instanceof Scenario.diagram.edit.parts.ComponentComponentRequiresCompartmentEditPart) {
+			java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(2);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.CapabilityProvision_3018);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.Capability_3020);
+							return types;
+		}
+										if (editPart instanceof Scenario.diagram.edit.parts.ComponentComponentCostsCompartmentEditPart) {
+			java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(1);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.Cost_3025);
+							return types;
+		}
+										if (editPart instanceof Scenario.diagram.edit.parts.ComponentComponentPropertiesCompartmentEditPart) {
+			java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(1);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.Measurement_3026);
+							return types;
+		}
+										if (editPart instanceof Scenario.diagram.edit.parts.CapabilityProvisionCapabilityProvisionMeasurementsCompartment2EditPart) {
+			java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(1);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.Measurement_3001);
+							return types;
+		}
+										if (editPart instanceof Scenario.diagram.edit.parts.CapabilityProvisionCapabilityProvisionMeasurementsCompartment3EditPart) {
+			java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(1);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.Measurement_3001);
+							return types;
+		}
+										if (editPart instanceof Scenario.diagram.edit.parts.CapabilityCapabilityMeasurementsCompartment2EditPart) {
+			java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(1);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.Measurement_3001);
+							return types;
+		}
+										if (editPart instanceof Scenario.diagram.edit.parts.CapabilityCapabilityMeasurementsCompartment3EditPart) {
+			java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(1);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.Measurement_3001);
+							return types;
+		}
+										if (editPart instanceof Scenario.diagram.edit.parts.CapabilityUpgradeCapabilityUpgradeCapabilityChangesCompartmentEditPart) {
+			java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(1);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.CapabilityChange_3022);
+							return types;
+		}
+										if (editPart instanceof Scenario.diagram.edit.parts.CapabilityChangeCapabilityChangeCapabilitiesCompartmentEditPart) {
+			java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(2);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.CapabilityProvision_3023);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.Capability_3024);
+							return types;
+		}
+										if (editPart instanceof Scenario.diagram.edit.parts.CapabilityProvisionCapabilityProvisionMeasurementsCompartment4EditPart) {
+			java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(1);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.Measurement_3001);
+							return types;
+		}
+										if (editPart instanceof Scenario.diagram.edit.parts.CapabilityCapabilityMeasurementsCompartment4EditPart) {
+			java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(1);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.Measurement_3001);
+							return types;
+		}
+										if (editPart instanceof Scenario.diagram.edit.parts.MeasurementMeasurementCriticalValuesCompartment2EditPart) {
+			java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(1);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.QualitativeValue_3002);
+							return types;
+		}
+										if (editPart instanceof Scenario.diagram.edit.parts.MeasurementMeasurementBenchmarkValuesCompartment2EditPart) {
+			java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(1);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.QualitativeValue_3003);
+							return types;
+		}
+										if (editPart instanceof Scenario.diagram.edit.parts.MeasurementMeasurementProvidedValuesCompartment2EditPart) {
+			java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(1);
+							types.add(Scenario.diagram.providers.ScenarioElementTypes.QualitativeValue_3004);
+							return types;
+		}
+							return java.util.Collections.EMPTY_LIST;
+	}
+
+		/**
+ * @generated
+ */
+	public java.util.List getRelTypesOnSource(org.eclipse.core.runtime.IAdaptable source) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart sourceEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) source.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+							if (sourceEditPart instanceof Scenario.diagram.edit.parts.CapabilityProvisionEditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityProvisionEditPart) sourceEditPart).getMARelTypesOnSource();
+		}
+																				if (sourceEditPart instanceof Scenario.diagram.edit.parts.CapabilityEditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityEditPart) sourceEditPart).getMARelTypesOnSource();
+		}
+										if (sourceEditPart instanceof Scenario.diagram.edit.parts.QualitativeValueDictionaryEditPart) {
+			return ((Scenario.diagram.edit.parts.QualitativeValueDictionaryEditPart) sourceEditPart).getMARelTypesOnSource();
+		}
+															if (sourceEditPart instanceof Scenario.diagram.edit.parts.MeasurementEditPart) {
+			return ((Scenario.diagram.edit.parts.MeasurementEditPart) sourceEditPart).getMARelTypesOnSource();
+		}
+																																																																																					if (sourceEditPart instanceof Scenario.diagram.edit.parts.CapabilityProvision2EditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityProvision2EditPart) sourceEditPart).getMARelTypesOnSource();
+		}
+										if (sourceEditPart instanceof Scenario.diagram.edit.parts.CapabilityProvision3EditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityProvision3EditPart) sourceEditPart).getMARelTypesOnSource();
+		}
+										if (sourceEditPart instanceof Scenario.diagram.edit.parts.Capability2EditPart) {
+			return ((Scenario.diagram.edit.parts.Capability2EditPart) sourceEditPart).getMARelTypesOnSource();
+		}
+										if (sourceEditPart instanceof Scenario.diagram.edit.parts.Capability3EditPart) {
+			return ((Scenario.diagram.edit.parts.Capability3EditPart) sourceEditPart).getMARelTypesOnSource();
+		}
+										if (sourceEditPart instanceof Scenario.diagram.edit.parts.CapabilityUpgradeEditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityUpgradeEditPart) sourceEditPart).getMARelTypesOnSource();
+		}
+															if (sourceEditPart instanceof Scenario.diagram.edit.parts.CapabilityProvision4EditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityProvision4EditPart) sourceEditPart).getMARelTypesOnSource();
+		}
+										if (sourceEditPart instanceof Scenario.diagram.edit.parts.Capability4EditPart) {
+			return ((Scenario.diagram.edit.parts.Capability4EditPart) sourceEditPart).getMARelTypesOnSource();
+		}
+															if (sourceEditPart instanceof Scenario.diagram.edit.parts.Measurement2EditPart) {
+			return ((Scenario.diagram.edit.parts.Measurement2EditPart) sourceEditPart).getMARelTypesOnSource();
+		}
+							return java.util.Collections.EMPTY_LIST;
+	}
+
+		/**
+ * @generated
+ */
+	public java.util.List getRelTypesOnTarget(org.eclipse.core.runtime.IAdaptable target) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart targetEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) target.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+							if (targetEditPart instanceof Scenario.diagram.edit.parts.CapabilityProvisionEditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityProvisionEditPart) targetEditPart).getMARelTypesOnTarget();
+		}
+																				if (targetEditPart instanceof Scenario.diagram.edit.parts.CapabilityEditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityEditPart) targetEditPart).getMARelTypesOnTarget();
+		}
+										if (targetEditPart instanceof Scenario.diagram.edit.parts.QualitativeValueDictionaryEditPart) {
+			return ((Scenario.diagram.edit.parts.QualitativeValueDictionaryEditPart) targetEditPart).getMARelTypesOnTarget();
+		}
+										if (targetEditPart instanceof Scenario.diagram.edit.parts.ComponentEditPart) {
+			return ((Scenario.diagram.edit.parts.ComponentEditPart) targetEditPart).getMARelTypesOnTarget();
+		}
+										if (targetEditPart instanceof Scenario.diagram.edit.parts.MeasurementEditPart) {
+			return ((Scenario.diagram.edit.parts.MeasurementEditPart) targetEditPart).getMARelTypesOnTarget();
+		}
+																																																																																					if (targetEditPart instanceof Scenario.diagram.edit.parts.CapabilityProvision2EditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityProvision2EditPart) targetEditPart).getMARelTypesOnTarget();
+		}
+										if (targetEditPart instanceof Scenario.diagram.edit.parts.CapabilityProvision3EditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityProvision3EditPart) targetEditPart).getMARelTypesOnTarget();
+		}
+										if (targetEditPart instanceof Scenario.diagram.edit.parts.Capability2EditPart) {
+			return ((Scenario.diagram.edit.parts.Capability2EditPart) targetEditPart).getMARelTypesOnTarget();
+		}
+										if (targetEditPart instanceof Scenario.diagram.edit.parts.Capability3EditPart) {
+			return ((Scenario.diagram.edit.parts.Capability3EditPart) targetEditPart).getMARelTypesOnTarget();
+		}
+																				if (targetEditPart instanceof Scenario.diagram.edit.parts.CapabilityProvision4EditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityProvision4EditPart) targetEditPart).getMARelTypesOnTarget();
+		}
+										if (targetEditPart instanceof Scenario.diagram.edit.parts.Capability4EditPart) {
+			return ((Scenario.diagram.edit.parts.Capability4EditPart) targetEditPart).getMARelTypesOnTarget();
+		}
+															if (targetEditPart instanceof Scenario.diagram.edit.parts.Measurement2EditPart) {
+			return ((Scenario.diagram.edit.parts.Measurement2EditPart) targetEditPart).getMARelTypesOnTarget();
+		}
+							return java.util.Collections.EMPTY_LIST;
+	}
+
+		/**
+ * @generated
+ */
+	public java.util.List getRelTypesOnSourceAndTarget(
+			org.eclipse.core.runtime.IAdaptable source, org.eclipse.core.runtime.IAdaptable target) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart sourceEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) source.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart targetEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) target.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+							if (sourceEditPart instanceof Scenario.diagram.edit.parts.CapabilityProvisionEditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityProvisionEditPart) sourceEditPart).getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
+																				if (sourceEditPart instanceof Scenario.diagram.edit.parts.CapabilityEditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityEditPart) sourceEditPart).getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
+										if (sourceEditPart instanceof Scenario.diagram.edit.parts.QualitativeValueDictionaryEditPart) {
+			return ((Scenario.diagram.edit.parts.QualitativeValueDictionaryEditPart) sourceEditPart).getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
+															if (sourceEditPart instanceof Scenario.diagram.edit.parts.MeasurementEditPart) {
+			return ((Scenario.diagram.edit.parts.MeasurementEditPart) sourceEditPart).getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
+																																																																																					if (sourceEditPart instanceof Scenario.diagram.edit.parts.CapabilityProvision2EditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityProvision2EditPart) sourceEditPart).getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
+										if (sourceEditPart instanceof Scenario.diagram.edit.parts.CapabilityProvision3EditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityProvision3EditPart) sourceEditPart).getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
+										if (sourceEditPart instanceof Scenario.diagram.edit.parts.Capability2EditPart) {
+			return ((Scenario.diagram.edit.parts.Capability2EditPart) sourceEditPart).getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
+										if (sourceEditPart instanceof Scenario.diagram.edit.parts.Capability3EditPart) {
+			return ((Scenario.diagram.edit.parts.Capability3EditPart) sourceEditPart).getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
+										if (sourceEditPart instanceof Scenario.diagram.edit.parts.CapabilityUpgradeEditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityUpgradeEditPart) sourceEditPart).getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
+															if (sourceEditPart instanceof Scenario.diagram.edit.parts.CapabilityProvision4EditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityProvision4EditPart) sourceEditPart).getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
+										if (sourceEditPart instanceof Scenario.diagram.edit.parts.Capability4EditPart) {
+			return ((Scenario.diagram.edit.parts.Capability4EditPart) sourceEditPart).getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
+															if (sourceEditPart instanceof Scenario.diagram.edit.parts.Measurement2EditPart) {
+			return ((Scenario.diagram.edit.parts.Measurement2EditPart) sourceEditPart).getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
+							return java.util.Collections.EMPTY_LIST;
+	}
+
+		/**
+ * @generated
+ */
+	public java.util.List getTypesForSource(org.eclipse.core.runtime.IAdaptable target,
+			org.eclipse.gmf.runtime.emf.type.core.IElementType relationshipType) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart targetEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) target.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+							if (targetEditPart instanceof Scenario.diagram.edit.parts.CapabilityProvisionEditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityProvisionEditPart) targetEditPart).getMATypesForSource(relationshipType);
+		}
+																				if (targetEditPart instanceof Scenario.diagram.edit.parts.CapabilityEditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityEditPart) targetEditPart).getMATypesForSource(relationshipType);
+		}
+										if (targetEditPart instanceof Scenario.diagram.edit.parts.QualitativeValueDictionaryEditPart) {
+			return ((Scenario.diagram.edit.parts.QualitativeValueDictionaryEditPart) targetEditPart).getMATypesForSource(relationshipType);
+		}
+										if (targetEditPart instanceof Scenario.diagram.edit.parts.ComponentEditPart) {
+			return ((Scenario.diagram.edit.parts.ComponentEditPart) targetEditPart).getMATypesForSource(relationshipType);
+		}
+										if (targetEditPart instanceof Scenario.diagram.edit.parts.MeasurementEditPart) {
+			return ((Scenario.diagram.edit.parts.MeasurementEditPart) targetEditPart).getMATypesForSource(relationshipType);
+		}
+																																																																																					if (targetEditPart instanceof Scenario.diagram.edit.parts.CapabilityProvision2EditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityProvision2EditPart) targetEditPart).getMATypesForSource(relationshipType);
+		}
+										if (targetEditPart instanceof Scenario.diagram.edit.parts.CapabilityProvision3EditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityProvision3EditPart) targetEditPart).getMATypesForSource(relationshipType);
+		}
+										if (targetEditPart instanceof Scenario.diagram.edit.parts.Capability2EditPart) {
+			return ((Scenario.diagram.edit.parts.Capability2EditPart) targetEditPart).getMATypesForSource(relationshipType);
+		}
+										if (targetEditPart instanceof Scenario.diagram.edit.parts.Capability3EditPart) {
+			return ((Scenario.diagram.edit.parts.Capability3EditPart) targetEditPart).getMATypesForSource(relationshipType);
+		}
+																				if (targetEditPart instanceof Scenario.diagram.edit.parts.CapabilityProvision4EditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityProvision4EditPart) targetEditPart).getMATypesForSource(relationshipType);
+		}
+										if (targetEditPart instanceof Scenario.diagram.edit.parts.Capability4EditPart) {
+			return ((Scenario.diagram.edit.parts.Capability4EditPart) targetEditPart).getMATypesForSource(relationshipType);
+		}
+															if (targetEditPart instanceof Scenario.diagram.edit.parts.Measurement2EditPart) {
+			return ((Scenario.diagram.edit.parts.Measurement2EditPart) targetEditPart).getMATypesForSource(relationshipType);
+		}
+							return java.util.Collections.EMPTY_LIST;
+	}
+
+		/**
+ * @generated
+ */
+	public java.util.List getTypesForTarget(org.eclipse.core.runtime.IAdaptable source,
+			org.eclipse.gmf.runtime.emf.type.core.IElementType relationshipType) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart sourceEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) source.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+							if (sourceEditPart instanceof Scenario.diagram.edit.parts.CapabilityProvisionEditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityProvisionEditPart) sourceEditPart).getMATypesForTarget(relationshipType);
+		}
+																				if (sourceEditPart instanceof Scenario.diagram.edit.parts.CapabilityEditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityEditPart) sourceEditPart).getMATypesForTarget(relationshipType);
+		}
+										if (sourceEditPart instanceof Scenario.diagram.edit.parts.QualitativeValueDictionaryEditPart) {
+			return ((Scenario.diagram.edit.parts.QualitativeValueDictionaryEditPart) sourceEditPart).getMATypesForTarget(relationshipType);
+		}
+															if (sourceEditPart instanceof Scenario.diagram.edit.parts.MeasurementEditPart) {
+			return ((Scenario.diagram.edit.parts.MeasurementEditPart) sourceEditPart).getMATypesForTarget(relationshipType);
+		}
+																																																																																					if (sourceEditPart instanceof Scenario.diagram.edit.parts.CapabilityProvision2EditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityProvision2EditPart) sourceEditPart).getMATypesForTarget(relationshipType);
+		}
+										if (sourceEditPart instanceof Scenario.diagram.edit.parts.CapabilityProvision3EditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityProvision3EditPart) sourceEditPart).getMATypesForTarget(relationshipType);
+		}
+										if (sourceEditPart instanceof Scenario.diagram.edit.parts.Capability2EditPart) {
+			return ((Scenario.diagram.edit.parts.Capability2EditPart) sourceEditPart).getMATypesForTarget(relationshipType);
+		}
+										if (sourceEditPart instanceof Scenario.diagram.edit.parts.Capability3EditPart) {
+			return ((Scenario.diagram.edit.parts.Capability3EditPart) sourceEditPart).getMATypesForTarget(relationshipType);
+		}
+										if (sourceEditPart instanceof Scenario.diagram.edit.parts.CapabilityUpgradeEditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityUpgradeEditPart) sourceEditPart).getMATypesForTarget(relationshipType);
+		}
+															if (sourceEditPart instanceof Scenario.diagram.edit.parts.CapabilityProvision4EditPart) {
+			return ((Scenario.diagram.edit.parts.CapabilityProvision4EditPart) sourceEditPart).getMATypesForTarget(relationshipType);
+		}
+										if (sourceEditPart instanceof Scenario.diagram.edit.parts.Capability4EditPart) {
+			return ((Scenario.diagram.edit.parts.Capability4EditPart) sourceEditPart).getMATypesForTarget(relationshipType);
+		}
+															if (sourceEditPart instanceof Scenario.diagram.edit.parts.Measurement2EditPart) {
+			return ((Scenario.diagram.edit.parts.Measurement2EditPart) sourceEditPart).getMATypesForTarget(relationshipType);
+		}
+							return java.util.Collections.EMPTY_LIST;
+	}
+
+		/**
+ * @generated
+ */
+	public org.eclipse.emf.ecore.EObject selectExistingElementForSource(
+			org.eclipse.core.runtime.IAdaptable target,
+			org.eclipse.gmf.runtime.emf.type.core.IElementType relationshipType) {
+		return selectExistingElement(target, getTypesForSource(target, relationshipType));
+	}
+
+		/**
+ * @generated
+ */
+	public org.eclipse.emf.ecore.EObject selectExistingElementForTarget(
+			org.eclipse.core.runtime.IAdaptable source,
+			org.eclipse.gmf.runtime.emf.type.core.IElementType relationshipType) {
+		return selectExistingElement(source, getTypesForTarget(source, relationshipType));
+	}
+
+		/**
+ * @generated
+ */
+	protected org.eclipse.emf.ecore.EObject selectExistingElement(
+			org.eclipse.core.runtime.IAdaptable host, java.util.Collection types) {
+		if (types.isEmpty()) {
+			return null;
+		}
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart editPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) host.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		if (editPart == null) {
+			return null;
+		}
+		org.eclipse.gmf.runtime.notation.Diagram diagram =
+				(org.eclipse.gmf.runtime.notation.Diagram) editPart.getRoot().getContents().getModel();
+		java.util.HashSet<org.eclipse.emf.ecore.EObject> elements = new java.util.HashSet<org.eclipse.emf.ecore.EObject>();
+		for (java.util.Iterator<org.eclipse.emf.ecore.EObject> it = diagram.getElement().eAllContents(); it.hasNext();) {
+	org.eclipse.emf.ecore.EObject element = it.next();
+			if (isApplicableElement(element, types)) {
+				elements.add(element);
+			}
+		}
+		if (elements.isEmpty()) {
+			return null;
+		}
+		return selectElement((org.eclipse.emf.ecore.EObject[]) elements.toArray(
+				new org.eclipse.emf.ecore.EObject[elements.size()]));
+	}
+
+		/**
+ * @generated
+ */
+	protected boolean isApplicableElement(org.eclipse.emf.ecore.EObject element, java.util.Collection types) {
+		org.eclipse.gmf.runtime.emf.type.core.IElementType type =
+				org.eclipse.gmf.runtime.emf.type.core.ElementTypeRegistry.getInstance().getElementType(element);
+		return types.contains(type);
+	}
+
+		/**
+ * @generated
+ */
+	protected org.eclipse.emf.ecore.EObject selectElement(org.eclipse.emf.ecore.EObject[] elements) {
+		org.eclipse.swt.widgets.Shell shell = org.eclipse.swt.widgets.Display.getCurrent().getActiveShell();
+		org.eclipse.jface.viewers.ILabelProvider labelProvider =
+			new org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider(
+				Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().getItemProvidersAdapterFactory());
+		org.eclipse.ui.dialogs.ElementListSelectionDialog dialog =
+				new org.eclipse.ui.dialogs.ElementListSelectionDialog(shell, labelProvider);
+		dialog.setMessage(Scenario.diagram.part.Messages.ScenarioModelingAssistantProviderMessage);
+		dialog.setTitle(Scenario.diagram.part.Messages.ScenarioModelingAssistantProviderTitle);
+		dialog.setMultipleSelection(false);
+		dialog.setElements(elements);
+		org.eclipse.emf.ecore.EObject selected = null;
+		if (dialog.open() == org.eclipse.jface.window.Window.OK) {
+			selected = (org.eclipse.emf.ecore.EObject) dialog.getFirstResult();
+		}
+		return selected;
+	}
+	}

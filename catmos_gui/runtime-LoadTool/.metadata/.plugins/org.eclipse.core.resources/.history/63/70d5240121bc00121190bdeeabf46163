@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:CapabilityOverTime xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="CapOverTime">
+  <timePeriods startDate="0" endDate="16">
+    <ourObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" providedValue="0.0"/>
+    </ourObjects>
+    <ourObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="17" endDate="31">
+    <ourObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" providedValue="0.0"/>
+    </ourObjects>
+    <ourObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="32" endDate="194">
+    <ourObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf" status="2.0" colour="Green">
+      <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" providedValue="2.0"/>
+    </ourObjects>
+    <ourObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="195" endDate="301">
+    <ourObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf" status="2.0" colour="Green">
+      <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" providedValue="2.0"/>
+    </ourObjects>
+    <ourObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="302" endDate="309">
+    <ourObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf" status="2.0" colour="Green">
+      <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" providedValue="2.0"/>
+    </ourObjects>
+    <ourObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="310" endDate="326">
+    <ourObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf" status="2.0" colour="Green">
+      <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" providedValue="2.0"/>
+    </ourObjects>
+    <ourObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="327" endDate="346">
+    <ourObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" providedValue="0.0"/>
+    </ourObjects>
+    <ourObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="347" endDate="354">
+    <ourObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" providedValue="0.0"/>
+    </ourObjects>
+    <ourObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="355" endDate="371">
+    <ourObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" providedValue="0.0"/>
+    </ourObjects>
+    <ourObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="372" endDate="491">
+    <ourObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" providedValue="0.0"/>
+    </ourObjects>
+    <ourObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="492" endDate="495">
+    <ourObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" providedValue="0.0"/>
+    </ourObjects>
+    <ourObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="496" endDate="506">
+    <ourObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" providedValue="0.0"/>
+    </ourObjects>
+    <ourObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="507" endDate="512">
+    <ourObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" providedValue="0.0"/>
+    </ourObjects>
+    <ourObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="513" endDate="519">
+    <ourObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" providedValue="0.0"/>
+    </ourObjects>
+    <ourObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="520" endDate="521">
+    <ourObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" providedValue="0.0"/>
+    </ourObjects>
+    <ourObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="522" endDate="536">
+    <ourObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" providedValue="0.0"/>
+    </ourObjects>
+    <ourObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="537" endDate="567">
+    <ourObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" providedValue="0.0"/>
+    </ourObjects>
+    <ourObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="568" endDate="569">
+    <ourObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" providedValue="0.0"/>
+    </ourObjects>
+    <ourObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="570" endDate="571">
+    <ourObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" providedValue="0.0"/>
+    </ourObjects>
+    <ourObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="572" endDate="596">
+    <ourObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" providedValue="0.0"/>
+    </ourObjects>
+    <ourObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="597" endDate="609">
+    <ourObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" providedValue="0.0"/>
+    </ourObjects>
+    <ourObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="610" endDate="654">
+    <ourObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" providedValue="0.0"/>
+    </ourObjects>
+    <ourObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="655" endDate="671">
+    <ourObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" providedValue="0.0"/>
+    </ourObjects>
+    <ourObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="672" endDate="1199">
+    <ourObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" providedValue="0.0"/>
+    </ourObjects>
+    <ourObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="1200" endDate="1200">
+    <ourObjects xsi:type="p:Capability" name="Working Income" searchObjective="true" standAlone="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Working" criticalValue="1.0" benchmarkValue="2.0" providedValue="0.0"/>
+    </ourObjects>
+    <ourObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+</p:CapabilityOverTime>

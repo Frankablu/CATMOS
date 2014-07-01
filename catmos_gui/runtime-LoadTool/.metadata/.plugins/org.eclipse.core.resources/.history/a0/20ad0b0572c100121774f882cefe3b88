@@ -1,0 +1,554 @@
+
+var runTool = new Native("org.eclipse.epsilon.examples.tools.RunTool");
+
+runTool.connectToNetworkClient("127.0.0.1", 11100);
+
+var solutionNo : Integer = internal!ValuePair.all().selectOne(x|x.name == "CurrentSolution").value.asInteger();
+var numOfSolutions : Integer = internal!ValuePair.all().selectOne(x|x.name == "NumberOfSolutions").value.asInteger();
+
+var throughLife : Boolean = false;
+
+if (internal!ValuePair.all().selectOne(x|x.name == "ThroughLife").value == "true")
+{
+	throughLife = true;
+}
+
+var solutionString : String;
+
+if (throughLife == false)
+{
+	solutionString = runTool.getParetoFrontAt(solutionNo.asString());
+}
+else
+{
+	solutionString = runTool.getParetoFrontAtTL(solutionNo.asString());
+}
+
+var solutionList : Any = solutionString.split("%");
+
+solutionList.println();
+
+var currentMode : String;
+currentMode = "none";
+var swapMode : Boolean = false;
+
+var place : Integer = 0;
+var source : String;
+var join : String;
+var target : String;
+
+var currentTimePeriod : Any = null;
+
+var stop : Boolean = false;
+
+var usedComponents : Collection = new Set;
+
+for (entry in solutionList)
+{
+	if (entry == "upgrade")
+	{
+		currentMode = "upgrade";
+		place = 0;
+		swapMode = true;
+	}
+	
+	if (entry == "link")
+	{
+		currentMode = "link";
+		place = 0;
+		swapMode = true;
+	}
+	
+	if (entry == "Schedule Capabilities")
+	{
+		currentMode = "schcap";
+		place = 0;
+		swapMode = true;
+	}
+	
+	if (entry == "Schedule Components")
+	{
+		currentMode = "schcomp";
+		place = 0;
+		swapMode = true;
+	}
+	
+	if (entry == "Evaluation Results")
+	{
+		currentMode = "none";
+		swapMode = true;
+		
+		//Clean up from the link & upgrade data
+		var allComponents : Collection = Component.all().collect(x|x.name).flatten();
+		var removeComponents : Collection = allComponents.excludingAll(usedComponents);
+		
+		for (remove in removeComponents)
+		{
+			delete Component.all().selectOne(x|x.name==remove);
+		}	
+	}
+	
+	if (entry == "Evaluation Results Through Life")
+	{
+		stop = true;
+		currentMode = "createTimePeriod";
+		swapMode = true;
+	}
+	
+	if (entry == "Capability")
+	{
+		currentMode = "capability";
+		swapMode = true;
+		place = 0;
+	}
+	
+	if (entry == "Costs")
+	{
+		currentMode = "costs";
+		swapMode = true;
+	}
+	
+	if (entry == "Measurements")
+	{
+		currentMode = "measurements";
+		swapMode = true;
+		place = 0;
+	}
+	
+	if (entry == "Done")
+	{
+		swapMode = true;
+	}
+	
+	if (swapMode == false and stop == false)
+	{
+		if (currentMode == "upgrade")
+		{
+			if (place == 0)
+			{
+				source = entry;
+			}
+			
+			if (place == 1)
+			{
+				join = entry;
+			}
+			
+			if (place == 2)
+			{
+				target = entry;
+				
+				var sourceComponent : Component = Component.all().selectOne(x|x.name == source);
+				var upgrade : CapabilityUpgrade = CapabilityUpgrade.all().selectOne(x|x.name == join);
+				var targetComponent : Component = Component.all().selectOne(x|x.name == target);
+				
+				usedComponents.add(sourceComponent.name);
+				usedComponents.add(targetComponent.name);
+				
+				upgrade.upgrading = targetComponent;
+				
+				//Read The Upgrade Data
+				for (add in upgrade.capabilityChanges.select(x|x.name == "add"))
+				{
+					targetComponent.provides.addAll(add.capabilities);
+				}
+				
+				for (mod in upgrade.capabilityChanges.select(x|x.name == "add"))
+				{
+					for (entry in mod.capabilities)
+					{
+						var currentEntry : Any = sourceComponent.provides.selectOne(x|x.name == entry.name);
+						if (currentEntry <> null)
+						{
+							targetComponent.provides.remove(currentEntry);
+							delete currentEntry;
+						}
+					}
+					sourceComponent.provides.addAll(mod.capabilities);
+				}
+				
+				for (del in upgrade.capabilityChanges.select(x|x.name == "add"))
+				{
+					for (entry in del.capabilities)
+					{
+						var currentEntry : Any = sourceComponent.provides.select(x|x.name == entry.name);
+						for (deleting in currentEntry)
+						{
+							targetComponent.provides.remove(deleting);
+							delete currentEntry;
+						}
+					}
+				}
+				
+			}
+			
+			place = place + 1;
+			if (place > 2)
+			{
+				place = 0;
+			}
+		}
+		
+		if (currentMode == "link")
+		{
+			if (place == 0)
+			{
+				source = entry;
+			}
+			
+			if (place == 1)
+			{
+				join = entry;
+			}
+			
+			if (place == 2)
+			{
+				target = entry;
+				
+				var sourceComponent : Component = Component.all().selectOne(x|x.name == source);
+				var targetComponent : Component = Component.all().selectOne(x|x.name == target);
+				
+				usedComponents.add(sourceComponent.name);
+				
+				if (targetComponent <> null)
+				{
+					usedComponents.add(targetComponent.name);
+				}
+				
+				var capabilityProvision : scenario!Capability = sourceComponent.provides.selectOne(x|x.name == join);
+				var capability : scenario!Capability;
+				
+				if (target <> "scenario")
+				{
+					capability = targetComponent.requires.selectOne(x|x.name == join);
+				}
+				else
+				{
+					capability = Scenario.all().first.OurObjects.select(x|x.isKindOf(scenario!Capability)).flatten().selectOne(x|x.name == join);
+				}
+				
+				if (capabilityProvision <> null)
+				{
+					capabilityProvision.satisfies.add(capability);
+				}
+				
+			}
+			
+			place = place + 1;
+			
+			if (place > 2)
+			{
+				place = 0;
+			}
+		}
+		
+		if (currentMode == "capability")
+		{
+			if (place == 0)
+			{
+				source = entry;
+			}
+			
+			if (place == 1)
+			{
+				var selectedCapability : scenario!Capability = scenario!Capability.all().selectOne(x|x.name == source);
+				selectedCapability.status = entry.asReal();
+				
+				selectedCapability.colour = "Green";
+				
+				if (selectedCapability.status < 2.0)
+				{
+					selectedCapability.colour = "Yellow";
+				}
+				
+				if (selectedCapability.status < 1.0)
+				{
+					selectedCapability.colour = "Red";
+				}
+			}
+			
+			place = place + 1;
+			if (place > 1)
+			{
+				place = 0;
+			}
+		}
+		
+		if (currentMode == "measurements")
+		{
+			if (entry == "Start")
+			{
+				place = 0;
+			}
+			
+			if (place == 1)
+			{
+				source = entry;
+			}
+			
+			if (place > 1)
+			{
+				var currentMeasurements : Collection = scenario!Capability.all().select(x|x.isTypeOf(scenario!Capability)).flatten().collect(x|x.measurements).flatten().select(x|x.name == source);
+				if (entry.isReal())
+				{
+					for (currentMeasurement in currentMeasurements)
+					{
+						currentMeasurement.providedValue = entry.asReal();
+					}
+				}
+				//Slightly confusing but since this is just display its fine
+				if (entry.isReal() == false or place > 2)
+				{
+					for (currentMeasurement in currentMeasurements)
+					{
+						var newQualValue : scenario!QualitativeValue = new scenario!QualitativeValue;
+						newQualValue.name = entry;
+						currentMeasurement.providedValues.add(newQualValue);
+					}
+				}
+			}
+			
+			place = place + 1;
+		}
+		
+		if (currentMode == "schcap")
+		{
+			if (place == 0)
+			{
+				source = entry;
+			}
+			
+			if (place == 1)
+			{
+				join = entry;
+			}
+			
+			if (place == 2)
+			{
+				target = entry;
+				
+				var ourCapability : scenario!Capability = scenario!Capability.all().selectOne(x|x.name == source);
+				if (ourCapability <> null)
+				{
+					ourCapability.startDate = join;
+					ourCapability.endDate = target;
+				}
+			}
+			
+			place = place + 1;
+			
+			if (place == 3)
+			{
+				place = 0;
+			}
+		}
+		
+		if (currentMode == "schcomp")
+		{
+			if (place == 0)
+			{
+				source = entry;
+			}
+			
+			if (place == 1)
+			{
+				join = entry;
+			}
+			
+			if (place == 2)
+			{
+				target = entry;
+				
+				var ourComponent : scenario!Component = scenario!Component.all().selectOne(x|x.name == source);
+				if (ourComponent <> null)
+				{
+					ourComponent.startDate = join;
+					ourComponent.endDate = target;
+				}
+			}
+			
+			place = place + 1;
+			
+			if (place == 3)
+			{
+				place = 0;
+			}
+		}
+		
+	}
+	
+	if (swapMode == false and stop == true)
+	{
+		if (currentMode == "createTimePeriod")
+		{
+			if (currentTimePeriod <> null)
+			{
+				currentTimePeriod.endDate = (entry.asInteger() - 1).asString();
+			}
+			currentTimePeriod = new capovertime!TimePeriod;
+			capovertime!CapabilityOverTime.all().first.timePeriods.add(currentTimePeriod);
+			currentTimePeriod.startDate = entry;
+			
+			for (cap in capovertime!TimePeriod.all().selectOne(x|x.name == "base").ourObjects)
+			{
+				var newCap : capovertime!Capability = new capovertime!Capability;
+				newCap.name = cap.name;
+				newCap.searchObjective = cap.searchObjective;
+				newCap.standAlone = cap.standAlone;
+				newCap.reuse = cap.reuse;
+				newCap.startDate = cap.startDate;
+				newCap.endDate = cap.endDate;
+				newCap.status = 0.0;
+				newCap.colour = "Red";
+				currentTimePeriod.ourObjects.add(newCap);
+				
+				for (measurement in cap.measurements)
+				{
+					var newMeasurement : capovertime!Measurement = new capovertime!Measurement;
+					newMeasurement.name = measurement.name;
+					newMeasurement.criticalValue = measurement.criticalValue;
+					newMeasurement.benchmarkValue = measurement.benchmarkValue;
+					newMeasurement.providedValue = measurement.providedValue;
+					newCap.measurements.add(newMeasurement);
+					
+					for (critical in measurement.criticalValues)
+					{
+						var newValue : capovertime!QualitativeValue = new capovertime!QualitativeValue;
+						newValue.name = critical.name;
+						newMeasurement.criticalValues.add(newValue);
+					}
+					
+					for (benchmark in measurement.benchmarkValues)
+					{
+						var newValue : capovertime!QualitativeValue = new capovertime!QualitativeValue;
+						newValue.name = benchmark.name;
+						newMeasurement.benchmarkValues.add(newValue);
+					}
+				}
+			}
+			
+			currentMode = "no mode setting";
+		}
+		
+		if (currentMode == "capability")
+		{
+			if (place == 0)
+			{
+				source = entry;
+			}
+			
+			if (place == 1)
+			{
+				var selectedCapability : capovertime!Capability = currentTimePeriod.ourObjects.selectOne(x|x.name == source);
+				if (selectedCapability <> null)
+				{
+				selectedCapability.status = entry.asReal();
+				
+				selectedCapability.colour = "Green";
+				
+				if (selectedCapability.status < 2.0)
+				{
+					selectedCapability.colour = "Yellow";
+				}
+				
+				if (selectedCapability.status < 1.0)
+				{
+					selectedCapability.colour = "Red";
+				}
+				}
+			}
+			
+			place = place + 1;
+			if (place > 1)
+			{
+				place = 0;
+			}
+		}
+		
+		if (currentMode == "measurements")
+		{
+			if (entry == "Start")
+			{
+				place = 0;
+			}
+			
+			if (place == 1)
+			{
+				source = entry;
+			}
+			
+			if (place > 1)
+			{
+				var currentMeasurements : Collection = currentTimePeriod.ourObjects.collect(x|x.measurements).flatten().select(x|x.name == source);
+				if (entry.isReal())
+				{
+					for (currentMeasurement in currentMeasurements)
+					{
+						currentMeasurement.providedValue = entry.asReal();
+					}
+				}
+				//Slightly confusing but since this is just display its fine
+				if (entry.isReal() == false or place > 2)
+				{
+					for (currentMeasurement in currentMeasurements)
+					{
+						var newQualValue : capovertime!QualitativeValue = new capovertime!QualitativeValue;
+						newQualValue.name = entry;
+						currentMeasurement.providedValues.add(newQualValue);
+					}
+				}
+			}
+			
+			place = place + 1;
+		}
+		
+		
+	}
+	
+	swapMode = false;
+}
+
+if (throughLife)
+{
+	//Fix All Dates
+	var startDate : String = ourScenario!ThroughLifePlanning.all().first.startDate;
+	var startDateNumber : Any;
+	
+	if (startDate.isInteger() == false) //Using raw numbers not dates
+	{
+		startDateNumber = runTool.convertDateTime(startDate);
+		
+		for (component in scenario!Component.all())
+		{
+			if (component.startDate.asInteger() <> -1 and component.startDate <> null)
+			{
+				component.startDate.asInteger().println();
+				component.startDate = runTool.convertDateTime(startDateNumber);// + (component.startDate.asInteger() * (1000 * 60 * 60 * 24)));
+				component.endDate = runTool.convertDateTime(startDateNumber + (component.endDate.asInteger() * (1000 * 60 * 60 * 24)));
+			}
+		}
+		
+	}
+	
+	//Create Gannt Chart	
+	runTool.setGanntChartName(internal!ValuePair.all().selectOne(x|x.name == "name").value);
+	runTool.setGanntSolutionNumber(internal!ValuePair.all().selectOne(x|x.name == "CurrentSolution").value);
+	
+	for (component in scenario!Component.all())
+	{
+		if (component.startDate <> null and component.startDate <> -1)
+		{
+			runTool.addGanntComponent(component.name, component.startDate, component.endDate);
+		}
+	}
+	
+	runTool.createGanntChart();
+}
+
+internal!ValuePair.all().selectOne(x|x.name == "CurrentSolution").value = (solutionNo + 1).asString();
+
+if (throughLife)
+{
+	delete capovertime!TimePeriod.all().selectOne(x|x.name=="base");
+	capovertime!TimePeriod.all().selectOne(x|x.endDate==null).endDate = capovertime!TimePeriod.all().selectOne(x|x.endDate==null).startDate;
+}

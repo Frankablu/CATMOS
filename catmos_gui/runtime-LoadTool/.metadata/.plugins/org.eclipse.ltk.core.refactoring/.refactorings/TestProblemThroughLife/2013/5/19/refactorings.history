@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;TestProblemThroughLife/Result.Scenario&apos; to &apos;Result.ScenarioModel&apos;" description="Rename resource &apos;Result.Scenario&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Result.Scenario" name="Result.ScenarioModel" stamp="1367935092182" updateReferences="true"/>
+</session>

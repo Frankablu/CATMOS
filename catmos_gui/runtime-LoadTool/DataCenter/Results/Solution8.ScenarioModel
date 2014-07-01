@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="ScenarioModel">
+  <OurObjects xsi:type="p:Capability" name="cpuUnits" searchObjective="true" status="1.48" colour="Yellow" accumulation="//@OurObjects.0/@measurements.0" satisfiedBy="//@OurObjects.18/@provides.0 //@OurObjects.19/@provides.0 //@OurObjects.20/@provides.0">
+    <measurements name="coreCount" criticalValue="0.0" benchmarkValue="100.0" providedValue="48.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="storageUnits" searchObjective="true" accumulation="//@OurObjects.1/@measurements.0">
+    <measurements name="terraBytesStorage" criticalValue="0.0" benchmarkValue="50.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="sufficentCooling" searchObjective="true" standAlone="true" status="0.0" colour="Red">
+    <measurements name="coolingDifference" criticalValue="0.0" benchmarkValue="2000.0" providedValue="-100.0" script="output = getGlobalMeasure(&quot;coolingWatts&quot;) - getGlobalMeasure(&quot;powerConsumption&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="powerUsage" standAlone="true" status="1.98" colour="Yellow">
+    <measurements name="totalPowerUsage" criticalValue="10000.0" benchmarkValue="0.0" providedValue="200.0" script="power = getAllMeasures(&quot;powerConsumption&quot;) output = 0.0 for i,v in ipairs(power) do output = output + v end"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="cooling">
+    <measurements name="coolingWatts" criticalValue="0.0" benchmarkValue="10000.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Room">
+    <provides xsi:type="p:CapabilityProvision" name="CabinetSpace" reuse="16" status="2.0" colour="Green" satisfies="//@OurObjects.8/@requires.0 //@OurObjects.15/@requires.0 //@OurObjects.13/@requires.0 //@OurObjects.16/@requires.0 //@OurObjects.7/@requires.0 //@OurObjects.17/@requires.0 //@OurObjects.10/@requires.0 //@OurObjects.12/@requires.0 //@OurObjects.14/@requires.0 //@OurObjects.11/@requires.0 //@OurObjects.6/@requires.0 //@OurObjects.9/@requires.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ServerCabinet24u:1">
+    <provides xsi:type="p:CapabilityProvision" name="RackSpace" reuse="24" status="2.0" colour="Green"/>
+    <requires name="CabinetSpace" satisfiedBy="//@OurObjects.5/@provides.0"/>
+    <costs name="Money" amount="500.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ServerCabinet24u:3">
+    <provides xsi:type="p:CapabilityProvision" name="RackSpace" reuse="24" satisfies="//@OurObjects.18/@requires.0 //@OurObjects.20/@requires.0"/>
+    <requires name="CabinetSpace" satisfiedBy="//@OurObjects.5/@provides.0"/>
+    <costs name="Money" amount="500.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ServerCabinet24u:4">
+    <provides xsi:type="p:CapabilityProvision" name="RackSpace" reuse="24"/>
+    <requires name="CabinetSpace" satisfiedBy="//@OurObjects.5/@provides.0"/>
+    <costs name="Money" amount="500.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ServerCabinet24u:5">
+    <provides xsi:type="p:CapabilityProvision" name="RackSpace" reuse="24"/>
+    <requires name="CabinetSpace" satisfiedBy="//@OurObjects.5/@provides.0"/>
+    <costs name="Money" amount="500.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ServerCabinet24u:9">
+    <provides xsi:type="p:CapabilityProvision" name="RackSpace" reuse="24"/>
+    <requires name="CabinetSpace" satisfiedBy="//@OurObjects.5/@provides.0"/>
+    <costs name="Money" amount="500.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ServerCabinet24u:10">
+    <provides xsi:type="p:CapabilityProvision" name="RackSpace" reuse="24" satisfies="//@OurObjects.19/@requires.0"/>
+    <requires name="CabinetSpace" satisfiedBy="//@OurObjects.5/@provides.0"/>
+    <costs name="Money" amount="500.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ServerCabinet24u:11">
+    <provides xsi:type="p:CapabilityProvision" name="RackSpace" reuse="24"/>
+    <requires name="CabinetSpace" satisfiedBy="//@OurObjects.5/@provides.0"/>
+    <costs name="Money" amount="500.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ServerCabinet24u:12">
+    <provides xsi:type="p:CapabilityProvision" name="RackSpace" reuse="24"/>
+    <requires name="CabinetSpace" satisfiedBy="//@OurObjects.5/@provides.0"/>
+    <costs name="Money" amount="500.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ServerCabinet24u:13">
+    <provides xsi:type="p:CapabilityProvision" name="RackSpace" reuse="24"/>
+    <requires name="CabinetSpace" satisfiedBy="//@OurObjects.5/@provides.0"/>
+    <costs name="Money" amount="500.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ServerCabinet24u:14">
+    <provides xsi:type="p:CapabilityProvision" name="RackSpace" reuse="24"/>
+    <requires name="CabinetSpace" satisfiedBy="//@OurObjects.5/@provides.0"/>
+    <costs name="Money" amount="500.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ServerCabinet24u:15">
+    <provides xsi:type="p:CapabilityProvision" name="RackSpace" reuse="24"/>
+    <requires name="CabinetSpace" satisfiedBy="//@OurObjects.5/@provides.0"/>
+    <costs name="Money" amount="500.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ServerCabinet24u:16">
+    <provides xsi:type="p:CapabilityProvision" name="RackSpace" reuse="24"/>
+    <requires name="CabinetSpace" satisfiedBy="//@OurObjects.5/@provides.0"/>
+    <costs name="Money" amount="500.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ServerBladeCPU:54">
+    <provides xsi:type="p:CapabilityProvision" name="cpuUnits" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="coreCount" providedValue="16.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="powerUsage">
+      <measurements name="powerConsumption" providedValue="100.0"/>
+    </provides>
+    <requires name="RackSpace" satisfiedBy="//@OurObjects.7/@provides.0"/>
+    <costs name="Money" amount="5000.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ServerBladeCPU:69">
+    <provides xsi:type="p:CapabilityProvision" name="cpuUnits" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="coreCount" providedValue="16.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="powerUsage">
+      <measurements name="powerConsumption" providedValue="100.0"/>
+    </provides>
+    <requires name="RackSpace" satisfiedBy="//@OurObjects.11/@provides.0"/>
+    <costs name="Money" amount="5000.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ServerBladeCPU:71">
+    <provides xsi:type="p:CapabilityProvision" name="cpuUnits" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="coreCount" providedValue="16.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="powerUsage">
+      <measurements name="powerConsumption" providedValue="100.0"/>
+    </provides>
+    <requires name="RackSpace" satisfiedBy="//@OurObjects.7/@provides.0"/>
+    <costs name="Money" amount="5000.0"/>
+  </OurObjects>
+</p:Scenario>

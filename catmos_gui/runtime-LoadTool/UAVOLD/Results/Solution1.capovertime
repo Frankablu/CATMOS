@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:CapabilityOverTime xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="CapOverTime">
+  <timePeriods startDate="0" endDate="299">
+    <ourObjects xsi:type="p:Capability" name="Blue Team Performance" searchObjective="true" startDate="01/01/2013" endDate="01/01/2020" status="1.18182" colour="Yellow">
+      <measurements name="Blue Team Capability Score" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.181818"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="300" endDate="2555">
+    <ourObjects xsi:type="p:Capability" name="Blue Team Performance" searchObjective="true" startDate="01/01/2013" endDate="01/01/2020" status="1.18182" colour="Yellow">
+      <measurements name="Blue Team Capability Score" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.181818"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="2556" endDate="2556">
+    <ourObjects xsi:type="p:Capability" name="Blue Team Performance" searchObjective="true" startDate="01/01/2013" endDate="01/01/2020" status="1.0" colour="Yellow">
+      <measurements name="Blue Team Capability Score" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+</p:CapabilityOverTime>

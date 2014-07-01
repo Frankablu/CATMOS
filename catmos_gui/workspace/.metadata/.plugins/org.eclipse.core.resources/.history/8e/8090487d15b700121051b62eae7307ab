@@ -1,0 +1,2843 @@
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+package Scenario;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Package</b> for the model.
+ * It contains accessors for the meta objects to represent
+ * <ul>
+ *   <li>each class,</li>
+ *   <li>each feature of each class,</li>
+ *   <li>each enum,</li>
+ *   <li>and each data type</li>
+ * </ul>
+ * <!-- end-user-doc -->
+ * @see Scenario.ScenarioFactory
+ * @model kind="package"
+ * @generated
+ */
+public interface ScenarioPackage extends EPackage
+{
+  /**
+   * The package name.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  String eNAME = "Scenario";
+
+  /**
+   * The package namespace URI.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  String eNS_URI = "Scenario";
+
+  /**
+   * The package namespace name.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  String eNS_PREFIX = "p";
+
+  /**
+   * The singleton instance of the package.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  ScenarioPackage eINSTANCE = Scenario.impl.ScenarioPackageImpl.init();
+
+  /**
+   * The meta object id for the '{@link Scenario.impl.ScenarioImpl <em>Scenario</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see Scenario.impl.ScenarioImpl
+   * @see Scenario.impl.ScenarioPackageImpl#getScenario()
+   * @generated
+   */
+  int SCENARIO = 0;
+
+  /**
+   * The feature id for the '<em><b>Objects</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SCENARIO__OBJECTS = 0;
+
+  /**
+   * The number of structural features of the '<em>Scenario</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SCENARIO_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link Scenario.impl.ObjectImpl <em>Object</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see Scenario.impl.ObjectImpl
+   * @see Scenario.impl.ScenarioPackageImpl#getObject()
+   * @generated
+   */
+  int OBJECT = 1;
+
+  /**
+   * The number of structural features of the '<em>Object</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link Scenario.impl.CapabilityImpl <em>Capability</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see Scenario.impl.CapabilityImpl
+   * @see Scenario.impl.ScenarioPackageImpl#getCapability()
+   * @generated
+   */
+  int CAPABILITY = 2;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY__NAME = OBJECT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Search Objective</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY__SEARCH_OBJECTIVE = OBJECT_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Stand Alone</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY__STAND_ALONE = OBJECT_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Reuse</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY__REUSE = OBJECT_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Start Date</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY__START_DATE = OBJECT_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>End Date</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY__END_DATE = OBJECT_FEATURE_COUNT + 5;
+
+  /**
+   * The feature id for the '<em><b>Accumulation</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY__ACCUMULATION = OBJECT_FEATURE_COUNT + 6;
+
+  /**
+   * The feature id for the '<em><b>Measurements</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY__MEASUREMENTS = OBJECT_FEATURE_COUNT + 7;
+
+  /**
+   * The feature id for the '<em><b>Decomposes</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY__DECOMPOSES = OBJECT_FEATURE_COUNT + 8;
+
+  /**
+   * The number of structural features of the '<em>Capability</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY_FEATURE_COUNT = OBJECT_FEATURE_COUNT + 9;
+
+  /**
+   * The meta object id for the '{@link Scenario.impl.CapabilityProvisionImpl <em>Capability Provision</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see Scenario.impl.CapabilityProvisionImpl
+   * @see Scenario.impl.ScenarioPackageImpl#getCapabilityProvision()
+   * @generated
+   */
+  int CAPABILITY_PROVISION = 3;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY_PROVISION__NAME = CAPABILITY__NAME;
+
+  /**
+   * The feature id for the '<em><b>Search Objective</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY_PROVISION__SEARCH_OBJECTIVE = CAPABILITY__SEARCH_OBJECTIVE;
+
+  /**
+   * The feature id for the '<em><b>Stand Alone</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY_PROVISION__STAND_ALONE = CAPABILITY__STAND_ALONE;
+
+  /**
+   * The feature id for the '<em><b>Reuse</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY_PROVISION__REUSE = CAPABILITY__REUSE;
+
+  /**
+   * The feature id for the '<em><b>Start Date</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY_PROVISION__START_DATE = CAPABILITY__START_DATE;
+
+  /**
+   * The feature id for the '<em><b>End Date</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY_PROVISION__END_DATE = CAPABILITY__END_DATE;
+
+  /**
+   * The feature id for the '<em><b>Accumulation</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY_PROVISION__ACCUMULATION = CAPABILITY__ACCUMULATION;
+
+  /**
+   * The feature id for the '<em><b>Measurements</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY_PROVISION__MEASUREMENTS = CAPABILITY__MEASUREMENTS;
+
+  /**
+   * The feature id for the '<em><b>Decomposes</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY_PROVISION__DECOMPOSES = CAPABILITY__DECOMPOSES;
+
+  /**
+   * The number of structural features of the '<em>Capability Provision</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY_PROVISION_FEATURE_COUNT = CAPABILITY_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link Scenario.impl.MeasurementImpl <em>Measurement</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see Scenario.impl.MeasurementImpl
+   * @see Scenario.impl.ScenarioPackageImpl#getMeasurement()
+   * @generated
+   */
+  int MEASUREMENT = 4;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MEASUREMENT__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Critical Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MEASUREMENT__CRITICAL_VALUE = 1;
+
+  /**
+   * The feature id for the '<em><b>Benchmark Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MEASUREMENT__BENCHMARK_VALUE = 2;
+
+  /**
+   * The feature id for the '<em><b>Provided Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MEASUREMENT__PROVIDED_VALUE = 3;
+
+  /**
+   * The feature id for the '<em><b>Critical Values</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MEASUREMENT__CRITICAL_VALUES = 4;
+
+  /**
+   * The feature id for the '<em><b>Benchmark Values</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MEASUREMENT__BENCHMARK_VALUES = 5;
+
+  /**
+   * The feature id for the '<em><b>Provided Values</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MEASUREMENT__PROVIDED_VALUES = 6;
+
+  /**
+   * The feature id for the '<em><b>Aggregation Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MEASUREMENT__AGGREGATION_TYPE = 7;
+
+  /**
+   * The feature id for the '<em><b>Script</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MEASUREMENT__SCRIPT = 8;
+
+  /**
+   * The feature id for the '<em><b>Aggregates</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MEASUREMENT__AGGREGATES = 9;
+
+  /**
+   * The number of structural features of the '<em>Measurement</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MEASUREMENT_FEATURE_COUNT = 10;
+
+  /**
+   * The meta object id for the '{@link Scenario.impl.QualitativeValueImpl <em>Qualitative Value</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see Scenario.impl.QualitativeValueImpl
+   * @see Scenario.impl.ScenarioPackageImpl#getQualitativeValue()
+   * @generated
+   */
+  int QUALITATIVE_VALUE = 5;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUALITATIVE_VALUE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Qualitative Value</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUALITATIVE_VALUE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link Scenario.impl.QualitativeValueDictionaryImpl <em>Qualitative Value Dictionary</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see Scenario.impl.QualitativeValueDictionaryImpl
+   * @see Scenario.impl.ScenarioPackageImpl#getQualitativeValueDictionary()
+   * @generated
+   */
+  int QUALITATIVE_VALUE_DICTIONARY = 6;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUALITATIVE_VALUE_DICTIONARY__NAME = OBJECT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Greater Than</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUALITATIVE_VALUE_DICTIONARY__GREATER_THAN = OBJECT_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Less Than</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUALITATIVE_VALUE_DICTIONARY__LESS_THAN = OBJECT_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>Qualitative Value Dictionary</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUALITATIVE_VALUE_DICTIONARY_FEATURE_COUNT = OBJECT_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link Scenario.impl.ComponentImpl <em>Component</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see Scenario.impl.ComponentImpl
+   * @see Scenario.impl.ScenarioPackageImpl#getComponent()
+   * @generated
+   */
+  int COMPONENT = 7;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPONENT__NAME = OBJECT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Provides</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPONENT__PROVIDES = OBJECT_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Upgrades</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPONENT__UPGRADES = OBJECT_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Requires</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPONENT__REQUIRES = OBJECT_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Costs</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPONENT__COSTS = OBJECT_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPONENT__PROPERTIES = OBJECT_FEATURE_COUNT + 5;
+
+  /**
+   * The number of structural features of the '<em>Component</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPONENT_FEATURE_COUNT = OBJECT_FEATURE_COUNT + 6;
+
+  /**
+   * The meta object id for the '{@link Scenario.impl.CostImpl <em>Cost</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see Scenario.impl.CostImpl
+   * @see Scenario.impl.ScenarioPackageImpl#getCost()
+   * @generated
+   */
+  int COST = 8;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COST__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Amount</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COST__AMOUNT = 1;
+
+  /**
+   * The feature id for the '<em><b>Start After</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COST__START_AFTER = 2;
+
+  /**
+   * The feature id for the '<em><b>Repeat Duration</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COST__REPEAT_DURATION = 3;
+
+  /**
+   * The feature id for the '<em><b>Stop After</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COST__STOP_AFTER = 4;
+
+  /**
+   * The number of structural features of the '<em>Cost</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COST_FEATURE_COUNT = 5;
+
+  /**
+   * The meta object id for the '{@link Scenario.impl.CapabilityUpgradeImpl <em>Capability Upgrade</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see Scenario.impl.CapabilityUpgradeImpl
+   * @see Scenario.impl.ScenarioPackageImpl#getCapabilityUpgrade()
+   * @generated
+   */
+  int CAPABILITY_UPGRADE = 9;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY_UPGRADE__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Target Component</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY_UPGRADE__TARGET_COMPONENT = 1;
+
+  /**
+   * The feature id for the '<em><b>Upgrading</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY_UPGRADE__UPGRADING = 2;
+
+  /**
+   * The feature id for the '<em><b>Capability Changes</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY_UPGRADE__CAPABILITY_CHANGES = 3;
+
+  /**
+   * The number of structural features of the '<em>Capability Upgrade</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY_UPGRADE_FEATURE_COUNT = 4;
+
+  /**
+   * The meta object id for the '{@link Scenario.impl.CapabilityChangeImpl <em>Capability Change</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see Scenario.impl.CapabilityChangeImpl
+   * @see Scenario.impl.ScenarioPackageImpl#getCapabilityChange()
+   * @generated
+   */
+  int CAPABILITY_CHANGE = 10;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY_CHANGE__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Capabilities</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY_CHANGE__CAPABILITIES = 1;
+
+  /**
+   * The number of structural features of the '<em>Capability Change</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAPABILITY_CHANGE_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link Scenario.impl.RunConfigurationImpl <em>Run Configuration</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see Scenario.impl.RunConfigurationImpl
+   * @see Scenario.impl.ScenarioPackageImpl#getRunConfiguration()
+   * @generated
+   */
+  int RUN_CONFIGURATION = 11;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RUN_CONFIGURATION__NAME = OBJECT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Pop Size</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RUN_CONFIGURATION__POP_SIZE = OBJECT_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Gen Count</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RUN_CONFIGURATION__GEN_COUNT = OBJECT_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>Run Configuration</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RUN_CONFIGURATION_FEATURE_COUNT = OBJECT_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link Scenario.impl.FindTradeOffsImpl <em>Find Trade Offs</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see Scenario.impl.FindTradeOffsImpl
+   * @see Scenario.impl.ScenarioPackageImpl#getFindTradeOffs()
+   * @generated
+   */
+  int FIND_TRADE_OFFS = 12;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FIND_TRADE_OFFS__NAME = RUN_CONFIGURATION__NAME;
+
+  /**
+   * The feature id for the '<em><b>Pop Size</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FIND_TRADE_OFFS__POP_SIZE = RUN_CONFIGURATION__POP_SIZE;
+
+  /**
+   * The feature id for the '<em><b>Gen Count</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FIND_TRADE_OFFS__GEN_COUNT = RUN_CONFIGURATION__GEN_COUNT;
+
+  /**
+   * The feature id for the '<em><b>Components</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FIND_TRADE_OFFS__COMPONENTS = RUN_CONFIGURATION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FIND_TRADE_OFFS__CONSTRAINTS = RUN_CONFIGURATION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Find Trade Offs</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FIND_TRADE_OFFS_FEATURE_COUNT = RUN_CONFIGURATION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link Scenario.impl.ThroughLifePlanningImpl <em>Through Life Planning</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see Scenario.impl.ThroughLifePlanningImpl
+   * @see Scenario.impl.ScenarioPackageImpl#getThroughLifePlanning()
+   * @generated
+   */
+  int THROUGH_LIFE_PLANNING = 13;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int THROUGH_LIFE_PLANNING__NAME = RUN_CONFIGURATION__NAME;
+
+  /**
+   * The feature id for the '<em><b>Pop Size</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int THROUGH_LIFE_PLANNING__POP_SIZE = RUN_CONFIGURATION__POP_SIZE;
+
+  /**
+   * The feature id for the '<em><b>Gen Count</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int THROUGH_LIFE_PLANNING__GEN_COUNT = RUN_CONFIGURATION__GEN_COUNT;
+
+  /**
+   * The feature id for the '<em><b>Components</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int THROUGH_LIFE_PLANNING__COMPONENTS = RUN_CONFIGURATION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Start Date</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int THROUGH_LIFE_PLANNING__START_DATE = RUN_CONFIGURATION_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>End Date</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int THROUGH_LIFE_PLANNING__END_DATE = RUN_CONFIGURATION_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int THROUGH_LIFE_PLANNING__CONSTRAINTS = RUN_CONFIGURATION_FEATURE_COUNT + 3;
+
+  /**
+   * The number of structural features of the '<em>Through Life Planning</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int THROUGH_LIFE_PLANNING_FEATURE_COUNT = RUN_CONFIGURATION_FEATURE_COUNT + 4;
+
+  /**
+   * The meta object id for the '{@link Scenario.impl.ComponentUImpl <em>Component U</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see Scenario.impl.ComponentUImpl
+   * @see Scenario.impl.ScenarioPackageImpl#getComponentU()
+   * @generated
+   */
+  int COMPONENT_U = 14;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPONENT_U__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Quantity</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPONENT_U__QUANTITY = 1;
+
+  /**
+   * The number of structural features of the '<em>Component U</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPONENT_U_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link Scenario.impl.ExistingComponentImpl <em>Existing Component</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see Scenario.impl.ExistingComponentImpl
+   * @see Scenario.impl.ScenarioPackageImpl#getExistingComponent()
+   * @generated
+   */
+  int EXISTING_COMPONENT = 15;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXISTING_COMPONENT__NAME = COMPONENT_U__NAME;
+
+  /**
+   * The feature id for the '<em><b>Quantity</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXISTING_COMPONENT__QUANTITY = COMPONENT_U__QUANTITY;
+
+  /**
+   * The feature id for the '<em><b>Start Date</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXISTING_COMPONENT__START_DATE = COMPONENT_U_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>End Date</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXISTING_COMPONENT__END_DATE = COMPONENT_U_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Existing Component</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXISTING_COMPONENT_FEATURE_COUNT = COMPONENT_U_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link Scenario.impl.AcquirableComponentImpl <em>Acquirable Component</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see Scenario.impl.AcquirableComponentImpl
+   * @see Scenario.impl.ScenarioPackageImpl#getAcquirableComponent()
+   * @generated
+   */
+  int ACQUIRABLE_COMPONENT = 16;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACQUIRABLE_COMPONENT__NAME = COMPONENT_U__NAME;
+
+  /**
+   * The feature id for the '<em><b>Quantity</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACQUIRABLE_COMPONENT__QUANTITY = COMPONENT_U__QUANTITY;
+
+  /**
+   * The feature id for the '<em><b>Acquisition Time</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACQUIRABLE_COMPONENT__ACQUISITION_TIME = COMPONENT_U_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Life Span</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACQUIRABLE_COMPONENT__LIFE_SPAN = COMPONENT_U_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Acquirable Component</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACQUIRABLE_COMPONENT_FEATURE_COUNT = COMPONENT_U_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link Scenario.impl.ConstraintImpl <em>Constraint</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see Scenario.impl.ConstraintImpl
+   * @see Scenario.impl.ScenarioPackageImpl#getConstraint()
+   * @generated
+   */
+  int CONSTRAINT = 17;
+
+  /**
+   * The number of structural features of the '<em>Constraint</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONSTRAINT_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link Scenario.impl.DesireHighImpl <em>Desire High</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see Scenario.impl.DesireHighImpl
+   * @see Scenario.impl.ScenarioPackageImpl#getDesireHigh()
+   * @generated
+   */
+  int DESIRE_HIGH = 18;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DESIRE_HIGH__NAME = CONSTRAINT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Desire High</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DESIRE_HIGH_FEATURE_COUNT = CONSTRAINT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link Scenario.impl.DesireLowImpl <em>Desire Low</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see Scenario.impl.DesireLowImpl
+   * @see Scenario.impl.ScenarioPackageImpl#getDesireLow()
+   * @generated
+   */
+  int DESIRE_LOW = 19;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DESIRE_LOW__NAME = CONSTRAINT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Desire Low</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DESIRE_LOW_FEATURE_COUNT = CONSTRAINT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link Scenario.impl.BudgetImpl <em>Budget</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see Scenario.impl.BudgetImpl
+   * @see Scenario.impl.ScenarioPackageImpl#getBudget()
+   * @generated
+   */
+  int BUDGET = 20;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUDGET__NAME = CONSTRAINT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Amount</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUDGET__AMOUNT = CONSTRAINT_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Start Date</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUDGET__START_DATE = CONSTRAINT_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Repeat Duration</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUDGET__REPEAT_DURATION = CONSTRAINT_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>End Date</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUDGET__END_DATE = CONSTRAINT_FEATURE_COUNT + 4;
+
+  /**
+   * The number of structural features of the '<em>Budget</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUDGET_FEATURE_COUNT = CONSTRAINT_FEATURE_COUNT + 5;
+
+
+  /**
+   * Returns the meta object for class '{@link Scenario.Scenario <em>Scenario</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Scenario</em>'.
+   * @see Scenario.Scenario
+   * @generated
+   */
+  EClass getScenario();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link Scenario.Scenario#getObjects <em>Objects</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Objects</em>'.
+   * @see Scenario.Scenario#getObjects()
+   * @see #getScenario()
+   * @generated
+   */
+  EReference getScenario_Objects();
+
+  /**
+   * Returns the meta object for class '{@link Scenario.Object <em>Object</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Object</em>'.
+   * @see Scenario.Object
+   * @generated
+   */
+  EClass getObject();
+
+  /**
+   * Returns the meta object for class '{@link Scenario.Capability <em>Capability</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Capability</em>'.
+   * @see Scenario.Capability
+   * @generated
+   */
+  EClass getCapability();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.Capability#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see Scenario.Capability#getName()
+   * @see #getCapability()
+   * @generated
+   */
+  EAttribute getCapability_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.Capability#getSearchObjective <em>Search Objective</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Search Objective</em>'.
+   * @see Scenario.Capability#getSearchObjective()
+   * @see #getCapability()
+   * @generated
+   */
+  EAttribute getCapability_SearchObjective();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.Capability#getStandAlone <em>Stand Alone</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Stand Alone</em>'.
+   * @see Scenario.Capability#getStandAlone()
+   * @see #getCapability()
+   * @generated
+   */
+  EAttribute getCapability_StandAlone();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.Capability#getReuse <em>Reuse</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Reuse</em>'.
+   * @see Scenario.Capability#getReuse()
+   * @see #getCapability()
+   * @generated
+   */
+  EAttribute getCapability_Reuse();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.Capability#getStartDate <em>Start Date</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Start Date</em>'.
+   * @see Scenario.Capability#getStartDate()
+   * @see #getCapability()
+   * @generated
+   */
+  EAttribute getCapability_StartDate();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.Capability#getEndDate <em>End Date</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>End Date</em>'.
+   * @see Scenario.Capability#getEndDate()
+   * @see #getCapability()
+   * @generated
+   */
+  EAttribute getCapability_EndDate();
+
+  /**
+   * Returns the meta object for the reference '{@link Scenario.Capability#getAccumulation <em>Accumulation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Accumulation</em>'.
+   * @see Scenario.Capability#getAccumulation()
+   * @see #getCapability()
+   * @generated
+   */
+  EReference getCapability_Accumulation();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link Scenario.Capability#getMeasurements <em>Measurements</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Measurements</em>'.
+   * @see Scenario.Capability#getMeasurements()
+   * @see #getCapability()
+   * @generated
+   */
+  EReference getCapability_Measurements();
+
+  /**
+   * Returns the meta object for the reference list '{@link Scenario.Capability#getDecomposes <em>Decomposes</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Decomposes</em>'.
+   * @see Scenario.Capability#getDecomposes()
+   * @see #getCapability()
+   * @generated
+   */
+  EReference getCapability_Decomposes();
+
+  /**
+   * Returns the meta object for class '{@link Scenario.CapabilityProvision <em>Capability Provision</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Capability Provision</em>'.
+   * @see Scenario.CapabilityProvision
+   * @generated
+   */
+  EClass getCapabilityProvision();
+
+  /**
+   * Returns the meta object for class '{@link Scenario.Measurement <em>Measurement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Measurement</em>'.
+   * @see Scenario.Measurement
+   * @generated
+   */
+  EClass getMeasurement();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.Measurement#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see Scenario.Measurement#getName()
+   * @see #getMeasurement()
+   * @generated
+   */
+  EAttribute getMeasurement_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.Measurement#getCriticalValue <em>Critical Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Critical Value</em>'.
+   * @see Scenario.Measurement#getCriticalValue()
+   * @see #getMeasurement()
+   * @generated
+   */
+  EAttribute getMeasurement_CriticalValue();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.Measurement#getBenchmarkValue <em>Benchmark Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Benchmark Value</em>'.
+   * @see Scenario.Measurement#getBenchmarkValue()
+   * @see #getMeasurement()
+   * @generated
+   */
+  EAttribute getMeasurement_BenchmarkValue();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.Measurement#getProvidedValue <em>Provided Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Provided Value</em>'.
+   * @see Scenario.Measurement#getProvidedValue()
+   * @see #getMeasurement()
+   * @generated
+   */
+  EAttribute getMeasurement_ProvidedValue();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link Scenario.Measurement#getCriticalValues <em>Critical Values</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Critical Values</em>'.
+   * @see Scenario.Measurement#getCriticalValues()
+   * @see #getMeasurement()
+   * @generated
+   */
+  EReference getMeasurement_CriticalValues();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link Scenario.Measurement#getBenchmarkValues <em>Benchmark Values</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Benchmark Values</em>'.
+   * @see Scenario.Measurement#getBenchmarkValues()
+   * @see #getMeasurement()
+   * @generated
+   */
+  EReference getMeasurement_BenchmarkValues();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link Scenario.Measurement#getProvidedValues <em>Provided Values</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Provided Values</em>'.
+   * @see Scenario.Measurement#getProvidedValues()
+   * @see #getMeasurement()
+   * @generated
+   */
+  EReference getMeasurement_ProvidedValues();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.Measurement#getAggregationType <em>Aggregation Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Aggregation Type</em>'.
+   * @see Scenario.Measurement#getAggregationType()
+   * @see #getMeasurement()
+   * @generated
+   */
+  EAttribute getMeasurement_AggregationType();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.Measurement#getScript <em>Script</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Script</em>'.
+   * @see Scenario.Measurement#getScript()
+   * @see #getMeasurement()
+   * @generated
+   */
+  EAttribute getMeasurement_Script();
+
+  /**
+   * Returns the meta object for the reference list '{@link Scenario.Measurement#getAggregates <em>Aggregates</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Aggregates</em>'.
+   * @see Scenario.Measurement#getAggregates()
+   * @see #getMeasurement()
+   * @generated
+   */
+  EReference getMeasurement_Aggregates();
+
+  /**
+   * Returns the meta object for class '{@link Scenario.QualitativeValue <em>Qualitative Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Qualitative Value</em>'.
+   * @see Scenario.QualitativeValue
+   * @generated
+   */
+  EClass getQualitativeValue();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.QualitativeValue#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see Scenario.QualitativeValue#getName()
+   * @see #getQualitativeValue()
+   * @generated
+   */
+  EAttribute getQualitativeValue_Name();
+
+  /**
+   * Returns the meta object for class '{@link Scenario.QualitativeValueDictionary <em>Qualitative Value Dictionary</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Qualitative Value Dictionary</em>'.
+   * @see Scenario.QualitativeValueDictionary
+   * @generated
+   */
+  EClass getQualitativeValueDictionary();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.QualitativeValueDictionary#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see Scenario.QualitativeValueDictionary#getName()
+   * @see #getQualitativeValueDictionary()
+   * @generated
+   */
+  EAttribute getQualitativeValueDictionary_Name();
+
+  /**
+   * Returns the meta object for the reference '{@link Scenario.QualitativeValueDictionary#getGreaterThan <em>Greater Than</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Greater Than</em>'.
+   * @see Scenario.QualitativeValueDictionary#getGreaterThan()
+   * @see #getQualitativeValueDictionary()
+   * @generated
+   */
+  EReference getQualitativeValueDictionary_GreaterThan();
+
+  /**
+   * Returns the meta object for the reference '{@link Scenario.QualitativeValueDictionary#getLessThan <em>Less Than</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Less Than</em>'.
+   * @see Scenario.QualitativeValueDictionary#getLessThan()
+   * @see #getQualitativeValueDictionary()
+   * @generated
+   */
+  EReference getQualitativeValueDictionary_LessThan();
+
+  /**
+   * Returns the meta object for class '{@link Scenario.Component <em>Component</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Component</em>'.
+   * @see Scenario.Component
+   * @generated
+   */
+  EClass getComponent();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.Component#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see Scenario.Component#getName()
+   * @see #getComponent()
+   * @generated
+   */
+  EAttribute getComponent_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link Scenario.Component#getProvides <em>Provides</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Provides</em>'.
+   * @see Scenario.Component#getProvides()
+   * @see #getComponent()
+   * @generated
+   */
+  EReference getComponent_Provides();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link Scenario.Component#getUpgrades <em>Upgrades</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Upgrades</em>'.
+   * @see Scenario.Component#getUpgrades()
+   * @see #getComponent()
+   * @generated
+   */
+  EReference getComponent_Upgrades();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link Scenario.Component#getRequires <em>Requires</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Requires</em>'.
+   * @see Scenario.Component#getRequires()
+   * @see #getComponent()
+   * @generated
+   */
+  EReference getComponent_Requires();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link Scenario.Component#getCosts <em>Costs</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Costs</em>'.
+   * @see Scenario.Component#getCosts()
+   * @see #getComponent()
+   * @generated
+   */
+  EReference getComponent_Costs();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link Scenario.Component#getProperties <em>Properties</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Properties</em>'.
+   * @see Scenario.Component#getProperties()
+   * @see #getComponent()
+   * @generated
+   */
+  EReference getComponent_Properties();
+
+  /**
+   * Returns the meta object for class '{@link Scenario.Cost <em>Cost</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Cost</em>'.
+   * @see Scenario.Cost
+   * @generated
+   */
+  EClass getCost();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.Cost#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see Scenario.Cost#getName()
+   * @see #getCost()
+   * @generated
+   */
+  EAttribute getCost_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.Cost#getAmount <em>Amount</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Amount</em>'.
+   * @see Scenario.Cost#getAmount()
+   * @see #getCost()
+   * @generated
+   */
+  EAttribute getCost_Amount();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.Cost#getStartAfter <em>Start After</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Start After</em>'.
+   * @see Scenario.Cost#getStartAfter()
+   * @see #getCost()
+   * @generated
+   */
+  EAttribute getCost_StartAfter();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.Cost#getRepeatDuration <em>Repeat Duration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Repeat Duration</em>'.
+   * @see Scenario.Cost#getRepeatDuration()
+   * @see #getCost()
+   * @generated
+   */
+  EAttribute getCost_RepeatDuration();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.Cost#getStopAfter <em>Stop After</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Stop After</em>'.
+   * @see Scenario.Cost#getStopAfter()
+   * @see #getCost()
+   * @generated
+   */
+  EAttribute getCost_StopAfter();
+
+  /**
+   * Returns the meta object for class '{@link Scenario.CapabilityUpgrade <em>Capability Upgrade</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Capability Upgrade</em>'.
+   * @see Scenario.CapabilityUpgrade
+   * @generated
+   */
+  EClass getCapabilityUpgrade();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.CapabilityUpgrade#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see Scenario.CapabilityUpgrade#getName()
+   * @see #getCapabilityUpgrade()
+   * @generated
+   */
+  EAttribute getCapabilityUpgrade_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.CapabilityUpgrade#getTargetComponent <em>Target Component</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Target Component</em>'.
+   * @see Scenario.CapabilityUpgrade#getTargetComponent()
+   * @see #getCapabilityUpgrade()
+   * @generated
+   */
+  EAttribute getCapabilityUpgrade_TargetComponent();
+
+  /**
+   * Returns the meta object for the reference '{@link Scenario.CapabilityUpgrade#getUpgrading <em>Upgrading</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Upgrading</em>'.
+   * @see Scenario.CapabilityUpgrade#getUpgrading()
+   * @see #getCapabilityUpgrade()
+   * @generated
+   */
+  EReference getCapabilityUpgrade_Upgrading();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link Scenario.CapabilityUpgrade#getCapabilityChanges <em>Capability Changes</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Capability Changes</em>'.
+   * @see Scenario.CapabilityUpgrade#getCapabilityChanges()
+   * @see #getCapabilityUpgrade()
+   * @generated
+   */
+  EReference getCapabilityUpgrade_CapabilityChanges();
+
+  /**
+   * Returns the meta object for class '{@link Scenario.CapabilityChange <em>Capability Change</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Capability Change</em>'.
+   * @see Scenario.CapabilityChange
+   * @generated
+   */
+  EClass getCapabilityChange();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.CapabilityChange#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see Scenario.CapabilityChange#getName()
+   * @see #getCapabilityChange()
+   * @generated
+   */
+  EAttribute getCapabilityChange_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link Scenario.CapabilityChange#getCapabilities <em>Capabilities</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Capabilities</em>'.
+   * @see Scenario.CapabilityChange#getCapabilities()
+   * @see #getCapabilityChange()
+   * @generated
+   */
+  EReference getCapabilityChange_Capabilities();
+
+  /**
+   * Returns the meta object for class '{@link Scenario.RunConfiguration <em>Run Configuration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Run Configuration</em>'.
+   * @see Scenario.RunConfiguration
+   * @generated
+   */
+  EClass getRunConfiguration();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.RunConfiguration#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see Scenario.RunConfiguration#getName()
+   * @see #getRunConfiguration()
+   * @generated
+   */
+  EAttribute getRunConfiguration_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.RunConfiguration#getPopSize <em>Pop Size</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Pop Size</em>'.
+   * @see Scenario.RunConfiguration#getPopSize()
+   * @see #getRunConfiguration()
+   * @generated
+   */
+  EAttribute getRunConfiguration_PopSize();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.RunConfiguration#getGenCount <em>Gen Count</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Gen Count</em>'.
+   * @see Scenario.RunConfiguration#getGenCount()
+   * @see #getRunConfiguration()
+   * @generated
+   */
+  EAttribute getRunConfiguration_GenCount();
+
+  /**
+   * Returns the meta object for class '{@link Scenario.FindTradeOffs <em>Find Trade Offs</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Find Trade Offs</em>'.
+   * @see Scenario.FindTradeOffs
+   * @generated
+   */
+  EClass getFindTradeOffs();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link Scenario.FindTradeOffs#getComponents <em>Components</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Components</em>'.
+   * @see Scenario.FindTradeOffs#getComponents()
+   * @see #getFindTradeOffs()
+   * @generated
+   */
+  EReference getFindTradeOffs_Components();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link Scenario.FindTradeOffs#getConstraints <em>Constraints</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Constraints</em>'.
+   * @see Scenario.FindTradeOffs#getConstraints()
+   * @see #getFindTradeOffs()
+   * @generated
+   */
+  EReference getFindTradeOffs_Constraints();
+
+  /**
+   * Returns the meta object for class '{@link Scenario.ThroughLifePlanning <em>Through Life Planning</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Through Life Planning</em>'.
+   * @see Scenario.ThroughLifePlanning
+   * @generated
+   */
+  EClass getThroughLifePlanning();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link Scenario.ThroughLifePlanning#getComponents <em>Components</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Components</em>'.
+   * @see Scenario.ThroughLifePlanning#getComponents()
+   * @see #getThroughLifePlanning()
+   * @generated
+   */
+  EReference getThroughLifePlanning_Components();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.ThroughLifePlanning#getStartDate <em>Start Date</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Start Date</em>'.
+   * @see Scenario.ThroughLifePlanning#getStartDate()
+   * @see #getThroughLifePlanning()
+   * @generated
+   */
+  EAttribute getThroughLifePlanning_StartDate();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.ThroughLifePlanning#getEndDate <em>End Date</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>End Date</em>'.
+   * @see Scenario.ThroughLifePlanning#getEndDate()
+   * @see #getThroughLifePlanning()
+   * @generated
+   */
+  EAttribute getThroughLifePlanning_EndDate();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link Scenario.ThroughLifePlanning#getConstraints <em>Constraints</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Constraints</em>'.
+   * @see Scenario.ThroughLifePlanning#getConstraints()
+   * @see #getThroughLifePlanning()
+   * @generated
+   */
+  EReference getThroughLifePlanning_Constraints();
+
+  /**
+   * Returns the meta object for class '{@link Scenario.ComponentU <em>Component U</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Component U</em>'.
+   * @see Scenario.ComponentU
+   * @generated
+   */
+  EClass getComponentU();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.ComponentU#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see Scenario.ComponentU#getName()
+   * @see #getComponentU()
+   * @generated
+   */
+  EAttribute getComponentU_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.ComponentU#getQuantity <em>Quantity</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Quantity</em>'.
+   * @see Scenario.ComponentU#getQuantity()
+   * @see #getComponentU()
+   * @generated
+   */
+  EAttribute getComponentU_Quantity();
+
+  /**
+   * Returns the meta object for class '{@link Scenario.ExistingComponent <em>Existing Component</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Existing Component</em>'.
+   * @see Scenario.ExistingComponent
+   * @generated
+   */
+  EClass getExistingComponent();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.ExistingComponent#getStartDate <em>Start Date</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Start Date</em>'.
+   * @see Scenario.ExistingComponent#getStartDate()
+   * @see #getExistingComponent()
+   * @generated
+   */
+  EAttribute getExistingComponent_StartDate();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.ExistingComponent#getEndDate <em>End Date</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>End Date</em>'.
+   * @see Scenario.ExistingComponent#getEndDate()
+   * @see #getExistingComponent()
+   * @generated
+   */
+  EAttribute getExistingComponent_EndDate();
+
+  /**
+   * Returns the meta object for class '{@link Scenario.AcquirableComponent <em>Acquirable Component</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Acquirable Component</em>'.
+   * @see Scenario.AcquirableComponent
+   * @generated
+   */
+  EClass getAcquirableComponent();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.AcquirableComponent#getAcquisitionTime <em>Acquisition Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Acquisition Time</em>'.
+   * @see Scenario.AcquirableComponent#getAcquisitionTime()
+   * @see #getAcquirableComponent()
+   * @generated
+   */
+  EAttribute getAcquirableComponent_AcquisitionTime();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.AcquirableComponent#getLifeSpan <em>Life Span</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Life Span</em>'.
+   * @see Scenario.AcquirableComponent#getLifeSpan()
+   * @see #getAcquirableComponent()
+   * @generated
+   */
+  EAttribute getAcquirableComponent_LifeSpan();
+
+  /**
+   * Returns the meta object for class '{@link Scenario.Constraint <em>Constraint</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Constraint</em>'.
+   * @see Scenario.Constraint
+   * @generated
+   */
+  EClass getConstraint();
+
+  /**
+   * Returns the meta object for class '{@link Scenario.DesireHigh <em>Desire High</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Desire High</em>'.
+   * @see Scenario.DesireHigh
+   * @generated
+   */
+  EClass getDesireHigh();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.DesireHigh#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see Scenario.DesireHigh#getName()
+   * @see #getDesireHigh()
+   * @generated
+   */
+  EAttribute getDesireHigh_Name();
+
+  /**
+   * Returns the meta object for class '{@link Scenario.DesireLow <em>Desire Low</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Desire Low</em>'.
+   * @see Scenario.DesireLow
+   * @generated
+   */
+  EClass getDesireLow();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.DesireLow#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see Scenario.DesireLow#getName()
+   * @see #getDesireLow()
+   * @generated
+   */
+  EAttribute getDesireLow_Name();
+
+  /**
+   * Returns the meta object for class '{@link Scenario.Budget <em>Budget</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Budget</em>'.
+   * @see Scenario.Budget
+   * @generated
+   */
+  EClass getBudget();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.Budget#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see Scenario.Budget#getName()
+   * @see #getBudget()
+   * @generated
+   */
+  EAttribute getBudget_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.Budget#getAmount <em>Amount</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Amount</em>'.
+   * @see Scenario.Budget#getAmount()
+   * @see #getBudget()
+   * @generated
+   */
+  EAttribute getBudget_Amount();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.Budget#getStartDate <em>Start Date</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Start Date</em>'.
+   * @see Scenario.Budget#getStartDate()
+   * @see #getBudget()
+   * @generated
+   */
+  EAttribute getBudget_StartDate();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.Budget#getRepeatDuration <em>Repeat Duration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Repeat Duration</em>'.
+   * @see Scenario.Budget#getRepeatDuration()
+   * @see #getBudget()
+   * @generated
+   */
+  EAttribute getBudget_RepeatDuration();
+
+  /**
+   * Returns the meta object for the attribute '{@link Scenario.Budget#getEndDate <em>End Date</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>End Date</em>'.
+   * @see Scenario.Budget#getEndDate()
+   * @see #getBudget()
+   * @generated
+   */
+  EAttribute getBudget_EndDate();
+
+  /**
+   * Returns the factory that creates the instances of the model.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the factory that creates the instances of the model.
+   * @generated
+   */
+  ScenarioFactory getScenarioFactory();
+
+  /**
+   * <!-- begin-user-doc -->
+   * Defines literals for the meta objects that represent
+   * <ul>
+   *   <li>each class,</li>
+   *   <li>each feature of each class,</li>
+   *   <li>each enum,</li>
+   *   <li>and each data type</li>
+   * </ul>
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  interface Literals
+  {
+    /**
+     * The meta object literal for the '{@link Scenario.impl.ScenarioImpl <em>Scenario</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see Scenario.impl.ScenarioImpl
+     * @see Scenario.impl.ScenarioPackageImpl#getScenario()
+     * @generated
+     */
+    EClass SCENARIO = eINSTANCE.getScenario();
+
+    /**
+     * The meta object literal for the '<em><b>Objects</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SCENARIO__OBJECTS = eINSTANCE.getScenario_Objects();
+
+    /**
+     * The meta object literal for the '{@link Scenario.impl.ObjectImpl <em>Object</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see Scenario.impl.ObjectImpl
+     * @see Scenario.impl.ScenarioPackageImpl#getObject()
+     * @generated
+     */
+    EClass OBJECT = eINSTANCE.getObject();
+
+    /**
+     * The meta object literal for the '{@link Scenario.impl.CapabilityImpl <em>Capability</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see Scenario.impl.CapabilityImpl
+     * @see Scenario.impl.ScenarioPackageImpl#getCapability()
+     * @generated
+     */
+    EClass CAPABILITY = eINSTANCE.getCapability();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CAPABILITY__NAME = eINSTANCE.getCapability_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Search Objective</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CAPABILITY__SEARCH_OBJECTIVE = eINSTANCE.getCapability_SearchObjective();
+
+    /**
+     * The meta object literal for the '<em><b>Stand Alone</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CAPABILITY__STAND_ALONE = eINSTANCE.getCapability_StandAlone();
+
+    /**
+     * The meta object literal for the '<em><b>Reuse</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CAPABILITY__REUSE = eINSTANCE.getCapability_Reuse();
+
+    /**
+     * The meta object literal for the '<em><b>Start Date</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CAPABILITY__START_DATE = eINSTANCE.getCapability_StartDate();
+
+    /**
+     * The meta object literal for the '<em><b>End Date</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CAPABILITY__END_DATE = eINSTANCE.getCapability_EndDate();
+
+    /**
+     * The meta object literal for the '<em><b>Accumulation</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CAPABILITY__ACCUMULATION = eINSTANCE.getCapability_Accumulation();
+
+    /**
+     * The meta object literal for the '<em><b>Measurements</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CAPABILITY__MEASUREMENTS = eINSTANCE.getCapability_Measurements();
+
+    /**
+     * The meta object literal for the '<em><b>Decomposes</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CAPABILITY__DECOMPOSES = eINSTANCE.getCapability_Decomposes();
+
+    /**
+     * The meta object literal for the '{@link Scenario.impl.CapabilityProvisionImpl <em>Capability Provision</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see Scenario.impl.CapabilityProvisionImpl
+     * @see Scenario.impl.ScenarioPackageImpl#getCapabilityProvision()
+     * @generated
+     */
+    EClass CAPABILITY_PROVISION = eINSTANCE.getCapabilityProvision();
+
+    /**
+     * The meta object literal for the '{@link Scenario.impl.MeasurementImpl <em>Measurement</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see Scenario.impl.MeasurementImpl
+     * @see Scenario.impl.ScenarioPackageImpl#getMeasurement()
+     * @generated
+     */
+    EClass MEASUREMENT = eINSTANCE.getMeasurement();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MEASUREMENT__NAME = eINSTANCE.getMeasurement_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Critical Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MEASUREMENT__CRITICAL_VALUE = eINSTANCE.getMeasurement_CriticalValue();
+
+    /**
+     * The meta object literal for the '<em><b>Benchmark Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MEASUREMENT__BENCHMARK_VALUE = eINSTANCE.getMeasurement_BenchmarkValue();
+
+    /**
+     * The meta object literal for the '<em><b>Provided Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MEASUREMENT__PROVIDED_VALUE = eINSTANCE.getMeasurement_ProvidedValue();
+
+    /**
+     * The meta object literal for the '<em><b>Critical Values</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MEASUREMENT__CRITICAL_VALUES = eINSTANCE.getMeasurement_CriticalValues();
+
+    /**
+     * The meta object literal for the '<em><b>Benchmark Values</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MEASUREMENT__BENCHMARK_VALUES = eINSTANCE.getMeasurement_BenchmarkValues();
+
+    /**
+     * The meta object literal for the '<em><b>Provided Values</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MEASUREMENT__PROVIDED_VALUES = eINSTANCE.getMeasurement_ProvidedValues();
+
+    /**
+     * The meta object literal for the '<em><b>Aggregation Type</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MEASUREMENT__AGGREGATION_TYPE = eINSTANCE.getMeasurement_AggregationType();
+
+    /**
+     * The meta object literal for the '<em><b>Script</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MEASUREMENT__SCRIPT = eINSTANCE.getMeasurement_Script();
+
+    /**
+     * The meta object literal for the '<em><b>Aggregates</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MEASUREMENT__AGGREGATES = eINSTANCE.getMeasurement_Aggregates();
+
+    /**
+     * The meta object literal for the '{@link Scenario.impl.QualitativeValueImpl <em>Qualitative Value</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see Scenario.impl.QualitativeValueImpl
+     * @see Scenario.impl.ScenarioPackageImpl#getQualitativeValue()
+     * @generated
+     */
+    EClass QUALITATIVE_VALUE = eINSTANCE.getQualitativeValue();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute QUALITATIVE_VALUE__NAME = eINSTANCE.getQualitativeValue_Name();
+
+    /**
+     * The meta object literal for the '{@link Scenario.impl.QualitativeValueDictionaryImpl <em>Qualitative Value Dictionary</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see Scenario.impl.QualitativeValueDictionaryImpl
+     * @see Scenario.impl.ScenarioPackageImpl#getQualitativeValueDictionary()
+     * @generated
+     */
+    EClass QUALITATIVE_VALUE_DICTIONARY = eINSTANCE.getQualitativeValueDictionary();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute QUALITATIVE_VALUE_DICTIONARY__NAME = eINSTANCE.getQualitativeValueDictionary_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Greater Than</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference QUALITATIVE_VALUE_DICTIONARY__GREATER_THAN = eINSTANCE.getQualitativeValueDictionary_GreaterThan();
+
+    /**
+     * The meta object literal for the '<em><b>Less Than</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference QUALITATIVE_VALUE_DICTIONARY__LESS_THAN = eINSTANCE.getQualitativeValueDictionary_LessThan();
+
+    /**
+     * The meta object literal for the '{@link Scenario.impl.ComponentImpl <em>Component</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see Scenario.impl.ComponentImpl
+     * @see Scenario.impl.ScenarioPackageImpl#getComponent()
+     * @generated
+     */
+    EClass COMPONENT = eINSTANCE.getComponent();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COMPONENT__NAME = eINSTANCE.getComponent_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Provides</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COMPONENT__PROVIDES = eINSTANCE.getComponent_Provides();
+
+    /**
+     * The meta object literal for the '<em><b>Upgrades</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COMPONENT__UPGRADES = eINSTANCE.getComponent_Upgrades();
+
+    /**
+     * The meta object literal for the '<em><b>Requires</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COMPONENT__REQUIRES = eINSTANCE.getComponent_Requires();
+
+    /**
+     * The meta object literal for the '<em><b>Costs</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COMPONENT__COSTS = eINSTANCE.getComponent_Costs();
+
+    /**
+     * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COMPONENT__PROPERTIES = eINSTANCE.getComponent_Properties();
+
+    /**
+     * The meta object literal for the '{@link Scenario.impl.CostImpl <em>Cost</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see Scenario.impl.CostImpl
+     * @see Scenario.impl.ScenarioPackageImpl#getCost()
+     * @generated
+     */
+    EClass COST = eINSTANCE.getCost();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COST__NAME = eINSTANCE.getCost_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Amount</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COST__AMOUNT = eINSTANCE.getCost_Amount();
+
+    /**
+     * The meta object literal for the '<em><b>Start After</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COST__START_AFTER = eINSTANCE.getCost_StartAfter();
+
+    /**
+     * The meta object literal for the '<em><b>Repeat Duration</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COST__REPEAT_DURATION = eINSTANCE.getCost_RepeatDuration();
+
+    /**
+     * The meta object literal for the '<em><b>Stop After</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COST__STOP_AFTER = eINSTANCE.getCost_StopAfter();
+
+    /**
+     * The meta object literal for the '{@link Scenario.impl.CapabilityUpgradeImpl <em>Capability Upgrade</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see Scenario.impl.CapabilityUpgradeImpl
+     * @see Scenario.impl.ScenarioPackageImpl#getCapabilityUpgrade()
+     * @generated
+     */
+    EClass CAPABILITY_UPGRADE = eINSTANCE.getCapabilityUpgrade();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CAPABILITY_UPGRADE__NAME = eINSTANCE.getCapabilityUpgrade_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Target Component</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CAPABILITY_UPGRADE__TARGET_COMPONENT = eINSTANCE.getCapabilityUpgrade_TargetComponent();
+
+    /**
+     * The meta object literal for the '<em><b>Upgrading</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CAPABILITY_UPGRADE__UPGRADING = eINSTANCE.getCapabilityUpgrade_Upgrading();
+
+    /**
+     * The meta object literal for the '<em><b>Capability Changes</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CAPABILITY_UPGRADE__CAPABILITY_CHANGES = eINSTANCE.getCapabilityUpgrade_CapabilityChanges();
+
+    /**
+     * The meta object literal for the '{@link Scenario.impl.CapabilityChangeImpl <em>Capability Change</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see Scenario.impl.CapabilityChangeImpl
+     * @see Scenario.impl.ScenarioPackageImpl#getCapabilityChange()
+     * @generated
+     */
+    EClass CAPABILITY_CHANGE = eINSTANCE.getCapabilityChange();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CAPABILITY_CHANGE__NAME = eINSTANCE.getCapabilityChange_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Capabilities</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CAPABILITY_CHANGE__CAPABILITIES = eINSTANCE.getCapabilityChange_Capabilities();
+
+    /**
+     * The meta object literal for the '{@link Scenario.impl.RunConfigurationImpl <em>Run Configuration</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see Scenario.impl.RunConfigurationImpl
+     * @see Scenario.impl.ScenarioPackageImpl#getRunConfiguration()
+     * @generated
+     */
+    EClass RUN_CONFIGURATION = eINSTANCE.getRunConfiguration();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute RUN_CONFIGURATION__NAME = eINSTANCE.getRunConfiguration_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Pop Size</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute RUN_CONFIGURATION__POP_SIZE = eINSTANCE.getRunConfiguration_PopSize();
+
+    /**
+     * The meta object literal for the '<em><b>Gen Count</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute RUN_CONFIGURATION__GEN_COUNT = eINSTANCE.getRunConfiguration_GenCount();
+
+    /**
+     * The meta object literal for the '{@link Scenario.impl.FindTradeOffsImpl <em>Find Trade Offs</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see Scenario.impl.FindTradeOffsImpl
+     * @see Scenario.impl.ScenarioPackageImpl#getFindTradeOffs()
+     * @generated
+     */
+    EClass FIND_TRADE_OFFS = eINSTANCE.getFindTradeOffs();
+
+    /**
+     * The meta object literal for the '<em><b>Components</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FIND_TRADE_OFFS__COMPONENTS = eINSTANCE.getFindTradeOffs_Components();
+
+    /**
+     * The meta object literal for the '<em><b>Constraints</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FIND_TRADE_OFFS__CONSTRAINTS = eINSTANCE.getFindTradeOffs_Constraints();
+
+    /**
+     * The meta object literal for the '{@link Scenario.impl.ThroughLifePlanningImpl <em>Through Life Planning</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see Scenario.impl.ThroughLifePlanningImpl
+     * @see Scenario.impl.ScenarioPackageImpl#getThroughLifePlanning()
+     * @generated
+     */
+    EClass THROUGH_LIFE_PLANNING = eINSTANCE.getThroughLifePlanning();
+
+    /**
+     * The meta object literal for the '<em><b>Components</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference THROUGH_LIFE_PLANNING__COMPONENTS = eINSTANCE.getThroughLifePlanning_Components();
+
+    /**
+     * The meta object literal for the '<em><b>Start Date</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute THROUGH_LIFE_PLANNING__START_DATE = eINSTANCE.getThroughLifePlanning_StartDate();
+
+    /**
+     * The meta object literal for the '<em><b>End Date</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute THROUGH_LIFE_PLANNING__END_DATE = eINSTANCE.getThroughLifePlanning_EndDate();
+
+    /**
+     * The meta object literal for the '<em><b>Constraints</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference THROUGH_LIFE_PLANNING__CONSTRAINTS = eINSTANCE.getThroughLifePlanning_Constraints();
+
+    /**
+     * The meta object literal for the '{@link Scenario.impl.ComponentUImpl <em>Component U</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see Scenario.impl.ComponentUImpl
+     * @see Scenario.impl.ScenarioPackageImpl#getComponentU()
+     * @generated
+     */
+    EClass COMPONENT_U = eINSTANCE.getComponentU();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COMPONENT_U__NAME = eINSTANCE.getComponentU_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Quantity</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COMPONENT_U__QUANTITY = eINSTANCE.getComponentU_Quantity();
+
+    /**
+     * The meta object literal for the '{@link Scenario.impl.ExistingComponentImpl <em>Existing Component</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see Scenario.impl.ExistingComponentImpl
+     * @see Scenario.impl.ScenarioPackageImpl#getExistingComponent()
+     * @generated
+     */
+    EClass EXISTING_COMPONENT = eINSTANCE.getExistingComponent();
+
+    /**
+     * The meta object literal for the '<em><b>Start Date</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXISTING_COMPONENT__START_DATE = eINSTANCE.getExistingComponent_StartDate();
+
+    /**
+     * The meta object literal for the '<em><b>End Date</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXISTING_COMPONENT__END_DATE = eINSTANCE.getExistingComponent_EndDate();
+
+    /**
+     * The meta object literal for the '{@link Scenario.impl.AcquirableComponentImpl <em>Acquirable Component</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see Scenario.impl.AcquirableComponentImpl
+     * @see Scenario.impl.ScenarioPackageImpl#getAcquirableComponent()
+     * @generated
+     */
+    EClass ACQUIRABLE_COMPONENT = eINSTANCE.getAcquirableComponent();
+
+    /**
+     * The meta object literal for the '<em><b>Acquisition Time</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ACQUIRABLE_COMPONENT__ACQUISITION_TIME = eINSTANCE.getAcquirableComponent_AcquisitionTime();
+
+    /**
+     * The meta object literal for the '<em><b>Life Span</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ACQUIRABLE_COMPONENT__LIFE_SPAN = eINSTANCE.getAcquirableComponent_LifeSpan();
+
+    /**
+     * The meta object literal for the '{@link Scenario.impl.ConstraintImpl <em>Constraint</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see Scenario.impl.ConstraintImpl
+     * @see Scenario.impl.ScenarioPackageImpl#getConstraint()
+     * @generated
+     */
+    EClass CONSTRAINT = eINSTANCE.getConstraint();
+
+    /**
+     * The meta object literal for the '{@link Scenario.impl.DesireHighImpl <em>Desire High</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see Scenario.impl.DesireHighImpl
+     * @see Scenario.impl.ScenarioPackageImpl#getDesireHigh()
+     * @generated
+     */
+    EClass DESIRE_HIGH = eINSTANCE.getDesireHigh();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DESIRE_HIGH__NAME = eINSTANCE.getDesireHigh_Name();
+
+    /**
+     * The meta object literal for the '{@link Scenario.impl.DesireLowImpl <em>Desire Low</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see Scenario.impl.DesireLowImpl
+     * @see Scenario.impl.ScenarioPackageImpl#getDesireLow()
+     * @generated
+     */
+    EClass DESIRE_LOW = eINSTANCE.getDesireLow();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DESIRE_LOW__NAME = eINSTANCE.getDesireLow_Name();
+
+    /**
+     * The meta object literal for the '{@link Scenario.impl.BudgetImpl <em>Budget</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see Scenario.impl.BudgetImpl
+     * @see Scenario.impl.ScenarioPackageImpl#getBudget()
+     * @generated
+     */
+    EClass BUDGET = eINSTANCE.getBudget();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BUDGET__NAME = eINSTANCE.getBudget_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Amount</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BUDGET__AMOUNT = eINSTANCE.getBudget_Amount();
+
+    /**
+     * The meta object literal for the '<em><b>Start Date</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BUDGET__START_DATE = eINSTANCE.getBudget_StartDate();
+
+    /**
+     * The meta object literal for the '<em><b>Repeat Duration</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BUDGET__REPEAT_DURATION = eINSTANCE.getBudget_RepeatDuration();
+
+    /**
+     * The meta object literal for the '<em><b>End Date</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BUDGET__END_DATE = eINSTANCE.getBudget_EndDate();
+
+  }
+
+} //ScenarioPackage

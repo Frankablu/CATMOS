@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:CapabilityOverTime xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="CapOverTime">
+  <timePeriods startDate="0" endDate="13">
+    <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.0" colour="Yellow">
+      <measurements name="weightedSatisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="14" endDate="30">
+    <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.08468" colour="Yellow">
+      <measurements name="weightedSatisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0846774"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="31" endDate="60">
+    <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.29094" colour="Yellow">
+      <measurements name="weightedSatisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.29094"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="61" endDate="68">
+    <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.37407" colour="Yellow">
+      <measurements name="weightedSatisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.374072"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="69" endDate="85">
+    <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.39993" colour="Yellow">
+      <measurements name="weightedSatisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.399934"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="86" endDate="90">
+    <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.41436" colour="Yellow">
+      <measurements name="weightedSatisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.414358"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="91" endDate="101">
+    <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.48332" colour="Yellow">
+      <measurements name="weightedSatisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.483323"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="102" endDate="120">
+    <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.55633" colour="Yellow">
+      <measurements name="weightedSatisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.556329"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="121" endDate="131">
+    <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.58506" colour="Yellow">
+      <measurements name="weightedSatisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.585064"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="132" endDate="333">
+    <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.64541" colour="Yellow">
+      <measurements name="weightedSatisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.645409"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="334" endDate="334">
+    <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.64541" colour="Yellow">
+      <measurements name="weightedSatisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.645409"/>
+    </ourObjects>
+  </timePeriods>
+</p:CapabilityOverTime>

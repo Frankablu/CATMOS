@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ThroughLifeAutoNextReleaseProblemTwoHundred/ThroughLifeAutoNextReleaseProblemHundred.scen&apos; to &apos;ThroughLifeAutoNextReleaseProblemTwoHundred.scen&apos;" description="Rename resource &apos;ThroughLifeAutoNextReleaseProblemHundred.scen&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="ThroughLifeAutoNextReleaseProblemHundred.scen" name="ThroughLifeAutoNextReleaseProblemTwoHundred.scen" stamp="1369092370697" updateReferences="true"/>
+</session>

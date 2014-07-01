@@ -1,0 +1,35 @@
+	/*
+ * 
+ */
+package Scenario.diagram.edit.policies;
+
+	/**
+ * @generated
+ */
+public class ThroughLifePlanningThroughLifePlanningComponentsCompartmentItemSemanticEditPolicy extends Scenario.diagram.edit.policies.ScenarioBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public ThroughLifePlanningThroughLifePlanningComponentsCompartmentItemSemanticEditPolicy() {
+				super(Scenario.diagram.providers.ScenarioElementTypes.ThroughLifePlanning_2009);
+	}
+
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest req) {
+		if (Scenario.diagram.providers.ScenarioElementTypes.ExistingComponent_3011 == req.getElementType()) {
+	return getGEFWrapper(new Scenario.diagram.edit.commands.ExistingComponent2CreateCommand(req));
+}
+		if (Scenario.diagram.providers.ScenarioElementTypes.AcquirableComponent_3012 == req.getElementType()) {
+	return getGEFWrapper(new Scenario.diagram.edit.commands.AcquirableComponent2CreateCommand(req));
+}
+		if (Scenario.diagram.providers.ScenarioElementTypes.ComponentU_3016 == req.getElementType()) {
+	return getGEFWrapper(new Scenario.diagram.edit.commands.ComponentU2CreateCommand(req));
+}
+		return super.getCreateCommand(req);
+	}
+	
+	}

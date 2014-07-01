@@ -1,0 +1,473 @@
+	/*
+ * 
+ */
+package capOverTime.diagram.navigator;
+
+/**
+ * @generated
+ */
+public class CapOverTimeNavigatorContentProvider implements org.eclipse.ui.navigator.ICommonContentProvider {
+
+		/**
+ * @generated
+ */
+private static final Object[] EMPTY_ARRAY = new Object[0];
+
+	/**
+ * @generated
+ */
+private org.eclipse.jface.viewers.Viewer myViewer;
+
+	/**
+ * @generated
+ */
+private org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain myEditingDomain;
+
+	/**
+ * @generated
+ */
+private org.eclipse.emf.workspace.util.WorkspaceSynchronizer myWorkspaceSynchronizer;
+
+	/**
+ * @generated
+ */
+private Runnable myViewerRefreshRunnable;
+	
+	/**
+ * @generated
+ */
+@SuppressWarnings({ "unchecked", "serial", "rawtypes" })
+public CapOverTimeNavigatorContentProvider() {
+	org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain = org.eclipse.gmf.runtime.emf.core.GMFEditingDomainFactory.INSTANCE.createEditingDomain();
+myEditingDomain = (org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain) editingDomain;
+myEditingDomain.setResourceToReadOnlyMap(new java.util.HashMap() {
+	public Object get(Object key) {
+		if (!containsKey(key)) {
+			put(key, Boolean.TRUE);
+		}
+		return super.get(key);
+	}
+});
+myViewerRefreshRunnable = new Runnable() {
+	public void run() {
+		if (myViewer != null) {
+			myViewer.refresh();
+		}
+	}
+};
+myWorkspaceSynchronizer = new org.eclipse.emf.workspace.util.WorkspaceSynchronizer(editingDomain, new org.eclipse.emf.workspace.util.WorkspaceSynchronizer.Delegate() {
+	public void dispose() {
+	}
+
+	public boolean handleResourceChanged(final org.eclipse.emf.ecore.resource.Resource resource) {
+		unloadAllResources();
+asyncRefresh();
+return true;
+	}
+	
+	public boolean handleResourceDeleted(org.eclipse.emf.ecore.resource.Resource resource) {
+		unloadAllResources();
+asyncRefresh();
+return true;
+	}
+	
+	public boolean handleResourceMoved(org.eclipse.emf.ecore.resource.Resource resource, final org.eclipse.emf.common.util.URI newURI) {
+		unloadAllResources();
+asyncRefresh();
+return true;
+	}
+});
+}
+
+		/**
+ * @generated
+ */
+public void dispose() {
+	myWorkspaceSynchronizer.dispose();
+	myWorkspaceSynchronizer = null;
+	myViewerRefreshRunnable = null;
+	myViewer = null;
+	unloadAllResources();
+	((org.eclipse.emf.transaction.TransactionalEditingDomain) myEditingDomain).dispose();
+	myEditingDomain = null;
+}
+	
+		/**
+ * @generated
+ */
+public void inputChanged(org.eclipse.jface.viewers.Viewer viewer, Object oldInput, Object newInput) {
+	myViewer = viewer;
+}
+	
+	
+	/**
+ * @generated
+ */
+	void unloadAllResources() {
+		for (org.eclipse.emf.ecore.resource.Resource nextResource : myEditingDomain.getResourceSet().getResources()) {
+			nextResource.unload();
+		}
+	}
+	
+	/**
+ * @generated
+ */
+	void asyncRefresh() {
+		if (myViewer != null && !myViewer.getControl().isDisposed()) {
+			myViewer.getControl().getDisplay().asyncExec(myViewerRefreshRunnable);
+		}
+	}
+	
+	/**
+ * @generated
+ */
+public Object[] getElements(Object inputElement) {
+	return getChildren(inputElement);
+}
+	
+	/**
+ * @generated
+ */
+public void restoreState(org.eclipse.ui.IMemento aMemento) {
+}
+
+/**
+ * @generated
+ */
+public void saveState(org.eclipse.ui.IMemento aMemento) {
+}
+    
+    /**
+ * @generated
+ */
+public void init(org.eclipse.ui.navigator.ICommonContentExtensionSite aConfig) {
+}
+    
+    	/**
+ * @generated
+ */
+public Object[] getChildren(Object parentElement) {
+	if (parentElement instanceof org.eclipse.core.resources.IFile) {
+		org.eclipse.core.resources.IFile file = (org.eclipse.core.resources.IFile) parentElement;
+org.eclipse.emf.common.util.URI fileURI = org.eclipse.emf.common.util.URI.createPlatformResourceURI(file.getFullPath().toString(), true);
+org.eclipse.emf.ecore.resource.Resource resource = myEditingDomain.getResourceSet().getResource(fileURI, true);
+	java.util.ArrayList<capOverTime.diagram.navigator.CapOverTimeNavigatorItem> result = new java.util.ArrayList<capOverTime.diagram.navigator.CapOverTimeNavigatorItem>();
+					java.util.ArrayList<org.eclipse.gmf.runtime.notation.View> topViews = new java.util.ArrayList<org.eclipse.gmf.runtime.notation.View>(resource.getContents().size());
+		for (org.eclipse.emf.ecore.EObject o : resource.getContents()) {
+			if (o instanceof org.eclipse.gmf.runtime.notation.View) {
+				topViews.add((org.eclipse.gmf.runtime.notation.View) o);
+			}
+		}
+						return result.toArray();
+   	} 
+    	
+   	if (parentElement instanceof capOverTime.diagram.navigator.CapOverTimeNavigatorGroup) {
+	capOverTime.diagram.navigator.CapOverTimeNavigatorGroup group = (capOverTime.diagram.navigator.CapOverTimeNavigatorGroup) parentElement;
+return group.getChildren();
+	} 
+		
+	if (parentElement instanceof capOverTime.diagram.navigator.CapOverTimeNavigatorItem) {
+	capOverTime.diagram.navigator.CapOverTimeNavigatorItem navigatorItem = (capOverTime.diagram.navigator.CapOverTimeNavigatorItem) parentElement;
+if (navigatorItem.isLeaf() || !isOwnView(navigatorItem.getView())) {
+	return EMPTY_ARRAY;
+}
+return getViewChildren(navigatorItem.getView(), parentElement);
+	}
+		
+			/*
+ * Due to plugin.xml restrictions this code will be called only for views representing
+ * shortcuts to this diagram elements created on other diagrams. 
+*/ 
+if (parentElement instanceof org.eclipse.core.runtime.IAdaptable) {
+	org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) ((org.eclipse.core.runtime.IAdaptable) parentElement).getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+	if (view != null) {
+		return getViewChildren(view, parentElement);
+	}
+}
+
+		return EMPTY_ARRAY;
+}
+    
+	/**
+ * @generated
+ */
+private Object[] getViewChildren(org.eclipse.gmf.runtime.notation.View view, Object parentElement) {
+   	switch (capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getVisualID(view)) {
+	
+case capOverTime.diagram.edit.parts.CapabilityOverTimeEditPart.VISUAL_ID: {
+	java.util.LinkedList<capOverTime.diagram.navigator.CapOverTimeAbstractNavigatorItem> result = new java.util.LinkedList<capOverTime.diagram.navigator.CapOverTimeAbstractNavigatorItem>();
+	result.addAll(getForeignShortcuts((org.eclipse.gmf.runtime.notation.Diagram) view, parentElement));
+	org.eclipse.gmf.runtime.notation.Diagram sv = (org.eclipse.gmf.runtime.notation.Diagram) view;
+				capOverTime.diagram.navigator.CapOverTimeNavigatorGroup links = new capOverTime.diagram.navigator.CapOverTimeNavigatorGroup(
+	capOverTime.diagram.part.Messages.NavigatorGroupName_CapabilityOverTime_1000_links,
+	"icons/linksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.TimePeriodEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getDiagramLinksByType						(java.util.Collections.singleton(sv)					, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID));
+								links.addChildren(createNavigatorItems(connectedViews, links, false));
+																	connectedViews = 						getDiagramLinksByType						(java.util.Collections.singleton(sv)					, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID));
+								links.addChildren(createNavigatorItems(connectedViews, links, false));
+																	connectedViews = 						getDiagramLinksByType						(java.util.Collections.singleton(sv)					, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID));
+								links.addChildren(createNavigatorItems(connectedViews, links, false));
+															if (!links.isEmpty()) {		result.add(links);
+					}			return result.toArray();
+}
+
+case capOverTime.diagram.edit.parts.TimePeriodEditPart.VISUAL_ID: {
+	java.util.LinkedList<capOverTime.diagram.navigator.CapOverTimeAbstractNavigatorItem> result = new java.util.LinkedList<capOverTime.diagram.navigator.CapOverTimeAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+							java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.TimePeriodTimePeriodOurObjectsCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.CapabilityEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+											return result.toArray();
+}
+
+case capOverTime.diagram.edit.parts.CapabilityEditPart.VISUAL_ID: {
+	java.util.LinkedList<capOverTime.diagram.navigator.CapOverTimeAbstractNavigatorItem> result = new java.util.LinkedList<capOverTime.diagram.navigator.CapOverTimeAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				capOverTime.diagram.navigator.CapOverTimeNavigatorGroup outgoinglinks = new capOverTime.diagram.navigator.CapOverTimeNavigatorGroup(
+	capOverTime.diagram.part.Messages.NavigatorGroupName_Capability_3001_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	capOverTime.diagram.navigator.CapOverTimeNavigatorGroup incominglinks = new capOverTime.diagram.navigator.CapOverTimeNavigatorGroup(
+	capOverTime.diagram.part.Messages.NavigatorGroupName_Capability_3001_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.CapabilityCapabilityMeasurementsCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.MeasurementEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+																	connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+																	connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}							if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}			return result.toArray();
+}
+
+case capOverTime.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID: {
+	java.util.LinkedList<capOverTime.diagram.navigator.CapOverTimeAbstractNavigatorItem> result = new java.util.LinkedList<capOverTime.diagram.navigator.CapOverTimeAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Edge sv = (org.eclipse.gmf.runtime.notation.Edge) view;
+				capOverTime.diagram.navigator.CapOverTimeNavigatorGroup target = new capOverTime.diagram.navigator.CapOverTimeNavigatorGroup(
+	capOverTime.diagram.part.Messages.NavigatorGroupName_CapabilityDecomposes_4002_target,
+	"icons/linkTargetNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	capOverTime.diagram.navigator.CapOverTimeNavigatorGroup source = new capOverTime.diagram.navigator.CapOverTimeNavigatorGroup(
+	capOverTime.diagram.part.Messages.NavigatorGroupName_CapabilityDecomposes_4002_source,
+	"icons/linkSourceNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.CapabilityEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.CapabilityEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+															if (!target.isEmpty()) {		result.add(target);
+					}							if (!source.isEmpty()) {		result.add(source);
+					}			return result.toArray();
+}
+
+case capOverTime.diagram.edit.parts.MeasurementEditPart.VISUAL_ID: {
+	java.util.LinkedList<capOverTime.diagram.navigator.CapOverTimeAbstractNavigatorItem> result = new java.util.LinkedList<capOverTime.diagram.navigator.CapOverTimeAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				capOverTime.diagram.navigator.CapOverTimeNavigatorGroup incominglinks = new capOverTime.diagram.navigator.CapOverTimeNavigatorGroup(
+	capOverTime.diagram.part.Messages.NavigatorGroupName_Measurement_3002_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.MeasurementMeasurementCriticalValuesCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.QualitativeValueEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.MeasurementMeasurementBenchmarkValuesCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.QualitativeValue2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.MeasurementMeasurementProvidedValuesCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.QualitativeValue3EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}			return result.toArray();
+}
+
+case capOverTime.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID: {
+	java.util.LinkedList<capOverTime.diagram.navigator.CapOverTimeAbstractNavigatorItem> result = new java.util.LinkedList<capOverTime.diagram.navigator.CapOverTimeAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Edge sv = (org.eclipse.gmf.runtime.notation.Edge) view;
+				capOverTime.diagram.navigator.CapOverTimeNavigatorGroup target = new capOverTime.diagram.navigator.CapOverTimeNavigatorGroup(
+	capOverTime.diagram.part.Messages.NavigatorGroupName_CapabilitySatisfies_4003_target,
+	"icons/linkTargetNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	capOverTime.diagram.navigator.CapOverTimeNavigatorGroup source = new capOverTime.diagram.navigator.CapOverTimeNavigatorGroup(
+	capOverTime.diagram.part.Messages.NavigatorGroupName_CapabilitySatisfies_4003_source,
+	"icons/linkSourceNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.CapabilityEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.CapabilityEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+															if (!target.isEmpty()) {		result.add(target);
+					}							if (!source.isEmpty()) {		result.add(source);
+					}			return result.toArray();
+}
+
+case capOverTime.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID: {
+	java.util.LinkedList<capOverTime.diagram.navigator.CapOverTimeAbstractNavigatorItem> result = new java.util.LinkedList<capOverTime.diagram.navigator.CapOverTimeAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Edge sv = (org.eclipse.gmf.runtime.notation.Edge) view;
+				capOverTime.diagram.navigator.CapOverTimeNavigatorGroup target = new capOverTime.diagram.navigator.CapOverTimeNavigatorGroup(
+	capOverTime.diagram.part.Messages.NavigatorGroupName_CapabilityAccumulation_4001_target,
+	"icons/linkTargetNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	capOverTime.diagram.navigator.CapOverTimeNavigatorGroup source = new capOverTime.diagram.navigator.CapOverTimeNavigatorGroup(
+	capOverTime.diagram.part.Messages.NavigatorGroupName_CapabilityAccumulation_4001_source,
+	"icons/linkSourceNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.MeasurementEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.CapabilityEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+															if (!target.isEmpty()) {		result.add(target);
+					}							if (!source.isEmpty()) {		result.add(source);
+					}			return result.toArray();
+}
+	}
+	return EMPTY_ARRAY;
+}
+    
+    /**
+ * @generated
+ */
+private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getLinksSourceByType(java.util.Collection<org.eclipse.gmf.runtime.notation.Edge> edges, String type) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+ 	for (org.eclipse.gmf.runtime.notation.Edge nextEdge : edges) {
+ 		org.eclipse.gmf.runtime.notation.View nextEdgeSource = nextEdge.getSource();
+ 		if (type.equals(nextEdgeSource.getType()) && isOwnView(nextEdgeSource)) {
+ 			result.add(nextEdgeSource);
+ 		}
+ 	}
+ 	return result;
+}
+	
+/**
+ * @generated
+ */
+ private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getLinksTargetByType(java.util.Collection<org.eclipse.gmf.runtime.notation.Edge> edges, String type) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+ 	for (org.eclipse.gmf.runtime.notation.Edge nextEdge : edges) {
+ 		org.eclipse.gmf.runtime.notation.View nextEdgeTarget = nextEdge.getTarget();
+ 		if (type.equals(nextEdgeTarget.getType()) && isOwnView(nextEdgeTarget)) {
+ 			result.add(nextEdgeTarget);
+ 		}
+ 	}
+ 	return result;
+}
+
+/**
+ * @generated
+ */
+ private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getOutgoingLinksByType(java.util.Collection<? extends org.eclipse.gmf.runtime.notation.View> nodes, String type) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+ 	for (org.eclipse.gmf.runtime.notation.View nextNode : nodes) {
+		result.addAll(selectViewsByType(nextNode.getSourceEdges(), type));
+ 	}
+ 	return result;
+}
+	
+/**
+ * @generated
+ */
+private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getIncomingLinksByType(java.util.Collection<? extends org.eclipse.gmf.runtime.notation.View> nodes, String type) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+ 	for (org.eclipse.gmf.runtime.notation.View nextNode : nodes) {
+		result.addAll(selectViewsByType(nextNode.getTargetEdges(), type));
+ 	}
+ 	return result;
+}
+	
+/**
+ * @generated
+ */
+private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getChildrenByType(java.util.Collection<? extends org.eclipse.gmf.runtime.notation.View> nodes, String type) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+	for (org.eclipse.gmf.runtime.notation.View nextNode : nodes) {
+		result.addAll(selectViewsByType(nextNode.getChildren(), type));
+	}
+	return result;
+}
+	
+/**
+ * @generated
+ */
+private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getDiagramLinksByType(java.util.Collection<org.eclipse.gmf.runtime.notation.Diagram> diagrams, String type) {
+	java.util.ArrayList<org.eclipse.gmf.runtime.notation.View> result = new java.util.ArrayList<org.eclipse.gmf.runtime.notation.View>();
+	for (org.eclipse.gmf.runtime.notation.Diagram nextDiagram : diagrams) {
+		result.addAll(selectViewsByType(nextDiagram.getEdges(), type));
+	}
+	return result;
+}
+
+// TODO refactor as static method
+/**
+ * @generated
+ */
+private java.util.Collection<org.eclipse.gmf.runtime.notation.View> selectViewsByType(java.util.Collection<org.eclipse.gmf.runtime.notation.View> views, String type) {
+	java.util.ArrayList<org.eclipse.gmf.runtime.notation.View> result = new java.util.ArrayList<org.eclipse.gmf.runtime.notation.View>();
+	for (org.eclipse.gmf.runtime.notation.View nextView : views) {
+		if (type.equals(nextView.getType()) && isOwnView(nextView)) {
+			result.add(nextView);
+		}
+	}
+	return result;
+}
+	
+/**
+ * @generated
+ */
+private boolean isOwnView(org.eclipse.gmf.runtime.notation.View view) {
+	return capOverTime.diagram.edit.parts.CapabilityOverTimeEditPart.MODEL_ID.equals(capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getModelID(view));
+}
+	
+/**
+ * @generated
+ */
+private java.util.Collection<capOverTime.diagram.navigator.CapOverTimeNavigatorItem> createNavigatorItems(java.util.Collection<org.eclipse.gmf.runtime.notation.View> views, Object parent, boolean isLeafs) {
+	java.util.ArrayList<capOverTime.diagram.navigator.CapOverTimeNavigatorItem> result = new java.util.ArrayList<capOverTime.diagram.navigator.CapOverTimeNavigatorItem>(views.size());
+	for (org.eclipse.gmf.runtime.notation.View nextView : views) {
+		result.add(new capOverTime.diagram.navigator.CapOverTimeNavigatorItem(nextView, parent, isLeafs));
+	}
+	return result;
+}
+		
+/**
+ * @generated
+ */
+private java.util.Collection<capOverTime.diagram.navigator.CapOverTimeNavigatorItem> getForeignShortcuts(org.eclipse.gmf.runtime.notation.Diagram diagram, Object parent) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+	for (java.util.Iterator<org.eclipse.gmf.runtime.notation.View> it = diagram.getChildren().iterator(); it.hasNext();) {
+	org.eclipse.gmf.runtime.notation.View nextView = it.next();
+		if (!isOwnView(nextView) && nextView.getEAnnotation("Shortcut") != null) { //$NON-NLS-1$
+			result.add(nextView);
+		}
+	}
+	return createNavigatorItems(result, parent, false);
+}
+		
+	/**
+ * @generated
+ */
+public Object getParent(Object element) {
+	if (element instanceof capOverTime.diagram.navigator.CapOverTimeAbstractNavigatorItem) {
+    	capOverTime.diagram.navigator.CapOverTimeAbstractNavigatorItem abstractNavigatorItem = (capOverTime.diagram.navigator.CapOverTimeAbstractNavigatorItem) element;
+		return abstractNavigatorItem.getParent();
+	}
+	return null;
+}
+	
+	/**
+ * @generated
+ */
+public boolean hasChildren(Object element) {
+	return element instanceof org.eclipse.core.resources.IFile || getChildren(element).length > 0;
+}
+    
+    }

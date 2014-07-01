@@ -1,0 +1,7 @@
+# Tracing options for the ScenarioModel.diagram plug-in
+
+# Common issues
+ScenarioModel.diagram/debug=false
+
+# Visual IDs
+ScenarioModel.diagram/debug/visualID=false

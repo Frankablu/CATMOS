@@ -1,0 +1,291 @@
+
+//Military Scenario
+ThroughLifePlanning UAVBaseline { popSize 200 genCount 200
+	startDate "01/01/2014" endDate "31/12/2016"
+	
+	ExistingComponent "Mastiff Fleet" 3 startDate "01/01/2014" endDate "31/12/2016"
+	ExistingComponent "Vector Fleet" 2 startDate "01/01/2014" endDate "31/12/2016"
+	
+	ExistingComponent "Troop Regiment" 5 startDate "01/01/2014" endDate "31/12/2016"
+	
+	ExistingComponent "L118 Light Gun Fleet" 5 startDate "01/01/2014" endDate "31/12/2016"
+	ExistingComponent "Mobile Artillery Battlefield Radar" 5 startDate "01/01/2014" endDate "01/08/2014"
+	ExistingComponent "Land Rover 101 FC Fleet" 5 startDate "01/01/2014" endDate "31/12/2016"
+	
+	ExistingComponent "Buffalo Fleet" 1 startDate "01/01/2014" endDate "31/12/2016"
+	
+	ExistingComponent "Engineering Team with Equipment" 1 startDate "01/01/2014" endDate "31/12/2016"
+	
+	ExistingComponent "Oshkosh Wheeled Tanker Fuel Fleet" 2 startDate "01/01/2014" endDate "31/12/2016"
+	ExistingComponent "Oshkosh Wheeled Tanker Water Fleet" 3 startDate "01/01/2014" endDate "31/12/2016"
+	ExistingComponent "Leyland DROPS Fleet" 4 startDate "01/01/2014" endDate "31/12/2016"
+	
+	ExistingComponent "Global Hawk" 1 startDate "01/01/2014" endDate "31/12/2016"
+	
+	ExistingComponent "Reacher Fleet" 1 startDate "01/01/2014" endDate "31/12/2016"
+	ExistingComponent "Mowag Duro III Fleet" 1 startDate "01/01/2014" endDate "31/12/2016"
+	
+	ExistingComponent "Bowman" 1 startDate "01/01/2014" endDate "31/12/2016"
+	
+	ExistingComponent "L118 Existing Service Contract" 1 startDate "01/01/2014" endDate "01/01/2015"
+}
+
+//searchObjective
+Capability "Overall Score"
+{
+	startDate "01/01/2014" endDate "31/12/2016"
+	Measurement "Overall Score" { criticalValue 0.0 benchmarkValue 1.0 script 'output = OverallScore()' } 
+		decomposes ("Route Clearance","Hold Forward Base", "Prevent Enemy Crossings")
+}
+
+searchObjective
+Capability "Route Clearance"
+{
+	startDate "01/01/2014" endDate "31/12/2016"
+	Measurement "Route Clearance" 
+	{ criticalValue 0.0 benchmarkValue 1.0 script "output = RouteClearance()" }
+	decomposes ("Ground Fire Power", "Hard Target Removal", "Mine Clearance Solution", "Command and Control")
+}
+
+Capability "Ground Fire Power"
+{
+	accumulation "Ground Fire Power"
+	startDate "01/01/2014" endDate "31/12/2016"
+	Measurement "Ground Fire Power" { criticalValue 0.0 benchmarkValue 7000.0 }
+}
+
+Capability "Hard Target Removal"
+{
+	accumulation "Hard Target Removal"
+	startDate "01/01/2014" endDate "31/12/2016"
+	Measurement "Hard Target Removal" { criticalValue 0.0 benchmarkValue 100.0 }
+}
+
+Capability "Mine Clearance Solution"
+{
+		startDate "01/01/2014" endDate "31/12/2016"
+		Measurement "Chance of Death" { criticalValue 10.0 benchmarkValue 0.0 }
+		Measurement "Mine Clearance Per Day" { criticalValue 10.0 benchmarkValue 40.0 }
+}
+
+searchObjective
+Capability "Hold Forward Base"
+{
+	startDate "01/01/2014" endDate "31/12/2016"
+	Measurement "Hold Forward Base" 
+	{ criticalValue 0.0 benchmarkValue 1.0 script "output = HoldForwardBase()" }
+	decomposes ("Establish Forward Base", "Supply Forward Base")
+}
+
+Capability "Establish Forward Base"
+{
+	startDate "01/01/2014" endDate "31/12/2016"
+}
+
+Capability "Supply Forward Base"
+{
+	startDate "01/01/2014" endDate "31/12/2016"
+	Measurement "Supply Forward Base" 
+	{ criticalValue 0.0 benchmarkValue 1.0 script "output = SupplyForwardBase()" }
+	decomposes ("Supply Water", "Supply Fuel", "Supply Goods")
+}
+
+Capability "Supply Water"
+{
+	accumulation "Water Liters"
+	startDate "01/01/2014" endDate "31/12/2016"
+	Measurement "Water Liters" { criticalValue 0.0 benchmarkValue 50000.0 }
+}
+
+Capability "Supply Fuel"
+{
+	accumulation "Fuel Liters"
+	startDate "01/01/2014" endDate "31/12/2016"
+	Measurement "Fuel Liters" { criticalValue 0.0 benchmarkValue 70000.0 }
+}
+
+Capability "Supply Goods" //Includes Ammo
+{
+	accumulation "Goods Kilograms"
+	startDate "01/01/2014" endDate "31/12/2016"
+	Measurement "Goods Kilograms" {  criticalValue 0.0 benchmarkValue 75000.0 }
+}
+
+searchObjective
+Capability "Prevent Enemy Crossings"
+{
+	startDate "01/01/2014" endDate "31/12/2016"
+	Measurement "Prevent Enemy Crossings" 
+	{ criticalValue 0.75 benchmarkValue 1.0 script "output = PreventEnemyCrossings()" }
+	decomposes ("Detect Enemy Crossings", "Stopping Enemy Crossings")
+}
+
+standAlone
+Capability "Detect Enemy Crossings"
+{
+	startDate "01/01/2014" endDate "31/12/2016"
+	Measurement "Detect Enemy Crossings" { criticalValue 0.0 benchmarkValue 1.0 
+		script 'output = DetectEnemyCrossings()'
+	}
+}
+
+Capability "Stopping Enemy Crossings"
+{
+	startDate "01/01/2014" endDate "31/12/2016"
+	Measurement "Enemy Crossings Stopped Percentage" { criticalValue 0.75 benchmarkValue 1.0 
+		script 'output = StopEnemyCrossings()'
+	}
+	decomposes ("Ground Fire Power", "Command and Control", "Surveillance Moving Targets")
+}
+
+Capability "Command and Control"
+{
+	accumulation "Command and Control Infrastructure"
+	startDate "01/01/2014" endDate "31/12/2016"
+	Measurement "Command and Control Infrastructure" { criticalValue 0.0 benchmarkValue 100.0 }
+}
+
+Capability "Surveillance"
+{
+	startDate "01/01/2014" endDate "31/12/2016"
+	Measurement "Surveillance" 
+	{ criticalValue 0.0 benchmarkValue 1.0 script "output = Surveillance()" }
+	decomposes ("Surveillance Static Targets", "Surveillance Moving Targets")
+}
+
+Capability "Surveillance Static Targets"
+{
+	accumulation "Surveillance Static Targets"
+	startDate "01/01/2014" endDate "31/12/2016"
+	Measurement "Surveillance Static Targets" { criticalValue 0.0 benchmarkValue 100.0 }
+}
+
+Capability "Surveillance Moving Targets"
+{
+	accumulation "Surveillance Moving Targets"
+	startDate "01/01/2014" endDate "31/12/2016"
+	Measurement "Surveillance Moving Targets" { criticalValue 0.0 benchmarkValue 100.0 }
+}
+
+//Existing System
+Component "Mastiff Fleet" //100 Mastiff's
+{
+	//12mm Heavy Machine Gun
+	CapabilityProvision "Ground Fire Power" { reuse 1 Measurement "Ground Fire Power" { providedValue 100.0 } }
+	
+	//Carries
+	CapabilityProvision "Troop Transport" { reuse 3 }
+	
+	Cost Money 25.0 //£250,000 each
+}
+
+Component "Vector Fleet" //100 Vectors
+{
+	//2 Small Machine Guns
+	CapabilityProvision "Ground Fire Power" { reuse 1 Measurement "Ground Fire Power" { providedValue 60.0 } }
+	
+	//Carries
+	CapabilityProvision "Troop Transport" { reuse 1 }
+	
+	Cost Money 15.0 //£150,000 each
+}
+
+Component "Troop Regiment"
+{
+	CapabilityProvision "Ground Fire Power" { reuse 1 Measurement "Ground Fire Power" { providedValue 1000.0 } }
+	CapabilityProvision "Surveillance Static Targets" { reuse 1 Measurement "Surveillance Static Targets" { providedValue 3.0 }}
+	CapabilityProvision "Surveillance Moving Targets" { reuse 1 Measurement "Surveillance Moving Targets" { providedValue 3.0 }}
+	Capability "Troop Transport" {}
+}
+
+//Hard Target Removal - Existing
+Component "L118 Light Gun Fleet" //10 Artillery Pieces
+{
+	CapabilityProvision "Hard Target Removal" { reuse 1 Measurement "Hard Target Removal" { script "output = LightGun()" } }
+	Capability "Light Gun Tow" {} Capability "L118 Service Contract" {}
+	Cost Money 5.0 //£500,000 each
+}
+
+Component "L118 Existing Service Contract"
+{
+	CapabilityProvision "L118 Service Contract" {}
+}
+
+Component "Mobile Artillery Battlefield Radar"
+{
+	CapabilityProvision "Surveillance Moving Targets" { reuse 1 Measurement "Surveillance Moving Targets" { providedValue 5.0 }}
+	Capability "Radar Mount" {}
+}
+
+Component "Land Rover 101 FC Fleet" //Tows The Artillery Piece Into Position
+{
+	CapabilityProvision "Light Gun Tow" { reuse 1 }
+	CapabilityProvision "Radar Mount" {}
+	Cost Money 12.0 //£120,000 each
+}
+
+//Mine Clearance
+Component "Buffalo Fleet"
+{
+	CapabilityProvision "Mine Clearance Solution" {
+		Measurement "Chance of Death" { providedValue 5.0 }
+		Measurement "Mine Clearance Per Day" { providedValue 50.0 } }
+}
+
+//Establish Forward Base
+Component "Engineering Team with Equipment"
+{
+	CapabilityProvision "Establish Forward Base" { 
+		Measurement "Base Quality" { providedValue 0.0 script "output = BaseQuality()"}
+	}
+	CapabilityProvision "Command and Control" { reuse 1 
+		Measurement "Command and Control Infrastructure" { providedValue 40.0 } }
+		
+	Cost Money 5.0
+}
+
+//Supply Forward Base
+Component "Oshkosh Wheeled Tanker Fuel Fleet" //10
+{
+	CapabilityProvision "Supply Fuel" { reuse 1 Measurement "Fuel Liters" { providedValue 20000.0 } }
+	Cost Money 3.0
+}
+
+Component "Oshkosh Wheeled Tanker Water Fleet" //10
+{
+	CapabilityProvision "Supply Water" { reuse 1 Measurement "Water Liters" { providedValue 18000.0 } }
+	Cost Money 3.0
+}
+
+Component "Leyland DROPS Fleet" //10
+{
+	CapabilityProvision "Supply Goods" { reuse 1 Measurement "Goods Kilograms" { providedValue 15000.0 } }
+	Cost Money 3.0
+}
+
+Component "Global Hawk"
+{
+	CapabilityProvision "Surveillance Static Targets" { reuse 1 Measurement "Surveillance Static Targets" { providedValue 45.0 }}
+	CapabilityProvision "Surveillance Moving Targets" { reuse 1 Measurement "Surveillance Moving Targets" { providedValue 25.0 }}
+	Cost Money 125.0 //£125 million
+}
+
+Component "Reacher Fleet"
+{
+	CapabilityProvision "Command and Control" { reuse 1 
+		Measurement "Command and Control Infrastructure" { providedValue 20.0 } }
+}
+
+Component "Mowag Duro III Fleet"
+{
+	CapabilityProvision ReacherMount { reuse 1 }
+}
+
+Component "Bowman"
+{
+	CapabilityProvision "Command and Control" { reuse 1 
+		Measurement "Command and Control Infrastructure" { providedValue 40.0 } }
+}
+
+
+

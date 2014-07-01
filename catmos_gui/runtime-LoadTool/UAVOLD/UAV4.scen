@@ -1,0 +1,1027 @@
+FindTradeOffs UAV { popSize 20 genCount 20
+	//Existing Systems
+	ExistingComponent "CORMORANT Programme" 1
+	ExistingComponent "Boeing Chinook Programme" 1
+	ExistingComponent "Bowman Radio System Programme" 1
+	ExistingComponent "Global Hawk UK Adaptations" 1
+	ExistingComponent "FV513 Warrior Programme" 1
+	ExistingComponent "Leyland DROPS Programme" 1
+	
+	//CORMORANT System
+	ExistingComponent "Reacher" 5
+	ExistingComponent "Mowag Duro III" 5
+	
+	//Vehicles
+	ExistingComponent "Buffalo" 10
+	ExistingComponent "Mastiff" 10
+	ExistingComponent "Plan - Patrol with Mastiff" 10
+	ExistingComponent "Vector Medical" 10
+	ExistingComponent "Vector Patrol" 10
+	ExistingComponent "Plan - Patrol with Vector" 7
+	
+	//Forward Base
+	ExistingComponent "Base Medical Support" 1
+	ExistingComponent "Medical Goods At Base" 1
+	ExistingComponent "Base" 1
+	
+	//Artillery
+	ExistingComponent "L118 Light Gun" 10
+	ExistingComponent "Mobile Artillery Battlefield Radar" 10
+	ExistingComponent "Land Rover 101 FC" 10
+	ExistingComponent "L118 Light Gun Artillery Round" 50
+	
+	//Bridging
+	ExistingComponent "Alvis Unipower" 1
+	ExistingComponent "BR90 Bridging" 1
+	
+	//Teams
+	ExistingComponent "Blue Engineering Team" 1
+	ExistingComponent "Medical Team" 10
+	
+	//Transport
+	ExistingComponent "Oshkosh Wheeled Tanker Fuel" 10
+	ExistingComponent "Oshkosh Wheeled Tanker Water" 10
+	ExistingComponent "FV513 Warrior" 10
+	ExistingComponent "Leyland DROPS" 10
+	ExistingComponent "Husky" 10
+	
+	//Acquirable Systems
+	
+	//RADWIN - Point To Point System
+	AcquirableComponent "Radwin Programme" 1
+	AcquirableComponent "Radwin" 10
+	
+	//UAV
+	ExistingComponent "Blue Team UAV Control" 1
+	
+	//UAV - M9 Reaper
+	AcquirableComponent "MQ-9 Reaper Bombing Strike" 20
+	AcquirableComponent "MQ-9 Reaper" 10
+	AcquirableComponent "AGM-114 Hellfire Missile" 20
+	AcquirableComponent "GBU-38 Joint Direct Attack Munition Guidance System" 20
+	
+	//UAV - Global Hawk
+	AcquirableComponent "Global Hawk" 5
+	
+	//Transport - Helicopter
+	AcquirableComponent "Boeing Chinook Mk 3" 0
+	
+	DesireLow Money
+	
+	//So what do we need to do here?
+	//State what the current state of the art is!
+	//State what can be acquired
+	//That is the initial work
+	
+	//Add an Through Life Element to it
+}
+
+//Mission Performance Is The Minimal Of the Important Needed Capabilities By The Mission Commander
+searchObjective
+Capability "Blue Team Performance"
+{
+	Measurement "Blue Team Capability Score"
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		script "output = math.min( getCapability(\"Medical Support\") , getCapability(\"1. Route Clearance\") , getCapability(\"2. Establish Patrol Base\") , getCapability(\"3. Protect Patrol Base\") , getCapability(\"4. Supply Patrol Base\") , getCapability(\"5. Prevent Enemy Crossings\") )"
+	}
+	decomposes ("Command and Control", "Wide-area Surveillance", "Medical Support", "1. Route Clearance", "2. Establish Patrol Base", "3. Protect Patrol Base", "4. Supply Patrol Base", "5. Prevent Enemy Crossings")
+}
+
+//Command and Control
+//Being able to relay information between forces
+Capability "Command and Control"
+{
+	Measurement "CC Capability Score"
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		script "output = 0.5 * getCapability(\"Internet Access\") + 0.5 * getCapability(\"Radio Communications\")"
+	}
+	decomposes ("Internet Access", "Radio Communications")
+}
+
+Capability "Internet Access"
+{
+	Measurement "Internet Access MoE"
+	{
+		criticalValue 0.2
+		benchmarkValue 1.0
+		script "output = getCapability(\"Internet Access Bandwidth\") * getCapability(\"Internet Access Range\")"
+	}
+	decomposes ("Internet Access Bandwidth", "Internet Access Range")
+}
+
+Capability "Internet Access Bandwidth" //Internet System
+{
+	accumulation Bandwidth
+	Measurement Bandwidth
+	{
+		criticalValue 10.0 //MBps
+		benchmarkValue 20.0 //MBps
+	}
+}
+
+Capability "Internet Access Range" //Internet System
+{
+	accumulation Range
+	Measurement Range
+	{
+		criticalValue 20.0 //Miles^2
+		benchmarkValue 50.0 //Miles^2
+	}
+}
+
+//Radwin - Point to Point Internet
+Component "Radwin"
+{
+	CapabilityProvision "Internet Access Bandwidth"
+	{
+		reuse 1
+		Measurement Bandwidth
+		{
+			providedValue 8.0
+		}
+	}
+	CapabilityProvision "Internet Access Range"
+	{
+		reuse 1
+		Measurement Range
+		{
+			providedValue 5.0 //Miles ^ 2
+		}
+	}
+	Capability "Reacher Transport" {}
+	Cost Money 0.0
+}
+
+Component "Radwin Programme"
+{
+	Cost Money 0.3
+}
+
+//CORMORANT
+Component "Reacher" //Satellite Internet - Receiver and Transmitter
+{
+	CapabilityProvision "Internet Access Bandwidth"
+	{
+		reuse 1
+		Measurement Bandwidth
+		{
+			providedValue 2.0
+		}
+	}
+	CapabilityProvision "Internet Access Range"
+	{
+		reuse 1
+		Measurement Range
+		{
+			providedValue 10.0
+		}
+	}
+	Capability "Reacher Transport" {}
+	Capability "CORMORANT Programme" {}
+	Cost Money 0.05 //Guess
+}
+
+Component "Mowag Duro III" //Vehicle - Mounts The Reacher
+{
+	CapabilityProvision "Reacher Transport" {}
+	Cost Money 0.14 //x4 Used Value
+}
+
+Component "CORMORANT Programme"
+{
+	CapabilityProvision "CORMORANT Programme" {}
+	Cost Money 100.0
+}
+
+//New Addition - Helicopter
+Component "Boeing Chinook Programme"
+{
+	CapabilityProvision "Boeing Chinook Programme" {}
+}
+
+Component "Boeing Chinook Mk 3"
+{
+	CapabilityProvision "Reacher Transport" {}
+	CapabilityProvision "Transport People"
+	{
+		reuse 1
+		Measurement "People per day"
+		{
+			providedValue 10.0
+		}
+	}
+	CapabilityProvision "Transport Goods"
+	{
+		reuse 1
+		Measurement "Volume per day"
+		{
+			providedValue 20.0
+		}
+	}
+	Capability "Boeing Chinook Programme" {}
+}
+
+Capability "Radio Communications"
+{
+	Measurement "Jamming Resistance"
+	{
+		criticalValue 1.0
+		benchmarkValue 5.0
+	}
+}
+
+Component "Bowman Radio System Programme"
+{
+	CapabilityProvision "Radio Communications"
+	{
+		Measurement "Jamming Resistance"
+		{
+			providedValue 5.0
+		}
+	}
+	Cost Money 24000.0 //Cost 2.4 Billion
+}
+
+Capability "Wide-area Surveillance"
+{
+	//Minimal of all including Command and Control
+	Measurement "WA Capability Score"
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		script "output = math.min( getCapability(\"Vision Coverage\") , getCapability(\"Night Vision Coverage\") , getCapability(\"Radar Coverage\") , getCapability(\"Signal Intelligence Coverage\") , getCapability(\"Command and Control\") )"
+	}
+	decomposes ("Vision Coverage", "Night Vision Coverage", "Radar Coverage", "Signal Intelligence Coverage")
+}
+
+Capability "Vision Coverage"
+{
+	accumulation "Vision Area Coverage"
+	Measurement "Vision Area Coverage"
+	{
+		criticalValue 75.0
+		benchmarkValue 150.0
+	}
+}
+
+Capability "Night Vision Coverage"
+{
+	accumulation "Night Vision Area Coverage"
+	Measurement "Night Vision Area Coverage"
+	{
+		criticalValue 75.0
+		benchmarkValue 150.0
+	}
+}
+
+Capability "Radar Coverage"
+{
+	accumulation "Radar Area Coverage"
+	Measurement "Radar Area Coverage"
+	{
+		criticalValue 75.0
+		benchmarkValue 150.0
+	}
+}
+
+Capability "Signal Intelligence Coverage"
+{
+	accumulation "Signal Intelligence Area Coverage"
+	Measurement "Signal Intelligence Area Coverage"
+	{
+		criticalValue 75.0
+		benchmarkValue 150.0
+	}
+}
+
+Capability "Medical Support"
+{
+	Measurement "MS Capability Score"
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		script "output = math.min(getCapability(\"First Aid\"), getCapability(\"Serious Injury\"), getCapability(\"Convey Medical Support\"))"
+	}
+	decomposes ("First Aid", "Serious Injury", "Convey Medical Support")
+}
+
+Capability "First Aid"
+{
+	accumulation "FA Injuries Treatable Per Day"
+	Measurement "FA Injuries Treatable Per Day"
+	{
+		criticalValue 15.0
+		benchmarkValue 35.0
+	}
+}
+
+Capability "Serious Injury"
+{
+	accumulation "SI Injuries Treatable Per Day"
+	Measurement "SI Injuries Treatable Per Day"
+	{
+		criticalValue 5.0
+		benchmarkValue 15.0
+	}
+}
+
+Capability "Convey Medical Support"
+{
+	accumulation "CM Injuries Treatable Per Day"
+	Measurement "CM Injuries Treatable Per Day"
+	{
+		criticalValue 3.0
+		benchmarkValue 8.0
+	}
+}
+
+Component "Medical Team"
+{
+	CapabilityProvision "First Aid"
+	{
+		reuse 1
+		Measurement "FA Injuries Treatable Per Day"
+		{
+			providedValue 5.0
+		}
+	}
+	
+	CapabilityProvision "Serious Injury"
+	{
+		reuse 1
+		Measurement "SI Injuries Treatable Per Day"
+		{
+			providedValue 1.0
+		}
+	}
+	Cost Money 0.8 //19000 Training Cost For A Average Soldier - Lets say a Medical Team is 0.8 Million
+}
+
+Component "Vector Medical"
+{
+	CapabilityProvision "First Aid"
+	{
+		reuse 1
+		Measurement "FA Injuries Treatable Per Day"
+		{
+			providedValue 15.0
+		}
+	}
+	
+	CapabilityProvision "Serious Injury"
+	{
+		reuse 1
+		Measurement "SI Injuries Treatable Per Day"
+		{
+			providedValue 5.0
+		}
+	}
+	
+	CapabilityProvision "Convey Medical Support"
+	{
+		reuse 1
+		Measurement "CM Injuries Treatable Per Day"
+		{
+			providedValue 3.0
+		}
+	}
+	Cost Money 1.0 //1 Million - Correct Price
+}
+
+Component "Base Medical Support"
+{
+	CapabilityProvision "First Aid"
+	{
+		reuse 1
+		Measurement "FA Injuries Treatable Per Day"
+		{
+			providedValue 35.0
+		}
+	}
+	
+	CapabilityProvision "Serious Injury"
+	{
+		reuse 1
+		Measurement "SI Injuries Treatable Per Day"
+		{
+			providedValue 15.0
+		}
+	}
+	
+	Capability "Base Medical Center" {}
+	Capability "Medical Goods Supplied" //Use custom code on General Goods
+	{
+		Measurement "Medical Goods Supplied"
+		{
+			criticalValues ("yes")
+			benchmarkValues ("yes")
+		}
+	}
+}
+
+Component "Medical Goods At Base"
+{
+	CapabilityProvision "Medical Goods Supplied"
+	{
+		Measurement "Medical Goods Supplied"
+		{
+			providedValues ("no")
+			script 'output = \"no\" if getCapability("General Goods") > 0.5 then output = \"yes\" end'
+		}
+	}
+}
+
+//takeMin
+Capability "1. Route Clearance"
+{
+	Measurement "Route Clearance Capability Score"
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		//script "output = 0.2 * getCapability(\"Counter IED\") + 0.2 * getCapability(\"Patrol Effectiveness\") + 0.2 * getCapability(\"Enemy Detection\") + 2.0 * getCapability(\"Removing Hard Targets\") + 0.2 * getCapability(\"Temporary Bridge Laying\") + 0.2 * getCapability(\"Medical Support\")"
+		script "output = math.min ( getCapability(\"Counter IED\") , getCapability(\"Patrol Effectiveness\") , getCapability(\"Enemy Detection\") , getCapability(\"Removing Hard Targets\") , getCapability(\"Temporary Bridge Laying\") , getCapability(\"Medical Support\") )"
+	}
+	decomposes ("Counter IED", "Patrol Effectiveness", "Enemy Detection", "Removing Hard Targets", "Temporary Bridge Laying", "Medical Support")
+}
+
+Capability "Counter IED"
+{
+	accumulation "Disarm Per Day"
+	Measurement "Chance Of Death"
+	{
+		criticalValue 5.0
+		benchmarkValue 0.0
+	}
+	Measurement "Disarm Per Day"
+	{
+		criticalValue 2.0
+		benchmarkValue 10.0
+	}
+}
+
+Component "Buffalo"
+{
+	CapabilityProvision "Counter IED"
+	{
+		reuse 1
+		Measurement "Chance Of Death"
+		{
+			providedValue 0.4
+		}
+		Measurement "Disarm Per Day"
+		{
+			providedValue 2.0
+		}
+	}
+	Cost Money 1.5
+}
+
+Capability "Patrol Effectiveness"
+{
+	accumulation "Effective Ground Coverage"
+	Measurement "Effective Ground Coverage" //Miles ^ 2
+	{
+		criticalValue 10.0
+		benchmarkValue 50.0
+	}
+}
+
+Component "Plan - Patrol with Mastiff"
+{
+	CapabilityProvision "Patrol Effectiveness"
+	{
+		reuse 1
+		Measurement "Effective Ground Coverage" //Miles ^ 2
+		{
+			providedValue 0.0
+			
+			script 'output = 10.0 if getCapability(\"Wide-area Surveillance\") > 1.0 then
+				output = 20.0 * (getCapability(\"Wide-area Surveillance\") - 1.0) end'
+		}
+	}
+	
+	Capability "Mastiff Vehicle" {}
+	
+}
+
+Component "Mastiff"
+{
+	CapabilityProvision "Mastiff Vehicle" {}
+	
+	CapabilityProvision "Protect Stationary Structures"
+	{
+		reuse 1
+		Measurement "Combat Effectiveness"
+		{
+			providedValue 30.0
+		}
+	}
+	Cost Money 0.4
+}
+
+Component "Plan - Patrol with Vector"
+{
+	CapabilityProvision "Patrol Effectiveness"
+	{
+		reuse 1
+		Measurement "Effective Ground Coverage" //Miles ^ 2
+		{
+			providedValue 0.0
+			script 'output = 5.0 if getCapability(\"Wide-area Surveillance\") > 1.0 then
+				output = 14.0 * (getCapability(\"Wide-area Surveillance\") - 1.0) end'
+		}
+	}
+	
+	Capability "Vector Patrol Vehicle" {}
+	
+}
+
+Component "Vector Patrol"
+{
+	CapabilityProvision "Vector Patrol Vehicle" { reuse 1 }
+	
+	CapabilityProvision "Protect Stationary Structures"
+	{
+		reuse 1
+		Measurement "Combat Effectiveness"
+		{
+			providedValue 40.0
+		}
+	}
+	
+	CapabilityProvision "Convey Protection"
+	{
+		reuse 1
+		Measurement "Convey Protection Score"
+		{
+			providedValue 30.0
+		}
+	}
+	
+	Cost Money 1.0
+}
+
+standAlone
+Capability "Enemy Detection"
+{
+	Measurement "Wide-area Surveillance Score"
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		script 'output = getCapability(\"Wide-area Surveillance\")'
+	}
+}
+
+Capability "Removing Hard Targets"
+{
+	accumulation "Deployable Explosive Force" //Wonder what units to use here?
+	Measurement "Deployable Explosive Force"
+	{
+		criticalValue 1000.0
+		benchmarkValue 12000.0
+	}
+}
+
+Component "L118 Light Gun Artillery Round"
+{
+	CapabilityProvision "Removing Hard Targets"
+	{
+		reuse 1
+		Measurement "Deployable Explosive Force"
+		{
+			providedValue 500.0
+		}
+	}
+	
+	Capability "L118 Light Gun" {}
+	Cost Money 0.01
+}
+
+Component "L118 Light Gun"
+{
+	CapabilityProvision "L118 Light Gun" { reuse 10 }
+	Capability "Light Gun Towing And Ammo Carrying" {}
+	Capability "Artillery Radar" {}
+	
+	Cost Money 0.8
+}
+
+Component "Land Rover 101 FC"
+{
+	CapabilityProvision "Light Gun Towing And Ammo Carrying" {}
+	Cost Money 0.5
+}
+
+Component "Mobile Artillery Battlefield Radar"
+{
+	CapabilityProvision "Artillery Radar" {}
+	Cost Money 0.4
+}
+
+Component "MQ-9 Reaper Bombing Strike"
+{
+	CapabilityProvision "Removing Hard Targets"
+	{
+		reuse 1
+		Measurement "Deployable Explosive Force"
+		{
+			providedValue 4000.0
+		}
+	}
+	
+	Capability "AGM-114 Hellfire Missile" {}
+	Capability "GBU-38 Joint Direct Attack Munition Guidance System" {}
+	
+	Capability "MQ-9 Reaper" {}
+}
+
+Component "MQ-9 Reaper"
+{
+	CapabilityProvision "MQ-9 Reaper" {}
+	
+	//Surveillance Stuff
+	CapabilityProvision "Vision Coverage"
+	{
+		reuse 1
+		Measurement "Vision Area Coverage"
+		{
+			providedValue 50.0
+		}
+	}
+	
+	CapabilityProvision "Night Vision Coverage"
+	{
+		reuse 1
+		Measurement "Night Vision Area Coverage"
+		{
+			providedValue 50.0
+		}
+	}
+	
+	CapabilityProvision "Radar Coverage"
+	{
+		reuse 1
+		Measurement "Radar Area Coverage"
+		{
+			providedValue 75.0
+		}
+	}
+	
+	CapabilityProvision "Signal Intelligence Coverage"
+	{
+		reuse 1
+		Measurement "Signal Intelligence Area Coverage"
+		{
+			providedValue 35.0
+		}
+	}
+	
+	Capability "UAV Launch and Recovery"
+	{
+		
+	}
+	
+	Capability "UAV UHF Communications"
+	{
+		Measurement "UHF Bandwidth"
+		{
+			criticalValue 5.0
+			benchmarkValue 10.0
+		}
+	}
+}
+
+Component "Global Hawk"
+{
+	CapabilityProvision "Vision Coverage"
+	{
+		reuse 1
+		Measurement "Vision Area Coverage"
+		{
+			providedValue 25.0
+		}
+	}
+	
+	CapabilityProvision "Signal Intelligence Coverage"
+	{
+		reuse 1
+		Measurement "Signal Intelligence Area Coverage"
+		{
+			providedValue 55.0
+		}
+	}
+	
+	Capability "UAV Launch and Recovery"
+	{
+		
+	}
+	
+	Capability "UAV UHF Communications"
+	{
+		Measurement "UHF Bandwidth"
+		{
+			criticalValue 5.0
+			benchmarkValue 10.0
+		}
+	}
+	Capability "Global Hawk Programme" {}
+	
+	Cost Money 222.7
+}
+
+Component "Global Hawk UK Adaptations"
+{
+	CapabilityProvision "Global Hawk Programme" {}
+	Cost Money 5.0
+}
+
+Component "Blue Team UAV Control"
+{
+	CapabilityProvision "UAV Launch and Recovery"
+	{
+		
+	}
+	
+	CapabilityProvision "UAV UHF Communications"
+	{
+		Measurement "UHF Bandwidth"
+		{
+			providedValue 12.0
+		}
+	}
+}
+
+Component "AGM-114 Hellfire Missile"
+{
+	CapabilityProvision "AGM-114 Hellfire Missile" { reuse 1 }
+	Cost Money 0.0448 //Actual Cost
+}
+
+Component "GBU-38 Joint Direct Attack Munition Guidance System"
+{
+	CapabilityProvision "GBU-38 Joint Direct Attack Munition Guidance System" {}
+	Cost Money 0.02
+}
+
+Capability "Temporary Bridge Laying"
+{
+	
+}
+
+Component "Alvis Unipower" //Truck for towing Bridge
+{
+	CapabilityProvision "Bridge Tow" {}
+}
+
+Component "BR90 Bridging" //Bridge
+{
+	CapabilityProvision "Temporary Bridge Laying" {}
+	Capability "Bridge Tow" {}
+}
+
+standAlone
+Capability "Provided Medical Support"
+{
+	Measurement "Medical Support Score"
+	{
+		criticalValue 1.0
+		benchmarkValue 2.0
+		script 'output = getCapability(\"Medical Support\")'
+	}
+}
+
+Capability "2. Establish Patrol Base"
+{
+	Measurement "Establish Patrol Base Capability Score"
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		script "output = 0.6 * getCapability(\"Basing\") + 0.4 * getCapability(\"Wide-area Surveillance\")"
+	}
+	//Weighted Towards Basing But Slight Dependency on Wide-Area Surveillance
+	decomposes ("Basing","Wide-area Surveillance")
+}
+
+Capability "Basing" {}
+
+Component "Base"
+{
+	CapabilityProvision "Basing" {}
+	CapabilityProvision "Base Medical Center" {}
+	Capability "Base Construction" {}
+}
+
+Component "Blue Engineering Team"
+{
+	CapabilityProvision "Base Construction" {}
+}
+
+Capability "3. Protect Patrol Base"
+{	
+	Measurement "Protect Patrol Base"
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		script "output = getCapability(\"Protect Stationary Structures\")"
+	}
+	//Equal To
+	decomposes ("Protect Stationary Structures")
+}
+
+Capability "Protect Stationary Structures"
+{
+	accumulation "Combat Effectiveness"
+	Measurement "Combat Effectiveness"
+	{
+		criticalValue 20.0
+		benchmarkValue 150.0
+	}
+}
+
+Component "Husky"
+{
+	CapabilityProvision "Protect Stationary Structures"
+	{
+		reuse 1
+		Measurement "Combat Effectiveness"
+		{
+			providedValue 20.0
+		}
+	}
+	
+	CapabilityProvision "Transport Goods"
+	{
+		reuse 1
+		Measurement "Volume per day"
+		{
+			providedValue 100.0
+		}
+	}
+	
+	CapabilityProvision "Convey Protection"
+	{
+		reuse 1
+		Measurement "Convey Protection Score"
+		{
+			providedValue 30.0
+		}
+	}
+	
+	Cost Money 0.6 //Correct
+}
+
+Capability "4. Supply Patrol Base"
+{
+	Measurement "Supply Patrol Base"
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		script "output = getCapability(\"Convey Protection\") * getCapability(\"Supply Transports\")"
+	}
+	
+	decomposes ("Convey Protection", "Supply Transports")
+}
+
+Capability "Convey Protection"
+{
+	accumulation "Convey Protection Score"
+	Measurement "Convey Protection Score"
+	{
+		criticalValue 20.0
+		benchmarkValue 100.0
+	}
+}
+
+Capability "Supply Transports"
+{
+	Measurement "Supply Transports"
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		script "output = 0.25 * getCapability(\"Transport People\") + 0.25 * getCapability(\"Transport Fuel\") + 0.25 * getCapability(\"Transport Water\") + 0.25 * getCapability(\"Transport Goods\")"
+	}
+	decomposes ("Transport People", "Transport Fuel", "Transport Water", "Transport Goods")
+}
+
+Capability "Transport People"
+{
+	accumulation "People per day"
+	Measurement "People per day"
+	{
+		criticalValue 10.0
+		benchmarkValue 50.0
+	}
+}
+
+Component "FV513 Warrior"
+{
+	CapabilityProvision "Transport People"
+	{
+		reuse 1
+		Measurement "People per day"
+		{
+			providedValue 16.0
+		}
+	}
+	Capability "FV513 Warrior Programme" {}
+	Cost Money 0.5
+}
+
+Component "FV513 Warrior Programme"
+{
+	CapabilityProvision "FV513 Warrior Programme" {}
+	Cost Money 0.5
+}
+
+Capability "Transport Fuel"
+{
+	accumulation "Fuel gallons per day"
+	Measurement "Fuel gallons per day"
+	{
+		criticalValue 200.0
+		benchmarkValue 700.0
+	}
+}
+
+Component "Oshkosh Wheeled Tanker Fuel"
+{
+	CapabilityProvision "Transport Fuel"
+	{
+		reuse 1
+		Measurement "Fuel gallons per day"
+		{
+			providedValue 100.0
+		}
+	}
+	Cost Money 3.0
+}
+
+Capability "Transport Water"
+{
+	accumulation "Gallons per day"
+	Measurement "Gallons per day"
+	{
+		criticalValue 200.0
+		benchmarkValue 400.0
+	}
+}
+
+Component "Oshkosh Wheeled Tanker Water"
+{
+	CapabilityProvision "Transport Water"
+	{
+		reuse 1
+		Measurement "Gallons per day"
+		{
+			providedValue 100.0
+		}
+	}
+	Cost Money 3.0
+}
+
+Capability "Transport Goods"
+{
+	accumulation "Volume per day"
+	Measurement "Volume per day"
+	{
+		criticalValue 100.0
+		benchmarkValue 300.0
+	}
+}
+
+Component "Leyland DROPS"
+{
+	CapabilityProvision "Transport Goods"
+	{
+		reuse 1
+		Measurement "Volume per day"
+		{
+			providedValue 100.0
+		}
+	}
+	Capability "Leyland DROPS Programme" {}
+	Cost Money 0.5
+}
+
+Component "Leyland DROPS Programme"
+{
+	CapabilityProvision "Leyland DROPS Programme" {}
+	Cost Money 0.1
+}
+
+Capability "5. Prevent Enemy Crossings"
+{
+	Measurement "Prevent Enemy Crossings Capability Score"
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		script "output = 0.5 * getCapability(\"Wide-area Surveillance\") + 0.5 * getCapability(\"Patrol Effectiveness\")"
+	}
+	//Weighted Sum
+	decomposes ("Wide-area Surveillance", "Patrol Effectiveness")
+}
+

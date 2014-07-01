@@ -1,0 +1,21 @@
+
+var emfTool = new Native("org.eclipse.epsilon.emc.emf.tools.EmfTool");
+var ecoreUtil = emfTool.ecoreUtil;
+
+for (comp in scenario!ComponentU.all())
+{
+	for (number in 1.to(comp.quantity))
+	{
+		var targetCloneable = ecoreUtil.copy(solution!Component.all().selectOne(x|x.name==comp.name));
+		var existing : String = "";
+		if (comp.isKindOf(scenario!ExistingComponent))
+		{
+			existing = "E";
+		}
+			
+		targetCloneable.name = targetCloneable.name + ":" + existing + number;
+		solution!Scenario.all().first.OurObjects.add(targetCloneable);
+	}
+		
+	delete comp;
+}

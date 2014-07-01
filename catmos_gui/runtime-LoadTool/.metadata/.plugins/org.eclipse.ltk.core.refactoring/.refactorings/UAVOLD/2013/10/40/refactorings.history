@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Move &apos;UAV1.scen&apos; to &apos;UAVTL&apos;" description="Move &apos;UAV1.scen&apos; to &apos;UAVTL&apos;" destination="/UAVTL" element1="/UAV/UAV1.scen" element2="/UAV/UAV2.scen" element3="/UAV/UAV3.scen" element4="/UAV/UAV4.scen" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="4" stamp="1380814025695" updateReferences="true"/>&#x0A;<refactoring comment="Move 1 resources to &apos;UAVTL&apos;" description="Move 1 resources to &apos;UAVTL&apos;" destination="/UAVTL" element1="/UAV/Copy of UAV.scen" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1380814028854" updateReferences="true"/>
+</session>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="ScenarioModel">
+  <OurObjects xsi:type="p:Capability" name="FireFightingForce" searchObjective="true" accumulation="//@OurObjects.0/@measurements.0">
+    <measurements name="waterFlow" criticalValue="100.0" benchmarkValue="750.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="FireFightingTruck">
+    <provides xsi:type="p:CapabilityProvision" name="FireFightingForce" reuse="1">
+      <measurements name="waterFlow" providedValue="400.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Fire sprinkler">
+    <provides xsi:type="p:CapabilityProvision" name="FireFightingForce" reuse="1">
+      <measurements name="waterFlow" providedValue="200.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Fire extinguisher">
+    <provides xsi:type="p:CapabilityProvision" name="FireFightingForce" reuse="1">
+      <measurements name="waterFlow" providedValue="50.0"/>
+    </provides>
+  </OurObjects>
+</p:Scenario>

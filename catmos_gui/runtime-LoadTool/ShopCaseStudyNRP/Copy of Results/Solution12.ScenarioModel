@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="ScenarioModel">
+  <OurObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" status="1.0" colour="Yellow" decomposes="//@OurObjects.1 //@OurObjects.2">
+    <measurements name="weightedSatisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0.6 * getCapability(&quot;Shop Manager&quot;) + 0.4 * getCapability(&quot;Shop Clerk&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Shop Manager" status="1.0" colour="Yellow" decomposes="//@OurObjects.3 //@OurObjects.4 //@OurObjects.5">
+    <measurements name="Shop Manager Satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0.4 * getCapability(&quot;Monthly Reports&quot;) + 0.2 * getCapability(&quot;Email Notification&quot;) &#xA;        + 0.4 * getCapability(&quot;Automatically Generating Orders&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Shop Clerk" status="1.0" colour="Yellow" decomposes="//@OurObjects.6 //@OurObjects.7 //@OurObjects.5">
+    <measurements name="Shop Clerk Satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0.5 * getCapability(&quot;Easier Stock Handling&quot;) + 0.4 * getCapability(&quot;Better Userinterface&quot;) &#xA;        + 0.1 * getCapability(&quot;Automatically Generating Orders&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Monthly Reports" status="0.0" colour="Red" satisfiedBy="//@OurObjects.8/@provides.0"/>
+  <OurObjects xsi:type="p:Capability" name="Email Notification"/>
+  <OurObjects xsi:type="p:Capability" name="Automatically Generating Orders"/>
+  <OurObjects xsi:type="p:Capability" name="Easier Stock Handling"/>
+  <OurObjects xsi:type="p:Capability" name="Better Userinterface">
+    <measurements name="User Satisfaction" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Monthly Report:1">
+    <provides xsi:type="p:CapabilityProvision" name="Monthly Reports" satisfies="//@OurObjects.3"/>
+    <requires name="Stock Management System"/>
+    <costs name="Money" amount="25.0"/>
+  </OurObjects>
+</p:Scenario>

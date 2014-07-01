@@ -1,0 +1,88 @@
+	/*
+ * 
+ */
+package ScenarioModel.diagram.part;
+
+	/**
+ * @generated
+ */
+public class ScenarioModelLinkDescriptor extends ScenarioModel.diagram.part.ScenarioModelNodeDescriptor {
+
+		/**
+ * @generated
+ */
+private org.eclipse.emf.ecore.EObject mySource;
+		
+	/**
+ * @generated
+ */
+private org.eclipse.emf.ecore.EObject myDestination;
+	
+	/**
+ * @generated
+ */
+private org.eclipse.core.runtime.IAdaptable mySemanticAdapter;
+	
+		/**
+ * @generated
+ */
+private ScenarioModelLinkDescriptor(org.eclipse.emf.ecore.EObject source, org.eclipse.emf.ecore.EObject destination, org.eclipse.emf.ecore.EObject linkElement, int linkVID) {
+	super(linkElement, linkVID);
+	mySource = source;
+	myDestination = destination;
+}
+	
+		/**
+ * @generated
+ */
+public ScenarioModelLinkDescriptor(org.eclipse.emf.ecore.EObject source, org.eclipse.emf.ecore.EObject destination, org.eclipse.gmf.runtime.emf.type.core.IElementType elementType, int linkVID) {
+	this(source, destination, (org.eclipse.emf.ecore.EObject) null, linkVID);
+	final org.eclipse.gmf.runtime.emf.type.core.IElementType elementTypeCopy = elementType;
+	mySemanticAdapter = new org.eclipse.core.runtime.IAdaptable() {
+		public Object getAdapter(Class adapter) {
+			if (org.eclipse.gmf.runtime.emf.type.core.IElementType.class.equals(adapter)) {
+	return elementTypeCopy;
+}
+			return null;
+		}
+	};
+}
+	
+		/**
+ * @generated
+ */
+public ScenarioModelLinkDescriptor(org.eclipse.emf.ecore.EObject source, org.eclipse.emf.ecore.EObject destination, org.eclipse.emf.ecore.EObject linkElement, org.eclipse.gmf.runtime.emf.type.core.IElementType elementType, int linkVID) {
+	this(source, destination, linkElement, linkVID);
+	final org.eclipse.gmf.runtime.emf.type.core.IElementType elementTypeCopy = elementType;
+	mySemanticAdapter = new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(linkElement) {
+		public Object getAdapter(Class adapter) {
+			if (org.eclipse.gmf.runtime.emf.type.core.IElementType.class.equals(adapter)) {
+	return elementTypeCopy;
+}
+			return super.getAdapter(adapter);
+		}
+	};
+}
+	
+		/**
+ * @generated
+ */
+public org.eclipse.emf.ecore.EObject getSource() {
+	return mySource;
+}
+
+		/**
+ * @generated
+ */
+public org.eclipse.emf.ecore.EObject getDestination() {
+	return myDestination;
+}
+	
+		/**
+ * @generated
+ */
+public org.eclipse.core.runtime.IAdaptable getSemanticAdapter() {
+	return mySemanticAdapter;
+}
+		
+	}

@@ -1,0 +1,985 @@
+
+FindTradeOffs UAV { popSize 100 genCount 100
+	ExistingComponent "Blue Team Engineering Squadron" 1
+	ExistingComponent "Working Plan" 1
+	ExistingComponent "MQ-9 Reaper" 10
+	ExistingComponent "Mastiff" 1
+	ExistingComponent "MQ-9 Reaper Bomb" 30
+	ExistingComponent "AGM-114 Hellfire" 30
+	ExistingComponent "GBU-38 Joint Direct Attack Munition" 30
+	ExistingComponent "Blue Team Patrol" 10
+	ExistingComponent "ASIP-1C" 1
+	ExistingComponent "Vision System Aggregator" 1
+	ExistingComponent "AN/AAS-52 Multi-Spectral Targeting System" 1
+	ExistingComponent "AN/DAS-1 MTS-B Multi-Spectral Targeting System" 1
+	ExistingComponent "Global Hawk Gorgon Stare" 1
+	ExistingComponent "Ground Control Station" 1
+	ExistingComponent "GPS Data" 1
+	ExistingComponent "Global Hawk" 1
+	ExistingComponent "Global Hawk Mission Planing System" 1
+	ExistingComponent "UAV Local Control System" 1
+	ExistingComponent "Depot Building" 1
+	ExistingComponent "Blue Team Logistic Squadron" 1
+	ExistingComponent "Leyland DROPS" 1
+	ExistingComponent "Oshkosh Wheeled Tanker Aircraft Fuel" 1
+	ExistingComponent "Husky" 1
+	ExistingComponent "Vector" 1
+	ExistingComponent "Terrain" 1
+	ExistingComponent "FV513 Warrior" 1
+	ExistingComponent "Buffalo" 1
+	ExistingComponent "Alvis Unipower" 1
+	ExistingComponent "Supported L118 Light Gun" 1
+	ExistingComponent "L118 Light Gun" 1
+	ExistingComponent "Land Rover 101FC" 1
+	ExistingComponent "Mobile Artillery Battlefield Radar" 1
+	ExistingComponent "Blue Team Medical Team" 1
+	ExistingComponent "Bowman" 1
+	ExistingComponent "Reacher Satellite Ground Terminal" 1
+	ExistingComponent "Mowag Duro III" 1
+	ExistingComponent "Cormorant" 1
+}
+
+searchObjective
+Capability "Route Clearance"
+{
+	
+	decomposes ("Basing","Planning","Combat Air Patrol", "Counter IED", "Hard Target Attack", "Patrol", "SIGINT", "Target Assessment", "Target Designation", "Wide-Area Surveillance", "Control and Communications")
+}
+
+searchObjective
+Capability "Basing"
+{
+	Measurement BasingMoE
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component "Blue Team Engineering Squadron"
+{
+	CapabilityProvision "Basing"
+	{
+		Measurement BasingMoE
+		{
+			providedValue 1.0
+		}
+	}
+}
+
+Capability "Planning"
+{
+	Measurement PlanQuality
+	{
+		criticalValue 0.0
+		benchmarkValue 10.0
+	}
+}
+
+Component "Working Plan"
+{
+	CapabilityProvision "Planning"
+	{
+		Measurement PlanQuality
+		{
+			providedValue 1.0
+			script 'output = getMeasure(\"Planning Decision Making\") - 2.0'
+		}
+	}
+	
+	Capability "Mission Plan"
+	{
+		Measurement "Planning Decision Making"
+		{
+			criticalValue 1.0
+			benchmarkValue 10.0
+		}
+	}	
+}
+
+Component "BrigadeHQ"
+{
+	CapabilityProvision "Mission Plan"
+	{
+		Measurement "Planning Decision Making"
+		{
+			providedValue 8.5
+		}	
+	}
+}
+
+searchObjective
+Capability "Combat Air Patrol"
+{
+	accumulation CombatEffectiveness
+	Measurement CombatEffectiveness
+	{
+		criticalValue 2.0
+		benchmarkValue 10.0
+	}
+}
+
+//The UAV!
+Component "MQ-9 Reaper"
+{
+	CapabilityProvision "Combat Air Patrol"
+	{
+		Measurement CombatEffectiveness
+		{
+			providedValue 1.0
+		}
+	}
+	
+	CapabilityProvision "MQ-9 Reaper UAV Bomb Holder"
+	{
+		reuse 30 //Based on Weight Load - Very Approx
+	}
+	
+	CapabilityProvision "MQ-9 Reaper UAV ASIP-IC Place"
+	{
+		reuse 1
+	}
+	
+	CapabilityProvision "AN/AAS-52 Multi-Spectral Targeting System Holder"
+	{
+		reuse 1
+	}
+	
+	CapabilityProvision "AN/DAS-1 MTS-B Multi-Spectral Targeting System Holder"
+	{
+		reuse 1
+	}
+	
+	CapabilityProvision "MQ-9 Reaper UAV Lynx II Radar Holder"
+	{
+		reuse 1
+	}
+	
+	CapabilityProvision "MQ-9 Reaper UAV" //Replace
+	{
+		reuse 10
+	}
+}
+
+//http://www.af.mil/information/factsheets/factsheet.asp?id=6405
+//The MQ-9 Reaper is an armed, multi-mission, medium-altitude, long-endurance remotely piloted aircraft 
+//that is employed primarily as an intelligence-collection asset and secondarily against dynamic execution 
+//targets. Given its significant loiter time, wide-range sensors, multi-mode communications suite, and 
+//precision weapons -- it provides a unique capability to perform strike, coordination, and reconnaissance 
+//against high-value, fleeting, and time-sensitive targets. 
+
+searchObjective
+Capability "Counter IED"
+{
+	Measurement ChanceOfDeath
+	{
+		criticalValue 40.0
+		benchmarkValue 0.0
+	}
+}
+
+Component "Mastiff"
+{
+	CapabilityProvision "Counter IED"
+	{
+		Measurement ChanceOfDeath
+		{
+			providedValue 2.0
+		}
+	}
+}
+
+
+//Army.mod.uk Info:
+
+//Mastiff is a heavily armoured, 6 x six-wheel-drive patrol vehicle which carries eight troops, 
+//plus two crew. It is currently on its third variation.
+
+//Mastiff has a maximum speed of 90kph, is armed with the latest weapon systems, 
+//including a 7.62mm general purpose machine gun, 12.7mm heavy machine gun or 40mm automatic grenade launcher.
+
+//These wheeled patrol vehicles have a less intimidating profile than tracked vehicles and give commanders 
+//on the ground in Afghanistan more options to deal with the threats they are facing.
+
+//They have Bowman radios and electronic countermeasures and are fitted with additional armour 
+//beyond the standard level to ensure they have the best possible protection.
+
+searchObjective
+Capability "Hard Target Attack"
+{
+	accumulation ExplosiveRating
+	Measurement ExplosiveRating
+	{
+		criticalValue 10.0
+		benchmarkValue 750.0
+	}
+}
+
+Component "MQ-9 Reaper Bomb"
+{
+	CapabilityProvision "Hard Target Attack"
+	{
+		reuse 1
+		Measurement ExplosiveRating
+		{
+			providedValue 100.0
+		}
+	}
+	
+	Capability "AGM-114 Hellfire Missile"
+	{
+		
+	}
+	
+	Capability "GBU-38 Joint Direct Attack Munition Guidance System"
+	{
+		
+	}
+	
+	Capability "MQ-9 Reaper UAV Bomb Holder"
+	{
+		
+	}
+}
+
+Component "AGM-114 Hellfire"
+{
+	CapabilityProvision "AGM-114 Hellfire Missile"
+	{
+		reuse 1
+	}
+}
+
+//http://en.wikipedia.org/wiki/AGM-114_Hellfire
+//The AGM-114 Hellfire is an air-to-surface missile (ASM) developed primarily for anti-armor use. 
+//It has multi-mission, multi-target precision-strike capability, and can be launched from multiple air, 
+//sea, and ground platforms. The Hellfire missile is the primary 100 lb-class air-to-ground precision weapon 
+//for the armed forces of the United States and many other nations, and is considered a proven 
+//tactical missile system, as it has been used in combat since the mid-1980s.
+
+Component "GBU-38 Joint Direct Attack Munition"
+{
+	CapabilityProvision "GBU-38 Joint Direct Attack Munition Guidance System"
+	{
+		reuse 1
+	}
+}
+
+//http://www.boeing.com/boeing/defense-space/missiles/jdam/
+//The Joint Direct Attack Munition is a guidance tail kit that converts existing unguided free-fall bombs 
+//into accurate, adverse weather "smart" munitions. With the addition of a new tail section that contains 
+//an inertial navigational system and a global positioning system guidance control unit, JDAM improves 
+//the accuracy of unguided, general purpose bombs in any weather condition. JDAM is a joint U.S. Air Force 
+//and Department of Navy program.
+
+searchObjective
+Capability "Patrol"
+{
+	Measurement GroundCoverage //Miles Squared
+	{
+		criticalValue 50.0
+		benchmarkValue 100.0
+	}
+}
+
+Component "Blue Team Patrol"
+{
+	CapabilityProvision "Patrol"
+	{
+		reuse 1
+		Measurement GroundCoverage
+		{
+			providedValue 10.0
+		}
+	}
+}
+
+searchObjective
+Capability "SIGINT"
+{
+	accumulation GroundCoverage
+	Measurement GroundCoverage
+	{
+		criticalValue 0.0
+		benchmarkValue 100.0
+	}
+}
+
+Component "ASIP-1C"
+{
+	CapabilityProvision "SIGINT"
+	{
+		reuse 1
+		Measurement GroundCoverage
+		{
+			providedValue 20.0
+		}
+	}
+	
+	Capability "MQ-9 Reaper UAV ASIP-IC Place"
+	{
+		
+	}
+}
+
+//http://www.deagel.com/Aircraft-Warners-and-Sensors/ASIP-1C_a001223002.aspx
+//Description: The Northrop Grumman Airborne Signals Intelligence Payload 1C (ASIP-1C) is a signals 
+//intelligence sensor payload developed for the US Air Force MQ-1 Predator Unmanned Aerial Vehicle (UAV). 
+//The US Air Force ordered the ASIP-1C development and MQ-1 integration in April 2008 under a $54.9 million 
+//contract with the aim to achieve an initial operational capability (IOC) by 2010. The ASIP-1C is a scaled, 
+//modular derivative of the ASIP sensor developed for the U-2 and RQ-4 Global Hawk platforms and will be 
+//interoperable with other intelligence, surveillance and reconnaissance assets. The new sensor will deliver 
+//enhanced communications intelligence collection and exploitation capabilities. The ASIP-1C payload will 
+//undergo flight testing in early 2009.
+
+searchObjective
+Capability "Target Assessment"
+{
+	Measurement "Target Assessment MoE"
+	{
+		criticalValue 0.0
+		benchmarkValue 10.0
+	}
+}
+
+searchObjective
+Capability "Target Designation"
+{
+	Measurement "Target Designation MoE"
+	{
+		criticalValue 0.0
+		benchmarkValue 10.0
+	}
+}
+
+Component "Vision System Aggregator"
+{
+	CapabilityProvision "Target Assessment"
+	{
+		Measurement "Target Assessment MoE"
+		{
+			providedValue 0.0
+			script 'output = 0.4 * getGlobalMeasure(\'ImageQuality\') + 0.6 * getGlobalMeasure(\'NightVision\')'
+		}
+	}
+
+	CapabilityProvision "Target Designation"
+	{
+		Measurement "Target Designation MoE"
+		{
+			providedValue 0.0
+			script 'output =  0.3 * getGlobalMeasure(\'NightVision\') + 0.7 * getGlobalMeasure(\'TargetTracking\')'
+		}
+	}
+}
+
+searchObjective
+Capability "Vision System A"
+{
+	Measurement ImageQuality
+	{
+		criticalValue 0.0
+		benchmarkValue 10.0
+	}
+	Measurement NightVision
+	{
+		criticalValue 0.0
+		benchmarkValue 10.0
+	}
+	Measurement TargetTracking
+	{
+		criticalValue 0.0
+		benchmarkValue 10.0
+	}
+}
+searchObjective
+Capability "Vision System B"
+{
+	Measurement ImageQuality
+	{
+		criticalValue 0.0
+		benchmarkValue 10.0
+	}
+	Measurement NightVision
+	{
+		criticalValue 0.0
+		benchmarkValue 10.0
+	}
+	Measurement TargetTracking
+	{
+		criticalValue 0.0
+		benchmarkValue 10.0
+	}
+}
+
+Component "AN/AAS-52 Multi-Spectral Targeting System"
+{
+	CapabilityProvision "Vision System A" 
+	{
+		Measurement ImageQuality
+		{
+			providedValue 5.0
+		}
+		Measurement NightVision
+		{
+			providedValue 3.0
+		}
+		Measurement TargetTracking
+		{
+			providedValue 7.0
+		}
+	}
+	Capability "AN/AAS-52 Multi-Spectral Targeting System Holder" {}
+}
+
+//http://www.raytheon.com/capabilities/products/mts/
+//A turreted or forward looking pod combining multiple sensors, 
+//the MTS equips aerial platforms with an electro-optical (EO) and infrared (IR) full-motion video camera 
+//system that permits long-range surveillance and high-altitude acquisition, tracking and laser designation.
+
+//Multiple wavelength sensors
+//TV cameras (near-IR and color)
+//Illuminators
+//Eyesafe rangefinders
+//Image merging
+//Spot trackers
+//Other avionics
+
+Component "AN/DAS-1 MTS-B Multi-Spectral Targeting System"
+{
+	CapabilityProvision "Vision System B"
+	{
+		Measurement ImageQuality
+		{
+			providedValue 6.0
+		}
+		Measurement NightVision
+		{
+			providedValue 2.0
+		}
+		Measurement TargetTracking
+		{
+			providedValue 4.0
+		}
+	}
+	Capability "AN/DAS-1 MTS-B Multi-Spectral Targeting System Holder" {}
+}
+
+//The MTS-B provides superior detecting, ranging, and tracking for the U.S. Air Force Predator B 
+//and for today’s military forces worldwide. Using state-of-the-art digital architecture, this 
+//advanced system provides long-range surveillance, high-altitude target acquisition, tracking, 
+//range finding, and laser designation for the HELLFIRE missile and for all tri-service and NATO 
+//laser-guided munitions.
+
+Capability "Wide-Area Surveillance"
+{
+	accumulation GroundCoverage
+	Measurement GroundCoverage
+	{
+		criticalValue 50.0
+		benchmarkValue 100.0
+	}
+}
+
+Component "ANAPY-8 Lynx II radar"
+{
+	CapabilityProvision "Wide-Area Surveillance"
+	{
+		Measurement GroundCoverage
+		{
+			providedValue 30.0
+		}
+	}
+	
+	Capability "MQ-9 Reaper UAV Lynx II Radar Holder"
+	{
+		
+	}
+}
+
+//http://defense-update.com/products/l/lynx-sar.htm
+//AN/APY-8 Lynx II is a lightweight version of Lynx operating on the US Air Force Predator RQ-1 UAV. 
+//A new version designed for operation at extended range and high altitude is Lynx ER, currently fielded 
+//with US Air force Predator B MQ-9. Lynx II is planned for fielding with the US Army in 2007, on several 
+//platforms, including FireScout (FCS Class IV), ER/MP and Hunter.
+
+Component "Global Hawk Gorgon Stare"
+{
+	CapabilityProvision "Wide-Area Surveillance"
+	{
+		Measurement GroundCoverage
+		{
+			providedValue 10.0
+		}
+	}
+	
+	Capability "Global Hawk UAV Gorgon Stare Holder"
+	{
+		
+	}
+}
+
+//http://www.flightglobal.com/news/articles/usaf-to-unleash-gorgon-stare-sensor-in-2010-321732/
+//The Sierra Nevada sensor, which the USAF has officially nicknamed the "Gorgon Stare", 
+//will initially provide a wide-area, persistent surveillance system for its General Atomics 
+//MQ-9 Reaper unmanned air vehicles. But its plans for the sensor will see it become the new standard 
+//for the tactical ISR mission, and proliferate on to several other unmanned and manned platforms 
+//operated by every service.
+
+
+Capability "Control and Communications"
+{
+	Measurement "Control and Communications Measurement"
+	{
+		criticalValue 0.0
+		benchmarkValue 10.0
+		script 'output = getGlobalMeasure(\'GCS Network MoE\') + getGlobalMeasure(\'GCS Building Management System MoE\') + getGlobalMeasure(\'GCS Collaboration System MoE\') + getGlobalMeasure(\'GCS GPS System MoE\')'
+	}
+	
+	decomposes ("GCS Network", "GCS Building Management System", "GCS Collaboration System", "GCS GPS System")
+}
+
+Capability "GCS Network"
+{
+	Measurement "GCS Network MoE"
+	{
+		criticalValue 0.0
+		benchmarkValue 10.0
+	}
+}
+
+Capability "GCS Building Management System"
+{
+	Measurement "GCS Building Management System MoE"
+	{
+		criticalValue 0.0
+		benchmarkValue 10.0
+	}
+}
+
+Capability "GCS Collaboration System"
+{
+	Measurement "GCS Collaboration System MoE"
+	{
+		criticalValue 0.0
+		benchmarkValue 10.0
+	}
+}
+
+Capability "GCS GPS System"
+{
+	Measurement "GCS GPS System MoE"
+	{
+		criticalValue 0.0
+		benchmarkValue 10.0
+	}
+}
+
+Component "Ground Control Station"
+{
+	CapabilityProvision "GCS Network"
+	{
+		
+	}
+	
+	CapabilityProvision "GCS Building Management System"
+	{
+		
+	}
+	
+	CapabilityProvision "GCS Collaboration System"
+	{
+		
+	}
+	
+	CapabilityProvision "GCS GPS System"
+	{
+		
+	}
+}
+
+Component "GPS Data"
+{
+	
+}
+
+Component "Global Hawk"
+{
+	CapabilityProvision "Global Hawk UAV"
+	{
+		reuse 10
+	}
+	
+	CapabilityProvision "Global Hawk UAV Gorgon Stare Holder"
+	{
+		reuse 1
+	}
+	
+	CapabilityProvision "Global Hawk Data Transmission"
+	{
+		
+	}
+	
+	Capability "Global Hawk Mission Plan"
+	{
+		
+	}
+	
+	Capability "Launch and Recovery"
+	{
+		
+	}
+	
+	Capability "UHF Communication"
+	{
+		Measurement "Bandwidth"
+		{
+			criticalValue 0.0
+			benchmarkValue 500.0 //No idea will research later
+		}
+	}
+	
+	Capability "Global Hawk Local Control"
+	{
+		
+	}
+}
+
+Component "Global Hawk Mission Planing System"
+{
+	CapabilityProvision "Global Hawk Mission Plan"
+	{
+		
+	}
+}
+
+Component "UAV Local Control System"
+{
+	CapabilityProvision "Global Hawk Local Control"
+	{
+		
+	}
+}
+
+//http://en.wikipedia.org/wiki/Northrop_Grumman_RQ-4_Global_Hawk
+//The Northrop Grumman RQ-4 Global Hawk is an unmanned aerial vehicle (UAV) surveillance aircraft. 
+//It was initially designed by Ryan Aeronautical (now part of Northrop Grumman), and known as Tier II+ 
+//during development. In role and operational design, the Global Hawk is similar to the venerable Lockheed 
+//U-2. The RQ-4 provides a broad overview and systematic surveillance using high resolution synthetic 
+//aperture radar (SAR) and long-range electro-optical/infrared (EO/IR) sensors with long loiter times 
+//over target areas. It can survey as much as 40,000 square miles (100,000 km2) of terrain a day.
+
+Capability "Forward Resupply"
+{
+	
+	decomposes ("Depot", "Depot Logistics Management", "Transportation", "Escort", "Supply")
+}
+
+Component "Depot Building"
+{
+	CapabilityProvision "Depot"
+	{
+		
+	}
+	
+	Capability "Depot Logistics Management"
+	{
+		
+	}
+}
+
+Component "Blue Team Logistic Squadron"
+{
+	CapabilityProvision "Depot Logistics Management"
+	{
+		
+	}
+	
+	CapabilityProvision "Logistic Squadron"
+	{
+		reuse 10
+	}
+}
+
+//Component "Blue Team Logistic Squadron"
+
+Capability "Transportation"
+{
+	
+	decomposes ("People Transportation", "Aircraft Fuel Transportation")
+}
+
+Capability "People Transportation"
+{
+	
+}
+
+Capability "Aircraft Fuel Transportation"
+{
+	
+}
+
+Component "Leyland DROPS"
+{
+	CapabilityProvision "People Transportation"
+	{
+		
+	}
+}
+
+//http://www.armedforces.co.uk/army/listings/l0146.html
+//Demountable Rack Offload and Pickup System (DROPS) vehicles form the logistic backbone of the British Army. 
+//There are two types of vehicle – the Leyland Medium Mobility Load Carrier (MMLC), and the Foden Improved Medium Mobility Load Carrier (IMMLC). 
+//Both trucks are 8x6 load carriers with a 15-tonne flatrack payload, allowing the rapid loading and unloading of flatracks or containers.
+
+Component "Oshkosh Wheeled Tanker Aircraft Fuel"
+{
+	CapabilityProvision "Aircraft Fuel Transportation"
+	{
+		
+	}
+}
+
+//http://jedsite.info/transport-mike/mike/mtvr_series/z-document/Oshkosh_Wheeled_Tanker_brochure.pdf
+//Since WWII, Oshkosh Defense has been building some of the best performing, most reliable, 
+//most technically advanced defence trucks in the world. The 15000-litre Tactical Aircraft Refueller, 
+//20000-litre Close Support Tankers and 18000-litre Close Support Tankers for Water are no exception. 
+//Towed by a common Oshkosh® 6x6 tractor, which is based on the combat-proven MTVR tactical truck, 
+//these vehicles give British forces unparallelled tactical and strategic mobility.
+
+Capability "Escort"
+{
+	
+}
+
+Component "Husky"
+{
+	
+}
+
+//http://www.army.mod.uk/equipment/23250.aspx
+//The Husky has been designed for a range of missions in Afghnaistan, including transporting food, 
+//water and ammunition, and acting as a command vehicle at headquarters.
+//Equipped with a machine gun, Husky joins its sister vehicles Wolfhound and Coyote as part of the 
+//tactical support vehicle programme. Some vehicles are fitted out as protected ambulances.
+
+
+Component "Vector"
+{
+	
+}
+
+//http://www.army.mod.uk/equipment/23246.aspx
+//Vector is a light protected patrol vehicle based on a 6 x 6 Pinzgauer chassis developed for 
+//eight-hour patrol missions over varying terrain.
+//Vector is utilised as a command vehicle and troop carrier and for both urban and rural patrolling. 
+//It has the capacity to mount two General Purpose Machine Guns on the roof for mobile fire support, 
+//if required.
+//Vector also has a bespoke ambulance variant in order to match the mobility of the convoys the vehicle 
+//supports.
+
+Capability "Supply"
+{
+
+	decomposes ("Route", "Logistic Squadron")
+}
+
+Capability "Route"
+{
+	
+}
+
+Component "Terrain"
+{
+	CapabilityProvision "Route"
+	{
+		
+	}
+}
+
+Capability "Counter Insurgency Support"
+{
+	
+	decomposes ("Forward Base Security", "Engineering Support", "Artillery Support", "Medical Support Facility", "C4I Support")
+}
+
+Capability "Forward Base Security"
+{
+	
+}
+
+Capability "Engineering Support"
+{
+	
+}
+
+Component "FV513 Warrior" //Personal Carrier
+{
+	
+}
+
+//http://en.wikipedia.org/wiki/Warrior_tracked_armoured_vehicle
+//The Warrior incorporates several design features in keeping with UK battlefield experience. 
+//In particular, there are no firing ports in the hull, in line with British thinking that the 
+//role of the armoured personnel carrier/infantry fighting vehicle (APC/IFV) is to carry troops 
+//under protection to the objective and then give firepower support when they have disembarked. 
+//The absence of firing ports also allows additional applique armour to be fitted to the sides of 
+//the vehicle, which is invariably applied to Warriors involved in active operations
+
+Component "Buffalo" //Clearly counter IED
+{
+	
+}
+
+//http://en.wikipedia.org/wiki/Buffalo_(mine_protected_vehicle)
+//The Buffalo is a wheeled mine resistant ambush protected (MRAP) armored vehicle built by Force Protection Inc.
+//Buffalo is also fitted with a large articulated arm, used for ordnance disposal. Both vehicles incorporate a "V" 
+//shaped monohull chassis that directs the force of the blast away from the occupants.[3]
+
+Component "Alvis Unipower" //Bridge Laying
+{
+	
+}
+
+//http://tanknutdave.com/the-british-alvis-unipower-aka-mh-6600/
+//Former British Firm Universal Power Drives developed a truck to compete in the British Armies 
+//bidding for a family of military trucks during the late 80’s early 90’s, which included DROPS, 
+//tank transporter and other specialist roles, known as Unipower M-series.
+//However the vehicle was only ordered for one specialist role, transportation of the BR90 family of 
+//bridging systems modular aluminium alloy sections.
+
+Capability "Artillery Support"
+{
+	
+}
+
+Component "Supported L118 Light Gun"
+{
+	CapabilityProvision "Artillery Support" {}
+	Capability "L118 Light Gun Equipment" {}
+	Capability "Towing Vehicle" {}
+	Capability "Mobile Artillery Radar" {}
+}
+
+Component "L118 Light Gun"
+{
+	CapabilityProvision "L118 Light Gun Equipment" {}
+}
+
+//http://en.wikipedia.org/wiki/L118_light_gun
+//The L118 light gun is a 105 mm towed howitzer. It was originally produced for the British Army 
+//in the 1970s and has been widely exported since, including to the United States, where a modified 
+//version is known as the M119A1. The proper name for it is "Gun, 105mm, Field, L118" but it is almost 
+//always just called "the light gun".
+
+Component "Land Rover 101FC"
+{
+	CapabilityProvision "Towing Vehicle" {}
+}
+
+//http://en.wikipedia.org/wiki/Land_Rover_101_Forward_Control
+//The 101 Forward Control or Land Rover 101FC was a vehicle produced by Land Rover for the British Army.
+
+//*** It tows the L118 Light Gun into place and carries its ammo supply ***
+
+//The vehicle was primarily produced to meet the Army's requirement for a gun tractor, 
+//and was designed to tow a field gun (the L118 Light Gun) with a ton of ammunition and other 
+//equipment in the rear load space, giving it the alternative name of the Land Rover One Tonne. 
+//The vehicle was designed to be easily transported by air; the positioning of the 3.5 litre Rover 
+//V8 engine beneath and to the rear of the cab eliminates the bonnet at the front, making the vehicle 
+//more or less cuboid thus reducing unused space in transport aircraft.
+
+
+Component "Mobile Artillery Battlefield Radar"
+{
+	CapabilityProvision "Mobile Artillery Radar" {}
+}
+
+//http://www.army.mod.uk/artillery/regiments/24678.aspx
+//AMBA (Mobile Artillery Monitoring Battlefield Radar)
+//It can process 100 rockets, mortars or artillery shells and provide the operator with 8 
+//Point Of Origin (POO) grids all within one minute. MAMBA has a detection range of up to 30km. 
+//The MAMBA requires a crew of 7, a commander plus two shifts of 3. It is an all weather 24 hour system. 
+//MAMBAs are currently deployed in Afghanistan, providing constant 24-hour C-IDF cover.
+
+Capability "Medical Support Facility"
+{
+	
+}
+
+Component "Blue Team Medical Team"
+{
+	CapabilityProvision "Medical Support Facility" {}
+}
+
+Capability "C4I Support"
+{
+	
+}
+
+//https://www.dstl.gov.uk/c4i
+//Dstl's programme of work on C4I (command, control, communications, computers and information) 
+//is about creating mission success through information – making sure that information is timely, 
+//relevant and assured, to support decision making at best value for money.
+
+Component "Bowman"
+{
+	
+}
+
+//http://en.wikipedia.org/wiki/Bowman_(communications_system)
+//Bowman is the name of the tactical communications system used by the British Armed Forces.
+//The Bowman C4I system consists of a range of HF radio, VHF radio and UHF radio sets designed 
+//to provide secure integrated voice, data services to dismounted soldiers, individual vehicles 
+//and command HQs up to Division level. Bowman has a number of specific applications installed 
+//on the base radio infrastructure known as BISAs. Bowman has been released incrementally as a 
+//number of phased capability releases known as BCIP releases, with BCIP 5.4 currently in the 
+//field being released in 2010.[1]
+
+Component "Reacher Satellite Ground Terminal"
+{
+	CapabilityProvision "Communication"
+	{
+		Measurement Bandwidth
+		{
+			providedValue 8.0 //8 MBits
+		}
+	}
+	
+	Capability "Mowag Duro III Mounted"
+	{
+		
+	}
+}
+//http://en.wikipedia.org/wiki/Reacher_Satellite_Ground_Terminal
+
+Component "Mowag Duro III"
+{
+	CapabilityProvision "Mowag Duro III Mounted"
+	{
+		
+	}
+}
+
+//http://en.wikipedia.org/wiki/MOWAG_Duro
+
+Component "Cormorant"
+{
+	
+}
+
+//http://en.wikipedia.org/wiki/Cormorant_Network
+//The Cormorant Communications Network is a military wide area communications network implemented 
+//by the British Army sometime around 2000.[1] It has also been adopted by certain Royal Air Force 
+//units in limited deployments.
+
+//The network provides end-to-end wide area communications using the same Asynchronous Transfer Mode 
+//protocol that underpins many late-20th Century civilian telecommunications networks. It supports 
+//voice traffic routed over IP (although this is distinct from Internet VoIP) and can also support 
+//IPv4 and IPv6 BTDS traffic.
+
+
+//Spreadsheet notes:
+//Patrol Depends On Wide-Area Surveillance
+//Wide-Area Surveillance Depends On Control and Communications
+

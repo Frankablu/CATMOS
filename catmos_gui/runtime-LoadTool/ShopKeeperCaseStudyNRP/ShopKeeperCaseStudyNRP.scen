@@ -1,0 +1,1389 @@
+
+FindTradeOffs ShopKeeperCaseStudyNRP { 
+	popSize 100 genCount 100
+		
+	AcquirableComponent feature1 1
+	DesireLow "Money"
+}
+
+
+searchObjective
+Capability overallSatisfaction {
+	Measurement weightedSatisfaction {
+		criticalValue 0.0 benchmarkValue 1.0
+		script "output = 0.6 * getGlobalMeasure(\'shopManagerSatisfaction\')
+		+ 0.4 * getGlobalMeasure(\'shopClerkSatisfaction\')" }
+		decomposes ("Shop Manager Satisfaction", "Shop Clerk Satisfaction")
+}
+
+Capability "Shop Manager Satisfaction" {
+	Measurement shopManagerSatisfaction {
+		criticalValue 0.0 benchmarkValue 1.0
+		script "output = 0.1 * getGlobalMeasure(\'\') + " }}
+
+Capability "Shop Clerk Satisfaction" {
+	Measurement shopClerkSatisfaction {
+		criticalValue 0.0 benchmarkValue 1.0
+		script "output = 0.1 * getGlobalMeasure(\'\') + " }}
+
+Capability "Monthly Reports" {}
+Capability "Email Notification" {}
+Capability "Automatically Generating Orders" {}
+Capability "Easier Stock Handling" {}
+Capability "Better Userinterface" {}
+
+Component "Email Notifications" {}
+Component "Stock Reordering Algorithm" {}
+Component "Monthly Reports" {}
+Component "Invoice Generator" {}
+Component ""
+
+standAlone
+Capability customer2satisfaction
+{	
+	Measurement customer2satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		providedValue 0.0
+		script "output = 0 + 0.2857143 * getGlobalMeasure(\"req7\")+ 0.25714287 * getGlobalMeasure(\"req38\")+ 0.114285715 * getGlobalMeasure(\"req40\")+ 0.08571429 * getGlobalMeasure(\"req6\")+ 0.25714287 * getGlobalMeasure(\"req21\")"
+	}
+}
+
+
+standAlone
+Capability customer3satisfaction
+{	
+	Measurement customer3satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		providedValue 0.0
+		script "output = 0 + 0.07692308 * getGlobalMeasure(\"req32\")+ 0.23076923 * getGlobalMeasure(\"req39\")+ 0.15384616 * getGlobalMeasure(\"req26\")+ 0.46153846 * getGlobalMeasure(\"req3\")+ 0.07692308 * getGlobalMeasure(\"req49\")"
+	}
+}
+
+
+standAlone
+Capability customer4satisfaction
+{	
+	Measurement customer4satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		providedValue 0.0
+		script "output = 0 + 0.19354838 * getGlobalMeasure(\"req47\")+ 0.22580644 * getGlobalMeasure(\"req24\")+ 0.29032257 * getGlobalMeasure(\"req10\")+ 0.12903225 * getGlobalMeasure(\"req46\")+ 0.16129032 * getGlobalMeasure(\"req31\")"
+	}
+}
+
+
+standAlone
+Capability customer5satisfaction
+{	
+	Measurement customer5satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		providedValue 0.0
+		script "output = 0 + 0.16666667 * getGlobalMeasure(\"req46\")+ 0.2777778 * getGlobalMeasure(\"req15\")+ 0.11111111 * getGlobalMeasure(\"req50\")+ 0.33333334 * getGlobalMeasure(\"req37\")+ 0.11111111 * getGlobalMeasure(\"req33\")"
+	}
+}
+
+
+Component feature1
+{
+	CapabilityProvision requirement1
+	{
+		Measurement req1
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement3
+	{
+		Measurement req3
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 3.0
+}
+
+Capability requirement1
+{	
+	Measurement req1
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature2
+{
+	CapabilityProvision requirement2
+	{
+		Measurement req2
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement47
+	{
+		Measurement req47
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 3.0
+}
+
+Capability requirement2
+{	
+	Measurement req2
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature3
+{
+	CapabilityProvision requirement3
+	{
+		Measurement req3
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement17
+	{
+		Measurement req17
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 8.0
+}
+
+Capability requirement3
+{	
+	Measurement req3
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature4
+{
+	CapabilityProvision requirement4
+	{
+		Measurement req4
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 6.0
+}
+
+Capability requirement4
+{	
+	Measurement req4
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature5
+{
+	CapabilityProvision requirement5
+	{
+		Measurement req5
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement19
+	{
+		Measurement req19
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 5.0
+}
+
+Capability requirement5
+{	
+	Measurement req5
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature6
+{
+	CapabilityProvision requirement6
+	{
+		Measurement req6
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement48
+	{
+		Measurement req48
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 4.0
+}
+
+Capability requirement6
+{	
+	Measurement req6
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature7
+{
+	CapabilityProvision requirement7
+	{
+		Measurement req7
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 9.0
+}
+
+Capability requirement7
+{	
+	Measurement req7
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature8
+{
+	CapabilityProvision requirement8
+	{
+		Measurement req8
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement38
+	{
+		Measurement req38
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 5.0
+}
+
+Capability requirement8
+{	
+	Measurement req8
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature9
+{
+	CapabilityProvision requirement9
+	{
+		Measurement req9
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement33
+	{
+		Measurement req33
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 9.0
+}
+
+Capability requirement9
+{	
+	Measurement req9
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature10
+{
+	CapabilityProvision requirement10
+	{
+		Measurement req10
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement45
+	{
+		Measurement req45
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 9.0
+}
+
+Capability requirement10
+{	
+	Measurement req10
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature11
+{
+	CapabilityProvision requirement11
+	{
+		Measurement req11
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 9.0
+}
+
+Capability requirement11
+{	
+	Measurement req11
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature12
+{
+	CapabilityProvision requirement12
+	{
+		Measurement req12
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement43
+	{
+		Measurement req43
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 5.0
+}
+
+Capability requirement12
+{	
+	Measurement req12
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature13
+{
+	CapabilityProvision requirement13
+	{
+		Measurement req13
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement44
+	{
+		Measurement req44
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 8.0
+}
+
+Capability requirement13
+{	
+	Measurement req13
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature14
+{
+	CapabilityProvision requirement14
+	{
+		Measurement req14
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement20
+	{
+		Measurement req20
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 6.0
+}
+
+Capability requirement14
+{	
+	Measurement req14
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature15
+{
+	CapabilityProvision requirement15
+	{
+		Measurement req15
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 3.0
+}
+
+Capability requirement15
+{	
+	Measurement req15
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature16
+{
+	CapabilityProvision requirement16
+	{
+		Measurement req16
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 7.0
+}
+
+Capability requirement16
+{	
+	Measurement req16
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature17
+{
+	CapabilityProvision requirement17
+	{
+		Measurement req17
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement24
+	{
+		Measurement req24
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 3.0
+}
+
+Capability requirement17
+{	
+	Measurement req17
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature18
+{
+	CapabilityProvision requirement18
+	{
+		Measurement req18
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 2.0
+}
+
+Capability requirement18
+{	
+	Measurement req18
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature19
+{
+	CapabilityProvision requirement19
+	{
+		Measurement req19
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement48
+	{
+		Measurement req48
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 10.0
+}
+
+Capability requirement19
+{	
+	Measurement req19
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature20
+{
+	CapabilityProvision requirement20
+	{
+		Measurement req20
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 10.0
+}
+
+Capability requirement20
+{	
+	Measurement req20
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature21
+{
+	CapabilityProvision requirement21
+	{
+		Measurement req21
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 3.0
+}
+
+Capability requirement21
+{	
+	Measurement req21
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature22
+{
+	CapabilityProvision requirement22
+	{
+		Measurement req22
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement28
+	{
+		Measurement req28
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 7.0
+}
+
+Capability requirement22
+{	
+	Measurement req22
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature23
+{
+	CapabilityProvision requirement23
+	{
+		Measurement req23
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 0.0
+}
+
+Capability requirement23
+{	
+	Measurement req23
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature24
+{
+	CapabilityProvision requirement24
+	{
+		Measurement req24
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 2.0
+}
+
+Capability requirement24
+{	
+	Measurement req24
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature25
+{
+	CapabilityProvision requirement25
+	{
+		Measurement req25
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 9.0
+}
+
+Capability requirement25
+{	
+	Measurement req25
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature26
+{
+	CapabilityProvision requirement26
+	{
+		Measurement req26
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement35
+	{
+		Measurement req35
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 3.0
+}
+
+Capability requirement26
+{	
+	Measurement req26
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature27
+{
+	CapabilityProvision requirement27
+	{
+		Measurement req27
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement37
+	{
+		Measurement req37
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 7.0
+}
+
+Capability requirement27
+{	
+	Measurement req27
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature28
+{
+	CapabilityProvision requirement28
+	{
+		Measurement req28
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 5.0
+}
+
+Capability requirement28
+{	
+	Measurement req28
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature29
+{
+	CapabilityProvision requirement29
+	{
+		Measurement req29
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement47
+	{
+		Measurement req47
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 3.0
+}
+
+Capability requirement29
+{	
+	Measurement req29
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature30
+{
+	CapabilityProvision requirement30
+	{
+		Measurement req30
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 1.0
+}
+
+Capability requirement30
+{	
+	Measurement req30
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature31
+{
+	CapabilityProvision requirement31
+	{
+		Measurement req31
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 0.0
+}
+
+Capability requirement31
+{	
+	Measurement req31
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature32
+{
+	CapabilityProvision requirement32
+	{
+		Measurement req32
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 6.0
+}
+
+Capability requirement32
+{	
+	Measurement req32
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature33
+{
+	CapabilityProvision requirement33
+	{
+		Measurement req33
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 3.0
+}
+
+Capability requirement33
+{	
+	Measurement req33
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature34
+{
+	CapabilityProvision requirement34
+	{
+		Measurement req34
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 0.0
+}
+
+Capability requirement34
+{	
+	Measurement req34
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature35
+{
+	CapabilityProvision requirement35
+	{
+		Measurement req35
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 9.0
+}
+
+Capability requirement35
+{	
+	Measurement req35
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature36
+{
+	CapabilityProvision requirement36
+	{
+		Measurement req36
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement44
+	{
+		Measurement req44
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 6.0
+}
+
+Capability requirement36
+{	
+	Measurement req36
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature37
+{
+	CapabilityProvision requirement37
+	{
+		Measurement req37
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 2.0
+}
+
+Capability requirement37
+{	
+	Measurement req37
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature38
+{
+	CapabilityProvision requirement38
+	{
+		Measurement req38
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 5.0
+}
+
+Capability requirement38
+{	
+	Measurement req38
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature39
+{
+	CapabilityProvision requirement39
+	{
+		Measurement req39
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 4.0
+}
+
+Capability requirement39
+{	
+	Measurement req39
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature40
+{
+	CapabilityProvision requirement40
+	{
+		Measurement req40
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 4.0
+}
+
+Capability requirement40
+{	
+	Measurement req40
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature41
+{
+	CapabilityProvision requirement41
+	{
+		Measurement req41
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 9.0
+}
+
+Capability requirement41
+{	
+	Measurement req41
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature42
+{
+	CapabilityProvision requirement42
+	{
+		Measurement req42
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 2.0
+}
+
+Capability requirement42
+{	
+	Measurement req42
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature43
+{
+	CapabilityProvision requirement43
+	{
+		Measurement req43
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 3.0
+}
+
+Capability requirement43
+{	
+	Measurement req43
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature44
+{
+	CapabilityProvision requirement44
+	{
+		Measurement req44
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 1.0
+}
+
+Capability requirement44
+{	
+	Measurement req44
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature45
+{
+	CapabilityProvision requirement45
+	{
+		Measurement req45
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 1.0
+}
+
+Capability requirement45
+{	
+	Measurement req45
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature46
+{
+	CapabilityProvision requirement46
+	{
+		Measurement req46
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 7.0
+}
+
+Capability requirement46
+{	
+	Measurement req46
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature47
+{
+	CapabilityProvision requirement47
+	{
+		Measurement req47
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 1.0
+}
+
+Capability requirement47
+{	
+	Measurement req47
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature48
+{
+	CapabilityProvision requirement48
+	{
+		Measurement req48
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 0.0
+}
+
+Capability requirement48
+{	
+	Measurement req48
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature49
+{
+	CapabilityProvision requirement49
+	{
+		Measurement req49
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 9.0
+}
+
+Capability requirement49
+{	
+	Measurement req49
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature50
+{
+	CapabilityProvision requirement50
+	{
+		Measurement req50
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 10.0
+}
+
+Capability requirement50
+{	
+	Measurement req50
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+
+
+

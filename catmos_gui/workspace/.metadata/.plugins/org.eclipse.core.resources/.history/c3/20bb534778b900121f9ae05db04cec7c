@@ -1,0 +1,97 @@
+	/*
+ * 
+ */
+package ScenarioModel.diagram.navigator;
+
+	/**
+ * @generated
+ */
+public class ScenarioModelNavigatorLinkHelper implements org.eclipse.ui.navigator.ILinkHelper {
+
+	/**
+ * @generated
+ */
+private static org.eclipse.ui.IEditorInput getEditorInput(org.eclipse.gmf.runtime.notation.Diagram diagram) {
+	org.eclipse.emf.ecore.resource.Resource diagramResource = diagram.eResource();
+	for (org.eclipse.emf.ecore.EObject nextEObject : diagramResource.getContents()) {
+		if (nextEObject == diagram) {
+			return new org.eclipse.ui.part.FileEditorInput(org.eclipse.emf.workspace.util.WorkspaceSynchronizer.getFile(diagramResource));
+		}
+		if (nextEObject instanceof org.eclipse.gmf.runtime.notation.Diagram) {
+			break;
+		}
+	}
+	org.eclipse.emf.common.util.URI uri = org.eclipse.emf.ecore.util.EcoreUtil.getURI(diagram);
+String editorName = uri.lastSegment() + '#' + diagram.eResource().getContents().indexOf(diagram);
+org.eclipse.ui.IEditorInput editorInput = new org.eclipse.emf.common.ui.URIEditorInput(uri, editorName);
+	return editorInput;
+}
+
+		/**
+ * @generated
+ */
+public org.eclipse.jface.viewers.IStructuredSelection findSelection(org.eclipse.ui.IEditorInput anInput) {
+	org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDiagramDocument document = ScenarioModel.diagram.part.ScenarioModelDiagramEditorPlugin.getInstance().getDocumentProvider().getDiagramDocument(anInput);
+		if (document == null) {
+	return org.eclipse.jface.viewers.StructuredSelection.EMPTY;
+}
+org.eclipse.gmf.runtime.notation.Diagram diagram = document.getDiagram();
+if (diagram == null || diagram.eResource() == null) {
+	return org.eclipse.jface.viewers.StructuredSelection.EMPTY;
+}
+org.eclipse.core.resources.IFile file = org.eclipse.emf.workspace.util.WorkspaceSynchronizer.getFile(diagram.eResource());
+if (file != null) {
+		ScenarioModel.diagram.navigator.ScenarioModelNavigatorItem item = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorItem(diagram, file, false);
+		return new org.eclipse.jface.viewers.StructuredSelection(item);
+}
+	return org.eclipse.jface.viewers.StructuredSelection.EMPTY;
+}
+	
+		/**
+ * @generated
+ */
+public void activateEditor(org.eclipse.ui.IWorkbenchPage aPage, org.eclipse.jface.viewers.IStructuredSelection aSelection) {
+	if (aSelection == null || aSelection.isEmpty()) {
+		return;
+	}
+	if (false == aSelection.getFirstElement() instanceof ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem) {
+		return;
+	}
+		
+	ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem abstractNavigatorItem = (ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem) aSelection.getFirstElement();
+	org.eclipse.gmf.runtime.notation.View navigatorView = null;
+	if (abstractNavigatorItem instanceof ScenarioModel.diagram.navigator.ScenarioModelNavigatorItem) {
+		navigatorView = ((ScenarioModel.diagram.navigator.ScenarioModelNavigatorItem) abstractNavigatorItem).getView();
+	} else if (abstractNavigatorItem instanceof ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup) {
+		ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup navigatorGroup = (ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup) abstractNavigatorItem;
+		if (navigatorGroup.getParent() instanceof ScenarioModel.diagram.navigator.ScenarioModelNavigatorItem) {
+			navigatorView = ((ScenarioModel.diagram.navigator.ScenarioModelNavigatorItem) navigatorGroup.getParent()).getView();
+		}	else if (navigatorGroup.getParent() instanceof org.eclipse.core.runtime.IAdaptable) {
+	navigatorView = (org.eclipse.gmf.runtime.notation.View) ((org.eclipse.core.runtime.IAdaptable) navigatorGroup.getParent()).getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+}
+		}
+	if (navigatorView == null) {
+		return;
+	}
+	org.eclipse.ui.IEditorInput editorInput = getEditorInput(navigatorView.getDiagram());
+	org.eclipse.ui.IEditorPart editor = aPage.findEditor(editorInput);
+	if (editor == null) {
+		return;
+	}
+	aPage.bringToTop(editor);
+	if (editor instanceof org.eclipse.gmf.runtime.diagram.ui.parts.DiagramEditor) {
+		org.eclipse.gmf.runtime.diagram.ui.parts.DiagramEditor diagramEditor = (org.eclipse.gmf.runtime.diagram.ui.parts.DiagramEditor) editor;
+		org.eclipse.emf.ecore.resource.ResourceSet diagramEditorResourceSet = diagramEditor.getEditingDomain().getResourceSet();
+		org.eclipse.emf.ecore.EObject selectedView = diagramEditorResourceSet.getEObject(org.eclipse.emf.ecore.util.EcoreUtil.getURI(navigatorView), true);	
+		if (selectedView == null) {
+			return;
+		}
+		org.eclipse.gef.GraphicalViewer graphicalViewer = (org.eclipse.gef.GraphicalViewer) diagramEditor.getAdapter(org.eclipse.gef.GraphicalViewer.class);
+		org.eclipse.gef.EditPart selectedEditPart = (org.eclipse.gef.EditPart) graphicalViewer.getEditPartRegistry().get(selectedView);
+		if (selectedEditPart != null) {
+			graphicalViewer.select(selectedEditPart);
+		}
+	}
+}
+	
+	}

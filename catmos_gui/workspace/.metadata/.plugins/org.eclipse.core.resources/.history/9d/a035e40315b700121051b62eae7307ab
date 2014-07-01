@@ -1,0 +1,1984 @@
+	/*
+ * 
+ */
+package Scenario.diagram.part;
+
+	/**
+ * @generated
+ */
+public class ScenarioDiagramUpdater {
+		
+	/**
+ * @generated
+ */
+public static boolean isShortcutOrphaned(org.eclipse.gmf.runtime.notation.View view) {
+	return !view.isSetElement() || view.getElement() == null || view.getElement().eIsProxy();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getSemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		switch (Scenario.diagram.part.ScenarioVisualIDRegistry.getVisualID(view)) {
+		case Scenario.diagram.edit.parts.ScenarioEditPart.VISUAL_ID:
+	return getScenario_1000SemanticChildren(view);
+case Scenario.diagram.edit.parts.CapabilityProvisionCapabilityProvisionMeasurementsCompartmentEditPart.VISUAL_ID:
+	return getCapabilityProvisionCapabilityProvisionMeasurementsCompartment_7001SemanticChildren(view);
+case Scenario.diagram.edit.parts.MeasurementMeasurementCriticalValuesCompartmentEditPart.VISUAL_ID:
+	return getMeasurementMeasurementCriticalValuesCompartment_7002SemanticChildren(view);
+case Scenario.diagram.edit.parts.MeasurementMeasurementBenchmarkValuesCompartmentEditPart.VISUAL_ID:
+	return getMeasurementMeasurementBenchmarkValuesCompartment_7003SemanticChildren(view);
+case Scenario.diagram.edit.parts.MeasurementMeasurementProvidedValuesCompartmentEditPart.VISUAL_ID:
+	return getMeasurementMeasurementProvidedValuesCompartment_7004SemanticChildren(view);
+case Scenario.diagram.edit.parts.FindTradeOffsFindTradeOffsComponentsCompartmentEditPart.VISUAL_ID:
+	return getFindTradeOffsFindTradeOffsComponentsCompartment_7005SemanticChildren(view);
+case Scenario.diagram.edit.parts.FindTradeOffsFindTradeOffsConstraintsCompartmentEditPart.VISUAL_ID:
+	return getFindTradeOffsFindTradeOffsConstraintsCompartment_7006SemanticChildren(view);
+case Scenario.diagram.edit.parts.ThroughLifePlanningThroughLifePlanningComponentsCompartmentEditPart.VISUAL_ID:
+	return getThroughLifePlanningThroughLifePlanningComponentsCompartment_7007SemanticChildren(view);
+case Scenario.diagram.edit.parts.ThroughLifePlanningThroughLifePlanningConstraintsCompartmentEditPart.VISUAL_ID:
+	return getThroughLifePlanningThroughLifePlanningConstraintsCompartment_7008SemanticChildren(view);
+case Scenario.diagram.edit.parts.CapabilityCapabilityMeasurementsCompartmentEditPart.VISUAL_ID:
+	return getCapabilityCapabilityMeasurementsCompartment_7009SemanticChildren(view);
+case Scenario.diagram.edit.parts.ComponentComponentProvidesCompartmentEditPart.VISUAL_ID:
+	return getComponentComponentProvidesCompartment_7010SemanticChildren(view);
+case Scenario.diagram.edit.parts.ComponentComponentUpgradesCompartmentEditPart.VISUAL_ID:
+	return getComponentComponentUpgradesCompartment_7011SemanticChildren(view);
+case Scenario.diagram.edit.parts.ComponentComponentRequiresCompartmentEditPart.VISUAL_ID:
+	return getComponentComponentRequiresCompartment_7012SemanticChildren(view);
+case Scenario.diagram.edit.parts.ComponentComponentCostsCompartmentEditPart.VISUAL_ID:
+	return getComponentComponentCostsCompartment_7013SemanticChildren(view);
+case Scenario.diagram.edit.parts.ComponentComponentPropertiesCompartmentEditPart.VISUAL_ID:
+	return getComponentComponentPropertiesCompartment_7014SemanticChildren(view);
+case Scenario.diagram.edit.parts.CapabilityProvisionCapabilityProvisionMeasurementsCompartment2EditPart.VISUAL_ID:
+	return getCapabilityProvisionCapabilityProvisionMeasurementsCompartment_7015SemanticChildren(view);
+case Scenario.diagram.edit.parts.CapabilityProvisionCapabilityProvisionMeasurementsCompartment3EditPart.VISUAL_ID:
+	return getCapabilityProvisionCapabilityProvisionMeasurementsCompartment_7016SemanticChildren(view);
+case Scenario.diagram.edit.parts.CapabilityCapabilityMeasurementsCompartment2EditPart.VISUAL_ID:
+	return getCapabilityCapabilityMeasurementsCompartment_7017SemanticChildren(view);
+case Scenario.diagram.edit.parts.CapabilityCapabilityMeasurementsCompartment3EditPart.VISUAL_ID:
+	return getCapabilityCapabilityMeasurementsCompartment_7018SemanticChildren(view);
+case Scenario.diagram.edit.parts.CapabilityUpgradeCapabilityUpgradeCapabilityChangesCompartmentEditPart.VISUAL_ID:
+	return getCapabilityUpgradeCapabilityUpgradeCapabilityChangesCompartment_7019SemanticChildren(view);
+case Scenario.diagram.edit.parts.CapabilityChangeCapabilityChangeCapabilitiesCompartmentEditPart.VISUAL_ID:
+	return getCapabilityChangeCapabilityChangeCapabilitiesCompartment_7020SemanticChildren(view);
+case Scenario.diagram.edit.parts.CapabilityProvisionCapabilityProvisionMeasurementsCompartment4EditPart.VISUAL_ID:
+	return getCapabilityProvisionCapabilityProvisionMeasurementsCompartment_7021SemanticChildren(view);
+case Scenario.diagram.edit.parts.CapabilityCapabilityMeasurementsCompartment4EditPart.VISUAL_ID:
+	return getCapabilityCapabilityMeasurementsCompartment_7022SemanticChildren(view);
+case Scenario.diagram.edit.parts.MeasurementMeasurementCriticalValuesCompartment2EditPart.VISUAL_ID:
+	return getMeasurementMeasurementCriticalValuesCompartment_7023SemanticChildren(view);
+case Scenario.diagram.edit.parts.MeasurementMeasurementBenchmarkValuesCompartment2EditPart.VISUAL_ID:
+	return getMeasurementMeasurementBenchmarkValuesCompartment_7024SemanticChildren(view);
+case Scenario.diagram.edit.parts.MeasurementMeasurementProvidedValuesCompartment2EditPart.VISUAL_ID:
+	return getMeasurementMeasurementProvidedValuesCompartment_7025SemanticChildren(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+	/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getScenario_1000SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (!view.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Scenario.Scenario modelElement = (Scenario.Scenario) view.getElement();
+	java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getObjects().iterator(); it.hasNext();) {
+		Scenario.Object childElement = (Scenario.Object) it.next();
+					int visualID = Scenario.diagram.part.ScenarioVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Scenario.diagram.edit.parts.CapabilityProvisionEditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Scenario.diagram.edit.parts.FindTradeOffsEditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Scenario.diagram.edit.parts.ThroughLifePlanningEditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Scenario.diagram.edit.parts.CapabilityEditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Scenario.diagram.edit.parts.QualitativeValueDictionaryEditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Scenario.diagram.edit.parts.ComponentEditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getCapabilityProvisionCapabilityProvisionMeasurementsCompartment_7001SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Scenario.CapabilityProvision modelElement = (Scenario.CapabilityProvision) containerView.getElement();
+	java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getMeasurements().iterator(); it.hasNext();) {
+		Scenario.Measurement childElement = (Scenario.Measurement) it.next();
+					int visualID = Scenario.diagram.part.ScenarioVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Scenario.diagram.edit.parts.MeasurementEditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getMeasurementMeasurementCriticalValuesCompartment_7002SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Scenario.Measurement modelElement = (Scenario.Measurement) containerView.getElement();
+	java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getCriticalValues().iterator(); it.hasNext();) {
+		Scenario.QualitativeValue childElement = (Scenario.QualitativeValue) it.next();
+					int visualID = Scenario.diagram.part.ScenarioVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Scenario.diagram.edit.parts.QualitativeValueEditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getMeasurementMeasurementBenchmarkValuesCompartment_7003SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Scenario.Measurement modelElement = (Scenario.Measurement) containerView.getElement();
+	java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getBenchmarkValues().iterator(); it.hasNext();) {
+		Scenario.QualitativeValue childElement = (Scenario.QualitativeValue) it.next();
+					int visualID = Scenario.diagram.part.ScenarioVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Scenario.diagram.edit.parts.QualitativeValue2EditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getMeasurementMeasurementProvidedValuesCompartment_7004SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Scenario.Measurement modelElement = (Scenario.Measurement) containerView.getElement();
+	java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getProvidedValues().iterator(); it.hasNext();) {
+		Scenario.QualitativeValue childElement = (Scenario.QualitativeValue) it.next();
+					int visualID = Scenario.diagram.part.ScenarioVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Scenario.diagram.edit.parts.QualitativeValue3EditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getFindTradeOffsFindTradeOffsComponentsCompartment_7005SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Scenario.FindTradeOffs modelElement = (Scenario.FindTradeOffs) containerView.getElement();
+	java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getComponents().iterator(); it.hasNext();) {
+		Scenario.ComponentU childElement = (Scenario.ComponentU) it.next();
+					int visualID = Scenario.diagram.part.ScenarioVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Scenario.diagram.edit.parts.ExistingComponentEditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Scenario.diagram.edit.parts.AcquirableComponentEditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Scenario.diagram.edit.parts.ComponentUEditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getFindTradeOffsFindTradeOffsConstraintsCompartment_7006SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Scenario.FindTradeOffs modelElement = (Scenario.FindTradeOffs) containerView.getElement();
+	java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getConstraints().iterator(); it.hasNext();) {
+		Scenario.Constraint childElement = (Scenario.Constraint) it.next();
+					int visualID = Scenario.diagram.part.ScenarioVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Scenario.diagram.edit.parts.DesireHighEditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Scenario.diagram.edit.parts.DesireLowEditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Scenario.diagram.edit.parts.BudgetEditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getThroughLifePlanningThroughLifePlanningComponentsCompartment_7007SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Scenario.ThroughLifePlanning modelElement = (Scenario.ThroughLifePlanning) containerView.getElement();
+	java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getComponents().iterator(); it.hasNext();) {
+		Scenario.ComponentU childElement = (Scenario.ComponentU) it.next();
+					int visualID = Scenario.diagram.part.ScenarioVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Scenario.diagram.edit.parts.ExistingComponent2EditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Scenario.diagram.edit.parts.AcquirableComponent2EditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Scenario.diagram.edit.parts.ComponentU2EditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getThroughLifePlanningThroughLifePlanningConstraintsCompartment_7008SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Scenario.ThroughLifePlanning modelElement = (Scenario.ThroughLifePlanning) containerView.getElement();
+	java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getConstraints().iterator(); it.hasNext();) {
+		Scenario.Constraint childElement = (Scenario.Constraint) it.next();
+					int visualID = Scenario.diagram.part.ScenarioVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Scenario.diagram.edit.parts.DesireHigh2EditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Scenario.diagram.edit.parts.DesireLow2EditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Scenario.diagram.edit.parts.Budget2EditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getCapabilityCapabilityMeasurementsCompartment_7009SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Scenario.Capability modelElement = (Scenario.Capability) containerView.getElement();
+	java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getMeasurements().iterator(); it.hasNext();) {
+		Scenario.Measurement childElement = (Scenario.Measurement) it.next();
+					int visualID = Scenario.diagram.part.ScenarioVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Scenario.diagram.edit.parts.MeasurementEditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getComponentComponentProvidesCompartment_7010SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Scenario.Component modelElement = (Scenario.Component) containerView.getElement();
+	java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getProvides().iterator(); it.hasNext();) {
+		Scenario.Capability childElement = (Scenario.Capability) it.next();
+					int visualID = Scenario.diagram.part.ScenarioVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Scenario.diagram.edit.parts.CapabilityProvision2EditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Scenario.diagram.edit.parts.Capability2EditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getComponentComponentUpgradesCompartment_7011SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Scenario.Component modelElement = (Scenario.Component) containerView.getElement();
+	java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getUpgrades().iterator(); it.hasNext();) {
+		Scenario.CapabilityUpgrade childElement = (Scenario.CapabilityUpgrade) it.next();
+					int visualID = Scenario.diagram.part.ScenarioVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Scenario.diagram.edit.parts.CapabilityUpgradeEditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getComponentComponentRequiresCompartment_7012SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Scenario.Component modelElement = (Scenario.Component) containerView.getElement();
+	java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getRequires().iterator(); it.hasNext();) {
+		Scenario.Capability childElement = (Scenario.Capability) it.next();
+					int visualID = Scenario.diagram.part.ScenarioVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Scenario.diagram.edit.parts.CapabilityProvision3EditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Scenario.diagram.edit.parts.Capability3EditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getComponentComponentCostsCompartment_7013SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Scenario.Component modelElement = (Scenario.Component) containerView.getElement();
+	java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getCosts().iterator(); it.hasNext();) {
+		Scenario.Cost childElement = (Scenario.Cost) it.next();
+					int visualID = Scenario.diagram.part.ScenarioVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Scenario.diagram.edit.parts.CostEditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getComponentComponentPropertiesCompartment_7014SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Scenario.Component modelElement = (Scenario.Component) containerView.getElement();
+	java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getProperties().iterator(); it.hasNext();) {
+		Scenario.Measurement childElement = (Scenario.Measurement) it.next();
+					int visualID = Scenario.diagram.part.ScenarioVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Scenario.diagram.edit.parts.Measurement2EditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getCapabilityProvisionCapabilityProvisionMeasurementsCompartment_7015SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Scenario.CapabilityProvision modelElement = (Scenario.CapabilityProvision) containerView.getElement();
+	java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getMeasurements().iterator(); it.hasNext();) {
+		Scenario.Measurement childElement = (Scenario.Measurement) it.next();
+					int visualID = Scenario.diagram.part.ScenarioVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Scenario.diagram.edit.parts.MeasurementEditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getCapabilityProvisionCapabilityProvisionMeasurementsCompartment_7016SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Scenario.CapabilityProvision modelElement = (Scenario.CapabilityProvision) containerView.getElement();
+	java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getMeasurements().iterator(); it.hasNext();) {
+		Scenario.Measurement childElement = (Scenario.Measurement) it.next();
+					int visualID = Scenario.diagram.part.ScenarioVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Scenario.diagram.edit.parts.MeasurementEditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getCapabilityCapabilityMeasurementsCompartment_7017SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Scenario.Capability modelElement = (Scenario.Capability) containerView.getElement();
+	java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getMeasurements().iterator(); it.hasNext();) {
+		Scenario.Measurement childElement = (Scenario.Measurement) it.next();
+					int visualID = Scenario.diagram.part.ScenarioVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Scenario.diagram.edit.parts.MeasurementEditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getCapabilityCapabilityMeasurementsCompartment_7018SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Scenario.Capability modelElement = (Scenario.Capability) containerView.getElement();
+	java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getMeasurements().iterator(); it.hasNext();) {
+		Scenario.Measurement childElement = (Scenario.Measurement) it.next();
+					int visualID = Scenario.diagram.part.ScenarioVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Scenario.diagram.edit.parts.MeasurementEditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getCapabilityUpgradeCapabilityUpgradeCapabilityChangesCompartment_7019SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Scenario.CapabilityUpgrade modelElement = (Scenario.CapabilityUpgrade) containerView.getElement();
+	java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getCapabilityChanges().iterator(); it.hasNext();) {
+		Scenario.CapabilityChange childElement = (Scenario.CapabilityChange) it.next();
+					int visualID = Scenario.diagram.part.ScenarioVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Scenario.diagram.edit.parts.CapabilityChangeEditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getCapabilityChangeCapabilityChangeCapabilitiesCompartment_7020SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Scenario.CapabilityChange modelElement = (Scenario.CapabilityChange) containerView.getElement();
+	java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getCapabilities().iterator(); it.hasNext();) {
+		Scenario.Capability childElement = (Scenario.Capability) it.next();
+					int visualID = Scenario.diagram.part.ScenarioVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Scenario.diagram.edit.parts.CapabilityProvision4EditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Scenario.diagram.edit.parts.Capability4EditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getCapabilityProvisionCapabilityProvisionMeasurementsCompartment_7021SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Scenario.CapabilityProvision modelElement = (Scenario.CapabilityProvision) containerView.getElement();
+	java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getMeasurements().iterator(); it.hasNext();) {
+		Scenario.Measurement childElement = (Scenario.Measurement) it.next();
+					int visualID = Scenario.diagram.part.ScenarioVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Scenario.diagram.edit.parts.MeasurementEditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getCapabilityCapabilityMeasurementsCompartment_7022SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Scenario.Capability modelElement = (Scenario.Capability) containerView.getElement();
+	java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getMeasurements().iterator(); it.hasNext();) {
+		Scenario.Measurement childElement = (Scenario.Measurement) it.next();
+					int visualID = Scenario.diagram.part.ScenarioVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Scenario.diagram.edit.parts.MeasurementEditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getMeasurementMeasurementCriticalValuesCompartment_7023SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Scenario.Measurement modelElement = (Scenario.Measurement) containerView.getElement();
+	java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getCriticalValues().iterator(); it.hasNext();) {
+		Scenario.QualitativeValue childElement = (Scenario.QualitativeValue) it.next();
+					int visualID = Scenario.diagram.part.ScenarioVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Scenario.diagram.edit.parts.QualitativeValueEditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getMeasurementMeasurementBenchmarkValuesCompartment_7024SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Scenario.Measurement modelElement = (Scenario.Measurement) containerView.getElement();
+	java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getBenchmarkValues().iterator(); it.hasNext();) {
+		Scenario.QualitativeValue childElement = (Scenario.QualitativeValue) it.next();
+					int visualID = Scenario.diagram.part.ScenarioVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Scenario.diagram.edit.parts.QualitativeValue2EditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioNodeDescriptor> getMeasurementMeasurementProvidedValuesCompartment_7025SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Scenario.Measurement modelElement = (Scenario.Measurement) containerView.getElement();
+	java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getProvidedValues().iterator(); it.hasNext();) {
+		Scenario.QualitativeValue childElement = (Scenario.QualitativeValue) it.next();
+					int visualID = Scenario.diagram.part.ScenarioVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Scenario.diagram.edit.parts.QualitativeValue3EditPart.VISUAL_ID) {
+	result.add(new Scenario.diagram.part.ScenarioNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (Scenario.diagram.part.ScenarioVisualIDRegistry.getVisualID(view)) {
+		case Scenario.diagram.edit.parts.ScenarioEditPart.VISUAL_ID:
+	return getScenario_1000ContainedLinks(view);
+case Scenario.diagram.edit.parts.CapabilityProvisionEditPart.VISUAL_ID:
+	return getCapabilityProvision_2001ContainedLinks(view);
+case Scenario.diagram.edit.parts.FindTradeOffsEditPart.VISUAL_ID:
+	return getFindTradeOffs_2002ContainedLinks(view);
+case Scenario.diagram.edit.parts.ThroughLifePlanningEditPart.VISUAL_ID:
+	return getThroughLifePlanning_2003ContainedLinks(view);
+case Scenario.diagram.edit.parts.CapabilityEditPart.VISUAL_ID:
+	return getCapability_2004ContainedLinks(view);
+case Scenario.diagram.edit.parts.QualitativeValueDictionaryEditPart.VISUAL_ID:
+	return getQualitativeValueDictionary_2005ContainedLinks(view);
+case Scenario.diagram.edit.parts.ComponentEditPart.VISUAL_ID:
+	return getComponent_2006ContainedLinks(view);
+case Scenario.diagram.edit.parts.MeasurementEditPart.VISUAL_ID:
+	return getMeasurement_3001ContainedLinks(view);
+case Scenario.diagram.edit.parts.QualitativeValueEditPart.VISUAL_ID:
+	return getQualitativeValue_3002ContainedLinks(view);
+case Scenario.diagram.edit.parts.QualitativeValue2EditPart.VISUAL_ID:
+	return getQualitativeValue_3003ContainedLinks(view);
+case Scenario.diagram.edit.parts.QualitativeValue3EditPart.VISUAL_ID:
+	return getQualitativeValue_3004ContainedLinks(view);
+case Scenario.diagram.edit.parts.ExistingComponentEditPart.VISUAL_ID:
+	return getExistingComponent_3005ContainedLinks(view);
+case Scenario.diagram.edit.parts.AcquirableComponentEditPart.VISUAL_ID:
+	return getAcquirableComponent_3006ContainedLinks(view);
+case Scenario.diagram.edit.parts.DesireHighEditPart.VISUAL_ID:
+	return getDesireHigh_3007ContainedLinks(view);
+case Scenario.diagram.edit.parts.DesireLowEditPart.VISUAL_ID:
+	return getDesireLow_3008ContainedLinks(view);
+case Scenario.diagram.edit.parts.BudgetEditPart.VISUAL_ID:
+	return getBudget_3009ContainedLinks(view);
+case Scenario.diagram.edit.parts.ComponentUEditPart.VISUAL_ID:
+	return getComponentU_3010ContainedLinks(view);
+case Scenario.diagram.edit.parts.ExistingComponent2EditPart.VISUAL_ID:
+	return getExistingComponent_3011ContainedLinks(view);
+case Scenario.diagram.edit.parts.AcquirableComponent2EditPart.VISUAL_ID:
+	return getAcquirableComponent_3012ContainedLinks(view);
+case Scenario.diagram.edit.parts.DesireHigh2EditPart.VISUAL_ID:
+	return getDesireHigh_3013ContainedLinks(view);
+case Scenario.diagram.edit.parts.DesireLow2EditPart.VISUAL_ID:
+	return getDesireLow_3014ContainedLinks(view);
+case Scenario.diagram.edit.parts.Budget2EditPart.VISUAL_ID:
+	return getBudget_3015ContainedLinks(view);
+case Scenario.diagram.edit.parts.ComponentU2EditPart.VISUAL_ID:
+	return getComponentU_3016ContainedLinks(view);
+case Scenario.diagram.edit.parts.CapabilityProvision2EditPart.VISUAL_ID:
+	return getCapabilityProvision_3017ContainedLinks(view);
+case Scenario.diagram.edit.parts.CapabilityProvision3EditPart.VISUAL_ID:
+	return getCapabilityProvision_3018ContainedLinks(view);
+case Scenario.diagram.edit.parts.Capability2EditPart.VISUAL_ID:
+	return getCapability_3019ContainedLinks(view);
+case Scenario.diagram.edit.parts.Capability3EditPart.VISUAL_ID:
+	return getCapability_3020ContainedLinks(view);
+case Scenario.diagram.edit.parts.CapabilityUpgradeEditPart.VISUAL_ID:
+	return getCapabilityUpgrade_3021ContainedLinks(view);
+case Scenario.diagram.edit.parts.CapabilityChangeEditPart.VISUAL_ID:
+	return getCapabilityChange_3022ContainedLinks(view);
+case Scenario.diagram.edit.parts.CapabilityProvision4EditPart.VISUAL_ID:
+	return getCapabilityProvision_3023ContainedLinks(view);
+case Scenario.diagram.edit.parts.Capability4EditPart.VISUAL_ID:
+	return getCapability_3024ContainedLinks(view);
+case Scenario.diagram.edit.parts.CostEditPart.VISUAL_ID:
+	return getCost_3025ContainedLinks(view);
+case Scenario.diagram.edit.parts.Measurement2EditPart.VISUAL_ID:
+	return getMeasurement_3026ContainedLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getIncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (Scenario.diagram.part.ScenarioVisualIDRegistry.getVisualID(view)) {
+		case Scenario.diagram.edit.parts.CapabilityProvisionEditPart.VISUAL_ID:
+	return getCapabilityProvision_2001IncomingLinks(view);
+case Scenario.diagram.edit.parts.FindTradeOffsEditPart.VISUAL_ID:
+	return getFindTradeOffs_2002IncomingLinks(view);
+case Scenario.diagram.edit.parts.ThroughLifePlanningEditPart.VISUAL_ID:
+	return getThroughLifePlanning_2003IncomingLinks(view);
+case Scenario.diagram.edit.parts.CapabilityEditPart.VISUAL_ID:
+	return getCapability_2004IncomingLinks(view);
+case Scenario.diagram.edit.parts.QualitativeValueDictionaryEditPart.VISUAL_ID:
+	return getQualitativeValueDictionary_2005IncomingLinks(view);
+case Scenario.diagram.edit.parts.ComponentEditPart.VISUAL_ID:
+	return getComponent_2006IncomingLinks(view);
+case Scenario.diagram.edit.parts.MeasurementEditPart.VISUAL_ID:
+	return getMeasurement_3001IncomingLinks(view);
+case Scenario.diagram.edit.parts.QualitativeValueEditPart.VISUAL_ID:
+	return getQualitativeValue_3002IncomingLinks(view);
+case Scenario.diagram.edit.parts.QualitativeValue2EditPart.VISUAL_ID:
+	return getQualitativeValue_3003IncomingLinks(view);
+case Scenario.diagram.edit.parts.QualitativeValue3EditPart.VISUAL_ID:
+	return getQualitativeValue_3004IncomingLinks(view);
+case Scenario.diagram.edit.parts.ExistingComponentEditPart.VISUAL_ID:
+	return getExistingComponent_3005IncomingLinks(view);
+case Scenario.diagram.edit.parts.AcquirableComponentEditPart.VISUAL_ID:
+	return getAcquirableComponent_3006IncomingLinks(view);
+case Scenario.diagram.edit.parts.DesireHighEditPart.VISUAL_ID:
+	return getDesireHigh_3007IncomingLinks(view);
+case Scenario.diagram.edit.parts.DesireLowEditPart.VISUAL_ID:
+	return getDesireLow_3008IncomingLinks(view);
+case Scenario.diagram.edit.parts.BudgetEditPart.VISUAL_ID:
+	return getBudget_3009IncomingLinks(view);
+case Scenario.diagram.edit.parts.ComponentUEditPart.VISUAL_ID:
+	return getComponentU_3010IncomingLinks(view);
+case Scenario.diagram.edit.parts.ExistingComponent2EditPart.VISUAL_ID:
+	return getExistingComponent_3011IncomingLinks(view);
+case Scenario.diagram.edit.parts.AcquirableComponent2EditPart.VISUAL_ID:
+	return getAcquirableComponent_3012IncomingLinks(view);
+case Scenario.diagram.edit.parts.DesireHigh2EditPart.VISUAL_ID:
+	return getDesireHigh_3013IncomingLinks(view);
+case Scenario.diagram.edit.parts.DesireLow2EditPart.VISUAL_ID:
+	return getDesireLow_3014IncomingLinks(view);
+case Scenario.diagram.edit.parts.Budget2EditPart.VISUAL_ID:
+	return getBudget_3015IncomingLinks(view);
+case Scenario.diagram.edit.parts.ComponentU2EditPart.VISUAL_ID:
+	return getComponentU_3016IncomingLinks(view);
+case Scenario.diagram.edit.parts.CapabilityProvision2EditPart.VISUAL_ID:
+	return getCapabilityProvision_3017IncomingLinks(view);
+case Scenario.diagram.edit.parts.CapabilityProvision3EditPart.VISUAL_ID:
+	return getCapabilityProvision_3018IncomingLinks(view);
+case Scenario.diagram.edit.parts.Capability2EditPart.VISUAL_ID:
+	return getCapability_3019IncomingLinks(view);
+case Scenario.diagram.edit.parts.Capability3EditPart.VISUAL_ID:
+	return getCapability_3020IncomingLinks(view);
+case Scenario.diagram.edit.parts.CapabilityUpgradeEditPart.VISUAL_ID:
+	return getCapabilityUpgrade_3021IncomingLinks(view);
+case Scenario.diagram.edit.parts.CapabilityChangeEditPart.VISUAL_ID:
+	return getCapabilityChange_3022IncomingLinks(view);
+case Scenario.diagram.edit.parts.CapabilityProvision4EditPart.VISUAL_ID:
+	return getCapabilityProvision_3023IncomingLinks(view);
+case Scenario.diagram.edit.parts.Capability4EditPart.VISUAL_ID:
+	return getCapability_3024IncomingLinks(view);
+case Scenario.diagram.edit.parts.CostEditPart.VISUAL_ID:
+	return getCost_3025IncomingLinks(view);
+case Scenario.diagram.edit.parts.Measurement2EditPart.VISUAL_ID:
+	return getMeasurement_3026IncomingLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getOutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (Scenario.diagram.part.ScenarioVisualIDRegistry.getVisualID(view)) {
+		case Scenario.diagram.edit.parts.CapabilityProvisionEditPart.VISUAL_ID:
+	return getCapabilityProvision_2001OutgoingLinks(view);
+case Scenario.diagram.edit.parts.FindTradeOffsEditPart.VISUAL_ID:
+	return getFindTradeOffs_2002OutgoingLinks(view);
+case Scenario.diagram.edit.parts.ThroughLifePlanningEditPart.VISUAL_ID:
+	return getThroughLifePlanning_2003OutgoingLinks(view);
+case Scenario.diagram.edit.parts.CapabilityEditPart.VISUAL_ID:
+	return getCapability_2004OutgoingLinks(view);
+case Scenario.diagram.edit.parts.QualitativeValueDictionaryEditPart.VISUAL_ID:
+	return getQualitativeValueDictionary_2005OutgoingLinks(view);
+case Scenario.diagram.edit.parts.ComponentEditPart.VISUAL_ID:
+	return getComponent_2006OutgoingLinks(view);
+case Scenario.diagram.edit.parts.MeasurementEditPart.VISUAL_ID:
+	return getMeasurement_3001OutgoingLinks(view);
+case Scenario.diagram.edit.parts.QualitativeValueEditPart.VISUAL_ID:
+	return getQualitativeValue_3002OutgoingLinks(view);
+case Scenario.diagram.edit.parts.QualitativeValue2EditPart.VISUAL_ID:
+	return getQualitativeValue_3003OutgoingLinks(view);
+case Scenario.diagram.edit.parts.QualitativeValue3EditPart.VISUAL_ID:
+	return getQualitativeValue_3004OutgoingLinks(view);
+case Scenario.diagram.edit.parts.ExistingComponentEditPart.VISUAL_ID:
+	return getExistingComponent_3005OutgoingLinks(view);
+case Scenario.diagram.edit.parts.AcquirableComponentEditPart.VISUAL_ID:
+	return getAcquirableComponent_3006OutgoingLinks(view);
+case Scenario.diagram.edit.parts.DesireHighEditPart.VISUAL_ID:
+	return getDesireHigh_3007OutgoingLinks(view);
+case Scenario.diagram.edit.parts.DesireLowEditPart.VISUAL_ID:
+	return getDesireLow_3008OutgoingLinks(view);
+case Scenario.diagram.edit.parts.BudgetEditPart.VISUAL_ID:
+	return getBudget_3009OutgoingLinks(view);
+case Scenario.diagram.edit.parts.ComponentUEditPart.VISUAL_ID:
+	return getComponentU_3010OutgoingLinks(view);
+case Scenario.diagram.edit.parts.ExistingComponent2EditPart.VISUAL_ID:
+	return getExistingComponent_3011OutgoingLinks(view);
+case Scenario.diagram.edit.parts.AcquirableComponent2EditPart.VISUAL_ID:
+	return getAcquirableComponent_3012OutgoingLinks(view);
+case Scenario.diagram.edit.parts.DesireHigh2EditPart.VISUAL_ID:
+	return getDesireHigh_3013OutgoingLinks(view);
+case Scenario.diagram.edit.parts.DesireLow2EditPart.VISUAL_ID:
+	return getDesireLow_3014OutgoingLinks(view);
+case Scenario.diagram.edit.parts.Budget2EditPart.VISUAL_ID:
+	return getBudget_3015OutgoingLinks(view);
+case Scenario.diagram.edit.parts.ComponentU2EditPart.VISUAL_ID:
+	return getComponentU_3016OutgoingLinks(view);
+case Scenario.diagram.edit.parts.CapabilityProvision2EditPart.VISUAL_ID:
+	return getCapabilityProvision_3017OutgoingLinks(view);
+case Scenario.diagram.edit.parts.CapabilityProvision3EditPart.VISUAL_ID:
+	return getCapabilityProvision_3018OutgoingLinks(view);
+case Scenario.diagram.edit.parts.Capability2EditPart.VISUAL_ID:
+	return getCapability_3019OutgoingLinks(view);
+case Scenario.diagram.edit.parts.Capability3EditPart.VISUAL_ID:
+	return getCapability_3020OutgoingLinks(view);
+case Scenario.diagram.edit.parts.CapabilityUpgradeEditPart.VISUAL_ID:
+	return getCapabilityUpgrade_3021OutgoingLinks(view);
+case Scenario.diagram.edit.parts.CapabilityChangeEditPart.VISUAL_ID:
+	return getCapabilityChange_3022OutgoingLinks(view);
+case Scenario.diagram.edit.parts.CapabilityProvision4EditPart.VISUAL_ID:
+	return getCapabilityProvision_3023OutgoingLinks(view);
+case Scenario.diagram.edit.parts.Capability4EditPart.VISUAL_ID:
+	return getCapability_3024OutgoingLinks(view);
+case Scenario.diagram.edit.parts.CostEditPart.VISUAL_ID:
+	return getCost_3025OutgoingLinks(view);
+case Scenario.diagram.edit.parts.Measurement2EditPart.VISUAL_ID:
+	return getMeasurement_3026OutgoingLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getScenario_1000ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapabilityProvision_2001ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.CapabilityProvision modelElement = (Scenario.CapabilityProvision) view.getElement();
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Accumulation_4001(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getFindTradeOffs_2002ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getThroughLifePlanning_2003ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapability_2004ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.Capability modelElement = (Scenario.Capability) view.getElement();
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Accumulation_4001(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getQualitativeValueDictionary_2005ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.QualitativeValueDictionary modelElement = (Scenario.QualitativeValueDictionary) view.getElement();
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_QualitativeValueDictionary_GreaterThan_4005(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getComponent_2006ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getMeasurement_3001ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.Measurement modelElement = (Scenario.Measurement) view.getElement();
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Measurement_Aggregates_4004(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getQualitativeValue_3002ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getQualitativeValue_3003ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getQualitativeValue_3004ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getExistingComponent_3005ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getAcquirableComponent_3006ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getDesireHigh_3007ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getDesireLow_3008ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getBudget_3009ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getComponentU_3010ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getExistingComponent_3011ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getAcquirableComponent_3012ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getDesireHigh_3013ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getDesireLow_3014ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getBudget_3015ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getComponentU_3016ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapabilityProvision_3017ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.CapabilityProvision modelElement = (Scenario.CapabilityProvision) view.getElement();
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Accumulation_4001(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapabilityProvision_3018ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.CapabilityProvision modelElement = (Scenario.CapabilityProvision) view.getElement();
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Accumulation_4001(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapability_3019ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.Capability modelElement = (Scenario.Capability) view.getElement();
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Accumulation_4001(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapability_3020ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.Capability modelElement = (Scenario.Capability) view.getElement();
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Accumulation_4001(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapabilityUpgrade_3021ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.CapabilityUpgrade modelElement = (Scenario.CapabilityUpgrade) view.getElement();
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_CapabilityUpgrade_Upgrading_4006(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapabilityChange_3022ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapabilityProvision_3023ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.CapabilityProvision modelElement = (Scenario.CapabilityProvision) view.getElement();
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Accumulation_4001(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapability_3024ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.Capability modelElement = (Scenario.Capability) view.getElement();
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Accumulation_4001(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCost_3025ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getMeasurement_3026ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.Measurement modelElement = (Scenario.Measurement) view.getElement();
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Measurement_Aggregates_4004(modelElement));	
+	return result;
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapabilityProvision_2001IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.CapabilityProvision modelElement = (Scenario.CapabilityProvision) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement, crossReferences));	
+	result.addAll(getIncomingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getFindTradeOffs_2002IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getThroughLifePlanning_2003IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapability_2004IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.Capability modelElement = (Scenario.Capability) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement, crossReferences));	
+	result.addAll(getIncomingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getQualitativeValueDictionary_2005IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.QualitativeValueDictionary modelElement = (Scenario.QualitativeValueDictionary) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_QualitativeValueDictionary_GreaterThan_4005(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getComponent_2006IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.Component modelElement = (Scenario.Component) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_CapabilityUpgrade_Upgrading_4006(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getMeasurement_3001IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.Measurement modelElement = (Scenario.Measurement) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_Capability_Accumulation_4001(modelElement, crossReferences));	
+	result.addAll(getIncomingFeatureModelFacetLinks_Measurement_Aggregates_4004(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getQualitativeValue_3002IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getQualitativeValue_3003IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getQualitativeValue_3004IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getExistingComponent_3005IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getAcquirableComponent_3006IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getDesireHigh_3007IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getDesireLow_3008IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getBudget_3009IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getComponentU_3010IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getExistingComponent_3011IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getAcquirableComponent_3012IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getDesireHigh_3013IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getDesireLow_3014IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getBudget_3015IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getComponentU_3016IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapabilityProvision_3017IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.CapabilityProvision modelElement = (Scenario.CapabilityProvision) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement, crossReferences));	
+	result.addAll(getIncomingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapabilityProvision_3018IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.CapabilityProvision modelElement = (Scenario.CapabilityProvision) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement, crossReferences));	
+	result.addAll(getIncomingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapability_3019IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.Capability modelElement = (Scenario.Capability) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement, crossReferences));	
+	result.addAll(getIncomingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapability_3020IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.Capability modelElement = (Scenario.Capability) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement, crossReferences));	
+	result.addAll(getIncomingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapabilityUpgrade_3021IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapabilityChange_3022IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapabilityProvision_3023IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.CapabilityProvision modelElement = (Scenario.CapabilityProvision) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement, crossReferences));	
+	result.addAll(getIncomingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapability_3024IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.Capability modelElement = (Scenario.Capability) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement, crossReferences));	
+	result.addAll(getIncomingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCost_3025IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getMeasurement_3026IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.Measurement modelElement = (Scenario.Measurement) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_Capability_Accumulation_4001(modelElement, crossReferences));	
+	result.addAll(getIncomingFeatureModelFacetLinks_Measurement_Aggregates_4004(modelElement, crossReferences));	
+	return result;
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapabilityProvision_2001OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.CapabilityProvision modelElement = (Scenario.CapabilityProvision) view.getElement();
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Accumulation_4001(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getFindTradeOffs_2002OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getThroughLifePlanning_2003OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapability_2004OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.Capability modelElement = (Scenario.Capability) view.getElement();
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Accumulation_4001(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getQualitativeValueDictionary_2005OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.QualitativeValueDictionary modelElement = (Scenario.QualitativeValueDictionary) view.getElement();
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_QualitativeValueDictionary_GreaterThan_4005(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getComponent_2006OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getMeasurement_3001OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.Measurement modelElement = (Scenario.Measurement) view.getElement();
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Measurement_Aggregates_4004(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getQualitativeValue_3002OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getQualitativeValue_3003OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getQualitativeValue_3004OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getExistingComponent_3005OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getAcquirableComponent_3006OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getDesireHigh_3007OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getDesireLow_3008OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getBudget_3009OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getComponentU_3010OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getExistingComponent_3011OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getAcquirableComponent_3012OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getDesireHigh_3013OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getDesireLow_3014OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getBudget_3015OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getComponentU_3016OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapabilityProvision_3017OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.CapabilityProvision modelElement = (Scenario.CapabilityProvision) view.getElement();
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Accumulation_4001(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapabilityProvision_3018OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.CapabilityProvision modelElement = (Scenario.CapabilityProvision) view.getElement();
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Accumulation_4001(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapability_3019OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.Capability modelElement = (Scenario.Capability) view.getElement();
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Accumulation_4001(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapability_3020OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.Capability modelElement = (Scenario.Capability) view.getElement();
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Accumulation_4001(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapabilityUpgrade_3021OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.CapabilityUpgrade modelElement = (Scenario.CapabilityUpgrade) view.getElement();
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_CapabilityUpgrade_Upgrading_4006(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapabilityChange_3022OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapabilityProvision_3023OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.CapabilityProvision modelElement = (Scenario.CapabilityProvision) view.getElement();
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Accumulation_4001(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCapability_3024OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.Capability modelElement = (Scenario.Capability) view.getElement();
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Accumulation_4001(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getCost_3025OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Scenario.diagram.part.ScenarioLinkDescriptor> getMeasurement_3026OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Scenario.Measurement modelElement = (Scenario.Measurement) view.getElement();
+		java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Measurement_Aggregates_4004(modelElement));	
+	return result;
+}
+		
+/**
+ * @generated
+ */
+private static java.util.Collection<Scenario.diagram.part.ScenarioLinkDescriptor> getIncomingFeatureModelFacetLinks_Capability_Accumulation_4001(Scenario.Measurement target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() == Scenario.ScenarioPackage.eINSTANCE.getCapability_Accumulation()) {
+	result.add(new Scenario.diagram.part.ScenarioLinkDescriptor(setting.getEObject(), target, Scenario.diagram.providers.ScenarioElementTypes.CapabilityAccumulation_4001, Scenario.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID));
+}
+	}
+	return result;	
+}
+
+/**
+ * @generated
+ */
+private static java.util.Collection<Scenario.diagram.part.ScenarioLinkDescriptor> getIncomingFeatureModelFacetLinks_Capability_Decomposes_4002(Scenario.Capability target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() == Scenario.ScenarioPackage.eINSTANCE.getCapability_Decomposes()) {
+	result.add(new Scenario.diagram.part.ScenarioLinkDescriptor(setting.getEObject(), target, Scenario.diagram.providers.ScenarioElementTypes.CapabilityDecomposes_4002, Scenario.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID));
+}
+	}
+	return result;	
+}
+
+/**
+ * @generated
+ */
+private static java.util.Collection<Scenario.diagram.part.ScenarioLinkDescriptor> getIncomingFeatureModelFacetLinks_Capability_Satisfies_4003(Scenario.Capability target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() == Scenario.ScenarioPackage.eINSTANCE.getCapability_Satisfies()) {
+	result.add(new Scenario.diagram.part.ScenarioLinkDescriptor(setting.getEObject(), target, Scenario.diagram.providers.ScenarioElementTypes.CapabilitySatisfies_4003, Scenario.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID));
+}
+	}
+	return result;	
+}
+
+/**
+ * @generated
+ */
+private static java.util.Collection<Scenario.diagram.part.ScenarioLinkDescriptor> getIncomingFeatureModelFacetLinks_Measurement_Aggregates_4004(Scenario.Measurement target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() == Scenario.ScenarioPackage.eINSTANCE.getMeasurement_Aggregates()) {
+	result.add(new Scenario.diagram.part.ScenarioLinkDescriptor(setting.getEObject(), target, Scenario.diagram.providers.ScenarioElementTypes.MeasurementAggregates_4004, Scenario.diagram.edit.parts.MeasurementAggregatesEditPart.VISUAL_ID));
+}
+	}
+	return result;	
+}
+
+/**
+ * @generated
+ */
+private static java.util.Collection<Scenario.diagram.part.ScenarioLinkDescriptor> getIncomingFeatureModelFacetLinks_QualitativeValueDictionary_GreaterThan_4005(Scenario.QualitativeValueDictionary target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() == Scenario.ScenarioPackage.eINSTANCE.getQualitativeValueDictionary_GreaterThan()) {
+	result.add(new Scenario.diagram.part.ScenarioLinkDescriptor(setting.getEObject(), target, Scenario.diagram.providers.ScenarioElementTypes.QualitativeValueDictionaryGreaterThan_4005, Scenario.diagram.edit.parts.QualitativeValueDictionaryGreaterThanEditPart.VISUAL_ID));
+}
+	}
+	return result;	
+}
+
+/**
+ * @generated
+ */
+private static java.util.Collection<Scenario.diagram.part.ScenarioLinkDescriptor> getIncomingFeatureModelFacetLinks_CapabilityUpgrade_Upgrading_4006(Scenario.Component target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() == Scenario.ScenarioPackage.eINSTANCE.getCapabilityUpgrade_Upgrading()) {
+	result.add(new Scenario.diagram.part.ScenarioLinkDescriptor(setting.getEObject(), target, Scenario.diagram.providers.ScenarioElementTypes.CapabilityUpgradeUpgrading_4006, Scenario.diagram.edit.parts.CapabilityUpgradeUpgradingEditPart.VISUAL_ID));
+}
+	}
+	return result;	
+}
+		
+	/**
+ * @generated
+ */
+private static java.util.Collection<Scenario.diagram.part.ScenarioLinkDescriptor> getOutgoingFeatureModelFacetLinks_Capability_Accumulation_4001(Scenario.Capability source) {
+	java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		Scenario.Measurement destination = source.getAccumulation();
+	if (destination == null) {
+		return result;
+	}
+		result.add(new Scenario.diagram.part.ScenarioLinkDescriptor(source, destination, Scenario.diagram.providers.ScenarioElementTypes.CapabilityAccumulation_4001, Scenario.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID));
+		return result;
+}
+	
+	/**
+ * @generated
+ */
+private static java.util.Collection<Scenario.diagram.part.ScenarioLinkDescriptor> getOutgoingFeatureModelFacetLinks_Capability_Decomposes_4002(Scenario.Capability source) {
+	java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		for (java.util.Iterator<?> destinations = source.getDecomposes().iterator(); destinations.hasNext();) {
+		Scenario.Capability destination = (Scenario.Capability) destinations.next();
+		result.add(new Scenario.diagram.part.ScenarioLinkDescriptor(source, destination, Scenario.diagram.providers.ScenarioElementTypes.CapabilityDecomposes_4002, Scenario.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID));
+		}
+		return result;
+}
+	
+	/**
+ * @generated
+ */
+private static java.util.Collection<Scenario.diagram.part.ScenarioLinkDescriptor> getOutgoingFeatureModelFacetLinks_Capability_Satisfies_4003(Scenario.Capability source) {
+	java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		for (java.util.Iterator<?> destinations = source.getSatisfies().iterator(); destinations.hasNext();) {
+		Scenario.Capability destination = (Scenario.Capability) destinations.next();
+		result.add(new Scenario.diagram.part.ScenarioLinkDescriptor(source, destination, Scenario.diagram.providers.ScenarioElementTypes.CapabilitySatisfies_4003, Scenario.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID));
+		}
+		return result;
+}
+	
+	/**
+ * @generated
+ */
+private static java.util.Collection<Scenario.diagram.part.ScenarioLinkDescriptor> getOutgoingFeatureModelFacetLinks_Measurement_Aggregates_4004(Scenario.Measurement source) {
+	java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		for (java.util.Iterator<?> destinations = source.getAggregates().iterator(); destinations.hasNext();) {
+		Scenario.Measurement destination = (Scenario.Measurement) destinations.next();
+		result.add(new Scenario.diagram.part.ScenarioLinkDescriptor(source, destination, Scenario.diagram.providers.ScenarioElementTypes.MeasurementAggregates_4004, Scenario.diagram.edit.parts.MeasurementAggregatesEditPart.VISUAL_ID));
+		}
+		return result;
+}
+	
+	/**
+ * @generated
+ */
+private static java.util.Collection<Scenario.diagram.part.ScenarioLinkDescriptor> getOutgoingFeatureModelFacetLinks_QualitativeValueDictionary_GreaterThan_4005(Scenario.QualitativeValueDictionary source) {
+	java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		Scenario.QualitativeValueDictionary destination = source.getGreaterThan();
+	if (destination == null) {
+		return result;
+	}
+		result.add(new Scenario.diagram.part.ScenarioLinkDescriptor(source, destination, Scenario.diagram.providers.ScenarioElementTypes.QualitativeValueDictionaryGreaterThan_4005, Scenario.diagram.edit.parts.QualitativeValueDictionaryGreaterThanEditPart.VISUAL_ID));
+		return result;
+}
+	
+	/**
+ * @generated
+ */
+private static java.util.Collection<Scenario.diagram.part.ScenarioLinkDescriptor> getOutgoingFeatureModelFacetLinks_CapabilityUpgrade_Upgrading_4006(Scenario.CapabilityUpgrade source) {
+	java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor> result = new java.util.LinkedList<Scenario.diagram.part.ScenarioLinkDescriptor>();
+		Scenario.Component destination = source.getUpgrading();
+	if (destination == null) {
+		return result;
+	}
+		result.add(new Scenario.diagram.part.ScenarioLinkDescriptor(source, destination, Scenario.diagram.providers.ScenarioElementTypes.CapabilityUpgradeUpgrading_4006, Scenario.diagram.edit.parts.CapabilityUpgradeUpgradingEditPart.VISUAL_ID));
+		return result;
+}
+
+	}

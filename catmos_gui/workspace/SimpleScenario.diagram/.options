@@ -1,0 +1,7 @@
+# Tracing options for the SimpleScenario.diagram plug-in
+
+# Common issues
+SimpleScenario.diagram/debug=false
+
+# Visual IDs
+SimpleScenario.diagram/debug/visualID=false

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/CapabilityOverTime/src"
+    modelPluginID="CapabilityOverTime" modelName="CapOverTime" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>CapabilityOverTime.emf</foreignModel>
+  <genPackages prefix="CapOverTime" disposableProviderFactory="true" ecorePackage="CapabilityOverTime.ecore#/">
+    <genClasses ecoreClass="CapabilityOverTime.ecore#//CapabilityOverTime">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CapabilityOverTime.ecore#//CapabilityOverTime/timePeriods"/>
+    </genClasses>
+    <genClasses ecoreClass="CapabilityOverTime.ecore#//TimePeriod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CapabilityOverTime.ecore#//TimePeriod/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CapabilityOverTime.ecore#//TimePeriod/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CapabilityOverTime.ecore#//TimePeriod/stopDate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CapabilityOverTime.ecore#//TimePeriod/ourObjects"/>
+    </genClasses>
+    <genClasses ecoreClass="CapabilityOverTime.ecore#//OurObject"/>
+    <genClasses ecoreClass="CapabilityOverTime.ecore#//Capability">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CapabilityOverTime.ecore#//Capability/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CapabilityOverTime.ecore#//Capability/searchObjective"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CapabilityOverTime.ecore#//Capability/standAlone"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CapabilityOverTime.ecore#//Capability/reuse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CapabilityOverTime.ecore#//Capability/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CapabilityOverTime.ecore#//Capability/endDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CapabilityOverTime.ecore#//Capability/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CapabilityOverTime.ecore#//Capability/colour"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CapabilityOverTime.ecore#//Capability/accumulation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CapabilityOverTime.ecore#//Capability/measurements"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CapabilityOverTime.ecore#//Capability/decomposes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CapabilityOverTime.ecore#//Capability/satisfiedBy"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CapabilityOverTime.ecore#//Capability/satisfies"/>
+    </genClasses>
+    <genClasses ecoreClass="CapabilityOverTime.ecore#//Measurement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CapabilityOverTime.ecore#//Measurement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CapabilityOverTime.ecore#//Measurement/criticalValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CapabilityOverTime.ecore#//Measurement/benchmarkValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CapabilityOverTime.ecore#//Measurement/providedValue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CapabilityOverTime.ecore#//Measurement/criticalValues"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CapabilityOverTime.ecore#//Measurement/benchmarkValues"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CapabilityOverTime.ecore#//Measurement/providedValues"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CapabilityOverTime.ecore#//Measurement/script"/>
+    </genClasses>
+    <genClasses ecoreClass="CapabilityOverTime.ecore#//QualitativeValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CapabilityOverTime.ecore#//QualitativeValue/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

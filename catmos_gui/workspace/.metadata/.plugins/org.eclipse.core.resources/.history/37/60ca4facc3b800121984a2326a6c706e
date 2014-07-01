@@ -1,0 +1,22 @@
+	/*
+ * 
+ */
+package CapOverTime.diagram.part;
+
+	/**
+ * @generated
+ */
+public class CapOverTimeUriEditorInputTester extends org.eclipse.core.expressions.PropertyTester {
+
+		/**
+ * @generated
+ */
+public boolean test(Object receiver, String method, Object[] args, Object expectedValue) {
+	if (false == receiver instanceof org.eclipse.emf.common.ui.URIEditorInput) {
+		return false;
+	}
+	org.eclipse.emf.common.ui.URIEditorInput editorInput = (org.eclipse.emf.common.ui.URIEditorInput) receiver;
+	return "capovertime_diagram".equals(editorInput.getURI().fileExtension());  //$NON-NLS-1$
+}
+
+	}

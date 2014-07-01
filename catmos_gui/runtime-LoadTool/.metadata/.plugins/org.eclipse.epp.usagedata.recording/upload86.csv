@@ -1,0 +1,251 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,editor,ScenarioModel.editor,1.0.0.qualifier,"ScenarioModel.presentation.ScenarioModelEditorID",1368264079788
+activated,view,org.eclipse.ui.views,3.6.0.I20110412-0800,"org.eclipse.ui.views.PropertySheet",1368264083253
+activated,editor,ScenarioModel.editor,1.0.0.qualifier,"ScenarioModel.presentation.ScenarioModelEditorID",1368264084144
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264097771
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264103178
+activated,editor,org.xtext.Scenario.ui,1.0.0.qualifier,"org.xtext.Scenario",1368264104783
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264110561
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264122466
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.I20110421-1800,"org.eclipse.ui.navigator.ProjectExplorer",1368264124378
+activated,editor,ScenarioModel.editor,1.0.0.qualifier,"ScenarioModel.presentation.ScenarioModelEditorID",1368264124653
+activated,editor,org.xtext.Scenario.ui,1.0.0.qualifier,"org.xtext.Scenario",1368264177610
+error,log,,,"org.eclipse.xtext.resource.impl.DefaultResourceDescriptionStrategy  - Qualified name cannot be empty\n",1368264193951
+error,log,,,"org.eclipse.xtext.linking.lazy.LazyLinkingResource  - resolution of uriFragment 'xtextLink_::0.0.1::9::/11' failed.\n",1368264193957
+error,log,,,"An internal error occurred during: ""Xtext validation"".",1368264193960
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264194016
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264195070
+error,log,,,"org.eclipse.xtext.resource.impl.DefaultResourceDescriptionStrategy  - Qualified name cannot be empty\n",1368264211168
+error,log,,,"org.eclipse.xtext.linking.lazy.LazyLinkingResource  - resolution of uriFragment 'xtextLink_::0.0.1::9::/11' failed.\n",1368264211173
+error,log,,,"An internal error occurred during: ""Xtext validation"".",1368264211175
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264211204
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264211944
+error,log,,,"org.eclipse.xtext.resource.impl.DefaultResourceDescriptionStrategy  - Qualified name cannot be empty\n",1368264268644
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264276489
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264278169
+opened,editor,org.eclipse.epsilon.eol.dt,0.9.1.201110062346,"org.eclipse.epsilon.eol.dt.editor.EolEditor",1368264279621
+activated,editor,org.eclipse.epsilon.eol.dt,0.9.1.201110062346,"org.eclipse.epsilon.eol.dt.editor.EolEditor",1368264279655
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.I20110421-1800,"org.eclipse.ui.navigator.ProjectExplorer",1368264284960
+opened,editor,org.xtext.Scenario.ui,1.0.0.qualifier,"org.xtext.Scenario",1368264286281
+activated,editor,org.xtext.Scenario.ui,1.0.0.qualifier,"org.xtext.Scenario",1368264286312
+activated,editor,ScenarioModel.editor,1.0.0.qualifier,"ScenarioModel.presentation.ScenarioModelEditorID",1368264290602
+activated,editor,org.xtext.Scenario.ui,1.0.0.qualifier,"org.xtext.Scenario",1368264291316
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368264309467
+started,bundle,org.eclipse.xtend.ide,2.4.0.v201212180716,"org.eclipse.xtend.ide",1368264309616
+started,bundle,org.eclipse.xtend.macro.lang.ui,2.4.0.v201212180716,"org.eclipse.xtend.macro.lang.ui",1368264310822
+started,bundle,org.eclipse.xtext.purexbase.ui,2.4.0.v201212180716,"org.eclipse.xtext.purexbase.ui",1368264311246
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368264334235
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368264341637
+error,log,,,"org.eclipse.xtext.resource.impl.DefaultResourceDescriptionStrategy  - Qualified name cannot be empty\n",1368264360675
+error,log,,,"org.eclipse.xtext.linking.lazy.LazyLinkingResource  - resolution of uriFragment 'xtextLink_::0.0.1::9::/11' failed.\n",1368264360682
+error,log,,,"An internal error occurred during: ""Xtext validation"".",1368264360684
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264360718
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264361529
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368264364323
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368264381008
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.I20110421-1800,"org.eclipse.ui.navigator.ProjectExplorer",1368264411112
+started,bundle,org.eclipse.emf.ecoretools.diagram.ui.outline,1.0.0.v20110601-1615,"org.eclipse.emf.ecoretools.diagram.ui.outline",1368264412792
+started,bundle,org.eclipse.pde.core,3.7.0.v20110603,"org.eclipse.pde.core",1368264414655
+started,bundle,org.eclipse.ltk.ui.refactoring,3.6.0.v20110505-0800,"org.eclipse.ltk.ui.refactoring",1368264414664
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264416678
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264417957
+executed,command,org.eclipse.ltk.ui.refactoring,3.6.0.v20110505-0800,"org.eclipse.ltk.ui.refactoring.commands.deleteResources",1368264418003
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.delete",1368264418003
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264430395
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264433583
+activated,view,org.eclipse.ui.views,3.6.0.I20110412-0800,"org.eclipse.ui.views.PropertySheet",1368264487588
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.I20110421-1800,"org.eclipse.ui.navigator.ProjectExplorer",1368264493513
+activated,editor,org.xtext.Scenario.ui,1.0.0.qualifier,"org.xtext.Scenario",1368264525286
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368264540956
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368264546044
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.I20110421-1800,"org.eclipse.ui.navigator.ProjectExplorer",1368264547457
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264551362
+closed,editor,ScenarioModel.editor,1.0.0.qualifier,"ScenarioModel.presentation.ScenarioModelEditorID",1368264552997
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264553137
+executed,command,org.eclipse.ltk.ui.refactoring,3.6.0.v20110505-0800,"org.eclipse.ltk.ui.refactoring.commands.deleteResources",1368264553188
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.delete",1368264553188
+started,bundle,org.eclipse.xtext.xtext.ui,2.4.0.v201212180716,"org.eclipse.xtext.xtext.ui",1368264555183
+activated,editor,org.xtext.Scenario.ui,1.0.0.qualifier,"org.xtext.Scenario",1368264601128
+error,log,,,"org.eclipse.xtext.resource.impl.DefaultResourceDescriptionStrategy  - Qualified name cannot be empty\n",1368264620697
+error,log,,,"org.eclipse.xtext.linking.lazy.LazyLinkingResource  - resolution of uriFragment 'xtextLink_::0.0.1::9::/11' failed.\n",1368264620701
+error,log,,,"An internal error occurred during: ""Xtext validation"".",1368264620703
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264620725
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264621873
+error,log,,,"org.eclipse.xtext.resource.impl.DefaultResourceDescriptionStrategy  - Qualified name cannot be empty\n",1368264651997
+error,log,,,"org.eclipse.xtext.linking.lazy.LazyLinkingResource  - resolution of uriFragment 'xtextLink_::0.0.1::9::/11' failed.\n",1368264652001
+error,log,,,"An internal error occurred during: ""Xtext validation"".",1368264652002
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264652026
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264652869
+error,log,,,"org.eclipse.xtext.resource.impl.DefaultResourceDescriptionStrategy  - Qualified name cannot be empty\n",1368264672475
+error,log,,,"org.eclipse.xtext.linking.lazy.LazyLinkingResource  - resolution of uriFragment 'xtextLink_::0.0.1::9::/11' failed.\n",1368264672479
+error,log,,,"An internal error occurred during: ""Xtext validation"".",1368264672480
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264672503
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264673180
+started,bundle,org.eclipse.equinox.p2.garbagecollector,1.0.200.v20110510,"org.eclipse.equinox.p2.garbagecollector",1368264681033
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264690890
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264692474
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264692515
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264876091
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368264939331
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265013756
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265017298
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265018232
+error,log,,,"org.eclipse.xtext.resource.impl.DefaultResourceDescriptionStrategy  - Qualified name cannot be empty\n",1368265029915
+error,log,,,"org.eclipse.xtext.linking.lazy.LazyLinkingResource  - resolution of uriFragment 'xtextLink_::0.0.1::9::/11' failed.\n",1368265029920
+error,log,,,"An internal error occurred during: ""Xtext validation"".",1368265029921
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265029943
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265031113
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368265035976
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368265056251
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1368265061784
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368265075055
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1368265080227
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368265090022
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368265123933
+activated,editor,org.xtext.Scenario.ui,1.0.0.qualifier,"org.xtext.Scenario",1368265141713
+activated,editor,org.xtext.Scenario.ui,1.0.0.qualifier,"org.xtext.Scenario",1368265149211
+activated,editor,org.xtext.Scenario.ui,1.0.0.qualifier,"org.xtext.Scenario",1368265154072
+activated,editor,org.xtext.Scenario.ui,1.0.0.qualifier,"org.xtext.Scenario",1368265155247
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368265164939
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1368265177813
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1368265178337
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368265188064
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368265227872
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368265249995
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265272260
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265280784
+started,bundle,org.eclipse.mylyn.java.tasks,3.6.0.v20110608-1400,"org.eclipse.mylyn.java.tasks",1368265290757
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368265290868
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265293833
+activated,view,org.eclipse.ui.views,3.6.0.I20110412-0800,"org.eclipse.ui.views.PropertySheet",1368265302456
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265302553
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.I20110421-1800,"org.eclipse.ui.navigator.ProjectExplorer",1368265304350
+activated,editor,org.xtext.Scenario.ui,1.0.0.qualifier,"org.xtext.Scenario",1368265317631
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368265334734
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265340409
+activated,view,org.eclipse.ui.views,3.6.0.I20110412-0800,"org.eclipse.ui.views.PropertySheet",1368265347115
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265347220
+activated,editor,org.xtext.Scenario.ui,1.0.0.qualifier,"org.xtext.Scenario",1368265348203
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368265367345
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265369966
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265371470
+executed,command,org.eclipse.debug.ui,3.7.0.v20110518,"org.eclipse.debug.ui.commands.RunLast",1368265371559
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265375229
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265381811
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265384970
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265387873
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368265392555
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265401872
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265406614
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265415685
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265422087
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265423728
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265532574
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.I20110421-1800,"org.eclipse.ui.navigator.ProjectExplorer",1368265549189
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265551112
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265554705
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265558631
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265562088
+activated,editor,org.xtext.Scenario.ui,1.0.0.qualifier,"org.xtext.Scenario",1368265602969
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368265605416
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368265613754
+error,log,,,"org.eclipse.xtext.resource.impl.DefaultResourceDescriptionStrategy  - Qualified name cannot be empty\n",1368265633239
+error,log,,,"org.eclipse.xtext.linking.lazy.LazyLinkingResource  - resolution of uriFragment 'xtextLink_::0.0.1::9::/11' failed.\n",1368265633243
+error,log,,,"An internal error occurred during: ""Xtext validation"".",1368265633245
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265633269
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265633984
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368265659902
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368265758000
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.I20110421-1800,"org.eclipse.ui.navigator.ProjectExplorer",1368265768663
+activated,editor,org.xtext.Scenario.ui,1.0.0.qualifier,"org.xtext.Scenario",1368265800662
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368265808987
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1368265819389
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1368265824690
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368265832167
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368265835184
+activated,view,org.eclipse.ui.console,3.5.100.v20110511,"org.eclipse.ui.console.ConsoleView",1368265851966
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265853070
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265858499
+activated,editor,org.xtext.Scenario.ui,1.0.0.qualifier,"org.xtext.Scenario",1368265889618
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368265892897
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265900578
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265905823
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.I20110421-1800,"org.eclipse.ui.navigator.ProjectExplorer",1368265907263
+activated,editor,org.xtext.Scenario.ui,1.0.0.qualifier,"org.xtext.Scenario",1368265908331
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.I20110421-1800,"org.eclipse.ui.navigator.ProjectExplorer",1368265909630
+opened,editor,ScenarioModel.editor,1.0.0.qualifier,"ScenarioModel.presentation.ScenarioModelEditorID",1368265909948
+activated,editor,ScenarioModel.editor,1.0.0.qualifier,"ScenarioModel.presentation.ScenarioModelEditorID",1368265909970
+activated,view,org.eclipse.ui.views,3.6.0.I20110412-0800,"org.eclipse.ui.views.PropertySheet",1368265913689
+activated,editor,ScenarioModel.editor,1.0.0.qualifier,"ScenarioModel.presentation.ScenarioModelEditorID",1368265915099
+activated,editor,org.xtext.Scenario.ui,1.0.0.qualifier,"org.xtext.Scenario",1368265955930
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368265972190
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368265979496
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265989692
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368265990785
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.I20110421-1800,"org.eclipse.ui.navigator.ProjectExplorer",1368265992013
+started,bundle,CapabilityOverTime.editor,1.0.0.qualifier,"CapabilityOverTime.editor",1368266004338
+opened,editor,CapabilityOverTime.editor,1.0.0.qualifier,"CapOverTime.presentation.CapOverTimeEditorID",1368266004399
+activated,editor,CapabilityOverTime.editor,1.0.0.qualifier,"CapOverTime.presentation.CapOverTimeEditorID",1368266004421
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.I20110421-1800,"org.eclipse.ui.navigator.ProjectExplorer",1368266021988
+activated,editor,org.xtext.Scenario.ui,1.0.0.qualifier,"org.xtext.Scenario",1368266022393
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.I20110421-1800,"org.eclipse.ui.navigator.ProjectExplorer",1368266023390
+activated,editor,ScenarioModel.editor,1.0.0.qualifier,"ScenarioModel.presentation.ScenarioModelEditorID",1368266023675
+activated,editor,org.xtext.Scenario.ui,1.0.0.qualifier,"org.xtext.Scenario",1368266025026
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1368266044128
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368266051431
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368266052353
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.I20110421-1800,"org.eclipse.ui.navigator.ProjectExplorer",1368266053447
+activated,editor,CapabilityOverTime.editor,1.0.0.qualifier,"CapOverTime.presentation.CapOverTimeEditorID",1368266053706
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368266064102
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1368266103470
+activated,editor,org.xtext.Scenario.ui,1.0.0.qualifier,"org.xtext.Scenario",1368266103935
+activated,perspective,org.eclipse.epsilon.perspective,,"org.eclipse.epsilon.perspective.EpsilonPerspectiveFactory",1368267366276
+started,bundle,org.eclipse.osgi,3.7.0.v20110613,"org.eclipse.osgi",1368267366280
+started,bundle,org.eclipse.equinox.simpleconfigurator,1.0.200.v20110502-1955,"org.eclipse.equinox.simpleconfigurator",1368267366280
+started,bundle,ScenarioModel,1.0.0.qualifier,"ScenarioModel",1368267366284
+started,bundle,com.collabnet.subversion.merge,3.0.4,"com.collabnet.subversion.merge",1368267366284
+started,bundle,com.ibm.icu,4.4.2.v20110208,"com.ibm.icu",1368267366285
+started,bundle,org.eclipse.compare,3.5.200.I20110525-0800,"org.eclipse.compare",1368267366286
+started,bundle,org.eclipse.compare.core,3.5.200.I20110208-0800,"org.eclipse.compare.core",1368267366287
+started,bundle,org.eclipse.core.contenttype,3.4.100.v20110423-0524,"org.eclipse.core.contenttype",1368267366290
+started,bundle,org.eclipse.core.databinding.observable,1.4.0.I20110222-0800,"org.eclipse.core.databinding.observable",1368267366291
+started,bundle,org.eclipse.core.expressions,3.4.300.v20110228,"org.eclipse.core.expressions",1368267366291
+started,bundle,org.eclipse.core.filebuffers,3.5.200.v20110505-0800,"org.eclipse.core.filebuffers",1368267366292
+started,bundle,org.eclipse.core.filesystem,1.3.100.v20110423-0524,"org.eclipse.core.filesystem",1368267366293
+started,bundle,org.eclipse.core.jobs,3.5.100.v20110404,"org.eclipse.core.jobs",1368267366294
+started,bundle,org.eclipse.core.net,1.2.100.I20110511-0800,"org.eclipse.core.net",1368267366294
+started,bundle,org.eclipse.core.resources,3.7.100.v20110510-0712,"org.eclipse.core.resources",1368267366295
+started,bundle,org.eclipse.core.runtime,3.7.0.v20110110,"org.eclipse.core.runtime",1368267366300
+started,bundle,org.eclipse.core.runtime.compatibility,3.2.100.v20100505,"org.eclipse.core.runtime.compatibility",1368267366301
+started,bundle,org.eclipse.core.runtime.compatibility.auth,3.2.200.v20110110,"org.eclipse.core.runtime.compatibility.auth",1368267366302
+started,bundle,org.eclipse.debug.core,3.7.0.v20110518,"org.eclipse.debug.core",1368267366303
+started,bundle,org.eclipse.egit.core,1.0.0.201106090707-r,"org.eclipse.egit.core",1368267366304
+started,bundle,org.eclipse.egit.ui,1.0.0.201106090707-r,"org.eclipse.egit.ui",1368267366305
+started,bundle,org.eclipse.emf.common,2.7.0.v20120127-1122,"org.eclipse.emf.common",1368267366306
+started,bundle,org.eclipse.emf.common.ui,2.7.0.v20120130-0943,"org.eclipse.emf.common.ui",1368267366307
+started,bundle,org.eclipse.emf.ecore,2.7.0.v20120127-1122,"org.eclipse.emf.ecore",1368267366311
+started,bundle,org.eclipse.emf.ecore.xmi,2.7.0.v20120127-1122,"org.eclipse.emf.ecore.xmi",1368267366312
+started,bundle,org.eclipse.emf.edit,2.7.2.v20120130-0943,"org.eclipse.emf.edit",1368267366312
+started,bundle,org.eclipse.emf.edit.ui,2.7.0.v20120130-0943,"org.eclipse.emf.edit.ui",1368267366312
+started,bundle,org.eclipse.epp.mpc.ui,1.1.0.I20110525-0742,"org.eclipse.epp.mpc.ui",1368267366313
+started,bundle,org.eclipse.epp.usagedata.gathering,1.3.1.R201106061540,"org.eclipse.epp.usagedata.gathering",1368267366314
+started,bundle,org.eclipse.epp.usagedata.recording,1.3.1.R201106061540,"org.eclipse.epp.usagedata.recording",1368267366314
+started,bundle,org.eclipse.epsilon.common.dt,0.9.1.201110062346,"org.eclipse.epsilon.common.dt",1368267366315
+started,bundle,org.eclipse.epsilon.concordance.core,0.9.1.201110062346,"org.eclipse.epsilon.concordance.core",1368267366329
+started,bundle,org.eclipse.equinox.app,1.3.100.v20110321,"org.eclipse.equinox.app",1368267366346
+started,bundle,org.eclipse.equinox.common,3.6.0.v20110523,"org.eclipse.equinox.common",1368267366347
+started,bundle,org.eclipse.equinox.ds,1.3.0.v20110502,"org.eclipse.equinox.ds",1368267366348
+started,bundle,org.eclipse.equinox.preferences,3.4.0.v20110502,"org.eclipse.equinox.preferences",1368267366349
+started,bundle,org.eclipse.equinox.registry,3.5.100.v20110502,"org.eclipse.equinox.registry",1368267366350
+started,bundle,org.eclipse.equinox.security,1.1.0.v20110502,"org.eclipse.equinox.security",1368267366351
+started,bundle,org.eclipse.equinox.util,1.0.300.v20110502,"org.eclipse.equinox.util",1368267366352
+started,bundle,org.eclipse.help,3.5.100.v20110426,"org.eclipse.help",1368267366353
+started,bundle,org.eclipse.jdt.core,3.7.0.v_B61,"org.eclipse.jdt.core",1368267366354
+started,bundle,org.eclipse.jdt.core.manipulation,1.4.0.v20110505-0800,"org.eclipse.jdt.core.manipulation",1368267366355
+started,bundle,org.eclipse.jdt.launching,3.6.0.v20110509,"org.eclipse.jdt.launching",1368267366356
+started,bundle,org.eclipse.jdt.ui,3.7.0.v20110531-1200,"org.eclipse.jdt.ui",1368267366379
+started,bundle,org.eclipse.jface,3.7.0.I20110522-1430,"org.eclipse.jface",1368267366379
+started,bundle,org.eclipse.jgit,1.0.0.201106090707-r,"org.eclipse.jgit",1368267366381
+started,bundle,org.eclipse.jsch.core,1.1.300.I20110514-0800,"org.eclipse.jsch.core",1368267366381
+started,bundle,org.eclipse.ltk.core.refactoring,3.5.200.v20110505-0800,"org.eclipse.ltk.core.refactoring",1368267366382
+started,bundle,org.eclipse.m2m.qvt.oml.cst.parser,3.1.0.v20101214-1530,"org.eclipse.m2m.qvt.oml.cst.parser",1368267366383

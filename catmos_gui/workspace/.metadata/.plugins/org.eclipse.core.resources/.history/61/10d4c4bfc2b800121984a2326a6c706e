@@ -1,0 +1,156 @@
+/*
+ * 
+ */
+package capOverTime.diagram.part;
+
+/**
+ * @generated
+ */
+public class CapOverTimeCreationWizard
+		extends org.eclipse.jface.wizard.Wizard implements org.eclipse.ui.INewWizard {
+
+	/**
+ * @generated
+ */
+	private org.eclipse.ui.IWorkbench workbench;
+
+	/**
+ * @generated
+ */
+    protected org.eclipse.jface.viewers.IStructuredSelection selection;
+
+	/**
+ * @generated
+ */
+	protected capOverTime.diagram.part.CapOverTimeCreationWizardPage diagramModelFilePage;
+	
+	/**
+ * @generated
+ */
+	protected capOverTime.diagram.part.CapOverTimeCreationWizardPage domainModelFilePage;
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.emf.ecore.resource.Resource diagram;
+
+	/**
+ * @generated
+ */
+	private boolean openNewlyCreatedDiagramEditor = true;
+
+	/**
+ * @generated
+ */
+    public org.eclipse.ui.IWorkbench getWorkbench() {
+        return workbench;
+    }
+
+	/**
+ * @generated
+ */
+	public org.eclipse.jface.viewers.IStructuredSelection getSelection() {
+        return selection;
+    }
+
+	/**
+ * @generated
+ */
+	public final org.eclipse.emf.ecore.resource.Resource getDiagram() {
+		return diagram;
+	}
+
+	/**
+ * @generated
+ */
+	public final boolean isOpenNewlyCreatedDiagramEditor() {
+		return openNewlyCreatedDiagramEditor;
+	}
+
+	/**
+ * @generated
+ */
+	public void setOpenNewlyCreatedDiagramEditor(boolean openNewlyCreatedDiagramEditor) {
+		this.openNewlyCreatedDiagramEditor = openNewlyCreatedDiagramEditor;
+	}
+
+	/**
+ * @generated
+ */
+	public void init(org.eclipse.ui.IWorkbench workbench, org.eclipse.jface.viewers.IStructuredSelection selection) {
+        this.workbench = workbench;
+        this.selection = selection;
+		setWindowTitle(capOverTime.diagram.part.Messages.CapOverTimeCreationWizardTitle);
+		setDefaultPageImageDescriptor(capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getBundledImageDescriptor(
+				"icons/wizban/NewCapOverTimeWizard.gif")); //$NON-NLS-1$
+		setNeedsProgressMonitor(true);
+	}
+
+	/**
+ * @generated
+ */
+	public void addPages() {
+		diagramModelFilePage = new capOverTime.diagram.part.CapOverTimeCreationWizardPage(
+				"DiagramModelFile", getSelection(), "capovertime_diagram"); //$NON-NLS-1$ //$NON-NLS-2$
+		diagramModelFilePage.setTitle(capOverTime.diagram.part.Messages.CapOverTimeCreationWizard_DiagramModelFilePageTitle);
+		diagramModelFilePage.setDescription(capOverTime.diagram.part.Messages.CapOverTimeCreationWizard_DiagramModelFilePageDescription);
+		addPage(diagramModelFilePage);
+	
+		domainModelFilePage = new capOverTime.diagram.part.CapOverTimeCreationWizardPage(
+				"DomainModelFile", getSelection(), "capovertime") { //$NON-NLS-1$ //$NON-NLS-2$
+
+			public void setVisible(boolean visible) {
+				if (visible) {
+					String fileName = diagramModelFilePage.getFileName();
+					fileName = fileName.substring(0, fileName.length() - ".capovertime_diagram".length()); //$NON-NLS-1$
+					setFileName(capOverTime.diagram.part.CapOverTimeDiagramEditorUtil.getUniqueFileName(
+							getContainerFullPath(), fileName, "capovertime")); //$NON-NLS-1$
+				}
+				super.setVisible(visible);
+			}
+		};
+		domainModelFilePage.setTitle(capOverTime.diagram.part.Messages.CapOverTimeCreationWizard_DomainModelFilePageTitle);
+		domainModelFilePage.setDescription(capOverTime.diagram.part.Messages.CapOverTimeCreationWizard_DomainModelFilePageDescription);
+		addPage(domainModelFilePage);
+		}
+
+	/**
+ * @generated
+ */
+	public boolean performFinish() {
+		org.eclipse.jface.operation.IRunnableWithProgress op =
+					new org.eclipse.ui.actions.WorkspaceModifyOperation(null) {
+
+			protected void execute(org.eclipse.core.runtime.IProgressMonitor monitor)
+					throws org.eclipse.core.runtime.CoreException, InterruptedException {
+					diagram = capOverTime.diagram.part.CapOverTimeDiagramEditorUtil.createDiagram(diagramModelFilePage.getURI(),
+							domainModelFilePage.getURI(),
+							monitor);
+				if (isOpenNewlyCreatedDiagramEditor() && diagram != null) {
+					try {
+						capOverTime.diagram.part.CapOverTimeDiagramEditorUtil.openDiagram(diagram);
+					} catch (org.eclipse.ui.PartInitException e) {
+						org.eclipse.jface.dialogs.ErrorDialog.openError(getContainer().getShell(),
+								capOverTime.diagram.part.Messages.CapOverTimeCreationWizardOpenEditorError, null, e.getStatus());
+					}
+				}
+			}
+		};
+		try {
+			getContainer().run(false, true, op);
+		} catch (InterruptedException e) {
+			return false;
+		} catch (java.lang.reflect.InvocationTargetException e) {
+			if (e.getTargetException() instanceof org.eclipse.core.runtime.CoreException) {
+				org.eclipse.jface.dialogs.ErrorDialog.openError(getContainer().getShell(),
+						capOverTime.diagram.part.Messages.CapOverTimeCreationWizardCreationError, null,
+						((org.eclipse.core.runtime.CoreException) e.getTargetException()).getStatus());
+			} else {
+				capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().logError(
+						"Error creating diagram", e.getTargetException()); //$NON-NLS-1$
+			}
+			return false;
+		}
+		return diagram != null;
+	}
+	}

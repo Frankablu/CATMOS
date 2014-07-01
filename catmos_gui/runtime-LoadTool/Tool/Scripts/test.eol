@@ -1,0 +1,8 @@
+
+var runTool = new Native("org.eclipse.epsilon.examples.tools.RunTool");
+
+runTool.readFileNoLineReturns("/Tea/Tea.scen").println();
+
+
+
+

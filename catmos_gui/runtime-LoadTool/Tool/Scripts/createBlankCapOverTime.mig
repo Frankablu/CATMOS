@@ -1,0 +1,33 @@
+
+//Remove all the classes from the problem def that are not needed in the answer
+delete ThroughLifePlanning
+delete FindTradeOffs
+delete AcquirableComponent
+delete ExistingComponent
+delete DesireLow
+delete DesireHigh
+delete Budget
+
+delete Measurement
+when : source!Capability.all().select(x|x.searchObjective == true).collect(x|x.measurements).flatten().contains(original) == false
+
+retype Capability to Capability
+migrate Capability
+when : original.searchObjective == true
+{
+	Scenario.all().first.equivalent().timePeriods.first.ourObjects.add(migrated);
+}
+
+delete Capability
+when : original.searchObjective <> true
+
+retype Scenario to CapabilityOverTime
+migrate Scenario
+{
+	var timePeriod : Any = new target!TimePeriod;
+	timePeriod.name = "base";
+	migrated.timePeriods.add(timePeriod);
+}
+
+delete QualitativeValue
+when : source!Capability.all().select(x|x.searchObjective <> true).collect(x|x.measurements).flatten().collect(x|x.providedValues).flatten().contains(original) or source!Capability.all().select(x|x.searchObjective <> true).collect(x|x.measurements).flatten().collect(x|x.benchmarkValues).flatten().contains(original) or source!Capability.all().select(x|x.searchObjective <> true).collect(x|x.measurements).flatten().collect(x|x.criticalValues).flatten().contains(original)

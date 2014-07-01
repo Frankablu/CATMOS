@@ -1,0 +1,389 @@
+/*
+ * 
+ */
+package Scenario.diagram.providers;
+
+/**
+ * @generated
+ */
+public class ScenarioValidationDecoratorProvider
+		extends org.eclipse.gmf.runtime.common.core.service.AbstractProvider
+		implements org.eclipse.gmf.runtime.diagram.ui.services.decorator.IDecoratorProvider {
+
+	/**
+ * @generated
+ */
+	private static final String KEY = "validationStatus";  //$NON-NLS-1$
+	
+	/**
+ * @generated
+ */
+	private static final String MARKER_TYPE = Scenario.diagram.part.ScenarioDiagramEditorPlugin.ID +
+			".diagnostic";  //$NON-NLS-1$
+
+	/**
+ * @generated
+ */
+	private static MarkerObserver fileObserver;
+	
+	/**
+ * @generated
+ */
+	private static java.util.Map/*<String, List<IDecorator>>*/ allDecorators = new java.util.HashMap();
+
+	/**
+ * @generated
+ */
+	public void createDecorators(org.eclipse.gmf.runtime.diagram.ui.services.decorator.IDecoratorTarget decoratorTarget) {
+		org.eclipse.gef.EditPart editPart = (org.eclipse.gef.EditPart) decoratorTarget.getAdapter(org.eclipse.gef.EditPart.class);
+		if (editPart instanceof org.eclipse.gmf.runtime.diagram.ui.editparts.GraphicalEditPart ||
+				editPart instanceof org.eclipse.gef.editparts.AbstractConnectionEditPart) {
+			Object model = editPart.getModel();
+			if ((model instanceof org.eclipse.gmf.runtime.notation.View)) {
+				org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) model;
+				if (!(view instanceof org.eclipse.gmf.runtime.notation.Edge) && !view.isSetElement()) {
+					return;
+				}
+			}
+			org.eclipse.gef.EditDomain ed = editPart.getViewer().getEditDomain();
+			if (!(ed instanceof org.eclipse.gmf.runtime.diagram.ui.parts.DiagramEditDomain)) {
+				return;
+			}
+			if (((org.eclipse.gmf.runtime.diagram.ui.parts.DiagramEditDomain) ed).getEditorPart() instanceof
+					Scenario.diagram.part.ScenarioDiagramEditor) {
+				decoratorTarget.installDecorator(KEY, new StatusDecorator(decoratorTarget));
+			}
+		}
+	}
+
+	/**
+ * @generated
+ */
+	public boolean provides(org.eclipse.gmf.runtime.common.core.service.IOperation operation) {
+		if (!(operation instanceof org.eclipse.gmf.runtime.diagram.ui.services.decorator.CreateDecoratorsOperation)) {
+			return false;
+		}
+		org.eclipse.gmf.runtime.diagram.ui.services.decorator.IDecoratorTarget decoratorTarget =
+				((org.eclipse.gmf.runtime.diagram.ui.services.decorator.CreateDecoratorsOperation) operation).getDecoratorTarget();
+		org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) decoratorTarget.getAdapter(
+				org.eclipse.gmf.runtime.notation.View.class);
+		return view != null && Scenario.diagram.edit.parts.ScenarioEditPart.MODEL_ID.equals(Scenario.diagram.part.ScenarioVisualIDRegistry.getModelID(view));
+	}
+
+	/**
+ * @generated
+ */
+	public static void refreshDecorators(org.eclipse.gmf.runtime.notation.View view) {
+		refreshDecorators(org.eclipse.gmf.runtime.diagram.core.util.ViewUtil.getIdStr(view), view.getDiagram());
+	}
+
+	/**
+ * @generated
+ */
+	private static void refreshDecorators(String viewId, org.eclipse.gmf.runtime.notation.Diagram diagram) {
+		final java.util.List decorators = viewId != null ? (java.util.List) allDecorators.get(viewId) : null;
+		if (decorators == null || decorators.isEmpty() || diagram == null) {
+			return;
+		}
+		final org.eclipse.gmf.runtime.notation.Diagram fdiagram = diagram;
+		org.eclipse.ui.PlatformUI.getWorkbench().getDisplay().asyncExec(new Runnable() {
+
+			public void run() {
+				try {
+					org.eclipse.emf.transaction.util.TransactionUtil.getEditingDomain(fdiagram).runExclusive(new Runnable() {
+
+						public void run() {
+							for (java.util.Iterator it = decorators.iterator(); it.hasNext();) {
+								org.eclipse.gmf.runtime.diagram.ui.services.decorator.IDecorator decorator =
+										(org.eclipse.gmf.runtime.diagram.ui.services.decorator.IDecorator) it.next();
+								decorator.refresh();
+							}
+						}
+					});
+				} catch (Exception e) {
+					Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError(
+							"Decorator refresh failure", e);  //$NON-NLS-1$
+				}
+			}
+		});
+	}
+
+	/**
+ * @generated
+ */
+	public static class StatusDecorator extends org.eclipse.gmf.runtime.diagram.ui.services.decorator.AbstractDecorator {
+
+		/**
+ * @generated
+ */
+		private String viewId;
+
+		/**
+ * @generated
+ */
+		public StatusDecorator(org.eclipse.gmf.runtime.diagram.ui.services.decorator.IDecoratorTarget decoratorTarget) {
+			super(decoratorTarget);
+			try {
+				final org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) getDecoratorTarget().getAdapter(
+						org.eclipse.gmf.runtime.notation.View.class);
+				org.eclipse.emf.transaction.util.TransactionUtil.getEditingDomain(view).runExclusive(new Runnable() {
+
+					public void run() {
+						StatusDecorator.this.viewId = view != null ?
+								org.eclipse.gmf.runtime.diagram.core.util.ViewUtil.getIdStr(view) : null;
+					}
+				});
+			} catch (Exception e) {
+				Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError(
+						"ViewID access failure", e);  //$NON-NLS-1$			
+			}
+		}
+
+		/**
+ * @generated
+ */
+		public void refresh() {
+			removeDecoration();
+			org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) getDecoratorTarget().getAdapter(
+					org.eclipse.gmf.runtime.notation.View.class);
+			if (view == null || view.eResource() == null) {
+				return;
+			}
+			org.eclipse.gef.EditPart editPart = (org.eclipse.gef.EditPart) getDecoratorTarget().getAdapter(org.eclipse.gef.EditPart.class);
+			if (editPart == null || editPart.getViewer() == null) {
+				return;
+			}
+
+			// query for all the validation markers of the current resource
+						String elementId = org.eclipse.gmf.runtime.diagram.core.util.ViewUtil.getIdStr(view);
+			if (elementId == null) {
+				return;
+			}
+			int severity = org.eclipse.core.resources.IMarker.SEVERITY_INFO;
+			org.eclipse.core.resources.IMarker foundMarker = null;
+			org.eclipse.core.resources.IResource resource = org.eclipse.emf.workspace.util.WorkspaceSynchronizer.getFile(view.eResource());
+			if (resource == null || !resource.exists()) {
+				return;
+			}
+			org.eclipse.core.resources.IMarker[] markers = null;
+			try {
+				markers = resource.findMarkers(MARKER_TYPE, true, org.eclipse.core.resources.IResource.DEPTH_INFINITE);
+			} catch (org.eclipse.core.runtime.CoreException e) {
+				Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError(
+						"Validation markers refresh failure", e);  //$NON-NLS-1$
+			}
+						if (markers == null || markers.length == 0) {
+				return;
+			}
+			org.eclipse.draw2d.Label toolTip = null;
+			for (int i = 0; i < markers.length; i++) {
+								org.eclipse.core.resources.IMarker marker = markers[i];
+				String attribute = marker.getAttribute(org.eclipse.gmf.runtime.common.ui.resources.IMarker.ELEMENT_ID, "");  //$NON-NLS-1$
+				if (attribute.equals(elementId)) {
+					int nextSeverity = marker.getAttribute(org.eclipse.core.resources.IMarker.SEVERITY,
+							org.eclipse.core.resources.IMarker.SEVERITY_INFO);					
+									org.eclipse.swt.graphics.Image nextImage = getImage(nextSeverity);	 
+					if (foundMarker == null) {				
+						foundMarker = marker;
+						toolTip = new org.eclipse.draw2d.Label(
+															marker.getAttribute(org.eclipse.core.resources.IMarker.MESSAGE, ""),  //$NON-NLS-1$
+															nextImage);						
+					} else {
+						if (toolTip.getChildren().isEmpty()) {
+							org.eclipse.draw2d.Label comositeLabel = new org.eclipse.draw2d.Label();
+							org.eclipse.draw2d.FlowLayout fl = new org.eclipse.draw2d.FlowLayout(false);
+							fl.setMinorSpacing(0);
+							comositeLabel.setLayoutManager(fl);
+							comositeLabel.add(toolTip);
+							toolTip = comositeLabel;
+						}
+						toolTip.add(new org.eclipse.draw2d.Label(
+															marker.getAttribute(org.eclipse.core.resources.IMarker.MESSAGE, ""),   //$NON-NLS-1$
+															nextImage));
+					}
+					severity = (nextSeverity > severity) ? nextSeverity : severity;					
+								}
+							}
+			if (foundMarker == null) {
+				return;
+			}
+
+			// add decoration
+			if (editPart instanceof org.eclipse.gef.GraphicalEditPart) {
+				if (view instanceof org.eclipse.gmf.runtime.notation.Edge) {
+					setDecoration(getDecoratorTarget().addConnectionDecoration(getImage(severity), 50, true));										
+				} else {
+					int margin = -1;
+					if (editPart instanceof org.eclipse.gef.GraphicalEditPart) {
+						margin = org.eclipse.gmf.runtime.draw2d.ui.mapmode.MapModeUtil.getMapMode(
+							((org.eclipse.gef.GraphicalEditPart) editPart).getFigure()).DPtoLP(margin);
+					}
+					setDecoration(getDecoratorTarget().addShapeDecoration(getImage(severity),
+							org.eclipse.gmf.runtime.diagram.ui.services.decorator.IDecoratorTarget.Direction.NORTH_EAST, margin, true));										
+				}
+				getDecoration().setToolTip(toolTip);
+			}
+		}
+
+		/**
+ * @generated
+ */
+		private org.eclipse.swt.graphics.Image getImage(int severity) {
+			String imageName = org.eclipse.ui.ISharedImages.IMG_OBJS_ERROR_TSK;
+			switch (severity) {
+						case org.eclipse.core.resources.IMarker.SEVERITY_ERROR:
+				imageName = org.eclipse.ui.ISharedImages.IMG_OBJS_ERROR_TSK;
+				break;
+			case org.eclipse.core.resources.IMarker.SEVERITY_WARNING:
+				imageName = org.eclipse.ui.ISharedImages.IMG_OBJS_WARN_TSK;
+				break;
+						default:
+				imageName = org.eclipse.ui.ISharedImages.IMG_OBJS_INFO_TSK;
+			}
+			return org.eclipse.ui.PlatformUI.getWorkbench().getSharedImages().getImage(imageName);
+		}
+
+		/**
+ * @generated
+ */
+		public void activate() {
+			if (viewId == null) {
+				return;
+			}
+
+			// add self to global decorators registry
+			java.util.List list = (java.util.List) allDecorators.get(viewId);
+			if (list == null) {
+				list = new java.util.ArrayList(2);
+				list.add(this);
+				allDecorators.put(viewId, list);
+			} else if (!list.contains(this)) {
+				list.add(this);
+			}
+			
+			// start listening to changes in resources
+			org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) getDecoratorTarget().getAdapter(
+					org.eclipse.gmf.runtime.notation.View.class);
+			if (view == null) {
+				return;
+			}
+			org.eclipse.gmf.runtime.notation.Diagram diagramView = view.getDiagram();
+			if (diagramView == null) {
+				return;
+			}
+			if (fileObserver == null) {
+				org.eclipse.gmf.runtime.common.ui.resources.FileChangeManager.getInstance().addFileObserver(
+						fileObserver = new MarkerObserver(diagramView));
+			}
+					}
+
+		/**
+ * @generated
+ */
+		public void deactivate() {
+			if (viewId == null) {
+				return;
+			}
+
+			// remove self from global decorators registry
+			java.util.List list = (java.util.List) allDecorators.get(viewId);
+			if (list != null) {
+				list.remove(this);
+				if (list.isEmpty()) {
+					allDecorators.remove(viewId);
+				}
+			}
+			
+			// stop listening to changes in resources if there are no more decorators
+			if (fileObserver != null && allDecorators.isEmpty()) {
+				org.eclipse.gmf.runtime.common.ui.resources.FileChangeManager.getInstance().removeFileObserver(fileObserver);
+				fileObserver = null;
+			}
+						super.deactivate();
+		}
+	}
+	
+	/**
+ * @generated
+ */
+	static class MarkerObserver implements org.eclipse.gmf.runtime.common.ui.resources.IFileObserver {
+
+		/**
+ * @generated
+ */
+		private org.eclipse.gmf.runtime.notation.Diagram diagram;
+
+		/**
+ * @generated
+ */
+		private MarkerObserver(org.eclipse.gmf.runtime.notation.Diagram diagram) {
+			this.diagram = diagram;
+		}
+
+		/**
+ * @generated
+ */
+		public void handleFileRenamed(org.eclipse.core.resources.IFile oldFile, org.eclipse.core.resources.IFile file) {
+		}
+
+		/**
+ * @generated
+ */
+		public void handleFileMoved(org.eclipse.core.resources.IFile oldFile, org.eclipse.core.resources.IFile file) {
+		}
+
+		/**
+ * @generated
+ */
+		public void handleFileDeleted(org.eclipse.core.resources.IFile file) {
+		}
+
+		/**
+ * @generated
+ */
+		public void handleFileChanged(org.eclipse.core.resources.IFile file) {
+		}
+
+		/**
+ * @generated
+ */
+		public void handleMarkerAdded(org.eclipse.core.resources.IMarker marker) {
+			if (marker.getAttribute(org.eclipse.gmf.runtime.common.ui.resources.IMarker.ELEMENT_ID, null) != null) {
+				handleMarkerChanged(marker);
+			}
+		}
+
+		/**
+ * @generated
+ */
+		public void handleMarkerDeleted(org.eclipse.core.resources.IMarker marker, java.util.Map attributes) {
+			String viewId = (String) attributes.get(org.eclipse.gmf.runtime.common.ui.resources.IMarker.ELEMENT_ID);
+			refreshDecorators(viewId, diagram);
+		}
+
+		/**
+ * @generated
+ */
+		public void handleMarkerChanged(org.eclipse.core.resources.IMarker marker) {
+			if (!MARKER_TYPE.equals(getType(marker))) {
+				return;
+			}
+			String viewId = marker.getAttribute(
+					org.eclipse.gmf.runtime.common.ui.resources.IMarker.ELEMENT_ID, "");  //$NON-NLS-1$
+			refreshDecorators(viewId, diagram);
+		}
+
+		/**
+ * @generated
+ */
+		private String getType(org.eclipse.core.resources.IMarker marker) {
+			try {
+				return marker.getType();
+			} catch (org.eclipse.core.runtime.CoreException e) {
+				Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError(
+						"Validation marker refresh failure", e);  //$NON-NLS-1$
+				return "";  //$NON-NLS-1$
+			}
+		}
+	}
+		}

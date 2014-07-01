@@ -1,0 +1,29 @@
+	/*
+ * 
+ */
+package capOverTime.diagram.edit.policies;
+
+	/**
+ * @generated
+ */
+public class MeasurementMeasurementCriticalValuesCompartmentItemSemanticEditPolicy extends capOverTime.diagram.edit.policies.CapOverTimeBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public MeasurementMeasurementCriticalValuesCompartmentItemSemanticEditPolicy() {
+				super(capOverTime.diagram.providers.CapOverTimeElementTypes.Measurement_3002);
+	}
+
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest req) {
+		if (capOverTime.diagram.providers.CapOverTimeElementTypes.QualitativeValue_3003 == req.getElementType()) {
+	return getGEFWrapper(new capOverTime.diagram.edit.commands.QualitativeValueCreateCommand(req));
+}
+		return super.getCreateCommand(req);
+	}
+	
+	}

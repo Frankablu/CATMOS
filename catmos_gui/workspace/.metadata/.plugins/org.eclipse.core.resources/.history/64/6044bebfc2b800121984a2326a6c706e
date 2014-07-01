@@ -1,0 +1,273 @@
+	/*
+ * 
+ */
+package capOverTime.diagram.part;
+
+	/**
+ * This registry is used to determine which type of visual object should be
+ * created for the corresponding Diagram, Node, ChildNode or Link represented
+ * by a domain model object.
+ * 
+ * @generated
+ */
+public class CapOverTimeVisualIDRegistry {
+
+		/**
+ * @generated
+ */
+	private static final String DEBUG_KEY = "CapabilityOverTime.diagram/debug/visualID";  //$NON-NLS-1$
+
+		/**
+ * @generated
+ */
+public static int getVisualID(org.eclipse.gmf.runtime.notation.View view) {
+	if (view instanceof org.eclipse.gmf.runtime.notation.Diagram) {
+		if (capOverTime.diagram.edit.parts.CapabilityOverTimeEditPart.MODEL_ID.equals(view.getType())) {
+			return capOverTime.diagram.edit.parts.CapabilityOverTimeEditPart.VISUAL_ID;
+		} else {
+			return -1;
+		}
+	}
+	return capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getVisualID(view.getType());
+}
+	
+		/**
+ * @generated
+ */
+public static String getModelID(org.eclipse.gmf.runtime.notation.View view) {
+	org.eclipse.gmf.runtime.notation.View diagram = view.getDiagram();
+	while (view != diagram) {
+		org.eclipse.emf.ecore.EAnnotation annotation = view.getEAnnotation("Shortcut");  //$NON-NLS-1$
+		if (annotation != null) {
+			return (String) annotation.getDetails().get("modelID");  //$NON-NLS-1$
+		}
+		view = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+	}
+	return diagram != null ? diagram.getType() : null;
+}
+	
+		/**
+ * @generated
+ */
+public static int getVisualID(String type) {
+	try {
+		return Integer.parseInt(type);
+	} catch (NumberFormatException e) {
+		if (Boolean.TRUE.toString().equalsIgnoreCase(org.eclipse.core.runtime.Platform.getDebugOption(DEBUG_KEY))) {
+			capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().logError("Unable to parse view type as a visualID number: " + type);
+		}
+	}
+	return -1;
+}
+
+	/**
+ * @generated
+ */
+public static String getType(int visualID) {
+	return Integer.toString(visualID);
+}
+	
+		/**
+ * @generated
+ */
+public static int getDiagramVisualID(org.eclipse.emf.ecore.EObject domainElement) {
+	if (domainElement == null) {
+		return -1;
+	}
+	if (capOverTime.CapOverTimePackage.eINSTANCE.getCapabilityOverTime().isSuperTypeOf(domainElement.eClass()) && isDiagram((capOverTime.CapabilityOverTime) domainElement)) {
+	return capOverTime.diagram.edit.parts.CapabilityOverTimeEditPart.VISUAL_ID;
+}
+	return -1;
+}
+	
+		/**
+ * @generated
+ */
+public static int getNodeVisualID(org.eclipse.gmf.runtime.notation.View containerView, org.eclipse.emf.ecore.EObject domainElement) {
+	if (domainElement == null) {
+		return -1;
+	}
+	String containerModelID = capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getModelID(containerView);
+	if (!capOverTime.diagram.edit.parts.CapabilityOverTimeEditPart.MODEL_ID.equals(containerModelID) && !"capOverTime".equals(containerModelID)) {  //$NON-NLS-1$
+		return -1;
+	}
+	int containerVisualID;
+	if (capOverTime.diagram.edit.parts.CapabilityOverTimeEditPart.MODEL_ID.equals(containerModelID)) {
+		containerVisualID = capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getVisualID(containerView);
+	} else {
+		if (containerView instanceof org.eclipse.gmf.runtime.notation.Diagram) {
+			containerVisualID = capOverTime.diagram.edit.parts.CapabilityOverTimeEditPart.VISUAL_ID;		
+		} else {
+			return -1;
+		}
+	}
+	switch (containerVisualID) {
+			case capOverTime.diagram.edit.parts.CapabilityOverTimeEditPart.VISUAL_ID:
+	if (capOverTime.CapOverTimePackage.eINSTANCE.getTimePeriod().isSuperTypeOf(domainElement.eClass())) {
+	return capOverTime.diagram.edit.parts.TimePeriodEditPart.VISUAL_ID;
+}
+	break;
+								case capOverTime.diagram.edit.parts.TimePeriodTimePeriodOurObjectsCompartmentEditPart.VISUAL_ID:
+	if (capOverTime.CapOverTimePackage.eINSTANCE.getCapability().isSuperTypeOf(domainElement.eClass())) {
+	return capOverTime.diagram.edit.parts.CapabilityEditPart.VISUAL_ID;
+}
+	break;
+		case capOverTime.diagram.edit.parts.CapabilityCapabilityMeasurementsCompartmentEditPart.VISUAL_ID:
+	if (capOverTime.CapOverTimePackage.eINSTANCE.getMeasurement().isSuperTypeOf(domainElement.eClass())) {
+	return capOverTime.diagram.edit.parts.MeasurementEditPart.VISUAL_ID;
+}
+	break;
+		case capOverTime.diagram.edit.parts.MeasurementMeasurementCriticalValuesCompartmentEditPart.VISUAL_ID:
+	if (capOverTime.CapOverTimePackage.eINSTANCE.getQualitativeValue().isSuperTypeOf(domainElement.eClass())) {
+	return capOverTime.diagram.edit.parts.QualitativeValueEditPart.VISUAL_ID;
+}
+	break;
+		case capOverTime.diagram.edit.parts.MeasurementMeasurementBenchmarkValuesCompartmentEditPart.VISUAL_ID:
+	if (capOverTime.CapOverTimePackage.eINSTANCE.getQualitativeValue().isSuperTypeOf(domainElement.eClass())) {
+	return capOverTime.diagram.edit.parts.QualitativeValue2EditPart.VISUAL_ID;
+}
+	break;
+		case capOverTime.diagram.edit.parts.MeasurementMeasurementProvidedValuesCompartmentEditPart.VISUAL_ID:
+	if (capOverTime.CapOverTimePackage.eINSTANCE.getQualitativeValue().isSuperTypeOf(domainElement.eClass())) {
+	return capOverTime.diagram.edit.parts.QualitativeValue3EditPart.VISUAL_ID;
+}
+	break;
+		}
+	return -1;
+}
+	
+		/**
+ * @generated
+ */
+public static boolean canCreateNode(org.eclipse.gmf.runtime.notation.View containerView, int nodeVisualID) {
+	String containerModelID = capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getModelID(containerView);
+	if (!capOverTime.diagram.edit.parts.CapabilityOverTimeEditPart.MODEL_ID.equals(containerModelID) && !"capOverTime".equals(containerModelID)) {  //$NON-NLS-1$
+		return false;
+	}
+	int containerVisualID;
+	if (capOverTime.diagram.edit.parts.CapabilityOverTimeEditPart.MODEL_ID.equals(containerModelID)) {
+		containerVisualID = capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getVisualID(containerView);
+	} else {
+		if (containerView instanceof org.eclipse.gmf.runtime.notation.Diagram) {
+			containerVisualID = capOverTime.diagram.edit.parts.CapabilityOverTimeEditPart.VISUAL_ID;		
+		} else {
+			return false;
+		}
+	}
+	switch (containerVisualID) {
+		case capOverTime.diagram.edit.parts.CapabilityOverTimeEditPart.VISUAL_ID:
+	if (capOverTime.diagram.edit.parts.TimePeriodEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case capOverTime.diagram.edit.parts.TimePeriodEditPart.VISUAL_ID:
+	if (capOverTime.diagram.edit.parts.TimePeriodStartDateStopDateEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (capOverTime.diagram.edit.parts.TimePeriodTimePeriodOurObjectsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case capOverTime.diagram.edit.parts.CapabilityEditPart.VISUAL_ID:
+	if (capOverTime.diagram.edit.parts.CapabilityNameColourEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (capOverTime.diagram.edit.parts.CapabilityCapabilityMeasurementsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case capOverTime.diagram.edit.parts.MeasurementEditPart.VISUAL_ID:
+	if (capOverTime.diagram.edit.parts.MeasurementNameEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (capOverTime.diagram.edit.parts.MeasurementMeasurementCriticalValuesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (capOverTime.diagram.edit.parts.MeasurementMeasurementBenchmarkValuesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+if (capOverTime.diagram.edit.parts.MeasurementMeasurementProvidedValuesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case capOverTime.diagram.edit.parts.QualitativeValueEditPart.VISUAL_ID:
+	if (capOverTime.diagram.edit.parts.QualitativeValueNameEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case capOverTime.diagram.edit.parts.QualitativeValue2EditPart.VISUAL_ID:
+	if (capOverTime.diagram.edit.parts.QualitativeValueName2EditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case capOverTime.diagram.edit.parts.QualitativeValue3EditPart.VISUAL_ID:
+	if (capOverTime.diagram.edit.parts.QualitativeValueName3EditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case capOverTime.diagram.edit.parts.TimePeriodTimePeriodOurObjectsCompartmentEditPart.VISUAL_ID:
+	if (capOverTime.diagram.edit.parts.CapabilityEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case capOverTime.diagram.edit.parts.CapabilityCapabilityMeasurementsCompartmentEditPart.VISUAL_ID:
+	if (capOverTime.diagram.edit.parts.MeasurementEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case capOverTime.diagram.edit.parts.MeasurementMeasurementCriticalValuesCompartmentEditPart.VISUAL_ID:
+	if (capOverTime.diagram.edit.parts.QualitativeValueEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case capOverTime.diagram.edit.parts.MeasurementMeasurementBenchmarkValuesCompartmentEditPart.VISUAL_ID:
+	if (capOverTime.diagram.edit.parts.QualitativeValue2EditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case capOverTime.diagram.edit.parts.MeasurementMeasurementProvidedValuesCompartmentEditPart.VISUAL_ID:
+	if (capOverTime.diagram.edit.parts.QualitativeValue3EditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+		case capOverTime.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID:
+	if (capOverTime.diagram.edit.parts.WrappingLabelEditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case capOverTime.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID:
+	if (capOverTime.diagram.edit.parts.WrappingLabel2EditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+case capOverTime.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID:
+	if (capOverTime.diagram.edit.parts.WrappingLabel3EditPart.VISUAL_ID == nodeVisualID) {
+	return true;
+}
+	break;
+	}
+	return false;
+}
+	
+		/**
+ * @generated
+ */
+public static int getLinkWithClassVisualID(org.eclipse.emf.ecore.EObject domainElement) {
+	if (domainElement == null) {
+		return -1;
+	}
+		return -1;
+}
+	
+				/**
+ * User can change implementation of this method to handle some specific
+ * situations not covered by default logic.
+ * 
+ * @generated
+ */
+private static boolean isDiagram(capOverTime.CapabilityOverTime element) {
+	return true;
+}
+	
+	
+	}

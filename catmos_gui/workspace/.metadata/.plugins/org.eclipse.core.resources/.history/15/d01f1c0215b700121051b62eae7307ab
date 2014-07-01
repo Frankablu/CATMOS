@@ -1,0 +1,66 @@
+	/*
+ * 
+ */
+package Scenario.diagram.edit.policies;
+
+	/**
+ * @generated
+ */
+public class ScenarioItemSemanticEditPolicy extends Scenario.diagram.edit.policies.ScenarioBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public ScenarioItemSemanticEditPolicy() {
+				super(Scenario.diagram.providers.ScenarioElementTypes.Scenario_1000);
+	}
+
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest req) {
+		if (Scenario.diagram.providers.ScenarioElementTypes.CapabilityProvision_2001 == req.getElementType()) {
+	return getGEFWrapper(new Scenario.diagram.edit.commands.CapabilityProvisionCreateCommand(req));
+}
+		if (Scenario.diagram.providers.ScenarioElementTypes.FindTradeOffs_2002 == req.getElementType()) {
+	return getGEFWrapper(new Scenario.diagram.edit.commands.FindTradeOffsCreateCommand(req));
+}
+		if (Scenario.diagram.providers.ScenarioElementTypes.ThroughLifePlanning_2003 == req.getElementType()) {
+	return getGEFWrapper(new Scenario.diagram.edit.commands.ThroughLifePlanningCreateCommand(req));
+}
+		if (Scenario.diagram.providers.ScenarioElementTypes.Capability_2004 == req.getElementType()) {
+	return getGEFWrapper(new Scenario.diagram.edit.commands.CapabilityCreateCommand(req));
+}
+		if (Scenario.diagram.providers.ScenarioElementTypes.QualitativeValueDictionary_2005 == req.getElementType()) {
+	return getGEFWrapper(new Scenario.diagram.edit.commands.QualitativeValueDictionaryCreateCommand(req));
+}
+		if (Scenario.diagram.providers.ScenarioElementTypes.Component_2006 == req.getElementType()) {
+	return getGEFWrapper(new Scenario.diagram.edit.commands.ComponentCreateCommand(req));
+}
+		return super.getCreateCommand(req);
+	}
+	
+		/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getDuplicateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest req) {
+	org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain = ((org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) getHost()).getEditingDomain();
+	return getGEFWrapper(new DuplicateAnythingCommand(editingDomain, req));
+}
+	
+		/**
+ * @generated
+ */
+private static class DuplicateAnythingCommand extends org.eclipse.gmf.runtime.emf.commands.core.commands.DuplicateEObjectsCommand {
+
+		/**
+ * @generated
+ */
+public DuplicateAnythingCommand(org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain, org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest req) {
+	super(editingDomain, req.getLabel(), req.getElementsToBeDuplicated(), req.getAllDuplicatedElementsMap());
+}
+
+	}
+	
+	}

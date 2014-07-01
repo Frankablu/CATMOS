@@ -1,0 +1,66 @@
+/*
+ * 
+ */
+package Scenario.diagram.providers;
+
+/**
+ * @generated
+ */
+public class ScenarioValidationProvider {
+
+	/**
+ * @generated
+ */
+private static boolean constraintsActive = false;	
+
+	/**
+ * @generated
+ */
+public static boolean shouldConstraintsBePrivate() {
+	return false;
+}
+
+	/**
+ * @generated
+ */
+public static void runWithConstraints(org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain, Runnable operation) {
+	final Runnable op = operation;
+	Runnable task = new Runnable() {
+		public void run() {
+			try {
+				constraintsActive = true;
+				op.run();
+			} finally {
+				constraintsActive = false;
+			}
+		}
+	};
+	if(editingDomain != null) {
+		try {
+			editingDomain.runExclusive(task);
+		} catch (Exception e) {
+			Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Validation failed", e);  //$NON-NLS-1$
+		}
+	} else {
+		task.run();
+	}
+}
+
+	/**
+ * @generated
+ */
+static boolean isInDefaultEditorContext(Object object) {
+	if(shouldConstraintsBePrivate() && !constraintsActive) {
+		return false;
+	}
+	if (object instanceof org.eclipse.gmf.runtime.notation.View) {
+		return constraintsActive && Scenario.diagram.edit.parts.ScenarioEditPart.MODEL_ID.equals(Scenario.diagram.part.ScenarioVisualIDRegistry.getModelID((org.eclipse.gmf.runtime.notation.View) object));
+	}
+	return true;
+}
+
+
+
+
+
+}

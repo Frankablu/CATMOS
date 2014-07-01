@@ -1,0 +1,225 @@
+
+ThroughLifePlanning ThroughLifeAutoNextReleaseProblemTwoHundred
+{
+	popSize 100
+	genCount 100
+	
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	[%
+	for (customer in 1.to(20))
+	{
+	%]
+	AcquirableComponent customer[%=customer%] 1 acquisitionTime "0" lifeSpan "inf"
+	[%
+	}
+	%]
+	
+	[%
+	for (feature in 1.to(200))
+	{
+		var randomAcquisitionTime : Integer = 0.to(50).random();
+	%]
+	AcquirableComponent feature[%=feature%] 1 acquisitionTime "[%=randomAcquisitionTime%]" lifeSpan "inf"
+	[%
+	}
+	%]
+	
+	Budget Money
+	{
+		amount 45.0
+		startDate "15/01/2013"
+	}
+	
+	Budget Money
+	{
+		amount 40.0
+		startDate "01/02/2013"
+		repeatDuration "30 days"
+	}
+	
+	DesireLow "Money"
+}
+
+[%
+var numberBag : Bag = new Bag;
+
+for (num in 1.to(10))
+{
+	numberBag.add(1.0 * num);
+}
+
+var a : Real = numberBag.random();
+var b : Real = numberBag.random();
+var c : Real = numberBag.random();
+var d : Real = numberBag.random();
+var e : Real = numberBag.random();
+var aa : Real = numberBag.random();
+var ab : Real = numberBag.random();
+var ac : Real = numberBag.random();
+var ad : Real = numberBag.random();
+var ae : Real = numberBag.random();
+
+var ba : Real = numberBag.random();
+var bb : Real = numberBag.random();
+var bc : Real = numberBag.random();
+var bd : Real = numberBag.random();
+var be : Real = numberBag.random();
+var baa : Real = numberBag.random();
+var bab : Real = numberBag.random();
+var bac : Real = numberBag.random();
+var bad : Real = numberBag.random();
+var bae : Real = numberBag.random();
+
+var total : Real = a + b + c + d + e + aa + ab + ac + ad + ae + ba + bb + bc + bd + be + baa + bab + bac + bad + bae;
+a = a / total;
+b = b / total;
+c = c / total;
+d = d / total;
+e = e / total;
+aa = aa / total;
+ab = ab / total;
+ac = ac / total;
+ad = ad / total;
+ae = ae / total;
+ba = ba / total;
+bb = bb / total;
+bc = bc / total;
+bd = bd / total;
+be = be / total;
+baa = baa / total;
+bab = bab / total;
+bac = bac / total;
+bad = bad / total;
+bae = bae / total;
+
+%]
+
+standAlone
+searchObjective
+Capability overallSatisfaction
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement weightedSatisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		script "output = [%=a%] * getGlobalMeasure(\'customer1satisfaction\') + [%=b%] * getGlobalMeasure(\'customer2satisfaction\') + [%=c%] * getGlobalMeasure(\'customer3satisfaction\') + [%=d%] * getGlobalMeasure(\'customer4satisfaction\') + [%=e%] * getGlobalMeasure(\'customer5satisfaction\') + [%=aa%] * getGlobalMeasure(\'customer6satisfaction\') + [%=ab%] * getGlobalMeasure(\'customer7satisfaction\') + [%=ac%] * getGlobalMeasure(\'customer8satisfaction\') + [%=ad%] * getGlobalMeasure(\'customer9satisfaction\') + [%=ae%] * getGlobalMeasure(\'customer10satisfaction\') + [%=ba%] * getGlobalMeasure(\'customer11satisfaction\') + [%=bb%] * getGlobalMeasure(\'customer12satisfaction\') + [%=bc%] * getGlobalMeasure(\'customer13satisfaction\') + [%=bd%] * getGlobalMeasure(\'customer14satisfaction\') + [%=be%] * getGlobalMeasure(\'customer15satisfaction\') + [%=baa%] * getGlobalMeasure(\'customer16satisfaction\') + [%=bab%] * getGlobalMeasure(\'customer17satisfaction\') + [%=bac%] * getGlobalMeasure(\'customer18satisfaction\') + [%=bad%] * getGlobalMeasure(\'customer19satisfaction\') + [%=bae%] * getGlobalMeasure(\'customer20satisfaction\')"
+	}
+}
+
+[%
+for (n in 1.to(20))
+{
+var randomRequirementBag : Collection = new Bag;
+randomRequirementBag.add(1.to(200).random());
+randomRequirementBag.add(1.to(200).random());
+randomRequirementBag.add(1.to(200).random());
+randomRequirementBag.add(1.to(200).random());
+randomRequirementBag.add(1.to(200).random());
+
+a = numberBag.random();
+b = numberBag.random();
+c = numberBag.random();
+d = numberBag.random();
+e = numberBag.random();
+
+total = a + b + c + d + e;
+a = a / total;
+b = b / total;
+c = c / total;
+d = d / total;
+e = e / total;
+
+var sumToOne : Bag = new Bag;
+sumToOne.add(a);
+sumToOne.add(b);
+sumToOne.add(c);
+sumToOne.add(d);
+sumToOne.add(e);
+
+%]
+
+standAlone
+Capability customer[%=n%]satisfaction
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement customer[%=n%]satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		providedValue 0.0
+		script "output = 0 [%
+		for (value in randomRequirementBag)
+		{
+			var weight = sumToOne.first;
+			sumToOne.remove(weight);
+			%]+ [%=weight%] * getGlobalMeasure(\"req[%=value%]\")[%
+		}
+		%]"
+	}
+}
+
+[%
+}
+%]
+
+[%
+for (n in 1.to(200))
+{
+var randomNumber : Any = 0.to(10).random();
+var r : Integer = 1.to(200).random();
+
+%]
+Component feature[%=n%]
+{
+	CapabilityProvision requirement[%=n%]
+	{
+		Measurement req[%=n%]
+		{
+			providedValue 1.0
+		}
+	}
+	
+	[%
+	if (r > n) //Random if there is a dependency + no dependency loops possible
+	{
+	%]
+	Capability requirement[%=r%]
+	{
+		Measurement req[%=r%]
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	[%
+	}
+	%]
+	
+	Cost Money [%=randomNumber%].0
+}
+
+Capability requirement[%=n%]
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req[%=n%]
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+[%
+}
+
+%]
+
+

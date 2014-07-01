@@ -1,0 +1,30 @@
+/*
+ * 
+ */
+package CapOverTime.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramPreferenceInitializer extends org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer {
+
+	/**
+ * @generated
+ */
+	public void initializeDefaultPreferences() {
+		org.eclipse.jface.preference.IPreferenceStore store = getPreferenceStore();
+		CapOverTime.diagram.preferences.DiagramGeneralPreferencePage.initDefaults(store);
+CapOverTime.diagram.preferences.DiagramAppearancePreferencePage.initDefaults(store);
+CapOverTime.diagram.preferences.DiagramConnectionsPreferencePage.initDefaults(store);
+CapOverTime.diagram.preferences.DiagramPrintingPreferencePage.initDefaults(store);
+CapOverTime.diagram.preferences.DiagramRulersAndGridPreferencePage.initDefaults(store);
+
+	}
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.jface.preference.IPreferenceStore getPreferenceStore() {
+		return CapOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().getPreferenceStore();
+	}
+} 

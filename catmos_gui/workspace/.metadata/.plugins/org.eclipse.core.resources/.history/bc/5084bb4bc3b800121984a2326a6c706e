@@ -1,0 +1,47 @@
+pluginName=CapOverTime Plugin
+providerName=Sample Plugin Provider, Inc
+
+editorName=CapOverTime Diagram Editing
+context.description=CapOverTime Diagram Editing
+context.name=In CapOverTime Diagram Editor
+newWizardName=CapOverTime Diagram
+newWizardDesc=Creates CapOverTime diagram.
+
+initDiagramActionLabel=Initialize capovertime_diagram diagram file
+
+
+navigatorContentName=*.capovertime_diagram diagram contents
+domainNavigatorContentName=*.capovertime model contents
+update.diagram.name=Update CapOverTime diagram
+update.diagram.description=Perform CapOverTime diagram update
+
+
+# Property Sheet
+tab.appearance=Appearance
+tab.diagram=Rulers & Grid
+tab.domain=Core
+
+# Preferences
+prefpage.CapabilityOverTime.diagram.general=CapOverTime Diagram
+prefpage.CapabilityOverTime.diagram.appearance=Appearance
+prefpage.CapabilityOverTime.diagram.connections=Connections
+prefpage.CapabilityOverTime.diagram.printing=Printing
+prefpage.CapabilityOverTime.diagram.rulersAndGrid=Rulers And Grid
+
+
+# Providers
+metatype.name.CapabilityOverTime_1000=Undefined
+metatype.name.TimePeriod_2001=TimePeriod
+metatype.name.Capability_3001=Capability
+metatype.name.Measurement_3002=Measurement
+metatype.name.QualitativeValue_3003=QualitativeValue
+metatype.name.QualitativeValue_3004=QualitativeValue
+metatype.name.QualitativeValue_3005=QualitativeValue
+metatype.name.CapabilityAccumulation_4001=Undefined
+metatype.name.CapabilityDecomposes_4002=Undefined
+metatype.name.CapabilitySatisfies_4003=Undefined
+
+# Commands and menu actions
+cmdcategory.name=CapOverTime Editor Commands
+cmdcategory.desc=CapOverTime Editor Commands
+

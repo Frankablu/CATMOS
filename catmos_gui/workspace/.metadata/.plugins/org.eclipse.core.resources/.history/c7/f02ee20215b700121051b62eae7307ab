@@ -1,0 +1,30 @@
+/*
+ * 
+ */
+package Scenario.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramPreferenceInitializer extends org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer {
+
+	/**
+ * @generated
+ */
+	public void initializeDefaultPreferences() {
+		org.eclipse.jface.preference.IPreferenceStore store = getPreferenceStore();
+		Scenario.diagram.preferences.DiagramGeneralPreferencePage.initDefaults(store);
+Scenario.diagram.preferences.DiagramAppearancePreferencePage.initDefaults(store);
+Scenario.diagram.preferences.DiagramConnectionsPreferencePage.initDefaults(store);
+Scenario.diagram.preferences.DiagramPrintingPreferencePage.initDefaults(store);
+Scenario.diagram.preferences.DiagramRulersAndGridPreferencePage.initDefaults(store);
+
+	}
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.jface.preference.IPreferenceStore getPreferenceStore() {
+		return Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().getPreferenceStore();
+	}
+} 

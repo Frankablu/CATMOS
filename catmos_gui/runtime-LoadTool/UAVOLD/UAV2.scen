@@ -1,0 +1,343 @@
+FindTradeOffs UAV { popSize 100 genCount 100 
+	ExistingComponent "Brigade HQ" 1
+	ExistingComponent "Plan: MQ-9 Bombing Run" 10
+	ExistingComponent "MQ-9 Reaper" 10
+	ExistingComponent "AGM-114 Hellfire Missile Package" 10
+	ExistingComponent "GBU-38 Joint Direct Attack Munition Package" 10
+	ExistingComponent "Mastiff" 5
+	ExistingComponent "Blue Team Patrol" 5
+	ExistingComponent "Base" 5
+	ExistingComponent "Blue Team Squad" 5
+	ExistingComponent "Ground Control Station" 5
+	ExistingComponent "SIGINT" 1
+	ExistingComponent "Global Hawk" 5
+	
+}
+
+Capability "Route Clearance"
+{
+	
+	decomposes ("Clearing The Route", "Keeping The Route Clear")
+}
+
+Capability "Clearing The Route"
+{
+	
+	decomposes ("Plan", "Removing Hard Targets", "Removing IEDs")
+}
+
+Capability "Plan"
+{
+	
+	decomposes ("Mission Plan", "Control and Communication")
+}
+
+Capability "Mission Plan"
+{
+	Measurement "MissionPlanEffectiveness"
+	{
+		criticalValue 0.0
+		benchmarkValue 10.0	
+	}
+}
+
+Component "Brigade HQ"
+{
+	CapabilityProvision "Mission Plan"
+	{
+		Measurement MissionPlanEffectiveness
+		{
+			providedValue 10.0
+		}
+	}
+	CapabilityProvision "Global Hawk Mission Plan"
+	{
+		
+	}
+}
+
+Capability "Removing Hard Targets"
+{
+	accumulation TotalRequiredExplosiveForce
+	Measurement TotalRequiredExplosiveForce
+	{
+		criticalValue 1000.0
+		benchmarkValue 2000.0
+	}
+}
+
+Component "Plan: MQ-9 Bombing Run"
+{
+	CapabilityProvision "Removing Hard Targets"
+	{
+		reuse 1
+		Measurement TotalRequiredExplosiveForce
+		{
+			providedValue 400.0
+		}
+	}
+	
+	Capability "MQ-9 UAV Strike" {}
+	Capability "AGM-114 Hellfire Missile" {}
+	Capability "GBU-38 Joint Direct Attack Munition" {}
+}
+
+Component "MQ-9 Reaper"
+{
+	CapabilityProvision "MQ-9 UAV Strike"
+	{
+		reuse 3
+	}
+	
+	CapabilityProvision "Combat Air Patrol"
+	{
+		reuse 1
+		Measurement AirSpaceCoverage
+		{
+			providedValue 80.0
+		}
+	}
+	
+	CapabilityProvision "SIGINT Coverage"
+	{
+		reuse 1
+		Measurement CoverageArea
+		{
+			providedValue 25.0
+		}
+	}
+	
+	//ANAPY-8 Lynx II radar
+	CapabilityProvision "Wide-Area Surveillance"
+	{
+		Measurement CoverageArea
+		{
+			providedValue 20.0
+		}
+	}
+	
+}
+
+Component "AGM-114 Hellfire Missile Package"
+{
+	CapabilityProvision "AGM-114 Hellfire Missile" {reuse 10}
+}
+
+Component "GBU-38 Joint Direct Attack Munition Package"
+{
+	CapabilityProvision "GBU-38 Joint Direct Attack Munition" {reuse 10}
+}
+
+Capability "Removing IEDs"
+{
+	
+	decomposes ("Removal Amount", "Casualty Hazard", "IED Location Information")
+}
+
+Capability "Casualty Hazard"
+{
+	Measurement ChanceOfCasualty
+	{
+		criticalValue 40.0
+		benchmarkValue 0.0
+	}
+}
+
+Capability "Removal Amount"
+{
+	accumulation IEDPerDay
+	Measurement IEDPerDay
+	{
+		criticalValue 2.0
+		benchmarkValue 10.0
+	}
+}
+
+Capability "IED Location Information"
+{
+	accumulation IEDsLocated
+	Measurement IEDsLocated
+	{
+		criticalValue 0.0
+		benchmarkValue 10.0
+	}
+}
+
+Component "Mastiff"
+{
+	CapabilityProvision "Casualty Hazard"
+	{
+		Measurement ChanceOfCasualty
+		{
+			providedValue 2.0
+		}
+	}
+	
+	CapabilityProvision "Removal Amount"
+	{
+		reuse 1
+		Measurement IEDPerDay
+		{
+			providedValue 2.0
+		}
+	}
+}
+
+Capability "Keeping The Route Clear"
+{
+	
+	decomposes ("Patrol", "Combat Air Patrol")
+}
+
+Capability "Patrol"
+{
+	
+	decomposes ("Wide-Area Surveillance", "Patrols")
+}
+
+Capability "Patrols"
+{
+	accumulation GroundCoveragePerDay
+	Measurement GroundCoveragePerDay
+	{
+		criticalValue 10.0
+		benchmarkValue 100.0
+	}
+}
+
+Component "Blue Team Patrol"
+{
+	CapabilityProvision "Patrols"
+	{
+		Measurement GroundCoveragePerDay
+		{
+			providedValue 8.0
+		}
+	}
+	
+	CapabilityProvision "IED Location Information"
+	{
+		Measurement IEDsLocated
+		{
+			providedValue 3.0
+		}
+	}
+	
+	Capability "Basing"
+	{
+		
+	}
+}
+
+Component "Base"
+{
+	CapabilityProvision "Basing"
+	{
+		reuse 10
+	}
+	CapabilityProvision "UAV Launch and Recovery"
+	{
+		
+	}
+	CapabilityProvision "UAV UHF Communication"
+	{
+		
+	}
+	CapabilityProvision "Global Hawk Local Control" {}
+	
+	Capability "Base Setup"
+	{
+		
+	}
+}
+
+Component "Blue Team Squad"
+{
+	CapabilityProvision "Base Setup"
+	{
+		
+	}
+}
+
+Capability "Control and Communication"
+{
+	
+}
+
+Component "Ground Control Station"
+{
+	
+	CapabilityProvision "Control and Communication"
+	{
+		
+	}
+	//Network
+	//Collaboration
+	//GPS System
+}
+
+Capability "Combat Air Patrol"
+{
+	Measurement AirSpaceCoverage
+	{
+		criticalValue 60.0
+		benchmarkValue 120.0
+	}
+}
+
+
+Component "SIGINT"
+{
+	CapabilityProvision "IED Location Information"
+	{
+		Measurement IEDsLocated
+		{
+			providedValue 3.0
+		}
+	}
+	
+	Capability "SIGINT Coverage"
+	{
+		accumulation CoverageArea
+		Measurement CoverageArea
+		{
+			criticalValue 0.0
+			benchmarkValue 100.0
+		}
+	}
+}
+
+searchObjective
+Capability "Wide-Area Surveillance"
+{
+	
+	decomposes ("Wide-Area Surveillance Coverage", "Control and Communication")
+}
+
+Capability "Wide-Area Surveillance Coverage"
+{
+	accumulation CoverageArea
+	Measurement CoverageArea
+	{
+		criticalValue 0.0
+		benchmarkValue 100.0
+	}
+}
+
+
+Component "Global Hawk"
+{
+	//"Global Hawk UAV Gorgon Stare Holder"
+	CapabilityProvision "Wide-Area Surveillance"
+	{
+		Measurement CoverageArea
+		{
+			providedValue 20.0
+		}
+	}
+	
+	Capability "Global Hawk Mission Plan" {}
+	Capability "UAV Launch and Recovery" {}
+	Capability "UAV UHF Communication" {}
+	Capability "Global Hawk Local Control" {}
+}

@@ -1,0 +1,17 @@
+/*
+ * 
+ */
+package Scenario.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramRulersAndGridPreferencePage extends org.eclipse.gmf.runtime.diagram.ui.preferences.RulerGridPreferencePage {
+
+	/**
+ * @generated
+ */
+	public DiagramRulersAndGridPreferencePage() {
+		setPreferenceStore(Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().getPreferenceStore());
+	}
+}

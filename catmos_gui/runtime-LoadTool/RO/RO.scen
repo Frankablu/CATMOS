@@ -1,0 +1,509 @@
+
+//Ragnarok Online 2 Mage Skill DPS Calculator
+
+FindTradeOffs RO
+{
+	popSize 20
+	genCount 20
+	
+	AcquirableComponent ColdBolt 1
+	AcquirableComponent FireBolt 1
+	AcquirableComponent LightningBolt 1
+	
+	AcquirableComponent ColdBoltLvl1 1
+	AcquirableComponent ColdBoltLvl2 1
+	AcquirableComponent ColdBoltLvl3 1
+	AcquirableComponent ColdBoltLvl4 1
+	AcquirableComponent ColdBoltLvl5 1
+	
+	AcquirableComponent ColdBoltLvl5Upgrade 1
+	
+	AcquirableComponent FireBoltLvl1 1
+	AcquirableComponent FireBoltLvl2 1
+	AcquirableComponent FireBoltLvl3 1
+	AcquirableComponent FireBoltLvl4 1
+	AcquirableComponent FireBoltLvl5 1
+	
+	AcquirableComponent LightningBoltLvl1 1
+	AcquirableComponent LightningBoltLvl2 1
+	AcquirableComponent LightningBoltLvl3 1
+	AcquirableComponent LightningBoltLvl4 1
+	AcquirableComponent LightningBoltLvl5 1
+	
+	ExistingComponent Connection1 1
+	ExistingComponent Connection2 1
+	ExistingComponent Connection3 1
+	ExistingComponent Connection4 1
+	ExistingComponent Connection5 1
+}
+
+standAlone
+searchObjective
+Capability SingleTargetDPS
+{
+	Measurement DPSOutput
+	{
+		criticalValue 0.0
+		benchmarkValue 500.0
+		script "
+skillDamage = {0,0,0,0,0}
+skillCastTime = {0,0,0,0,0}
+skillColdDownTime = {0,0,0,0,0}
+
+skillDamage[1] = getScenarioMeasure(\"Skill1Damage\")
+skillCastTime[1] = getScenarioMeasure(\"Skill1CastTime\")
+skillColdDownTime[1] = getScenarioMeasure(\"Skill1ColdDownTime\")
+
+skillDamage[2] = getScenarioMeasure(\"Skill2Damage\")
+skillCastTime[2] = getScenarioMeasure(\"Skill2CastTime\")
+skillColdDownTime[2] = getScenarioMeasure(\"Skill2ColdDownTime\")
+
+skillDamage[3] = getScenarioMeasure(\"Skill3Damage\")
+skillCastTime[3] = getScenarioMeasure(\"Skill3CastTime\")
+skillColdDownTime[3] = getScenarioMeasure(\"Skill3ColdDownTime\")
+
+skillDamage[4] = getScenarioMeasure(\"Skill4Damage\")
+skillCastTime[4] = getScenarioMeasure(\"Skill4CastTime\")
+skillColdDownTime[4] = getScenarioMeasure(\"Skill4ColdDownTime\")
+
+skillDamage[5] = getScenarioMeasure(\"Skill5Damage\")
+skillCastTime[5] = getScenarioMeasure(\"Skill5CastTime\")
+skillColdDownTime[5] = getScenarioMeasure(\"Skill5ColdDownTime\")
+
+skillColdDown = {0,0,0,0,0}
+simulatedTime = 0
+totalDamage = 0
+
+while simulatedTime <= 60 do
+
+useSkill = 1
+
+for skillNo = 1, 5 do
+	if skillColdDown[skillNo] <= simulatedTime then
+		useSkill = skillNo
+		break
+	end
+end
+
+totalDamage = totalDamage + skillDamage[useSkill]
+skillColdDown[useSkill] = simulatedTime + skillColdDownTime[useSkill]
+simulatedTime = simulatedTime + skillCastTime[useSkill]
+
+if skillCastTime[useSkill] < 1 then
+simulatedTime = simulatedTime + 1.0 - skillCastTime[useSkill]
+end
+
+end
+
+dps = totalDamage / 60.0
+
+output = dps
+
+
+"
+	}
+}
+
+Capability Skill1
+{
+	Measurement Skill1Damage
+	{
+		criticalValue 0.0
+		benchmarkValue 200.0
+	}
+	Measurement Skill1CastTime
+	{
+		criticalValue 10.0
+		benchmarkValue 0.0
+	}
+	Measurement Skill1ColdDownTime
+	{
+		criticalValue 10.0
+		benchmarkValue 0.0
+	}
+}
+
+Capability Skill2
+{
+	Measurement Skill2Damage
+	{
+		criticalValue 0.0
+		benchmarkValue 200.0
+	}
+	Measurement Skill2CastTime
+	{
+		criticalValue 10.0
+		benchmarkValue 0.0
+	}
+	Measurement Skill2ColdDownTime
+	{
+		criticalValue 10.0
+		benchmarkValue 0.0
+	}
+}
+
+Capability Skill3
+{
+	Measurement Skill3Damage
+	{
+		criticalValue 0.0
+		benchmarkValue 200.0
+	}
+	Measurement Skill3CastTime
+	{
+		criticalValue 10.0
+		benchmarkValue 0.0
+	}
+	Measurement Skill3ColdDownTime
+	{
+		criticalValue 10.0
+		benchmarkValue 0.0
+	}
+}
+
+Capability Skill4
+{
+	Measurement Skill4Damage
+	{
+		criticalValue 0.0
+		benchmarkValue 200.0
+	}
+	Measurement Skill4CastTime
+	{
+		criticalValue 10.0
+		benchmarkValue 0.0
+	}
+	Measurement Skill4ColdDownTime
+	{
+		criticalValue 10.0
+		benchmarkValue 0.0
+	}
+}
+
+Capability Skill5
+{
+	Measurement Skill5Damage
+	{
+		criticalValue 0.0
+		benchmarkValue 200.0
+	}
+	Measurement Skill5CastTime
+	{
+		criticalValue 10.0
+		benchmarkValue 0.0
+	}
+	Measurement Skill5ColdDownTime
+	{
+		criticalValue 10.0
+		benchmarkValue 0.0
+	}
+}
+
+Component Connection1
+{
+	CapabilityProvision Skill1
+	{
+	Measurement Skill1Damage
+	{
+		providedValue 0.0
+		script "output = getMeasure(\"SkillDamage\")"
+	}
+	Measurement Skill1CastTime
+	{
+		providedValue 0.0
+		script "output = getMeasure(\"SkillCastTime\")"
+	}
+	Measurement Skill1ColdDownTime
+	{
+		providedValue 0.0
+		script "output = getMeasure(\"SkillColdDownTime\")"
+	}
+	}
+	Capability Skill
+	{
+	Measurement SkillDamage
+	{
+		criticalValue 0.0
+		benchmarkValue 200.0
+	}
+	Measurement SkillCastTime
+	{
+		criticalValue 10.0
+		benchmarkValue 0.0
+	}
+	Measurement SkillColdDownTime
+	{
+		criticalValue 10.0
+		benchmarkValue 0.0
+	}
+	}
+}
+
+Component Connection2
+{
+	CapabilityProvision Skill2
+	{
+	Measurement Skill2Damage
+	{
+		providedValue 0.0
+		script "output = getMeasure(\"SkillDamage\")"
+	}
+	Measurement Skill2CastTime
+	{
+		providedValue 0.0
+		script "output = getMeasure(\"SkillCastTime\")"
+	}
+	Measurement Skill2ColdDownTime
+	{
+		providedValue 0.0
+		script "output = getMeasure(\"SkillColdDownTime\")"
+	}
+	}
+	Capability Skill
+	{
+	Measurement SkillDamage
+	{
+		criticalValue 0.0
+		benchmarkValue 200.0
+	}
+	Measurement SkillCastTime
+	{
+		criticalValue 10.0
+		benchmarkValue 0.0
+	}
+	Measurement SkillColdDownTime
+	{
+		criticalValue 10.0
+		benchmarkValue 0.0
+	}
+	}
+}
+
+Component Connection3
+{
+	CapabilityProvision Skill3
+	{
+	Measurement Skill3Damage
+	{
+		providedValue 0.0
+		script "output = getMeasure(\"SkillDamage\")"
+	}
+	Measurement Skill3CastTime
+	{
+		providedValue 0.0
+		script "output = getMeasure(\"SkillCastTime\")"
+	}
+	Measurement Skill3ColdDownTime
+	{
+		providedValue 0.0
+		script "output = getMeasure(\"SkillColdDownTime\")"
+	}
+	}
+	Capability Skill
+	{
+	Measurement SkillDamage
+	{
+		criticalValue 0.0
+		benchmarkValue 200.0
+	}
+	Measurement SkillCastTime
+	{
+		criticalValue 10.0
+		benchmarkValue 0.0
+	}
+	Measurement SkillColdDownTime
+	{
+		criticalValue 10.0
+		benchmarkValue 0.0
+	}
+	}
+}
+
+Component Connection4
+{
+	CapabilityProvision Skill4
+	{
+	Measurement Skill4Damage
+	{
+		providedValue 0.0
+		script "output = getMeasure(\"SkillDamage\")"
+	}
+	Measurement Skill4CastTime
+	{
+		providedValue 0.0
+		script "output = getMeasure(\"SkillCastTime\")"
+	}
+	Measurement Skill4ColdDownTime
+	{
+		providedValue 0.0
+		script "output = getMeasure(\"SkillColdDownTime\")"
+	}
+	}
+	Capability Skill
+	{
+	Measurement SkillDamage
+	{
+		criticalValue 0.0
+		benchmarkValue 200.0
+	}
+	Measurement SkillCastTime
+	{
+		criticalValue 10.0
+		benchmarkValue 0.0
+	}
+	Measurement SkillColdDownTime
+	{
+		criticalValue 10.0
+		benchmarkValue 0.0
+	}
+	}
+}
+
+Component Connection5
+{
+	CapabilityProvision Skill5
+	{
+	Measurement Skill5Damage
+	{
+		providedValue 0.0
+		script "output = getMeasure(\"SkillDamage\")"
+	}
+	Measurement Skill5CastTime
+	{
+		providedValue 0.0
+		script "output = getMeasure(\"SkillCastTime\")"
+	}
+	Measurement Skill5ColdDownTime
+	{
+		providedValue 0.0
+		script "output = getMeasure(\"SkillColdDownTime\")"
+	}
+	}
+	Capability Skill
+	{
+	Measurement SkillDamage
+	{
+		criticalValue 0.0
+		benchmarkValue 200.0
+	}
+	Measurement SkillCastTime
+	{
+		criticalValue 10.0
+		benchmarkValue 0.0
+	}
+	Measurement SkillColdDownTime
+	{
+		criticalValue 10.0
+		benchmarkValue 0.0
+	}
+	}
+}
+
+Component ColdBolt
+{
+	CapabilityProvision Skill
+	{
+		reuse 1
+		Measurement SkillDamage
+		{
+			providedValue 26.0
+		}
+		Measurement SkillCastTime
+		{
+			providedValue 0.5
+		}
+		Measurement SkillColdDownTime
+		{
+			providedValue 0.0
+		}
+	}
+}
+
+Component FireBolt
+{
+	CapabilityProvision Skill
+	{
+		reuse 1
+		Measurement SkillDamage
+		{
+			providedValue 33.0
+		}
+		Measurement SkillCastTime
+		{
+			providedValue 1.0
+		}
+		Measurement SkillColdDownTime
+		{
+			providedValue 0.0
+		}
+	}
+}
+
+Component LightningBolt
+{
+	CapabilityProvision Skill
+	{
+		reuse 1
+		Measurement SkillDamage
+		{
+			providedValue 15.0
+		}
+		Measurement SkillCastTime
+		{
+			providedValue 0.0
+		}
+		Measurement SkillColdDownTime
+		{
+			providedValue 0.0
+		}
+	}
+}
+
+Component ColdBoltLvl5Upgrade
+{
+	CapabilityUpgrade "Cold Bolt Level 5 Upgrade"
+	{
+		targetComponent ColdBolt
+		
+		CapabilityChange "add"
+		{
+			CapabilityProvision Skill
+			{
+				reuse 1
+				Measurement SkillDamage
+				{
+					providedValue 37.0
+				}
+				Measurement SkillCastTime
+				{
+					providedValue 0.5
+				}
+				Measurement SkillColdDownTime
+				{
+					providedValue 0.0
+				}
+			}
+		}
+	}
+	
+	Capability ColdBoltLvl5 {}
+}
+
+Component ColdBoltLvl1 {CapabilityProvision ColdBoltLvl1 {}}
+Component ColdBoltLvl2 {CapabilityProvision ColdBoltLvl2 {} Capability ColdBoltLvl1 {} Cost "Skill Point" 1.0}
+Component ColdBoltLvl3 {CapabilityProvision ColdBoltLvl3 {} Capability ColdBoltLvl2 {} Cost "Skill Point" 1.0}
+Component ColdBoltLvl4 {CapabilityProvision ColdBoltLvl4 {} Capability ColdBoltLvl3 {} Cost "Skill Point" 1.0}
+Component ColdBoltLvl5 {CapabilityProvision ColdBoltLvl5 {} Capability ColdBoltLvl4 {} Cost "Skill Point" 1.0}
+
+Component FireBoltLvl1 {CapabilityProvision FireBoltLvl1 {}}
+Component FireBoltLvl2 {CapabilityProvision FireBoltLvl2 {} Capability FireBoltLvl1 {} Cost "Skill Point" 1.0}
+Component FireBoltLvl3 {CapabilityProvision FireBoltLvl3 {} Capability FireBoltLvl2 {} Cost "Skill Point" 1.0}
+Component FireBoltLvl4 {CapabilityProvision FireBoltLvl4 {} Capability FireBoltLvl3 {} Cost "Skill Point" 1.0}
+Component FireBoltLvl5 {CapabilityProvision FireBoltLvl5 {} Capability FireBoltLvl4 {} Cost "Skill Point" 1.0}
+
+Component LightningBoltLvl1 {CapabilityProvision LightningBoltLvl1 {}}
+Component LightningBoltLvl2 {CapabilityProvision LightningBoltLvl2 {} Capability LightningBoltLvl1 {} Cost "Skill Point" 1.0}
+Component LightningBoltLvl3 {CapabilityProvision LightningBoltLvl3 {} Capability LightningBoltLvl2 {} Cost "Skill Point" 1.0}
+Component LightningBoltLvl4 {CapabilityProvision LightningBoltLvl4 {} Capability LightningBoltLvl3 {} Cost "Skill Point" 1.0}
+Component LightningBoltLvl5 {CapabilityProvision LightningBoltLvl5 {} Capability LightningBoltLvl4 {} Cost "Skill Point" 1.0}
+

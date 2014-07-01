@@ -1,0 +1,108 @@
+
+var runTool = new Native("org.eclipse.epsilon.examples.tools.RunTool");
+
+runTool.connectToNetworkClient("127.0.0.1", 11100);
+
+var totalSolutions : Integer = runTool.getParetoFrontSize().asInteger();
+
+var name : String = RunConfiguration.all().first.name;
+
+for (num in 0.to(totalSolutions-1))
+{
+	runTool.setupFlock();
+	runTool.flockLoadModelOriginal("source","/"+name+"/"+name+".scen","ScenarioModel","r");
+	runTool.flockLoadModelMigrated("target","/"+name+"/Results/Solution"+num+".ScenarioModel","ScenarioModel","w");
+	runTool.runFlock("/Tool/Scripts/createBlankSolution.mig");
+	
+	runTool.setupEOL();
+	runTool.eolLoadModel("scenario","/"+name+"/"+name+".scen","ScenarioModel","r");
+	runTool.eolLoadModel("solution","/"+name+"/Results/Solution"+num+".ScenarioModel","ScenarioModel","rw");
+	runTool.runEOL("/Tool/Scripts/expandBlankSolution.eol");
+	
+	if (ThroughLifePlanning.all().size() > 0)
+	{
+		runTool.setupFlock();
+		runTool.flockLoadModelOriginal("source","/"+name+"/"+name+".scen","ScenarioModel","r");
+		runTool.flockLoadModelMigrated("target","/"+name+"/Results/Solution"+num+".capovertime","CapOverTime","w");
+		runTool.runFlock("/Tool/Scripts/createBlankCapOverTime.mig");
+	}
+}
+
+//Setup Interscript Communication
+var root : internal!Main;
+if (internal!Main.all().size() > 0)
+{
+	root = internal!Main.all().first;
+}
+else
+{
+	root = new internal!Main;
+}
+
+//Store The Number Of Solutions In The Pareto Front
+var numberOfSolutions : internal!ValuePair;
+if (internal!ValuePair.all().select(x|x.name == "NumberOfSolutions").size() > 0)
+{
+	numberOfSolutions = internal!ValuePair.all().select(x|x.name == "NumberOfSolutions").first;
+}
+else
+{
+	numberOfSolutions = new internal!ValuePair;
+	numberOfSolutions.name = "NumberOfSolutions";
+	root.valuePairs.add(numberOfSolutions);
+}
+
+numberOfSolutions.value = (totalSolutions-1).asString();
+
+//Set current solution to 0
+var currentSolution : internal!ValuePair;
+if (internal!ValuePair.all().select(x|x.name == "CurrentSolution").size() > 0)
+{
+	currentSolution = internal!ValuePair.all().select(x|x.name == "CurrentSolution").first;
+}
+else
+{
+	currentSolution = new internal!ValuePair;
+	currentSolution.name = "CurrentSolution";
+	root.valuePairs.add(currentSolution);
+}
+
+currentSolution.value = "0";
+
+var ourName : internal!ValuePair;
+if (internal!ValuePair.all().select(x|x.name == "name").size() > 0)
+{
+	ourName = internal!ValuePair.all().select(x|x.name == "name").first;
+}
+else
+{
+	ourName = new internal!ValuePair;
+	ourName.name = "name";
+	root.valuePairs.add(ourName);
+}
+
+ourName.value = name;
+
+//Set Through Life Setting
+var throughLife : internal!ValuePair;
+if (internal!ValuePair.all().select(x|x.name == "ThroughLife").size() > 0)
+{
+	throughLife = internal!ValuePair.all().select(x|x.name == "ThroughLife").first;
+}
+else
+{
+	throughLife = new internal!ValuePair;
+	throughLife.name = "ThroughLife";
+	root.valuePairs.add(throughLife);
+}
+
+if (ThroughLifePlanning.all().size() > 0)
+{
+	throughLife.value = "true";
+}
+else
+{
+	throughLife.value = "false";
+}
+
+

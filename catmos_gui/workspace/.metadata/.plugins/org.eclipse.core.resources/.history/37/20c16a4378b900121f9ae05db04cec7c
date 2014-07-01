@@ -1,0 +1,38 @@
+	/*
+ * 
+ */
+package ScenarioModel.diagram.edit.policies;
+
+/**
+ * @generated
+ */
+public class ComponentU2ItemSemanticEditPolicy extends ScenarioModel.diagram.edit.policies.ScenarioModelBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public ComponentU2ItemSemanticEditPolicy() {
+				super(ScenarioModel.diagram.providers.ScenarioModelElementTypes.ComponentU_3016);
+	}
+
+	
+	/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getDestroyElementCommand(org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest req) {
+	org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) getHost().getModel();
+	org.eclipse.gmf.runtime.emf.commands.core.command.CompositeTransactionalCommand cmd = new org.eclipse.gmf.runtime.emf.commands.core.command.CompositeTransactionalCommand(getEditingDomain(), null);
+	cmd.setTransactionNestingEnabled(false);
+		org.eclipse.emf.ecore.EAnnotation annotation = view.getEAnnotation("Shortcut"); //$NON-NLS-1$
+	if (annotation == null) {
+		// there are indirectly referenced children, need extra commands: false
+		addDestroyShortcutsCommand(cmd, view);
+		// delete host element
+		cmd.add(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand(req));
+	} else {
+		cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), view));
+	}
+	return getGEFWrapper(cmd.reduce());
+}
+					
+	}

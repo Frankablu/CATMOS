@@ -1,0 +1,99 @@
+/*
+ * 
+ */
+package ScenarioModel.diagram.edit.parts;
+
+/**
+ * @generated
+ */
+public class CapabilityDecomposesEditPart extends org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionNodeEditPart 	implements org.eclipse.gmf.runtime.diagram.ui.editparts.ITreeBranchEditPart {
+
+			/**
+ * @generated
+ */
+	public static final int VISUAL_ID = 4002;
+	
+		/**
+ * @generated
+ */
+	public CapabilityDecomposesEditPart(org.eclipse.gmf.runtime.notation.View view) {
+		super(view);
+	}
+	
+		/**
+ * @generated
+ */
+	protected void createDefaultEditPolicies() {
+			super.createDefaultEditPolicies();
+			installEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.SEMANTIC_ROLE, new ScenarioModel.diagram.edit.policies.CapabilityDecomposesItemSemanticEditPolicy());
+				}
+
+	
+
+	
+
+	
+
+	
+	
+		/**
+ * Creates figure for this edit part.
+ * 
+ * Body of this method does not depend on settings in generation model
+ * so you may safely remove <i>generated</i> tag and modify it.
+ * 
+ * @generated
+ */
+	
+	protected org.eclipse.draw2d.Connection createConnectionFigure() {
+		return new CapabilityDecomposesFigure();
+	}
+
+	/**
+ * @generated
+ */
+	public CapabilityDecomposesFigure getPrimaryShape() {
+		return (CapabilityDecomposesFigure) getFigure();
+	}
+
+	
+/**
+ * @generated
+ */
+public class CapabilityDecomposesFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {
+
+
+
+
+	/**
+	 * @generated
+	 */
+	public CapabilityDecomposesFigure() {
+		this.setLineStyle(org.eclipse.draw2d.Graphics.LINE_DASH);
+	this.setForegroundColor(THIS_FORE
+);
+
+		setTargetDecoration(createTargetDecoration());
+	}
+
+	/**
+	 * @generated
+	 */
+	private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {
+		org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();
+		return df;
+	}
+
+
+
+
+}
+
+/**
+ * @generated
+ */
+static final org.eclipse.swt.graphics.Color THIS_FORE = new org.eclipse.swt.graphics.Color(null, 0, 0, 255);
+
+
+	
+	}

@@ -1,0 +1,59 @@
+/*
+ * 
+ */
+package CapOverTime.diagram.edit.commands;
+
+/**
+ * @generated
+ */
+public class CapOverTimeCreateShortcutDecorationsCommand
+		extends org.eclipse.gmf.runtime.emf.commands.core.command.AbstractTransactionalCommand {
+
+	/**
+ * @generated
+ */
+	private java.util.List myDescriptors;
+
+	/**
+ * @generated
+ */
+	public CapOverTimeCreateShortcutDecorationsCommand(
+			org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain,
+			org.eclipse.gmf.runtime.notation.View parentView,
+			java.util.List viewDescriptors) {
+		super(editingDomain, "Create Shortcuts", getWorkspaceFiles(parentView)); //$NON-NLS-1$
+		myDescriptors = viewDescriptors;
+	}
+
+	/**
+ * @generated
+ */
+	public CapOverTimeCreateShortcutDecorationsCommand(
+			org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain,
+			org.eclipse.gmf.runtime.notation.View parentView,
+			org.eclipse.gmf.runtime.diagram.ui.requests.CreateViewRequest.ViewDescriptor viewDescriptor) {
+		this(editingDomain, parentView, java.util.Collections.singletonList(viewDescriptor));
+	}
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.core.command.CommandResult doExecuteWithResult(
+			org.eclipse.core.runtime.IProgressMonitor monitor, org.eclipse.core.runtime.IAdaptable info)
+			throws org.eclipse.core.commands.ExecutionException {
+		for (java.util.Iterator it = myDescriptors.iterator(); it.hasNext();) {
+			org.eclipse.gmf.runtime.diagram.ui.requests.CreateViewRequest.ViewDescriptor nextDescriptor =
+					(org.eclipse.gmf.runtime.diagram.ui.requests.CreateViewRequest.ViewDescriptor) it.next();
+			org.eclipse.gmf.runtime.notation.View view =
+					(org.eclipse.gmf.runtime.notation.View) nextDescriptor.getAdapter(
+							org.eclipse.gmf.runtime.notation.View.class);
+			if (view != null && view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
+					org.eclipse.emf.ecore.EAnnotation shortcutAnnotation = org.eclipse.emf.ecore.EcoreFactory.eINSTANCE.createEAnnotation();
+	shortcutAnnotation.setSource("Shortcut"); //$NON-NLS-1$
+	shortcutAnnotation.getDetails().put("modelID", CapOverTime.diagram.edit.parts.CapabilityOverTimeEditPart.MODEL_ID); //$NON-NLS-1$
+	view.getEAnnotations().add(shortcutAnnotation);
+			}
+		}
+		return org.eclipse.gmf.runtime.common.core.command.CommandResult.newOKCommandResult();
+	}
+}

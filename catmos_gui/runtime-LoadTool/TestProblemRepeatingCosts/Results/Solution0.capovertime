@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:CapabilityOverTime xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="CapOverTime">
+  <timePeriods startDate="0" endDate="0">
+    <ourObjects xsi:type="p:Capability" name="Long Range Firing" searchObjective="true" startDate="1" endDate="600" status="0.0" colour="Red"/>
+  </timePeriods>
+  <timePeriods startDate="1" endDate="6">
+    <ourObjects xsi:type="p:Capability" name="Long Range Firing" searchObjective="true" startDate="1" endDate="600" status="0.0" colour="Red"/>
+  </timePeriods>
+  <timePeriods startDate="7" endDate="599">
+    <ourObjects xsi:type="p:Capability" name="Long Range Firing" searchObjective="true" startDate="1" endDate="600" status="2.0" colour="Green"/>
+  </timePeriods>
+  <timePeriods startDate="600" endDate="600">
+    <ourObjects xsi:type="p:Capability" name="Long Range Firing" searchObjective="true" startDate="1" endDate="600" status="2.0" colour="Green"/>
+  </timePeriods>
+</p:CapabilityOverTime>

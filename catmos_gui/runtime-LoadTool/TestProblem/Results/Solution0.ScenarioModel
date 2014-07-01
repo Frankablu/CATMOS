@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="ScenarioModel">
+  <OurObjects xsi:type="p:Capability" name="ourMainGoal" searchObjective="true" status="1.66667" colour="Yellow" satisfiedBy="//@OurObjects.1/@provides.0">
+    <measurements name="satisfactionLevel" criticalValue="1.0" benchmarkValue="10.0" providedValue="7.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:1">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="0.0" script="output = 7"/>
+    </provides>
+    <costs name="Money" amount="10.0"/>
+  </OurObjects>
+</p:Scenario>

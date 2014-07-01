@@ -1,0 +1,129 @@
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+package capOverTime;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Time Period</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link capOverTime.TimePeriod#getName <em>Name</em>}</li>
+ *   <li>{@link capOverTime.TimePeriod#getStartDate <em>Start Date</em>}</li>
+ *   <li>{@link capOverTime.TimePeriod#getStopDate <em>Stop Date</em>}</li>
+ *   <li>{@link capOverTime.TimePeriod#getOurObjects <em>Our Objects</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see capOverTime.CapOverTimePackage#getTimePeriod()
+ * @model annotation="gmf.node label='startDate,stopDate' label.pattern='{0} - {1}'"
+ * @generated
+ */
+public interface TimePeriod extends EObject
+{
+  /**
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see capOverTime.CapOverTimePackage#getTimePeriod_Name()
+   * @model
+   * @generated
+   */
+  String getName();
+
+  /**
+   * Sets the value of the '{@link capOverTime.TimePeriod#getName <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
+   * @generated
+   */
+  void setName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Start Date</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Start Date</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Start Date</em>' attribute.
+   * @see #setStartDate(String)
+   * @see capOverTime.CapOverTimePackage#getTimePeriod_StartDate()
+   * @model
+   * @generated
+   */
+  String getStartDate();
+
+  /**
+   * Sets the value of the '{@link capOverTime.TimePeriod#getStartDate <em>Start Date</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Start Date</em>' attribute.
+   * @see #getStartDate()
+   * @generated
+   */
+  void setStartDate(String value);
+
+  /**
+   * Returns the value of the '<em><b>Stop Date</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Stop Date</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Stop Date</em>' attribute.
+   * @see #setStopDate(String)
+   * @see capOverTime.CapOverTimePackage#getTimePeriod_StopDate()
+   * @model
+   * @generated
+   */
+  String getStopDate();
+
+  /**
+   * Sets the value of the '{@link capOverTime.TimePeriod#getStopDate <em>Stop Date</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Stop Date</em>' attribute.
+   * @see #getStopDate()
+   * @generated
+   */
+  void setStopDate(String value);
+
+  /**
+   * Returns the value of the '<em><b>Our Objects</b></em>' containment reference list.
+   * The list contents are of type {@link capOverTime.OurObject}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Our Objects</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Our Objects</em>' containment reference list.
+   * @see capOverTime.CapOverTimePackage#getTimePeriod_OurObjects()
+   * @model containment="true"
+   *        annotation="gmf.compartment foo='bar'"
+   * @generated
+   */
+  EList<OurObject> getOurObjects();
+
+} // TimePeriod

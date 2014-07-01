@@ -1,0 +1,59 @@
+[%
+
+//Decomposes First
+for (cap in Capability.all())
+{
+	if (cap.decomposes.size() > 0)
+	{
+	%]
+
+[%=cap.name%] decomposes to [%
+
+for (decompose in cap.decomposes)
+{
+	%][%=decompose.name%], [%	
+}
+
+%]
+	[%
+	}
+}
+
+//Capability Satisfication Second
+for (component in Component.all())
+{
+	if (component.provides.size() > 0)
+	{
+	%]
+
+[%=component.name%] satisfies[%
+	for (provision in component.provides)
+	{
+		if (component.provides.satisfies.size() > 0)
+		{
+%] [%=provision.name%],[%
+		}
+	}
+	}
+}
+
+//Capability Upgrades
+
+//Capability Dependencies
+
+for (component in Component.all())
+{
+	if (component.requires.size() > 0)
+	{
+%]
+[%=component.name%][%
+	}
+	for (req in component.requires)
+	{
+		for (sat in req.satisfiedBy)
+		{
+		}
+	}
+}
+
+%]

@@ -1,0 +1,475 @@
+	/*
+ * 
+ */
+package capOverTime.diagram.part;
+
+	/**
+ * @generated
+ */
+public class CapOverTimeDiagramUpdater {
+		
+	/**
+ * @generated
+ */
+public static boolean isShortcutOrphaned(org.eclipse.gmf.runtime.notation.View view) {
+	return !view.isSetElement() || view.getElement() == null || view.getElement().eIsProxy();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeNodeDescriptor> getSemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		switch (capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getVisualID(view)) {
+		case capOverTime.diagram.edit.parts.CapabilityOverTimeEditPart.VISUAL_ID:
+	return getCapabilityOverTime_1000SemanticChildren(view);
+case capOverTime.diagram.edit.parts.TimePeriodTimePeriodOurObjectsCompartmentEditPart.VISUAL_ID:
+	return getTimePeriodTimePeriodOurObjectsCompartment_7001SemanticChildren(view);
+case capOverTime.diagram.edit.parts.CapabilityCapabilityMeasurementsCompartmentEditPart.VISUAL_ID:
+	return getCapabilityCapabilityMeasurementsCompartment_7002SemanticChildren(view);
+case capOverTime.diagram.edit.parts.MeasurementMeasurementCriticalValuesCompartmentEditPart.VISUAL_ID:
+	return getMeasurementMeasurementCriticalValuesCompartment_7003SemanticChildren(view);
+case capOverTime.diagram.edit.parts.MeasurementMeasurementBenchmarkValuesCompartmentEditPart.VISUAL_ID:
+	return getMeasurementMeasurementBenchmarkValuesCompartment_7004SemanticChildren(view);
+case capOverTime.diagram.edit.parts.MeasurementMeasurementProvidedValuesCompartmentEditPart.VISUAL_ID:
+	return getMeasurementMeasurementProvidedValuesCompartment_7005SemanticChildren(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+	/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeNodeDescriptor> getCapabilityOverTime_1000SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (!view.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+capOverTime.CapabilityOverTime modelElement = (capOverTime.CapabilityOverTime) view.getElement();
+	java.util.LinkedList<capOverTime.diagram.part.CapOverTimeNodeDescriptor> result = new java.util.LinkedList<capOverTime.diagram.part.CapOverTimeNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getTimePeriods().iterator(); it.hasNext();) {
+		capOverTime.TimePeriod childElement = (capOverTime.TimePeriod) it.next();
+					int visualID = capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == capOverTime.diagram.edit.parts.TimePeriodEditPart.VISUAL_ID) {
+	result.add(new capOverTime.diagram.part.CapOverTimeNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeNodeDescriptor> getTimePeriodTimePeriodOurObjectsCompartment_7001SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+capOverTime.TimePeriod modelElement = (capOverTime.TimePeriod) containerView.getElement();
+	java.util.LinkedList<capOverTime.diagram.part.CapOverTimeNodeDescriptor> result = new java.util.LinkedList<capOverTime.diagram.part.CapOverTimeNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getOurObjects().iterator(); it.hasNext();) {
+		capOverTime.OurObject childElement = (capOverTime.OurObject) it.next();
+					int visualID = capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == capOverTime.diagram.edit.parts.CapabilityEditPart.VISUAL_ID) {
+	result.add(new capOverTime.diagram.part.CapOverTimeNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeNodeDescriptor> getCapabilityCapabilityMeasurementsCompartment_7002SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+capOverTime.Capability modelElement = (capOverTime.Capability) containerView.getElement();
+	java.util.LinkedList<capOverTime.diagram.part.CapOverTimeNodeDescriptor> result = new java.util.LinkedList<capOverTime.diagram.part.CapOverTimeNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getMeasurements().iterator(); it.hasNext();) {
+		capOverTime.Measurement childElement = (capOverTime.Measurement) it.next();
+					int visualID = capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == capOverTime.diagram.edit.parts.MeasurementEditPart.VISUAL_ID) {
+	result.add(new capOverTime.diagram.part.CapOverTimeNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeNodeDescriptor> getMeasurementMeasurementCriticalValuesCompartment_7003SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+capOverTime.Measurement modelElement = (capOverTime.Measurement) containerView.getElement();
+	java.util.LinkedList<capOverTime.diagram.part.CapOverTimeNodeDescriptor> result = new java.util.LinkedList<capOverTime.diagram.part.CapOverTimeNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getCriticalValues().iterator(); it.hasNext();) {
+		capOverTime.QualitativeValue childElement = (capOverTime.QualitativeValue) it.next();
+					int visualID = capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == capOverTime.diagram.edit.parts.QualitativeValueEditPart.VISUAL_ID) {
+	result.add(new capOverTime.diagram.part.CapOverTimeNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeNodeDescriptor> getMeasurementMeasurementBenchmarkValuesCompartment_7004SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+capOverTime.Measurement modelElement = (capOverTime.Measurement) containerView.getElement();
+	java.util.LinkedList<capOverTime.diagram.part.CapOverTimeNodeDescriptor> result = new java.util.LinkedList<capOverTime.diagram.part.CapOverTimeNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getBenchmarkValues().iterator(); it.hasNext();) {
+		capOverTime.QualitativeValue childElement = (capOverTime.QualitativeValue) it.next();
+					int visualID = capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == capOverTime.diagram.edit.parts.QualitativeValue2EditPart.VISUAL_ID) {
+	result.add(new capOverTime.diagram.part.CapOverTimeNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeNodeDescriptor> getMeasurementMeasurementProvidedValuesCompartment_7005SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+capOverTime.Measurement modelElement = (capOverTime.Measurement) containerView.getElement();
+	java.util.LinkedList<capOverTime.diagram.part.CapOverTimeNodeDescriptor> result = new java.util.LinkedList<capOverTime.diagram.part.CapOverTimeNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getProvidedValues().iterator(); it.hasNext();) {
+		capOverTime.QualitativeValue childElement = (capOverTime.QualitativeValue) it.next();
+					int visualID = capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == capOverTime.diagram.edit.parts.QualitativeValue3EditPart.VISUAL_ID) {
+	result.add(new capOverTime.diagram.part.CapOverTimeNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getVisualID(view)) {
+		case capOverTime.diagram.edit.parts.CapabilityOverTimeEditPart.VISUAL_ID:
+	return getCapabilityOverTime_1000ContainedLinks(view);
+case capOverTime.diagram.edit.parts.TimePeriodEditPart.VISUAL_ID:
+	return getTimePeriod_2001ContainedLinks(view);
+case capOverTime.diagram.edit.parts.CapabilityEditPart.VISUAL_ID:
+	return getCapability_3001ContainedLinks(view);
+case capOverTime.diagram.edit.parts.MeasurementEditPart.VISUAL_ID:
+	return getMeasurement_3002ContainedLinks(view);
+case capOverTime.diagram.edit.parts.QualitativeValueEditPart.VISUAL_ID:
+	return getQualitativeValue_3003ContainedLinks(view);
+case capOverTime.diagram.edit.parts.QualitativeValue2EditPart.VISUAL_ID:
+	return getQualitativeValue_3004ContainedLinks(view);
+case capOverTime.diagram.edit.parts.QualitativeValue3EditPart.VISUAL_ID:
+	return getQualitativeValue_3005ContainedLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getIncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getVisualID(view)) {
+		case capOverTime.diagram.edit.parts.TimePeriodEditPart.VISUAL_ID:
+	return getTimePeriod_2001IncomingLinks(view);
+case capOverTime.diagram.edit.parts.CapabilityEditPart.VISUAL_ID:
+	return getCapability_3001IncomingLinks(view);
+case capOverTime.diagram.edit.parts.MeasurementEditPart.VISUAL_ID:
+	return getMeasurement_3002IncomingLinks(view);
+case capOverTime.diagram.edit.parts.QualitativeValueEditPart.VISUAL_ID:
+	return getQualitativeValue_3003IncomingLinks(view);
+case capOverTime.diagram.edit.parts.QualitativeValue2EditPart.VISUAL_ID:
+	return getQualitativeValue_3004IncomingLinks(view);
+case capOverTime.diagram.edit.parts.QualitativeValue3EditPart.VISUAL_ID:
+	return getQualitativeValue_3005IncomingLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getOutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getVisualID(view)) {
+		case capOverTime.diagram.edit.parts.TimePeriodEditPart.VISUAL_ID:
+	return getTimePeriod_2001OutgoingLinks(view);
+case capOverTime.diagram.edit.parts.CapabilityEditPart.VISUAL_ID:
+	return getCapability_3001OutgoingLinks(view);
+case capOverTime.diagram.edit.parts.MeasurementEditPart.VISUAL_ID:
+	return getMeasurement_3002OutgoingLinks(view);
+case capOverTime.diagram.edit.parts.QualitativeValueEditPart.VISUAL_ID:
+	return getQualitativeValue_3003OutgoingLinks(view);
+case capOverTime.diagram.edit.parts.QualitativeValue2EditPart.VISUAL_ID:
+	return getQualitativeValue_3004OutgoingLinks(view);
+case capOverTime.diagram.edit.parts.QualitativeValue3EditPart.VISUAL_ID:
+	return getQualitativeValue_3005OutgoingLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getCapabilityOverTime_1000ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getTimePeriod_2001ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getCapability_3001ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	capOverTime.Capability modelElement = (capOverTime.Capability) view.getElement();
+		java.util.LinkedList<capOverTime.diagram.part.CapOverTimeLinkDescriptor> result = new java.util.LinkedList<capOverTime.diagram.part.CapOverTimeLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Accumulation_4001(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getMeasurement_3002ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getQualitativeValue_3003ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getQualitativeValue_3004ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getQualitativeValue_3005ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getTimePeriod_2001IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getCapability_3001IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	capOverTime.Capability modelElement = (capOverTime.Capability) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<capOverTime.diagram.part.CapOverTimeLinkDescriptor> result = new java.util.LinkedList<capOverTime.diagram.part.CapOverTimeLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement, crossReferences));	
+	result.addAll(getIncomingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getMeasurement_3002IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	capOverTime.Measurement modelElement = (capOverTime.Measurement) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<capOverTime.diagram.part.CapOverTimeLinkDescriptor> result = new java.util.LinkedList<capOverTime.diagram.part.CapOverTimeLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_Capability_Accumulation_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getQualitativeValue_3003IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getQualitativeValue_3004IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getQualitativeValue_3005IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getTimePeriod_2001OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getCapability_3001OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	capOverTime.Capability modelElement = (capOverTime.Capability) view.getElement();
+		java.util.LinkedList<capOverTime.diagram.part.CapOverTimeLinkDescriptor> result = new java.util.LinkedList<capOverTime.diagram.part.CapOverTimeLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Accumulation_4001(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Decomposes_4002(modelElement));	
+	result.addAll(getOutgoingFeatureModelFacetLinks_Capability_Satisfies_4003(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getMeasurement_3002OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getQualitativeValue_3003OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getQualitativeValue_3004OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getQualitativeValue_3005OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+private static java.util.Collection<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getIncomingFeatureModelFacetLinks_Capability_Accumulation_4001(capOverTime.Measurement target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<capOverTime.diagram.part.CapOverTimeLinkDescriptor> result = new java.util.LinkedList<capOverTime.diagram.part.CapOverTimeLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() == capOverTime.CapOverTimePackage.eINSTANCE.getCapability_Accumulation()) {
+	result.add(new capOverTime.diagram.part.CapOverTimeLinkDescriptor(setting.getEObject(), target, capOverTime.diagram.providers.CapOverTimeElementTypes.CapabilityAccumulation_4001, capOverTime.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID));
+}
+	}
+	return result;	
+}
+
+/**
+ * @generated
+ */
+private static java.util.Collection<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getIncomingFeatureModelFacetLinks_Capability_Decomposes_4002(capOverTime.Capability target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<capOverTime.diagram.part.CapOverTimeLinkDescriptor> result = new java.util.LinkedList<capOverTime.diagram.part.CapOverTimeLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() == capOverTime.CapOverTimePackage.eINSTANCE.getCapability_Decomposes()) {
+	result.add(new capOverTime.diagram.part.CapOverTimeLinkDescriptor(setting.getEObject(), target, capOverTime.diagram.providers.CapOverTimeElementTypes.CapabilityDecomposes_4002, capOverTime.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID));
+}
+	}
+	return result;	
+}
+
+/**
+ * @generated
+ */
+private static java.util.Collection<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getIncomingFeatureModelFacetLinks_Capability_Satisfies_4003(capOverTime.Capability target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<capOverTime.diagram.part.CapOverTimeLinkDescriptor> result = new java.util.LinkedList<capOverTime.diagram.part.CapOverTimeLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() == capOverTime.CapOverTimePackage.eINSTANCE.getCapability_Satisfies()) {
+	result.add(new capOverTime.diagram.part.CapOverTimeLinkDescriptor(setting.getEObject(), target, capOverTime.diagram.providers.CapOverTimeElementTypes.CapabilitySatisfies_4003, capOverTime.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID));
+}
+	}
+	return result;	
+}
+		
+	/**
+ * @generated
+ */
+private static java.util.Collection<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getOutgoingFeatureModelFacetLinks_Capability_Accumulation_4001(capOverTime.Capability source) {
+	java.util.LinkedList<capOverTime.diagram.part.CapOverTimeLinkDescriptor> result = new java.util.LinkedList<capOverTime.diagram.part.CapOverTimeLinkDescriptor>();
+		capOverTime.Measurement destination = source.getAccumulation();
+	if (destination == null) {
+		return result;
+	}
+		result.add(new capOverTime.diagram.part.CapOverTimeLinkDescriptor(source, destination, capOverTime.diagram.providers.CapOverTimeElementTypes.CapabilityAccumulation_4001, capOverTime.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID));
+		return result;
+}
+	
+	/**
+ * @generated
+ */
+private static java.util.Collection<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getOutgoingFeatureModelFacetLinks_Capability_Decomposes_4002(capOverTime.Capability source) {
+	java.util.LinkedList<capOverTime.diagram.part.CapOverTimeLinkDescriptor> result = new java.util.LinkedList<capOverTime.diagram.part.CapOverTimeLinkDescriptor>();
+		for (java.util.Iterator<?> destinations = source.getDecomposes().iterator(); destinations.hasNext();) {
+		capOverTime.Capability destination = (capOverTime.Capability) destinations.next();
+		result.add(new capOverTime.diagram.part.CapOverTimeLinkDescriptor(source, destination, capOverTime.diagram.providers.CapOverTimeElementTypes.CapabilityDecomposes_4002, capOverTime.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID));
+		}
+		return result;
+}
+	
+	/**
+ * @generated
+ */
+private static java.util.Collection<capOverTime.diagram.part.CapOverTimeLinkDescriptor> getOutgoingFeatureModelFacetLinks_Capability_Satisfies_4003(capOverTime.Capability source) {
+	java.util.LinkedList<capOverTime.diagram.part.CapOverTimeLinkDescriptor> result = new java.util.LinkedList<capOverTime.diagram.part.CapOverTimeLinkDescriptor>();
+		for (java.util.Iterator<?> destinations = source.getSatisfies().iterator(); destinations.hasNext();) {
+		capOverTime.Capability destination = (capOverTime.Capability) destinations.next();
+		result.add(new capOverTime.diagram.part.CapOverTimeLinkDescriptor(source, destination, capOverTime.diagram.providers.CapOverTimeElementTypes.CapabilitySatisfies_4003, capOverTime.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID));
+		}
+		return result;
+}
+
+	}

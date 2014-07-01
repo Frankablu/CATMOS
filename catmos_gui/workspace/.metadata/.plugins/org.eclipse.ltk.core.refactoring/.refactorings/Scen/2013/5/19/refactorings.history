@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 1 resources to &apos;model&apos;" description="Move 1 resources to &apos;model&apos;" destination="model" element1="/Scenario/model/Scenario.emf" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1367931865469" updateReferences="true"/>
+</session>

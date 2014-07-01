@@ -1,0 +1,99 @@
+/*
+ * 
+ */
+package Scenario.diagram.edit.parts;
+
+/**
+ * @generated
+ */
+public class MeasurementAggregatesEditPart extends org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionNodeEditPart 	implements org.eclipse.gmf.runtime.diagram.ui.editparts.ITreeBranchEditPart {
+
+			/**
+ * @generated
+ */
+	public static final int VISUAL_ID = 4003;
+	
+		/**
+ * @generated
+ */
+	public MeasurementAggregatesEditPart(org.eclipse.gmf.runtime.notation.View view) {
+		super(view);
+	}
+	
+		/**
+ * @generated
+ */
+	protected void createDefaultEditPolicies() {
+			super.createDefaultEditPolicies();
+			installEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.SEMANTIC_ROLE, new Scenario.diagram.edit.policies.MeasurementAggregatesItemSemanticEditPolicy());
+				}
+
+	
+
+	
+
+	
+
+	
+	
+		/**
+ * Creates figure for this edit part.
+ * 
+ * Body of this method does not depend on settings in generation model
+ * so you may safely remove <i>generated</i> tag and modify it.
+ * 
+ * @generated
+ */
+	
+	protected org.eclipse.draw2d.Connection createConnectionFigure() {
+		return new MeasurementAggregatesFigure();
+	}
+
+	/**
+ * @generated
+ */
+	public MeasurementAggregatesFigure getPrimaryShape() {
+		return (MeasurementAggregatesFigure) getFigure();
+	}
+
+	
+/**
+ * @generated
+ */
+public class MeasurementAggregatesFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {
+
+
+
+
+	/**
+	 * @generated
+	 */
+	public MeasurementAggregatesFigure() {
+		this.setLineStyle(org.eclipse.draw2d.Graphics.LINE_DASH);
+	this.setForegroundColor(THIS_FORE
+);
+
+		setTargetDecoration(createTargetDecoration());
+	}
+
+	/**
+	 * @generated
+	 */
+	private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {
+		org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();
+		return df;
+	}
+
+
+
+
+}
+
+/**
+ * @generated
+ */
+static final org.eclipse.swt.graphics.Color THIS_FORE = new org.eclipse.swt.graphics.Color(null, 0, 0, 255);
+
+
+	
+	}

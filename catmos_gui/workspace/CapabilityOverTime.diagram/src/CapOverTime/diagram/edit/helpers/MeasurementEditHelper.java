@@ -1,0 +1,11 @@
+/*
+ * 
+ */
+package CapOverTime.diagram.edit.helpers;
+
+/**
+ * @generated
+ */
+public class MeasurementEditHelper extends
+		CapOverTime.diagram.edit.helpers.CapOverTimeBaseEditHelper {
+}

@@ -1,0 +1,55 @@
+
+ThroughLifePlanning "TestProblemRepeatingCosts"
+{
+	popSize 10
+	genCount 10
+	
+	startDate "0"
+	endDate "600"
+	
+	AcquirableComponent "Fighter Jet" 1 acquisitionTime "5" lifeSpan "inf"
+	AcquirableComponent "Money Printer" 1 acquisitionTime "0" lifeSpan "inf"
+	
+	Budget Money
+	{
+		amount 50.0
+		startDate "0"
+	}
+}
+
+Capability "Money Printer"
+{
+	startDate "0"
+	endDate "600"
+}
+
+searchObjective
+Capability "Long Range Firing"
+{
+	startDate "1"
+	endDate "600"
+}
+
+Component "Money Printer"
+{
+	CapabilityProvision "Money Printer"
+	{
+		
+	}
+	
+	Cost Money -50.0
+	{
+		startAfter "0"
+		repeatDuration "1"
+	}
+}
+
+Component "Fighter Jet"
+{
+	CapabilityProvision "Long Range Firing"
+	{
+		
+	}
+	
+	Cost Money 450.0
+}

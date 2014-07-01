@@ -1,0 +1,22 @@
+@namespace(
+	uri="internalusage",
+	prefix="p")
+package internalusage;
+
+//This meta-model is for between script communication
+
+@gmf.diagram(foo="bar")
+class Main
+{
+   @gmf.compartment(foo="bar")
+   val ValuePair[*] valuePairs;
+}
+
+@gmf.node(label="name")
+class ValuePair
+{
+   attr String name;
+   attr String value;
+}
+
+

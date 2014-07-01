@@ -1,0 +1,937 @@
+	/*
+ * 
+ */
+package ScenarioModel.diagram.navigator;
+
+/**
+ * @generated
+ */
+public class ScenarioModelNavigatorContentProvider implements org.eclipse.ui.navigator.ICommonContentProvider {
+
+		/**
+ * @generated
+ */
+private static final Object[] EMPTY_ARRAY = new Object[0];
+
+	/**
+ * @generated
+ */
+private org.eclipse.jface.viewers.Viewer myViewer;
+
+	/**
+ * @generated
+ */
+private org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain myEditingDomain;
+
+	/**
+ * @generated
+ */
+private org.eclipse.emf.workspace.util.WorkspaceSynchronizer myWorkspaceSynchronizer;
+
+	/**
+ * @generated
+ */
+private Runnable myViewerRefreshRunnable;
+	
+	/**
+ * @generated
+ */
+@SuppressWarnings({ "unchecked", "serial", "rawtypes" })
+public ScenarioModelNavigatorContentProvider() {
+	org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain = org.eclipse.gmf.runtime.emf.core.GMFEditingDomainFactory.INSTANCE.createEditingDomain();
+myEditingDomain = (org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain) editingDomain;
+myEditingDomain.setResourceToReadOnlyMap(new java.util.HashMap() {
+	public Object get(Object key) {
+		if (!containsKey(key)) {
+			put(key, Boolean.TRUE);
+		}
+		return super.get(key);
+	}
+});
+myViewerRefreshRunnable = new Runnable() {
+	public void run() {
+		if (myViewer != null) {
+			myViewer.refresh();
+		}
+	}
+};
+myWorkspaceSynchronizer = new org.eclipse.emf.workspace.util.WorkspaceSynchronizer(editingDomain, new org.eclipse.emf.workspace.util.WorkspaceSynchronizer.Delegate() {
+	public void dispose() {
+	}
+
+	public boolean handleResourceChanged(final org.eclipse.emf.ecore.resource.Resource resource) {
+		unloadAllResources();
+asyncRefresh();
+return true;
+	}
+	
+	public boolean handleResourceDeleted(org.eclipse.emf.ecore.resource.Resource resource) {
+		unloadAllResources();
+asyncRefresh();
+return true;
+	}
+	
+	public boolean handleResourceMoved(org.eclipse.emf.ecore.resource.Resource resource, final org.eclipse.emf.common.util.URI newURI) {
+		unloadAllResources();
+asyncRefresh();
+return true;
+	}
+});
+}
+
+		/**
+ * @generated
+ */
+public void dispose() {
+	myWorkspaceSynchronizer.dispose();
+	myWorkspaceSynchronizer = null;
+	myViewerRefreshRunnable = null;
+	myViewer = null;
+	unloadAllResources();
+	((org.eclipse.emf.transaction.TransactionalEditingDomain) myEditingDomain).dispose();
+	myEditingDomain = null;
+}
+	
+		/**
+ * @generated
+ */
+public void inputChanged(org.eclipse.jface.viewers.Viewer viewer, Object oldInput, Object newInput) {
+	myViewer = viewer;
+}
+	
+	
+	/**
+ * @generated
+ */
+	void unloadAllResources() {
+		for (org.eclipse.emf.ecore.resource.Resource nextResource : myEditingDomain.getResourceSet().getResources()) {
+			nextResource.unload();
+		}
+	}
+	
+	/**
+ * @generated
+ */
+	void asyncRefresh() {
+		if (myViewer != null && !myViewer.getControl().isDisposed()) {
+			myViewer.getControl().getDisplay().asyncExec(myViewerRefreshRunnable);
+		}
+	}
+	
+	/**
+ * @generated
+ */
+public Object[] getElements(Object inputElement) {
+	return getChildren(inputElement);
+}
+	
+	/**
+ * @generated
+ */
+public void restoreState(org.eclipse.ui.IMemento aMemento) {
+}
+
+/**
+ * @generated
+ */
+public void saveState(org.eclipse.ui.IMemento aMemento) {
+}
+    
+    /**
+ * @generated
+ */
+public void init(org.eclipse.ui.navigator.ICommonContentExtensionSite aConfig) {
+}
+    
+    	/**
+ * @generated
+ */
+public Object[] getChildren(Object parentElement) {
+	if (parentElement instanceof org.eclipse.core.resources.IFile) {
+		org.eclipse.core.resources.IFile file = (org.eclipse.core.resources.IFile) parentElement;
+org.eclipse.emf.common.util.URI fileURI = org.eclipse.emf.common.util.URI.createPlatformResourceURI(file.getFullPath().toString(), true);
+org.eclipse.emf.ecore.resource.Resource resource = myEditingDomain.getResourceSet().getResource(fileURI, true);
+	java.util.ArrayList<ScenarioModel.diagram.navigator.ScenarioModelNavigatorItem> result = new java.util.ArrayList<ScenarioModel.diagram.navigator.ScenarioModelNavigatorItem>();
+					java.util.ArrayList<org.eclipse.gmf.runtime.notation.View> topViews = new java.util.ArrayList<org.eclipse.gmf.runtime.notation.View>(resource.getContents().size());
+		for (org.eclipse.emf.ecore.EObject o : resource.getContents()) {
+			if (o instanceof org.eclipse.gmf.runtime.notation.View) {
+				topViews.add((org.eclipse.gmf.runtime.notation.View) o);
+			}
+		}
+						return result.toArray();
+   	} 
+    	
+   	if (parentElement instanceof ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup) {
+	ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup group = (ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup) parentElement;
+return group.getChildren();
+	} 
+		
+	if (parentElement instanceof ScenarioModel.diagram.navigator.ScenarioModelNavigatorItem) {
+	ScenarioModel.diagram.navigator.ScenarioModelNavigatorItem navigatorItem = (ScenarioModel.diagram.navigator.ScenarioModelNavigatorItem) parentElement;
+if (navigatorItem.isLeaf() || !isOwnView(navigatorItem.getView())) {
+	return EMPTY_ARRAY;
+}
+return getViewChildren(navigatorItem.getView(), parentElement);
+	}
+		
+			/*
+ * Due to plugin.xml restrictions this code will be called only for views representing
+ * shortcuts to this diagram elements created on other diagrams. 
+*/ 
+if (parentElement instanceof org.eclipse.core.runtime.IAdaptable) {
+	org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) ((org.eclipse.core.runtime.IAdaptable) parentElement).getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+	if (view != null) {
+		return getViewChildren(view, parentElement);
+	}
+}
+
+		return EMPTY_ARRAY;
+}
+    
+	/**
+ * @generated
+ */
+private Object[] getViewChildren(org.eclipse.gmf.runtime.notation.View view, Object parentElement) {
+   	switch (ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getVisualID(view)) {
+	
+case ScenarioModel.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID: {
+	java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem> result = new java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Edge sv = (org.eclipse.gmf.runtime.notation.Edge) view;
+				ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup target = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_CapabilityDecomposes_4002_target,
+	"icons/linkTargetNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup source = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_CapabilityDecomposes_4002_source,
+	"icons/linkSourceNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvisionEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvision2EditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvision3EditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.Capability2EditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.Capability3EditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvision4EditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.Capability4EditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvisionEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvision2EditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvision3EditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.Capability2EditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.Capability3EditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvision4EditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.Capability4EditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+															if (!target.isEmpty()) {		result.add(target);
+					}							if (!source.isEmpty()) {		result.add(source);
+					}			return result.toArray();
+}
+
+case ScenarioModel.diagram.edit.parts.CapabilityChangeEditPart.VISUAL_ID: {
+	java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem> result = new java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+							java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityChangeCapabilityChangeCapabilitiesCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvision4EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityChangeCapabilityChangeCapabilitiesCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.Capability4EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+											return result.toArray();
+}
+
+case ScenarioModel.diagram.edit.parts.QualitativeValueDictionaryGreaterThanEditPart.VISUAL_ID: {
+	java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem> result = new java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Edge sv = (org.eclipse.gmf.runtime.notation.Edge) view;
+				ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup target = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_QualitativeValueDictionaryGreaterThan_4004_target,
+	"icons/linkTargetNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup source = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_QualitativeValueDictionaryGreaterThan_4004_source,
+	"icons/linkSourceNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.QualitativeValueDictionaryEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.QualitativeValueDictionaryEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+															if (!target.isEmpty()) {		result.add(target);
+					}							if (!source.isEmpty()) {		result.add(source);
+					}			return result.toArray();
+}
+
+case ScenarioModel.diagram.edit.parts.CapabilityProvision2EditPart.VISUAL_ID: {
+	java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem> result = new java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup outgoinglinks = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_CapabilityProvision_3017_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup incominglinks = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_CapabilityProvision_3017_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvisionCapabilityProvisionMeasurementsCompartment2EditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.MeasurementEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+																	connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+																	connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}							if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}			return result.toArray();
+}
+
+case ScenarioModel.diagram.edit.parts.CapabilityProvisionEditPart.VISUAL_ID: {
+	java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem> result = new java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup outgoinglinks = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_CapabilityProvision_2001_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup incominglinks = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_CapabilityProvision_2001_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvisionCapabilityProvisionMeasurementsCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.MeasurementEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+																	connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+																	connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}							if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}			return result.toArray();
+}
+
+case ScenarioModel.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID: {
+	java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem> result = new java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Edge sv = (org.eclipse.gmf.runtime.notation.Edge) view;
+				ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup target = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_CapabilityAccumulation_4001_target,
+	"icons/linkTargetNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup source = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_CapabilityAccumulation_4001_source,
+	"icons/linkSourceNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.MeasurementEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.Measurement2EditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvisionEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvision2EditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvision3EditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.Capability2EditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.Capability3EditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvision4EditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.Capability4EditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+															if (!target.isEmpty()) {		result.add(target);
+					}							if (!source.isEmpty()) {		result.add(source);
+					}			return result.toArray();
+}
+
+case ScenarioModel.diagram.edit.parts.ComponentEditPart.VISUAL_ID: {
+	java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem> result = new java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup incominglinks = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_Component_2006_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.ComponentComponentProvidesCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvision2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.ComponentComponentRequiresCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvision3EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.ComponentComponentProvidesCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.Capability2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.ComponentComponentRequiresCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.Capability3EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.ComponentComponentUpgradesCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityUpgradeEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.ComponentComponentCostsCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CostEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.ComponentComponentPropertiesCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.Measurement2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityUpgradeUpgradingEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}			return result.toArray();
+}
+
+case ScenarioModel.diagram.edit.parts.CapabilityProvision3EditPart.VISUAL_ID: {
+	java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem> result = new java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup outgoinglinks = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_CapabilityProvision_3018_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup incominglinks = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_CapabilityProvision_3018_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvisionCapabilityProvisionMeasurementsCompartment3EditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.MeasurementEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+																	connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+																	connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}							if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}			return result.toArray();
+}
+
+case ScenarioModel.diagram.edit.parts.CapabilityEditPart.VISUAL_ID: {
+	java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem> result = new java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup outgoinglinks = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_Capability_2004_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup incominglinks = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_Capability_2004_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityCapabilityMeasurementsCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.MeasurementEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+																	connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+																	connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}							if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}			return result.toArray();
+}
+
+case ScenarioModel.diagram.edit.parts.Capability3EditPart.VISUAL_ID: {
+	java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem> result = new java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup outgoinglinks = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_Capability_3020_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup incominglinks = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_Capability_3020_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityCapabilityMeasurementsCompartment3EditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.MeasurementEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+																	connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+																	connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}							if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}			return result.toArray();
+}
+
+case ScenarioModel.diagram.edit.parts.MeasurementEditPart.VISUAL_ID: {
+	java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem> result = new java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup incominglinks = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_Measurement_3001_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.MeasurementMeasurementCriticalValuesCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.QualitativeValueEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.MeasurementMeasurementBenchmarkValuesCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.QualitativeValue2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.MeasurementMeasurementProvidedValuesCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.QualitativeValue3EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}			return result.toArray();
+}
+
+case ScenarioModel.diagram.edit.parts.ScenarioEditPart.VISUAL_ID: {
+	java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem> result = new java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem>();
+	result.addAll(getForeignShortcuts((org.eclipse.gmf.runtime.notation.Diagram) view, parentElement));
+	org.eclipse.gmf.runtime.notation.Diagram sv = (org.eclipse.gmf.runtime.notation.Diagram) view;
+				ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup links = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_Scenario_1000_links,
+	"icons/linksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvisionEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.FindTradeOffsEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.ThroughLifePlanningEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.QualitativeValueDictionaryEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.ComponentEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getDiagramLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID));
+								links.addChildren(createNavigatorItems(connectedViews, links, false));
+																	connectedViews = 						getDiagramLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID));
+								links.addChildren(createNavigatorItems(connectedViews, links, false));
+																	connectedViews = 						getDiagramLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID));
+								links.addChildren(createNavigatorItems(connectedViews, links, false));
+																	connectedViews = 						getDiagramLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.QualitativeValueDictionaryGreaterThanEditPart.VISUAL_ID));
+								links.addChildren(createNavigatorItems(connectedViews, links, false));
+																	connectedViews = 						getDiagramLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityUpgradeUpgradingEditPart.VISUAL_ID));
+								links.addChildren(createNavigatorItems(connectedViews, links, false));
+															if (!links.isEmpty()) {		result.add(links);
+					}			return result.toArray();
+}
+
+case ScenarioModel.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID: {
+	java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem> result = new java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Edge sv = (org.eclipse.gmf.runtime.notation.Edge) view;
+				ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup target = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_CapabilitySatisfies_4003_target,
+	"icons/linkTargetNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup source = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_CapabilitySatisfies_4003_source,
+	"icons/linkSourceNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvisionEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvision2EditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvision3EditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.Capability2EditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.Capability3EditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvision4EditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.Capability4EditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvisionEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvision2EditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvision3EditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.Capability2EditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.Capability3EditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvision4EditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.Capability4EditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+															if (!target.isEmpty()) {		result.add(target);
+					}							if (!source.isEmpty()) {		result.add(source);
+					}			return result.toArray();
+}
+
+case ScenarioModel.diagram.edit.parts.Capability4EditPart.VISUAL_ID: {
+	java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem> result = new java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup outgoinglinks = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_Capability_3024_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup incominglinks = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_Capability_3024_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityCapabilityMeasurementsCompartment4EditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.MeasurementEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+																	connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+																	connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}							if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}			return result.toArray();
+}
+
+case ScenarioModel.diagram.edit.parts.CapabilityUpgradeUpgradingEditPart.VISUAL_ID: {
+	java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem> result = new java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Edge sv = (org.eclipse.gmf.runtime.notation.Edge) view;
+				ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup target = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_CapabilityUpgradeUpgrading_4005_target,
+	"icons/linkTargetNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup source = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_CapabilityUpgradeUpgrading_4005_source,
+	"icons/linkSourceNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.ComponentEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityUpgradeEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+															if (!target.isEmpty()) {		result.add(target);
+					}							if (!source.isEmpty()) {		result.add(source);
+					}			return result.toArray();
+}
+
+case ScenarioModel.diagram.edit.parts.Capability2EditPart.VISUAL_ID: {
+	java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem> result = new java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup outgoinglinks = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_Capability_3019_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup incominglinks = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_Capability_3019_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityCapabilityMeasurementsCompartment2EditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.MeasurementEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+																	connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+																	connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}							if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}			return result.toArray();
+}
+
+case ScenarioModel.diagram.edit.parts.CapabilityUpgradeEditPart.VISUAL_ID: {
+	java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem> result = new java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup outgoinglinks = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_CapabilityUpgrade_3021_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityUpgradeCapabilityUpgradeCapabilityChangesCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityChangeEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityUpgradeUpgradingEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}			return result.toArray();
+}
+
+case ScenarioModel.diagram.edit.parts.QualitativeValueDictionaryEditPart.VISUAL_ID: {
+	java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem> result = new java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup incominglinks = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_QualitativeValueDictionary_2005_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup outgoinglinks = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_QualitativeValueDictionary_2005_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.QualitativeValueDictionaryGreaterThanEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.QualitativeValueDictionaryGreaterThanEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}							if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}			return result.toArray();
+}
+
+case ScenarioModel.diagram.edit.parts.Measurement2EditPart.VISUAL_ID: {
+	java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem> result = new java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup incominglinks = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_Measurement_3026_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.MeasurementMeasurementCriticalValuesCompartment2EditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.QualitativeValueEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.MeasurementMeasurementBenchmarkValuesCompartment2EditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.QualitativeValue2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.MeasurementMeasurementProvidedValuesCompartment2EditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.QualitativeValue3EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}			return result.toArray();
+}
+
+case ScenarioModel.diagram.edit.parts.ThroughLifePlanningEditPart.VISUAL_ID: {
+	java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem> result = new java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+							java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.ThroughLifePlanningThroughLifePlanningComponentsCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.ExistingComponent2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.ThroughLifePlanningThroughLifePlanningComponentsCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.AcquirableComponent2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.ThroughLifePlanningThroughLifePlanningConstraintsCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.DesireHigh2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.ThroughLifePlanningThroughLifePlanningConstraintsCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.DesireLow2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.ThroughLifePlanningThroughLifePlanningConstraintsCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.Budget2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.ThroughLifePlanningThroughLifePlanningComponentsCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.ComponentU2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+											return result.toArray();
+}
+
+case ScenarioModel.diagram.edit.parts.FindTradeOffsEditPart.VISUAL_ID: {
+	java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem> result = new java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+							java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.FindTradeOffsFindTradeOffsComponentsCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.ExistingComponentEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.FindTradeOffsFindTradeOffsComponentsCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.AcquirableComponentEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.FindTradeOffsFindTradeOffsConstraintsCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.DesireHighEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.FindTradeOffsFindTradeOffsConstraintsCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.DesireLowEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.FindTradeOffsFindTradeOffsConstraintsCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.BudgetEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.FindTradeOffsFindTradeOffsComponentsCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.ComponentUEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+											return result.toArray();
+}
+
+case ScenarioModel.diagram.edit.parts.CapabilityProvision4EditPart.VISUAL_ID: {
+	java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem> result = new java.util.LinkedList<ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup outgoinglinks = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_CapabilityProvision_3023_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup incominglinks = new ScenarioModel.diagram.navigator.ScenarioModelNavigatorGroup(
+	ScenarioModel.diagram.part.Messages.NavigatorGroupName_CapabilityProvision_3023_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityProvisionCapabilityProvisionMeasurementsCompartment4EditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.MeasurementEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+																	connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+																	connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getType(ScenarioModel.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}							if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}			return result.toArray();
+}
+	}
+	return EMPTY_ARRAY;
+}
+    
+    /**
+ * @generated
+ */
+private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getLinksSourceByType(java.util.Collection<org.eclipse.gmf.runtime.notation.Edge> edges, String type) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+ 	for (org.eclipse.gmf.runtime.notation.Edge nextEdge : edges) {
+ 		org.eclipse.gmf.runtime.notation.View nextEdgeSource = nextEdge.getSource();
+ 		if (type.equals(nextEdgeSource.getType()) && isOwnView(nextEdgeSource)) {
+ 			result.add(nextEdgeSource);
+ 		}
+ 	}
+ 	return result;
+}
+	
+/**
+ * @generated
+ */
+ private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getLinksTargetByType(java.util.Collection<org.eclipse.gmf.runtime.notation.Edge> edges, String type) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+ 	for (org.eclipse.gmf.runtime.notation.Edge nextEdge : edges) {
+ 		org.eclipse.gmf.runtime.notation.View nextEdgeTarget = nextEdge.getTarget();
+ 		if (type.equals(nextEdgeTarget.getType()) && isOwnView(nextEdgeTarget)) {
+ 			result.add(nextEdgeTarget);
+ 		}
+ 	}
+ 	return result;
+}
+
+/**
+ * @generated
+ */
+ private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getOutgoingLinksByType(java.util.Collection<? extends org.eclipse.gmf.runtime.notation.View> nodes, String type) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+ 	for (org.eclipse.gmf.runtime.notation.View nextNode : nodes) {
+		result.addAll(selectViewsByType(nextNode.getSourceEdges(), type));
+ 	}
+ 	return result;
+}
+	
+/**
+ * @generated
+ */
+private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getIncomingLinksByType(java.util.Collection<? extends org.eclipse.gmf.runtime.notation.View> nodes, String type) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+ 	for (org.eclipse.gmf.runtime.notation.View nextNode : nodes) {
+		result.addAll(selectViewsByType(nextNode.getTargetEdges(), type));
+ 	}
+ 	return result;
+}
+	
+/**
+ * @generated
+ */
+private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getChildrenByType(java.util.Collection<? extends org.eclipse.gmf.runtime.notation.View> nodes, String type) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+	for (org.eclipse.gmf.runtime.notation.View nextNode : nodes) {
+		result.addAll(selectViewsByType(nextNode.getChildren(), type));
+	}
+	return result;
+}
+	
+/**
+ * @generated
+ */
+private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getDiagramLinksByType(java.util.Collection<org.eclipse.gmf.runtime.notation.Diagram> diagrams, String type) {
+	java.util.ArrayList<org.eclipse.gmf.runtime.notation.View> result = new java.util.ArrayList<org.eclipse.gmf.runtime.notation.View>();
+	for (org.eclipse.gmf.runtime.notation.Diagram nextDiagram : diagrams) {
+		result.addAll(selectViewsByType(nextDiagram.getEdges(), type));
+	}
+	return result;
+}
+
+// TODO refactor as static method
+/**
+ * @generated
+ */
+private java.util.Collection<org.eclipse.gmf.runtime.notation.View> selectViewsByType(java.util.Collection<org.eclipse.gmf.runtime.notation.View> views, String type) {
+	java.util.ArrayList<org.eclipse.gmf.runtime.notation.View> result = new java.util.ArrayList<org.eclipse.gmf.runtime.notation.View>();
+	for (org.eclipse.gmf.runtime.notation.View nextView : views) {
+		if (type.equals(nextView.getType()) && isOwnView(nextView)) {
+			result.add(nextView);
+		}
+	}
+	return result;
+}
+	
+/**
+ * @generated
+ */
+private boolean isOwnView(org.eclipse.gmf.runtime.notation.View view) {
+	return ScenarioModel.diagram.edit.parts.ScenarioEditPart.MODEL_ID.equals(ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getModelID(view));
+}
+	
+/**
+ * @generated
+ */
+private java.util.Collection<ScenarioModel.diagram.navigator.ScenarioModelNavigatorItem> createNavigatorItems(java.util.Collection<org.eclipse.gmf.runtime.notation.View> views, Object parent, boolean isLeafs) {
+	java.util.ArrayList<ScenarioModel.diagram.navigator.ScenarioModelNavigatorItem> result = new java.util.ArrayList<ScenarioModel.diagram.navigator.ScenarioModelNavigatorItem>(views.size());
+	for (org.eclipse.gmf.runtime.notation.View nextView : views) {
+		result.add(new ScenarioModel.diagram.navigator.ScenarioModelNavigatorItem(nextView, parent, isLeafs));
+	}
+	return result;
+}
+		
+/**
+ * @generated
+ */
+private java.util.Collection<ScenarioModel.diagram.navigator.ScenarioModelNavigatorItem> getForeignShortcuts(org.eclipse.gmf.runtime.notation.Diagram diagram, Object parent) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+	for (java.util.Iterator<org.eclipse.gmf.runtime.notation.View> it = diagram.getChildren().iterator(); it.hasNext();) {
+	org.eclipse.gmf.runtime.notation.View nextView = it.next();
+		if (!isOwnView(nextView) && nextView.getEAnnotation("Shortcut") != null) { //$NON-NLS-1$
+			result.add(nextView);
+		}
+	}
+	return createNavigatorItems(result, parent, false);
+}
+		
+	/**
+ * @generated
+ */
+public Object getParent(Object element) {
+	if (element instanceof ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem) {
+    	ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem abstractNavigatorItem = (ScenarioModel.diagram.navigator.ScenarioModelAbstractNavigatorItem) element;
+		return abstractNavigatorItem.getParent();
+	}
+	return null;
+}
+	
+	/**
+ * @generated
+ */
+public boolean hasChildren(Object element) {
+	return element instanceof org.eclipse.core.resources.IFile || getChildren(element).length > 0;
+}
+    
+    }

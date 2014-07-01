@@ -1,0 +1,327 @@
+	/*
+ * 
+ */
+package capOverTime.diagram.navigator;
+
+/**
+ * @generated
+ */
+public class CapOverTimeNavigatorLabelProvider extends org.eclipse.jface.viewers.LabelProvider implements org.eclipse.ui.navigator.ICommonLabelProvider, org.eclipse.jface.viewers.ITreePathLabelProvider {
+
+		/**
+ * @generated
+ */
+static {
+	capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().getImageRegistry().put("Navigator?UnknownElement", org.eclipse.jface.resource.ImageDescriptor.getMissingImageDescriptor());  //$NON-NLS-1$
+	capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().getImageRegistry().put("Navigator?ImageNotFound", org.eclipse.jface.resource.ImageDescriptor.getMissingImageDescriptor());  //$NON-NLS-1$
+}
+	
+		/**
+ * @generated
+ */
+public void updateLabel(org.eclipse.jface.viewers.ViewerLabel label, org.eclipse.jface.viewers.TreePath elementPath) {
+	Object element = elementPath.getLastSegment();
+	if (element instanceof capOverTime.diagram.navigator.CapOverTimeNavigatorItem && !isOwnView(((capOverTime.diagram.navigator.CapOverTimeNavigatorItem) element).getView())) {
+		return;
+	}
+	label.setText(getText(element));
+	label.setImage(getImage(element));
+}
+	
+		/**
+ * @generated
+ */
+public org.eclipse.swt.graphics.Image getImage(Object element) {
+	if (element instanceof capOverTime.diagram.navigator.CapOverTimeNavigatorGroup) {
+	capOverTime.diagram.navigator.CapOverTimeNavigatorGroup group = (capOverTime.diagram.navigator.CapOverTimeNavigatorGroup) element;
+	return capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().getBundledImage(group.getIcon());
+}
+
+	if (element instanceof capOverTime.diagram.navigator.CapOverTimeNavigatorItem) {
+	capOverTime.diagram.navigator.CapOverTimeNavigatorItem navigatorItem = (capOverTime.diagram.navigator.CapOverTimeNavigatorItem) element;
+	if (!isOwnView(navigatorItem.getView())) {
+		return super.getImage(element);
+	}
+	return getImage(navigatorItem.getView());
+}
+
+	// Due to plugin.xml content will be called only for "own" views
+if (element instanceof org.eclipse.core.runtime.IAdaptable) {
+	org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) ((org.eclipse.core.runtime.IAdaptable) element).getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+	if (view != null && isOwnView(view)) {
+		return getImage(view);
+	}
+}
+
+		return super.getImage(element);
+}
+	
+		/**
+ * @generated
+ */
+public org.eclipse.swt.graphics.Image getImage(org.eclipse.gmf.runtime.notation.View view) {
+		switch (capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getVisualID(view)) {
+		case capOverTime.diagram.edit.parts.CapabilityOverTimeEditPart.VISUAL_ID:
+	return getImage("Navigator?Diagram?capOverTime?CapabilityOverTime", capOverTime.diagram.providers.CapOverTimeElementTypes.CapabilityOverTime_1000); //$NON-NLS-1$
+case capOverTime.diagram.edit.parts.TimePeriodEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?capOverTime?TimePeriod", capOverTime.diagram.providers.CapOverTimeElementTypes.TimePeriod_2001); //$NON-NLS-1$
+case capOverTime.diagram.edit.parts.CapabilityEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?capOverTime?Capability", capOverTime.diagram.providers.CapOverTimeElementTypes.Capability_3001); //$NON-NLS-1$
+case capOverTime.diagram.edit.parts.QualitativeValueEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?capOverTime?QualitativeValue", capOverTime.diagram.providers.CapOverTimeElementTypes.QualitativeValue_3003); //$NON-NLS-1$
+case capOverTime.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID:
+	return getImage("Navigator?Link?capOverTime?Capability?decomposes", capOverTime.diagram.providers.CapOverTimeElementTypes.CapabilityDecomposes_4002); //$NON-NLS-1$
+case capOverTime.diagram.edit.parts.QualitativeValue2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?capOverTime?QualitativeValue", capOverTime.diagram.providers.CapOverTimeElementTypes.QualitativeValue_3004); //$NON-NLS-1$
+case capOverTime.diagram.edit.parts.MeasurementEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?capOverTime?Measurement", capOverTime.diagram.providers.CapOverTimeElementTypes.Measurement_3002); //$NON-NLS-1$
+case capOverTime.diagram.edit.parts.QualitativeValue3EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?capOverTime?QualitativeValue", capOverTime.diagram.providers.CapOverTimeElementTypes.QualitativeValue_3005); //$NON-NLS-1$
+case capOverTime.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID:
+	return getImage("Navigator?Link?capOverTime?Capability?satisfies", capOverTime.diagram.providers.CapOverTimeElementTypes.CapabilitySatisfies_4003); //$NON-NLS-1$
+case capOverTime.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID:
+	return getImage("Navigator?Link?capOverTime?Capability?accumulation", capOverTime.diagram.providers.CapOverTimeElementTypes.CapabilityAccumulation_4001); //$NON-NLS-1$
+	}
+		return getImage("Navigator?UnknownElement", null);  //$NON-NLS-1$
+}
+	
+		/**
+ * @generated
+ */
+private org.eclipse.swt.graphics.Image getImage(String key, org.eclipse.gmf.runtime.emf.type.core.IElementType elementType) {
+	org.eclipse.jface.resource.ImageRegistry imageRegistry = capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().getImageRegistry();
+	org.eclipse.swt.graphics.Image image = imageRegistry.get(key);
+	if (image == null && elementType != null && capOverTime.diagram.providers.CapOverTimeElementTypes.isKnownElementType(elementType)) {
+		image = capOverTime.diagram.providers.CapOverTimeElementTypes.getImage(elementType);
+		imageRegistry.put(key, image);
+	}
+			
+	if (image == null) {
+		image = imageRegistry.get("Navigator?ImageNotFound");  //$NON-NLS-1$
+		imageRegistry.put(key, image);
+	}
+	return image;
+}
+	
+		/**
+ * @generated
+ */
+public String getText(Object element) {
+	if (element instanceof capOverTime.diagram.navigator.CapOverTimeNavigatorGroup) {
+	capOverTime.diagram.navigator.CapOverTimeNavigatorGroup group = (capOverTime.diagram.navigator.CapOverTimeNavigatorGroup) element;
+	return group.getGroupName();
+}
+
+	if (element instanceof capOverTime.diagram.navigator.CapOverTimeNavigatorItem) {
+	capOverTime.diagram.navigator.CapOverTimeNavigatorItem navigatorItem = (capOverTime.diagram.navigator.CapOverTimeNavigatorItem) element;
+   		if (!isOwnView(navigatorItem.getView())) {
+   			return null;
+   		}
+   		return getText(navigatorItem.getView());
+	}
+
+	// Due to plugin.xml content will be called only for "own" views
+if (element instanceof org.eclipse.core.runtime.IAdaptable) {
+	org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) ((org.eclipse.core.runtime.IAdaptable) element).getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+	if (view != null && isOwnView(view)) {
+		return getText(view);
+	}
+}
+
+		return super.getText(element);
+}
+	
+		/**
+ * @generated
+ */
+public String getText(org.eclipse.gmf.runtime.notation.View view) {
+	if (view.getElement() != null && view.getElement().eIsProxy()) {
+		return getUnresolvedDomainElementProxyText(view);
+	}
+		switch (capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getVisualID(view)) {
+		case capOverTime.diagram.edit.parts.CapabilityOverTimeEditPart.VISUAL_ID:
+	return getCapabilityOverTime_1000Text(view);
+case capOverTime.diagram.edit.parts.TimePeriodEditPart.VISUAL_ID:
+	return getTimePeriod_2001Text(view);
+case capOverTime.diagram.edit.parts.CapabilityEditPart.VISUAL_ID:
+	return getCapability_3001Text(view);
+case capOverTime.diagram.edit.parts.QualitativeValueEditPart.VISUAL_ID:
+	return getQualitativeValue_3003Text(view);
+case capOverTime.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID:
+	return getCapabilityDecomposes_4002Text(view);
+case capOverTime.diagram.edit.parts.QualitativeValue2EditPart.VISUAL_ID:
+	return getQualitativeValue_3004Text(view);
+case capOverTime.diagram.edit.parts.MeasurementEditPart.VISUAL_ID:
+	return getMeasurement_3002Text(view);
+case capOverTime.diagram.edit.parts.QualitativeValue3EditPart.VISUAL_ID:
+	return getQualitativeValue_3005Text(view);
+case capOverTime.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID:
+	return getCapabilitySatisfies_4003Text(view);
+case capOverTime.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID:
+	return getCapabilityAccumulation_4001Text(view);
+	}
+		return getUnknownElementText(view);
+}
+	
+		/**
+ * @generated
+ */
+private String getCapabilityOverTime_1000Text(org.eclipse.gmf.runtime.notation.View view) {
+					return "";  //$NON-NLS-1$
+	}
+	/**
+ * @generated
+ */
+private String getTimePeriod_2001Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = capOverTime.diagram.providers.CapOverTimeParserProvider.getParser(capOverTime.diagram.providers.CapOverTimeElementTypes.TimePeriod_2001, view.getElement() != null ? view.getElement() : view, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.TimePeriodStartDateStopDateEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5006); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getCapability_3001Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = capOverTime.diagram.providers.CapOverTimeParserProvider.getParser(capOverTime.diagram.providers.CapOverTimeElementTypes.Capability_3001, view.getElement() != null ? view.getElement() : view, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.CapabilityNameColourEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5005); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getQualitativeValue_3003Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = capOverTime.diagram.providers.CapOverTimeParserProvider.getParser(capOverTime.diagram.providers.CapOverTimeElementTypes.QualitativeValue_3003, view.getElement() != null ? view.getElement() : view, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.QualitativeValueNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5001); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getCapabilityDecomposes_4002Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = capOverTime.diagram.providers.CapOverTimeParserProvider.getParser(capOverTime.diagram.providers.CapOverTimeElementTypes.CapabilityDecomposes_4002, view.getElement() != null ? view.getElement() : view, org.eclipse.gmf.runtime.common.ui.services.parser.CommonParserHint.DESCRIPTION);
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6002); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getQualitativeValue_3004Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = capOverTime.diagram.providers.CapOverTimeParserProvider.getParser(capOverTime.diagram.providers.CapOverTimeElementTypes.QualitativeValue_3004, view.getElement() != null ? view.getElement() : view, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.QualitativeValueName2EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5002); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getMeasurement_3002Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = capOverTime.diagram.providers.CapOverTimeParserProvider.getParser(capOverTime.diagram.providers.CapOverTimeElementTypes.Measurement_3002, view.getElement() != null ? view.getElement() : view, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.MeasurementNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5004); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getQualitativeValue_3005Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = capOverTime.diagram.providers.CapOverTimeParserProvider.getParser(capOverTime.diagram.providers.CapOverTimeElementTypes.QualitativeValue_3005, view.getElement() != null ? view.getElement() : view, capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getType(capOverTime.diagram.edit.parts.QualitativeValueName3EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5003); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getCapabilitySatisfies_4003Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = capOverTime.diagram.providers.CapOverTimeParserProvider.getParser(capOverTime.diagram.providers.CapOverTimeElementTypes.CapabilitySatisfies_4003, view.getElement() != null ? view.getElement() : view, org.eclipse.gmf.runtime.common.ui.services.parser.CommonParserHint.DESCRIPTION);
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6003); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getCapabilityAccumulation_4001Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = capOverTime.diagram.providers.CapOverTimeParserProvider.getParser(capOverTime.diagram.providers.CapOverTimeElementTypes.CapabilityAccumulation_4001, view.getElement() != null ? view.getElement() : view, org.eclipse.gmf.runtime.common.ui.services.parser.CommonParserHint.DESCRIPTION);
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6001); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	
+		/**
+ * @generated
+ */
+private String getUnknownElementText(org.eclipse.gmf.runtime.notation.View view) {
+	return "<UnknownElement Visual_ID = " + view.getType() + ">";  //$NON-NLS-1$  //$NON-NLS-2$
+}
+	
+		/**
+ * @generated
+ */
+private String getUnresolvedDomainElementProxyText(org.eclipse.gmf.runtime.notation.View view) {
+	return "<Unresolved domain element Visual_ID = " + view.getType() + ">";  //$NON-NLS-1$  //$NON-NLS-2$
+}
+	
+		/**
+ * @generated
+ */
+public void init(org.eclipse.ui.navigator.ICommonContentExtensionSite aConfig) {
+}
+
+		/**
+ * @generated
+ */
+public void restoreState(org.eclipse.ui.IMemento aMemento) {
+}
+
+		/**
+ * @generated
+ */
+public void saveState(org.eclipse.ui.IMemento aMemento) {
+}
+	
+		/**
+ * @generated
+ */
+public String getDescription(Object anElement) {
+	return null;
+}
+	
+		/**
+ * @generated
+ */
+private boolean isOwnView(org.eclipse.gmf.runtime.notation.View view) {
+	return capOverTime.diagram.edit.parts.CapabilityOverTimeEditPart.MODEL_ID.equals(capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getModelID(view));
+}
+
+	}

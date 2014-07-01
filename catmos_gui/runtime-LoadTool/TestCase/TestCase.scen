@@ -1,0 +1,29 @@
+
+ThroughLifePlanning TestCase
+{
+	popSize 10 genCount 10
+	
+	startDate "01/01/2014" endDate "31/12/2016"
+	
+	ExistingComponent "myComponent" 1 startDate "01/01/2014" endDate "31/12/2016"
+	ExistingComponent "mySecondComponent" 1 startDate "01/01/2014" endDate "31/12/2015"
+}
+
+searchObjective
+Capability "myCapability"
+{
+	startDate "01/01/2014" endDate "31/12/2016"
+	
+}
+
+Component "myComponent"
+{
+	CapabilityProvision "myCapability" {}
+	Capability "myOtherCapability" { }
+}
+
+Component "mySecondComponent"
+{
+	CapabilityProvision "myOtherCapability" {}
+}
+

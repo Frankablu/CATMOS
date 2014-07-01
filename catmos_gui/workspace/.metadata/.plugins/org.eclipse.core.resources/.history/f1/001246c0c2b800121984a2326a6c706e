@@ -1,0 +1,56 @@
+	/*
+ * 
+ */
+package capOverTime.diagram.navigator;
+
+	/**
+ * @generated
+ */
+public abstract class CapOverTimeAbstractNavigatorItem extends org.eclipse.core.runtime.PlatformObject {
+
+
+		/**
+ * @generated
+ */
+static {
+	final Class[] supportedTypes = new Class[] { org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributor.class };
+	final org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributor propertySheetPageContributor = new org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributor() {
+		public String getContributorId() {
+			return "CapabilityOverTime.diagram";  //$NON-NLS-1$
+		}
+	};
+	org.eclipse.core.runtime.Platform.getAdapterManager().registerAdapters(new org.eclipse.core.runtime.IAdapterFactory() {
+		
+		public Object getAdapter(Object adaptableObject, Class adapterType) {
+			if (adaptableObject instanceof capOverTime.diagram.navigator.CapOverTimeAbstractNavigatorItem && adapterType == org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributor.class) {
+				return propertySheetPageContributor;				
+			}
+			return null;
+		}
+
+		public Class[] getAdapterList() {
+			return supportedTypes;
+		}
+	}, capOverTime.diagram.navigator.CapOverTimeAbstractNavigatorItem.class);
+}
+	
+		/**
+ * @generated
+ */
+private Object myParent;
+	
+		/**
+ * @generated
+ */
+protected CapOverTimeAbstractNavigatorItem(Object parent) {
+	myParent = parent;
+}
+	
+		/**
+ * @generated
+ */
+public Object getParent() {
+	return myParent;
+}
+
+	}

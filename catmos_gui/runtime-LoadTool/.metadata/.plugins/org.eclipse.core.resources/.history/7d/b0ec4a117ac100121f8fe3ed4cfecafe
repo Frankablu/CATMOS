@@ -1,0 +1,13 @@
+
+var runTool = new Native("org.eclipse.epsilon.examples.tools.RunTool");
+
+for (timePeriod in TimePeriod.all().select(x|x.startDate <> null))
+{
+	timePeriod.println();
+	timePeriod.startDate.println();
+	
+	for (cap : Capability in timePeriod.ourObjects.select(x|x.isTypeOf(Capability)))
+	{
+		cap.status.println();
+	}
+}

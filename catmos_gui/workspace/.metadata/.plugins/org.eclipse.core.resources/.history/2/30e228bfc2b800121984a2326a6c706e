@@ -1,0 +1,10 @@
+/*
+ * 
+ */
+package capOverTime.diagram.edit.helpers;
+
+/**
+ * @generated
+ */
+public class CapabilityOverTimeEditHelper extends capOverTime.diagram.edit.helpers.CapOverTimeBaseEditHelper {
+	}

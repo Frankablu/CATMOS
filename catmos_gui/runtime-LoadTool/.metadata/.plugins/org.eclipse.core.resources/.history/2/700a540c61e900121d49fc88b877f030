@@ -1,0 +1,59 @@
+FindTradeOffs UAV { popSize 100 genCount 100 
+	ExistingComponent "Brigade HQ" 1
+}
+
+Capability "Route Clearance"
+{
+	
+	decomposes ("Clearing The Route", "Keeping The Route Clear")
+}
+
+Capability "Clearing The Route"
+{
+	
+	decomposes ("Plan", "Removing Hard Targets", "Removing IEDs")
+}
+
+Capability "Plan"
+{
+	
+	decomposes ("Mission Plan", "Control and Communication")
+}
+
+Capability "Mission Plan"
+{
+	
+}
+
+Component "Brigade HQ"
+{
+	CapabilityProvision "Mission Plan"
+	{
+		
+	}
+}
+
+Capability "Removing Hard Targets"
+{
+	
+}
+
+Capability "Removing IEDs"
+{
+	
+}
+
+Capability "Keeping The Route Clear"
+{
+	
+}
+
+
+
+
+
+
+Capability "Control and Communication"
+{
+	
+}

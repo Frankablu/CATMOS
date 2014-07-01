@@ -1,0 +1,178 @@
+
+/*
+ * 
+ */
+package capOverTime.diagram.part;
+
+/**
+ * @generated
+ */
+public class CapOverTimePaletteFactory {
+
+	/**
+ * @generated
+ */
+	public void fillPalette(org.eclipse.gef.palette.PaletteRoot paletteRoot) {
+		paletteRoot.add(createObjects1Group());
+paletteRoot.add(createConnections2Group());
+	}
+
+	/**
+ * Creates "Objects" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createObjects1Group() {
+				org.eclipse.gef.palette.PaletteDrawer paletteContainer = new org.eclipse.gef.palette.PaletteDrawer(capOverTime.diagram.part.Messages.Objects1Group_title);
+				 paletteContainer.setId("createObjects1Group"); //$NON-NLS-1$
+								paletteContainer.add(createCapability1CreationTool());
+paletteContainer.add(createMeasurement2CreationTool());
+paletteContainer.add(createQualitativeValue3CreationTool());
+paletteContainer.add(createTimePeriod4CreationTool());
+		return paletteContainer;
+	}
+	/**
+ * Creates "Connections" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createConnections2Group() {
+				org.eclipse.gef.palette.PaletteDrawer paletteContainer = new org.eclipse.gef.palette.PaletteDrawer(capOverTime.diagram.part.Messages.Connections2Group_title);
+				 paletteContainer.setId("createConnections2Group"); //$NON-NLS-1$
+								paletteContainer.add(createAccumulation1CreationTool());
+paletteContainer.add(createDecomposes2CreationTool());
+paletteContainer.add(createSatisfies3CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createCapability1CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(capOverTime.diagram.part.Messages.Capability1CreationTool_title, capOverTime.diagram.part.Messages.Capability1CreationTool_desc, java.util.Collections.singletonList(capOverTime.diagram.providers.CapOverTimeElementTypes.Capability_3001));
+				 entry.setId("createCapability1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(capOverTime.diagram.providers.CapOverTimeElementTypes.getImageDescriptor(capOverTime.diagram.providers.CapOverTimeElementTypes.Capability_3001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createMeasurement2CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(capOverTime.diagram.part.Messages.Measurement2CreationTool_title, capOverTime.diagram.part.Messages.Measurement2CreationTool_desc, java.util.Collections.singletonList(capOverTime.diagram.providers.CapOverTimeElementTypes.Measurement_3002));
+				 entry.setId("createMeasurement2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(capOverTime.diagram.providers.CapOverTimeElementTypes.getImageDescriptor(capOverTime.diagram.providers.CapOverTimeElementTypes.Measurement_3002));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createQualitativeValue3CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(3);
+types.add(capOverTime.diagram.providers.CapOverTimeElementTypes.QualitativeValue_3003);
+types.add(capOverTime.diagram.providers.CapOverTimeElementTypes.QualitativeValue_3004);
+types.add(capOverTime.diagram.providers.CapOverTimeElementTypes.QualitativeValue_3005);
+NodeToolEntry entry = new NodeToolEntry(capOverTime.diagram.part.Messages.QualitativeValue3CreationTool_title, capOverTime.diagram.part.Messages.QualitativeValue3CreationTool_desc, types);
+				 entry.setId("createQualitativeValue3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(capOverTime.diagram.providers.CapOverTimeElementTypes.getImageDescriptor(capOverTime.diagram.providers.CapOverTimeElementTypes.QualitativeValue_3003));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createTimePeriod4CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(capOverTime.diagram.part.Messages.TimePeriod4CreationTool_title, capOverTime.diagram.part.Messages.TimePeriod4CreationTool_desc, java.util.Collections.singletonList(capOverTime.diagram.providers.CapOverTimeElementTypes.TimePeriod_2001));
+				 entry.setId("createTimePeriod4CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(capOverTime.diagram.providers.CapOverTimeElementTypes.getImageDescriptor(capOverTime.diagram.providers.CapOverTimeElementTypes.TimePeriod_2001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createAccumulation1CreationTool() {
+		LinkToolEntry entry = new LinkToolEntry(capOverTime.diagram.part.Messages.Accumulation1CreationTool_title, capOverTime.diagram.part.Messages.Accumulation1CreationTool_desc, java.util.Collections.singletonList(capOverTime.diagram.providers.CapOverTimeElementTypes.CapabilityAccumulation_4001));
+				 entry.setId("createAccumulation1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(capOverTime.diagram.providers.CapOverTimeElementTypes.getImageDescriptor(capOverTime.diagram.providers.CapOverTimeElementTypes.CapabilityAccumulation_4001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createDecomposes2CreationTool() {
+		LinkToolEntry entry = new LinkToolEntry(capOverTime.diagram.part.Messages.Decomposes2CreationTool_title, capOverTime.diagram.part.Messages.Decomposes2CreationTool_desc, java.util.Collections.singletonList(capOverTime.diagram.providers.CapOverTimeElementTypes.CapabilityDecomposes_4002));
+				 entry.setId("createDecomposes2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(capOverTime.diagram.providers.CapOverTimeElementTypes.getImageDescriptor(capOverTime.diagram.providers.CapOverTimeElementTypes.CapabilityDecomposes_4002));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createSatisfies3CreationTool() {
+		LinkToolEntry entry = new LinkToolEntry(capOverTime.diagram.part.Messages.Satisfies3CreationTool_title, capOverTime.diagram.part.Messages.Satisfies3CreationTool_desc, java.util.Collections.singletonList(capOverTime.diagram.providers.CapOverTimeElementTypes.CapabilitySatisfies_4003));
+				 entry.setId("createSatisfies3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(capOverTime.diagram.providers.CapOverTimeElementTypes.getImageDescriptor(capOverTime.diagram.providers.CapOverTimeElementTypes.CapabilitySatisfies_4003));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+
+
+
+	/**
+ * @generated
+ */
+	private static class NodeToolEntry extends org.eclipse.gef.palette.ToolEntry {
+
+		/**
+ * @generated
+ */
+		private final java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> elementTypes;
+
+		/**
+ * @generated
+ */
+		private NodeToolEntry(String title, String description, java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> elementTypes) {
+			super(title, description, null, null);
+			this.elementTypes = elementTypes;
+		}
+
+		/**
+ * @generated
+ */
+		public org.eclipse.gef.Tool createTool() {
+			org.eclipse.gef.Tool tool = new org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeCreationTool(elementTypes);
+			tool.setProperties(getToolProperties());
+			return tool;
+		}
+	}
+
+	/**
+ * @generated
+ */
+	private static class LinkToolEntry extends org.eclipse.gef.palette.ToolEntry {
+
+		/**
+ * @generated
+ */
+		private final java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> relationshipTypes;
+
+		/**
+ * @generated
+ */
+		private LinkToolEntry(String title, String description, java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> relationshipTypes) {
+			super(title, description, null, null);
+			this.relationshipTypes = relationshipTypes;
+		}
+
+		/**
+ * @generated
+ */
+		public org.eclipse.gef.Tool createTool() {
+			org.eclipse.gef.Tool tool = new org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeConnectionTool(relationshipTypes);
+			tool.setProperties(getToolProperties());
+			return tool;
+		}
+	}
+}

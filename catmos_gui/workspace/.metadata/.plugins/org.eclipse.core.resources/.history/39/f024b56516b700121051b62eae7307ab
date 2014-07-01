@@ -1,0 +1,10 @@
+/*
+ * 
+ */
+package Scenario.diagram.edit.helpers;
+
+/**
+ * @generated
+ */
+public class FindTradeOffsEditHelper extends Scenario.diagram.edit.helpers.ScenarioBaseEditHelper {
+	}

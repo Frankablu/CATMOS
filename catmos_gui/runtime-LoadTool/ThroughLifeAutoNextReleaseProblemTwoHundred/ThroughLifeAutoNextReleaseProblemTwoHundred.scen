@@ -1,0 +1,6634 @@
+
+ThroughLifePlanning ThroughLifeAutoNextReleaseProblemTwoHundred
+{
+	popSize 100
+	genCount 100
+	
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	AcquirableComponent customer1 1 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent customer2 1 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent customer3 1 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent customer4 1 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent customer5 1 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent customer6 1 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent customer7 1 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent customer8 1 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent customer9 1 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent customer10 1 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent customer11 1 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent customer12 1 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent customer13 1 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent customer14 1 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent customer15 1 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent customer16 1 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent customer17 1 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent customer18 1 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent customer19 1 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent customer20 1 acquisitionTime "0" lifeSpan "inf"
+	
+	AcquirableComponent feature1 1 acquisitionTime "10" lifeSpan "inf"
+	AcquirableComponent feature2 1 acquisitionTime "13" lifeSpan "inf"
+	AcquirableComponent feature3 1 acquisitionTime "4" lifeSpan "inf"
+	AcquirableComponent feature4 1 acquisitionTime "7" lifeSpan "inf"
+	AcquirableComponent feature5 1 acquisitionTime "43" lifeSpan "inf"
+	AcquirableComponent feature6 1 acquisitionTime "25" lifeSpan "inf"
+	AcquirableComponent feature7 1 acquisitionTime "15" lifeSpan "inf"
+	AcquirableComponent feature8 1 acquisitionTime "47" lifeSpan "inf"
+	AcquirableComponent feature9 1 acquisitionTime "42" lifeSpan "inf"
+	AcquirableComponent feature10 1 acquisitionTime "31" lifeSpan "inf"
+	AcquirableComponent feature11 1 acquisitionTime "2" lifeSpan "inf"
+	AcquirableComponent feature12 1 acquisitionTime "20" lifeSpan "inf"
+	AcquirableComponent feature13 1 acquisitionTime "26" lifeSpan "inf"
+	AcquirableComponent feature14 1 acquisitionTime "22" lifeSpan "inf"
+	AcquirableComponent feature15 1 acquisitionTime "9" lifeSpan "inf"
+	AcquirableComponent feature16 1 acquisitionTime "23" lifeSpan "inf"
+	AcquirableComponent feature17 1 acquisitionTime "16" lifeSpan "inf"
+	AcquirableComponent feature18 1 acquisitionTime "46" lifeSpan "inf"
+	AcquirableComponent feature19 1 acquisitionTime "9" lifeSpan "inf"
+	AcquirableComponent feature20 1 acquisitionTime "34" lifeSpan "inf"
+	AcquirableComponent feature21 1 acquisitionTime "16" lifeSpan "inf"
+	AcquirableComponent feature22 1 acquisitionTime "24" lifeSpan "inf"
+	AcquirableComponent feature23 1 acquisitionTime "31" lifeSpan "inf"
+	AcquirableComponent feature24 1 acquisitionTime "4" lifeSpan "inf"
+	AcquirableComponent feature25 1 acquisitionTime "30" lifeSpan "inf"
+	AcquirableComponent feature26 1 acquisitionTime "20" lifeSpan "inf"
+	AcquirableComponent feature27 1 acquisitionTime "23" lifeSpan "inf"
+	AcquirableComponent feature28 1 acquisitionTime "9" lifeSpan "inf"
+	AcquirableComponent feature29 1 acquisitionTime "15" lifeSpan "inf"
+	AcquirableComponent feature30 1 acquisitionTime "26" lifeSpan "inf"
+	AcquirableComponent feature31 1 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent feature32 1 acquisitionTime "45" lifeSpan "inf"
+	AcquirableComponent feature33 1 acquisitionTime "1" lifeSpan "inf"
+	AcquirableComponent feature34 1 acquisitionTime "48" lifeSpan "inf"
+	AcquirableComponent feature35 1 acquisitionTime "39" lifeSpan "inf"
+	AcquirableComponent feature36 1 acquisitionTime "12" lifeSpan "inf"
+	AcquirableComponent feature37 1 acquisitionTime "39" lifeSpan "inf"
+	AcquirableComponent feature38 1 acquisitionTime "24" lifeSpan "inf"
+	AcquirableComponent feature39 1 acquisitionTime "35" lifeSpan "inf"
+	AcquirableComponent feature40 1 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent feature41 1 acquisitionTime "31" lifeSpan "inf"
+	AcquirableComponent feature42 1 acquisitionTime "29" lifeSpan "inf"
+	AcquirableComponent feature43 1 acquisitionTime "29" lifeSpan "inf"
+	AcquirableComponent feature44 1 acquisitionTime "48" lifeSpan "inf"
+	AcquirableComponent feature45 1 acquisitionTime "30" lifeSpan "inf"
+	AcquirableComponent feature46 1 acquisitionTime "45" lifeSpan "inf"
+	AcquirableComponent feature47 1 acquisitionTime "15" lifeSpan "inf"
+	AcquirableComponent feature48 1 acquisitionTime "16" lifeSpan "inf"
+	AcquirableComponent feature49 1 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent feature50 1 acquisitionTime "22" lifeSpan "inf"
+	AcquirableComponent feature51 1 acquisitionTime "32" lifeSpan "inf"
+	AcquirableComponent feature52 1 acquisitionTime "11" lifeSpan "inf"
+	AcquirableComponent feature53 1 acquisitionTime "28" lifeSpan "inf"
+	AcquirableComponent feature54 1 acquisitionTime "2" lifeSpan "inf"
+	AcquirableComponent feature55 1 acquisitionTime "37" lifeSpan "inf"
+	AcquirableComponent feature56 1 acquisitionTime "29" lifeSpan "inf"
+	AcquirableComponent feature57 1 acquisitionTime "4" lifeSpan "inf"
+	AcquirableComponent feature58 1 acquisitionTime "31" lifeSpan "inf"
+	AcquirableComponent feature59 1 acquisitionTime "47" lifeSpan "inf"
+	AcquirableComponent feature60 1 acquisitionTime "34" lifeSpan "inf"
+	AcquirableComponent feature61 1 acquisitionTime "2" lifeSpan "inf"
+	AcquirableComponent feature62 1 acquisitionTime "45" lifeSpan "inf"
+	AcquirableComponent feature63 1 acquisitionTime "24" lifeSpan "inf"
+	AcquirableComponent feature64 1 acquisitionTime "31" lifeSpan "inf"
+	AcquirableComponent feature65 1 acquisitionTime "22" lifeSpan "inf"
+	AcquirableComponent feature66 1 acquisitionTime "34" lifeSpan "inf"
+	AcquirableComponent feature67 1 acquisitionTime "50" lifeSpan "inf"
+	AcquirableComponent feature68 1 acquisitionTime "16" lifeSpan "inf"
+	AcquirableComponent feature69 1 acquisitionTime "7" lifeSpan "inf"
+	AcquirableComponent feature70 1 acquisitionTime "17" lifeSpan "inf"
+	AcquirableComponent feature71 1 acquisitionTime "48" lifeSpan "inf"
+	AcquirableComponent feature72 1 acquisitionTime "30" lifeSpan "inf"
+	AcquirableComponent feature73 1 acquisitionTime "5" lifeSpan "inf"
+	AcquirableComponent feature74 1 acquisitionTime "3" lifeSpan "inf"
+	AcquirableComponent feature75 1 acquisitionTime "8" lifeSpan "inf"
+	AcquirableComponent feature76 1 acquisitionTime "9" lifeSpan "inf"
+	AcquirableComponent feature77 1 acquisitionTime "41" lifeSpan "inf"
+	AcquirableComponent feature78 1 acquisitionTime "12" lifeSpan "inf"
+	AcquirableComponent feature79 1 acquisitionTime "9" lifeSpan "inf"
+	AcquirableComponent feature80 1 acquisitionTime "25" lifeSpan "inf"
+	AcquirableComponent feature81 1 acquisitionTime "5" lifeSpan "inf"
+	AcquirableComponent feature82 1 acquisitionTime "31" lifeSpan "inf"
+	AcquirableComponent feature83 1 acquisitionTime "19" lifeSpan "inf"
+	AcquirableComponent feature84 1 acquisitionTime "10" lifeSpan "inf"
+	AcquirableComponent feature85 1 acquisitionTime "1" lifeSpan "inf"
+	AcquirableComponent feature86 1 acquisitionTime "27" lifeSpan "inf"
+	AcquirableComponent feature87 1 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent feature88 1 acquisitionTime "32" lifeSpan "inf"
+	AcquirableComponent feature89 1 acquisitionTime "1" lifeSpan "inf"
+	AcquirableComponent feature90 1 acquisitionTime "28" lifeSpan "inf"
+	AcquirableComponent feature91 1 acquisitionTime "38" lifeSpan "inf"
+	AcquirableComponent feature92 1 acquisitionTime "2" lifeSpan "inf"
+	AcquirableComponent feature93 1 acquisitionTime "26" lifeSpan "inf"
+	AcquirableComponent feature94 1 acquisitionTime "5" lifeSpan "inf"
+	AcquirableComponent feature95 1 acquisitionTime "15" lifeSpan "inf"
+	AcquirableComponent feature96 1 acquisitionTime "28" lifeSpan "inf"
+	AcquirableComponent feature97 1 acquisitionTime "11" lifeSpan "inf"
+	AcquirableComponent feature98 1 acquisitionTime "19" lifeSpan "inf"
+	AcquirableComponent feature99 1 acquisitionTime "27" lifeSpan "inf"
+	AcquirableComponent feature100 1 acquisitionTime "39" lifeSpan "inf"
+	AcquirableComponent feature101 1 acquisitionTime "43" lifeSpan "inf"
+	AcquirableComponent feature102 1 acquisitionTime "22" lifeSpan "inf"
+	AcquirableComponent feature103 1 acquisitionTime "23" lifeSpan "inf"
+	AcquirableComponent feature104 1 acquisitionTime "29" lifeSpan "inf"
+	AcquirableComponent feature105 1 acquisitionTime "41" lifeSpan "inf"
+	AcquirableComponent feature106 1 acquisitionTime "44" lifeSpan "inf"
+	AcquirableComponent feature107 1 acquisitionTime "46" lifeSpan "inf"
+	AcquirableComponent feature108 1 acquisitionTime "19" lifeSpan "inf"
+	AcquirableComponent feature109 1 acquisitionTime "10" lifeSpan "inf"
+	AcquirableComponent feature110 1 acquisitionTime "15" lifeSpan "inf"
+	AcquirableComponent feature111 1 acquisitionTime "39" lifeSpan "inf"
+	AcquirableComponent feature112 1 acquisitionTime "15" lifeSpan "inf"
+	AcquirableComponent feature113 1 acquisitionTime "16" lifeSpan "inf"
+	AcquirableComponent feature114 1 acquisitionTime "14" lifeSpan "inf"
+	AcquirableComponent feature115 1 acquisitionTime "12" lifeSpan "inf"
+	AcquirableComponent feature116 1 acquisitionTime "31" lifeSpan "inf"
+	AcquirableComponent feature117 1 acquisitionTime "23" lifeSpan "inf"
+	AcquirableComponent feature118 1 acquisitionTime "32" lifeSpan "inf"
+	AcquirableComponent feature119 1 acquisitionTime "20" lifeSpan "inf"
+	AcquirableComponent feature120 1 acquisitionTime "12" lifeSpan "inf"
+	AcquirableComponent feature121 1 acquisitionTime "34" lifeSpan "inf"
+	AcquirableComponent feature122 1 acquisitionTime "47" lifeSpan "inf"
+	AcquirableComponent feature123 1 acquisitionTime "38" lifeSpan "inf"
+	AcquirableComponent feature124 1 acquisitionTime "45" lifeSpan "inf"
+	AcquirableComponent feature125 1 acquisitionTime "45" lifeSpan "inf"
+	AcquirableComponent feature126 1 acquisitionTime "34" lifeSpan "inf"
+	AcquirableComponent feature127 1 acquisitionTime "15" lifeSpan "inf"
+	AcquirableComponent feature128 1 acquisitionTime "37" lifeSpan "inf"
+	AcquirableComponent feature129 1 acquisitionTime "44" lifeSpan "inf"
+	AcquirableComponent feature130 1 acquisitionTime "45" lifeSpan "inf"
+	AcquirableComponent feature131 1 acquisitionTime "1" lifeSpan "inf"
+	AcquirableComponent feature132 1 acquisitionTime "43" lifeSpan "inf"
+	AcquirableComponent feature133 1 acquisitionTime "37" lifeSpan "inf"
+	AcquirableComponent feature134 1 acquisitionTime "50" lifeSpan "inf"
+	AcquirableComponent feature135 1 acquisitionTime "2" lifeSpan "inf"
+	AcquirableComponent feature136 1 acquisitionTime "44" lifeSpan "inf"
+	AcquirableComponent feature137 1 acquisitionTime "31" lifeSpan "inf"
+	AcquirableComponent feature138 1 acquisitionTime "9" lifeSpan "inf"
+	AcquirableComponent feature139 1 acquisitionTime "23" lifeSpan "inf"
+	AcquirableComponent feature140 1 acquisitionTime "48" lifeSpan "inf"
+	AcquirableComponent feature141 1 acquisitionTime "47" lifeSpan "inf"
+	AcquirableComponent feature142 1 acquisitionTime "36" lifeSpan "inf"
+	AcquirableComponent feature143 1 acquisitionTime "41" lifeSpan "inf"
+	AcquirableComponent feature144 1 acquisitionTime "40" lifeSpan "inf"
+	AcquirableComponent feature145 1 acquisitionTime "42" lifeSpan "inf"
+	AcquirableComponent feature146 1 acquisitionTime "29" lifeSpan "inf"
+	AcquirableComponent feature147 1 acquisitionTime "47" lifeSpan "inf"
+	AcquirableComponent feature148 1 acquisitionTime "16" lifeSpan "inf"
+	AcquirableComponent feature149 1 acquisitionTime "48" lifeSpan "inf"
+	AcquirableComponent feature150 1 acquisitionTime "30" lifeSpan "inf"
+	AcquirableComponent feature151 1 acquisitionTime "24" lifeSpan "inf"
+	AcquirableComponent feature152 1 acquisitionTime "43" lifeSpan "inf"
+	AcquirableComponent feature153 1 acquisitionTime "20" lifeSpan "inf"
+	AcquirableComponent feature154 1 acquisitionTime "26" lifeSpan "inf"
+	AcquirableComponent feature155 1 acquisitionTime "45" lifeSpan "inf"
+	AcquirableComponent feature156 1 acquisitionTime "38" lifeSpan "inf"
+	AcquirableComponent feature157 1 acquisitionTime "2" lifeSpan "inf"
+	AcquirableComponent feature158 1 acquisitionTime "6" lifeSpan "inf"
+	AcquirableComponent feature159 1 acquisitionTime "39" lifeSpan "inf"
+	AcquirableComponent feature160 1 acquisitionTime "18" lifeSpan "inf"
+	AcquirableComponent feature161 1 acquisitionTime "5" lifeSpan "inf"
+	AcquirableComponent feature162 1 acquisitionTime "10" lifeSpan "inf"
+	AcquirableComponent feature163 1 acquisitionTime "1" lifeSpan "inf"
+	AcquirableComponent feature164 1 acquisitionTime "11" lifeSpan "inf"
+	AcquirableComponent feature165 1 acquisitionTime "26" lifeSpan "inf"
+	AcquirableComponent feature166 1 acquisitionTime "6" lifeSpan "inf"
+	AcquirableComponent feature167 1 acquisitionTime "14" lifeSpan "inf"
+	AcquirableComponent feature168 1 acquisitionTime "2" lifeSpan "inf"
+	AcquirableComponent feature169 1 acquisitionTime "15" lifeSpan "inf"
+	AcquirableComponent feature170 1 acquisitionTime "33" lifeSpan "inf"
+	AcquirableComponent feature171 1 acquisitionTime "4" lifeSpan "inf"
+	AcquirableComponent feature172 1 acquisitionTime "32" lifeSpan "inf"
+	AcquirableComponent feature173 1 acquisitionTime "16" lifeSpan "inf"
+	AcquirableComponent feature174 1 acquisitionTime "39" lifeSpan "inf"
+	AcquirableComponent feature175 1 acquisitionTime "11" lifeSpan "inf"
+	AcquirableComponent feature176 1 acquisitionTime "11" lifeSpan "inf"
+	AcquirableComponent feature177 1 acquisitionTime "44" lifeSpan "inf"
+	AcquirableComponent feature178 1 acquisitionTime "12" lifeSpan "inf"
+	AcquirableComponent feature179 1 acquisitionTime "10" lifeSpan "inf"
+	AcquirableComponent feature180 1 acquisitionTime "40" lifeSpan "inf"
+	AcquirableComponent feature181 1 acquisitionTime "10" lifeSpan "inf"
+	AcquirableComponent feature182 1 acquisitionTime "27" lifeSpan "inf"
+	AcquirableComponent feature183 1 acquisitionTime "29" lifeSpan "inf"
+	AcquirableComponent feature184 1 acquisitionTime "24" lifeSpan "inf"
+	AcquirableComponent feature185 1 acquisitionTime "18" lifeSpan "inf"
+	AcquirableComponent feature186 1 acquisitionTime "11" lifeSpan "inf"
+	AcquirableComponent feature187 1 acquisitionTime "19" lifeSpan "inf"
+	AcquirableComponent feature188 1 acquisitionTime "21" lifeSpan "inf"
+	AcquirableComponent feature189 1 acquisitionTime "35" lifeSpan "inf"
+	AcquirableComponent feature190 1 acquisitionTime "33" lifeSpan "inf"
+	AcquirableComponent feature191 1 acquisitionTime "41" lifeSpan "inf"
+	AcquirableComponent feature192 1 acquisitionTime "22" lifeSpan "inf"
+	AcquirableComponent feature193 1 acquisitionTime "33" lifeSpan "inf"
+	AcquirableComponent feature194 1 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent feature195 1 acquisitionTime "24" lifeSpan "inf"
+	AcquirableComponent feature196 1 acquisitionTime "41" lifeSpan "inf"
+	AcquirableComponent feature197 1 acquisitionTime "6" lifeSpan "inf"
+	AcquirableComponent feature198 1 acquisitionTime "12" lifeSpan "inf"
+	AcquirableComponent feature199 1 acquisitionTime "36" lifeSpan "inf"
+	AcquirableComponent feature200 1 acquisitionTime "30" lifeSpan "inf"
+	
+	Budget Money
+	{
+		amount 45.0
+		startDate "15/01/2013"
+	}
+	
+	Budget Money
+	{
+		amount 40.0
+		startDate "01/02/2013"
+		repeatDuration "30 days"
+	}
+	
+	DesireLow "Money"
+}
+
+
+standAlone
+searchObjective
+Capability overallSatisfaction
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement weightedSatisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		script "output = 0.036363635 * getGlobalMeasure(\'customer1satisfaction\') + 0.027272727 * getGlobalMeasure(\'customer2satisfaction\') + 0.018181818 * getGlobalMeasure(\'customer3satisfaction\') + 0.08181818 * getGlobalMeasure(\'customer4satisfaction\') + 0.036363635 * getGlobalMeasure(\'customer5satisfaction\') + 0.018181818 * getGlobalMeasure(\'customer6satisfaction\') + 0.045454547 * getGlobalMeasure(\'customer7satisfaction\') + 0.07272727 * getGlobalMeasure(\'customer8satisfaction\') + 0.054545455 * getGlobalMeasure(\'customer9satisfaction\') + 0.036363635 * getGlobalMeasure(\'customer10satisfaction\') + 0.054545455 * getGlobalMeasure(\'customer11satisfaction\') + 0.09090909 * getGlobalMeasure(\'customer12satisfaction\') + 0.08181818 * getGlobalMeasure(\'customer13satisfaction\') + 0.07272727 * getGlobalMeasure(\'customer14satisfaction\') + 0.045454547 * getGlobalMeasure(\'customer15satisfaction\') + 0.08181818 * getGlobalMeasure(\'customer16satisfaction\') + 0.036363635 * getGlobalMeasure(\'customer17satisfaction\') + 0.027272727 * getGlobalMeasure(\'customer18satisfaction\') + 0.045454547 * getGlobalMeasure(\'customer19satisfaction\') + 0.036363635 * getGlobalMeasure(\'customer20satisfaction\')"
+	}
+}
+
+
+standAlone
+Capability customer1satisfaction
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement customer1satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		providedValue 0.0
+		script "output = 0 + 0.1923077 * getGlobalMeasure(\"req181\")+ 0.115384616 * getGlobalMeasure(\"req33\")+ 0.34615386 * getGlobalMeasure(\"req199\")+ 0.115384616 * getGlobalMeasure(\"req79\")+ 0.23076923 * getGlobalMeasure(\"req34\")"
+	}
+}
+
+
+standAlone
+Capability customer2satisfaction
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement customer2satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		providedValue 0.0
+		script "output = 0 + 0.14285715 * getGlobalMeasure(\"req136\")+ 0.0952381 * getGlobalMeasure(\"req30\")+ 0.47619048 * getGlobalMeasure(\"req191\")+ 0.1904762 * getGlobalMeasure(\"req171\")+ 0.0952381 * getGlobalMeasure(\"req176\")"
+	}
+}
+
+
+standAlone
+Capability customer3satisfaction
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement customer3satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		providedValue 0.0
+		script "output = 0 + 0.17142858 * getGlobalMeasure(\"req47\")+ 0.2857143 * getGlobalMeasure(\"req38\")+ 0.2857143 * getGlobalMeasure(\"req165\")+ 0.028571429 * getGlobalMeasure(\"req69\")+ 0.22857143 * getGlobalMeasure(\"req195\")"
+	}
+}
+
+
+standAlone
+Capability customer4satisfaction
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement customer4satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		providedValue 0.0
+		script "output = 0 + 0.1875 * getGlobalMeasure(\"req184\")+ 0.375 * getGlobalMeasure(\"req61\")+ 0.1875 * getGlobalMeasure(\"req153\")+ 0.125 * getGlobalMeasure(\"req98\")+ 0.125 * getGlobalMeasure(\"req16\")"
+	}
+}
+
+
+standAlone
+Capability customer5satisfaction
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement customer5satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		providedValue 0.0
+		script "output = 0 + 0.20689656 * getGlobalMeasure(\"req14\")+ 0.06896552 * getGlobalMeasure(\"req155\")+ 0.27586207 * getGlobalMeasure(\"req28\")+ 0.27586207 * getGlobalMeasure(\"req13\")+ 0.1724138 * getGlobalMeasure(\"req81\")"
+	}
+}
+
+
+standAlone
+Capability customer6satisfaction
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement customer6satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		providedValue 0.0
+		script "output = 0 + 0.25 * getGlobalMeasure(\"req200\")+ 0.14285715 * getGlobalMeasure(\"req14\")+ 0.32142857 * getGlobalMeasure(\"req90\")+ 0.071428575 * getGlobalMeasure(\"req83\")+ 0.21428572 * getGlobalMeasure(\"req43\")"
+	}
+}
+
+
+standAlone
+Capability customer7satisfaction
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement customer7satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		providedValue 0.0
+		script "output = 0 + 0.29411766 * getGlobalMeasure(\"req103\")+ 0.0882353 * getGlobalMeasure(\"req22\")+ 0.20588236 * getGlobalMeasure(\"req128\")+ 0.11764706 * getGlobalMeasure(\"req138\")+ 0.29411766 * getGlobalMeasure(\"req74\")"
+	}
+}
+
+
+standAlone
+Capability customer8satisfaction
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement customer8satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		providedValue 0.0
+		script "output = 0 + 0.1 * getGlobalMeasure(\"req190\")+ 0.2 * getGlobalMeasure(\"req106\")+ 0.3 * getGlobalMeasure(\"req58\")+ 0.3 * getGlobalMeasure(\"req86\")+ 0.1 * getGlobalMeasure(\"req177\")"
+	}
+}
+
+
+standAlone
+Capability customer9satisfaction
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement customer9satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		providedValue 0.0
+		script "output = 0 + 0.2631579 * getGlobalMeasure(\"req60\")+ 0.36842105 * getGlobalMeasure(\"req22\")+ 0.15789473 * getGlobalMeasure(\"req188\")+ 0.15789473 * getGlobalMeasure(\"req114\")+ 0.05263158 * getGlobalMeasure(\"req187\")"
+	}
+}
+
+
+standAlone
+Capability customer10satisfaction
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement customer10satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		providedValue 0.0
+		script "output = 0 + 0.13793103 * getGlobalMeasure(\"req144\")+ 0.03448276 * getGlobalMeasure(\"req44\")+ 0.3448276 * getGlobalMeasure(\"req137\")+ 0.1724138 * getGlobalMeasure(\"req84\")+ 0.31034482 * getGlobalMeasure(\"req91\")"
+	}
+}
+
+
+standAlone
+Capability customer11satisfaction
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement customer11satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		providedValue 0.0
+		script "output = 0 + 0.2631579 * getGlobalMeasure(\"req114\")+ 0.2631579 * getGlobalMeasure(\"req48\")+ 0.13157895 * getGlobalMeasure(\"req152\")+ 0.23684211 * getGlobalMeasure(\"req189\")+ 0.10526316 * getGlobalMeasure(\"req87\")"
+	}
+}
+
+
+standAlone
+Capability customer12satisfaction
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement customer12satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		providedValue 0.0
+		script "output = 0 + 0.33333334 * getGlobalMeasure(\"req69\")+ 0.2 * getGlobalMeasure(\"req91\")+ 0.2 * getGlobalMeasure(\"req82\")+ 0.13333334 * getGlobalMeasure(\"req34\")+ 0.13333334 * getGlobalMeasure(\"req161\")"
+	}
+}
+
+
+standAlone
+Capability customer13satisfaction
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement customer13satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		providedValue 0.0
+		script "output = 0 + 0.15625 * getGlobalMeasure(\"req10\")+ 0.3125 * getGlobalMeasure(\"req139\")+ 0.15625 * getGlobalMeasure(\"req40\")+ 0.25 * getGlobalMeasure(\"req132\")+ 0.125 * getGlobalMeasure(\"req94\")"
+	}
+}
+
+
+standAlone
+Capability customer14satisfaction
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement customer14satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		providedValue 0.0
+		script "output = 0 + 0.14285715 * getGlobalMeasure(\"req164\")+ 0.2857143 * getGlobalMeasure(\"req166\")+ 0.2857143 * getGlobalMeasure(\"req145\")+ 0.14285715 * getGlobalMeasure(\"req20\")+ 0.14285715 * getGlobalMeasure(\"req153\")"
+	}
+}
+
+
+standAlone
+Capability customer15satisfaction
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement customer15satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		providedValue 0.0
+		script "output = 0 + 0.10344828 * getGlobalMeasure(\"req178\")+ 0.3448276 * getGlobalMeasure(\"req92\")+ 0.1724138 * getGlobalMeasure(\"req176\")+ 0.06896552 * getGlobalMeasure(\"req58\")+ 0.31034482 * getGlobalMeasure(\"req127\")"
+	}
+}
+
+
+standAlone
+Capability customer16satisfaction
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement customer16satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		providedValue 0.0
+		script "output = 0 + 0.032258064 * getGlobalMeasure(\"req148\")+ 0.29032257 * getGlobalMeasure(\"req71\")+ 0.32258064 * getGlobalMeasure(\"req154\")+ 0.09677419 * getGlobalMeasure(\"req118\")+ 0.2580645 * getGlobalMeasure(\"req8\")"
+	}
+}
+
+
+standAlone
+Capability customer17satisfaction
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement customer17satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		providedValue 0.0
+		script "output = 0 + 0.26086956 * getGlobalMeasure(\"req161\")+ 0.04347826 * getGlobalMeasure(\"req38\")+ 0.17391305 * getGlobalMeasure(\"req170\")+ 0.4347826 * getGlobalMeasure(\"req168\")+ 0.08695652 * getGlobalMeasure(\"req187\")"
+	}
+}
+
+
+standAlone
+Capability customer18satisfaction
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement customer18satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		providedValue 0.0
+		script "output = 0 + 0.21212122 * getGlobalMeasure(\"req62\")+ 0.121212125 * getGlobalMeasure(\"req93\")+ 0.24242425 * getGlobalMeasure(\"req71\")+ 0.121212125 * getGlobalMeasure(\"req161\")+ 0.3030303 * getGlobalMeasure(\"req177\")"
+	}
+}
+
+
+standAlone
+Capability customer19satisfaction
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement customer19satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		providedValue 0.0
+		script "output = 0 + 0.22857143 * getGlobalMeasure(\"req101\")+ 0.17142858 * getGlobalMeasure(\"req46\")+ 0.2 * getGlobalMeasure(\"req67\")+ 0.14285715 * getGlobalMeasure(\"req2\")+ 0.25714287 * getGlobalMeasure(\"req5\")"
+	}
+}
+
+
+standAlone
+Capability customer20satisfaction
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement customer20satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		providedValue 0.0
+		script "output = 0 + 0.20833333 * getGlobalMeasure(\"req10\")+ 0.25 * getGlobalMeasure(\"req16\")+ 0.083333336 * getGlobalMeasure(\"req4\")+ 0.29166666 * getGlobalMeasure(\"req121\")+ 0.16666667 * getGlobalMeasure(\"req43\")"
+	}
+}
+
+
+Component feature1
+{
+	CapabilityProvision requirement1
+	{
+		Measurement req1
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement181
+	{
+		Measurement req181
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 4.0
+}
+
+Capability requirement1
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req1
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature2
+{
+	CapabilityProvision requirement2
+	{
+		Measurement req2
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement3
+	{
+		Measurement req3
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 0.0
+}
+
+Capability requirement2
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req2
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature3
+{
+	CapabilityProvision requirement3
+	{
+		Measurement req3
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement18
+	{
+		Measurement req18
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 1.0
+}
+
+Capability requirement3
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req3
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature4
+{
+	CapabilityProvision requirement4
+	{
+		Measurement req4
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement149
+	{
+		Measurement req149
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 10.0
+}
+
+Capability requirement4
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req4
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature5
+{
+	CapabilityProvision requirement5
+	{
+		Measurement req5
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement197
+	{
+		Measurement req197
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 10.0
+}
+
+Capability requirement5
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req5
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature6
+{
+	CapabilityProvision requirement6
+	{
+		Measurement req6
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement21
+	{
+		Measurement req21
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 10.0
+}
+
+Capability requirement6
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req6
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature7
+{
+	CapabilityProvision requirement7
+	{
+		Measurement req7
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement170
+	{
+		Measurement req170
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 4.0
+}
+
+Capability requirement7
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req7
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature8
+{
+	CapabilityProvision requirement8
+	{
+		Measurement req8
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement46
+	{
+		Measurement req46
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 0.0
+}
+
+Capability requirement8
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req8
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature9
+{
+	CapabilityProvision requirement9
+	{
+		Measurement req9
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement63
+	{
+		Measurement req63
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 1.0
+}
+
+Capability requirement9
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req9
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature10
+{
+	CapabilityProvision requirement10
+	{
+		Measurement req10
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement23
+	{
+		Measurement req23
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 1.0
+}
+
+Capability requirement10
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req10
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature11
+{
+	CapabilityProvision requirement11
+	{
+		Measurement req11
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement171
+	{
+		Measurement req171
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 9.0
+}
+
+Capability requirement11
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req11
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature12
+{
+	CapabilityProvision requirement12
+	{
+		Measurement req12
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement60
+	{
+		Measurement req60
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 0.0
+}
+
+Capability requirement12
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req12
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature13
+{
+	CapabilityProvision requirement13
+	{
+		Measurement req13
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement80
+	{
+		Measurement req80
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 6.0
+}
+
+Capability requirement13
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req13
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature14
+{
+	CapabilityProvision requirement14
+	{
+		Measurement req14
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 2.0
+}
+
+Capability requirement14
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req14
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature15
+{
+	CapabilityProvision requirement15
+	{
+		Measurement req15
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement72
+	{
+		Measurement req72
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 7.0
+}
+
+Capability requirement15
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req15
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature16
+{
+	CapabilityProvision requirement16
+	{
+		Measurement req16
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement162
+	{
+		Measurement req162
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 1.0
+}
+
+Capability requirement16
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req16
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature17
+{
+	CapabilityProvision requirement17
+	{
+		Measurement req17
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement69
+	{
+		Measurement req69
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 0.0
+}
+
+Capability requirement17
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req17
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature18
+{
+	CapabilityProvision requirement18
+	{
+		Measurement req18
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement160
+	{
+		Measurement req160
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 5.0
+}
+
+Capability requirement18
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req18
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature19
+{
+	CapabilityProvision requirement19
+	{
+		Measurement req19
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement46
+	{
+		Measurement req46
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 2.0
+}
+
+Capability requirement19
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req19
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature20
+{
+	CapabilityProvision requirement20
+	{
+		Measurement req20
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement35
+	{
+		Measurement req35
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 5.0
+}
+
+Capability requirement20
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req20
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature21
+{
+	CapabilityProvision requirement21
+	{
+		Measurement req21
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement68
+	{
+		Measurement req68
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 0.0
+}
+
+Capability requirement21
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req21
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature22
+{
+	CapabilityProvision requirement22
+	{
+		Measurement req22
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement130
+	{
+		Measurement req130
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 1.0
+}
+
+Capability requirement22
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req22
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature23
+{
+	CapabilityProvision requirement23
+	{
+		Measurement req23
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement191
+	{
+		Measurement req191
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 9.0
+}
+
+Capability requirement23
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req23
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature24
+{
+	CapabilityProvision requirement24
+	{
+		Measurement req24
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement199
+	{
+		Measurement req199
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 7.0
+}
+
+Capability requirement24
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req24
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature25
+{
+	CapabilityProvision requirement25
+	{
+		Measurement req25
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement79
+	{
+		Measurement req79
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 7.0
+}
+
+Capability requirement25
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req25
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature26
+{
+	CapabilityProvision requirement26
+	{
+		Measurement req26
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement40
+	{
+		Measurement req40
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 9.0
+}
+
+Capability requirement26
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req26
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature27
+{
+	CapabilityProvision requirement27
+	{
+		Measurement req27
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement117
+	{
+		Measurement req117
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 10.0
+}
+
+Capability requirement27
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req27
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature28
+{
+	CapabilityProvision requirement28
+	{
+		Measurement req28
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement163
+	{
+		Measurement req163
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 3.0
+}
+
+Capability requirement28
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req28
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature29
+{
+	CapabilityProvision requirement29
+	{
+		Measurement req29
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 10.0
+}
+
+Capability requirement29
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req29
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature30
+{
+	CapabilityProvision requirement30
+	{
+		Measurement req30
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement153
+	{
+		Measurement req153
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 5.0
+}
+
+Capability requirement30
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req30
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature31
+{
+	CapabilityProvision requirement31
+	{
+		Measurement req31
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement55
+	{
+		Measurement req55
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 6.0
+}
+
+Capability requirement31
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req31
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature32
+{
+	CapabilityProvision requirement32
+	{
+		Measurement req32
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement168
+	{
+		Measurement req168
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 0.0
+}
+
+Capability requirement32
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req32
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature33
+{
+	CapabilityProvision requirement33
+	{
+		Measurement req33
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement59
+	{
+		Measurement req59
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 5.0
+}
+
+Capability requirement33
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req33
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature34
+{
+	CapabilityProvision requirement34
+	{
+		Measurement req34
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement125
+	{
+		Measurement req125
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 8.0
+}
+
+Capability requirement34
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req34
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature35
+{
+	CapabilityProvision requirement35
+	{
+		Measurement req35
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement132
+	{
+		Measurement req132
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 10.0
+}
+
+Capability requirement35
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req35
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature36
+{
+	CapabilityProvision requirement36
+	{
+		Measurement req36
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement161
+	{
+		Measurement req161
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 0.0
+}
+
+Capability requirement36
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req36
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature37
+{
+	CapabilityProvision requirement37
+	{
+		Measurement req37
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement185
+	{
+		Measurement req185
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 10.0
+}
+
+Capability requirement37
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req37
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature38
+{
+	CapabilityProvision requirement38
+	{
+		Measurement req38
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement71
+	{
+		Measurement req71
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 5.0
+}
+
+Capability requirement38
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req38
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature39
+{
+	CapabilityProvision requirement39
+	{
+		Measurement req39
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement45
+	{
+		Measurement req45
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 7.0
+}
+
+Capability requirement39
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req39
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature40
+{
+	CapabilityProvision requirement40
+	{
+		Measurement req40
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement64
+	{
+		Measurement req64
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 6.0
+}
+
+Capability requirement40
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req40
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature41
+{
+	CapabilityProvision requirement41
+	{
+		Measurement req41
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement77
+	{
+		Measurement req77
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 9.0
+}
+
+Capability requirement41
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req41
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature42
+{
+	CapabilityProvision requirement42
+	{
+		Measurement req42
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement121
+	{
+		Measurement req121
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 5.0
+}
+
+Capability requirement42
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req42
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature43
+{
+	CapabilityProvision requirement43
+	{
+		Measurement req43
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement75
+	{
+		Measurement req75
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 0.0
+}
+
+Capability requirement43
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req43
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature44
+{
+	CapabilityProvision requirement44
+	{
+		Measurement req44
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement67
+	{
+		Measurement req67
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 3.0
+}
+
+Capability requirement44
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req44
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature45
+{
+	CapabilityProvision requirement45
+	{
+		Measurement req45
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 10.0
+}
+
+Capability requirement45
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req45
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature46
+{
+	CapabilityProvision requirement46
+	{
+		Measurement req46
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement47
+	{
+		Measurement req47
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 7.0
+}
+
+Capability requirement46
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req46
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature47
+{
+	CapabilityProvision requirement47
+	{
+		Measurement req47
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement179
+	{
+		Measurement req179
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 6.0
+}
+
+Capability requirement47
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req47
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature48
+{
+	CapabilityProvision requirement48
+	{
+		Measurement req48
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement129
+	{
+		Measurement req129
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 10.0
+}
+
+Capability requirement48
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req48
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature49
+{
+	CapabilityProvision requirement49
+	{
+		Measurement req49
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement148
+	{
+		Measurement req148
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 6.0
+}
+
+Capability requirement49
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req49
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature50
+{
+	CapabilityProvision requirement50
+	{
+		Measurement req50
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement139
+	{
+		Measurement req139
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 9.0
+}
+
+Capability requirement50
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req50
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature51
+{
+	CapabilityProvision requirement51
+	{
+		Measurement req51
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement191
+	{
+		Measurement req191
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 10.0
+}
+
+Capability requirement51
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req51
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature52
+{
+	CapabilityProvision requirement52
+	{
+		Measurement req52
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement97
+	{
+		Measurement req97
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 8.0
+}
+
+Capability requirement52
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req52
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature53
+{
+	CapabilityProvision requirement53
+	{
+		Measurement req53
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement148
+	{
+		Measurement req148
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 9.0
+}
+
+Capability requirement53
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req53
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature54
+{
+	CapabilityProvision requirement54
+	{
+		Measurement req54
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement192
+	{
+		Measurement req192
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 5.0
+}
+
+Capability requirement54
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req54
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature55
+{
+	CapabilityProvision requirement55
+	{
+		Measurement req55
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement194
+	{
+		Measurement req194
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 2.0
+}
+
+Capability requirement55
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req55
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature56
+{
+	CapabilityProvision requirement56
+	{
+		Measurement req56
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement135
+	{
+		Measurement req135
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 5.0
+}
+
+Capability requirement56
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req56
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature57
+{
+	CapabilityProvision requirement57
+	{
+		Measurement req57
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 7.0
+}
+
+Capability requirement57
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req57
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature58
+{
+	CapabilityProvision requirement58
+	{
+		Measurement req58
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement101
+	{
+		Measurement req101
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 0.0
+}
+
+Capability requirement58
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req58
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature59
+{
+	CapabilityProvision requirement59
+	{
+		Measurement req59
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement160
+	{
+		Measurement req160
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 0.0
+}
+
+Capability requirement59
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req59
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature60
+{
+	CapabilityProvision requirement60
+	{
+		Measurement req60
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement176
+	{
+		Measurement req176
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 9.0
+}
+
+Capability requirement60
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req60
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature61
+{
+	CapabilityProvision requirement61
+	{
+		Measurement req61
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement111
+	{
+		Measurement req111
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 5.0
+}
+
+Capability requirement61
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req61
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature62
+{
+	CapabilityProvision requirement62
+	{
+		Measurement req62
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 6.0
+}
+
+Capability requirement62
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req62
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature63
+{
+	CapabilityProvision requirement63
+	{
+		Measurement req63
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 5.0
+}
+
+Capability requirement63
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req63
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature64
+{
+	CapabilityProvision requirement64
+	{
+		Measurement req64
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement184
+	{
+		Measurement req184
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 3.0
+}
+
+Capability requirement64
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req64
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature65
+{
+	CapabilityProvision requirement65
+	{
+		Measurement req65
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement170
+	{
+		Measurement req170
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 4.0
+}
+
+Capability requirement65
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req65
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature66
+{
+	CapabilityProvision requirement66
+	{
+		Measurement req66
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement83
+	{
+		Measurement req83
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 1.0
+}
+
+Capability requirement66
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req66
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature67
+{
+	CapabilityProvision requirement67
+	{
+		Measurement req67
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement134
+	{
+		Measurement req134
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 1.0
+}
+
+Capability requirement67
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req67
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature68
+{
+	CapabilityProvision requirement68
+	{
+		Measurement req68
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 10.0
+}
+
+Capability requirement68
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req68
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature69
+{
+	CapabilityProvision requirement69
+	{
+		Measurement req69
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 7.0
+}
+
+Capability requirement69
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req69
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature70
+{
+	CapabilityProvision requirement70
+	{
+		Measurement req70
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement120
+	{
+		Measurement req120
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 1.0
+}
+
+Capability requirement70
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req70
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature71
+{
+	CapabilityProvision requirement71
+	{
+		Measurement req71
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement105
+	{
+		Measurement req105
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 8.0
+}
+
+Capability requirement71
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req71
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature72
+{
+	CapabilityProvision requirement72
+	{
+		Measurement req72
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement133
+	{
+		Measurement req133
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 8.0
+}
+
+Capability requirement72
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req72
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature73
+{
+	CapabilityProvision requirement73
+	{
+		Measurement req73
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement174
+	{
+		Measurement req174
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 9.0
+}
+
+Capability requirement73
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req73
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature74
+{
+	CapabilityProvision requirement74
+	{
+		Measurement req74
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement111
+	{
+		Measurement req111
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 6.0
+}
+
+Capability requirement74
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req74
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature75
+{
+	CapabilityProvision requirement75
+	{
+		Measurement req75
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement131
+	{
+		Measurement req131
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 2.0
+}
+
+Capability requirement75
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req75
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature76
+{
+	CapabilityProvision requirement76
+	{
+		Measurement req76
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement197
+	{
+		Measurement req197
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 6.0
+}
+
+Capability requirement76
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req76
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature77
+{
+	CapabilityProvision requirement77
+	{
+		Measurement req77
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement78
+	{
+		Measurement req78
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 0.0
+}
+
+Capability requirement77
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req77
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature78
+{
+	CapabilityProvision requirement78
+	{
+		Measurement req78
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement86
+	{
+		Measurement req86
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 8.0
+}
+
+Capability requirement78
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req78
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature79
+{
+	CapabilityProvision requirement79
+	{
+		Measurement req79
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement173
+	{
+		Measurement req173
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 8.0
+}
+
+Capability requirement79
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req79
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature80
+{
+	CapabilityProvision requirement80
+	{
+		Measurement req80
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement132
+	{
+		Measurement req132
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 2.0
+}
+
+Capability requirement80
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req80
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature81
+{
+	CapabilityProvision requirement81
+	{
+		Measurement req81
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 7.0
+}
+
+Capability requirement81
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req81
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature82
+{
+	CapabilityProvision requirement82
+	{
+		Measurement req82
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement95
+	{
+		Measurement req95
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 4.0
+}
+
+Capability requirement82
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req82
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature83
+{
+	CapabilityProvision requirement83
+	{
+		Measurement req83
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement84
+	{
+		Measurement req84
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 1.0
+}
+
+Capability requirement83
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req83
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature84
+{
+	CapabilityProvision requirement84
+	{
+		Measurement req84
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 3.0
+}
+
+Capability requirement84
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req84
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature85
+{
+	CapabilityProvision requirement85
+	{
+		Measurement req85
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement139
+	{
+		Measurement req139
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 4.0
+}
+
+Capability requirement85
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req85
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature86
+{
+	CapabilityProvision requirement86
+	{
+		Measurement req86
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement87
+	{
+		Measurement req87
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 2.0
+}
+
+Capability requirement86
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req86
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature87
+{
+	CapabilityProvision requirement87
+	{
+		Measurement req87
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement188
+	{
+		Measurement req188
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 4.0
+}
+
+Capability requirement87
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req87
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature88
+{
+	CapabilityProvision requirement88
+	{
+		Measurement req88
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement189
+	{
+		Measurement req189
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 3.0
+}
+
+Capability requirement88
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req88
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature89
+{
+	CapabilityProvision requirement89
+	{
+		Measurement req89
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 4.0
+}
+
+Capability requirement89
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req89
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature90
+{
+	CapabilityProvision requirement90
+	{
+		Measurement req90
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 2.0
+}
+
+Capability requirement90
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req90
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature91
+{
+	CapabilityProvision requirement91
+	{
+		Measurement req91
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 4.0
+}
+
+Capability requirement91
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req91
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature92
+{
+	CapabilityProvision requirement92
+	{
+		Measurement req92
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 3.0
+}
+
+Capability requirement92
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req92
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature93
+{
+	CapabilityProvision requirement93
+	{
+		Measurement req93
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 8.0
+}
+
+Capability requirement93
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req93
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature94
+{
+	CapabilityProvision requirement94
+	{
+		Measurement req94
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 6.0
+}
+
+Capability requirement94
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req94
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature95
+{
+	CapabilityProvision requirement95
+	{
+		Measurement req95
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement155
+	{
+		Measurement req155
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 0.0
+}
+
+Capability requirement95
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req95
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature96
+{
+	CapabilityProvision requirement96
+	{
+		Measurement req96
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 8.0
+}
+
+Capability requirement96
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req96
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature97
+{
+	CapabilityProvision requirement97
+	{
+		Measurement req97
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement158
+	{
+		Measurement req158
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 8.0
+}
+
+Capability requirement97
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req97
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature98
+{
+	CapabilityProvision requirement98
+	{
+		Measurement req98
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 5.0
+}
+
+Capability requirement98
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req98
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature99
+{
+	CapabilityProvision requirement99
+	{
+		Measurement req99
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 6.0
+}
+
+Capability requirement99
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req99
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature100
+{
+	CapabilityProvision requirement100
+	{
+		Measurement req100
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement131
+	{
+		Measurement req131
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 8.0
+}
+
+Capability requirement100
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req100
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature101
+{
+	CapabilityProvision requirement101
+	{
+		Measurement req101
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 7.0
+}
+
+Capability requirement101
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req101
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature102
+{
+	CapabilityProvision requirement102
+	{
+		Measurement req102
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement112
+	{
+		Measurement req112
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 0.0
+}
+
+Capability requirement102
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req102
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature103
+{
+	CapabilityProvision requirement103
+	{
+		Measurement req103
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement171
+	{
+		Measurement req171
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 2.0
+}
+
+Capability requirement103
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req103
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature104
+{
+	CapabilityProvision requirement104
+	{
+		Measurement req104
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 7.0
+}
+
+Capability requirement104
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req104
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature105
+{
+	CapabilityProvision requirement105
+	{
+		Measurement req105
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement161
+	{
+		Measurement req161
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 3.0
+}
+
+Capability requirement105
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req105
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature106
+{
+	CapabilityProvision requirement106
+	{
+		Measurement req106
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 5.0
+}
+
+Capability requirement106
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req106
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature107
+{
+	CapabilityProvision requirement107
+	{
+		Measurement req107
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement138
+	{
+		Measurement req138
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 9.0
+}
+
+Capability requirement107
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req107
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature108
+{
+	CapabilityProvision requirement108
+	{
+		Measurement req108
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement160
+	{
+		Measurement req160
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 9.0
+}
+
+Capability requirement108
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req108
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature109
+{
+	CapabilityProvision requirement109
+	{
+		Measurement req109
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 7.0
+}
+
+Capability requirement109
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req109
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature110
+{
+	CapabilityProvision requirement110
+	{
+		Measurement req110
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement131
+	{
+		Measurement req131
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 7.0
+}
+
+Capability requirement110
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req110
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature111
+{
+	CapabilityProvision requirement111
+	{
+		Measurement req111
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 8.0
+}
+
+Capability requirement111
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req111
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature112
+{
+	CapabilityProvision requirement112
+	{
+		Measurement req112
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement128
+	{
+		Measurement req128
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 0.0
+}
+
+Capability requirement112
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req112
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature113
+{
+	CapabilityProvision requirement113
+	{
+		Measurement req113
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement192
+	{
+		Measurement req192
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 3.0
+}
+
+Capability requirement113
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req113
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature114
+{
+	CapabilityProvision requirement114
+	{
+		Measurement req114
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 8.0
+}
+
+Capability requirement114
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req114
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature115
+{
+	CapabilityProvision requirement115
+	{
+		Measurement req115
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 1.0
+}
+
+Capability requirement115
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req115
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature116
+{
+	CapabilityProvision requirement116
+	{
+		Measurement req116
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 2.0
+}
+
+Capability requirement116
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req116
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature117
+{
+	CapabilityProvision requirement117
+	{
+		Measurement req117
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement153
+	{
+		Measurement req153
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 9.0
+}
+
+Capability requirement117
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req117
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature118
+{
+	CapabilityProvision requirement118
+	{
+		Measurement req118
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 3.0
+}
+
+Capability requirement118
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req118
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature119
+{
+	CapabilityProvision requirement119
+	{
+		Measurement req119
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement136
+	{
+		Measurement req136
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 8.0
+}
+
+Capability requirement119
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req119
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature120
+{
+	CapabilityProvision requirement120
+	{
+		Measurement req120
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 7.0
+}
+
+Capability requirement120
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req120
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature121
+{
+	CapabilityProvision requirement121
+	{
+		Measurement req121
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement137
+	{
+		Measurement req137
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 2.0
+}
+
+Capability requirement121
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req121
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature122
+{
+	CapabilityProvision requirement122
+	{
+		Measurement req122
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 0.0
+}
+
+Capability requirement122
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req122
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature123
+{
+	CapabilityProvision requirement123
+	{
+		Measurement req123
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement183
+	{
+		Measurement req183
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 8.0
+}
+
+Capability requirement123
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req123
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature124
+{
+	CapabilityProvision requirement124
+	{
+		Measurement req124
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement167
+	{
+		Measurement req167
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 4.0
+}
+
+Capability requirement124
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req124
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature125
+{
+	CapabilityProvision requirement125
+	{
+		Measurement req125
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement181
+	{
+		Measurement req181
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 10.0
+}
+
+Capability requirement125
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req125
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature126
+{
+	CapabilityProvision requirement126
+	{
+		Measurement req126
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement195
+	{
+		Measurement req195
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 8.0
+}
+
+Capability requirement126
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req126
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature127
+{
+	CapabilityProvision requirement127
+	{
+		Measurement req127
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 2.0
+}
+
+Capability requirement127
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req127
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature128
+{
+	CapabilityProvision requirement128
+	{
+		Measurement req128
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 1.0
+}
+
+Capability requirement128
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req128
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature129
+{
+	CapabilityProvision requirement129
+	{
+		Measurement req129
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 3.0
+}
+
+Capability requirement129
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req129
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature130
+{
+	CapabilityProvision requirement130
+	{
+		Measurement req130
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 4.0
+}
+
+Capability requirement130
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req130
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature131
+{
+	CapabilityProvision requirement131
+	{
+		Measurement req131
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 6.0
+}
+
+Capability requirement131
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req131
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature132
+{
+	CapabilityProvision requirement132
+	{
+		Measurement req132
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 1.0
+}
+
+Capability requirement132
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req132
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature133
+{
+	CapabilityProvision requirement133
+	{
+		Measurement req133
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement191
+	{
+		Measurement req191
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 6.0
+}
+
+Capability requirement133
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req133
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature134
+{
+	CapabilityProvision requirement134
+	{
+		Measurement req134
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement156
+	{
+		Measurement req156
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 9.0
+}
+
+Capability requirement134
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req134
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature135
+{
+	CapabilityProvision requirement135
+	{
+		Measurement req135
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement196
+	{
+		Measurement req196
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 4.0
+}
+
+Capability requirement135
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req135
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature136
+{
+	CapabilityProvision requirement136
+	{
+		Measurement req136
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 3.0
+}
+
+Capability requirement136
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req136
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature137
+{
+	CapabilityProvision requirement137
+	{
+		Measurement req137
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 7.0
+}
+
+Capability requirement137
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req137
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature138
+{
+	CapabilityProvision requirement138
+	{
+		Measurement req138
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement191
+	{
+		Measurement req191
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 9.0
+}
+
+Capability requirement138
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req138
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature139
+{
+	CapabilityProvision requirement139
+	{
+		Measurement req139
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 1.0
+}
+
+Capability requirement139
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req139
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature140
+{
+	CapabilityProvision requirement140
+	{
+		Measurement req140
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 6.0
+}
+
+Capability requirement140
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req140
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature141
+{
+	CapabilityProvision requirement141
+	{
+		Measurement req141
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 9.0
+}
+
+Capability requirement141
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req141
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature142
+{
+	CapabilityProvision requirement142
+	{
+		Measurement req142
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 9.0
+}
+
+Capability requirement142
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req142
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature143
+{
+	CapabilityProvision requirement143
+	{
+		Measurement req143
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement146
+	{
+		Measurement req146
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 9.0
+}
+
+Capability requirement143
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req143
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature144
+{
+	CapabilityProvision requirement144
+	{
+		Measurement req144
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement173
+	{
+		Measurement req173
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 9.0
+}
+
+Capability requirement144
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req144
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature145
+{
+	CapabilityProvision requirement145
+	{
+		Measurement req145
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 3.0
+}
+
+Capability requirement145
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req145
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature146
+{
+	CapabilityProvision requirement146
+	{
+		Measurement req146
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 7.0
+}
+
+Capability requirement146
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req146
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature147
+{
+	CapabilityProvision requirement147
+	{
+		Measurement req147
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement192
+	{
+		Measurement req192
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 10.0
+}
+
+Capability requirement147
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req147
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature148
+{
+	CapabilityProvision requirement148
+	{
+		Measurement req148
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 2.0
+}
+
+Capability requirement148
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req148
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature149
+{
+	CapabilityProvision requirement149
+	{
+		Measurement req149
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 9.0
+}
+
+Capability requirement149
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req149
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature150
+{
+	CapabilityProvision requirement150
+	{
+		Measurement req150
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 2.0
+}
+
+Capability requirement150
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req150
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature151
+{
+	CapabilityProvision requirement151
+	{
+		Measurement req151
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 3.0
+}
+
+Capability requirement151
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req151
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature152
+{
+	CapabilityProvision requirement152
+	{
+		Measurement req152
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 3.0
+}
+
+Capability requirement152
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req152
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature153
+{
+	CapabilityProvision requirement153
+	{
+		Measurement req153
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 6.0
+}
+
+Capability requirement153
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req153
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature154
+{
+	CapabilityProvision requirement154
+	{
+		Measurement req154
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 1.0
+}
+
+Capability requirement154
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req154
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature155
+{
+	CapabilityProvision requirement155
+	{
+		Measurement req155
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 3.0
+}
+
+Capability requirement155
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req155
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature156
+{
+	CapabilityProvision requirement156
+	{
+		Measurement req156
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 10.0
+}
+
+Capability requirement156
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req156
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature157
+{
+	CapabilityProvision requirement157
+	{
+		Measurement req157
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement197
+	{
+		Measurement req197
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 7.0
+}
+
+Capability requirement157
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req157
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature158
+{
+	CapabilityProvision requirement158
+	{
+		Measurement req158
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 2.0
+}
+
+Capability requirement158
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req158
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature159
+{
+	CapabilityProvision requirement159
+	{
+		Measurement req159
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 9.0
+}
+
+Capability requirement159
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req159
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature160
+{
+	CapabilityProvision requirement160
+	{
+		Measurement req160
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 10.0
+}
+
+Capability requirement160
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req160
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature161
+{
+	CapabilityProvision requirement161
+	{
+		Measurement req161
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 1.0
+}
+
+Capability requirement161
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req161
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature162
+{
+	CapabilityProvision requirement162
+	{
+		Measurement req162
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 0.0
+}
+
+Capability requirement162
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req162
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature163
+{
+	CapabilityProvision requirement163
+	{
+		Measurement req163
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 2.0
+}
+
+Capability requirement163
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req163
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature164
+{
+	CapabilityProvision requirement164
+	{
+		Measurement req164
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 3.0
+}
+
+Capability requirement164
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req164
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature165
+{
+	CapabilityProvision requirement165
+	{
+		Measurement req165
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 10.0
+}
+
+Capability requirement165
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req165
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature166
+{
+	CapabilityProvision requirement166
+	{
+		Measurement req166
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 4.0
+}
+
+Capability requirement166
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req166
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature167
+{
+	CapabilityProvision requirement167
+	{
+		Measurement req167
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 8.0
+}
+
+Capability requirement167
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req167
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature168
+{
+	CapabilityProvision requirement168
+	{
+		Measurement req168
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 10.0
+}
+
+Capability requirement168
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req168
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature169
+{
+	CapabilityProvision requirement169
+	{
+		Measurement req169
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 0.0
+}
+
+Capability requirement169
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req169
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature170
+{
+	CapabilityProvision requirement170
+	{
+		Measurement req170
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 8.0
+}
+
+Capability requirement170
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req170
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature171
+{
+	CapabilityProvision requirement171
+	{
+		Measurement req171
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 6.0
+}
+
+Capability requirement171
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req171
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature172
+{
+	CapabilityProvision requirement172
+	{
+		Measurement req172
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 0.0
+}
+
+Capability requirement172
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req172
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature173
+{
+	CapabilityProvision requirement173
+	{
+		Measurement req173
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 9.0
+}
+
+Capability requirement173
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req173
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature174
+{
+	CapabilityProvision requirement174
+	{
+		Measurement req174
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement191
+	{
+		Measurement req191
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 10.0
+}
+
+Capability requirement174
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req174
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature175
+{
+	CapabilityProvision requirement175
+	{
+		Measurement req175
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability requirement196
+	{
+		Measurement req196
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Cost Money 5.0
+}
+
+Capability requirement175
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req175
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature176
+{
+	CapabilityProvision requirement176
+	{
+		Measurement req176
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 1.0
+}
+
+Capability requirement176
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req176
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature177
+{
+	CapabilityProvision requirement177
+	{
+		Measurement req177
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 2.0
+}
+
+Capability requirement177
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req177
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature178
+{
+	CapabilityProvision requirement178
+	{
+		Measurement req178
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 3.0
+}
+
+Capability requirement178
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req178
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature179
+{
+	CapabilityProvision requirement179
+	{
+		Measurement req179
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 0.0
+}
+
+Capability requirement179
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req179
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature180
+{
+	CapabilityProvision requirement180
+	{
+		Measurement req180
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 0.0
+}
+
+Capability requirement180
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req180
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature181
+{
+	CapabilityProvision requirement181
+	{
+		Measurement req181
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 5.0
+}
+
+Capability requirement181
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req181
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature182
+{
+	CapabilityProvision requirement182
+	{
+		Measurement req182
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 9.0
+}
+
+Capability requirement182
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req182
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature183
+{
+	CapabilityProvision requirement183
+	{
+		Measurement req183
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 1.0
+}
+
+Capability requirement183
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req183
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature184
+{
+	CapabilityProvision requirement184
+	{
+		Measurement req184
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 0.0
+}
+
+Capability requirement184
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req184
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature185
+{
+	CapabilityProvision requirement185
+	{
+		Measurement req185
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 6.0
+}
+
+Capability requirement185
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req185
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature186
+{
+	CapabilityProvision requirement186
+	{
+		Measurement req186
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 3.0
+}
+
+Capability requirement186
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req186
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature187
+{
+	CapabilityProvision requirement187
+	{
+		Measurement req187
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 5.0
+}
+
+Capability requirement187
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req187
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature188
+{
+	CapabilityProvision requirement188
+	{
+		Measurement req188
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 4.0
+}
+
+Capability requirement188
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req188
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature189
+{
+	CapabilityProvision requirement189
+	{
+		Measurement req189
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 4.0
+}
+
+Capability requirement189
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req189
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature190
+{
+	CapabilityProvision requirement190
+	{
+		Measurement req190
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 0.0
+}
+
+Capability requirement190
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req190
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature191
+{
+	CapabilityProvision requirement191
+	{
+		Measurement req191
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 6.0
+}
+
+Capability requirement191
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req191
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature192
+{
+	CapabilityProvision requirement192
+	{
+		Measurement req192
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 4.0
+}
+
+Capability requirement192
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req192
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature193
+{
+	CapabilityProvision requirement193
+	{
+		Measurement req193
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 2.0
+}
+
+Capability requirement193
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req193
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature194
+{
+	CapabilityProvision requirement194
+	{
+		Measurement req194
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 8.0
+}
+
+Capability requirement194
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req194
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature195
+{
+	CapabilityProvision requirement195
+	{
+		Measurement req195
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 7.0
+}
+
+Capability requirement195
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req195
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature196
+{
+	CapabilityProvision requirement196
+	{
+		Measurement req196
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 0.0
+}
+
+Capability requirement196
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req196
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature197
+{
+	CapabilityProvision requirement197
+	{
+		Measurement req197
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 9.0
+}
+
+Capability requirement197
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req197
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature198
+{
+	CapabilityProvision requirement198
+	{
+		Measurement req198
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 7.0
+}
+
+Capability requirement198
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req198
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature199
+{
+	CapabilityProvision requirement199
+	{
+		Measurement req199
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 10.0
+}
+
+Capability requirement199
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req199
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component feature200
+{
+	CapabilityProvision requirement200
+	{
+		Measurement req200
+		{
+			providedValue 1.0
+		}
+	}
+	
+	
+	Cost Money 2.0
+}
+
+Capability requirement200
+{
+	startDate "01/01/2013"
+	endDate "01/12/2013"
+	
+	Measurement req200
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+
+

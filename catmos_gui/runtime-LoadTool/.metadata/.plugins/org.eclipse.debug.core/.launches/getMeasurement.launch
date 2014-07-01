@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.epsilon.eol.eclipse.dt.launching.EolLaunchConfigurationDelegate">
+<listAttribute key="models">
+<listEntry value="#&#10;#Thu Aug 01 16:10:16 BST 2013&#10;isMetamodelFileBased=false&#10;name=scenario&#10;readOnLoad=true&#10;storeOnDisposal=true&#10;aliases=&#10;cached=true&#10;fileBasedMetamodelUri=&#10;metamodelUri=ScenarioModel&#10;modelUri=platform\:/resource/UAV/Results/Solution0.ScenarioModel&#10;type=EMF&#10;modelFile=/UAV/Results/Solution0.ScenarioModel&#10;expand=true&#10;metamodelFile=&#10;"/>
+<listEntry value="#&#10;#Mon Jun 03 18:58:59 BST 2013&#10;isMetamodelFileBased=false&#10;name=internal&#10;readOnLoad=true&#10;storeOnDisposal=false&#10;aliases=&#10;cached=true&#10;fileBasedMetamodelUri=&#10;metamodelUri=internalusage&#10;modelUri=platform\:/resource/Tool/Models/Internal.internalusage&#10;type=EMF&#10;modelFile=/Tool/Models/Internal.internalusage&#10;expand=true&#10;metamodelFile=&#10;"/>
+<listEntry value="#&#10;#Thu Aug 01 16:10:06 BST 2013&#10;isMetamodelFileBased=false&#10;name=ourScenario&#10;readOnLoad=true&#10;storeOnDisposal=false&#10;aliases=&#10;cached=true&#10;fileBasedMetamodelUri=&#10;metamodelUri=ScenarioModel&#10;modelUri=platform\:/resource/UAV/UAV.scen&#10;type=EMF&#10;modelFile=/UAV/UAV.scen&#10;expand=true&#10;metamodelFile=&#10;"/>
+</listAttribute>
+<stringAttribute key="source" value="/Tool/Scripts/getMeasurements.eol"/>
+</launchConfiguration>

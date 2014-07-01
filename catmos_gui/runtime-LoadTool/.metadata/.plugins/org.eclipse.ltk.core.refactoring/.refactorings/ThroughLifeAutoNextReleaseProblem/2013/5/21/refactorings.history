@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ThroughLifeAutoNextReleaseProblem/generateRandomProblem5customer50features.egl&apos; to &apos;generateRandomProblem.egl&apos;" description="Rename resource &apos;generateRandomProblem5customer50features.egl&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="generateRandomProblem5customer50features.egl" name="generateRandomProblem.egl" stamp="1369068191696" updateReferences="true"/>
+</session>

@@ -1,0 +1,57 @@
+
+FindTradeOffs ShopCaseStudyNRP { popSize 200 genCount 200
+	AcquirableComponent "Email Notifications" 1    AcquirableComponent "Stock Reordering Algorithm" 1
+	AcquirableComponent "Invoice Generator" 1    AcquirableComponent "Stock Management System" 1
+	AcquirableComponent "Monthly Report" 1    AcquirableComponent "Barcode Scanning System" 1
+	AcquirableComponent "New GUI" 1    AcquirableComponent "Pre written GUI" 1
+	DesireLow "Money" }
+
+Capability overallSatisfaction {
+	Measurement weightedSatisfaction {
+		criticalValue 0.0 benchmarkValue 1.0
+		script "output = 0.6 * getCapability(\"Shop Manager\") + 0.4 * getCapability(\"Shop Clerk\")" }
+	decomposes ("Shop Manager", "Shop Clerk") }
+
+searchObjective
+Capability "Shop Manager" {
+	Measurement "Shop Manager Satisfaction" {
+		criticalValue 0.0 benchmarkValue 1.0
+		script "output = 0.4 * getCapability(\"Monthly Reports\") + 0.2 * getCapability(\"Email Notification\") 
+        + 0.4 * getCapability(\"Automatically Generating Orders\")"}
+	decomposes ("Monthly Reports", "Email Notification", "Automatically Generating Orders") }
+
+searchObjective
+Capability "Shop Clerk" {
+	Measurement "Shop Clerk Satisfaction" {
+		criticalValue 0.0 benchmarkValue 1.0
+		script "output = 0.5 * getCapability(\"Easier Stock Handling\") + 0.4 * getCapability(\"Better Userinterface\") 
+        + 0.1 * getCapability(\"Automatically Generating Orders\")" }
+	decomposes ("Easier Stock Handling", "Better Userinterface", "Automatically Generating Orders") }
+
+Capability "Monthly Reports" {}    Capability "Email Notification" {}
+Capability "Automatically Generating Orders" {}    Capability "Easier Stock Handling" {}
+
+Capability "Better Userinterface" { Measurement "User Satisfaction" { criticalValue 0.0 benchmarkValue 1.0 } }
+
+Component "Email Notifications" {
+	CapabilityProvision "Email Notification" {} Capability "Stock Reordering Algorithm" {} Cost Money 30.0 }
+
+Component "Stock Reordering Algorithm" {
+	CapabilityProvision "Stock Reordering Algorithm" {} Capability "Stock Management System" {} Cost Money 40.0 }
+
+Component "Invoice Generator" {
+	CapabilityProvision "Automatically Generating Orders" {} Capability "Stock Reordering Algorithm" {} Cost Money 30.0 }
+
+Component "Stock Management System" { CapabilityProvision "Stock Management System" {} Cost Money 40.0 }
+
+Component "Monthly Report" {
+	CapabilityProvision "Monthly Reports" {} Capability "Stock Management System" {} Cost Money 25.0 }
+
+Component "Barcode Scanning System" {
+	CapabilityProvision "Easier Stock Handling" {} Capability "Stock Management System" {} Cost Money 45.0 }
+
+Component "New GUI" { CapabilityProvision "Better Userinterface" { Measurement "User Satisfaction" { providedValue 1.0 } } 
+	Capability "Stock Management System" {} Cost Money 25.0 }
+
+Component "Pre written GUI" { CapabilityProvision "Better Userinterface" { Measurement "User Satisfaction" { providedValue 0.4 } } 
+	Capability "Stock Management System" {} Cost Money 5.0 }

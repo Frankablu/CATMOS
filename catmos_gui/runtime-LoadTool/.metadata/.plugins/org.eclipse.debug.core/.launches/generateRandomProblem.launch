@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.epsilon.egl.eclipse.dt.launching.EglLaunchConfigurationDelegate">
+<booleanAttribute key="appendToFile" value="false"/>
+<listAttribute key="defaultFormatters"/>
+<intAttribute key="generateTo" value="2"/>
+<listAttribute key="models"/>
+<stringAttribute key="outputFilePath" value="/AutoNextReleaseProblem/AutoNextReleaseProblem.scen"/>
+<booleanAttribute key="produceTrace" value="false"/>
+<stringAttribute key="source" value="/AutoNextReleaseProblem/generateRandomProblem.egl"/>
+<stringAttribute key="templateFactoryType" value="org.eclipse.epsilon.egl.EglFileGeneratingTemplateFactory"/>
+<stringAttribute key="traceDestination" value=""/>
+</launchConfiguration>

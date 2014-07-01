@@ -1,0 +1,10 @@
+
+//Remove all the classes from the problem def that are not needed in the answer
+delete ThroughLifePlanning
+delete FindTradeOffs
+delete AcquirableComponent
+delete ExistingComponent
+delete DesireLow
+delete DesireHigh
+delete Budget
+

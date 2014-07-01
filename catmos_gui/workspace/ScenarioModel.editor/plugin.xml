@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="ScenarioModel.presentation.ScenarioModelModelWizardID"
+            name="%_UI_ScenarioModelModelWizard_label"
+            class="ScenarioModel.presentation.ScenarioModelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ScenarioModelModelFile.gif">
+         <description>%_UI_ScenarioModelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="ScenarioModel.presentation.ScenarioModelEditorID"
+            name="%_UI_ScenarioModelEditor_label"
+            icon="icons/full/obj16/ScenarioModelModelFile.gif"
+            extensions="scenariomodel"
+            class="ScenarioModel.presentation.ScenarioModelEditor"
+            contributorClass="ScenarioModel.presentation.ScenarioModelActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

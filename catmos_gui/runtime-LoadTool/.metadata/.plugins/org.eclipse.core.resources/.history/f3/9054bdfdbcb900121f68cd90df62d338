@@ -1,0 +1,232 @@
+
+ThroughLifePlanning "7RoachRush"
+{
+	popSize 100
+	genCount 100
+	
+	startDate "0"
+	endDate "600"
+	
+	ExistingComponent Lair 1 startDate "0" endDate "inf"
+	ExistingComponent "Existing Drone" 5 startDate "0" endDate "inf"
+	AcquirableComponent "Mining Drone" 20  acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent "Morphed Drone" 20 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent "Spawning Pool" 1 acquisitionTime "60" lifeSpan "inf"
+	AcquirableComponent "Roach Warren" 1 acquisitionTime "60" lifeSpan "inf"
+	AcquirableComponent "Roach" 7 acquisitionTime "40" lifeSpan "inf"
+	AcquirableComponent "Zergling" 0 acquisitionTime "20" lifeSpan "inf"
+	
+	Budget Larva
+	{
+		amount 1.0
+		
+	}
+	
+	Budget Minerals
+	{
+		amount 100.0
+		startDate "0"
+	}
+}
+
+//Start with asking for 7 roaches!
+searchObjective
+Capability "Roach"
+{	
+	accumulation "Roach count"
+	
+	startDate "100"
+	endDate "600"
+	
+	Measurement "Roach count"
+	{
+		criticalValue 0.0
+		benchmarkValue 7.0
+	}
+}
+
+//This will be aided by
+Capability "Mineral mining"
+{
+	accumulation "Drone Mining"
+	
+	startDate "0"
+	endDate "600"
+	
+	Measurement "Drone Mining"
+	{
+		criticalValue 0.0
+		benchmarkValue 20.0
+	}
+}
+
+Capability "Gas mining"
+{
+	accumulation "Gas Drone Mining"
+	
+	startDate "0"
+	endDate "600"
+	
+	Measurement "Gas Drone Mining"
+	{
+		criticalValue 0.0
+		benchmarkValue 6.0
+	}
+}
+
+//Actual Components
+
+//Begin With Starting Units
+
+
+Component "Existing Drone"
+{
+	CapabilityProvision Drone
+	{
+		reuse 1
+	}
+}
+
+Component "Mining Drone"
+{
+	CapabilityProvision "Mineral mining"
+	{
+		reuse 1
+		
+		Measurement "Drone Mining"
+		{
+			
+		}
+	}
+	
+	Capability Drone //Need A Drone For This
+	{
+		
+	}
+	
+	Cost Minerals -50.0
+	{
+		startAfter "5"
+		repeatDuration "10"
+	}
+}
+
+Component "Gas Mining Drone"
+{
+	CapabilityProvision "Gas mining"
+	{
+		Measurement "Gas Drone Mining"
+		{
+			
+		}
+	}
+	
+	Capability Drone //Need A Drone For This
+	{
+		
+	}
+	
+	Cost Gas -50.0
+	{
+		startAfter "5"
+		repeatDuration "10"
+	}
+}
+
+Component "Morphed Drone"
+{
+	CapabilityProvision Drone
+	{
+		reuse 1
+	}
+	
+	sequentialScheduling
+	Capability Larva
+	{
+		
+	}
+}
+
+//Buildings
+Component "Spawning Pool"
+{
+	CapabilityProvision "Spawning Pool Production"
+	{
+		
+	}
+	
+	Capability Drone
+	{
+		
+	}
+}
+
+Component "Roach Warren"
+{
+	CapabilityProvision "Roach Warren Production"
+	{
+		
+	}
+	
+	sequentialScheduling
+	Capability "Spawning Pool Production"
+	{
+		
+	}
+	
+	Capability Drone
+	{
+		
+	}
+}
+
+//Units
+
+Component "Roach"
+{
+	CapabilityProvision "Roach"
+	{
+		reuse 1
+		Measurement "Roach count"
+		{
+			providedValue 1.0
+		}
+	}
+	
+	sequentialScheduling
+	Capability "Roach Warren Production"
+	{
+		
+	}
+	
+	sequentialScheduling
+	Capability Larva
+	{
+		
+	}
+}
+
+Component "Zergling"
+{
+	CapabilityProvision "Zergling"
+	{
+		reuse 1
+		Measurement "Zergling count"
+		{
+			providedValue 2.0
+		}
+	}
+	
+	sequentialScheduling
+	Capability "Spawning Pool Production"
+	{
+		
+	}
+	
+	sequentialScheduling
+	Capability Larva
+	{
+		
+	}
+}
+

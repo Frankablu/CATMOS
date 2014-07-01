@@ -1,0 +1,101 @@
+	/*
+ * 
+ */
+package capOverTime.diagram.navigator;
+
+	/**
+ * @generated
+ */
+public class CapOverTimeDomainNavigatorItem extends org.eclipse.core.runtime.PlatformObject {
+
+		/**
+ * @generated
+ */
+static {
+	final Class[] supportedTypes = new Class[] { org.eclipse.emf.ecore.EObject.class, org.eclipse.ui.views.properties.IPropertySource.class };
+	org.eclipse.core.runtime.Platform.getAdapterManager().registerAdapters(new org.eclipse.core.runtime.IAdapterFactory() {
+		
+		public Object getAdapter(Object adaptableObject, Class adapterType) {
+			if (adaptableObject instanceof capOverTime.diagram.navigator.CapOverTimeDomainNavigatorItem) {
+				capOverTime.diagram.navigator.CapOverTimeDomainNavigatorItem domainNavigatorItem = (capOverTime.diagram.navigator.CapOverTimeDomainNavigatorItem) adaptableObject;
+				org.eclipse.emf.ecore.EObject eObject = domainNavigatorItem.getEObject();
+				if (adapterType == org.eclipse.emf.ecore.EObject.class) {
+					return eObject;
+				}
+				if (adapterType == org.eclipse.ui.views.properties.IPropertySource.class) {
+					return domainNavigatorItem.getPropertySourceProvider().getPropertySource(eObject);
+				}
+			}
+		
+			return null;
+		}
+
+		public Class[] getAdapterList() {
+			return supportedTypes;
+		}
+	}, capOverTime.diagram.navigator.CapOverTimeDomainNavigatorItem.class);
+}
+	
+		/**
+ * @generated
+ */
+private Object myParent;
+	
+		/**
+ * @generated
+ */
+private org.eclipse.emf.ecore.EObject myEObject;
+
+	/**
+ * @generated
+ */
+private org.eclipse.ui.views.properties.IPropertySourceProvider myPropertySourceProvider;
+	
+		/**
+ * @generated
+ */
+public CapOverTimeDomainNavigatorItem(org.eclipse.emf.ecore.EObject eObject, Object parent, org.eclipse.ui.views.properties.IPropertySourceProvider propertySourceProvider) {
+	myParent = parent;
+	myEObject = eObject;
+	myPropertySourceProvider = propertySourceProvider;
+}
+	
+		/**
+ * @generated
+ */
+public Object getParent() {
+	return myParent;
+}
+	
+		/**
+ * @generated
+ */
+public org.eclipse.emf.ecore.EObject getEObject() {
+	return myEObject;
+}
+	
+		/**
+ * @generated
+ */
+public org.eclipse.ui.views.properties.IPropertySourceProvider getPropertySourceProvider() {
+	return myPropertySourceProvider;
+}
+	
+		/**
+ * @generated
+ */
+public boolean equals(Object obj) {
+	if (obj instanceof capOverTime.diagram.navigator.CapOverTimeDomainNavigatorItem) {
+		return org.eclipse.emf.ecore.util.EcoreUtil.getURI(getEObject()).equals(org.eclipse.emf.ecore.util.EcoreUtil.getURI(((capOverTime.diagram.navigator.CapOverTimeDomainNavigatorItem) obj).getEObject()));
+	}
+	return super.equals(obj);
+}
+	
+		/**
+ * @generated
+ */
+public int hashCode() {
+	return org.eclipse.emf.ecore.util.EcoreUtil.getURI(getEObject()).hashCode();
+}
+
+	}

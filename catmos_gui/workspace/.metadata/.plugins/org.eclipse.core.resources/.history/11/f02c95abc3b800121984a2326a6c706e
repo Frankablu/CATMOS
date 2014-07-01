@@ -1,0 +1,87 @@
+/*
+ * 
+ */
+package CapOverTime.diagram.edit.commands;
+
+/**
+ * @generated
+ */
+public class CapabilityAccumulationCreateCommand extends org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand {
+	
+	/**
+ * @generated
+ */
+	private final org.eclipse.emf.ecore.EObject source;
+
+	/**
+ * @generated
+ */
+	private final org.eclipse.emf.ecore.EObject target;
+
+	/**
+ * @generated
+ */
+	public CapabilityAccumulationCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest request, org.eclipse.emf.ecore.EObject source, org.eclipse.emf.ecore.EObject target) {
+		super(request.getLabel(), null, request);
+			this.source = source;
+	this.target = target;
+	}
+	
+	/**
+ * @generated
+ */
+	public boolean canExecute() {
+		if (source == null && target == null) {
+			return false;
+		}
+		if (source != null && false == source instanceof CapOverTime.Capability) {
+			return false;
+		}
+		if (target != null && false == target instanceof CapOverTime.Measurement) {
+			return false;
+		}
+		if (getSource() == null) {
+			return true; // link creation is in progress; source is not defined yet
+		}
+		// target may be null here but it's possible to check constraint
+			return CapOverTime.diagram.edit.policies.CapOverTimeBaseItemSemanticEditPolicy.getLinkConstraints().canCreateCapabilityAccumulation_4001(getSource(), getTarget());
+	}
+
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.core.command.CommandResult doExecuteWithResult(org.eclipse.core.runtime.IProgressMonitor monitor, org.eclipse.core.runtime.IAdaptable info) throws org.eclipse.core.commands.ExecutionException {
+		if (!canExecute()) {
+			throw new org.eclipse.core.commands.ExecutionException("Invalid arguments in create link command"); //$NON-NLS-1$
+		}
+		
+	if (getSource() != null && getTarget() != null) {
+		getSource().setAccumulation(getTarget());	}
+	return org.eclipse.gmf.runtime.common.core.command.CommandResult.newOKCommandResult();
+
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	protected void setElementToEdit(org.eclipse.emf.ecore.EObject element) {
+		throw new UnsupportedOperationException();
+	}
+	
+	/**
+ * @generated
+ */
+	protected CapOverTime.Capability getSource() {
+		return (CapOverTime.Capability) source;
+	}
+
+	/**
+ * @generated
+ */
+	protected CapOverTime.Measurement getTarget() {
+		return (CapOverTime.Measurement) target;
+	}
+	}

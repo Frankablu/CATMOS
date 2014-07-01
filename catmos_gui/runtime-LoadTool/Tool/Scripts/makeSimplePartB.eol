@@ -1,0 +1,25 @@
+
+for (compA in Component.all().sortBy(x|x.name))
+{	
+	for (compB in Component.all().sortBy(x|x.name))
+	{
+		if (compA <> compB)
+		{
+			if (compA.name.split(":").first == compB.name.split(":").first and 
+			((compA.name.split(":").at(1).charAt(0) <> "E" and compB.name.split(":").at(1).charAt(0) <> "E") or 
+			(compA.name.split(":").at(1).charAt(0) == "E" and compB.name.split(":").at(1).charAt(0) == "E")))
+			{
+				compA.name = compA.name + "," + compB.name.split(":").at(1);
+				compB.name = "Removed:Removed";
+			}
+		}
+	}
+}
+
+for (compA in Component.all())
+{
+	if (compA.name.split(":").first == "Removed")
+	{
+		delete compA;
+	}
+}

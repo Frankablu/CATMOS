@@ -1,0 +1,29 @@
+	/*
+ * 
+ */
+package Scenario.diagram.edit.policies;
+
+	/**
+ * @generated
+ */
+public class CapabilityCapabilityMeasurementsCompartment2ItemSemanticEditPolicy extends Scenario.diagram.edit.policies.ScenarioBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public CapabilityCapabilityMeasurementsCompartment2ItemSemanticEditPolicy() {
+				super(Scenario.diagram.providers.ScenarioElementTypes.Capability_3019);
+	}
+
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest req) {
+		if (Scenario.diagram.providers.ScenarioElementTypes.Measurement_3001 == req.getElementType()) {
+	return getGEFWrapper(new Scenario.diagram.edit.commands.MeasurementCreateCommand(req));
+}
+		return super.getCreateCommand(req);
+	}
+	
+	}

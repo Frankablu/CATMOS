@@ -1,0 +1,505 @@
+/*
+ * 
+ */
+package Scenario.diagram.providers;
+
+/**
+ * @generated
+ */
+public class ScenarioElementTypes {
+
+		/**
+ * @generated
+ */
+private ScenarioElementTypes() {
+}
+	
+		/**
+ * @generated
+ */
+private static java.util.Map<org.eclipse.gmf.runtime.emf.type.core.IElementType, org.eclipse.emf.ecore.ENamedElement> elements;
+
+	/**
+ * @generated
+ */
+private static org.eclipse.jface.resource.ImageRegistry imageRegistry;
+
+	/**
+ * @generated
+ */
+private static java.util.Set<org.eclipse.gmf.runtime.emf.type.core.IElementType> KNOWN_ELEMENT_TYPES;
+	
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Scenario_1000 = getElementType("Scenario.diagram.Scenario_1000");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType CapabilityProvision_2001 = getElementType("Scenario.diagram.CapabilityProvision_2001");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType FindTradeOffs_2002 = getElementType("Scenario.diagram.FindTradeOffs_2002");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType ThroughLifePlanning_2003 = getElementType("Scenario.diagram.ThroughLifePlanning_2003");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Capability_2004 = getElementType("Scenario.diagram.Capability_2004");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType QualitativeValueDictionary_2005 = getElementType("Scenario.diagram.QualitativeValueDictionary_2005");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Component_2006 = getElementType("Scenario.diagram.Component_2006");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Measurement_3001 = getElementType("Scenario.diagram.Measurement_3001");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType QualitativeValue_3002 = getElementType("Scenario.diagram.QualitativeValue_3002");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType QualitativeValue_3003 = getElementType("Scenario.diagram.QualitativeValue_3003");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType QualitativeValue_3004 = getElementType("Scenario.diagram.QualitativeValue_3004");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType ExistingComponent_3005 = getElementType("Scenario.diagram.ExistingComponent_3005");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType AcquirableComponent_3006 = getElementType("Scenario.diagram.AcquirableComponent_3006");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType DesireHigh_3007 = getElementType("Scenario.diagram.DesireHigh_3007");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType DesireLow_3008 = getElementType("Scenario.diagram.DesireLow_3008");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Budget_3009 = getElementType("Scenario.diagram.Budget_3009");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType ComponentU_3010 = getElementType("Scenario.diagram.ComponentU_3010");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType ExistingComponent_3011 = getElementType("Scenario.diagram.ExistingComponent_3011");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType AcquirableComponent_3012 = getElementType("Scenario.diagram.AcquirableComponent_3012");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType DesireHigh_3013 = getElementType("Scenario.diagram.DesireHigh_3013");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType DesireLow_3014 = getElementType("Scenario.diagram.DesireLow_3014");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Budget_3015 = getElementType("Scenario.diagram.Budget_3015");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType ComponentU_3016 = getElementType("Scenario.diagram.ComponentU_3016");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType CapabilityProvision_3017 = getElementType("Scenario.diagram.CapabilityProvision_3017");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType CapabilityProvision_3018 = getElementType("Scenario.diagram.CapabilityProvision_3018");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Capability_3019 = getElementType("Scenario.diagram.Capability_3019");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Capability_3020 = getElementType("Scenario.diagram.Capability_3020");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType CapabilityUpgrade_3021 = getElementType("Scenario.diagram.CapabilityUpgrade_3021");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType CapabilityChange_3022 = getElementType("Scenario.diagram.CapabilityChange_3022");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType CapabilityProvision_3023 = getElementType("Scenario.diagram.CapabilityProvision_3023");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Capability_3024 = getElementType("Scenario.diagram.Capability_3024");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Cost_3025 = getElementType("Scenario.diagram.Cost_3025");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Measurement_3026 = getElementType("Scenario.diagram.Measurement_3026");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType CapabilityAccumulation_4001 = getElementType("Scenario.diagram.CapabilityAccumulation_4001");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType CapabilityDecomposes_4002 = getElementType("Scenario.diagram.CapabilityDecomposes_4002");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType MeasurementAggregates_4004 = getElementType("Scenario.diagram.MeasurementAggregates_4004");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType QualitativeValueDictionaryGreaterThan_4005 = getElementType("Scenario.diagram.QualitativeValueDictionaryGreaterThan_4005");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType CapabilityUpgradeUpgrading_4006 = getElementType("Scenario.diagram.CapabilityUpgradeUpgrading_4006");  //$NON-NLS-1$
+		
+		/**
+ * @generated
+ */
+private static org.eclipse.jface.resource.ImageRegistry getImageRegistry() {
+	if (imageRegistry == null) {
+		imageRegistry = new org.eclipse.jface.resource.ImageRegistry();
+	}
+	return imageRegistry;
+}
+
+		/**
+ * @generated
+ */
+private static String getImageRegistryKey(org.eclipse.emf.ecore.ENamedElement element) {
+	return element.getName();
+}
+
+		/**
+ * @generated
+ */
+private static org.eclipse.jface.resource.ImageDescriptor getProvidedImageDescriptor(org.eclipse.emf.ecore.ENamedElement element) {
+	if (element instanceof org.eclipse.emf.ecore.EStructuralFeature) {
+		org.eclipse.emf.ecore.EStructuralFeature feature = ((org.eclipse.emf.ecore.EStructuralFeature) element);
+		org.eclipse.emf.ecore.EClass eContainingClass = feature.getEContainingClass();
+		org.eclipse.emf.ecore.EClassifier eType = feature.getEType();
+		if (eContainingClass != null && !eContainingClass.isAbstract()){
+			element = eContainingClass;
+		} else if (eType instanceof org.eclipse.emf.ecore.EClass && !((org.eclipse.emf.ecore.EClass)eType).isAbstract()){
+			element = eType;
+		}
+	}
+	if (element instanceof org.eclipse.emf.ecore.EClass) {
+		org.eclipse.emf.ecore.EClass eClass = (org.eclipse.emf.ecore.EClass) element;
+		if (!eClass.isAbstract()) {
+			return Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().getItemImageDescriptor(
+				eClass.getEPackage().getEFactoryInstance().create(eClass));
+		}
+	}
+	// TODO : support structural features
+	return null;
+}
+
+		/**
+ * @generated
+ */
+public static org.eclipse.jface.resource.ImageDescriptor getImageDescriptor(org.eclipse.emf.ecore.ENamedElement element) {
+	String key = getImageRegistryKey(element);
+	org.eclipse.jface.resource.ImageDescriptor imageDescriptor = getImageRegistry().getDescriptor(key);
+	if (imageDescriptor == null) {
+		imageDescriptor = getProvidedImageDescriptor(element);
+if (imageDescriptor == null) {
+	imageDescriptor = org.eclipse.jface.resource.ImageDescriptor.getMissingImageDescriptor();
+}
+getImageRegistry().put(key, imageDescriptor);
+	}
+	return imageDescriptor;
+}
+
+		/**
+ * @generated
+ */
+public static org.eclipse.swt.graphics.Image getImage(org.eclipse.emf.ecore.ENamedElement element) {
+	String key = getImageRegistryKey(element);
+	org.eclipse.swt.graphics.Image image = getImageRegistry().get(key);
+	if (image == null) {
+		org.eclipse.jface.resource.ImageDescriptor imageDescriptor = getProvidedImageDescriptor(element);
+if (imageDescriptor == null) {
+	imageDescriptor = org.eclipse.jface.resource.ImageDescriptor.getMissingImageDescriptor();
+}
+getImageRegistry().put(key, imageDescriptor);
+		image = getImageRegistry().get(key);
+	}
+	return image;
+}
+
+		/**
+ * @generated
+ */
+public static org.eclipse.jface.resource.ImageDescriptor getImageDescriptor(org.eclipse.core.runtime.IAdaptable hint) {
+	org.eclipse.emf.ecore.ENamedElement element = getElement(hint);
+if (element == null) {
+	return null;
+}
+	return getImageDescriptor(element);
+}
+
+		/**
+ * @generated
+ */
+public static org.eclipse.swt.graphics.Image getImage(org.eclipse.core.runtime.IAdaptable hint) {
+	org.eclipse.emf.ecore.ENamedElement element = getElement(hint);
+if (element == null) {
+	return null;
+}
+	return getImage(element);
+}
+
+		/**
+ * Returns 'type' of the ecore object associated with the hint.
+ * 
+ * @generated
+ */
+public static org.eclipse.emf.ecore.ENamedElement getElement(org.eclipse.core.runtime.IAdaptable hint) {
+	Object type = hint.getAdapter(org.eclipse.gmf.runtime.emf.type.core.IElementType.class);
+	if (elements == null) {
+		elements = new java.util.IdentityHashMap<org.eclipse.gmf.runtime.emf.type.core.IElementType, org.eclipse.emf.ecore.ENamedElement>();
+		
+	elements.put(Scenario_1000, Scenario.ScenarioPackage.eINSTANCE.getScenario());
+					
+	
+	elements.put(CapabilityProvision_2001, Scenario.ScenarioPackage.eINSTANCE.getCapabilityProvision());
+					
+	
+	elements.put(FindTradeOffs_2002, Scenario.ScenarioPackage.eINSTANCE.getFindTradeOffs());
+					
+	
+	elements.put(ThroughLifePlanning_2003, Scenario.ScenarioPackage.eINSTANCE.getThroughLifePlanning());
+					
+	
+	elements.put(Capability_2004, Scenario.ScenarioPackage.eINSTANCE.getCapability());
+					
+	
+	elements.put(QualitativeValueDictionary_2005, Scenario.ScenarioPackage.eINSTANCE.getQualitativeValueDictionary());
+					
+	
+	elements.put(Component_2006, Scenario.ScenarioPackage.eINSTANCE.getComponent());
+					
+	
+	elements.put(Measurement_3001, Scenario.ScenarioPackage.eINSTANCE.getMeasurement());
+					
+	
+	elements.put(QualitativeValue_3002, Scenario.ScenarioPackage.eINSTANCE.getQualitativeValue());
+					
+	
+	elements.put(QualitativeValue_3003, Scenario.ScenarioPackage.eINSTANCE.getQualitativeValue());
+					
+	
+	elements.put(QualitativeValue_3004, Scenario.ScenarioPackage.eINSTANCE.getQualitativeValue());
+					
+	
+	elements.put(ExistingComponent_3005, Scenario.ScenarioPackage.eINSTANCE.getExistingComponent());
+					
+	
+	elements.put(AcquirableComponent_3006, Scenario.ScenarioPackage.eINSTANCE.getAcquirableComponent());
+					
+	
+	elements.put(DesireHigh_3007, Scenario.ScenarioPackage.eINSTANCE.getDesireHigh());
+					
+	
+	elements.put(DesireLow_3008, Scenario.ScenarioPackage.eINSTANCE.getDesireLow());
+					
+	
+	elements.put(Budget_3009, Scenario.ScenarioPackage.eINSTANCE.getBudget());
+					
+	
+	elements.put(ComponentU_3010, Scenario.ScenarioPackage.eINSTANCE.getComponentU());
+					
+	
+	elements.put(ExistingComponent_3011, Scenario.ScenarioPackage.eINSTANCE.getExistingComponent());
+					
+	
+	elements.put(AcquirableComponent_3012, Scenario.ScenarioPackage.eINSTANCE.getAcquirableComponent());
+					
+	
+	elements.put(DesireHigh_3013, Scenario.ScenarioPackage.eINSTANCE.getDesireHigh());
+					
+	
+	elements.put(DesireLow_3014, Scenario.ScenarioPackage.eINSTANCE.getDesireLow());
+					
+	
+	elements.put(Budget_3015, Scenario.ScenarioPackage.eINSTANCE.getBudget());
+					
+	
+	elements.put(ComponentU_3016, Scenario.ScenarioPackage.eINSTANCE.getComponentU());
+					
+	
+	elements.put(CapabilityProvision_3017, Scenario.ScenarioPackage.eINSTANCE.getCapabilityProvision());
+					
+	
+	elements.put(CapabilityProvision_3018, Scenario.ScenarioPackage.eINSTANCE.getCapabilityProvision());
+					
+	
+	elements.put(Capability_3019, Scenario.ScenarioPackage.eINSTANCE.getCapability());
+					
+	
+	elements.put(Capability_3020, Scenario.ScenarioPackage.eINSTANCE.getCapability());
+					
+	
+	elements.put(CapabilityUpgrade_3021, Scenario.ScenarioPackage.eINSTANCE.getCapabilityUpgrade());
+					
+	
+	elements.put(CapabilityChange_3022, Scenario.ScenarioPackage.eINSTANCE.getCapabilityChange());
+					
+	
+	elements.put(CapabilityProvision_3023, Scenario.ScenarioPackage.eINSTANCE.getCapabilityProvision());
+					
+	
+	elements.put(Capability_3024, Scenario.ScenarioPackage.eINSTANCE.getCapability());
+					
+	
+	elements.put(Cost_3025, Scenario.ScenarioPackage.eINSTANCE.getCost());
+					
+	
+	elements.put(Measurement_3026, Scenario.ScenarioPackage.eINSTANCE.getMeasurement());
+							
+	elements.put(CapabilityAccumulation_4001, Scenario.ScenarioPackage.eINSTANCE.getCapability_Accumulation());
+					
+	elements.put(CapabilityDecomposes_4002, Scenario.ScenarioPackage.eINSTANCE.getCapability_Decomposes());
+					
+	elements.put(MeasurementAggregates_4004, Scenario.ScenarioPackage.eINSTANCE.getMeasurement_Aggregates());
+					
+	elements.put(QualitativeValueDictionaryGreaterThan_4005, Scenario.ScenarioPackage.eINSTANCE.getQualitativeValueDictionary_GreaterThan());
+					
+	elements.put(CapabilityUpgradeUpgrading_4006, Scenario.ScenarioPackage.eINSTANCE.getCapabilityUpgrade_Upgrading());
+			}
+	return (org.eclipse.emf.ecore.ENamedElement) elements.get(type);
+}
+
+		/**
+ * @generated
+ */
+private static org.eclipse.gmf.runtime.emf.type.core.IElementType getElementType(String id) {
+	return org.eclipse.gmf.runtime.emf.type.core.ElementTypeRegistry.getInstance().getType(id);
+}
+
+		/**
+ * @generated
+ */
+public static boolean isKnownElementType(org.eclipse.gmf.runtime.emf.type.core.IElementType elementType) {
+	if (KNOWN_ELEMENT_TYPES == null) {
+		KNOWN_ELEMENT_TYPES = new java.util.HashSet<org.eclipse.gmf.runtime.emf.type.core.IElementType>();
+			KNOWN_ELEMENT_TYPES.add(Scenario_1000);
+		KNOWN_ELEMENT_TYPES.add(CapabilityProvision_2001);
+		KNOWN_ELEMENT_TYPES.add(FindTradeOffs_2002);
+		KNOWN_ELEMENT_TYPES.add(ThroughLifePlanning_2003);
+		KNOWN_ELEMENT_TYPES.add(Capability_2004);
+		KNOWN_ELEMENT_TYPES.add(QualitativeValueDictionary_2005);
+		KNOWN_ELEMENT_TYPES.add(Component_2006);
+		KNOWN_ELEMENT_TYPES.add(Measurement_3001);
+		KNOWN_ELEMENT_TYPES.add(QualitativeValue_3002);
+		KNOWN_ELEMENT_TYPES.add(QualitativeValue_3003);
+		KNOWN_ELEMENT_TYPES.add(QualitativeValue_3004);
+		KNOWN_ELEMENT_TYPES.add(ExistingComponent_3005);
+		KNOWN_ELEMENT_TYPES.add(AcquirableComponent_3006);
+		KNOWN_ELEMENT_TYPES.add(DesireHigh_3007);
+		KNOWN_ELEMENT_TYPES.add(DesireLow_3008);
+		KNOWN_ELEMENT_TYPES.add(Budget_3009);
+		KNOWN_ELEMENT_TYPES.add(ComponentU_3010);
+		KNOWN_ELEMENT_TYPES.add(ExistingComponent_3011);
+		KNOWN_ELEMENT_TYPES.add(AcquirableComponent_3012);
+		KNOWN_ELEMENT_TYPES.add(DesireHigh_3013);
+		KNOWN_ELEMENT_TYPES.add(DesireLow_3014);
+		KNOWN_ELEMENT_TYPES.add(Budget_3015);
+		KNOWN_ELEMENT_TYPES.add(ComponentU_3016);
+		KNOWN_ELEMENT_TYPES.add(CapabilityProvision_3017);
+		KNOWN_ELEMENT_TYPES.add(CapabilityProvision_3018);
+		KNOWN_ELEMENT_TYPES.add(Capability_3019);
+		KNOWN_ELEMENT_TYPES.add(Capability_3020);
+		KNOWN_ELEMENT_TYPES.add(CapabilityUpgrade_3021);
+		KNOWN_ELEMENT_TYPES.add(CapabilityChange_3022);
+		KNOWN_ELEMENT_TYPES.add(CapabilityProvision_3023);
+		KNOWN_ELEMENT_TYPES.add(Capability_3024);
+		KNOWN_ELEMENT_TYPES.add(Cost_3025);
+		KNOWN_ELEMENT_TYPES.add(Measurement_3026);
+		KNOWN_ELEMENT_TYPES.add(CapabilityAccumulation_4001);
+		KNOWN_ELEMENT_TYPES.add(CapabilityDecomposes_4002);
+		KNOWN_ELEMENT_TYPES.add(MeasurementAggregates_4004);
+		KNOWN_ELEMENT_TYPES.add(QualitativeValueDictionaryGreaterThan_4005);
+		KNOWN_ELEMENT_TYPES.add(CapabilityUpgradeUpgrading_4006);
+		}
+	return KNOWN_ELEMENT_TYPES.contains(elementType);
+}
+	
+		/**
+ * @generated
+ */
+	public static org.eclipse.gmf.runtime.emf.type.core.IElementType getElementType(int visualID) {
+		switch (visualID) {
+				case Scenario.diagram.edit.parts.ScenarioEditPart.VISUAL_ID:		return Scenario_1000;
+	case Scenario.diagram.edit.parts.CapabilityProvisionEditPart.VISUAL_ID:		return CapabilityProvision_2001;
+	case Scenario.diagram.edit.parts.FindTradeOffsEditPart.VISUAL_ID:		return FindTradeOffs_2002;
+	case Scenario.diagram.edit.parts.ThroughLifePlanningEditPart.VISUAL_ID:		return ThroughLifePlanning_2003;
+	case Scenario.diagram.edit.parts.CapabilityEditPart.VISUAL_ID:		return Capability_2004;
+	case Scenario.diagram.edit.parts.QualitativeValueDictionaryEditPart.VISUAL_ID:		return QualitativeValueDictionary_2005;
+	case Scenario.diagram.edit.parts.ComponentEditPart.VISUAL_ID:		return Component_2006;
+	case Scenario.diagram.edit.parts.MeasurementEditPart.VISUAL_ID:		return Measurement_3001;
+	case Scenario.diagram.edit.parts.QualitativeValueEditPart.VISUAL_ID:		return QualitativeValue_3002;
+	case Scenario.diagram.edit.parts.QualitativeValue2EditPart.VISUAL_ID:		return QualitativeValue_3003;
+	case Scenario.diagram.edit.parts.QualitativeValue3EditPart.VISUAL_ID:		return QualitativeValue_3004;
+	case Scenario.diagram.edit.parts.ExistingComponentEditPart.VISUAL_ID:		return ExistingComponent_3005;
+	case Scenario.diagram.edit.parts.AcquirableComponentEditPart.VISUAL_ID:		return AcquirableComponent_3006;
+	case Scenario.diagram.edit.parts.DesireHighEditPart.VISUAL_ID:		return DesireHigh_3007;
+	case Scenario.diagram.edit.parts.DesireLowEditPart.VISUAL_ID:		return DesireLow_3008;
+	case Scenario.diagram.edit.parts.BudgetEditPart.VISUAL_ID:		return Budget_3009;
+	case Scenario.diagram.edit.parts.ComponentUEditPart.VISUAL_ID:		return ComponentU_3010;
+	case Scenario.diagram.edit.parts.ExistingComponent2EditPart.VISUAL_ID:		return ExistingComponent_3011;
+	case Scenario.diagram.edit.parts.AcquirableComponent2EditPart.VISUAL_ID:		return AcquirableComponent_3012;
+	case Scenario.diagram.edit.parts.DesireHigh2EditPart.VISUAL_ID:		return DesireHigh_3013;
+	case Scenario.diagram.edit.parts.DesireLow2EditPart.VISUAL_ID:		return DesireLow_3014;
+	case Scenario.diagram.edit.parts.Budget2EditPart.VISUAL_ID:		return Budget_3015;
+	case Scenario.diagram.edit.parts.ComponentU2EditPart.VISUAL_ID:		return ComponentU_3016;
+	case Scenario.diagram.edit.parts.CapabilityProvision2EditPart.VISUAL_ID:		return CapabilityProvision_3017;
+	case Scenario.diagram.edit.parts.CapabilityProvision3EditPart.VISUAL_ID:		return CapabilityProvision_3018;
+	case Scenario.diagram.edit.parts.Capability2EditPart.VISUAL_ID:		return Capability_3019;
+	case Scenario.diagram.edit.parts.Capability3EditPart.VISUAL_ID:		return Capability_3020;
+	case Scenario.diagram.edit.parts.CapabilityUpgradeEditPart.VISUAL_ID:		return CapabilityUpgrade_3021;
+	case Scenario.diagram.edit.parts.CapabilityChangeEditPart.VISUAL_ID:		return CapabilityChange_3022;
+	case Scenario.diagram.edit.parts.CapabilityProvision4EditPart.VISUAL_ID:		return CapabilityProvision_3023;
+	case Scenario.diagram.edit.parts.Capability4EditPart.VISUAL_ID:		return Capability_3024;
+	case Scenario.diagram.edit.parts.CostEditPart.VISUAL_ID:		return Cost_3025;
+	case Scenario.diagram.edit.parts.Measurement2EditPart.VISUAL_ID:		return Measurement_3026;
+	case Scenario.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID:		return CapabilityAccumulation_4001;
+	case Scenario.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID:		return CapabilityDecomposes_4002;
+	case Scenario.diagram.edit.parts.MeasurementAggregatesEditPart.VISUAL_ID:		return MeasurementAggregates_4004;
+	case Scenario.diagram.edit.parts.QualitativeValueDictionaryGreaterThanEditPart.VISUAL_ID:		return QualitativeValueDictionaryGreaterThan_4005;
+	case Scenario.diagram.edit.parts.CapabilityUpgradeUpgradingEditPart.VISUAL_ID:		return CapabilityUpgradeUpgrading_4006;
+		}
+		return null;
+	}
+
+	}

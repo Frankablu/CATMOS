@@ -1,0 +1,285 @@
+FindTradeOffs UAV { popSize 100 genCount 100 
+
+}
+
+searchObjective
+Capability "The Route Is Clear"
+{
+	//Equal To The Minimal of Both
+	Measurement "Capability Score"
+	{
+		criticalValue 0.0
+		benchmarkValue 2.0
+		script "output = math.min(getCapability(\"Clearing The Route\"), getCapability(\"Keeping The Route Clear\"))"
+	}
+	decomposes ("Clearing The Route", "Keeping The Route Clear")
+}
+
+Capability "Clearing The Route"
+{
+	Measurement "Capability Score"
+	{
+		criticalValue 0.0
+		benchmarkValue 2.0
+		script "output = (getCapability(\"Knowing the Enemy Locations\") + getCapability(\"Combat Forces\") + getCapability(\"Combat Plan\") + getCapability(\"Command and Communication\")) / 4.0"
+	}
+	//Average
+	decomposes ("Knowing the Enemy Locations", "Combat Forces", "Combat Plan", "Command and Communication")	
+}
+
+Capability "Knowing the Enemy Locations"
+{
+	Measurement "Capability Score"
+	{
+		criticalValue 0.0
+		benchmarkValue 2.0
+		script "output = getCapability(\"Wide-Area Surveillance\")"
+	}
+	//Depends Entirely On
+	decomposes ("Wide-Area Surveillance")
+}
+
+Capability "Wide-Area Surveillance"
+{
+	
+}
+
+Capability "Combat Plan"
+{
+
+}
+
+Capability "Combat Forces"
+{
+	Measurement "Capability Score"
+	{
+		criticalValue 0.0
+		benchmarkValue 2.0
+		script "output = (getCapability(\"Ground Forces\") + getCapability(\"Air Forces\") + getCapability(\"Counter IED Forces\")) / 3.0"
+	}
+	
+	//Average
+	decomposes ("Ground Forces", "Air Forces", "Counter IED Forces")
+}
+
+Capability "Ground Forces"
+{
+	//Elaborate
+	accumulation "Combat Effectiveness"
+	Measurement "Combat Effectiveness"
+	{
+		
+	}
+}
+
+Capability "Air Forces"
+{
+	//Elaborate
+	accumulation "Combat Effectiveness"
+	Measurement "Combat Effectiveness"
+	{
+		
+	}
+}
+
+Capability "Counter IED Forces"
+{	
+	Measurement "Capability Score"
+	{
+		criticalValue 0.0
+		benchmarkValue 2.0
+		script "output = 0.8 * getCapability(\"IED Removal Safety\") + 0.2 * getCapability(\"IED Removal Effectiveness\")"
+	}
+	
+	// = alpha * Safety + beta * IED Removal Effectiveness
+	decomposes ("IED Removal Safety", "IED Removal Effectiveness")
+}
+
+Capability "IED Removal Safety"
+{
+	Measurement "Chance Of Casualty Per IED"
+	{
+		criticalValue 40.0
+		benchmarkValue 0.0
+	}
+}
+
+Capability "IED Removal Effectiveness"
+{
+	accumulation "IED Removal Per Day"
+	Measurement "IED Removal Per Day"
+	{
+		criticalValue 40.0
+		benchmarkValue 0.0
+	}
+}
+
+Capability "Keeping The Route Clear"
+{
+	//Min
+	Measurement "Capability Score"
+	{
+		criticalValue 0.0
+		benchmarkValue 2.0
+		script "output = math.min(getCapability(\"Identifying Enemy Actions\"), getCapability(\"Command and Communication\"), getCapability(\"Responding To Enemy Actions\"))"
+	}
+	decomposes ("Identifying Enemy Actions", "Command and Communication", "Responding To Enemy Actions")
+}
+
+Capability "Identifying Enemy Actions"
+{
+	decomposes ("Surveillance")
+}
+
+Capability "Surveillance"
+{
+	accumulation "Surveillance Coverage"
+	Measurement "Surveillance Coverage"
+	{
+		criticalValue 0.0
+		benchmarkValue 100.0	
+	}
+}
+
+Capability "Responding To Enemy Actions"
+{
+	//Average of Combat Forces & Command and Communication IFF Basing is provided
+	Measurement "Capability Score"
+	{
+		criticalValue 0.0
+		benchmarkValue 2.0
+		script "output = 0 if getCapability(\"Basing\") > 1.0 then output = (getCapability(\"Command and Communication\") + getCapability(\"Combat Forces\")) / 2.0 end"
+	}
+	
+	decomposes ("Basing", "Command and Communication", "Combat Forces")
+}
+
+Capability "Command and Communication"
+{
+	Measurement "Capability Score"
+	{
+		criticalValue 0.0
+		benchmarkValue 2.0
+		script "output = 0 if getCapability(\"Network\") > 1.0 then output = 0.5 * getCapability(\"GPS System\") + 0.5 * getCapability(\"Collaboration System\") end"
+	}
+	
+	//If Network - Average GPS System & Collaboration System
+	decomposes ("Network", "GPS System", "Collaboration System")
+}
+
+Capability "Network"
+{
+	
+}
+
+Capability "GPS System"
+{
+	
+}
+
+Capability "Collaboration System"
+{
+	
+}
+
+searchObjective
+Capability "Supply Forward Base"
+{
+	//Min
+	Measurement "Capability Score"
+	{
+		criticalValue 0.0
+		benchmarkValue 2.0
+		script "output = math.min(getCapability(\"Have Supplies\"), getCapability(\"Transport Supplies\"), getCapability(\"Protect Convey\"))"
+	}
+	decomposes ("Have Supplies", "Transport Supplies", "Protect Convey")
+}
+
+Capability "Have Supplies"
+{
+	
+}
+
+Capability "Transport Supplies"
+{
+	//Average
+	Measurement "Capability Score"
+	{
+		criticalValue 0.0
+		benchmarkValue 2.0
+		script "output = 0.2 * getCapability(\"Transport People\") + 0.2 * getCapability(\"Transport Standard Supplies\") + 0.2 * getCapability(\"Transport Water\") + 0.2 * getCapability(\"Transport Fuel\") + 0.2 * getCapability(\"Transport Ammunition\")"
+	}
+	decomposes ("Transport People", "Transport Standard Supplies", "Transport Water", "Transport Fuel", "Transport Ammunition")
+}
+
+Capability "Transport People"
+{
+	
+}
+
+Capability "Transport Standard Supplies"
+{
+	
+}
+
+Capability "Transport Water"
+{
+	
+}
+
+Capability "Transport Fuel"
+{
+	
+}
+
+Capability "Transport Ammunition"
+{
+	
+}
+
+Capability "Protect Convey"
+{
+	accumulation "Effective Fire Power"
+	Measurement "Effective Fire Power"
+	{
+		criticalValue 0.0
+		benchmarkValue 1000.0
+	}
+}
+
+searchObjective
+Capability "Counter Insurgency Support"
+{
+	//Average
+	Measurement "Capability Score"
+	{
+		criticalValue 0.0
+		benchmarkValue 2.0
+		script "output = 0.25 * getCapability(\"Transport People\") + 0.25 * getCapability(\"Transport Standard Supplies\") + 0.25 * getCapability(\"Transport Water\") + 0.25 * getCapability(\"Transport Fuel\")"
+	}
+	decomposes ("Engineering Support", "Artillery Support", "Medical Support", "C4I Support")
+}
+
+Capability "Engineering Support"
+{
+	//Bridge Laying - Other stuff is misplaced One Counter IED and One Personnel Carrier
+}
+
+Capability "Artillery Support"
+{
+	//3 pieces make a functional artillery unit
+	//Artillery + Land Rover To Carry It + Mobile Artillery Battlefield Radar
+}
+
+Capability "Medical Support"
+{
+	//Just a team
+}
+
+Capability "C4I Support"
+{
+	//Radio System - Bowman
+	//Reacher/Mowag Duro III - Vehicle Mounted Satellite Internet System
+	//Cormorant - Military Network
+}
+

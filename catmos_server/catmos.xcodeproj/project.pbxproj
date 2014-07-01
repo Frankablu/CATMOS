@@ -1,0 +1,369 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E516A6819633973001B07D3 /* capability.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A3C19633973001B07D3 /* capability.cpp */; };
+		0E516A6919633973001B07D3 /* capabilityprovision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A3D19633973001B07D3 /* capabilityprovision.cpp */; };
+		0E516A6A19633973001B07D3 /* capabilityupgrade.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A3E19633973001B07D3 /* capabilityupgrade.cpp */; };
+		0E516A6B19633973001B07D3 /* component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A4019633973001B07D3 /* component.cpp */; };
+		0E516A6C19633973001B07D3 /* connection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A4119633973001B07D3 /* connection.cpp */; };
+		0E516A6D19633973001B07D3 /* cost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A4219633973001B07D3 /* cost.cpp */; };
+		0E516A6E19633973001B07D3 /* createInitialSolution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A4319633973001B07D3 /* createInitialSolution.cpp */; };
+		0E516A6F19633973001B07D3 /* evaluator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A4419633973001B07D3 /* evaluator.cpp */; };
+		0E516A7019633973001B07D3 /* geneIndex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A4519633973001B07D3 /* geneIndex.cpp */; };
+		0E516A7119633973001B07D3 /* geneticAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A4619633973001B07D3 /* geneticAlgorithm.cpp */; };
+		0E516A7219633973001B07D3 /* genotype.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A4919633973001B07D3 /* genotype.cpp */; };
+		0E516A7319633973001B07D3 /* luascripts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A4A19633973001B07D3 /* luascripts.cpp */; };
+		0E516A7419633973001B07D3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A4B19633973001B07D3 /* main.cpp */; };
+		0E516A7619633973001B07D3 /* measurement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A4F19633973001B07D3 /* measurement.cpp */; };
+		0E516A7719633973001B07D3 /* mobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A5019633973001B07D3 /* mobject.cpp */; };
+		0E516A7819633973001B07D3 /* network.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A5119633973001B07D3 /* network.cpp */; };
+		0E516A7919633973001B07D3 /* networkConnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A5219633973001B07D3 /* networkConnection.cpp */; };
+		0E516A7A19633973001B07D3 /* problem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A5D19633973001B07D3 /* problem.cpp */; };
+		0E516A7B19633973001B07D3 /* probleminstance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A5E19633973001B07D3 /* probleminstance.cpp */; };
+		0E516A7C19633973001B07D3 /* qvd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A5F19633973001B07D3 /* qvd.cpp */; };
+		0E516A7D19633973001B07D3 /* scheduleBudget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A6019633973001B07D3 /* scheduleBudget.cpp */; };
+		0E516A7E19633973001B07D3 /* scheduleCapability.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A6119633973001B07D3 /* scheduleCapability.cpp */; };
+		0E516A7F19633973001B07D3 /* scheduleCapabilityProvision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A6219633973001B07D3 /* scheduleCapabilityProvision.cpp */; };
+		0E516A8019633973001B07D3 /* scheduleComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A6319633973001B07D3 /* scheduleComponent.cpp */; };
+		0E516A8119633973001B07D3 /* scheduleCost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A6419633973001B07D3 /* scheduleCost.cpp */; };
+		0E516A8219633973001B07D3 /* scheduleIncome.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A6519633973001B07D3 /* scheduleIncome.cpp */; };
+		0E516A8319633973001B07D3 /* scheduleObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A6619633973001B07D3 /* scheduleObject.cpp */; };
+		0E516A8419633973001B07D3 /* scheduler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E516A6719633973001B07D3 /* scheduler.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0E16F840193F705700065A70 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0E16F842193F705700065A70 /* catmos */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = catmos; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E516A3C19633973001B07D3 /* capability.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = capability.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A3D19633973001B07D3 /* capabilityprovision.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = capabilityprovision.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A3E19633973001B07D3 /* capabilityupgrade.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = capabilityupgrade.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A4019633973001B07D3 /* component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = component.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A4119633973001B07D3 /* connection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = connection.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A4219633973001B07D3 /* cost.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cost.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A4319633973001B07D3 /* createInitialSolution.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = createInitialSolution.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A4419633973001B07D3 /* evaluator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = evaluator.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A4519633973001B07D3 /* geneIndex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geneIndex.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A4619633973001B07D3 /* geneticAlgorithm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geneticAlgorithm.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A4719633973001B07D3 /* geneticAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geneticAlgorithm.h; sourceTree = SOURCE_ROOT; };
+		0E516A4919633973001B07D3 /* genotype.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = genotype.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A4A19633973001B07D3 /* luascripts.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = luascripts.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A4B19633973001B07D3 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A4C19633973001B07D3 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = SOURCE_ROOT; };
+		0E516A4F19633973001B07D3 /* measurement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = measurement.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A5019633973001B07D3 /* mobject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mobject.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A5119633973001B07D3 /* network.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = network.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A5219633973001B07D3 /* networkConnection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = networkConnection.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A5D19633973001B07D3 /* problem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = problem.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A5E19633973001B07D3 /* probleminstance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = probleminstance.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A5F19633973001B07D3 /* qvd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = qvd.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A6019633973001B07D3 /* scheduleBudget.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scheduleBudget.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A6119633973001B07D3 /* scheduleCapability.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scheduleCapability.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A6219633973001B07D3 /* scheduleCapabilityProvision.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scheduleCapabilityProvision.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A6319633973001B07D3 /* scheduleComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scheduleComponent.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A6419633973001B07D3 /* scheduleCost.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scheduleCost.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A6519633973001B07D3 /* scheduleIncome.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scheduleIncome.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A6619633973001B07D3 /* scheduleObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scheduleObject.cpp; sourceTree = SOURCE_ROOT; };
+		0E516A6719633973001B07D3 /* scheduler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scheduler.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0E16F83F193F705700065A70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E16F839193F705700065A70 = {
+			isa = PBXGroup;
+			children = (
+				0E16F844193F705700065A70 /* catmos */,
+				0E16F843193F705700065A70 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0E16F843193F705700065A70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0E16F842193F705700065A70 /* catmos */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0E16F844193F705700065A70 /* catmos */ = {
+			isa = PBXGroup;
+			children = (
+				0E516A3C19633973001B07D3 /* capability.cpp */,
+				0E516A3D19633973001B07D3 /* capabilityprovision.cpp */,
+				0E516A3E19633973001B07D3 /* capabilityupgrade.cpp */,
+				0E516A4019633973001B07D3 /* component.cpp */,
+				0E516A4119633973001B07D3 /* connection.cpp */,
+				0E516A4219633973001B07D3 /* cost.cpp */,
+				0E516A4319633973001B07D3 /* createInitialSolution.cpp */,
+				0E516A4419633973001B07D3 /* evaluator.cpp */,
+				0E516A4519633973001B07D3 /* geneIndex.cpp */,
+				0E516A4619633973001B07D3 /* geneticAlgorithm.cpp */,
+				0E516A4719633973001B07D3 /* geneticAlgorithm.h */,
+				0E516A4919633973001B07D3 /* genotype.cpp */,
+				0E516A4A19633973001B07D3 /* luascripts.cpp */,
+				0E516A4B19633973001B07D3 /* main.cpp */,
+				0E516A4C19633973001B07D3 /* main.h */,
+				0E516A4F19633973001B07D3 /* measurement.cpp */,
+				0E516A5019633973001B07D3 /* mobject.cpp */,
+				0E516A5119633973001B07D3 /* network.cpp */,
+				0E516A5219633973001B07D3 /* networkConnection.cpp */,
+				0E516A5D19633973001B07D3 /* problem.cpp */,
+				0E516A5E19633973001B07D3 /* probleminstance.cpp */,
+				0E516A5F19633973001B07D3 /* qvd.cpp */,
+				0E516A6019633973001B07D3 /* scheduleBudget.cpp */,
+				0E516A6119633973001B07D3 /* scheduleCapability.cpp */,
+				0E516A6219633973001B07D3 /* scheduleCapabilityProvision.cpp */,
+				0E516A6319633973001B07D3 /* scheduleComponent.cpp */,
+				0E516A6419633973001B07D3 /* scheduleCost.cpp */,
+				0E516A6519633973001B07D3 /* scheduleIncome.cpp */,
+				0E516A6619633973001B07D3 /* scheduleObject.cpp */,
+				0E516A6719633973001B07D3 /* scheduler.cpp */,
+			);
+			path = catmos;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E16F841193F705700065A70 /* catmos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E16F84B193F705700065A70 /* Build configuration list for PBXNativeTarget "catmos" */;
+			buildPhases = (
+				0E16F83E193F705700065A70 /* Sources */,
+				0E16F83F193F705700065A70 /* Frameworks */,
+				0E16F840193F705700065A70 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = catmos;
+			productName = catmos;
+			productReference = 0E16F842193F705700065A70 /* catmos */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0E16F83A193F705700065A70 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Frank Burton";
+			};
+			buildConfigurationList = 0E16F83D193F705700065A70 /* Build configuration list for PBXProject "catmos" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0E16F839193F705700065A70;
+			productRefGroup = 0E16F843193F705700065A70 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E16F841193F705700065A70 /* catmos */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0E16F83E193F705700065A70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E516A7919633973001B07D3 /* networkConnection.cpp in Sources */,
+				0E516A7D19633973001B07D3 /* scheduleBudget.cpp in Sources */,
+				0E516A7719633973001B07D3 /* mobject.cpp in Sources */,
+				0E516A8319633973001B07D3 /* scheduleObject.cpp in Sources */,
+				0E516A7B19633973001B07D3 /* probleminstance.cpp in Sources */,
+				0E516A6A19633973001B07D3 /* capabilityupgrade.cpp in Sources */,
+				0E516A7119633973001B07D3 /* geneticAlgorithm.cpp in Sources */,
+				0E516A8419633973001B07D3 /* scheduler.cpp in Sources */,
+				0E516A6F19633973001B07D3 /* evaluator.cpp in Sources */,
+				0E516A7C19633973001B07D3 /* qvd.cpp in Sources */,
+				0E516A6C19633973001B07D3 /* connection.cpp in Sources */,
+				0E516A8119633973001B07D3 /* scheduleCost.cpp in Sources */,
+				0E516A6D19633973001B07D3 /* cost.cpp in Sources */,
+				0E516A7E19633973001B07D3 /* scheduleCapability.cpp in Sources */,
+				0E516A6B19633973001B07D3 /* component.cpp in Sources */,
+				0E516A6819633973001B07D3 /* capability.cpp in Sources */,
+				0E516A7019633973001B07D3 /* geneIndex.cpp in Sources */,
+				0E516A6E19633973001B07D3 /* createInitialSolution.cpp in Sources */,
+				0E516A7819633973001B07D3 /* network.cpp in Sources */,
+				0E516A7F19633973001B07D3 /* scheduleCapabilityProvision.cpp in Sources */,
+				0E516A7319633973001B07D3 /* luascripts.cpp in Sources */,
+				0E516A7A19633973001B07D3 /* problem.cpp in Sources */,
+				0E516A7419633973001B07D3 /* main.cpp in Sources */,
+				0E516A7619633973001B07D3 /* measurement.cpp in Sources */,
+				0E516A8019633973001B07D3 /* scheduleComponent.cpp in Sources */,
+				0E516A6919633973001B07D3 /* capabilityprovision.cpp in Sources */,
+				0E516A8219633973001B07D3 /* scheduleIncome.cpp in Sources */,
+				0E516A7219633973001B07D3 /* genotype.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0E16F849193F705700065A70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0E16F84A193F705700065A70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0E16F84C193F705700065A70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/opt/local/include,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-llua",
+					"-lboost_thread-mt",
+					"-lboost_system",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0E16F84D193F705700065A70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/opt/local/include,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-llua",
+					"-lboost_thread-mt",
+					"-lboost_system",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E16F83D193F705700065A70 /* Build configuration list for PBXProject "catmos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E16F849193F705700065A70 /* Debug */,
+				0E16F84A193F705700065A70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E16F84B193F705700065A70 /* Build configuration list for PBXNativeTarget "catmos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E16F84C193F705700065A70 /* Debug */,
+				0E16F84D193F705700065A70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0E16F83A193F705700065A70 /* Project object */;
+}

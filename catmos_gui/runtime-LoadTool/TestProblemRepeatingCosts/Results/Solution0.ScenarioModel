@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="ScenarioModel">
+  <OurObjects xsi:type="p:Capability" name="Money Printer" startDate="0" endDate="600" satisfiedBy="//@OurObjects.2/@provides.0"/>
+  <OurObjects xsi:type="p:Capability" name="Long Range Firing" searchObjective="true" startDate="1" endDate="600" status="1.97997" colour="Yellow" satisfiedBy="//@OurObjects.3/@provides.0"/>
+  <OurObjects xsi:type="p:Component" name="Money Printer" startDate="0" endDate="600">
+    <provides xsi:type="p:CapabilityProvision" name="Money Printer" satisfies="//@OurObjects.0"/>
+    <costs name="Money" amount="-50.0" startAfter="0" repeatDuration="1"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Fighter Jet" startDate="7" endDate="607">
+    <provides xsi:type="p:CapabilityProvision" name="Long Range Firing" satisfies="//@OurObjects.1"/>
+    <costs name="Money" amount="450.0"/>
+  </OurObjects>
+</p:Scenario>

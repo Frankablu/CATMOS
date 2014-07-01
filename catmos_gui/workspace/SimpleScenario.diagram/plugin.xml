@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+
+-->
+<plugin>
+
+   <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
+      <?gmfgen generated="true"?>
+      <fileTypes type="text" extension="simplescenario_diagram"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
+      <?gmfgen generated="true"?>
+      <parser
+         type="simplescenario_diagram"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors" id="gmf-editor">
+      <?gmfgen generated="true"?>
+      <editor
+         id="SimpleScenario.diagram.part.SimpleScenarioDiagramEditorID"
+         name="%editorName"
+         icon="icons/obj16/SimpleScenarioDiagramFile.gif"
+         extensions="simplescenario_diagram"
+         default="true"
+         class="SimpleScenario.diagram.part.SimpleScenarioDiagramEditor"
+         matchingStrategy="SimpleScenario.diagram.part.SimpleScenarioMatchingStrategy"
+         contributorClass="SimpleScenario.diagram.part.SimpleScenarioDiagramActionBarContributor">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.contexts" id="ui-context">
+      <?gmfgen generated="true"?>
+      <context
+         description="%context.description"
+         id="SimpleScenario.diagram.ui.diagramContext"
+         name="%context.name"
+         parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
+      </context>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards" id="creation-wizard">
+      <?gmfgen generated="true"?>
+  	  <wizard
+  	     name="%newWizardName"
+  	     icon="icons/obj16/SimpleScenarioDiagramFile.gif"
+  	     category="org.eclipse.ui.Examples"
+  	     class="SimpleScenario.diagram.part.SimpleScenarioCreationWizard"
+  	     id="SimpleScenario.diagram.part.SimpleScenarioCreationWizardID">
+  	  	 <description>%newWizardDesc</description>  
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
+      <?gmfgen generated="true"?>
+      <objectContribution
+            id="SimpleScenario.diagram.InitDiagram"
+            nameFilter="*.simplescenario"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="%initDiagramActionLabel"
+               class="SimpleScenario.diagram.part.SimpleScenarioInitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="SimpleScenario.diagram.InitDiagramAction">
+         </action>
+      </objectContribution>
+   </extension>
+	
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders" id="global-actions">
+      <?gmfgen generated="true"?>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="SimpleScenarioPresentation">
+         <Priority name="Lowest"/>
+         <ViewId id="SimpleScenario.diagram.part.SimpleScenarioDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="save">
+               </GlobalActionId>
+            </ElementType>        
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.printing.render.providers.DiagramWithPrintGlobalActionHandlerProvider"
+         id="SimpleScenarioPresentationPrint">
+         <Priority name="Lowest"/>
+         <ViewId id="SimpleScenario.diagram.part.SimpleScenarioDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="print"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
+         id="SimpleScenarioPresentationIDE">
+         <Priority name="Lowest"/>
+         <ViewId id="SimpleScenario.diagram.part.SimpleScenarioDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="bookmark"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="SimpleScenarioRender">
+         <Priority name="Lowest"/>
+         <ViewId id="SimpleScenario.diagram.part.SimpleScenarioDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+   </extension>
+
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.markerNavigationProviders" id="markers-navigation">
+      <?gmfgen generated="true"?>
+      <MarkerNavigationProvider class="SimpleScenario.diagram.providers.SimpleScenarioMarkerNavigationProvider">
+         <MarkerType name="SimpleScenario.diagram.diagnostic"/>
+         <Priority name="Lowest"/>
+      </MarkerNavigationProvider>
+   </extension>
+
+   <extension id="diagnostic" name="SimpleScenario Plugin problems" point="org.eclipse.core.resources.markers">
+      <?gmfgen generated="true"?>
+      <super type="org.eclipse.core.resources.problemmarker"/>
+      <super type="org.eclipse.gmf.runtime.common.ui.services.marker"/>
+      <persistent value="true"/>
+   </extension>   
+
+   <extension id="validationDecoratorProvider" name="ValidationDecorations" point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders">
+      <?gmfgen generated="true"?>
+      <decoratorProvider class="SimpleScenario.diagram.providers.SimpleScenarioValidationDecoratorProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.diagram.ui.editparts.IPrimaryEditPart(org.eclipse.gmf.runtime.diagram.ui)" id="PRIMARY_VIEW"/>
+         <context decoratorTargets="PRIMARY_VIEW"/>
+      </decoratorProvider>
+   </extension>
+
+   <extension point="org.eclipse.core.runtime.preferences" id="prefs">
+      <?gmfgen generated="true"?>
+      <initializer class="SimpleScenario.diagram.preferences.DiagramPreferenceInitializer"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages" id="prefpages">
+      <?gmfgen generated="true"?>
+      <page
+            id="SimpleScenario.diagram.general"
+            name="%prefpage.SimpleScenario.diagram.general"
+            class="SimpleScenario.diagram.preferences.DiagramGeneralPreferencePage">
+      </page>
+      <page
+            id="SimpleScenario.diagram.appearance"
+            name="%prefpage.SimpleScenario.diagram.appearance"
+            category="SimpleScenario.diagram.general"
+            class="SimpleScenario.diagram.preferences.DiagramAppearancePreferencePage">
+      </page>
+      <page
+            id="SimpleScenario.diagram.connections"
+            name="%prefpage.SimpleScenario.diagram.connections"
+            category="SimpleScenario.diagram.general"
+            class="SimpleScenario.diagram.preferences.DiagramConnectionsPreferencePage">
+      </page>
+      <page
+            id="SimpleScenario.diagram.printing"
+            name="%prefpage.SimpleScenario.diagram.printing"
+            category="SimpleScenario.diagram.general"
+            class="SimpleScenario.diagram.preferences.DiagramPrintingPreferencePage">
+      </page>
+      <page
+            id="SimpleScenario.diagram.rulersAndGrid"
+            name="%prefpage.SimpleScenario.diagram.rulersAndGrid"
+            category="SimpleScenario.diagram.general"
+            class="SimpleScenario.diagram.preferences.DiagramRulersAndGridPreferencePage">
+      </page>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-contrib">
+      <?gmfgen generated="true"?>
+      <propertyContributor
+            contributorId="SimpleScenario.diagram"
+            labelProvider="SimpleScenario.diagram.sheet.SimpleScenarioSheetLabelProvider">
+         <propertyCategory category="domain"/>
+         <propertyCategory category="visual"/>
+         <propertyCategory category="extra"/>
+      </propertyContributor>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
+      <?gmfgen generated="true"?>   
+      <propertyTabs contributorId="SimpleScenario.diagram">
+         <propertyTab
+             category="visual"
+             id="property.tab.AppearancePropertySection"
+             label="%tab.appearance"/>
+          <propertyTab
+             category="visual"
+             id="property.tab.DiagramPropertySection"
+             label="%tab.diagram"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.domain"
+             label="%tab.domain"/>
+      </propertyTabs>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
+      <?gmfgen generated="true"?>   
+      <propertySections contributorId="SimpleScenario.diagram">
+         <propertySection id="property.section.ConnectorAppearancePropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>
+         <propertySection id="property.section.ShapeColorAndFontPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ShapeEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ShapeColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection> 
+         <propertySection id="property.section.DiagramColorsAndFontsPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.DiagramColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>     
+         <propertySection id="property.section.RulerGridPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.grid.RulerGridPropertySection" 
+            tab="property.tab.DiagramPropertySection">
+         </propertySection>     
+         <propertySection
+            id="property.section.domain" 
+            tab="property.tab.domain"
+            class="SimpleScenario.diagram.sheet.SimpleScenarioPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="SimpleScenario.diagram.navigator.SimpleScenarioAbstractNavigatorItem"/>
+         </propertySection>
+      </propertySections>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
+      <?gmfgen generated="true"?>
+      <viewProvider class="SimpleScenario.diagram.providers.SimpleScenarioViewProvider">
+         <Priority name="Lowest"/>
+         <object id="referencing-diagrams" class="org.eclipse.gmf.runtime.notation.Diagram">
+            <method name="getType()" value="SimpleScenario"/>
+         </object>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="SimpleScenario"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,3001,3002,3003"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003"/>
+      </viewProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
+      <?gmfgen generated="true"?>
+      <editpartProvider class="SimpleScenario.diagram.providers.SimpleScenarioEditPartProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
+            <method name="getType()" value="SimpleScenario"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
+            <method name="getType()" value="2001,2002,3001,3002,3003"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
+            <method name="getType()" value="4001,4002,4003"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
+            <method name="getType()" value="5001,5005,5002,5003,5004"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
+            <method name="getType()" value="7001,7002,7003"/>
+         </object>
+         <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
+      </editpartProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
+      <?gmfgen generated="true"?>
+      <modelingAssistantProvider class="SimpleScenario.diagram.providers.SimpleScenarioModelingAssistantProvider">
+         <Priority name="Lowest"/>
+         <object class="SimpleScenario.diagram.edit.parts.ScenarioEditPart" id="Scenario_1000"/>
+         <object class="SimpleScenario.diagram.edit.parts.CapabilityEditPart" id="Capability_2001"/>
+         <object class="SimpleScenario.diagram.edit.parts.ComponentEditPart" id="Component_2002"/>
+         <object class="SimpleScenario.diagram.edit.parts.Capability2EditPart" id="Capability_3001"/>
+         <object class="SimpleScenario.diagram.edit.parts.Capability3EditPart" id="Capability_3002"/>
+         <object class="SimpleScenario.diagram.edit.parts.CapabilityUpgradeEditPart" id="CapabilityUpgrade_3003"/>
+         <context elements="Scenario_1000,Capability_2001,Component_2002,Capability_3001,Capability_3002,CapabilityUpgrade_3003"/>
+      </modelingAssistantProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
+      <?gmfgen generated="true"?>
+      <IconProvider class="SimpleScenario.diagram.providers.SimpleScenarioIconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
+      <?gmfgen generated="true"?>
+      <ParserProvider class="SimpleScenario.diagram.providers.SimpleScenarioParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders" id="decorator-provider">
+      <?gmfgen generated="true"?>
+      <decoratorProvider class="SimpleScenario.diagram.providers.SimpleScenarioShortcutsDecoratorProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Node(org.eclipse.gmf.runtime.notation)" id="generated-top-nodes">
+            <method name="getType()" value="2001,2002"/>
+         </object>
+         <context decoratorTargets="generated-top-nodes"/>
+      </decoratorProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
+      <?gmfgen generated="true"?>
+      <metamodel nsURI="SimpleScenario">
+         <metamodelType
+               id="SimpleScenario.diagram.Scenario_1000"
+               name="%metatype.name.Scenario_1000"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Scenario"
+               edithelper="SimpleScenario.diagram.edit.helpers.ScenarioEditHelper">
+            <param name="semanticHint" value="1000"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="SimpleScenario">
+         <metamodelType
+               id="SimpleScenario.diagram.Capability_2001"
+               name="%metatype.name.Capability_2001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Capability"
+               edithelper="SimpleScenario.diagram.edit.helpers.CapabilityEditHelper">
+            <param name="semanticHint" value="2001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="SimpleScenario">
+         <metamodelType
+               id="SimpleScenario.diagram.Component_2002"
+               name="%metatype.name.Component_2002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Component"
+               edithelper="SimpleScenario.diagram.edit.helpers.ComponentEditHelper">
+            <param name="semanticHint" value="2002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="SimpleScenario">
+         <specializationType
+               id="SimpleScenario.diagram.Capability_3001"
+               name="%metatype.name.Capability_3001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="SimpleScenario.diagram.Capability_2001"/>
+            <param name="semanticHint" value="3001"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="SimpleScenario">
+         <specializationType
+               id="SimpleScenario.diagram.Capability_3002"
+               name="%metatype.name.Capability_3002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="SimpleScenario.diagram.Capability_2001"/>
+            <param name="semanticHint" value="3002"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="SimpleScenario">
+         <metamodelType
+               id="SimpleScenario.diagram.CapabilityUpgrade_3003"
+               name="%metatype.name.CapabilityUpgrade_3003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="CapabilityUpgrade"
+               edithelper="SimpleScenario.diagram.edit.helpers.CapabilityUpgradeEditHelper">
+            <param name="semanticHint" value="3003"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="SimpleScenario">
+         <specializationType
+               id="SimpleScenario.diagram.CapabilityDecomposes_4001"
+               name="%metatype.name.CapabilityDecomposes_4001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4001"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="SimpleScenario">
+         <specializationType
+               id="SimpleScenario.diagram.CapabilitySatisfies_4002"
+               name="%metatype.name.CapabilitySatisfies_4002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4002"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="SimpleScenario">
+         <specializationType
+               id="SimpleScenario.diagram.CapabilityUpgradeUpgrading_4003"
+               name="%metatype.name.CapabilityUpgradeUpgrading_4003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4003"/>
+         </specializationType>
+      </metamodel>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
+      <?gmfgen generated="true"?>
+      <clientContext id="SimpleScenario.diagram.TypeContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="SimpleScenario.diagram.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="SimpleScenario.diagram.TypeContext">
+         <elementType ref="SimpleScenario.diagram.Scenario_1000"/>
+         <elementType ref="SimpleScenario.diagram.Capability_2001"/>
+         <elementType ref="SimpleScenario.diagram.Component_2002"/>
+         <elementType ref="SimpleScenario.diagram.Capability_3001"/>
+         <elementType ref="SimpleScenario.diagram.Capability_3002"/>
+         <elementType ref="SimpleScenario.diagram.CapabilityUpgrade_3003"/>
+         <elementType ref="SimpleScenario.diagram.CapabilityDecomposes_4001"/>
+         <elementType ref="SimpleScenario.diagram.CapabilitySatisfies_4002"/>
+         <elementType ref="SimpleScenario.diagram.CapabilityUpgradeUpgrading_4003"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+      </binding>
+   </extension>
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isURIEditorInput">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="SimpleScenario.diagram.URIEditorInputPropertyTester"
+           type="org.eclipse.emf.common.ui.URIEditorInput"
+           namespace="SimpleScenario.diagram"
+           properties="isURIEditorInput"
+           class="SimpleScenario.diagram.part.SimpleScenarioUriEditorInputTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isShortcut">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="SimpleScenario.diagram.ShortcutPropertyTester"
+           type="org.eclipse.gmf.runtime.notation.View"
+           namespace="SimpleScenario.diagram"
+           properties="isShortcut"
+           class="SimpleScenario.diagram.part.SimpleScenarioShortcutPropertyTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.ui.navigator.viewer" id="navigator-viewbinding">
+      <?gmfgen generated="true"?>
+      <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension pattern="SimpleScenario.diagram.resourceContent"/>
+			<contentExtension pattern="SimpleScenario.diagram.domainResourceContent"/>
+            <contentExtension pattern="SimpleScenario.diagram.navigatorLinkHelper"/>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <actionExtension pattern="SimpleScenario.diagram.navigatorActionProvider"/>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+
+   <extension point="org.eclipse.ui.navigator.navigatorContent" id="navigator-content">
+      <?gmfgen generated="true"?>
+      <navigatorContent
+            id="SimpleScenario.diagram.resourceContent" 
+            name="%navigatorContentName" 
+            priority="normal" 
+            contentProvider="SimpleScenario.diagram.navigator.SimpleScenarioNavigatorContentProvider" 
+            labelProvider="SimpleScenario.diagram.navigator.SimpleScenarioNavigatorLabelProvider"
+            icon="icons/obj16/SimpleScenarioDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="simplescenario_diagram"/>
+               </and>
+               <instanceof value="SimpleScenario.diagram.navigator.SimpleScenarioAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="SimpleScenario.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+         	   <instanceof value="SimpleScenario.diagram.navigator.SimpleScenarioAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="SimpleScenario.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </possibleChildren>
+         <commonSorter 
+               id="SimpleScenario.diagram.navigatorSorter" 
+               class="SimpleScenario.diagram.navigator.SimpleScenarioNavigatorSorter">
+            <parentExpression>
+               <or>
+	              <and>
+    	             <instanceof value="org.eclipse.core.resources.IFile"/>
+        	         <test property="org.eclipse.core.resources.extension" value="simplescenario_diagram"/>
+                  </and>
+                  <instanceof value="SimpleScenario.diagram.navigator.SimpleScenarioAbstractNavigatorItem"/>
+               </or>
+            </parentExpression>
+         </commonSorter>
+      </navigatorContent>
+      <navigatorContent
+            id="SimpleScenario.diagram.domainResourceContent" 
+            name="%domainNavigatorContentName" 
+            priority="normal" 
+            contentProvider="SimpleScenario.diagram.navigator.SimpleScenarioDomainNavigatorContentProvider" 
+            labelProvider="SimpleScenario.diagram.navigator.SimpleScenarioDomainNavigatorLabelProvider"
+            icon="icons/obj16/SimpleScenarioDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="simplescenario"/>
+               </and>
+               <instanceof value="SimpleScenario.diagram.navigator.SimpleScenarioDomainNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <instanceof value="SimpleScenario.diagram.navigator.SimpleScenarioDomainNavigatorItem"/>
+         </possibleChildren>
+      </navigatorContent>
+      <actionProvider
+            id="SimpleScenario.diagram.navigatorActionProvider"
+            class="SimpleScenario.diagram.navigator.SimpleScenarioNavigatorActionProvider">
+         <enablement>
+            <or>
+               <instanceof value="SimpleScenario.diagram.navigator.SimpleScenarioAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="SimpleScenario.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </enablement>
+      </actionProvider>
+   </extension>
+   
+	   <extension point="org.eclipse.ui.navigator.linkHelper" id="navigator-linkhelper">
+      <?gmfgen generated="true"?>
+      <linkHelper
+            id="SimpleScenario.diagram.navigatorLinkHelper"
+            class="SimpleScenario.diagram.navigator.SimpleScenarioNavigatorLinkHelper">
+         <editorInputEnablement>
+            <and>
+               <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
+               <test property="SimpleScenario.diagram.isURIEditorInput"/>
+            </and>
+         </editorInputEnablement>
+         <selectionEnablement>
+            <instanceof value="SimpleScenario.diagram.navigator.SimpleScenarioAbstractNavigatorItem"/>
+         </selectionEnablement>
+      </linkHelper>
+   </extension>
+   <extension point="org.eclipse.ui.commands" id="update-cmd">
+      <?gmfgen generated="true"?>
+      <command
+         categoryId="org.eclipse.ui.category.edit"
+         defaultHandler="SimpleScenario.diagram.part.SimpleScenarioDiagramUpdateCommand"
+         description="%update.diagram.description"
+         id="SimpleScenario.diagram.updateDiagram"
+         name="%update.diagram.name"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
+      <?gmfgen generated="true"?>
+      <key 
+         commandId="SimpleScenario.diagram.updateDiagram"
+         contextId="SimpleScenario.diagram.ui.diagramContext"
+         schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+         sequence="F5"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.menus" id="context-menus">
+      <?gmfgen generated="true"?>
+      <!-- menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=">
+      </menuContribution>
+      <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=">
+      </menuContribution -->
+      <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+         <command commandId="SimpleScenario.diagram.LoadResourceAction">
+            <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="SimpleScenario.diagram.part.SimpleScenarioDiagramEditorID"/></with>
+                  <with variable="selection"><iterate ifEmpty="false"> 
+                     <instanceof value="SimpleScenario.diagram.edit.parts.ScenarioEditPart"/>
+                  </iterate></with>
+               </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands" id="menu-commands">
+      <?gmfgen generated="true"?>
+      <category id="SimpleScenario.diagram.part.SimpleScenarioDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+      <command id="SimpleScenario.diagram.LoadResourceAction"
+         name="Load Resource"
+         categoryId="SimpleScenario.diagram.part.SimpleScenarioDiagramEditorID"
+         defaultHandler="SimpleScenario.diagram.part.LoadResourceAction"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.handlers" id="menu-handlers">
+      <?gmfgen generated="true"?>
+   </extension>
+
+   <!-- optionally, specify keybindings -->
+</plugin>

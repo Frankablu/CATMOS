@@ -1,0 +1,44 @@
+
+var runTool = new Native("org.eclipse.epsilon.examples.tools.RunTool");
+var ourBase : Integer = 0;
+
+if (capovertime!ThroughLifePlanning.all().first.startDate.isInteger() == false)
+{
+	ourBase = runTool.convertDateTime(ThroughLifePlanning.all().first.startDate);
+}
+
+for (timePeriod in capovertime!TimePeriod.all().select(x|x.startDate <> null))
+{
+	for (cap : capovertime!Capability in timePeriod.ourObjects.select(x|x.isTypeOf(capovertime!Capability)))
+	{
+		if (timePeriod.startDate.isInteger())
+		{
+			runTool.addScatterPoint(cap.name, timePeriod.startDate.asInteger(), (cap.status * 100).asInteger());
+		}
+		else
+		{
+			var convertedStartDate : Integer = timePeriod.startDate.convert(ourBase);
+			runTool.addScatterPoint(cap.name, convertedStartDate, (cap.status * 100).asInteger());
+		}
+	}
+}
+
+runTool.setScatterSolutionNumber("0");
+runTool.setScatterChartName();
+runTool.createScatterPlot();
+
+operation String convert(base : Real)
+{
+	var runTool = new Native("org.eclipse.epsilon.examples.tools.RunTool");
+	if (self.isInteger())
+	{
+		return (self.asInteger() - base).asString();
+	}
+	
+	if (self == "inf" or self == "infinite")
+	{
+		return ThroughLifePlanning.all().first.endDate.convert(base);
+	}
+	
+	return ((runTool.convertDateTime(self) - base) / (1000 * 60 * 60 * 24)).asString(); //Nearest Day
+}

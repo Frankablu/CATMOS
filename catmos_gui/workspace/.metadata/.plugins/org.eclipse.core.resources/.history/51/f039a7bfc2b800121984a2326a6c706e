@@ -1,0 +1,17 @@
+/*
+ * 
+ */
+package capOverTime.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramConnectionsPreferencePage extends org.eclipse.gmf.runtime.diagram.ui.preferences.ConnectionsPreferencePage {
+
+	/**
+ * @generated
+ */
+	public DiagramConnectionsPreferencePage() {
+		setPreferenceStore(capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().getPreferenceStore());
+	}
+}

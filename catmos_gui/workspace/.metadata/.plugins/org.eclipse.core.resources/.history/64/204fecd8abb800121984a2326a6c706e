@@ -1,0 +1,76 @@
+	/*
+ * 
+ */
+package ScenarioModel.diagram.providers;
+
+	/**
+ * @generated
+ */
+public class ScenarioModelShortcutsDecoratorProvider extends org.eclipse.gmf.runtime.common.core.service.AbstractProvider implements org.eclipse.gmf.runtime.diagram.ui.services.decorator.IDecoratorProvider {
+
+		/**
+ * @generated
+ */
+public static final String SHORTCUTS_DECORATOR_ID = "shortcuts";  //$NON-NLS-1$
+	
+		/**
+ * @generated
+ */
+public boolean provides(org.eclipse.gmf.runtime.common.core.service.IOperation operation) {
+	if (!(operation instanceof org.eclipse.gmf.runtime.diagram.ui.services.decorator.CreateDecoratorsOperation)) {
+		return false;
+	}
+	org.eclipse.gmf.runtime.diagram.ui.services.decorator.IDecoratorTarget decoratorTarget = ((org.eclipse.gmf.runtime.diagram.ui.services.decorator.CreateDecoratorsOperation) operation).getDecoratorTarget();
+	org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) decoratorTarget.getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+	return view != null && ScenarioModel.diagram.edit.parts.ScenarioEditPart.MODEL_ID.equals(ScenarioModel.diagram.part.ScenarioModelVisualIDRegistry.getModelID(view));
+}
+	
+		/**
+ * @generated
+ */
+public void createDecorators(org.eclipse.gmf.runtime.diagram.ui.services.decorator.IDecoratorTarget decoratorTarget) {
+	org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) decoratorTarget.getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+	if (view != null) {
+		org.eclipse.emf.ecore.EAnnotation annotation = view.getEAnnotation("Shortcut");  //$NON-NLS-1$
+		if (annotation != null) {
+			decoratorTarget.installDecorator(SHORTCUTS_DECORATOR_ID, new ShortcutsDecorator(decoratorTarget));
+		}
+	}
+}
+	
+		/**
+ * @generated
+ */
+protected class ShortcutsDecorator extends org.eclipse.gmf.runtime.diagram.ui.services.decorator.AbstractDecorator {
+
+		/**
+ * @generated
+ */
+public ShortcutsDecorator(org.eclipse.gmf.runtime.diagram.ui.services.decorator.IDecoratorTarget decoratorTarget) {
+	super(decoratorTarget);
+}
+	
+		/**
+ * @generated
+ */
+public void activate() {
+	refresh();
+}
+
+		/**
+ * @generated
+ */
+public void refresh() {
+	removeDecoration();
+	org.eclipse.gef.EditPart editPart = (org.eclipse.gef.EditPart) getDecoratorTarget().getAdapter(org.eclipse.gef.EditPart.class);
+	org.eclipse.swt.graphics.Image image = ScenarioModel.diagram.part.ScenarioModelDiagramEditorPlugin.getInstance().getBundledImage("icons/shortcut.gif");  //$NON-NLS-1$
+	if (editPart instanceof org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeEditPart) {
+		setDecoration(getDecoratorTarget().addShapeDecoration(image, org.eclipse.gmf.runtime.diagram.ui.services.decorator.IDecoratorTarget.Direction.SOUTH_WEST, 0, false));
+	} else if (editPart instanceof org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionEditPart) {
+		setDecoration(getDecoratorTarget().addConnectionDecoration(image, 50, false));
+	}
+}
+
+	}
+
+	}

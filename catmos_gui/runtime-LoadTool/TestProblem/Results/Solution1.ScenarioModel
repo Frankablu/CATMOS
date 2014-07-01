@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="ScenarioModel">
+  <OurObjects xsi:type="p:Capability" name="ourMainGoal" searchObjective="true" status="2.0" colour="Green" satisfiedBy="//@OurObjects.1/@provides.0">
+    <measurements name="satisfactionLevel" criticalValue="1.0" benchmarkValue="10.0" providedValue="15.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentB:1">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="15.0"/>
+    </provides>
+    <requires name="supportSystem" status="1.0" colour="Yellow" satisfiedBy="//@OurObjects.2/@provides.0">
+      <measurements name="SupportLevel">
+        <criticalValues name="not good"/>
+        <benchmarkValues name="good"/>
+        <providedValues name="not good"/>
+      </measurements>
+    </requires>
+    <costs name="Money" amount="15.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentC:1">
+    <provides xsi:type="p:CapabilityProvision" name="supportSystem" satisfies="//@OurObjects.1/@requires.0">
+      <measurements name="SupportLevel">
+        <providedValues name="not good"/>
+      </measurements>
+    </provides>
+    <upgrades name="ourUpgrade" targetComponent="ComponentB" upgrading="//@OurObjects.1">
+      <capabilityChanges name="add"/>
+    </upgrades>
+    <costs name="Money" amount="15.0"/>
+  </OurObjects>
+</p:Scenario>

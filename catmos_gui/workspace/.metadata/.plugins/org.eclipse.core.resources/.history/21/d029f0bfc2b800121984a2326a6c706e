@@ -1,0 +1,157 @@
+/*
+ * 
+ */
+package capOverTime.diagram.part;
+
+/**
+ * @generated
+ */
+public class CapOverTimeNewDiagramFileWizard extends org.eclipse.jface.wizard.Wizard {
+
+	/**
+ * @generated
+ */
+	private 
+org.eclipse.ui.dialogs.WizardNewFileCreationPage myFileCreationPage;
+
+	/**
+ * @generated
+ */
+	private capOverTime.diagram.part.ModelElementSelectionPage diagramRootElementSelectionPage;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.emf.transaction.TransactionalEditingDomain myEditingDomain;
+
+	/**
+ * @generated
+ */
+	public CapOverTimeNewDiagramFileWizard(org.eclipse.emf.common.util.URI domainModelURI,
+			org.eclipse.emf.ecore.EObject diagramRoot,
+			org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain) {
+		assert domainModelURI != null : "Domain model uri must be specified"; //$NON-NLS-1$
+	    assert diagramRoot != null : "Doagram root element must be specified"; //$NON-NLS-1$
+	    assert editingDomain != null : "Editing domain must be specified"; //$NON-NLS-1$
+
+		myFileCreationPage = new 
+org.eclipse.ui.dialogs.WizardNewFileCreationPage(capOverTime.diagram.part.Messages.CapOverTimeNewDiagramFileWizard_CreationPageName, org.eclipse.jface.viewers.StructuredSelection.EMPTY);
+		myFileCreationPage.setTitle(capOverTime.diagram.part.Messages.CapOverTimeNewDiagramFileWizard_CreationPageTitle);
+		myFileCreationPage.setDescription(org.eclipse.osgi.util.NLS.bind(
+				capOverTime.diagram.part.Messages.CapOverTimeNewDiagramFileWizard_CreationPageDescription, 
+				capOverTime.diagram.edit.parts.CapabilityOverTimeEditPart.MODEL_ID));
+		org.eclipse.core.runtime.IPath filePath;
+		String fileName = org.eclipse.emf.common.util.URI.decode(domainModelURI.trimFileExtension().lastSegment());
+		if (domainModelURI.isPlatformResource()) {
+			filePath = new org.eclipse.core.runtime.Path(domainModelURI.trimSegments(1).toPlatformString(true));
+		} else if (domainModelURI.isFile()) {
+			filePath = new org.eclipse.core.runtime.Path(domainModelURI.trimSegments(1).toFileString());
+		} else {
+			// TODO : use some default path
+			throw new IllegalArgumentException("Unsupported URI: " + domainModelURI);  //$NON-NLS-1$
+		}
+		myFileCreationPage.setContainerFullPath(filePath);
+		myFileCreationPage.setFileName(capOverTime.diagram.part.CapOverTimeDiagramEditorUtil.getUniqueFileName(
+				filePath, fileName, "capovertime_diagram"));  //$NON-NLS-1$
+
+		diagramRootElementSelectionPage = new DiagramRootElementSelectionPage(capOverTime.diagram.part.Messages.CapOverTimeNewDiagramFileWizard_RootSelectionPageName);
+		diagramRootElementSelectionPage.setTitle(capOverTime.diagram.part.Messages.CapOverTimeNewDiagramFileWizard_RootSelectionPageTitle);
+		diagramRootElementSelectionPage.setDescription(capOverTime.diagram.part.Messages.CapOverTimeNewDiagramFileWizard_RootSelectionPageDescription);
+		diagramRootElementSelectionPage.setModelElement(diagramRoot);
+
+	   	myEditingDomain = editingDomain;
+	}
+
+	/**
+ * @generated
+ */
+	public void addPages() {
+		addPage(myFileCreationPage);
+		addPage(diagramRootElementSelectionPage);
+	}
+
+	/**
+ * @generated
+ */
+	public boolean performFinish() {
+		java.util.LinkedList<org.eclipse.core.resources.IFile> affectedFiles = new java.util.LinkedList<org.eclipse.core.resources.IFile>();
+				org.eclipse.core.resources.IFile diagramFile = myFileCreationPage.createNewFile();
+		capOverTime.diagram.part.CapOverTimeDiagramEditorUtil.setCharset(diagramFile);
+		affectedFiles.add(diagramFile);
+		org.eclipse.emf.common.util.URI diagramModelURI = org.eclipse.emf.common.util.URI.createPlatformResourceURI(diagramFile.getFullPath().toString(), true);
+				org.eclipse.emf.ecore.resource.ResourceSet resourceSet = myEditingDomain.getResourceSet();
+		final org.eclipse.emf.ecore.resource.Resource diagramResource = resourceSet.createResource(diagramModelURI);
+		org.eclipse.gmf.runtime.emf.commands.core.command.AbstractTransactionalCommand command =
+			new org.eclipse.gmf.runtime.emf.commands.core.command.AbstractTransactionalCommand(
+				myEditingDomain, capOverTime.diagram.part.Messages.CapOverTimeNewDiagramFileWizard_InitDiagramCommand, affectedFiles) {
+
+			protected org.eclipse.gmf.runtime.common.core.command.CommandResult doExecuteWithResult(
+					org.eclipse.core.runtime.IProgressMonitor monitor, org.eclipse.core.runtime.IAdaptable info)
+						throws org.eclipse.core.commands.ExecutionException {
+				int diagramVID = capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getDiagramVisualID(diagramRootElementSelectionPage.getModelElement());
+				if (diagramVID != capOverTime.diagram.edit.parts.CapabilityOverTimeEditPart.VISUAL_ID) {
+					return org.eclipse.gmf.runtime.common.core.command.CommandResult.newErrorCommandResult(
+						capOverTime.diagram.part.Messages.CapOverTimeNewDiagramFileWizard_IncorrectRootError);
+				}
+				org.eclipse.gmf.runtime.notation.Diagram diagram =
+					org.eclipse.gmf.runtime.diagram.core.services.ViewService.createDiagram(
+						diagramRootElementSelectionPage.getModelElement(), capOverTime.diagram.edit.parts.CapabilityOverTimeEditPart.MODEL_ID,
+						capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT);
+				diagramResource.getContents().add(diagram);
+												return org.eclipse.gmf.runtime.common.core.command.CommandResult.newOKCommandResult();
+			}
+		};
+		try {
+			org.eclipse.core.commands.operations.OperationHistoryFactory.getOperationHistory().execute(
+				command, new org.eclipse.core.runtime.NullProgressMonitor(), null);
+			diagramResource.save(capOverTime.diagram.part.CapOverTimeDiagramEditorUtil.getSaveOptions());
+			capOverTime.diagram.part.CapOverTimeDiagramEditorUtil.openDiagram(diagramResource);
+		} catch (org.eclipse.core.commands.ExecutionException e) {
+			capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().logError(
+				"Unable to create model and diagram", e);  //$NON-NLS-1$
+		} catch (java.io.IOException ex) {
+			capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().logError(
+				"Save operation failed for: " + diagramModelURI, ex);  //$NON-NLS-1$
+		} catch (org.eclipse.ui.PartInitException ex) {
+			capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().logError(
+				"Unable to open editor", ex);  //$NON-NLS-1$
+		}			
+		return true;
+	}
+
+	/**
+ * @generated
+ */
+	private static class DiagramRootElementSelectionPage extends capOverTime.diagram.part.ModelElementSelectionPage {
+
+		/**
+ * @generated
+ */
+		protected DiagramRootElementSelectionPage(String pageName) {
+			super(pageName);
+		}
+
+		/**
+ * @generated
+ */
+		protected String getSelectionTitle() {
+			return capOverTime.diagram.part.Messages.CapOverTimeNewDiagramFileWizard_RootSelectionPageSelectionTitle;
+		}
+
+		/**
+ * @generated
+ */
+		protected boolean validatePage() {
+			if (selectedModelElement == null) {
+				setErrorMessage(capOverTime.diagram.part.Messages.CapOverTimeNewDiagramFileWizard_RootSelectionPageNoSelectionMessage);
+				return false;
+			}
+			boolean result = org.eclipse.gmf.runtime.diagram.core.services.ViewService.getInstance().provides(
+				new org.eclipse.gmf.runtime.diagram.core.services.view.CreateDiagramViewOperation(
+					new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(selectedModelElement),
+					capOverTime.diagram.edit.parts.CapabilityOverTimeEditPart.MODEL_ID, capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT));
+			setErrorMessage(result ? null : capOverTime.diagram.part.Messages.CapOverTimeNewDiagramFileWizard_RootSelectionPageInvalidSelectionMessage);
+			return result;
+		}
+	}
+}

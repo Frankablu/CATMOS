@@ -1,0 +1,10 @@
+/*
+ * 
+ */
+package capOverTime.diagram.edit.helpers;
+
+/**
+ * @generated
+ */
+public class QualitativeValueEditHelper extends capOverTime.diagram.edit.helpers.CapOverTimeBaseEditHelper {
+	}

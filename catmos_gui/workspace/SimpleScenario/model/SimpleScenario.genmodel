@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/SimpleScenario/src" modelPluginID="SimpleScenario"
+    modelName="SimpleScenario" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>SimpleScenario.emf</foreignModel>
+  <genPackages prefix="SimpleScenario" disposableProviderFactory="true" ecorePackage="SimpleScenario.ecore#/">
+    <genClasses ecoreClass="SimpleScenario.ecore#//Scenario">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleScenario.ecore#//Scenario/OurObjects"/>
+    </genClasses>
+    <genClasses ecoreClass="SimpleScenario.ecore#//OurObject"/>
+    <genClasses ecoreClass="SimpleScenario.ecore#//Capability">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleScenario.ecore#//Capability/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleScenario.ecore#//Capability/searchObjective"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleScenario.ecore#//Capability/standAlone"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleScenario.ecore#//Capability/reuse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleScenario.ecore#//Capability/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleScenario.ecore#//Capability/endDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleScenario.ecore#//Capability/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleScenario.ecore#//Capability/colour"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleScenario.ecore#//Capability/sequentialScheduling"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SimpleScenario.ecore#//Capability/decomposes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SimpleScenario.ecore#//Capability/satisfiedBy"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SimpleScenario.ecore#//Capability/satisfies"/>
+    </genClasses>
+    <genClasses ecoreClass="SimpleScenario.ecore#//Component">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleScenario.ecore#//Component/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleScenario.ecore#//Component/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleScenario.ecore#//Component/endDate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleScenario.ecore#//Component/provides"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleScenario.ecore#//Component/upgrades"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleScenario.ecore#//Component/requires"/>
+    </genClasses>
+    <genClasses ecoreClass="SimpleScenario.ecore#//CapabilityUpgrade">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleScenario.ecore#//CapabilityUpgrade/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleScenario.ecore#//CapabilityUpgrade/targetComponent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SimpleScenario.ecore#//CapabilityUpgrade/upgrading"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

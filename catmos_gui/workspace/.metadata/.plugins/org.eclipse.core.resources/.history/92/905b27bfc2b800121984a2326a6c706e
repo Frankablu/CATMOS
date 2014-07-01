@@ -1,0 +1,51 @@
+	/*
+ * 
+ */
+package capOverTime.diagram.edit.policies;
+
+	/**
+ * @generated
+ */
+public class CapabilityOverTimeItemSemanticEditPolicy extends capOverTime.diagram.edit.policies.CapOverTimeBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public CapabilityOverTimeItemSemanticEditPolicy() {
+				super(capOverTime.diagram.providers.CapOverTimeElementTypes.CapabilityOverTime_1000);
+	}
+
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest req) {
+		if (capOverTime.diagram.providers.CapOverTimeElementTypes.TimePeriod_2001 == req.getElementType()) {
+	return getGEFWrapper(new capOverTime.diagram.edit.commands.TimePeriodCreateCommand(req));
+}
+		return super.getCreateCommand(req);
+	}
+	
+		/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getDuplicateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest req) {
+	org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain = ((org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) getHost()).getEditingDomain();
+	return getGEFWrapper(new DuplicateAnythingCommand(editingDomain, req));
+}
+	
+		/**
+ * @generated
+ */
+private static class DuplicateAnythingCommand extends org.eclipse.gmf.runtime.emf.commands.core.commands.DuplicateEObjectsCommand {
+
+		/**
+ * @generated
+ */
+public DuplicateAnythingCommand(org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain, org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest req) {
+	super(editingDomain, req.getLabel(), req.getElementsToBeDuplicated(), req.getAllDuplicatedElementsMap());
+}
+
+	}
+	
+	}

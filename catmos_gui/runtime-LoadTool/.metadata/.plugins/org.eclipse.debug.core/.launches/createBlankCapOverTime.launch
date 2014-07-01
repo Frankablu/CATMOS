@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.epsilon.migration.eclipse.dt.launching.MigrationLaunchConfigurationDelegate">
+<intAttribute key="migratedModel" value="1"/>
+<listAttribute key="models">
+<listEntry value="#&#10;#Tue Oct 08 18:01:43 BST 2013&#10;isMetamodelFileBased=false&#10;name=source&#10;readOnLoad=true&#10;storeOnDisposal=false&#10;aliases=&#10;cached=true&#10;fileBasedMetamodelUri=&#10;metamodelUri=ScenarioModel&#10;modelUri=platform\:/resource/UAV/Results/Solution0.ScenarioModel&#10;type=EMF&#10;modelFile=/UAV/Results/Solution0.ScenarioModel&#10;expand=true&#10;metamodelFile=&#10;"/>
+<listEntry value="#&#10;#Tue Oct 08 18:01:50 BST 2013&#10;isMetamodelFileBased=false&#10;name=target&#10;readOnLoad=false&#10;storeOnDisposal=true&#10;aliases=&#10;cached=true&#10;fileBasedMetamodelUri=&#10;metamodelUri=CapOverTime&#10;modelUri=platform\:/resource/UAV/Results/Solution0.capovertime&#10;type=EMF&#10;modelFile=/UAV/Results/Solution0.capovertime&#10;expand=true&#10;metamodelFile=&#10;"/>
+</listAttribute>
+<intAttribute key="originalModel" value="0"/>
+<stringAttribute key="source" value="/Tool/Scripts/createBlankCapOverTime.mig"/>
+</launchConfiguration>

@@ -1,0 +1,43 @@
+/*
+ * 
+ */
+package CapOverTime.diagram.part;
+
+/**
+ * @generated
+ */
+public class CapOverTimeDiagramActionBarContributor extends org.eclipse.gmf.runtime.diagram.ui.parts.DiagramActionBarContributor {
+
+	/**
+ * @generated
+ */
+	protected Class getEditorClass() {
+		return CapOverTime.diagram.part.CapOverTimeDiagramEditor.class;
+	}
+
+	/**
+ * @generated
+ */
+	protected String getEditorId() {
+		return CapOverTime.diagram.part.CapOverTimeDiagramEditor.ID;
+	}
+	
+	/**
+ * @generated
+ */
+	public void init(org.eclipse.ui.IActionBars bars, org.eclipse.ui.IWorkbenchPage page) {
+		super.init(bars, page);
+		// print preview
+		org.eclipse.jface.action.IMenuManager fileMenu = bars.getMenuManager().findMenuUsingPath(org.eclipse.ui.IWorkbenchActionConstants.M_FILE);
+		assert fileMenu != null;
+		org.eclipse.jface.action.IAction printPreviewAction = new org.eclipse.gmf.runtime.diagram.ui.printing.render.actions.RenderedPrintPreviewAction(new org.eclipse.gmf.runtime.diagram.ui.printing.render.actions.EnhancedPrintActionHelper());
+		fileMenu.insertBefore("print", printPreviewAction); //$NON-NLS-1$
+		org.eclipse.jface.action.IMenuManager editMenu = bars.getMenuManager().findMenuUsingPath(org.eclipse.ui.IWorkbenchActionConstants.M_EDIT);
+		assert editMenu != null;
+		if (editMenu.find("validationGroup") == null) { //$NON-NLS-1$
+			editMenu.add(new org.eclipse.jface.action.GroupMarker("validationGroup")); //$NON-NLS-1$
+		}
+		org.eclipse.jface.action.IAction validateAction = new CapOverTime.diagram.part.ValidateAction(page);
+		editMenu.appendToGroup("validationGroup", validateAction); //$NON-NLS-1$
+	}
+	}

@@ -1,0 +1,775 @@
+	/*
+ * 
+ */
+package Scenario.diagram.navigator;
+
+/**
+ * @generated
+ */
+public class ScenarioNavigatorLabelProvider extends org.eclipse.jface.viewers.LabelProvider implements org.eclipse.ui.navigator.ICommonLabelProvider, org.eclipse.jface.viewers.ITreePathLabelProvider {
+
+		/**
+ * @generated
+ */
+static {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().getImageRegistry().put("Navigator?UnknownElement", org.eclipse.jface.resource.ImageDescriptor.getMissingImageDescriptor());  //$NON-NLS-1$
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().getImageRegistry().put("Navigator?ImageNotFound", org.eclipse.jface.resource.ImageDescriptor.getMissingImageDescriptor());  //$NON-NLS-1$
+}
+	
+		/**
+ * @generated
+ */
+public void updateLabel(org.eclipse.jface.viewers.ViewerLabel label, org.eclipse.jface.viewers.TreePath elementPath) {
+	Object element = elementPath.getLastSegment();
+	if (element instanceof Scenario.diagram.navigator.ScenarioNavigatorItem && !isOwnView(((Scenario.diagram.navigator.ScenarioNavigatorItem) element).getView())) {
+		return;
+	}
+	label.setText(getText(element));
+	label.setImage(getImage(element));
+}
+	
+		/**
+ * @generated
+ */
+public org.eclipse.swt.graphics.Image getImage(Object element) {
+	if (element instanceof Scenario.diagram.navigator.ScenarioNavigatorGroup) {
+	Scenario.diagram.navigator.ScenarioNavigatorGroup group = (Scenario.diagram.navigator.ScenarioNavigatorGroup) element;
+	return Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().getBundledImage(group.getIcon());
+}
+
+	if (element instanceof Scenario.diagram.navigator.ScenarioNavigatorItem) {
+	Scenario.diagram.navigator.ScenarioNavigatorItem navigatorItem = (Scenario.diagram.navigator.ScenarioNavigatorItem) element;
+	if (!isOwnView(navigatorItem.getView())) {
+		return super.getImage(element);
+	}
+	return getImage(navigatorItem.getView());
+}
+
+	// Due to plugin.xml content will be called only for "own" views
+if (element instanceof org.eclipse.core.runtime.IAdaptable) {
+	org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) ((org.eclipse.core.runtime.IAdaptable) element).getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+	if (view != null && isOwnView(view)) {
+		return getImage(view);
+	}
+}
+
+		return super.getImage(element);
+}
+	
+		/**
+ * @generated
+ */
+public org.eclipse.swt.graphics.Image getImage(org.eclipse.gmf.runtime.notation.View view) {
+		switch (Scenario.diagram.part.ScenarioVisualIDRegistry.getVisualID(view)) {
+		case Scenario.diagram.edit.parts.Capability4EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?Scenario?Capability", Scenario.diagram.providers.ScenarioElementTypes.Capability_3024); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.ExistingComponentEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?Scenario?ExistingComponent", Scenario.diagram.providers.ScenarioElementTypes.ExistingComponent_3005); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.MeasurementEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?Scenario?Measurement", Scenario.diagram.providers.ScenarioElementTypes.Measurement_3001); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.CostEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?Scenario?Cost", Scenario.diagram.providers.ScenarioElementTypes.Cost_3025); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.BudgetEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?Scenario?Budget", Scenario.diagram.providers.ScenarioElementTypes.Budget_3009); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID:
+	return getImage("Navigator?Link?Scenario?Capability?accumulation", Scenario.diagram.providers.ScenarioElementTypes.CapabilityAccumulation_4001); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.CapabilityChangeEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?Scenario?CapabilityChange", Scenario.diagram.providers.ScenarioElementTypes.CapabilityChange_3022); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.CapabilityProvision2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?Scenario?CapabilityProvision", Scenario.diagram.providers.ScenarioElementTypes.CapabilityProvision_3017); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.AcquirableComponentEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?Scenario?AcquirableComponent", Scenario.diagram.providers.ScenarioElementTypes.AcquirableComponent_3006); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID:
+	return getImage("Navigator?Link?Scenario?Capability?decomposes", Scenario.diagram.providers.ScenarioElementTypes.CapabilityDecomposes_4002); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.FindTradeOffsEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?Scenario?FindTradeOffs", Scenario.diagram.providers.ScenarioElementTypes.FindTradeOffs_2002); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.QualitativeValueEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?Scenario?QualitativeValue", Scenario.diagram.providers.ScenarioElementTypes.QualitativeValue_3002); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.QualitativeValueDictionaryEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?Scenario?QualitativeValueDictionary", Scenario.diagram.providers.ScenarioElementTypes.QualitativeValueDictionary_2005); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.Measurement2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?Scenario?Measurement", Scenario.diagram.providers.ScenarioElementTypes.Measurement_3026); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.CapabilityUpgradeUpgradingEditPart.VISUAL_ID:
+	return getImage("Navigator?Link?Scenario?CapabilityUpgrade?upgrading", Scenario.diagram.providers.ScenarioElementTypes.CapabilityUpgradeUpgrading_4005); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.ComponentEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?Scenario?Component", Scenario.diagram.providers.ScenarioElementTypes.Component_2006); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.Budget2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?Scenario?Budget", Scenario.diagram.providers.ScenarioElementTypes.Budget_3015); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.DesireHighEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?Scenario?DesireHigh", Scenario.diagram.providers.ScenarioElementTypes.DesireHigh_3007); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.CapabilityProvision3EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?Scenario?CapabilityProvision", Scenario.diagram.providers.ScenarioElementTypes.CapabilityProvision_3018); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.QualitativeValueDictionaryGreaterThanEditPart.VISUAL_ID:
+	return getImage("Navigator?Link?Scenario?QualitativeValueDictionary?greaterThan", Scenario.diagram.providers.ScenarioElementTypes.QualitativeValueDictionaryGreaterThan_4004); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.ScenarioEditPart.VISUAL_ID:
+	return getImage("Navigator?Diagram?Scenario?Scenario", Scenario.diagram.providers.ScenarioElementTypes.Scenario_1000); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.MeasurementAggregatesEditPart.VISUAL_ID:
+	return getImage("Navigator?Link?Scenario?Measurement?aggregates", Scenario.diagram.providers.ScenarioElementTypes.MeasurementAggregates_4003); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.QualitativeValue3EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?Scenario?QualitativeValue", Scenario.diagram.providers.ScenarioElementTypes.QualitativeValue_3004); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.ExistingComponent2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?Scenario?ExistingComponent", Scenario.diagram.providers.ScenarioElementTypes.ExistingComponent_3011); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.CapabilityEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?Scenario?Capability", Scenario.diagram.providers.ScenarioElementTypes.Capability_2004); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.Capability2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?Scenario?Capability", Scenario.diagram.providers.ScenarioElementTypes.Capability_3019); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.ThroughLifePlanningEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?Scenario?ThroughLifePlanning", Scenario.diagram.providers.ScenarioElementTypes.ThroughLifePlanning_2003); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.CapabilityProvisionEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?Scenario?CapabilityProvision", Scenario.diagram.providers.ScenarioElementTypes.CapabilityProvision_2001); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.DesireLow2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?Scenario?DesireLow", Scenario.diagram.providers.ScenarioElementTypes.DesireLow_3014); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.Capability3EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?Scenario?Capability", Scenario.diagram.providers.ScenarioElementTypes.Capability_3020); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.AcquirableComponent2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?Scenario?AcquirableComponent", Scenario.diagram.providers.ScenarioElementTypes.AcquirableComponent_3012); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.ComponentU2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?Scenario?ComponentU", Scenario.diagram.providers.ScenarioElementTypes.ComponentU_3016); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.DesireLowEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?Scenario?DesireLow", Scenario.diagram.providers.ScenarioElementTypes.DesireLow_3008); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.QualitativeValue2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?Scenario?QualitativeValue", Scenario.diagram.providers.ScenarioElementTypes.QualitativeValue_3003); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.CapabilityProvision4EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?Scenario?CapabilityProvision", Scenario.diagram.providers.ScenarioElementTypes.CapabilityProvision_3023); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.ComponentUEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?Scenario?ComponentU", Scenario.diagram.providers.ScenarioElementTypes.ComponentU_3010); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.DesireHigh2EditPart.VISUAL_ID:
+	return getImage("Navigator?Node?Scenario?DesireHigh", Scenario.diagram.providers.ScenarioElementTypes.DesireHigh_3013); //$NON-NLS-1$
+case Scenario.diagram.edit.parts.CapabilityUpgradeEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?Scenario?CapabilityUpgrade", Scenario.diagram.providers.ScenarioElementTypes.CapabilityUpgrade_3021); //$NON-NLS-1$
+	}
+		return getImage("Navigator?UnknownElement", null);  //$NON-NLS-1$
+}
+	
+		/**
+ * @generated
+ */
+private org.eclipse.swt.graphics.Image getImage(String key, org.eclipse.gmf.runtime.emf.type.core.IElementType elementType) {
+	org.eclipse.jface.resource.ImageRegistry imageRegistry = Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().getImageRegistry();
+	org.eclipse.swt.graphics.Image image = imageRegistry.get(key);
+	if (image == null && elementType != null && Scenario.diagram.providers.ScenarioElementTypes.isKnownElementType(elementType)) {
+		image = Scenario.diagram.providers.ScenarioElementTypes.getImage(elementType);
+		imageRegistry.put(key, image);
+	}
+			
+	if (image == null) {
+		image = imageRegistry.get("Navigator?ImageNotFound");  //$NON-NLS-1$
+		imageRegistry.put(key, image);
+	}
+	return image;
+}
+	
+		/**
+ * @generated
+ */
+public String getText(Object element) {
+	if (element instanceof Scenario.diagram.navigator.ScenarioNavigatorGroup) {
+	Scenario.diagram.navigator.ScenarioNavigatorGroup group = (Scenario.diagram.navigator.ScenarioNavigatorGroup) element;
+	return group.getGroupName();
+}
+
+	if (element instanceof Scenario.diagram.navigator.ScenarioNavigatorItem) {
+	Scenario.diagram.navigator.ScenarioNavigatorItem navigatorItem = (Scenario.diagram.navigator.ScenarioNavigatorItem) element;
+   		if (!isOwnView(navigatorItem.getView())) {
+   			return null;
+   		}
+   		return getText(navigatorItem.getView());
+	}
+
+	// Due to plugin.xml content will be called only for "own" views
+if (element instanceof org.eclipse.core.runtime.IAdaptable) {
+	org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) ((org.eclipse.core.runtime.IAdaptable) element).getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+	if (view != null && isOwnView(view)) {
+		return getText(view);
+	}
+}
+
+		return super.getText(element);
+}
+	
+		/**
+ * @generated
+ */
+public String getText(org.eclipse.gmf.runtime.notation.View view) {
+	if (view.getElement() != null && view.getElement().eIsProxy()) {
+		return getUnresolvedDomainElementProxyText(view);
+	}
+		switch (Scenario.diagram.part.ScenarioVisualIDRegistry.getVisualID(view)) {
+		case Scenario.diagram.edit.parts.Capability4EditPart.VISUAL_ID:
+	return getCapability_3024Text(view);
+case Scenario.diagram.edit.parts.ExistingComponentEditPart.VISUAL_ID:
+	return getExistingComponent_3005Text(view);
+case Scenario.diagram.edit.parts.MeasurementEditPart.VISUAL_ID:
+	return getMeasurement_3001Text(view);
+case Scenario.diagram.edit.parts.CostEditPart.VISUAL_ID:
+	return getCost_3025Text(view);
+case Scenario.diagram.edit.parts.BudgetEditPart.VISUAL_ID:
+	return getBudget_3009Text(view);
+case Scenario.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID:
+	return getCapabilityAccumulation_4001Text(view);
+case Scenario.diagram.edit.parts.CapabilityChangeEditPart.VISUAL_ID:
+	return getCapabilityChange_3022Text(view);
+case Scenario.diagram.edit.parts.CapabilityProvision2EditPart.VISUAL_ID:
+	return getCapabilityProvision_3017Text(view);
+case Scenario.diagram.edit.parts.AcquirableComponentEditPart.VISUAL_ID:
+	return getAcquirableComponent_3006Text(view);
+case Scenario.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID:
+	return getCapabilityDecomposes_4002Text(view);
+case Scenario.diagram.edit.parts.FindTradeOffsEditPart.VISUAL_ID:
+	return getFindTradeOffs_2002Text(view);
+case Scenario.diagram.edit.parts.QualitativeValueEditPart.VISUAL_ID:
+	return getQualitativeValue_3002Text(view);
+case Scenario.diagram.edit.parts.QualitativeValueDictionaryEditPart.VISUAL_ID:
+	return getQualitativeValueDictionary_2005Text(view);
+case Scenario.diagram.edit.parts.Measurement2EditPart.VISUAL_ID:
+	return getMeasurement_3026Text(view);
+case Scenario.diagram.edit.parts.CapabilityUpgradeUpgradingEditPart.VISUAL_ID:
+	return getCapabilityUpgradeUpgrading_4005Text(view);
+case Scenario.diagram.edit.parts.ComponentEditPart.VISUAL_ID:
+	return getComponent_2006Text(view);
+case Scenario.diagram.edit.parts.Budget2EditPart.VISUAL_ID:
+	return getBudget_3015Text(view);
+case Scenario.diagram.edit.parts.DesireHighEditPart.VISUAL_ID:
+	return getDesireHigh_3007Text(view);
+case Scenario.diagram.edit.parts.CapabilityProvision3EditPart.VISUAL_ID:
+	return getCapabilityProvision_3018Text(view);
+case Scenario.diagram.edit.parts.QualitativeValueDictionaryGreaterThanEditPart.VISUAL_ID:
+	return getQualitativeValueDictionaryGreaterThan_4004Text(view);
+case Scenario.diagram.edit.parts.ScenarioEditPart.VISUAL_ID:
+	return getScenario_1000Text(view);
+case Scenario.diagram.edit.parts.MeasurementAggregatesEditPart.VISUAL_ID:
+	return getMeasurementAggregates_4003Text(view);
+case Scenario.diagram.edit.parts.QualitativeValue3EditPart.VISUAL_ID:
+	return getQualitativeValue_3004Text(view);
+case Scenario.diagram.edit.parts.ExistingComponent2EditPart.VISUAL_ID:
+	return getExistingComponent_3011Text(view);
+case Scenario.diagram.edit.parts.CapabilityEditPart.VISUAL_ID:
+	return getCapability_2004Text(view);
+case Scenario.diagram.edit.parts.Capability2EditPart.VISUAL_ID:
+	return getCapability_3019Text(view);
+case Scenario.diagram.edit.parts.ThroughLifePlanningEditPart.VISUAL_ID:
+	return getThroughLifePlanning_2003Text(view);
+case Scenario.diagram.edit.parts.CapabilityProvisionEditPart.VISUAL_ID:
+	return getCapabilityProvision_2001Text(view);
+case Scenario.diagram.edit.parts.DesireLow2EditPart.VISUAL_ID:
+	return getDesireLow_3014Text(view);
+case Scenario.diagram.edit.parts.Capability3EditPart.VISUAL_ID:
+	return getCapability_3020Text(view);
+case Scenario.diagram.edit.parts.AcquirableComponent2EditPart.VISUAL_ID:
+	return getAcquirableComponent_3012Text(view);
+case Scenario.diagram.edit.parts.ComponentU2EditPart.VISUAL_ID:
+	return getComponentU_3016Text(view);
+case Scenario.diagram.edit.parts.DesireLowEditPart.VISUAL_ID:
+	return getDesireLow_3008Text(view);
+case Scenario.diagram.edit.parts.QualitativeValue2EditPart.VISUAL_ID:
+	return getQualitativeValue_3003Text(view);
+case Scenario.diagram.edit.parts.CapabilityProvision4EditPart.VISUAL_ID:
+	return getCapabilityProvision_3023Text(view);
+case Scenario.diagram.edit.parts.ComponentUEditPart.VISUAL_ID:
+	return getComponentU_3010Text(view);
+case Scenario.diagram.edit.parts.DesireHigh2EditPart.VISUAL_ID:
+	return getDesireHigh_3013Text(view);
+case Scenario.diagram.edit.parts.CapabilityUpgradeEditPart.VISUAL_ID:
+	return getCapabilityUpgrade_3021Text(view);
+	}
+		return getUnknownElementText(view);
+}
+	
+		/**
+ * @generated
+ */
+private String getCapability_3024Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.Capability_3024, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.CapabilityName4EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5027); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getExistingComponent_3005Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.ExistingComponent_3005, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.ExistingComponentNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5006); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getMeasurement_3001Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.Measurement_3001, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.MeasurementNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5004); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getCost_3025Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.Cost_3025, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.CostNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5030); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getBudget_3009Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.Budget_3009, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.BudgetNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5010); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getCapabilityAccumulation_4001Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.CapabilityAccumulation_4001, view.getElement() != null ? view.getElement() : view, org.eclipse.gmf.runtime.common.ui.services.parser.CommonParserHint.DESCRIPTION);
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6001); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getCapabilityChange_3022Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.CapabilityChange_3022, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.CapabilityChangeNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5028); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getCapabilityProvision_3017Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.CapabilityProvision_3017, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.CapabilityProvisionName2EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5022); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getAcquirableComponent_3006Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.AcquirableComponent_3006, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.AcquirableComponentNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5007); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getCapabilityDecomposes_4002Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.CapabilityDecomposes_4002, view.getElement() != null ? view.getElement() : view, org.eclipse.gmf.runtime.common.ui.services.parser.CommonParserHint.DESCRIPTION);
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6002); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getFindTradeOffs_2002Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.FindTradeOffs_2002, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.FindTradeOffsNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5012); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getQualitativeValue_3002Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.QualitativeValue_3002, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.QualitativeValueNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5001); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getQualitativeValueDictionary_2005Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.QualitativeValueDictionary_2005, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.QualitativeValueDictionaryNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5021); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getMeasurement_3026Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.Measurement_3026, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.MeasurementName2EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5031); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getCapabilityUpgradeUpgrading_4005Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.CapabilityUpgradeUpgrading_4005, view.getElement() != null ? view.getElement() : view, org.eclipse.gmf.runtime.common.ui.services.parser.CommonParserHint.DESCRIPTION);
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6005); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getComponent_2006Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.Component_2006, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.ComponentNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5032); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getBudget_3015Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.Budget_3015, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.BudgetName2EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5017); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getDesireHigh_3007Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.DesireHigh_3007, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.DesireHighNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5008); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getCapabilityProvision_3018Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.CapabilityProvision_3018, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.CapabilityProvisionName3EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5023); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getQualitativeValueDictionaryGreaterThan_4004Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.QualitativeValueDictionaryGreaterThan_4004, view.getElement() != null ? view.getElement() : view, org.eclipse.gmf.runtime.common.ui.services.parser.CommonParserHint.DESCRIPTION);
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6004); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getScenario_1000Text(org.eclipse.gmf.runtime.notation.View view) {
+					return "";  //$NON-NLS-1$
+	}
+	/**
+ * @generated
+ */
+private String getMeasurementAggregates_4003Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.MeasurementAggregates_4003, view.getElement() != null ? view.getElement() : view, org.eclipse.gmf.runtime.common.ui.services.parser.CommonParserHint.DESCRIPTION);
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6003); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getQualitativeValue_3004Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.QualitativeValue_3004, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.QualitativeValueName3EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5003); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getExistingComponent_3011Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.ExistingComponent_3011, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.ExistingComponentName2EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5013); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getCapability_2004Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.Capability_2004, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.CapabilityNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5020); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getCapability_3019Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.Capability_3019, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.CapabilityName2EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5024); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getThroughLifePlanning_2003Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.ThroughLifePlanning_2003, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.ThroughLifePlanningNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5019); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getCapabilityProvision_2001Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.CapabilityProvision_2001, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.CapabilityProvisionNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5005); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getDesireLow_3014Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.DesireLow_3014, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.DesireLowName2EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5016); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getCapability_3020Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.Capability_3020, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.CapabilityName3EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5025); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getAcquirableComponent_3012Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.AcquirableComponent_3012, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.AcquirableComponentName2EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5014); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getComponentU_3016Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.ComponentU_3016, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.ComponentUName2EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5018); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getDesireLow_3008Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.DesireLow_3008, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.DesireLowNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5009); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getQualitativeValue_3003Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.QualitativeValue_3003, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.QualitativeValueName2EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5002); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getCapabilityProvision_3023Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.CapabilityProvision_3023, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.CapabilityProvisionName4EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5026); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getComponentU_3010Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.ComponentU_3010, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.ComponentUNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5011); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getDesireHigh_3013Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.DesireHigh_3013, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.DesireHighName2EditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5015); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getCapabilityUpgrade_3021Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = Scenario.diagram.providers.ScenarioParserProvider.getParser(Scenario.diagram.providers.ScenarioElementTypes.CapabilityUpgrade_3021, view.getElement() != null ? view.getElement() : view, Scenario.diagram.part.ScenarioVisualIDRegistry.getType(Scenario.diagram.edit.parts.CapabilityUpgradeNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5029); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	
+		/**
+ * @generated
+ */
+private String getUnknownElementText(org.eclipse.gmf.runtime.notation.View view) {
+	return "<UnknownElement Visual_ID = " + view.getType() + ">";  //$NON-NLS-1$  //$NON-NLS-2$
+}
+	
+		/**
+ * @generated
+ */
+private String getUnresolvedDomainElementProxyText(org.eclipse.gmf.runtime.notation.View view) {
+	return "<Unresolved domain element Visual_ID = " + view.getType() + ">";  //$NON-NLS-1$  //$NON-NLS-2$
+}
+	
+		/**
+ * @generated
+ */
+public void init(org.eclipse.ui.navigator.ICommonContentExtensionSite aConfig) {
+}
+
+		/**
+ * @generated
+ */
+public void restoreState(org.eclipse.ui.IMemento aMemento) {
+}
+
+		/**
+ * @generated
+ */
+public void saveState(org.eclipse.ui.IMemento aMemento) {
+}
+	
+		/**
+ * @generated
+ */
+public String getDescription(Object anElement) {
+	return null;
+}
+	
+		/**
+ * @generated
+ */
+private boolean isOwnView(org.eclipse.gmf.runtime.notation.View view) {
+	return Scenario.diagram.edit.parts.ScenarioEditPart.MODEL_ID.equals(Scenario.diagram.part.ScenarioVisualIDRegistry.getModelID(view));
+}
+
+	}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 7 resources" deleteContents="false" description="Delete 7 resources" element1="/TeaMaking/Results/2DParetoFront.png" element2="/TeaMaking/Results/Solution0.ScenarioModel" element3="/TeaMaking/Results/Solution0.scenariomodel_diagram" element4="/TeaMaking/Results/Solution1.ScenarioModel" element5="/TeaMaking/Results/Solution2.ScenarioModel" element6="/TeaMaking/Results/Solution3.ScenarioModel" element7="/TeaMaking/Results/Solution4.ScenarioModel" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="7" stamp="1403122802887"/>
+</session>

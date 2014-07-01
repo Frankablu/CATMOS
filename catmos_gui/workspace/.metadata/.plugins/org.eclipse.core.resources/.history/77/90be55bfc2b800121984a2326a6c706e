@@ -1,0 +1,203 @@
+/*
+ * 
+ */
+package capOverTime.diagram.edit.parts;
+
+/**
+ * @generated
+ */
+public class CapOverTimeEditPartFactory implements org.eclipse.gef.EditPartFactory {
+
+	/**
+ * @generated
+ */
+	public org.eclipse.gef.EditPart createEditPart(org.eclipse.gef.EditPart context, Object model) {
+		if (model instanceof org.eclipse.gmf.runtime.notation.View) {
+			org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) model;
+			switch (capOverTime.diagram.part.CapOverTimeVisualIDRegistry.getVisualID(view)) {
+				
+	case capOverTime.diagram.edit.parts.CapabilityOverTimeEditPart.VISUAL_ID:
+		return new capOverTime.diagram.edit.parts.CapabilityOverTimeEditPart(view);
+									
+	case capOverTime.diagram.edit.parts.TimePeriodEditPart.VISUAL_ID:
+		return new capOverTime.diagram.edit.parts.TimePeriodEditPart(view);
+					
+	case capOverTime.diagram.edit.parts.TimePeriodStartDateStopDateEditPart.VISUAL_ID:
+		return new capOverTime.diagram.edit.parts.TimePeriodStartDateStopDateEditPart(view);
+									
+	case capOverTime.diagram.edit.parts.CapabilityEditPart.VISUAL_ID:
+		return new capOverTime.diagram.edit.parts.CapabilityEditPart(view);
+					
+	case capOverTime.diagram.edit.parts.CapabilityNameColourEditPart.VISUAL_ID:
+		return new capOverTime.diagram.edit.parts.CapabilityNameColourEditPart(view);
+									
+	case capOverTime.diagram.edit.parts.MeasurementEditPart.VISUAL_ID:
+		return new capOverTime.diagram.edit.parts.MeasurementEditPart(view);
+					
+	case capOverTime.diagram.edit.parts.MeasurementNameEditPart.VISUAL_ID:
+		return new capOverTime.diagram.edit.parts.MeasurementNameEditPart(view);
+									
+	case capOverTime.diagram.edit.parts.QualitativeValueEditPart.VISUAL_ID:
+		return new capOverTime.diagram.edit.parts.QualitativeValueEditPart(view);
+					
+	case capOverTime.diagram.edit.parts.QualitativeValueNameEditPart.VISUAL_ID:
+		return new capOverTime.diagram.edit.parts.QualitativeValueNameEditPart(view);
+									
+	case capOverTime.diagram.edit.parts.QualitativeValue2EditPart.VISUAL_ID:
+		return new capOverTime.diagram.edit.parts.QualitativeValue2EditPart(view);
+					
+	case capOverTime.diagram.edit.parts.QualitativeValueName2EditPart.VISUAL_ID:
+		return new capOverTime.diagram.edit.parts.QualitativeValueName2EditPart(view);
+									
+	case capOverTime.diagram.edit.parts.QualitativeValue3EditPart.VISUAL_ID:
+		return new capOverTime.diagram.edit.parts.QualitativeValue3EditPart(view);
+					
+	case capOverTime.diagram.edit.parts.QualitativeValueName3EditPart.VISUAL_ID:
+		return new capOverTime.diagram.edit.parts.QualitativeValueName3EditPart(view);
+								
+	case capOverTime.diagram.edit.parts.TimePeriodTimePeriodOurObjectsCompartmentEditPart.VISUAL_ID:
+		return new capOverTime.diagram.edit.parts.TimePeriodTimePeriodOurObjectsCompartmentEditPart(view);
+
+	case capOverTime.diagram.edit.parts.CapabilityCapabilityMeasurementsCompartmentEditPart.VISUAL_ID:
+		return new capOverTime.diagram.edit.parts.CapabilityCapabilityMeasurementsCompartmentEditPart(view);
+
+	case capOverTime.diagram.edit.parts.MeasurementMeasurementCriticalValuesCompartmentEditPart.VISUAL_ID:
+		return new capOverTime.diagram.edit.parts.MeasurementMeasurementCriticalValuesCompartmentEditPart(view);
+
+	case capOverTime.diagram.edit.parts.MeasurementMeasurementBenchmarkValuesCompartmentEditPart.VISUAL_ID:
+		return new capOverTime.diagram.edit.parts.MeasurementMeasurementBenchmarkValuesCompartmentEditPart(view);
+
+	case capOverTime.diagram.edit.parts.MeasurementMeasurementProvidedValuesCompartmentEditPart.VISUAL_ID:
+		return new capOverTime.diagram.edit.parts.MeasurementMeasurementProvidedValuesCompartmentEditPart(view);
+									
+	case capOverTime.diagram.edit.parts.CapabilityAccumulationEditPart.VISUAL_ID:
+		return new capOverTime.diagram.edit.parts.CapabilityAccumulationEditPart(view);
+					
+	case capOverTime.diagram.edit.parts.WrappingLabelEditPart.VISUAL_ID:
+		return new capOverTime.diagram.edit.parts.WrappingLabelEditPart(view);
+
+									
+	case capOverTime.diagram.edit.parts.CapabilityDecomposesEditPart.VISUAL_ID:
+		return new capOverTime.diagram.edit.parts.CapabilityDecomposesEditPart(view);
+					
+	case capOverTime.diagram.edit.parts.WrappingLabel2EditPart.VISUAL_ID:
+		return new capOverTime.diagram.edit.parts.WrappingLabel2EditPart(view);
+
+									
+	case capOverTime.diagram.edit.parts.CapabilitySatisfiesEditPart.VISUAL_ID:
+		return new capOverTime.diagram.edit.parts.CapabilitySatisfiesEditPart(view);
+					
+	case capOverTime.diagram.edit.parts.WrappingLabel3EditPart.VISUAL_ID:
+		return new capOverTime.diagram.edit.parts.WrappingLabel3EditPart(view);
+
+							}
+		}
+		return createUnrecognizedEditPart(context, model);
+	}
+
+	/**
+ * @generated
+ */
+	 private org.eclipse.gef.EditPart createUnrecognizedEditPart(org.eclipse.gef.EditPart context, Object model) {
+	 	// Handle creation of unrecognized child node EditParts here
+	 	return null;
+	 }
+
+	/**
+ * @generated
+ */
+	public static org.eclipse.gef.tools.CellEditorLocator getTextCellEditorLocator(
+			org.eclipse.gmf.runtime.diagram.ui.editparts.ITextAwareEditPart source) {
+        if (source.getFigure() instanceof org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel)
+            return new TextCellEditorLocator((org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel) source.getFigure());
+        else {
+            return new LabelCellEditorLocator((org.eclipse.draw2d.Label) source.getFigure());
+        }
+    }
+
+	/**
+ * @generated
+ */
+	static private class TextCellEditorLocator implements org.eclipse.gef.tools.CellEditorLocator {
+
+		/**
+ * @generated
+ */
+		private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel wrapLabel;
+
+		/**
+ * @generated
+ */
+		public TextCellEditorLocator(org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel wrapLabel) {
+			this.wrapLabel = wrapLabel;
+		}
+
+		/**
+ * @generated
+ */
+		public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getWrapLabel() {
+			return wrapLabel;
+		}
+
+		/**
+ * @generated
+ */
+		public void relocate(org.eclipse.jface.viewers.CellEditor celleditor) {
+			org.eclipse.swt.widgets.Text text = (org.eclipse.swt.widgets.Text) celleditor.getControl();
+			org.eclipse.draw2d.geometry.Rectangle rect = getWrapLabel().getTextBounds().getCopy();
+			getWrapLabel().translateToAbsolute(rect);
+			if (!text.getFont().isDisposed()) {
+				if (getWrapLabel().isTextWrapOn() && getWrapLabel().getText().length() > 0) {
+					rect.setSize(new org.eclipse.draw2d.geometry.Dimension(text.computeSize(rect.width, org.eclipse.swt.SWT.DEFAULT)));
+				} else {
+					int avr = org.eclipse.draw2d.FigureUtilities.getFontMetrics(text.getFont()).getAverageCharWidth();
+					rect.setSize(new org.eclipse.draw2d.geometry.Dimension(text.computeSize(org.eclipse.swt.SWT.DEFAULT, org.eclipse.swt.SWT.DEFAULT)).expand(avr * 2, 0));
+				}
+			}
+			if (!rect.equals(new org.eclipse.draw2d.geometry.Rectangle(text.getBounds()))) {
+				text.setBounds(rect.x, rect.y, rect.width, rect.height);
+			}
+		}
+	}
+
+	/**
+ * @generated
+ */
+	private static class LabelCellEditorLocator implements org.eclipse.gef.tools.CellEditorLocator {
+
+		/**
+ * @generated
+ */
+		private org.eclipse.draw2d.Label label;
+
+		/**
+ * @generated
+ */
+		public LabelCellEditorLocator(org.eclipse.draw2d.Label label) {
+			this.label = label;
+		}
+
+		/**
+ * @generated
+ */
+		public org.eclipse.draw2d.Label getLabel() {
+			return label;
+		}
+
+		/**
+ * @generated
+ */
+		public void relocate(org.eclipse.jface.viewers.CellEditor celleditor) {
+			org.eclipse.swt.widgets.Text text = (org.eclipse.swt.widgets.Text) celleditor.getControl();
+			org.eclipse.draw2d.geometry.Rectangle rect = getLabel().getTextBounds().getCopy();
+			getLabel().translateToAbsolute(rect);
+			if (!text.getFont().isDisposed()) {
+				int avr = org.eclipse.draw2d.FigureUtilities.getFontMetrics(text.getFont()).getAverageCharWidth();
+				rect.setSize(new org.eclipse.draw2d.geometry.Dimension(text.computeSize(org.eclipse.swt.SWT.DEFAULT, org.eclipse.swt.SWT.DEFAULT)).expand(avr * 2, 0));
+			}
+			if (!rect.equals(new org.eclipse.draw2d.geometry.Rectangle(text.getBounds()))) {
+				text.setBounds(rect.x, rect.y, rect.width, rect.height);
+			}
+		}
+	}
+}

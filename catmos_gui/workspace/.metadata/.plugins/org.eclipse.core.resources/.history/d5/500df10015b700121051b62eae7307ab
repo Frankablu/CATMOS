@@ -1,0 +1,35 @@
+	/*
+ * 
+ */
+package Scenario.diagram.edit.policies;
+
+	/**
+ * @generated
+ */
+public class FindTradeOffsFindTradeOffsConstraintsCompartmentItemSemanticEditPolicy extends Scenario.diagram.edit.policies.ScenarioBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public FindTradeOffsFindTradeOffsConstraintsCompartmentItemSemanticEditPolicy() {
+				super(Scenario.diagram.providers.ScenarioElementTypes.FindTradeOffs_2002);
+	}
+
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest req) {
+		if (Scenario.diagram.providers.ScenarioElementTypes.DesireHigh_3007 == req.getElementType()) {
+	return getGEFWrapper(new Scenario.diagram.edit.commands.DesireHighCreateCommand(req));
+}
+		if (Scenario.diagram.providers.ScenarioElementTypes.DesireLow_3008 == req.getElementType()) {
+	return getGEFWrapper(new Scenario.diagram.edit.commands.DesireLowCreateCommand(req));
+}
+		if (Scenario.diagram.providers.ScenarioElementTypes.Budget_3009 == req.getElementType()) {
+	return getGEFWrapper(new Scenario.diagram.edit.commands.BudgetCreateCommand(req));
+}
+		return super.getCreateCommand(req);
+	}
+	
+	}

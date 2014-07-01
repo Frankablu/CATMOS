@@ -1,0 +1,29 @@
+	/*
+ * 
+ */
+package Scenario.diagram.edit.policies;
+
+	/**
+ * @generated
+ */
+public class CapabilityUpgradeCapabilityUpgradeCapabilityChangesCompartmentItemSemanticEditPolicy extends Scenario.diagram.edit.policies.ScenarioBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public CapabilityUpgradeCapabilityUpgradeCapabilityChangesCompartmentItemSemanticEditPolicy() {
+				super(Scenario.diagram.providers.ScenarioElementTypes.CapabilityUpgrade_3021);
+	}
+
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest req) {
+		if (Scenario.diagram.providers.ScenarioElementTypes.CapabilityChange_3022 == req.getElementType()) {
+	return getGEFWrapper(new Scenario.diagram.edit.commands.CapabilityChangeCreateCommand(req));
+}
+		return super.getCreateCommand(req);
+	}
+	
+	}

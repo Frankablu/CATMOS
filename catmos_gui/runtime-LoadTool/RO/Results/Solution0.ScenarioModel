@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="ScenarioModel">
+  <OurObjects xsi:type="p:Capability" name="SingleTargetDPS" searchObjective="true" standAlone="true" status="1.0671" colour="Yellow">
+    <measurements name="DPSOutput" criticalValue="0.0" benchmarkValue="500.0" providedValue="33.55" script="&#xA;skillDamage = {0,0,0,0,0}&#xA;skillCastTime = {0,0,0,0,0}&#xA;skillColdDownTime = {0,0,0,0,0}&#xA;&#xA;skillDamage[1] = getScenarioMeasure(&quot;Skill1Damage&quot;)&#xA;skillCastTime[1] = getScenarioMeasure(&quot;Skill1CastTime&quot;)&#xA;skillColdDownTime[1] = getScenarioMeasure(&quot;Skill1ColdDownTime&quot;)&#xA;&#xA;skillDamage[2] = getScenarioMeasure(&quot;Skill2Damage&quot;)&#xA;skillCastTime[2] = getScenarioMeasure(&quot;Skill2CastTime&quot;)&#xA;skillColdDownTime[2] = getScenarioMeasure(&quot;Skill2ColdDownTime&quot;)&#xA;&#xA;skillDamage[3] = getScenarioMeasure(&quot;Skill3Damage&quot;)&#xA;skillCastTime[3] = getScenarioMeasure(&quot;Skill3CastTime&quot;)&#xA;skillColdDownTime[3] = getScenarioMeasure(&quot;Skill3ColdDownTime&quot;)&#xA;&#xA;skillDamage[4] = getScenarioMeasure(&quot;Skill4Damage&quot;)&#xA;skillCastTime[4] = getScenarioMeasure(&quot;Skill4CastTime&quot;)&#xA;skillColdDownTime[4] = getScenarioMeasure(&quot;Skill4ColdDownTime&quot;)&#xA;&#xA;skillDamage[5] = getScenarioMeasure(&quot;Skill5Damage&quot;)&#xA;skillCastTime[5] = getScenarioMeasure(&quot;Skill5CastTime&quot;)&#xA;skillColdDownTime[5] = getScenarioMeasure(&quot;Skill5ColdDownTime&quot;)&#xA;&#xA;skillColdDown = {0,0,0,0,0}&#xA;simulatedTime = 0&#xA;totalDamage = 0&#xA;&#xA;while simulatedTime &lt;= 60 do&#xA;&#xA;useSkill = 1&#xA;&#xA;for skillNo = 1, 5 do&#xA;&#x9;if skillColdDown[skillNo] &lt;= simulatedTime then&#xA;&#x9;&#x9;useSkill = skillNo&#xA;&#x9;&#x9;break&#xA;&#x9;end&#xA;end&#xA;&#xA;totalDamage = totalDamage + skillDamage[useSkill]&#xA;skillColdDown[useSkill] = simulatedTime + skillColdDownTime[useSkill]&#xA;simulatedTime = simulatedTime + skillCastTime[useSkill]&#xA;&#xA;if skillCastTime[useSkill] &lt; 1 then&#xA;simulatedTime = simulatedTime + 1.0 - skillCastTime[useSkill]&#xA;end&#xA;&#xA;end&#xA;&#xA;dps = totalDamage / 60.0&#xA;&#xA;output = dps&#xA;&#xA;&#xA;"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Skill1" status="1.68833" colour="Yellow" satisfiedBy="//@OurObjects.6/@provides.0">
+    <measurements name="Skill1Damage" criticalValue="0.0" benchmarkValue="200.0" providedValue="33.0"/>
+    <measurements name="Skill1CastTime" criticalValue="10.0" benchmarkValue="0.0" providedValue="1.0"/>
+    <measurements name="Skill1ColdDownTime" criticalValue="10.0" benchmarkValue="0.0" providedValue="0.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Skill2" status="0.0" colour="Red" satisfiedBy="//@OurObjects.7/@provides.0">
+    <measurements name="Skill2Damage" criticalValue="0.0" benchmarkValue="200.0" providedValue="0.0"/>
+    <measurements name="Skill2CastTime" criticalValue="10.0" benchmarkValue="0.0" providedValue="0.0"/>
+    <measurements name="Skill2ColdDownTime" criticalValue="10.0" benchmarkValue="0.0" providedValue="0.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Skill3" status="1.65833" colour="Yellow" satisfiedBy="//@OurObjects.8/@provides.0">
+    <measurements name="Skill3Damage" criticalValue="0.0" benchmarkValue="200.0" providedValue="15.0"/>
+    <measurements name="Skill3CastTime" criticalValue="10.0" benchmarkValue="0.0" providedValue="1.0"/>
+    <measurements name="Skill3ColdDownTime" criticalValue="10.0" benchmarkValue="0.0" providedValue="0.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Skill4" status="1.69333" colour="Yellow" satisfiedBy="//@OurObjects.9/@provides.0">
+    <measurements name="Skill4Damage" criticalValue="0.0" benchmarkValue="200.0" providedValue="26.0"/>
+    <measurements name="Skill4CastTime" criticalValue="10.0" benchmarkValue="0.0" providedValue="0.5"/>
+    <measurements name="Skill4ColdDownTime" criticalValue="10.0" benchmarkValue="0.0" providedValue="0.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Skill5" status="0.0" colour="Red" satisfiedBy="//@OurObjects.10/@provides.0">
+    <measurements name="Skill5Damage" criticalValue="0.0" benchmarkValue="200.0" providedValue="0.0"/>
+    <measurements name="Skill5CastTime" criticalValue="10.0" benchmarkValue="0.0" providedValue="0.0"/>
+    <measurements name="Skill5ColdDownTime" criticalValue="10.0" benchmarkValue="0.0" providedValue="0.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Connection1">
+    <provides xsi:type="p:CapabilityProvision" name="Skill1" satisfies="//@OurObjects.1">
+      <measurements name="Skill1Damage" providedValue="0.0" script="output = getMeasure(&quot;SkillDamage&quot;)"/>
+      <measurements name="Skill1CastTime" providedValue="0.0" script="output = getMeasure(&quot;SkillCastTime&quot;)"/>
+      <measurements name="Skill1ColdDownTime" providedValue="0.0" script="output = getMeasure(&quot;SkillColdDownTime&quot;)"/>
+    </provides>
+    <requires name="Skill" status="1.69333" colour="Yellow" satisfiedBy="//@OurObjects.12/@provides.0">
+      <measurements name="SkillDamage" criticalValue="0.0" benchmarkValue="200.0" providedValue="26.0"/>
+      <measurements name="SkillCastTime" criticalValue="10.0" benchmarkValue="0.0" providedValue="0.5"/>
+      <measurements name="SkillColdDownTime" criticalValue="10.0" benchmarkValue="0.0" providedValue="0.0"/>
+    </requires>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Connection2">
+    <provides xsi:type="p:CapabilityProvision" name="Skill2" satisfies="//@OurObjects.2">
+      <measurements name="Skill2Damage" providedValue="0.0" script="output = getMeasure(&quot;SkillDamage&quot;)"/>
+      <measurements name="Skill2CastTime" providedValue="0.0" script="output = getMeasure(&quot;SkillCastTime&quot;)"/>
+      <measurements name="Skill2ColdDownTime" providedValue="0.0" script="output = getMeasure(&quot;SkillColdDownTime&quot;)"/>
+    </provides>
+    <requires name="Skill">
+      <measurements name="SkillDamage" criticalValue="0.0" benchmarkValue="200.0" providedValue="26.0"/>
+      <measurements name="SkillCastTime" criticalValue="10.0" benchmarkValue="0.0" providedValue="0.5"/>
+      <measurements name="SkillColdDownTime" criticalValue="10.0" benchmarkValue="0.0" providedValue="0.0"/>
+    </requires>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Connection3">
+    <provides xsi:type="p:CapabilityProvision" name="Skill3" satisfies="//@OurObjects.3">
+      <measurements name="Skill3Damage" providedValue="0.0" script="output = getMeasure(&quot;SkillDamage&quot;)"/>
+      <measurements name="Skill3CastTime" providedValue="0.0" script="output = getMeasure(&quot;SkillCastTime&quot;)"/>
+      <measurements name="Skill3ColdDownTime" providedValue="0.0" script="output = getMeasure(&quot;SkillColdDownTime&quot;)"/>
+    </provides>
+    <requires name="Skill" satisfiedBy="//@OurObjects.13/@provides.0">
+      <measurements name="SkillDamage" criticalValue="0.0" benchmarkValue="200.0" providedValue="26.0"/>
+      <measurements name="SkillCastTime" criticalValue="10.0" benchmarkValue="0.0" providedValue="0.5"/>
+      <measurements name="SkillColdDownTime" criticalValue="10.0" benchmarkValue="0.0" providedValue="0.0"/>
+    </requires>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Connection4">
+    <provides xsi:type="p:CapabilityProvision" name="Skill4" satisfies="//@OurObjects.4">
+      <measurements name="Skill4Damage" providedValue="0.0" script="output = getMeasure(&quot;SkillDamage&quot;)"/>
+      <measurements name="Skill4CastTime" providedValue="0.0" script="output = getMeasure(&quot;SkillCastTime&quot;)"/>
+      <measurements name="Skill4ColdDownTime" providedValue="0.0" script="output = getMeasure(&quot;SkillColdDownTime&quot;)"/>
+    </provides>
+    <requires name="Skill" satisfiedBy="//@OurObjects.11/@provides.0">
+      <measurements name="SkillDamage" criticalValue="0.0" benchmarkValue="200.0" providedValue="26.0"/>
+      <measurements name="SkillCastTime" criticalValue="10.0" benchmarkValue="0.0" providedValue="0.5"/>
+      <measurements name="SkillColdDownTime" criticalValue="10.0" benchmarkValue="0.0" providedValue="0.0"/>
+    </requires>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Connection5">
+    <provides xsi:type="p:CapabilityProvision" name="Skill5" satisfies="//@OurObjects.5">
+      <measurements name="Skill5Damage" providedValue="0.0" script="output = getMeasure(&quot;SkillDamage&quot;)"/>
+      <measurements name="Skill5CastTime" providedValue="0.0" script="output = getMeasure(&quot;SkillCastTime&quot;)"/>
+      <measurements name="Skill5ColdDownTime" providedValue="0.0" script="output = getMeasure(&quot;SkillColdDownTime&quot;)"/>
+    </provides>
+    <requires name="Skill">
+      <measurements name="SkillDamage" criticalValue="0.0" benchmarkValue="200.0" providedValue="26.0"/>
+      <measurements name="SkillCastTime" criticalValue="10.0" benchmarkValue="0.0" providedValue="0.5"/>
+      <measurements name="SkillColdDownTime" criticalValue="10.0" benchmarkValue="0.0" providedValue="0.0"/>
+    </requires>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ColdBolt">
+    <provides xsi:type="p:CapabilityProvision" name="Skill" reuse="1" satisfies="//@OurObjects.9/@requires.0">
+      <measurements name="SkillDamage" providedValue="26.0"/>
+      <measurements name="SkillCastTime" providedValue="0.5"/>
+      <measurements name="SkillColdDownTime" providedValue="0.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="FireBolt">
+    <provides xsi:type="p:CapabilityProvision" name="Skill" reuse="1" satisfies="//@OurObjects.6/@requires.0">
+      <measurements name="SkillDamage" providedValue="33.0"/>
+      <measurements name="SkillCastTime" providedValue="1.0"/>
+      <measurements name="SkillColdDownTime" providedValue="0.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="LightningBolt">
+    <provides xsi:type="p:CapabilityProvision" name="Skill" reuse="1" satisfies="//@OurObjects.8/@requires.0">
+      <measurements name="SkillDamage" providedValue="15.0"/>
+      <measurements name="SkillCastTime" providedValue="0.0"/>
+      <measurements name="SkillColdDownTime" providedValue="0.0"/>
+    </provides>
+  </OurObjects>
+</p:Scenario>

@@ -1,0 +1,732 @@
+/*
+ * 
+ */
+package Scenario.diagram.providers;
+
+/**
+ * @generated
+ */
+public class ScenarioParserProvider extends org.eclipse.gmf.runtime.common.core.service.AbstractProvider implements org.eclipse.gmf.runtime.common.ui.services.parser.IParserProvider {
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser capabilityProvisionName_5033Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getCapabilityProvisionName_5033Parser() {
+		if (capabilityProvisionName_5033Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getCapability_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								capabilityProvisionName_5033Parser = parser;
+		}
+		return capabilityProvisionName_5033Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser findTradeOffsName_5034Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getFindTradeOffsName_5034Parser() {
+		if (findTradeOffsName_5034Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getRunConfiguration_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								findTradeOffsName_5034Parser = parser;
+		}
+		return findTradeOffsName_5034Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser throughLifePlanningName_5035Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getThroughLifePlanningName_5035Parser() {
+		if (throughLifePlanningName_5035Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getRunConfiguration_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								throughLifePlanningName_5035Parser = parser;
+		}
+		return throughLifePlanningName_5035Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser capabilityName_5036Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getCapabilityName_5036Parser() {
+		if (capabilityName_5036Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getCapability_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								capabilityName_5036Parser = parser;
+		}
+		return capabilityName_5036Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser qualitativeValueDictionaryName_5037Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getQualitativeValueDictionaryName_5037Parser() {
+		if (qualitativeValueDictionaryName_5037Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getQualitativeValueDictionary_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								qualitativeValueDictionaryName_5037Parser = parser;
+		}
+		return qualitativeValueDictionaryName_5037Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser componentName_5038Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getComponentName_5038Parser() {
+		if (componentName_5038Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getComponent_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								componentName_5038Parser = parser;
+		}
+		return componentName_5038Parser;
+	}
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser measurementName_5004Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getMeasurementName_5004Parser() {
+		if (measurementName_5004Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getMeasurement_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								measurementName_5004Parser = parser;
+		}
+		return measurementName_5004Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser qualitativeValueName_5001Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getQualitativeValueName_5001Parser() {
+		if (qualitativeValueName_5001Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getQualitativeValue_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								qualitativeValueName_5001Parser = parser;
+		}
+		return qualitativeValueName_5001Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser qualitativeValueName_5002Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getQualitativeValueName_5002Parser() {
+		if (qualitativeValueName_5002Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getQualitativeValue_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								qualitativeValueName_5002Parser = parser;
+		}
+		return qualitativeValueName_5002Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser qualitativeValueName_5003Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getQualitativeValueName_5003Parser() {
+		if (qualitativeValueName_5003Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getQualitativeValue_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								qualitativeValueName_5003Parser = parser;
+		}
+		return qualitativeValueName_5003Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser existingComponentName_5006Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getExistingComponentName_5006Parser() {
+		if (existingComponentName_5006Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getComponentU_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								existingComponentName_5006Parser = parser;
+		}
+		return existingComponentName_5006Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser acquirableComponentName_5007Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getAcquirableComponentName_5007Parser() {
+		if (acquirableComponentName_5007Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getComponentU_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								acquirableComponentName_5007Parser = parser;
+		}
+		return acquirableComponentName_5007Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser desireHighName_5008Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getDesireHighName_5008Parser() {
+		if (desireHighName_5008Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getDesireHigh_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								desireHighName_5008Parser = parser;
+		}
+		return desireHighName_5008Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser desireLowName_5009Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getDesireLowName_5009Parser() {
+		if (desireLowName_5009Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getDesireLow_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								desireLowName_5009Parser = parser;
+		}
+		return desireLowName_5009Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser budgetName_5010Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getBudgetName_5010Parser() {
+		if (budgetName_5010Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getBudget_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								budgetName_5010Parser = parser;
+		}
+		return budgetName_5010Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser componentUName_5011Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getComponentUName_5011Parser() {
+		if (componentUName_5011Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getComponentU_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								componentUName_5011Parser = parser;
+		}
+		return componentUName_5011Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser existingComponentName_5013Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getExistingComponentName_5013Parser() {
+		if (existingComponentName_5013Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getComponentU_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								existingComponentName_5013Parser = parser;
+		}
+		return existingComponentName_5013Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser acquirableComponentName_5014Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getAcquirableComponentName_5014Parser() {
+		if (acquirableComponentName_5014Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getComponentU_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								acquirableComponentName_5014Parser = parser;
+		}
+		return acquirableComponentName_5014Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser desireHighName_5015Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getDesireHighName_5015Parser() {
+		if (desireHighName_5015Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getDesireHigh_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								desireHighName_5015Parser = parser;
+		}
+		return desireHighName_5015Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser desireLowName_5016Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getDesireLowName_5016Parser() {
+		if (desireLowName_5016Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getDesireLow_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								desireLowName_5016Parser = parser;
+		}
+		return desireLowName_5016Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser budgetName_5017Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getBudgetName_5017Parser() {
+		if (budgetName_5017Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getBudget_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								budgetName_5017Parser = parser;
+		}
+		return budgetName_5017Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser componentUName_5018Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getComponentUName_5018Parser() {
+		if (componentUName_5018Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getComponentU_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								componentUName_5018Parser = parser;
+		}
+		return componentUName_5018Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser capabilityProvisionName_5022Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getCapabilityProvisionName_5022Parser() {
+		if (capabilityProvisionName_5022Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getCapability_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								capabilityProvisionName_5022Parser = parser;
+		}
+		return capabilityProvisionName_5022Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser capabilityProvisionName_5023Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getCapabilityProvisionName_5023Parser() {
+		if (capabilityProvisionName_5023Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getCapability_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								capabilityProvisionName_5023Parser = parser;
+		}
+		return capabilityProvisionName_5023Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser capabilityName_5024Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getCapabilityName_5024Parser() {
+		if (capabilityName_5024Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getCapability_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								capabilityName_5024Parser = parser;
+		}
+		return capabilityName_5024Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser capabilityName_5025Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getCapabilityName_5025Parser() {
+		if (capabilityName_5025Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getCapability_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								capabilityName_5025Parser = parser;
+		}
+		return capabilityName_5025Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser capabilityUpgradeName_5029Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getCapabilityUpgradeName_5029Parser() {
+		if (capabilityUpgradeName_5029Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getCapabilityUpgrade_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								capabilityUpgradeName_5029Parser = parser;
+		}
+		return capabilityUpgradeName_5029Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser capabilityChangeName_5028Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getCapabilityChangeName_5028Parser() {
+		if (capabilityChangeName_5028Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getCapabilityChange_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								capabilityChangeName_5028Parser = parser;
+		}
+		return capabilityChangeName_5028Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser capabilityProvisionName_5026Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getCapabilityProvisionName_5026Parser() {
+		if (capabilityProvisionName_5026Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getCapability_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								capabilityProvisionName_5026Parser = parser;
+		}
+		return capabilityProvisionName_5026Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser capabilityName_5027Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getCapabilityName_5027Parser() {
+		if (capabilityName_5027Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getCapability_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								capabilityName_5027Parser = parser;
+		}
+		return capabilityName_5027Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser costName_5030Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getCostName_5030Parser() {
+		if (costName_5030Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getCost_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								costName_5030Parser = parser;
+		}
+		return costName_5030Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser measurementName_5031Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getMeasurementName_5031Parser() {
+		if (measurementName_5031Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				Scenario.ScenarioPackage.eINSTANCE.getMeasurement_Name()
+			};
+				Scenario.diagram.parsers.MessageFormatParser parser = new Scenario.diagram.parsers.MessageFormatParser(features);
+								measurementName_5031Parser = parser;
+		}
+		return measurementName_5031Parser;
+	}
+
+	
+
+		/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParser(int visualID) {
+		switch (visualID) {
+			case Scenario.diagram.edit.parts.CapabilityProvisionNameEditPart.VISUAL_ID: return getCapabilityProvisionName_5033Parser();
+	case Scenario.diagram.edit.parts.FindTradeOffsNameEditPart.VISUAL_ID: return getFindTradeOffsName_5034Parser();
+	case Scenario.diagram.edit.parts.ThroughLifePlanningNameEditPart.VISUAL_ID: return getThroughLifePlanningName_5035Parser();
+	case Scenario.diagram.edit.parts.CapabilityNameEditPart.VISUAL_ID: return getCapabilityName_5036Parser();
+	case Scenario.diagram.edit.parts.QualitativeValueDictionaryNameEditPart.VISUAL_ID: return getQualitativeValueDictionaryName_5037Parser();
+	case Scenario.diagram.edit.parts.ComponentNameEditPart.VISUAL_ID: return getComponentName_5038Parser();
+			case Scenario.diagram.edit.parts.MeasurementNameEditPart.VISUAL_ID: return getMeasurementName_5004Parser();
+	case Scenario.diagram.edit.parts.QualitativeValueNameEditPart.VISUAL_ID: return getQualitativeValueName_5001Parser();
+	case Scenario.diagram.edit.parts.QualitativeValueName2EditPart.VISUAL_ID: return getQualitativeValueName_5002Parser();
+	case Scenario.diagram.edit.parts.QualitativeValueName3EditPart.VISUAL_ID: return getQualitativeValueName_5003Parser();
+	case Scenario.diagram.edit.parts.ExistingComponentNameEditPart.VISUAL_ID: return getExistingComponentName_5006Parser();
+	case Scenario.diagram.edit.parts.AcquirableComponentNameEditPart.VISUAL_ID: return getAcquirableComponentName_5007Parser();
+	case Scenario.diagram.edit.parts.DesireHighNameEditPart.VISUAL_ID: return getDesireHighName_5008Parser();
+	case Scenario.diagram.edit.parts.DesireLowNameEditPart.VISUAL_ID: return getDesireLowName_5009Parser();
+	case Scenario.diagram.edit.parts.BudgetNameEditPart.VISUAL_ID: return getBudgetName_5010Parser();
+	case Scenario.diagram.edit.parts.ComponentUNameEditPart.VISUAL_ID: return getComponentUName_5011Parser();
+	case Scenario.diagram.edit.parts.ExistingComponentName2EditPart.VISUAL_ID: return getExistingComponentName_5013Parser();
+	case Scenario.diagram.edit.parts.AcquirableComponentName2EditPart.VISUAL_ID: return getAcquirableComponentName_5014Parser();
+	case Scenario.diagram.edit.parts.DesireHighName2EditPart.VISUAL_ID: return getDesireHighName_5015Parser();
+	case Scenario.diagram.edit.parts.DesireLowName2EditPart.VISUAL_ID: return getDesireLowName_5016Parser();
+	case Scenario.diagram.edit.parts.BudgetName2EditPart.VISUAL_ID: return getBudgetName_5017Parser();
+	case Scenario.diagram.edit.parts.ComponentUName2EditPart.VISUAL_ID: return getComponentUName_5018Parser();
+	case Scenario.diagram.edit.parts.CapabilityProvisionName2EditPart.VISUAL_ID: return getCapabilityProvisionName_5022Parser();
+	case Scenario.diagram.edit.parts.CapabilityProvisionName3EditPart.VISUAL_ID: return getCapabilityProvisionName_5023Parser();
+	case Scenario.diagram.edit.parts.CapabilityName2EditPart.VISUAL_ID: return getCapabilityName_5024Parser();
+	case Scenario.diagram.edit.parts.CapabilityName3EditPart.VISUAL_ID: return getCapabilityName_5025Parser();
+	case Scenario.diagram.edit.parts.CapabilityUpgradeNameEditPart.VISUAL_ID: return getCapabilityUpgradeName_5029Parser();
+	case Scenario.diagram.edit.parts.CapabilityChangeNameEditPart.VISUAL_ID: return getCapabilityChangeName_5028Parser();
+	case Scenario.diagram.edit.parts.CapabilityProvisionName4EditPart.VISUAL_ID: return getCapabilityProvisionName_5026Parser();
+	case Scenario.diagram.edit.parts.CapabilityName4EditPart.VISUAL_ID: return getCapabilityName_5027Parser();
+	case Scenario.diagram.edit.parts.CostNameEditPart.VISUAL_ID: return getCostName_5030Parser();
+	case Scenario.diagram.edit.parts.MeasurementName2EditPart.VISUAL_ID: return getMeasurementName_5031Parser();
+				}
+		return null;
+	}
+		/**
+ * Utility method that consults ParserService
+ * @generated
+ */
+	public static org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParser(org.eclipse.gmf.runtime.emf.type.core.IElementType type, org.eclipse.emf.ecore.EObject object, String parserHint) {
+		return org.eclipse.gmf.runtime.common.ui.services.parser.ParserService.getInstance().getParser(new HintAdapter(type, object, parserHint));
+	}
+		/**
+ * @generated
+ */
+	public org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParser(
+			org.eclipse.core.runtime.IAdaptable hint) {
+		String vid = (String) hint.getAdapter(String.class);
+		if (vid != null) {
+			return getParser(Scenario.diagram.part.ScenarioVisualIDRegistry.getVisualID(vid));
+		}
+		org.eclipse.gmf.runtime.notation.View view =
+				(org.eclipse.gmf.runtime.notation.View) hint.getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+		if (view != null) {
+			return getParser(Scenario.diagram.part.ScenarioVisualIDRegistry.getVisualID(view));
+		}
+		return null;
+	}
+
+		/**
+ * @generated
+ */
+	public boolean provides(org.eclipse.gmf.runtime.common.core.service.IOperation operation) {
+		if (operation instanceof org.eclipse.gmf.runtime.common.ui.services.parser.GetParserOperation) {
+			org.eclipse.core.runtime.IAdaptable hint =
+					((org.eclipse.gmf.runtime.common.ui.services.parser.GetParserOperation) operation).getHint();
+			if (Scenario.diagram.providers.ScenarioElementTypes.getElement(hint) == null) {
+				return false;
+			}
+			return getParser(hint) != null;
+		}
+		return false;
+	}
+
+		/**
+ * @generated
+ */
+	private static class HintAdapter extends org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter {
+
+		/**
+ * @generated
+ */
+		private final org.eclipse.gmf.runtime.emf.type.core.IElementType elementType;
+
+		/**
+ * @generated
+ */
+		public HintAdapter(org.eclipse.gmf.runtime.emf.type.core.IElementType type,
+				org.eclipse.emf.ecore.EObject object, String parserHint) {
+			super(object, parserHint);
+			assert type != null;
+			elementType = type;
+		}
+
+		/**
+ * @generated
+ */
+		public Object getAdapter(Class adapter) {
+			if (org.eclipse.gmf.runtime.emf.type.core.IElementType.class.equals(adapter)) {
+				return elementType;
+			}
+			return super.getAdapter(adapter);
+		}
+	}
+
+	}

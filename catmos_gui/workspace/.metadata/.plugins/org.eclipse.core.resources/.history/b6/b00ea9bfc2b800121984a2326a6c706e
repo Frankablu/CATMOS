@@ -1,0 +1,17 @@
+/*
+ * 
+ */
+package capOverTime.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramRulersAndGridPreferencePage extends org.eclipse.gmf.runtime.diagram.ui.preferences.RulerGridPreferencePage {
+
+	/**
+ * @generated
+ */
+	public DiagramRulersAndGridPreferencePage() {
+		setPreferenceStore(capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().getPreferenceStore());
+	}
+}

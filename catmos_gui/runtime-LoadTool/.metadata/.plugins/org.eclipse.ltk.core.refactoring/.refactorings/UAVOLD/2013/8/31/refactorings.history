@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;UAVTL/UAV.scen&apos; to &apos;UAVTL.scen&apos;" description="Rename resource &apos;UAV.scen&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="UAV.scen" name="UAVTL.scen" stamp="1375450208074" updateReferences="true"/>
+</session>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;UAVBase/UAVBaseline.lua&apos; to &apos;UAVBase.lua&apos;" description="Rename resource &apos;UAVBaseline.lua&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="UAVBaseline.lua" name="UAVBase.lua" stamp="1391015291354" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;UAVBase/UAVBaseline.scen&apos; to &apos;UAVBase.scen&apos;" description="Rename resource &apos;UAVBaseline.scen&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="UAVBaseline.scen" name="UAVBase.scen" stamp="1391015303765" updateReferences="true"/>
+</session>

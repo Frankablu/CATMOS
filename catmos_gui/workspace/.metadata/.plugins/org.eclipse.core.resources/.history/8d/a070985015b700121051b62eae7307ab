@@ -1,0 +1,940 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+
+-->
+<plugin>
+
+   <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
+      <?gmfgen generated="true"?>
+      <fileTypes type="text" extension="scenario_diagram"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
+      <?gmfgen generated="true"?>
+      <parser
+         type="scenario_diagram"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors" id="gmf-editor">
+      <?gmfgen generated="true"?>
+      <editor
+         id="Scenario.diagram.part.ScenarioDiagramEditorID"
+         name="%editorName"
+         icon="icons/obj16/ScenarioDiagramFile.gif"
+         extensions="scenario_diagram"
+         default="true"
+         class="Scenario.diagram.part.ScenarioDiagramEditor"
+         matchingStrategy="Scenario.diagram.part.ScenarioMatchingStrategy"
+         contributorClass="Scenario.diagram.part.ScenarioDiagramActionBarContributor">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.contexts" id="ui-context">
+      <?gmfgen generated="true"?>
+      <context
+         description="%context.description"
+         id="Scenario.diagram.ui.diagramContext"
+         name="%context.name"
+         parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
+      </context>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards" id="creation-wizard">
+      <?gmfgen generated="true"?>
+  	  <wizard
+  	     name="%newWizardName"
+  	     icon="icons/obj16/ScenarioDiagramFile.gif"
+  	     category="org.eclipse.ui.Examples"
+  	     class="Scenario.diagram.part.ScenarioCreationWizard"
+  	     id="Scenario.diagram.part.ScenarioCreationWizardID">
+  	  	 <description>%newWizardDesc</description>  
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
+      <?gmfgen generated="true"?>
+      <objectContribution
+            id="Scenario.diagram.InitDiagram"
+            nameFilter="*.scenario"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="%initDiagramActionLabel"
+               class="Scenario.diagram.part.ScenarioInitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="Scenario.diagram.InitDiagramAction">
+         </action>
+      </objectContribution>
+   </extension>
+	
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders" id="global-actions">
+      <?gmfgen generated="true"?>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="ScenarioPresentation">
+         <Priority name="Lowest"/>
+         <ViewId id="Scenario.diagram.part.ScenarioDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="save">
+               </GlobalActionId>
+            </ElementType>        
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.printing.render.providers.DiagramWithPrintGlobalActionHandlerProvider"
+         id="ScenarioPresentationPrint">
+         <Priority name="Lowest"/>
+         <ViewId id="Scenario.diagram.part.ScenarioDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="print"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
+         id="ScenarioPresentationIDE">
+         <Priority name="Lowest"/>
+         <ViewId id="Scenario.diagram.part.ScenarioDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="bookmark"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="ScenarioRender">
+         <Priority name="Lowest"/>
+         <ViewId id="Scenario.diagram.part.ScenarioDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+   </extension>
+
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.markerNavigationProviders" id="markers-navigation">
+      <?gmfgen generated="true"?>
+      <MarkerNavigationProvider class="Scenario.diagram.providers.ScenarioMarkerNavigationProvider">
+         <MarkerType name="Scenario.diagram.diagnostic"/>
+         <Priority name="Lowest"/>
+      </MarkerNavigationProvider>
+   </extension>
+
+   <extension id="diagnostic" name="Scenario Plugin problems" point="org.eclipse.core.resources.markers">
+      <?gmfgen generated="true"?>
+      <super type="org.eclipse.core.resources.problemmarker"/>
+      <super type="org.eclipse.gmf.runtime.common.ui.services.marker"/>
+      <persistent value="true"/>
+   </extension>   
+
+   <extension id="validationDecoratorProvider" name="ValidationDecorations" point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders">
+      <?gmfgen generated="true"?>
+      <decoratorProvider class="Scenario.diagram.providers.ScenarioValidationDecoratorProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.diagram.ui.editparts.IPrimaryEditPart(org.eclipse.gmf.runtime.diagram.ui)" id="PRIMARY_VIEW"/>
+         <context decoratorTargets="PRIMARY_VIEW"/>
+      </decoratorProvider>
+   </extension>
+
+   <extension point="org.eclipse.core.runtime.preferences" id="prefs">
+      <?gmfgen generated="true"?>
+      <initializer class="Scenario.diagram.preferences.DiagramPreferenceInitializer"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages" id="prefpages">
+      <?gmfgen generated="true"?>
+      <page
+            id="Scenario.diagram.general"
+            name="%prefpage.Scenario.diagram.general"
+            class="Scenario.diagram.preferences.DiagramGeneralPreferencePage">
+      </page>
+      <page
+            id="Scenario.diagram.appearance"
+            name="%prefpage.Scenario.diagram.appearance"
+            category="Scenario.diagram.general"
+            class="Scenario.diagram.preferences.DiagramAppearancePreferencePage">
+      </page>
+      <page
+            id="Scenario.diagram.connections"
+            name="%prefpage.Scenario.diagram.connections"
+            category="Scenario.diagram.general"
+            class="Scenario.diagram.preferences.DiagramConnectionsPreferencePage">
+      </page>
+      <page
+            id="Scenario.diagram.printing"
+            name="%prefpage.Scenario.diagram.printing"
+            category="Scenario.diagram.general"
+            class="Scenario.diagram.preferences.DiagramPrintingPreferencePage">
+      </page>
+      <page
+            id="Scenario.diagram.rulersAndGrid"
+            name="%prefpage.Scenario.diagram.rulersAndGrid"
+            category="Scenario.diagram.general"
+            class="Scenario.diagram.preferences.DiagramRulersAndGridPreferencePage">
+      </page>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-contrib">
+      <?gmfgen generated="true"?>
+      <propertyContributor
+            contributorId="Scenario.diagram"
+            labelProvider="Scenario.diagram.sheet.ScenarioSheetLabelProvider">
+         <propertyCategory category="domain"/>
+         <propertyCategory category="visual"/>
+         <propertyCategory category="extra"/>
+      </propertyContributor>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
+      <?gmfgen generated="true"?>   
+      <propertyTabs contributorId="Scenario.diagram">
+         <propertyTab
+             category="visual"
+             id="property.tab.AppearancePropertySection"
+             label="%tab.appearance"/>
+          <propertyTab
+             category="visual"
+             id="property.tab.DiagramPropertySection"
+             label="%tab.diagram"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.domain"
+             label="%tab.domain"/>
+      </propertyTabs>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
+      <?gmfgen generated="true"?>   
+      <propertySections contributorId="Scenario.diagram">
+         <propertySection id="property.section.ConnectorAppearancePropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>
+         <propertySection id="property.section.ShapeColorAndFontPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ShapeEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ShapeColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection> 
+         <propertySection id="property.section.DiagramColorsAndFontsPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.DiagramColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>     
+         <propertySection id="property.section.RulerGridPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.grid.RulerGridPropertySection" 
+            tab="property.tab.DiagramPropertySection">
+         </propertySection>     
+         <propertySection
+            id="property.section.domain" 
+            tab="property.tab.domain"
+            class="Scenario.diagram.sheet.ScenarioPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="Scenario.diagram.navigator.ScenarioAbstractNavigatorItem"/>
+         </propertySection>
+      </propertySections>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
+      <?gmfgen generated="true"?>
+      <viewProvider class="Scenario.diagram.providers.ScenarioViewProvider">
+         <Priority name="Lowest"/>
+         <object id="referencing-diagrams" class="org.eclipse.gmf.runtime.notation.Diagram">
+            <method name="getType()" value="Scenario"/>
+         </object>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Scenario"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,2003,2004,2005,2006,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003,4004,4005,4006"/>
+      </viewProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
+      <?gmfgen generated="true"?>
+      <editpartProvider class="Scenario.diagram.providers.ScenarioEditPartProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
+            <method name="getType()" value="Scenario"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
+            <method name="getType()" value="2001,2002,2003,2004,2005,2006,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
+            <method name="getType()" value="4001,4002,4003,4004,4005,4006"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
+            <method name="getType()" value="5005,5012,5019,5020,5021,5032,5004,5001,5002,5003,5006,5007,5008,5009,5010,5011,5013,5014,5015,5016,5017,5018,5022,5023,5024,5025,5029,5028,5026,5027,5030,5031"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
+            <method name="getType()" value="7001,7002,7003,7004,7005,7006,7007,7008,7009,7010,7011,7012,7013,7014,7015,7016,7017,7018,7019,7020,7021,7022,7023,7024,7025"/>
+         </object>
+         <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
+      </editpartProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
+      <?gmfgen generated="true"?>
+      <modelingAssistantProvider class="Scenario.diagram.providers.ScenarioModelingAssistantProvider">
+         <Priority name="Lowest"/>
+         <object class="Scenario.diagram.edit.parts.ScenarioEditPart" id="Scenario_1000"/>
+         <object class="Scenario.diagram.edit.parts.CapabilityProvisionEditPart" id="CapabilityProvision_2001"/>
+         <object class="Scenario.diagram.edit.parts.FindTradeOffsEditPart" id="FindTradeOffs_2002"/>
+         <object class="Scenario.diagram.edit.parts.ThroughLifePlanningEditPart" id="ThroughLifePlanning_2003"/>
+         <object class="Scenario.diagram.edit.parts.CapabilityEditPart" id="Capability_2004"/>
+         <object class="Scenario.diagram.edit.parts.QualitativeValueDictionaryEditPart" id="QualitativeValueDictionary_2005"/>
+         <object class="Scenario.diagram.edit.parts.ComponentEditPart" id="Component_2006"/>
+         <context elements="Scenario_1000,CapabilityProvision_2001,FindTradeOffs_2002,ThroughLifePlanning_2003,Capability_2004,QualitativeValueDictionary_2005,Component_2006"/>
+      </modelingAssistantProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
+      <?gmfgen generated="true"?>
+      <IconProvider class="Scenario.diagram.providers.ScenarioIconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
+      <?gmfgen generated="true"?>
+      <ParserProvider class="Scenario.diagram.providers.ScenarioParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders" id="decorator-provider">
+      <?gmfgen generated="true"?>
+      <decoratorProvider class="Scenario.diagram.providers.ScenarioShortcutsDecoratorProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Node(org.eclipse.gmf.runtime.notation)" id="generated-top-nodes">
+            <method name="getType()" value="2001,2002,2003,2004,2005,2006"/>
+         </object>
+         <context decoratorTargets="generated-top-nodes"/>
+      </decoratorProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
+      <?gmfgen generated="true"?>
+      <metamodel nsURI="Scenario">
+         <metamodelType
+               id="Scenario.diagram.Scenario_1000"
+               name="%metatype.name.Scenario_1000"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Scenario"
+               edithelper="Scenario.diagram.edit.helpers.ScenarioEditHelper">
+            <param name="semanticHint" value="1000"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <metamodelType
+               id="Scenario.diagram.CapabilityProvision_2001"
+               name="%metatype.name.CapabilityProvision_2001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="CapabilityProvision"
+               edithelper="Scenario.diagram.edit.helpers.CapabilityProvisionEditHelper">
+            <param name="semanticHint" value="2001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <metamodelType
+               id="Scenario.diagram.FindTradeOffs_2002"
+               name="%metatype.name.FindTradeOffs_2002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="FindTradeOffs"
+               edithelper="Scenario.diagram.edit.helpers.FindTradeOffsEditHelper">
+            <param name="semanticHint" value="2002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <metamodelType
+               id="Scenario.diagram.ThroughLifePlanning_2003"
+               name="%metatype.name.ThroughLifePlanning_2003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ThroughLifePlanning"
+               edithelper="Scenario.diagram.edit.helpers.ThroughLifePlanningEditHelper">
+            <param name="semanticHint" value="2003"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <metamodelType
+               id="Scenario.diagram.Capability_2004"
+               name="%metatype.name.Capability_2004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Capability"
+               edithelper="Scenario.diagram.edit.helpers.CapabilityEditHelper">
+            <param name="semanticHint" value="2004"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <metamodelType
+               id="Scenario.diagram.QualitativeValueDictionary_2005"
+               name="%metatype.name.QualitativeValueDictionary_2005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="QualitativeValueDictionary"
+               edithelper="Scenario.diagram.edit.helpers.QualitativeValueDictionaryEditHelper">
+            <param name="semanticHint" value="2005"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <metamodelType
+               id="Scenario.diagram.Component_2006"
+               name="%metatype.name.Component_2006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Component"
+               edithelper="Scenario.diagram.edit.helpers.ComponentEditHelper">
+            <param name="semanticHint" value="2006"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <metamodelType
+               id="Scenario.diagram.Measurement_3001"
+               name="%metatype.name.Measurement_3001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Measurement"
+               edithelper="Scenario.diagram.edit.helpers.MeasurementEditHelper">
+            <param name="semanticHint" value="3001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <metamodelType
+               id="Scenario.diagram.QualitativeValue_3002"
+               name="%metatype.name.QualitativeValue_3002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="QualitativeValue"
+               edithelper="Scenario.diagram.edit.helpers.QualitativeValueEditHelper">
+            <param name="semanticHint" value="3002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <specializationType
+               id="Scenario.diagram.QualitativeValue_3003"
+               name="%metatype.name.QualitativeValue_3003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="Scenario.diagram.QualitativeValue_3002"/>
+            <param name="semanticHint" value="3003"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <specializationType
+               id="Scenario.diagram.QualitativeValue_3004"
+               name="%metatype.name.QualitativeValue_3004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="Scenario.diagram.QualitativeValue_3002"/>
+            <param name="semanticHint" value="3004"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <metamodelType
+               id="Scenario.diagram.ExistingComponent_3005"
+               name="%metatype.name.ExistingComponent_3005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ExistingComponent"
+               edithelper="Scenario.diagram.edit.helpers.ExistingComponentEditHelper">
+            <param name="semanticHint" value="3005"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <metamodelType
+               id="Scenario.diagram.AcquirableComponent_3006"
+               name="%metatype.name.AcquirableComponent_3006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="AcquirableComponent"
+               edithelper="Scenario.diagram.edit.helpers.AcquirableComponentEditHelper">
+            <param name="semanticHint" value="3006"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <metamodelType
+               id="Scenario.diagram.DesireHigh_3007"
+               name="%metatype.name.DesireHigh_3007"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="DesireHigh"
+               edithelper="Scenario.diagram.edit.helpers.DesireHighEditHelper">
+            <param name="semanticHint" value="3007"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <metamodelType
+               id="Scenario.diagram.DesireLow_3008"
+               name="%metatype.name.DesireLow_3008"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="DesireLow"
+               edithelper="Scenario.diagram.edit.helpers.DesireLowEditHelper">
+            <param name="semanticHint" value="3008"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <metamodelType
+               id="Scenario.diagram.Budget_3009"
+               name="%metatype.name.Budget_3009"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Budget"
+               edithelper="Scenario.diagram.edit.helpers.BudgetEditHelper">
+            <param name="semanticHint" value="3009"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <metamodelType
+               id="Scenario.diagram.ComponentU_3010"
+               name="%metatype.name.ComponentU_3010"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ComponentU"
+               edithelper="Scenario.diagram.edit.helpers.ComponentUEditHelper">
+            <param name="semanticHint" value="3010"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <specializationType
+               id="Scenario.diagram.ExistingComponent_3011"
+               name="%metatype.name.ExistingComponent_3011"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="Scenario.diagram.ExistingComponent_3005"/>
+            <param name="semanticHint" value="3011"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <specializationType
+               id="Scenario.diagram.AcquirableComponent_3012"
+               name="%metatype.name.AcquirableComponent_3012"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="Scenario.diagram.AcquirableComponent_3006"/>
+            <param name="semanticHint" value="3012"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <specializationType
+               id="Scenario.diagram.DesireHigh_3013"
+               name="%metatype.name.DesireHigh_3013"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="Scenario.diagram.DesireHigh_3007"/>
+            <param name="semanticHint" value="3013"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <specializationType
+               id="Scenario.diagram.DesireLow_3014"
+               name="%metatype.name.DesireLow_3014"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="Scenario.diagram.DesireLow_3008"/>
+            <param name="semanticHint" value="3014"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <specializationType
+               id="Scenario.diagram.Budget_3015"
+               name="%metatype.name.Budget_3015"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="Scenario.diagram.Budget_3009"/>
+            <param name="semanticHint" value="3015"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <specializationType
+               id="Scenario.diagram.ComponentU_3016"
+               name="%metatype.name.ComponentU_3016"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="Scenario.diagram.ComponentU_3010"/>
+            <param name="semanticHint" value="3016"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <specializationType
+               id="Scenario.diagram.CapabilityProvision_3017"
+               name="%metatype.name.CapabilityProvision_3017"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="Scenario.diagram.CapabilityProvision_2001"/>
+            <param name="semanticHint" value="3017"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <specializationType
+               id="Scenario.diagram.CapabilityProvision_3018"
+               name="%metatype.name.CapabilityProvision_3018"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="Scenario.diagram.CapabilityProvision_2001"/>
+            <param name="semanticHint" value="3018"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <specializationType
+               id="Scenario.diagram.Capability_3019"
+               name="%metatype.name.Capability_3019"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="Scenario.diagram.Capability_2004"/>
+            <param name="semanticHint" value="3019"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <specializationType
+               id="Scenario.diagram.Capability_3020"
+               name="%metatype.name.Capability_3020"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="Scenario.diagram.Capability_2004"/>
+            <param name="semanticHint" value="3020"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <metamodelType
+               id="Scenario.diagram.CapabilityUpgrade_3021"
+               name="%metatype.name.CapabilityUpgrade_3021"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="CapabilityUpgrade"
+               edithelper="Scenario.diagram.edit.helpers.CapabilityUpgradeEditHelper">
+            <param name="semanticHint" value="3021"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <metamodelType
+               id="Scenario.diagram.CapabilityChange_3022"
+               name="%metatype.name.CapabilityChange_3022"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="CapabilityChange"
+               edithelper="Scenario.diagram.edit.helpers.CapabilityChangeEditHelper">
+            <param name="semanticHint" value="3022"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <specializationType
+               id="Scenario.diagram.CapabilityProvision_3023"
+               name="%metatype.name.CapabilityProvision_3023"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="Scenario.diagram.CapabilityProvision_2001"/>
+            <param name="semanticHint" value="3023"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <specializationType
+               id="Scenario.diagram.Capability_3024"
+               name="%metatype.name.Capability_3024"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="Scenario.diagram.Capability_2004"/>
+            <param name="semanticHint" value="3024"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <metamodelType
+               id="Scenario.diagram.Cost_3025"
+               name="%metatype.name.Cost_3025"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Cost"
+               edithelper="Scenario.diagram.edit.helpers.CostEditHelper">
+            <param name="semanticHint" value="3025"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <specializationType
+               id="Scenario.diagram.Measurement_3026"
+               name="%metatype.name.Measurement_3026"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="Scenario.diagram.Measurement_3001"/>
+            <param name="semanticHint" value="3026"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <specializationType
+               id="Scenario.diagram.CapabilityAccumulation_4001"
+               name="%metatype.name.CapabilityAccumulation_4001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4001"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <specializationType
+               id="Scenario.diagram.CapabilityDecomposes_4002"
+               name="%metatype.name.CapabilityDecomposes_4002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4002"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <specializationType
+               id="Scenario.diagram.CapabilitySatisfies_4003"
+               name="%metatype.name.CapabilitySatisfies_4003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4003"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <specializationType
+               id="Scenario.diagram.MeasurementAggregates_4004"
+               name="%metatype.name.MeasurementAggregates_4004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4004"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <specializationType
+               id="Scenario.diagram.QualitativeValueDictionaryGreaterThan_4005"
+               name="%metatype.name.QualitativeValueDictionaryGreaterThan_4005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4005"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="Scenario">
+         <specializationType
+               id="Scenario.diagram.CapabilityUpgradeUpgrading_4006"
+               name="%metatype.name.CapabilityUpgradeUpgrading_4006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4006"/>
+         </specializationType>
+      </metamodel>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
+      <?gmfgen generated="true"?>
+      <clientContext id="Scenario.diagram.TypeContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="Scenario.diagram.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="Scenario.diagram.TypeContext">
+         <elementType ref="Scenario.diagram.Scenario_1000"/>
+         <elementType ref="Scenario.diagram.CapabilityProvision_2001"/>
+         <elementType ref="Scenario.diagram.FindTradeOffs_2002"/>
+         <elementType ref="Scenario.diagram.ThroughLifePlanning_2003"/>
+         <elementType ref="Scenario.diagram.Capability_2004"/>
+         <elementType ref="Scenario.diagram.QualitativeValueDictionary_2005"/>
+         <elementType ref="Scenario.diagram.Component_2006"/>
+         <elementType ref="Scenario.diagram.Measurement_3001"/>
+         <elementType ref="Scenario.diagram.QualitativeValue_3002"/>
+         <elementType ref="Scenario.diagram.QualitativeValue_3003"/>
+         <elementType ref="Scenario.diagram.QualitativeValue_3004"/>
+         <elementType ref="Scenario.diagram.ExistingComponent_3005"/>
+         <elementType ref="Scenario.diagram.AcquirableComponent_3006"/>
+         <elementType ref="Scenario.diagram.DesireHigh_3007"/>
+         <elementType ref="Scenario.diagram.DesireLow_3008"/>
+         <elementType ref="Scenario.diagram.Budget_3009"/>
+         <elementType ref="Scenario.diagram.ComponentU_3010"/>
+         <elementType ref="Scenario.diagram.ExistingComponent_3011"/>
+         <elementType ref="Scenario.diagram.AcquirableComponent_3012"/>
+         <elementType ref="Scenario.diagram.DesireHigh_3013"/>
+         <elementType ref="Scenario.diagram.DesireLow_3014"/>
+         <elementType ref="Scenario.diagram.Budget_3015"/>
+         <elementType ref="Scenario.diagram.ComponentU_3016"/>
+         <elementType ref="Scenario.diagram.CapabilityProvision_3017"/>
+         <elementType ref="Scenario.diagram.CapabilityProvision_3018"/>
+         <elementType ref="Scenario.diagram.Capability_3019"/>
+         <elementType ref="Scenario.diagram.Capability_3020"/>
+         <elementType ref="Scenario.diagram.CapabilityUpgrade_3021"/>
+         <elementType ref="Scenario.diagram.CapabilityChange_3022"/>
+         <elementType ref="Scenario.diagram.CapabilityProvision_3023"/>
+         <elementType ref="Scenario.diagram.Capability_3024"/>
+         <elementType ref="Scenario.diagram.Cost_3025"/>
+         <elementType ref="Scenario.diagram.Measurement_3026"/>
+         <elementType ref="Scenario.diagram.CapabilityAccumulation_4001"/>
+         <elementType ref="Scenario.diagram.CapabilityDecomposes_4002"/>
+         <elementType ref="Scenario.diagram.CapabilitySatisfies_4003"/>
+         <elementType ref="Scenario.diagram.MeasurementAggregates_4004"/>
+         <elementType ref="Scenario.diagram.QualitativeValueDictionaryGreaterThan_4005"/>
+         <elementType ref="Scenario.diagram.CapabilityUpgradeUpgrading_4006"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+      </binding>
+   </extension>
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isURIEditorInput">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="Scenario.diagram.URIEditorInputPropertyTester"
+           type="org.eclipse.emf.common.ui.URIEditorInput"
+           namespace="Scenario.diagram"
+           properties="isURIEditorInput"
+           class="Scenario.diagram.part.ScenarioUriEditorInputTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isShortcut">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="Scenario.diagram.ShortcutPropertyTester"
+           type="org.eclipse.gmf.runtime.notation.View"
+           namespace="Scenario.diagram"
+           properties="isShortcut"
+           class="Scenario.diagram.part.ScenarioShortcutPropertyTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.ui.navigator.viewer" id="navigator-viewbinding">
+      <?gmfgen generated="true"?>
+      <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension pattern="Scenario.diagram.resourceContent"/>
+			<contentExtension pattern="Scenario.diagram.domainResourceContent"/>
+            <contentExtension pattern="Scenario.diagram.navigatorLinkHelper"/>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <actionExtension pattern="Scenario.diagram.navigatorActionProvider"/>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+
+   <extension point="org.eclipse.ui.navigator.navigatorContent" id="navigator-content">
+      <?gmfgen generated="true"?>
+      <navigatorContent
+            id="Scenario.diagram.resourceContent" 
+            name="%navigatorContentName" 
+            priority="normal" 
+            contentProvider="Scenario.diagram.navigator.ScenarioNavigatorContentProvider" 
+            labelProvider="Scenario.diagram.navigator.ScenarioNavigatorLabelProvider"
+            icon="icons/obj16/ScenarioDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="scenario_diagram"/>
+               </and>
+               <instanceof value="Scenario.diagram.navigator.ScenarioAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="Scenario.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+         	   <instanceof value="Scenario.diagram.navigator.ScenarioAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="Scenario.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </possibleChildren>
+         <commonSorter 
+               id="Scenario.diagram.navigatorSorter" 
+               class="Scenario.diagram.navigator.ScenarioNavigatorSorter">
+            <parentExpression>
+               <or>
+	              <and>
+    	             <instanceof value="org.eclipse.core.resources.IFile"/>
+        	         <test property="org.eclipse.core.resources.extension" value="scenario_diagram"/>
+                  </and>
+                  <instanceof value="Scenario.diagram.navigator.ScenarioAbstractNavigatorItem"/>
+               </or>
+            </parentExpression>
+         </commonSorter>
+      </navigatorContent>
+      <navigatorContent
+            id="Scenario.diagram.domainResourceContent" 
+            name="%domainNavigatorContentName" 
+            priority="normal" 
+            contentProvider="Scenario.diagram.navigator.ScenarioDomainNavigatorContentProvider" 
+            labelProvider="Scenario.diagram.navigator.ScenarioDomainNavigatorLabelProvider"
+            icon="icons/obj16/ScenarioDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="scenario"/>
+               </and>
+               <instanceof value="Scenario.diagram.navigator.ScenarioDomainNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <instanceof value="Scenario.diagram.navigator.ScenarioDomainNavigatorItem"/>
+         </possibleChildren>
+      </navigatorContent>
+      <actionProvider
+            id="Scenario.diagram.navigatorActionProvider"
+            class="Scenario.diagram.navigator.ScenarioNavigatorActionProvider">
+         <enablement>
+            <or>
+               <instanceof value="Scenario.diagram.navigator.ScenarioAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="Scenario.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </enablement>
+      </actionProvider>
+   </extension>
+   
+	   <extension point="org.eclipse.ui.navigator.linkHelper" id="navigator-linkhelper">
+      <?gmfgen generated="true"?>
+      <linkHelper
+            id="Scenario.diagram.navigatorLinkHelper"
+            class="Scenario.diagram.navigator.ScenarioNavigatorLinkHelper">
+         <editorInputEnablement>
+            <and>
+               <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
+               <test property="Scenario.diagram.isURIEditorInput"/>
+            </and>
+         </editorInputEnablement>
+         <selectionEnablement>
+            <instanceof value="Scenario.diagram.navigator.ScenarioAbstractNavigatorItem"/>
+         </selectionEnablement>
+      </linkHelper>
+   </extension>
+   <extension point="org.eclipse.ui.commands" id="update-cmd">
+      <?gmfgen generated="true"?>
+      <command
+         categoryId="org.eclipse.ui.category.edit"
+         defaultHandler="Scenario.diagram.part.ScenarioDiagramUpdateCommand"
+         description="%update.diagram.description"
+         id="Scenario.diagram.updateDiagram"
+         name="%update.diagram.name"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
+      <?gmfgen generated="true"?>
+      <key 
+         commandId="Scenario.diagram.updateDiagram"
+         contextId="Scenario.diagram.ui.diagramContext"
+         schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+         sequence="F5"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.menus" id="context-menus">
+      <?gmfgen generated="true"?>
+      <!-- menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=">
+      </menuContribution>
+      <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=">
+      </menuContribution -->
+      <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+         <command commandId="Scenario.diagram.LoadResourceAction">
+            <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="Scenario.diagram.part.ScenarioDiagramEditorID"/></with>
+                  <with variable="selection"><iterate ifEmpty="false"> 
+                     <instanceof value="Scenario.diagram.edit.parts.ScenarioEditPart"/>
+                  </iterate></with>
+               </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands" id="menu-commands">
+      <?gmfgen generated="true"?>
+      <category id="Scenario.diagram.part.ScenarioDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+      <command id="Scenario.diagram.LoadResourceAction"
+         name="Load Resource"
+         categoryId="Scenario.diagram.part.ScenarioDiagramEditorID"
+         defaultHandler="Scenario.diagram.part.LoadResourceAction"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.handlers" id="menu-handlers">
+      <?gmfgen generated="true"?>
+   </extension>
+
+   <!-- optionally, specify keybindings -->
+</plugin>

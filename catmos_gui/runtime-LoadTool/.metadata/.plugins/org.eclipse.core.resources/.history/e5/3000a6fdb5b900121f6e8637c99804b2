@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="ScenarioModel">
+  <OurObjects xsi:type="p:Capability" name="Roach" searchObjective="true" startDate="100" endDate="600" accumulation="//@OurObjects.0/@measurements.0">
+    <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Mineral mining" startDate="0" endDate="600" accumulation="//@OurObjects.1/@measurements.0">
+    <measurements name="Drone Mining" criticalValue="0.0" benchmarkValue="20.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Gas mining" startDate="0" endDate="600" accumulation="//@OurObjects.2/@measurements.0">
+    <measurements name="Gas Drone Mining" criticalValue="0.0" benchmarkValue="6.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Lair">
+    <provides xsi:type="p:CapabilityProvision" name="Larva Source"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Existing Drone">
+    <provides xsi:type="p:CapabilityProvision" name="Drone"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Larva">
+    <provides xsi:type="p:CapabilityProvision" name="Larva"/>
+    <requires name="Larva Source"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral mining">
+      <measurements name="Drone Mining"/>
+    </provides>
+    <requires name="Drone"/>
+    <costs name="Minerals" amount="-50.0" startAfter="5" repeatDuration="10"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Gas Mining Drone">
+    <provides xsi:type="p:CapabilityProvision" name="Gas mining">
+      <measurements name="Gas Drone Mining"/>
+    </provides>
+    <requires name="Drone"/>
+    <costs name="Gas" amount="-50.0" startAfter="5" repeatDuration="10"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Morphed Drone">
+    <provides xsi:type="p:CapabilityProvision" name="Drone"/>
+    <requires name="Larva" sequentialScheduling="true"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Spawning Pool">
+    <provides xsi:type="p:CapabilityProvision" name="Spawning Pool Production"/>
+    <requires name="Drone"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Roach Warren">
+    <provides xsi:type="p:CapabilityProvision" name="Roach Warren Production"/>
+    <requires name="Spawning Pool Production" sequentialScheduling="true"/>
+    <requires name="Drone"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Roach">
+    <provides xsi:type="p:CapabilityProvision" name="Roach">
+      <measurements name="Roach count" providedValue="1.0"/>
+    </provides>
+    <requires name="Roach Warren Production" sequentialScheduling="true"/>
+    <requires name="Larva" sequentialScheduling="true"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Zergling">
+    <provides xsi:type="p:CapabilityProvision" name="Zergling">
+      <measurements name="Zergling count" providedValue="2.0"/>
+    </provides>
+    <requires name="Spawning Pool Production" sequentialScheduling="true"/>
+    <requires name="Larva" sequentialScheduling="true"/>
+  </OurObjects>
+</p:Scenario>

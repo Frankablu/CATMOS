@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Tool/Drawings/concept.ecorediag&apos; to &apos;concept2.ecorediag&apos;" description="Rename resource &apos;concept.ecorediag&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Drawings/concept.ecorediag" name="concept2.ecorediag" stamp="1378295058210" updateReferences="true"/>
+</session>

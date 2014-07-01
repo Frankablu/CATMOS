@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="CapOverTime">
+  <p:CapabilityOverTime>
+    <timePeriods startDate="0" endDate="62">
+      <ourObjects xsi:type="p:Capability" name="Route Clearance" searchObjective="true" startDate="01/01/2014" endDate="31/12/2016" status="1.60898" colour="Yellow"/>
+      <ourObjects xsi:type="p:Capability" name="Hold Forward Base" searchObjective="true" startDate="01/01/2014" endDate="31/12/2016" status="1.11314" colour="Yellow"/>
+      <ourObjects xsi:type="p:Capability" name="Prevent Enemy Crossings" searchObjective="true" startDate="01/01/2014" endDate="31/12/2016" status="0.0" colour="Red"/>
+    </timePeriods>
+    <timePeriods startDate="63" endDate="210">
+      <ourObjects xsi:type="p:Capability" name="Route Clearance" searchObjective="true" startDate="01/01/2014" endDate="31/12/2016" status="1.6638" colour="Yellow"/>
+      <ourObjects xsi:type="p:Capability" name="Hold Forward Base" searchObjective="true" startDate="01/01/2014" endDate="31/12/2016" status="1.11314" colour="Yellow"/>
+      <ourObjects xsi:type="p:Capability" name="Prevent Enemy Crossings" searchObjective="true" startDate="01/01/2014" endDate="31/12/2016" status="0.0" colour="Red"/>
+    </timePeriods>
+    <timePeriods startDate="211" endDate="364">
+      <ourObjects xsi:type="p:Capability" name="Route Clearance" searchObjective="true" startDate="01/01/2014" endDate="31/12/2016" status="1.66193" colour="Yellow"/>
+      <ourObjects xsi:type="p:Capability" name="Hold Forward Base" searchObjective="true" startDate="01/01/2014" endDate="31/12/2016" status="1.11314" colour="Yellow"/>
+      <ourObjects xsi:type="p:Capability" name="Prevent Enemy Crossings" searchObjective="true" startDate="01/01/2014" endDate="31/12/2016" status="0.0" colour="Red"/>
+    </timePeriods>
+    <timePeriods startDate="365" endDate="1093">
+      <ourObjects xsi:type="p:Capability" name="Route Clearance" searchObjective="true" startDate="01/01/2014" endDate="31/12/2016" status="1.66193" colour="Yellow"/>
+      <ourObjects xsi:type="p:Capability" name="Hold Forward Base" searchObjective="true" startDate="01/01/2014" endDate="31/12/2016" status="1.11314" colour="Yellow"/>
+      <ourObjects xsi:type="p:Capability" name="Prevent Enemy Crossings" searchObjective="true" startDate="01/01/2014" endDate="31/12/2016" status="0.0" colour="Red"/>
+    </timePeriods>
+    <timePeriods startDate="1094" endDate="1094">
+      <ourObjects xsi:type="p:Capability" name="Route Clearance" searchObjective="true" startDate="01/01/2014" endDate="31/12/2016" status="1.66193" colour="Yellow"/>
+      <ourObjects xsi:type="p:Capability" name="Hold Forward Base" searchObjective="true" startDate="01/01/2014" endDate="31/12/2016" status="1.11314" colour="Yellow"/>
+      <ourObjects xsi:type="p:Capability" name="Prevent Enemy Crossings" searchObjective="true" startDate="01/01/2014" endDate="31/12/2016" status="0.0" colour="Red"/>
+    </timePeriods>
+  </p:CapabilityOverTime>
+  <p:Capability name="Overall Score" startDate="01/01/2014" endDate="31/12/2016"/>
+  <p:Capability name="Ground Fire Power" startDate="01/01/2014" endDate="31/12/2016"/>
+  <p:Capability name="Hard Target Removal" startDate="01/01/2014" endDate="31/12/2016"/>
+  <p:Capability name="Mine Clearance Solution" startDate="01/01/2014" endDate="31/12/2016"/>
+  <p:Capability name="Establish Forward Base" startDate="01/01/2014" endDate="31/12/2016"/>
+  <p:Capability name="Supply Forward Base" startDate="01/01/2014" endDate="31/12/2016" decomposes="/7 /8 /9"/>
+  <p:Capability name="Supply Water" startDate="01/01/2014" endDate="31/12/2016"/>
+  <p:Capability name="Supply Fuel" startDate="01/01/2014" endDate="31/12/2016"/>
+  <p:Capability name="Supply Goods" startDate="01/01/2014" endDate="31/12/2016"/>
+  <p:Capability name="Detect Enemy Crossings" standAlone="true" startDate="01/01/2014" endDate="31/12/2016"/>
+  <p:Capability name="Stopping Enemy Crossings" startDate="01/01/2014" endDate="31/12/2016" decomposes="/2 /12 /15"/>
+  <p:Capability name="Command and Control" startDate="01/01/2014" endDate="31/12/2016"/>
+  <p:Capability name="Surveillance" startDate="01/01/2014" endDate="31/12/2016" decomposes="/14 /15"/>
+  <p:Capability name="Surveillance Static Targets" startDate="01/01/2014" endDate="31/12/2016"/>
+  <p:Capability name="Surveillance Moving Targets" startDate="01/01/2014" endDate="31/12/2016"/>
+  <p:Capability name="Ground Fire Power" reuse="1"/>
+  <p:Capability name="Troop Transport" reuse="3"/>
+  <p:Capability name="Ground Fire Power" reuse="1"/>
+  <p:Capability name="Troop Transport" reuse="1"/>
+  <p:Capability name="Ground Fire Power" reuse="1"/>
+  <p:Capability name="Surveillance Static Targets" reuse="1"/>
+  <p:Capability name="Surveillance Moving Targets" reuse="1"/>
+  <p:Capability name="Troop Transport"/>
+  <p:Capability name="Hard Target Removal" reuse="1"/>
+  <p:Capability name="Light Gun Tow"/>
+  <p:Capability name="L118 Service Contract"/>
+  <p:Capability name="L118 Service Contract"/>
+  <p:Capability name="L118 Service Contract"/>
+  <p:Capability name="Hard Target Removal" reuse="1"/>
+  <p:Capability name="Light Gun Tow"/>
+  <p:Capability name="Surveillance Moving Targets" reuse="1"/>
+  <p:Capability name="Radar Mount"/>
+  <p:Capability name="Surveillance Moving Targets" reuse="1"/>
+  <p:Capability name="Radar Mount"/>
+  <p:Capability name="Light Gun Tow" reuse="1"/>
+  <p:Capability name="Radar Mount"/>
+  <p:Capability name="Mine Clearance Solution"/>
+  <p:Capability name="Establish Forward Base"/>
+  <p:Capability name="Command and Control" reuse="1"/>
+  <p:Capability name="Supply Fuel" reuse="1"/>
+  <p:Capability name="Supply Water" reuse="1"/>
+  <p:Capability name="Supply Goods" reuse="1"/>
+  <p:Capability name="Surveillance Static Targets" reuse="1"/>
+  <p:Capability name="Surveillance Moving Targets" reuse="1"/>
+  <p:Capability name="Command and Control" reuse="1"/>
+  <p:Capability name="ReacherMount" reuse="1"/>
+  <p:Capability name="Command and Control" reuse="1"/>
+  <p:Capability name="Hard Target Removal" reuse="1"/>
+  <p:Capability name="Surveillance Static Targets" reuse="1"/>
+  <p:Capability name="Surveillance Moving Targets" reuse="1"/>
+  <p:Capability name="Ground Fire Power" reuse="1"/>
+  <p:Capability name="Surveillance Static Targets" reuse="1"/>
+  <p:Capability name="Surveillance Moving Targets" reuse="1"/>
+</xmi:XMI>

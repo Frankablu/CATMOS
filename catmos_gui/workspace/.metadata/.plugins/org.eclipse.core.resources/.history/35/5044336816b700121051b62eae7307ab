@@ -1,0 +1,140 @@
+/*
+ * 
+ */
+package Scenario.diagram.edit.commands;
+
+/**
+ * @generated
+ */
+public class CapabilityUpgradeUpgradingReorientCommand extends org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand {
+
+	/**
+ * @generated
+ */
+	private final int reorientDirection;
+
+	/**
+ * @generated
+ */
+	private final org.eclipse.emf.ecore.EObject referenceOwner;
+
+	/**
+ * @generated
+ */
+	private final org.eclipse.emf.ecore.EObject oldEnd;
+
+	/**
+ * @generated
+ */
+	private final org.eclipse.emf.ecore.EObject newEnd;
+
+	/**
+ * @generated
+ */
+	public CapabilityUpgradeUpgradingReorientCommand(org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelationshipRequest request) {
+		super(request.getLabel(), null, request);
+		reorientDirection = request.getDirection();
+		referenceOwner = request.getReferenceOwner();
+		oldEnd = request.getOldRelationshipEnd();
+		newEnd = request.getNewRelationshipEnd();
+	}
+	
+	/**
+ * @generated
+ */
+	public boolean canExecute() {
+			if (false == referenceOwner instanceof Scenario.CapabilityUpgrade) {
+		return false;
+	}
+		if (reorientDirection == org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest.REORIENT_SOURCE) {
+			return canReorientSource();
+		}
+		if (reorientDirection == org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest.REORIENT_TARGET) {
+			return canReorientTarget();
+		}
+		return false;
+	}
+
+	/**
+ * @generated
+ */
+	protected boolean canReorientSource() {
+			if (!(oldEnd instanceof Scenario.Component && newEnd instanceof Scenario.CapabilityUpgrade)) {
+		return false;
+	}
+	return Scenario.diagram.edit.policies.ScenarioBaseItemSemanticEditPolicy.getLinkConstraints().canExistCapabilityUpgradeUpgrading_4005(getNewSource(), getOldTarget());
+	}
+
+	/**
+ * @generated
+ */
+	protected boolean canReorientTarget() {
+			if (!(oldEnd instanceof Scenario.Component && newEnd instanceof Scenario.Component)) {
+		return false;
+	}
+	return Scenario.diagram.edit.policies.ScenarioBaseItemSemanticEditPolicy.getLinkConstraints().canExistCapabilityUpgradeUpgrading_4005(getOldSource(), getNewTarget());
+	}
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.core.command.CommandResult doExecuteWithResult(
+			org.eclipse.core.runtime.IProgressMonitor monitor, org.eclipse.core.runtime.IAdaptable info)
+			throws org.eclipse.core.commands.ExecutionException {
+		if (!canExecute()) {
+			throw new org.eclipse.core.commands.ExecutionException("Invalid arguments in reorient link command");  //$NON-NLS-1$
+		}
+		if (reorientDirection == org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest.REORIENT_SOURCE) {
+			return reorientSource();
+		}
+		if (reorientDirection == org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest.REORIENT_TARGET) {
+			return reorientTarget();
+		}
+		throw new IllegalStateException();
+	}
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.core.command.CommandResult reorientSource() throws org.eclipse.core.commands.ExecutionException {
+				getOldSource().setUpgrading(null);
+	getNewSource().setUpgrading(getOldTarget());
+	return org.eclipse.gmf.runtime.common.core.command.CommandResult.newOKCommandResult(referenceOwner);
+	}
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.core.command.CommandResult reorientTarget() throws org.eclipse.core.commands.ExecutionException {
+				getOldSource().setUpgrading(getNewTarget());
+	return org.eclipse.gmf.runtime.common.core.command.CommandResult.newOKCommandResult(referenceOwner);
+	}
+			
+	/**
+ * @generated
+ */
+	protected Scenario.CapabilityUpgrade getOldSource() {
+		return (Scenario.CapabilityUpgrade) referenceOwner;
+	}
+	
+	/**
+ * @generated
+ */
+	protected Scenario.CapabilityUpgrade getNewSource() {
+		return (Scenario.CapabilityUpgrade) newEnd;
+	}
+	
+	/**
+ * @generated
+ */
+	protected Scenario.Component getOldTarget() {
+		return (Scenario.Component) oldEnd;
+	}
+	
+	/**
+ * @generated
+ */
+	protected Scenario.Component getNewTarget() {
+		return (Scenario.Component) newEnd;
+	}
+}

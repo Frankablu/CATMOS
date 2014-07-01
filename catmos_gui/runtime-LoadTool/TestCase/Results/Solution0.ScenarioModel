@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="ScenarioModel">
+  <OurObjects xsi:type="p:Capability" name="myCapability" searchObjective="true" startDate="0" endDate="1095" status="0.0" colour="Red" satisfiedBy="//@OurObjects.1/@provides.0"/>
+  <OurObjects xsi:type="p:Component" name="myComponent:E1" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="myCapability" satisfies="//@OurObjects.0"/>
+    <requires name="myOtherCapability" satisfiedBy="//@OurObjects.2/@provides.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="mySecondComponent:E1" startDate="01/01/2014" endDate="31/12/2015">
+    <provides xsi:type="p:CapabilityProvision" name="myOtherCapability" satisfies="//@OurObjects.1/@requires.0"/>
+  </OurObjects>
+</p:Scenario>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;AutoNextReleaseProblem/Results/2DParetoFront.png&apos; to &apos;Example1002002DParetoFront.png&apos;" description="Rename resource &apos;2DParetoFront.png&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Results/2DParetoFront.png" name="Example1002002DParetoFront.png" stamp="1391112221188" updateReferences="true"/>
+</session>

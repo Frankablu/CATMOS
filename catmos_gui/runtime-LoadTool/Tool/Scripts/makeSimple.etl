@@ -1,0 +1,68 @@
+
+rule RootTransfer
+ transform srcRoot : source!Scenario
+ to targetRoot : target!Scenario
+ {
+ 	targetRoot.OurObjects = srcRoot.OurObjects.equivalent();
+ }
+ 
+  rule ComponentTransfer
+ transform srcComponent : source!Component
+ to targetComponent : target!Component
+ {
+ 	targetComponent.name = srcComponent.name;
+ 	targetComponent.startDate = srcComponent.startDate;
+ 	targetComponent.endDate = srcComponent.endDate;
+ 	
+ 	targetComponent.provides = srcComponent.provides.equivalent();
+ 	targetComponent.upgrades = srcComponent.upgrades.equivalent();
+ 	targetComponent.requires = srcComponent.requires.equivalent();
+ }
+ 
+ rule CapabilityTransfer
+ transform srcCap : source!Capability
+ to targetCap : target!Capability
+ {
+ 	targetCap.name = srcCap.name;
+ 	targetCap.searchObjective = srcCap.searchObjective;
+ 	targetCap.standAlone = srcCap.standAlone;
+ 	targetCap.reuse = srcCap.reuse;
+ 	targetCap.startDate = srcCap.startDate;
+ 	targetCap.endDate = srcCap.endDate;
+ 	targetCap.status = srcCap.status;
+ 	targetCap.colour = srcCap.colour;
+ 	targetCap.sequentialScheduling = srcCap.sequentialScheduling;
+ 	
+ 	targetCap.decomposes = srcCap.decomposes.equivalent();
+ 	targetCap.satisfiedBy = srcCap.satisfiedBy.equivalent();	
+ }
+ 
+  rule CapabilityProvisionTransfer
+ transform srcCap : source!CapabilityProvision
+ to targetCap : target!Capability
+ {
+ 	targetCap.name = srcCap.name;
+ 	targetCap.searchObjective = srcCap.searchObjective;
+ 	targetCap.standAlone = srcCap.standAlone;
+ 	targetCap.reuse = srcCap.reuse;
+ 	targetCap.startDate = srcCap.startDate;
+ 	targetCap.endDate = srcCap.endDate;
+ 	targetCap.status = srcCap.status;
+ 	targetCap.colour = srcCap.colour;
+ 	targetCap.sequentialScheduling = srcCap.sequentialScheduling;
+ 	
+ 	targetCap.decomposes = srcCap.decomposes.equivalent();
+ 	targetCap.satisfiedBy = srcCap.satisfiedBy.equivalent();	
+ }
+ 
+ rule CapabilityUpgradeTransfer
+ transform srcUpgrade : source!CapabilityUpgrade
+ to targetUpgrade : target!CapabilityUpgrade
+ {
+ 	targetUpgrade.name = srcUpgrade.name;
+ 	targetUpgrade.targetComponent = srcUpgrade.targetComponent;
+ 	targetUpgrade.upgrading = srcUpgrade.upgrading.equivalent();
+ }
+ 
+ 
+ 

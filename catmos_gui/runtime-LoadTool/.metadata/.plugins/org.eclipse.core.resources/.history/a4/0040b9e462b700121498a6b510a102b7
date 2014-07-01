@@ -1,0 +1,281 @@
+
+FindTradeOffs NextReleaseProblem
+{
+	popSize 100
+	genCount 100
+	
+	AcquirableComponent ComponentA 1
+	AcquirableComponent ComponentB 1
+	AcquirableComponent ComponentC 1
+	
+	DesireLow "Money"
+}
+
+searchObjective
+Capability overallSatisfaction
+{
+	Measurement weightedSatisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		
+		script "output = getGlobalMeasure(\"customer1sat\") + getGlobalMeasure(\"customer2sat\") + getGlobalMeasure(\"customer3sat\") + getGlobalMeasure(\"customer4sat\")"
+	}
+}
+
+Capability customer1satisfaction
+{
+	Measurement customer1sat
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Capability customer2satisfaction
+{
+	Measurement customer2sat
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Capability customer3satisfaction
+{
+	Measurement customer3sat
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Capability customer4satisfaction
+{
+	Measurement customer4sat
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component customer1
+{
+	CapabilityProvision customer1satisfaction
+	{
+		Measurement customer1satisfaction
+		{
+			providedValue 0.0
+		}
+	}
+}
+
+Component customer2
+{
+	CapabilityProvision customer2satisfaction
+	{
+		Measurement customer2satisfaction
+		{
+			providedValue 0.0
+		}
+	}
+	
+	Capability requirement1
+	{
+		Measurement req1
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Capability requirement2
+	{
+		Measurement req2
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Capability requirement3
+	{
+		Measurement req3
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+}
+
+Component customer3
+{
+	CapabilityProvision customer3satisfaction
+	{
+		Measurement customer3satisfaction
+		{
+			providedValue 0.0
+		}
+	}
+	
+	Capability requirement3
+	{
+		Measurement req3
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Capability requirement4
+	{
+		Measurement req4
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Capability requirement5
+	{
+		Measurement req5
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+}
+
+Component customer4
+{
+	CapabilityProvision customer4satisfaction
+	{
+		Measurement customer4satisfaction
+		{
+			providedValue 0.0
+		}
+	}
+	
+	Capability requirement5
+	{
+		Measurement req5
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Capability requirement6
+	{
+		Measurement req6
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Capability requirement7
+	{
+		Measurement req7
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+}
+
+Component feature1
+{
+	CapabilityProvision requirement1
+	{
+		Measurement req1
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+}
+
+Component feature1
+{
+	CapabilityProvision requirement1
+	{
+		Measurement req1
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+}
+
+Component feature2
+{
+	CapabilityProvision requirement2
+	{
+		Measurement req2
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+}
+
+Component feature3
+{
+	CapabilityProvision requirement3
+	{
+		Measurement req3
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+}
+
+Component feature4
+{
+	CapabilityProvision requirement4
+	{
+		Measurement req4
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+}
+
+Component feature5
+{
+	CapabilityProvision requirement5
+	{
+		Measurement req5
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+}
+
+Component feature6
+{
+	CapabilityProvision requirement6
+	{
+		Measurement req6
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+}
+
+Component feature7
+{
+	CapabilityProvision requirement7
+	{
+		Measurement req7
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+}

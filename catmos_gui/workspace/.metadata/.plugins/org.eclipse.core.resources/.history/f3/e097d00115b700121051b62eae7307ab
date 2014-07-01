@@ -1,0 +1,141 @@
+/*
+ * 
+ */
+package Scenario.diagram.edit.commands;
+
+/**
+ * @generated
+ */
+public class CapabilitySatisfiesReorientCommand extends org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand {
+
+	/**
+ * @generated
+ */
+	private final int reorientDirection;
+
+	/**
+ * @generated
+ */
+	private final org.eclipse.emf.ecore.EObject referenceOwner;
+
+	/**
+ * @generated
+ */
+	private final org.eclipse.emf.ecore.EObject oldEnd;
+
+	/**
+ * @generated
+ */
+	private final org.eclipse.emf.ecore.EObject newEnd;
+
+	/**
+ * @generated
+ */
+	public CapabilitySatisfiesReorientCommand(org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelationshipRequest request) {
+		super(request.getLabel(), null, request);
+		reorientDirection = request.getDirection();
+		referenceOwner = request.getReferenceOwner();
+		oldEnd = request.getOldRelationshipEnd();
+		newEnd = request.getNewRelationshipEnd();
+	}
+	
+	/**
+ * @generated
+ */
+	public boolean canExecute() {
+			if (false == referenceOwner instanceof Scenario.Capability) {
+		return false;
+	}
+		if (reorientDirection == org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest.REORIENT_SOURCE) {
+			return canReorientSource();
+		}
+		if (reorientDirection == org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest.REORIENT_TARGET) {
+			return canReorientTarget();
+		}
+		return false;
+	}
+
+	/**
+ * @generated
+ */
+	protected boolean canReorientSource() {
+			if (!(oldEnd instanceof Scenario.Capability && newEnd instanceof Scenario.Capability)) {
+		return false;
+	}
+	return Scenario.diagram.edit.policies.ScenarioBaseItemSemanticEditPolicy.getLinkConstraints().canExistCapabilitySatisfies_4003(getNewSource(), getOldTarget());
+	}
+
+	/**
+ * @generated
+ */
+	protected boolean canReorientTarget() {
+			if (!(oldEnd instanceof Scenario.Capability && newEnd instanceof Scenario.Capability)) {
+		return false;
+	}
+	return Scenario.diagram.edit.policies.ScenarioBaseItemSemanticEditPolicy.getLinkConstraints().canExistCapabilitySatisfies_4003(getOldSource(), getNewTarget());
+	}
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.core.command.CommandResult doExecuteWithResult(
+			org.eclipse.core.runtime.IProgressMonitor monitor, org.eclipse.core.runtime.IAdaptable info)
+			throws org.eclipse.core.commands.ExecutionException {
+		if (!canExecute()) {
+			throw new org.eclipse.core.commands.ExecutionException("Invalid arguments in reorient link command");  //$NON-NLS-1$
+		}
+		if (reorientDirection == org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest.REORIENT_SOURCE) {
+			return reorientSource();
+		}
+		if (reorientDirection == org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest.REORIENT_TARGET) {
+			return reorientTarget();
+		}
+		throw new IllegalStateException();
+	}
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.core.command.CommandResult reorientSource() throws org.eclipse.core.commands.ExecutionException {
+				getOldSource().getSatisfies().remove(getOldTarget());
+	getNewSource().getSatisfies().add(getOldTarget());
+	return org.eclipse.gmf.runtime.common.core.command.CommandResult.newOKCommandResult(referenceOwner);
+	}
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.core.command.CommandResult reorientTarget() throws org.eclipse.core.commands.ExecutionException {
+				getOldSource().getSatisfies().remove(getOldTarget());
+	getOldSource().getSatisfies().add(getNewTarget());
+	return org.eclipse.gmf.runtime.common.core.command.CommandResult.newOKCommandResult(referenceOwner);
+	}
+			
+	/**
+ * @generated
+ */
+	protected Scenario.Capability getOldSource() {
+		return (Scenario.Capability) referenceOwner;
+	}
+	
+	/**
+ * @generated
+ */
+	protected Scenario.Capability getNewSource() {
+		return (Scenario.Capability) newEnd;
+	}
+	
+	/**
+ * @generated
+ */
+	protected Scenario.Capability getOldTarget() {
+		return (Scenario.Capability) oldEnd;
+	}
+	
+	/**
+ * @generated
+ */
+	protected Scenario.Capability getNewTarget() {
+		return (Scenario.Capability) newEnd;
+	}
+}

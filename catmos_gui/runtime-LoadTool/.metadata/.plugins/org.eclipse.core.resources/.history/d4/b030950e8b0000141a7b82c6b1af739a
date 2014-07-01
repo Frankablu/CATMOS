@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:Main xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:p="internalusage">
+  <valuePairs name="NumberOfSolutions" value="129"/>
+  <valuePairs name="CurrentSolution" value="84"/>
+  <valuePairs name="ThroughLife" value="false"/>
+  <valuePairs name="name" value="AutoNextReleaseProblem"/>
+</p:Main>

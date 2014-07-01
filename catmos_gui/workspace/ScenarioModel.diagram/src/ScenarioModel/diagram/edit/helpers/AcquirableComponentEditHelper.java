@@ -1,0 +1,11 @@
+/*
+ * 
+ */
+package ScenarioModel.diagram.edit.helpers;
+
+/**
+ * @generated
+ */
+public class AcquirableComponentEditHelper extends
+		ScenarioModel.diagram.edit.helpers.ScenarioModelBaseEditHelper {
+}

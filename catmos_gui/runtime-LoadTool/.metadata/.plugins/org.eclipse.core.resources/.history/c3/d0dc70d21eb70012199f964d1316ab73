@@ -1,0 +1,99 @@
+
+//This Script Works in Conjunction with a C++ Program To Evaluate Acquisition Plans Quickly
+
+var runTool = new Native("org.eclipse.epsilon.examples.tools.RunTool");
+
+var scheduleString : String = runTool.getSchedule().println();
+
+//Read Link Data
+var upgradeList : Collection = co!upgrade.all().select(x|x.sourceComponent <> null);
+var connections : Collection = co!connection.all();
+
+runTool.connectToNetworkClient("127.0.0.1", 1234);
+
+//Upgrades
+for (upgrade : Any in upgradeList)
+{
+	runTool.setUpgrade(upgrade.sourceComponent,upgrade.upgradeName,upgrade.targetComponent);
+}
+
+//Links
+for (connection : Any in connections)
+{
+	runTool.createLink(connection.sourceComponent, connection.capability, connection.targetComponent);
+}
+
+var result : String = runTool.networkEvaluate();
+
+
+//Load data into search model
+var searchPopMember : search!populationMember = search!populationMember.all().sortBy(x|x.populationName).last();
+
+var entryNo : Integer = 0;
+var counter : Integer = 0;
+
+var capabilityName : String;
+var capabilityScore : Real;
+
+var costFlag : Boolean = false;
+
+var costName : String;
+var costScore : Real;
+
+for (entry in result.split("%"))
+{
+	if (entry == "Done")
+	{
+		break;
+	}
+	
+	if (costFlag)
+	{
+		if (counter == 1)
+		{
+			costScore = entry.asReal();
+			counter = 0;
+			
+			var searchCost : search!Cost = new search!Cost;
+			searchCost.costType = costName;
+			searchCost.costQuantity = costScore;
+			searchPopMember.costs.add(searchCost);
+			
+		}
+		if (counter == 0)
+		{
+			costName = entry;
+			counter = 1;
+		}
+	}
+	
+	
+	if (entry == "Costs")
+	{
+		costFlag = true;
+		counter = 0;
+	}
+	
+	if (entryNo > 1 and costFlag == false)
+	{
+		if (counter == 1)
+		{
+			capabilityScore = entry.asReal();
+			counter = 0;
+			
+			var newSearchCap : search!Capability = new search!Capability;
+			newSearchCap.capabilityName = capabilityName;
+			newSearchCap.capabilityStatusValue = capabilityScore;
+			searchPopMember.capabilities.add(newSearchCap);
+		}
+		if (counter == 0)
+		{
+			capabilityName = entry;
+			counter = 1;
+		}
+	}
+
+	entryNo = entryNo + 1;	
+}
+
+

@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="ScenarioModel">
+  <OurObjects xsi:type="p:Capability" name="Blue Team Performance" searchObjective="true" startDate="0" endDate="2556" status="2.0" colour="Green" decomposes="//@OurObjects.1 //@OurObjects.11 //@OurObjects.16 //@OurObjects.24 //@OurObjects.49 //@OurObjects.53 //@OurObjects.56 //@OurObjects.69">
+    <measurements name="Blue Team Capability Score" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0" script="output = math.min( getCapability(&quot;Medical Support&quot;) , getCapability(&quot;1. Route Clearance&quot;) , getCapability(&quot;2. Establish Patrol Base&quot;) , getCapability(&quot;3. Protect Patrol Base&quot;) , getCapability(&quot;4. Supply Patrol Base&quot;) , getCapability(&quot;5. Prevent Enemy Crossings&quot;) )"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Command and Control" startDate="0" endDate="2556" decomposes="//@OurObjects.2 //@OurObjects.9">
+    <measurements name="CC Capability Score" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0" script="output = 0.5 * getCapability(&quot;Internet Access&quot;) + 0.5 * getCapability(&quot;Radio Communications&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Internet Access" startDate="0" endDate="2556" decomposes="//@OurObjects.3 //@OurObjects.4">
+    <measurements name="Internet Access MoE" criticalValue="0.2" benchmarkValue="1.0" providedValue="1.0" script="output = getCapability(&quot;Internet Access Bandwidth&quot;) * getCapability(&quot;Internet Access Range&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Internet Access Bandwidth" startDate="0" endDate="2556" accumulation="//@OurObjects.3/@measurements.0" satisfiedBy="//@OurObjects.5/@provides.0 //@OurObjects.6/@provides.0">
+    <measurements name="Bandwidth" criticalValue="10.0" benchmarkValue="20.0" providedValue="90.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Internet Access Range" startDate="0" endDate="2556" accumulation="//@OurObjects.4/@measurements.0" satisfiedBy="//@OurObjects.5/@provides.1 //@OurObjects.6/@provides.1">
+    <measurements name="Range" criticalValue="20.0" benchmarkValue="50.0" providedValue="100.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Radwin">
+    <provides xsi:type="p:CapabilityProvision" name="Internet Access Bandwidth" reuse="1" satisfies="//@OurObjects.3">
+      <measurements name="Bandwidth" providedValue="8.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Internet Access Range" reuse="1" satisfies="//@OurObjects.4">
+      <measurements name="Range" providedValue="5.0"/>
+    </provides>
+    <requires name="Reacher Transport" startDate="-1" endDate="-1" satisfiedBy="//@OurObjects.7/@provides.0"/>
+    <costs name="Money" amount="0.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Reacher">
+    <provides xsi:type="p:CapabilityProvision" name="Internet Access Bandwidth" reuse="1" satisfies="//@OurObjects.3">
+      <measurements name="Bandwidth" providedValue="2.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Internet Access Range" reuse="1" satisfies="//@OurObjects.4">
+      <measurements name="Range" providedValue="10.0"/>
+    </provides>
+    <requires name="Reacher Transport" satisfiedBy="//@OurObjects.7/@provides.0"/>
+    <requires name="CORMORANT Programme" startDate="-1" endDate="-1" satisfiedBy="//@OurObjects.8/@provides.0"/>
+    <costs name="Money" amount="0.05"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mowag Duro III">
+    <provides xsi:type="p:CapabilityProvision" name="Reacher Transport" satisfies="//@OurObjects.5/@requires.0 //@OurObjects.6/@requires.0"/>
+    <costs name="Money" amount="0.14"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="CORMORANT Programme">
+    <provides xsi:type="p:CapabilityProvision" name="CORMORANT Programme" satisfies="//@OurObjects.6/@requires.1"/>
+    <costs name="Money" amount="100.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Radio Communications" startDate="0" endDate="2556" satisfiedBy="//@OurObjects.10/@provides.0">
+    <measurements name="Jamming Resistance" criticalValue="1.0" benchmarkValue="5.0" providedValue="5.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Bowman Radio System Programme">
+    <provides xsi:type="p:CapabilityProvision" name="Radio Communications" satisfies="//@OurObjects.9">
+      <measurements name="Jamming Resistance" providedValue="5.0"/>
+    </provides>
+    <costs name="Money" amount="24000.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Wide-area Surveillance" startDate="0" endDate="2556" decomposes="//@OurObjects.12 //@OurObjects.13 //@OurObjects.14 //@OurObjects.15">
+    <measurements name="WA Capability Score" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0" script="output = math.min( getCapability(&quot;Vision Coverage&quot;) , getCapability(&quot;Night Vision Coverage&quot;) , getCapability(&quot;Radar Coverage&quot;) , getCapability(&quot;Signal Intelligence Coverage&quot;) , getCapability(&quot;Command and Control&quot;) )"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Vision Coverage" startDate="0" endDate="2556" accumulation="//@OurObjects.12/@measurements.0" satisfiedBy="//@OurObjects.40/@provides.0 //@OurObjects.39/@provides.1">
+    <measurements name="Vision Area Coverage" criticalValue="75.0" benchmarkValue="150.0" providedValue="625.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Night Vision Coverage" startDate="0" endDate="2556" accumulation="//@OurObjects.13/@measurements.0" satisfiedBy="//@OurObjects.39/@provides.2">
+    <measurements name="Night Vision Area Coverage" criticalValue="75.0" benchmarkValue="150.0" providedValue="500.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Radar Coverage" startDate="0" endDate="2556" accumulation="//@OurObjects.14/@measurements.0" satisfiedBy="//@OurObjects.39/@provides.3">
+    <measurements name="Radar Area Coverage" criticalValue="75.0" benchmarkValue="150.0" providedValue="750.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Signal Intelligence Coverage" startDate="0" endDate="2556" accumulation="//@OurObjects.15/@measurements.0" satisfiedBy="//@OurObjects.40/@provides.1 //@OurObjects.39/@provides.4">
+    <measurements name="Signal Intelligence Area Coverage" criticalValue="75.0" benchmarkValue="150.0" providedValue="625.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Medical Support" startDate="0" endDate="2556" decomposes="//@OurObjects.17 //@OurObjects.18 //@OurObjects.19">
+    <measurements name="MS Capability Score" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0" script="output = math.min(getCapability(&quot;First Aid&quot;), getCapability(&quot;Serious Injury&quot;), getCapability(&quot;Convey Medical Support&quot;))"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="First Aid" startDate="0" endDate="2556" accumulation="//@OurObjects.17/@measurements.0" satisfiedBy="//@OurObjects.21/@provides.0 //@OurObjects.20/@provides.0 //@OurObjects.22/@provides.0">
+    <measurements name="FA Injuries Treatable Per Day" criticalValue="15.0" benchmarkValue="35.0" providedValue="200.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Serious Injury" startDate="0" endDate="2556" accumulation="//@OurObjects.18/@measurements.0" satisfiedBy="//@OurObjects.22/@provides.1 //@OurObjects.21/@provides.1 //@OurObjects.20/@provides.1">
+    <measurements name="SI Injuries Treatable Per Day" criticalValue="5.0" benchmarkValue="15.0" providedValue="60.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Convey Medical Support" startDate="0" endDate="2556" accumulation="//@OurObjects.19/@measurements.0" satisfiedBy="//@OurObjects.21/@provides.2">
+    <measurements name="CM Injuries Treatable Per Day" criticalValue="3.0" benchmarkValue="8.0" providedValue="30.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Medical Team">
+    <provides xsi:type="p:CapabilityProvision" name="First Aid" reuse="1" satisfies="//@OurObjects.17">
+      <measurements name="FA Injuries Treatable Per Day" providedValue="5.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Serious Injury" reuse="1" satisfies="//@OurObjects.18">
+      <measurements name="SI Injuries Treatable Per Day" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="0.8"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Vector Medical">
+    <provides xsi:type="p:CapabilityProvision" name="First Aid" reuse="1" satisfies="//@OurObjects.17">
+      <measurements name="FA Injuries Treatable Per Day" providedValue="15.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Serious Injury" reuse="1" satisfies="//@OurObjects.18">
+      <measurements name="SI Injuries Treatable Per Day" providedValue="5.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Convey Medical Support" reuse="1" satisfies="//@OurObjects.19">
+      <measurements name="CM Injuries Treatable Per Day" providedValue="3.0"/>
+    </provides>
+    <costs name="Money" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Base Medical Support">
+    <provides xsi:type="p:CapabilityProvision" name="First Aid" reuse="1" satisfies="//@OurObjects.17">
+      <measurements name="FA Injuries Treatable Per Day" providedValue="35.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Serious Injury" reuse="1" satisfies="//@OurObjects.18">
+      <measurements name="SI Injuries Treatable Per Day" providedValue="15.0"/>
+    </provides>
+    <requires name="Base Medical Center" startDate="-1" endDate="-1" satisfiedBy="//@OurObjects.51/@provides.1"/>
+    <requires name="Medical Goods Supplied" startDate="-1" endDate="-1" satisfiedBy="//@OurObjects.23/@provides.0">
+      <measurements name="Medical Goods Supplied">
+        <criticalValues name="yes"/>
+        <benchmarkValues name="yes"/>
+        <providedValues name="no"/>
+      </measurements>
+    </requires>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Medical Goods At Base">
+    <provides xsi:type="p:CapabilityProvision" name="Medical Goods Supplied" satisfies="//@OurObjects.22/@requires.1">
+      <measurements name="Medical Goods Supplied" script="output = &quot;no&quot; if getCapability(&quot;General Goods&quot;) > 0.5 then output = &quot;yes&quot; end">
+        <providedValues name="no"/>
+      </measurements>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="1. Route Clearance" startDate="0" endDate="2556" decomposes="//@OurObjects.25 //@OurObjects.27 //@OurObjects.32 //@OurObjects.33 //@OurObjects.45 //@OurObjects.16">
+    <measurements name="Route Clearance Capability Score" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0" script="output = math.min ( getCapability(&quot;Counter IED&quot;) , getCapability(&quot;Patrol Effectiveness&quot;) , getCapability(&quot;Enemy Detection&quot;) , getCapability(&quot;Removing Hard Targets&quot;) , getCapability(&quot;Temporary Bridge Laying&quot;) , getCapability(&quot;Medical Support&quot;) )"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Counter IED" startDate="0" endDate="2556" accumulation="//@OurObjects.25/@measurements.1" satisfiedBy="//@OurObjects.26/@provides.0">
+    <measurements name="Chance Of Death" criticalValue="5.0" benchmarkValue="0.0" providedValue="0.4"/>
+    <measurements name="Disarm Per Day" criticalValue="2.0" benchmarkValue="10.0" providedValue="20.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Buffalo">
+    <provides xsi:type="p:CapabilityProvision" name="Counter IED" reuse="1" satisfies="//@OurObjects.25">
+      <measurements name="Chance Of Death" providedValue="0.4"/>
+      <measurements name="Disarm Per Day" providedValue="2.0"/>
+    </provides>
+    <costs name="Money" amount="1.5"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Patrol Effectiveness" startDate="0" endDate="2556" accumulation="//@OurObjects.27/@measurements.0" satisfiedBy="//@OurObjects.28/@provides.0 //@OurObjects.30/@provides.0">
+    <measurements name="Effective Ground Coverage" criticalValue="10.0" benchmarkValue="50.0" providedValue="135.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Plan - Patrol with Mastiff">
+    <provides xsi:type="p:CapabilityProvision" name="Patrol Effectiveness" reuse="1" satisfies="//@OurObjects.27">
+      <measurements name="Effective Ground Coverage" providedValue="0.0" script="output = 10.0 if getCapability(&quot;Wide-area Surveillance&quot;) > 1.0 then&#xA;&#x9;&#x9;&#x9;&#x9;output = 20.0 * (getCapability(&quot;Wide-area Surveillance&quot;) - 1.0) end"/>
+    </provides>
+    <requires name="Mastiff Vehicle" startDate="-1" endDate="-1" satisfiedBy="//@OurObjects.29/@provides.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mastiff">
+    <provides xsi:type="p:CapabilityProvision" name="Mastiff Vehicle" satisfies="//@OurObjects.28/@requires.0"/>
+    <provides xsi:type="p:CapabilityProvision" name="Protect Stationary Structures" reuse="1" startDate="0" endDate="2556" satisfies="//@OurObjects.54">
+      <measurements name="Combat Effectiveness" providedValue="30.0"/>
+    </provides>
+    <costs name="Money" amount="0.4"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Plan - Patrol with Vector">
+    <provides xsi:type="p:CapabilityProvision" name="Patrol Effectiveness" reuse="1" satisfies="//@OurObjects.27">
+      <measurements name="Effective Ground Coverage" providedValue="0.0" script="output = 5.0 if getCapability(&quot;Wide-area Surveillance&quot;) > 1.0 then&#xA;&#x9;&#x9;&#x9;&#x9;output = 14.0 * (getCapability(&quot;Wide-area Surveillance&quot;) - 1.0) end"/>
+    </provides>
+    <requires name="Vector Patrol Vehicle" startDate="-1" endDate="-1" satisfiedBy="//@OurObjects.31/@provides.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Vector Patrol">
+    <provides xsi:type="p:CapabilityProvision" name="Vector Patrol Vehicle" reuse="1" satisfies="//@OurObjects.30/@requires.0"/>
+    <provides xsi:type="p:CapabilityProvision" name="Protect Stationary Structures" reuse="1" satisfies="//@OurObjects.54">
+      <measurements name="Combat Effectiveness" providedValue="40.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Convey Protection" reuse="1" startDate="0" endDate="2556" satisfies="//@OurObjects.57">
+      <measurements name="Convey Protection Score" providedValue="30.0"/>
+    </provides>
+    <costs name="Money" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Enemy Detection" standAlone="true" startDate="0" endDate="2556">
+    <measurements name="Wide-area Surveillance Score" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0" script="output = getCapability(&quot;Wide-area Surveillance&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Removing Hard Targets" startDate="0" endDate="2556" accumulation="//@OurObjects.33/@measurements.0" satisfiedBy="//@OurObjects.34/@provides.0 //@OurObjects.38/@provides.0">
+    <measurements name="Deployable Explosive Force" criticalValue="1000.0" benchmarkValue="12000.0" providedValue="105000.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="L118 Light Gun Artillery Round">
+    <provides xsi:type="p:CapabilityProvision" name="Removing Hard Targets" reuse="1" satisfies="//@OurObjects.33">
+      <measurements name="Deployable Explosive Force" providedValue="500.0"/>
+    </provides>
+    <requires name="L118 Light Gun" startDate="-1" endDate="-1" satisfiedBy="//@OurObjects.35/@provides.0"/>
+    <costs name="Money" amount="0.01"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="L118 Light Gun">
+    <provides xsi:type="p:CapabilityProvision" name="L118 Light Gun" reuse="10" satisfies="//@OurObjects.34/@requires.0"/>
+    <requires name="Light Gun Towing And Ammo Carrying" startDate="-1" endDate="-1" satisfiedBy="//@OurObjects.36/@provides.0"/>
+    <requires name="Artillery Radar" startDate="-1" endDate="-1" satisfiedBy="//@OurObjects.37/@provides.0"/>
+    <costs name="Money" amount="0.8"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Land Rover 101 FC">
+    <provides xsi:type="p:CapabilityProvision" name="Light Gun Towing And Ammo Carrying" satisfies="//@OurObjects.35/@requires.0"/>
+    <costs name="Money" amount="0.5"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mobile Artillery Battlefield Radar">
+    <provides xsi:type="p:CapabilityProvision" name="Artillery Radar" satisfies="//@OurObjects.35/@requires.1"/>
+    <costs name="Money" amount="0.4"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="MQ-9 Reaper Bombing Strike">
+    <provides xsi:type="p:CapabilityProvision" name="Removing Hard Targets" reuse="1" satisfies="//@OurObjects.33">
+      <measurements name="Deployable Explosive Force" providedValue="4000.0"/>
+    </provides>
+    <requires name="AGM-114 Hellfire Missile" startDate="-1" endDate="-1" satisfiedBy="//@OurObjects.43/@provides.0"/>
+    <requires name="GBU-38 Joint Direct Attack Munition Guidance System" startDate="-1" endDate="-1" satisfiedBy="//@OurObjects.44/@provides.0"/>
+    <requires name="MQ-9 Reaper" startDate="-1" endDate="-1" satisfiedBy="//@OurObjects.39/@provides.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="MQ-9 Reaper">
+    <provides xsi:type="p:CapabilityProvision" name="MQ-9 Reaper" satisfies="//@OurObjects.38/@requires.2"/>
+    <provides xsi:type="p:CapabilityProvision" name="Vision Coverage" reuse="1" satisfies="//@OurObjects.12">
+      <measurements name="Vision Area Coverage" providedValue="50.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Night Vision Coverage" reuse="1" satisfies="//@OurObjects.13">
+      <measurements name="Night Vision Area Coverage" providedValue="50.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Radar Coverage" reuse="1" satisfies="//@OurObjects.14">
+      <measurements name="Radar Area Coverage" providedValue="75.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Signal Intelligence Coverage" reuse="1" satisfies="//@OurObjects.15">
+      <measurements name="Signal Intelligence Area Coverage" providedValue="35.0"/>
+    </provides>
+    <requires name="UAV Launch and Recovery" startDate="-1" endDate="-1" satisfiedBy="//@OurObjects.42/@provides.0"/>
+    <requires name="UAV UHF Communications" startDate="-1" endDate="-1" satisfiedBy="//@OurObjects.42/@provides.1">
+      <measurements name="UHF Bandwidth" criticalValue="5.0" benchmarkValue="10.0" providedValue="12.0"/>
+    </requires>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Global Hawk">
+    <provides xsi:type="p:CapabilityProvision" name="Vision Coverage" reuse="1" satisfies="//@OurObjects.12">
+      <measurements name="Vision Area Coverage" providedValue="25.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Signal Intelligence Coverage" reuse="1" satisfies="//@OurObjects.15">
+      <measurements name="Signal Intelligence Area Coverage" providedValue="55.0"/>
+    </provides>
+    <requires name="UAV Launch and Recovery" satisfiedBy="//@OurObjects.42/@provides.0"/>
+    <requires name="UAV UHF Communications" satisfiedBy="//@OurObjects.42/@provides.1">
+      <measurements name="UHF Bandwidth" criticalValue="5.0" benchmarkValue="10.0" providedValue="12.0"/>
+    </requires>
+    <requires name="Global Hawk Programme" startDate="-1" endDate="-1" satisfiedBy="//@OurObjects.41/@provides.0"/>
+    <costs name="Money" amount="222.7"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Global Hawk UK Adaptations">
+    <provides xsi:type="p:CapabilityProvision" name="Global Hawk Programme" satisfies="//@OurObjects.40/@requires.2"/>
+    <costs name="Money" amount="5.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Blue Team UAV Control">
+    <provides xsi:type="p:CapabilityProvision" name="UAV Launch and Recovery" satisfies="//@OurObjects.40/@requires.0 //@OurObjects.39/@requires.0"/>
+    <provides xsi:type="p:CapabilityProvision" name="UAV UHF Communications" satisfies="//@OurObjects.40/@requires.1 //@OurObjects.39/@requires.1">
+      <measurements name="UHF Bandwidth" providedValue="12.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="AGM-114 Hellfire Missile">
+    <provides xsi:type="p:CapabilityProvision" name="AGM-114 Hellfire Missile" reuse="1" satisfies="//@OurObjects.38/@requires.0"/>
+    <costs name="Money" amount="0.0448"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="GBU-38 Joint Direct Attack Munition Guidance System">
+    <provides xsi:type="p:CapabilityProvision" name="GBU-38 Joint Direct Attack Munition Guidance System" satisfies="//@OurObjects.38/@requires.1"/>
+    <costs name="Money" amount="0.02"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Temporary Bridge Laying" startDate="0" endDate="2556" satisfiedBy="//@OurObjects.47/@provides.0"/>
+  <OurObjects xsi:type="p:Component" name="Alvis Unipower">
+    <provides xsi:type="p:CapabilityProvision" name="Bridge Tow" startDate="-1" endDate="-1" satisfies="//@OurObjects.47/@requires.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="BR90 Bridging">
+    <provides xsi:type="p:CapabilityProvision" name="Temporary Bridge Laying" satisfies="//@OurObjects.45"/>
+    <requires name="Bridge Tow" satisfiedBy="//@OurObjects.46/@provides.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Provided Medical Support" standAlone="true" startDate="0" endDate="2556">
+    <measurements name="Medical Support Score" criticalValue="1.0" benchmarkValue="2.0" providedValue="1.0" script="output = getCapability(&quot;Medical Support&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="2. Establish Patrol Base" startDate="0" endDate="2556" decomposes="//@OurObjects.50 //@OurObjects.11">
+    <measurements name="Establish Patrol Base Capability Score" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0" script="output = 0.6 * getCapability(&quot;Basing&quot;) + 0.4 * getCapability(&quot;Wide-area Surveillance&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Basing" startDate="0" endDate="2556" satisfiedBy="//@OurObjects.51/@provides.0"/>
+  <OurObjects xsi:type="p:Component" name="Base">
+    <provides xsi:type="p:CapabilityProvision" name="Basing" satisfies="//@OurObjects.50"/>
+    <provides xsi:type="p:CapabilityProvision" name="Base Medical Center" satisfies="//@OurObjects.22/@requires.0"/>
+    <requires name="Base Construction" startDate="-1" endDate="-1" satisfiedBy="//@OurObjects.52/@provides.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Blue Engineering Team">
+    <provides xsi:type="p:CapabilityProvision" name="Base Construction" satisfies="//@OurObjects.51/@requires.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="3. Protect Patrol Base" startDate="0" endDate="2556" decomposes="//@OurObjects.29/@provides.1">
+    <measurements name="Protect Patrol Base" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0" script="output = getCapability(&quot;Protect Stationary Structures&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Protect Stationary Structures" startDate="01/01/2013" endDate="01/01/2020" accumulation="//@OurObjects.29/@provides.1/@measurements.0" satisfiedBy="//@OurObjects.29/@provides.1 //@OurObjects.31/@provides.1 //@OurObjects.55/@provides.0">
+    <measurements name="Combat Effectiveness" criticalValue="20.0" benchmarkValue="150.0" providedValue="900.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Husky">
+    <provides xsi:type="p:CapabilityProvision" name="Protect Stationary Structures" reuse="1" satisfies="//@OurObjects.54">
+      <measurements name="Combat Effectiveness" providedValue="20.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Transport Goods" reuse="1" satisfies="//@OurObjects.66">
+      <measurements name="Volume per day" providedValue="100.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Convey Protection" reuse="1" satisfies="//@OurObjects.57">
+      <measurements name="Convey Protection Score" providedValue="30.0"/>
+    </provides>
+    <costs name="Money" amount="0.6"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="4. Supply Patrol Base" startDate="0" endDate="2556" decomposes="//@OurObjects.31/@provides.2 //@OurObjects.58">
+    <measurements name="Supply Patrol Base" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0" script="output = getCapability(&quot;Convey Protection&quot;) * getCapability(&quot;Supply Transports&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Convey Protection" startDate="01/01/2013" endDate="01/01/2020" accumulation="//@OurObjects.31/@provides.2/@measurements.0" satisfiedBy="//@OurObjects.55/@provides.2 //@OurObjects.31/@provides.2">
+    <measurements name="Convey Protection Score" criticalValue="20.0" benchmarkValue="100.0" providedValue="600.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Supply Transports" startDate="0" endDate="2556" decomposes="//@OurObjects.62 //@OurObjects.64">
+    <measurements name="Supply Transports" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0" script="output = 0.25 * getCapability(&quot;Transport People&quot;) + 0.25 * getCapability(&quot;Transport Fuel&quot;) + 0.25 * getCapability(&quot;Transport Water&quot;) + 0.25 * getCapability(&quot;Transport Goods&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Transport People" startDate="01/01/2013" endDate="01/01/2020" satisfiedBy="//@OurObjects.60/@provides.0">
+    <measurements name="People per day" criticalValue="10.0" benchmarkValue="50.0" providedValue="160.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="FV513 Warrior">
+    <provides xsi:type="p:CapabilityProvision" name="Transport People" reuse="1" satisfies="//@OurObjects.59">
+      <measurements name="People per day" providedValue="16.0"/>
+    </provides>
+    <requires name="FV513 Warrior Programme" startDate="-1" endDate="-1" satisfiedBy="//@OurObjects.61/@provides.0"/>
+    <costs name="Money" amount="0.5"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="FV513 Warrior Programme">
+    <provides xsi:type="p:CapabilityProvision" name="FV513 Warrior Programme" satisfies="//@OurObjects.60/@requires.0"/>
+    <costs name="Money" amount="0.5"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Transport Fuel" startDate="0" endDate="2556" accumulation="//@OurObjects.62/@measurements.0" satisfiedBy="//@OurObjects.63/@provides.0">
+    <measurements name="Fuel gallons per day" criticalValue="200.0" benchmarkValue="700.0" providedValue="1000.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Oshkosh Wheeled Tanker Fuel">
+    <provides xsi:type="p:CapabilityProvision" name="Transport Fuel" reuse="1" satisfies="//@OurObjects.62">
+      <measurements name="Fuel gallons per day" providedValue="100.0"/>
+    </provides>
+    <costs name="Money" amount="3.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Transport Water" startDate="0" endDate="2556" accumulation="//@OurObjects.64/@measurements.0" satisfiedBy="//@OurObjects.65/@provides.0">
+    <measurements name="Gallons per day" criticalValue="200.0" benchmarkValue="400.0" providedValue="1000.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Oshkosh Wheeled Tanker Water">
+    <provides xsi:type="p:CapabilityProvision" name="Transport Water" reuse="1" satisfies="//@OurObjects.64">
+      <measurements name="Gallons per day" providedValue="100.0"/>
+    </provides>
+    <costs name="Money" amount="3.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Transport Goods" startDate="01/01/2013" endDate="01/01/2020" satisfiedBy="//@OurObjects.67/@provides.0 //@OurObjects.55/@provides.1">
+    <measurements name="Volume per day" criticalValue="100.0" benchmarkValue="300.0" providedValue="2000.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Leyland DROPS">
+    <provides xsi:type="p:CapabilityProvision" name="Transport Goods" reuse="1" satisfies="//@OurObjects.66">
+      <measurements name="Volume per day" providedValue="100.0"/>
+    </provides>
+    <requires name="Leyland DROPS Programme" startDate="-1" endDate="-1" satisfiedBy="//@OurObjects.68/@provides.0"/>
+    <costs name="Money" amount="0.5"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Leyland DROPS Programme">
+    <provides xsi:type="p:CapabilityProvision" name="Leyland DROPS Programme" satisfies="//@OurObjects.67/@requires.0"/>
+    <costs name="Money" amount="0.1"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="5. Prevent Enemy Crossings" startDate="0" endDate="2556" decomposes="//@OurObjects.11 //@OurObjects.27">
+    <measurements name="Prevent Enemy Crossings Capability Score" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0" script="output = 0.5 * getCapability(&quot;Wide-area Surveillance&quot;) + 0.5 * getCapability(&quot;Patrol Effectiveness&quot;)"/>
+  </OurObjects>
+</p:Scenario>

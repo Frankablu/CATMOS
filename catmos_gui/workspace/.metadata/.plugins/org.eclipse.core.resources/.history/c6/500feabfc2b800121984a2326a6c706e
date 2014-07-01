@@ -1,0 +1,78 @@
+/*
+ * 
+ */
+package capOverTime.diagram.part;
+
+/**
+ * @generated
+ */
+public class CapOverTimeInitDiagramFileAction
+	implements org.eclipse.ui.IObjectActionDelegate {
+
+	/**
+ * @generated
+ */
+	private org.eclipse.ui.IWorkbenchPart targetPart;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.emf.common.util.URI domainModelURI;
+
+	/**
+ * @generated
+ */
+	public void setActivePart(org.eclipse.jface.action.IAction action, org.eclipse.ui.IWorkbenchPart targetPart) {
+		this.targetPart = targetPart;
+	}
+
+	/**
+ * @generated
+ */
+	public void selectionChanged(org.eclipse.jface.action.IAction action, org.eclipse.jface.viewers.ISelection selection) {
+		domainModelURI = null;
+		action.setEnabled(false);
+		if (selection instanceof org.eclipse.jface.viewers.IStructuredSelection == false || selection.isEmpty()) {
+			return;
+		}
+		org.eclipse.core.resources.IFile file =
+			(org.eclipse.core.resources.IFile) ((org.eclipse.jface.viewers.IStructuredSelection) selection).getFirstElement();
+		domainModelURI = org.eclipse.emf.common.util.URI.createPlatformResourceURI(file.getFullPath().toString(), true);
+		action.setEnabled(true);
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.swt.widgets.Shell getShell() {
+		return targetPart.getSite().getShell();
+	}
+
+	/**
+ * @generated
+ */
+	public void run(org.eclipse.jface.action.IAction action) {
+		org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain =
+			org.eclipse.gmf.runtime.emf.core.GMFEditingDomainFactory.INSTANCE.createEditingDomain();
+				org.eclipse.emf.ecore.resource.ResourceSet resourceSet = editingDomain.getResourceSet();
+				org.eclipse.emf.ecore.EObject diagramRoot = null;
+		try {
+			org.eclipse.emf.ecore.resource.Resource resource = resourceSet.getResource(domainModelURI, true);
+			diagramRoot = (org.eclipse.emf.ecore.EObject) resource.getContents().get(0);
+		} catch (org.eclipse.emf.common.util.WrappedException ex) {
+			capOverTime.diagram.part.CapOverTimeDiagramEditorPlugin.getInstance().logError(
+				"Unable to load resource: " + domainModelURI, ex); //$NON-NLS-1$
+		}
+		if (diagramRoot == null) {
+			org.eclipse.jface.dialogs.MessageDialog.openError(getShell(), 
+                capOverTime.diagram.part.Messages.InitDiagramFile_ResourceErrorDialogTitle,
+                capOverTime.diagram.part.Messages.InitDiagramFile_ResourceErrorDialogMessage);
+			return;
+		}
+		org.eclipse.jface.wizard.Wizard wizard = new capOverTime.diagram.part.CapOverTimeNewDiagramFileWizard(domainModelURI, diagramRoot, editingDomain);
+		wizard.setWindowTitle(org.eclipse.osgi.util.NLS.bind(
+				    capOverTime.diagram.part.Messages.InitDiagramFile_WizardTitle,
+				    capOverTime.diagram.edit.parts.CapabilityOverTimeEditPart.MODEL_ID));
+		capOverTime.diagram.part.CapOverTimeDiagramEditorUtil.runWizard(getShell(), wizard, "InitDiagramFile"); //$NON-NLS-1$
+	}
+	}

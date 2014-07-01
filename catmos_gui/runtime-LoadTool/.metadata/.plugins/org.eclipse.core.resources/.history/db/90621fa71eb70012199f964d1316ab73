@@ -1,0 +1,8 @@
+
+delete ThroughLifePlanning
+delete FindTradeOffs
+delete AcquirableComponent
+delete DesireLow
+delete DesireHigh
+delete Budget
+

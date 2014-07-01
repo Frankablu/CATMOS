@@ -1,0 +1,55 @@
+
+FindTradeOffs TeaMaking { popSize 400 genCount 400
+	ExistingComponent "Cold Water Tap" 1 ExistingComponent "Hot Water Tap" 1
+	AcquirableComponent "Tea Bags" 1 AcquirableComponent "Mug" 1
+	AcquirableComponent "Kettle" 1 AcquirableComponent "Plastic Cup" 1
+	AcquirableComponent "Tea Maker" 1
+	DesireLow "Money"
+}
+
+searchObjective
+Capability "Good Tea" {
+	Measurement "Tea Rating" { criticalValue 1.0 benchmarkValue 5.0 script "output = TeaRating()" }
+	decomposes ("Tea", "Water", "Container")}
+
+Capability "Tea" {
+	Measurement "Flavour" { criticalValues ("Good") benchmarkValues ("Excellent") }}
+
+Capability "Water" {
+	Measurement "Temperature" { criticalValue 30.0 benchmarkValue 70.0 } }
+
+Capability "Container" { 
+	Measurement "Insulation" { criticalValues ("Bad") benchmarkValues ("Good")}}
+	
+Component "Tea Bags" {
+	CapabilityProvision "Tea" { Measurement "Flavour" {providedValues ("Good") }}
+	Cost Money 4.0 }
+	
+Component "Hot Water Tap" {
+	CapabilityProvision "Water" { Measurement "Temperature" {providedValue 50.0 }}}
+	
+Component "Mug" {
+	CapabilityProvision "Container" { Measurement "Insulation" {providedValues ("Good")}}
+	Cost Money 4.0 }
+	
+Component "Cold Water Tap" {
+	CapabilityProvision "Water" {Measurement "Temperature" {providedValue 10.0}}
+	}
+
+Component "Kettle" {
+	CapabilityProvision "Water" {Measurement "Temperature" {providedValue 100.0}}
+	Capability "Water" {}
+	Cost Money 10.0 }	
+
+Component "Plastic Cup" {
+	CapabilityProvision "Container" { Measurement "Insulation" {providedValues ("Bad")}}
+	Cost Money 0.2 }
+
+Component "Tea Maker" {
+	CapabilityProvision "Water" {Measurement "Temperature" {providedValue 75.0}}
+	CapabilityProvision "Tea" { Measurement "Flavour" {providedValues ("Excellent") }}
+	Capability "Water" {}
+	Capability "Tea" {}
+	Cost Money 35.0 }
+	
+Value "Excellent" > "Good" Value "Good" > "Bad" Value "Bad"

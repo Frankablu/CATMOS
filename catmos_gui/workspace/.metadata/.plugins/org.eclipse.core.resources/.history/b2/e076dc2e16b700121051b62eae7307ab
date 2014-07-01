@@ -1,0 +1,10 @@
+/*
+ * 
+ */
+package Scenario.diagram.edit.helpers;
+
+/**
+ * @generated
+ */
+public class CostEditHelper extends Scenario.diagram.edit.helpers.ScenarioBaseEditHelper {
+	}

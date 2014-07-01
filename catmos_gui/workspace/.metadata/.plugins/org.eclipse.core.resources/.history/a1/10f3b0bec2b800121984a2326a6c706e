@@ -1,0 +1,64 @@
+/*
+ * 
+ */
+package capOverTime.diagram.edit.parts;
+
+/**
+ * @generated
+ */
+public class TimePeriodTimePeriodOurObjectsCompartmentEditPart extends org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeCompartmentEditPart  {
+
+			/**
+ * @generated
+ */
+	public static final int VISUAL_ID = 7001;
+	
+		/**
+ * @generated
+ */
+	public TimePeriodTimePeriodOurObjectsCompartmentEditPart(org.eclipse.gmf.runtime.notation.View view) {
+		super(view);
+	}
+	
+			
+		/**
+ * @generated
+ */
+	public String getCompartmentName() {
+		return capOverTime.diagram.part.Messages.TimePeriodTimePeriodOurObjectsCompartmentEditPart_title;
+	}
+	
+						/**
+ * @generated
+ */
+		public org.eclipse.draw2d.IFigure createFigure() {
+			org.eclipse.gmf.runtime.diagram.ui.figures.ResizableCompartmentFigure result = (org.eclipse.gmf.runtime.diagram.ui.figures.ResizableCompartmentFigure) super.createFigure();
+			result.setTitleVisibility(false);
+			return result;
+		}
+		
+		/**
+ * @generated
+ */
+	protected void createDefaultEditPolicies() {
+			super.createDefaultEditPolicies();
+			installEditPolicy(org.eclipse.gef.EditPolicy.PRIMARY_DRAG_ROLE, new org.eclipse.gmf.runtime.diagram.ui.editpolicies.ResizableCompartmentEditPolicy());
+			installEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.SEMANTIC_ROLE, new capOverTime.diagram.edit.policies.TimePeriodTimePeriodOurObjectsCompartmentItemSemanticEditPolicy());
+				installEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CREATION_ROLE, new org.eclipse.gmf.runtime.diagram.ui.editpolicies.CreationEditPolicy());
+		installEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.DRAG_DROP_ROLE, new org.eclipse.gmf.runtime.diagram.ui.editpolicies.DragDropEditPolicy());
+			installEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CANONICAL_ROLE, new capOverTime.diagram.edit.policies.TimePeriodTimePeriodOurObjectsCompartmentCanonicalEditPolicy());
+				}
+	
+			
+			
+			
+		/**
+ * @generated
+ */
+	protected void setRatio(Double ratio) {
+				if (getFigure().getParent().getLayoutManager() instanceof org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout) {
+			super.setRatio(ratio);
+		}
+			}
+	
+	}

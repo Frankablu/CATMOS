@@ -1,0 +1,556 @@
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+package Scenario.util;
+
+import Scenario.AcquirableComponent;
+import Scenario.Budget;
+import Scenario.Capability;
+import Scenario.CapabilityChange;
+import Scenario.CapabilityProvision;
+import Scenario.CapabilityUpgrade;
+import Scenario.Component;
+import Scenario.ComponentU;
+import Scenario.Constraint;
+import Scenario.Cost;
+import Scenario.DesireHigh;
+import Scenario.DesireLow;
+import Scenario.ExistingComponent;
+import Scenario.FindTradeOffs;
+import Scenario.Measurement;
+import Scenario.QualitativeValue;
+import Scenario.QualitativeValueDictionary;
+import Scenario.RunConfiguration;
+import Scenario.Scenario;
+import Scenario.ScenarioPackage;
+import Scenario.ThroughLifePlanning;
+
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notifier;
+
+import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Adapter Factory</b> for the model.
+ * It provides an adapter <code>createXXX</code> method for each class of the model.
+ * <!-- end-user-doc -->
+ * @see Scenario.ScenarioPackage
+ * @generated
+ */
+public class ScenarioAdapterFactory extends AdapterFactoryImpl
+{
+  /**
+   * The cached model package.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected static ScenarioPackage modelPackage;
+
+  /**
+   * Creates an instance of the adapter factory.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ScenarioAdapterFactory()
+  {
+    if (modelPackage == null)
+    {
+      modelPackage = ScenarioPackage.eINSTANCE;
+    }
+  }
+
+  /**
+   * Returns whether this factory is applicable for the type of the object.
+   * <!-- begin-user-doc -->
+   * This implementation returns <code>true</code> if the object is either the model's package or is an instance object of the model.
+   * <!-- end-user-doc -->
+   * @return whether this factory is applicable for the type of the object.
+   * @generated
+   */
+  @Override
+  public boolean isFactoryForType(Object object)
+  {
+    if (object == modelPackage)
+    {
+      return true;
+    }
+    if (object instanceof EObject)
+    {
+      return ((EObject)object).eClass().getEPackage() == modelPackage;
+    }
+    return false;
+  }
+
+  /**
+   * The switch that delegates to the <code>createXXX</code> methods.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected ScenarioSwitch<Adapter> modelSwitch =
+    new ScenarioSwitch<Adapter>()
+    {
+      @Override
+      public Adapter caseScenario(Scenario object)
+      {
+        return createScenarioAdapter();
+      }
+      @Override
+      public Adapter caseObject(Scenario.Object object)
+      {
+        return createObjectAdapter();
+      }
+      @Override
+      public Adapter caseCapability(Capability object)
+      {
+        return createCapabilityAdapter();
+      }
+      @Override
+      public Adapter caseCapabilityProvision(CapabilityProvision object)
+      {
+        return createCapabilityProvisionAdapter();
+      }
+      @Override
+      public Adapter caseMeasurement(Measurement object)
+      {
+        return createMeasurementAdapter();
+      }
+      @Override
+      public Adapter caseQualitativeValue(QualitativeValue object)
+      {
+        return createQualitativeValueAdapter();
+      }
+      @Override
+      public Adapter caseQualitativeValueDictionary(QualitativeValueDictionary object)
+      {
+        return createQualitativeValueDictionaryAdapter();
+      }
+      @Override
+      public Adapter caseComponent(Component object)
+      {
+        return createComponentAdapter();
+      }
+      @Override
+      public Adapter caseCost(Cost object)
+      {
+        return createCostAdapter();
+      }
+      @Override
+      public Adapter caseCapabilityUpgrade(CapabilityUpgrade object)
+      {
+        return createCapabilityUpgradeAdapter();
+      }
+      @Override
+      public Adapter caseCapabilityChange(CapabilityChange object)
+      {
+        return createCapabilityChangeAdapter();
+      }
+      @Override
+      public Adapter caseRunConfiguration(RunConfiguration object)
+      {
+        return createRunConfigurationAdapter();
+      }
+      @Override
+      public Adapter caseFindTradeOffs(FindTradeOffs object)
+      {
+        return createFindTradeOffsAdapter();
+      }
+      @Override
+      public Adapter caseThroughLifePlanning(ThroughLifePlanning object)
+      {
+        return createThroughLifePlanningAdapter();
+      }
+      @Override
+      public Adapter caseComponentU(ComponentU object)
+      {
+        return createComponentUAdapter();
+      }
+      @Override
+      public Adapter caseExistingComponent(ExistingComponent object)
+      {
+        return createExistingComponentAdapter();
+      }
+      @Override
+      public Adapter caseAcquirableComponent(AcquirableComponent object)
+      {
+        return createAcquirableComponentAdapter();
+      }
+      @Override
+      public Adapter caseConstraint(Constraint object)
+      {
+        return createConstraintAdapter();
+      }
+      @Override
+      public Adapter caseDesireHigh(DesireHigh object)
+      {
+        return createDesireHighAdapter();
+      }
+      @Override
+      public Adapter caseDesireLow(DesireLow object)
+      {
+        return createDesireLowAdapter();
+      }
+      @Override
+      public Adapter caseBudget(Budget object)
+      {
+        return createBudgetAdapter();
+      }
+      @Override
+      public Adapter defaultCase(EObject object)
+      {
+        return createEObjectAdapter();
+      }
+    };
+
+  /**
+   * Creates an adapter for the <code>target</code>.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param target the object to adapt.
+   * @return the adapter for the <code>target</code>.
+   * @generated
+   */
+  @Override
+  public Adapter createAdapter(Notifier target)
+  {
+    return modelSwitch.doSwitch((EObject)target);
+  }
+
+
+  /**
+   * Creates a new adapter for an object of class '{@link Scenario.Scenario <em>Scenario</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see Scenario.Scenario
+   * @generated
+   */
+  public Adapter createScenarioAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link Scenario.Object <em>Object</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see Scenario.Object
+   * @generated
+   */
+  public Adapter createObjectAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link Scenario.Capability <em>Capability</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see Scenario.Capability
+   * @generated
+   */
+  public Adapter createCapabilityAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link Scenario.CapabilityProvision <em>Capability Provision</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see Scenario.CapabilityProvision
+   * @generated
+   */
+  public Adapter createCapabilityProvisionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link Scenario.Measurement <em>Measurement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see Scenario.Measurement
+   * @generated
+   */
+  public Adapter createMeasurementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link Scenario.QualitativeValue <em>Qualitative Value</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see Scenario.QualitativeValue
+   * @generated
+   */
+  public Adapter createQualitativeValueAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link Scenario.QualitativeValueDictionary <em>Qualitative Value Dictionary</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see Scenario.QualitativeValueDictionary
+   * @generated
+   */
+  public Adapter createQualitativeValueDictionaryAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link Scenario.Component <em>Component</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see Scenario.Component
+   * @generated
+   */
+  public Adapter createComponentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link Scenario.Cost <em>Cost</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see Scenario.Cost
+   * @generated
+   */
+  public Adapter createCostAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link Scenario.CapabilityUpgrade <em>Capability Upgrade</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see Scenario.CapabilityUpgrade
+   * @generated
+   */
+  public Adapter createCapabilityUpgradeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link Scenario.CapabilityChange <em>Capability Change</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see Scenario.CapabilityChange
+   * @generated
+   */
+  public Adapter createCapabilityChangeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link Scenario.RunConfiguration <em>Run Configuration</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see Scenario.RunConfiguration
+   * @generated
+   */
+  public Adapter createRunConfigurationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link Scenario.FindTradeOffs <em>Find Trade Offs</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see Scenario.FindTradeOffs
+   * @generated
+   */
+  public Adapter createFindTradeOffsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link Scenario.ThroughLifePlanning <em>Through Life Planning</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see Scenario.ThroughLifePlanning
+   * @generated
+   */
+  public Adapter createThroughLifePlanningAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link Scenario.ComponentU <em>Component U</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see Scenario.ComponentU
+   * @generated
+   */
+  public Adapter createComponentUAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link Scenario.ExistingComponent <em>Existing Component</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see Scenario.ExistingComponent
+   * @generated
+   */
+  public Adapter createExistingComponentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link Scenario.AcquirableComponent <em>Acquirable Component</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see Scenario.AcquirableComponent
+   * @generated
+   */
+  public Adapter createAcquirableComponentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link Scenario.Constraint <em>Constraint</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see Scenario.Constraint
+   * @generated
+   */
+  public Adapter createConstraintAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link Scenario.DesireHigh <em>Desire High</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see Scenario.DesireHigh
+   * @generated
+   */
+  public Adapter createDesireHighAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link Scenario.DesireLow <em>Desire Low</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see Scenario.DesireLow
+   * @generated
+   */
+  public Adapter createDesireLowAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link Scenario.Budget <em>Budget</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see Scenario.Budget
+   * @generated
+   */
+  public Adapter createBudgetAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for the default case.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @generated
+   */
+  public Adapter createEObjectAdapter()
+  {
+    return null;
+  }
+
+} //ScenarioAdapterFactory

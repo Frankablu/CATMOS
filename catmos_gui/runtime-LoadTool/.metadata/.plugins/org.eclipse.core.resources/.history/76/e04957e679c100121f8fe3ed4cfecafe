@@ -1,0 +1,7 @@
+
+var runTool = new Native("org.eclipse.epsilon.examples.tools.RunTool");
+
+for (timePeriod in TimePeriod.all())
+{
+	timePeriod.println();
+}

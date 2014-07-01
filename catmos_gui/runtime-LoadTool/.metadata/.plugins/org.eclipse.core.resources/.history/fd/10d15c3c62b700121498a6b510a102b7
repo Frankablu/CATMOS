@@ -1,0 +1,86 @@
+
+FindTradeOffs NextReleaseProblem
+{
+	popSize 100
+	genCount 100
+	
+	AcquirableComponent ComponentA 1
+	AcquirableComponent ComponentB 1
+	AcquirableComponent ComponentC 1
+	
+	DesireLow "Money"
+}
+
+searchObjective
+Capability overallSatisfaction
+{
+	Measurement weightedSatisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		
+		script "output = getGlobalMeasure(\"customer1sat\") + getGlobalMeasure(\"customer2sat\") + getGlobalMeasure(\"customer3sat\") + getGlobalMeasure(\"customer4sat\")"
+	}
+}
+
+Capability customer1satisfaction
+{
+	Measurement customer1sat
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Capability customer2satisfaction
+{
+	Measurement customer2sat
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Capability customer3satisfaction
+{
+	Measurement customer3sat
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Capability customer4satisfaction
+{
+	Measurement customer4sat
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component customer1
+{
+	CapabilityProvision customer1satisfaction
+	{
+		Measurement customer1satisfaction
+		{
+			providedValue 0.0
+		}
+	}
+}
+
+Component customer2
+{
+	
+}
+
+Component customer3
+{
+	
+}
+
+Component customer4
+{
+	
+}

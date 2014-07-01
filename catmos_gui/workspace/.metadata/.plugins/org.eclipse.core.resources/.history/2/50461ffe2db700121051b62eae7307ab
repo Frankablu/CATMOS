@@ -1,0 +1,112 @@
+
+# <copyright>
+# </copyright>
+#
+# $Id$
+
+pluginName = ScenarioModel Edit Support
+providerName = www.example.org
+
+_UI_CreateChild_text = {0}
+_UI_CreateChild_text2 = {1} {0}
+_UI_CreateChild_text3 = {1}
+_UI_CreateChild_tooltip = Create New {0} Under {1} Feature
+_UI_CreateChild_description = Create a new child of type {0} for the {1} feature of the selected {2}.
+_UI_CreateSibling_description = Create a new sibling of type {0} for the selected {2}, under the {1} feature of their parent.
+
+_UI_PropertyDescriptor_description = The {0} of the {1}
+
+_UI_Scenario_type = Scenario
+_UI_OurObject_type = Our Object
+_UI_Capability_type = Capability
+_UI_CapabilityProvision_type = Capability Provision
+_UI_Measurement_type = Measurement
+_UI_QualitativeValue_type = Qualitative Value
+_UI_QualitativeValueDictionary_type = Qualitative Value Dictionary
+_UI_Component_type = Component
+_UI_Cost_type = Cost
+_UI_CapabilityUpgrade_type = Capability Upgrade
+_UI_CapabilityChange_type = Capability Change
+_UI_RunConfiguration_type = Run Configuration
+_UI_FindTradeOffs_type = Find Trade Offs
+_UI_ThroughLifePlanning_type = Through Life Planning
+_UI_ComponentU_type = Component U
+_UI_ExistingComponent_type = Existing Component
+_UI_AcquirableComponent_type = Acquirable Component
+_UI_Constraint_type = Constraint
+_UI_DesireHigh_type = Desire High
+_UI_DesireLow_type = Desire Low
+_UI_Budget_type = Budget
+_UI_Unknown_type = Object
+
+_UI_Unknown_datatype= Value
+
+_UI_Scenario_OurObjects_feature = Our Objects
+_UI_Capability_name_feature = Name
+_UI_Capability_searchOurObjective_feature = Search Our Objective
+_UI_Capability_standAlone_feature = Stand Alone
+_UI_Capability_reuse_feature = Reuse
+_UI_Capability_startDate_feature = Start Date
+_UI_Capability_endDate_feature = End Date
+_UI_Capability_accumulation_feature = Accumulation
+_UI_Capability_measurements_feature = Measurements
+_UI_Capability_decomposes_feature = Decomposes
+_UI_Capability_satisfiedBy_feature = Satisfied By
+_UI_Capability_satisfies_feature = Satisfies
+_UI_Measurement_name_feature = Name
+_UI_Measurement_criticalValue_feature = Critical Value
+_UI_Measurement_benchmarkValue_feature = Benchmark Value
+_UI_Measurement_providedValue_feature = Provided Value
+_UI_Measurement_criticalValues_feature = Critical Values
+_UI_Measurement_benchmarkValues_feature = Benchmark Values
+_UI_Measurement_providedValues_feature = Provided Values
+_UI_Measurement_aggregationType_feature = Aggregation Type
+_UI_Measurement_script_feature = Script
+_UI_Measurement_aggregates_feature = Aggregates
+_UI_QualitativeValue_name_feature = Name
+_UI_QualitativeValueDictionary_name_feature = Name
+_UI_QualitativeValueDictionary_greaterThan_feature = Greater Than
+_UI_QualitativeValueDictionary_lessThan_feature = Less Than
+_UI_Component_name_feature = Name
+_UI_Component_provides_feature = Provides
+_UI_Component_upgrades_feature = Upgrades
+_UI_Component_requires_feature = Requires
+_UI_Component_costs_feature = Costs
+_UI_Component_properties_feature = Properties
+_UI_Cost_name_feature = Name
+_UI_Cost_amount_feature = Amount
+_UI_Cost_startAfter_feature = Start After
+_UI_Cost_repeatDuration_feature = Repeat Duration
+_UI_Cost_stopAfter_feature = Stop After
+_UI_CapabilityUpgrade_name_feature = Name
+_UI_CapabilityUpgrade_targetComponent_feature = Target Component
+_UI_CapabilityUpgrade_upgrading_feature = Upgrading
+_UI_CapabilityUpgrade_capabilityChanges_feature = Capability Changes
+_UI_CapabilityChange_name_feature = Name
+_UI_CapabilityChange_capabilities_feature = Capabilities
+_UI_RunConfiguration_name_feature = Name
+_UI_RunConfiguration_popSize_feature = Pop Size
+_UI_RunConfiguration_genCount_feature = Gen Count
+_UI_FindTradeOffs_components_feature = Components
+_UI_FindTradeOffs_constraints_feature = Constraints
+_UI_ThroughLifePlanning_components_feature = Components
+_UI_ThroughLifePlanning_startDate_feature = Start Date
+_UI_ThroughLifePlanning_endDate_feature = End Date
+_UI_ThroughLifePlanning_constraints_feature = Constraints
+_UI_ComponentU_name_feature = Name
+_UI_ComponentU_quantity_feature = Quantity
+_UI_ExistingComponent_startDate_feature = Start Date
+_UI_ExistingComponent_endDate_feature = End Date
+_UI_AcquirableComponent_acquisitionTime_feature = Acquisition Time
+_UI_AcquirableComponent_lifeSpan_feature = Life Span
+_UI_DesireHigh_name_feature = Name
+_UI_DesireLow_name_feature = Name
+_UI_Budget_name_feature = Name
+_UI_Budget_amount_feature = Amount
+_UI_Budget_startDate_feature = Start Date
+_UI_Budget_repeatDuration_feature = Repeat Duration
+_UI_Budget_endDate_feature = End Date
+_UI_Unknown_feature = Unspecified
+
+_UI_Capability_searchObjective_feature = Search Objective
+_UI_Capability_status_feature = Status

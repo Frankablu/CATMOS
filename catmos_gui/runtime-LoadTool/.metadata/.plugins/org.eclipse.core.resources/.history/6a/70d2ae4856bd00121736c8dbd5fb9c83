@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="CapOverTime">
+  <p:CapabilityOverTime>
+    <timePeriods startDate="0" endDate="0">
+      <ourObjects xsi:type="p:Capability" name="ourMainGoal" searchObjective="true" startDate="01/01/2013" endDate="01/12/2013" status="0.0" colour="Red">
+        <measurements name="satisfactionLevel" criticalValue="1.0" benchmarkValue="10.0" providedValue="0.0"/>
+      </ourObjects>
+    </timePeriods>
+    <timePeriods startDate="1" endDate="240">
+      <ourObjects xsi:type="p:Capability" name="ourMainGoal" searchObjective="true" startDate="01/01/2013" endDate="01/12/2013" status="2.0" colour="Green">
+        <measurements name="satisfactionLevel" criticalValue="1.0" benchmarkValue="10.0" providedValue="15.0"/>
+      </ourObjects>
+    </timePeriods>
+    <timePeriods startDate="241" endDate="333">
+      <ourObjects xsi:type="p:Capability" name="ourMainGoal" searchObjective="true" startDate="01/01/2013" endDate="01/12/2013" status="0.0" colour="Red">
+        <measurements name="satisfactionLevel" criticalValue="1.0" benchmarkValue="10.0" providedValue="0.0"/>
+      </ourObjects>
+    </timePeriods>
+    <timePeriods startDate="334" endDate="334">
+      <ourObjects xsi:type="p:Capability" name="ourMainGoal" searchObjective="true" startDate="01/01/2013" endDate="01/12/2013" status="0.0" colour="Red">
+        <measurements name="satisfactionLevel" criticalValue="1.0" benchmarkValue="10.0" providedValue="0.0"/>
+      </ourObjects>
+    </timePeriods>
+    <timePeriods startDate="0" endDate="0"/>
+    <timePeriods startDate="0"/>
+    <timePeriods startDate="0" endDate="0">
+      <ourObjects xsi:type="p:Capability" name="ourMainGoal" searchObjective="true" startDate="01/01/2013" endDate="01/12/2013" status="0.0" colour="Red">
+        <measurements name="satisfactionLevel" criticalValue="1.0" benchmarkValue="10.0" providedValue="0.0"/>
+      </ourObjects>
+    </timePeriods>
+    <timePeriods startDate="1" endDate="240">
+      <ourObjects xsi:type="p:Capability" name="ourMainGoal" searchObjective="true" startDate="01/01/2013" endDate="01/12/2013" status="2.0" colour="Green">
+        <measurements name="satisfactionLevel" criticalValue="1.0" benchmarkValue="10.0" providedValue="15.0"/>
+      </ourObjects>
+    </timePeriods>
+    <timePeriods startDate="241" endDate="333">
+      <ourObjects xsi:type="p:Capability" name="ourMainGoal" searchObjective="true" startDate="01/01/2013" endDate="01/12/2013" status="0.0" colour="Red">
+        <measurements name="satisfactionLevel" criticalValue="1.0" benchmarkValue="10.0" providedValue="0.0"/>
+      </ourObjects>
+    </timePeriods>
+    <timePeriods startDate="334">
+      <ourObjects xsi:type="p:Capability" name="ourMainGoal" searchObjective="true" startDate="01/01/2013" endDate="01/12/2013" status="0.0" colour="Red">
+        <measurements name="satisfactionLevel" criticalValue="1.0" benchmarkValue="10.0" providedValue="0.0"/>
+      </ourObjects>
+    </timePeriods>
+  </p:CapabilityOverTime>
+  <p:CapabilityOverTime/>
+</xmi:XMI>

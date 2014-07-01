@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:CapabilityOverTime xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="CapOverTime">
+  <timePeriods startDate="0" endDate="69">
+    <ourObjects xsi:type="p:Capability" name="Roaches" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="70" endDate="76">
+    <ourObjects xsi:type="p:Capability" name="Roaches" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="77" endDate="83">
+    <ourObjects xsi:type="p:Capability" name="Roaches" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="84" endDate="90">
+    <ourObjects xsi:type="p:Capability" name="Roaches" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="91" endDate="97">
+    <ourObjects xsi:type="p:Capability" name="Roaches" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="98" endDate="104">
+    <ourObjects xsi:type="p:Capability" name="Roaches" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="105" endDate="111">
+    <ourObjects xsi:type="p:Capability" name="Roaches" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="112" endDate="132">
+    <ourObjects xsi:type="p:Capability" name="Roaches" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="133" endDate="197">
+    <ourObjects xsi:type="p:Capability" name="Roaches" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="198" endDate="252">
+    <ourObjects xsi:type="p:Capability" name="Roaches" searchObjective="true" startDate="0" endDate="inf" status="0.0" colour="Red">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="0.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="253" endDate="315">
+    <ourObjects xsi:type="p:Capability" name="Roaches" searchObjective="true" startDate="0" endDate="inf" status="1.42857" colour="Yellow">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="3.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="316" endDate="329">
+    <ourObjects xsi:type="p:Capability" name="Roaches" searchObjective="true" startDate="0" endDate="inf" status="1.57143" colour="Yellow">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="4.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="330" endDate="343">
+    <ourObjects xsi:type="p:Capability" name="Roaches" searchObjective="true" startDate="0" endDate="inf" status="1.71429" colour="Yellow">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="5.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="344" endDate="1199">
+    <ourObjects xsi:type="p:Capability" name="Roaches" searchObjective="true" startDate="0" endDate="inf" status="1.85714" colour="Yellow">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="6.0"/>
+    </ourObjects>
+  </timePeriods>
+  <timePeriods startDate="1200" endDate="1200">
+    <ourObjects xsi:type="p:Capability" name="Roaches" searchObjective="true" startDate="0" endDate="inf" status="1.85714" colour="Yellow">
+      <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="6.0"/>
+    </ourObjects>
+  </timePeriods>
+</p:CapabilityOverTime>

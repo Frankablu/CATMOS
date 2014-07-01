@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="ScenarioModel">
+  <OurObjects xsi:type="p:Capability" name="ourMainGoal" searchObjective="true" status="2.0" colour="Green" accumulation="//@OurObjects.0/@measurements.0" satisfiedBy="//@OurObjects.49/@provides.0 //@OurObjects.37/@provides.0 //@OurObjects.1/@provides.0 //@OurObjects.2/@provides.0 //@OurObjects.3/@provides.0 //@OurObjects.4/@provides.0 //@OurObjects.5/@provides.0 //@OurObjects.6/@provides.0 //@OurObjects.7/@provides.0 //@OurObjects.8/@provides.0 //@OurObjects.9/@provides.0 //@OurObjects.10/@provides.0 //@OurObjects.11/@provides.0 //@OurObjects.12/@provides.0 //@OurObjects.13/@provides.0 //@OurObjects.14/@provides.0 //@OurObjects.15/@provides.0 //@OurObjects.16/@provides.0 //@OurObjects.17/@provides.0 //@OurObjects.18/@provides.0 //@OurObjects.19/@provides.0 //@OurObjects.20/@provides.0 //@OurObjects.21/@provides.0 //@OurObjects.22/@provides.0 //@OurObjects.23/@provides.0 //@OurObjects.24/@provides.0 //@OurObjects.25/@provides.0 //@OurObjects.26/@provides.0 //@OurObjects.27/@provides.0 //@OurObjects.28/@provides.0 //@OurObjects.29/@provides.0 //@OurObjects.30/@provides.0 //@OurObjects.31/@provides.0 //@OurObjects.32/@provides.0 //@OurObjects.33/@provides.0 //@OurObjects.34/@provides.0 //@OurObjects.35/@provides.0 //@OurObjects.36/@provides.0 //@OurObjects.38/@provides.0 //@OurObjects.39/@provides.0 //@OurObjects.40/@provides.0 //@OurObjects.41/@provides.0 //@OurObjects.42/@provides.0 //@OurObjects.43/@provides.0 //@OurObjects.44/@provides.0 //@OurObjects.45/@provides.0 //@OurObjects.46/@provides.0 //@OurObjects.47/@provides.0 //@OurObjects.48/@provides.0 //@OurObjects.50/@provides.0 //@OurObjects.51/@provides.0 //@OurObjects.52/@provides.0 //@OurObjects.53/@provides.0 //@OurObjects.54/@provides.0 //@OurObjects.55/@provides.0 //@OurObjects.56/@provides.0 //@OurObjects.57/@provides.0 //@OurObjects.58/@provides.0 //@OurObjects.59/@provides.0 //@OurObjects.60/@provides.0 //@OurObjects.61/@provides.0 //@OurObjects.62/@provides.0 //@OurObjects.63/@provides.0 //@OurObjects.64/@provides.0 //@OurObjects.65/@provides.0 //@OurObjects.66/@provides.0 //@OurObjects.67/@provides.0 //@OurObjects.68/@provides.0 //@OurObjects.69/@provides.0 //@OurObjects.70/@provides.0 //@OurObjects.71/@provides.0 //@OurObjects.72/@provides.0 //@OurObjects.73/@provides.0 //@OurObjects.74/@provides.0 //@OurObjects.75/@provides.0 //@OurObjects.76/@provides.0 //@OurObjects.77/@provides.0 //@OurObjects.78/@provides.0 //@OurObjects.79/@provides.0 //@OurObjects.80/@provides.0 //@OurObjects.81/@provides.0 //@OurObjects.82/@provides.0 //@OurObjects.83/@provides.0 //@OurObjects.84/@provides.0 //@OurObjects.85/@provides.0 //@OurObjects.86/@provides.0 //@OurObjects.87/@provides.0 //@OurObjects.88/@provides.0 //@OurObjects.89/@provides.0 //@OurObjects.90/@provides.0 //@OurObjects.91/@provides.0 //@OurObjects.92/@provides.0 //@OurObjects.93/@provides.0 //@OurObjects.94/@provides.0 //@OurObjects.95/@provides.0 //@OurObjects.96/@provides.0 //@OurObjects.97/@provides.0 //@OurObjects.98/@provides.0 //@OurObjects.99/@provides.0 //@OurObjects.100/@provides.0">
+    <measurements name="satisfactionLevel" criticalValue="0.0" benchmarkValue="100.0" providedValue="100.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:1">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:2">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:3">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:4">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:5">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:6">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:7">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:8">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:9">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:10">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:11">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:12">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:13">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:14">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:15">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:16">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:17">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:18">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:19">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:20">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:21">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:22">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:23">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:24">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:25">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:26">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:27">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:28">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:29">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:30">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:31">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:32">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:33">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:34">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:35">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:36">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:37">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:38">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:39">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:40">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:41">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:42">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:43">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:44">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:45">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:46">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:47">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:48">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:49">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:50">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:51">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:52">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:53">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:54">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:55">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:56">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:57">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:58">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:59">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:60">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:61">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:62">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:63">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:64">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:65">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:66">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:67">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:68">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:69">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:70">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:71">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:72">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:73">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:74">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:75">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:76">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:77">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:78">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:79">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:80">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:81">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:82">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:83">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:84">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:85">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:86">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:87">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:88">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:89">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:90">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:91">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:92">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:93">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:94">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:95">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:96">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:97">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:98">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:99">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="ComponentA:100">
+    <provides xsi:type="p:CapabilityProvision" name="ourMainGoal" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="satisfactionLevel" providedValue="1.0"/>
+    </provides>
+  </OurObjects>
+</p:Scenario>

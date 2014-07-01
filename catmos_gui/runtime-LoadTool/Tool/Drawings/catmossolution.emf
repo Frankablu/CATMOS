@@ -1,0 +1,82 @@
+@namespace(
+	uri="CatmosSolutionDrawing",
+	prefix="p")
+package CatmosSolutionDrawing;
+
+class Capability
+{
+	attr String name;
+	
+	   @gmf.compartment(foo="bar")
+   val Measurement[*] measurements;
+	
+   ref CapabilityProvision[*]#satisfies satisfiedBy;
+}
+
+class ScenarioCapability extends Capability
+{
+   attr Boolean searchObjective;
+   
+   @gmf.link(target.decoration="arrow", style="dash", color="0,0,255")
+   ref ScenarioCapability[*] decomposes;
+}
+
+class ComponentCapability extends Capability
+{  
+
+}
+
+class CapabilityProvision
+{
+   attr String name;
+   
+   @gmf.compartment(foo="bar")
+   val MeasurementProvision[*] measurements;
+   
+   ref Capability[*]#satisfiedBy satisfies;
+}
+
+@gmf.node(label="name")
+class Measurement
+{
+   attr String name;
+   attr String criticalValues;
+   attr String benchmarkValues;
+   attr String providedValues;
+   
+   attr String LuaScript;
+}
+
+@gmf.node(label="name")
+class MeasurementProvision
+{
+   attr String name;
+   attr String providedValues;
+   
+   attr String LuaScript;
+}
+
+class Component
+{
+   attr String name;
+   
+   @gmf.compartment(foo="bar")
+   val CapabilityProvision[*] provides;
+   
+   @gmf.compartment(foo="bar")
+   val ComponentCapability[*] requires;
+   
+   @gmf.compartment(foo="bar")
+   val Cost[*] costs;
+}
+
+@gmf.node(label="name")
+class Cost
+{
+	attr String name;
+	attr Float amount;
+}
+
+
+
+

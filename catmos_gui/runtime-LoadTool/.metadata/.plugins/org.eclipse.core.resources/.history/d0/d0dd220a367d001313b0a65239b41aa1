@@ -1,0 +1,162 @@
+
+FindTradeOffs AutoNextReleaseProblem {
+	popSize 200 genCount 50
+	
+	[%
+	var customerCount : Integer = 70;
+	var requirementCount : Integer = 350;
+	
+	for (feature in 1.to(requirementCount))
+	{
+		var randomAcquisitionTime : Integer = 0.to(requirementCount).random();
+	%]
+	AcquirableComponent feature[%=feature%] 1
+	[%
+	}
+	%]
+	
+	DesireLow "Money"
+}
+
+[%
+var numberBag : Bag = new Bag;
+
+for (num in 1.to(10))
+{
+	numberBag.add(1.0 * num);
+}
+
+var a : Real = numberBag.random();
+var b : Real = numberBag.random();
+var c : Real = numberBag.random();
+var d : Real = numberBag.random();
+var e : Real = numberBag.random();
+
+var total : Real = a + b + c + d + e;
+a = a / total;
+b = b / total;
+c = c / total;
+d = d / total;
+e = e / total;
+
+%]
+
+standAlone
+searchObjective
+Capability overallSatisfaction
+{	
+	Measurement weightedSatisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		script "output = [%=a%] * getGlobalMeasure(\'customer1satisfaction\') + [%=b%] * getGlobalMeasure(\'customer2satisfaction\') + [%=c%] * getGlobalMeasure(\'customer3satisfaction\') + [%=d%] * getGlobalMeasure(\'customer4satisfaction\') + [%=e%] * getGlobalMeasure(\'customercustomerCountsatisfaction\')"
+	}
+}
+
+[%
+for (n in 1.to(customerCount))
+{
+var randomRequirementBag : Collection = new Bag;
+randomRequirementBag.add(1.to(requirementCount).random());
+randomRequirementBag.add(1.to(requirementCount).random());
+randomRequirementBag.add(1.to(requirementCount).random());
+randomRequirementBag.add(1.to(requirementCount).random());
+randomRequirementBag.add(1.to(requirementCount).random());
+
+a = numberBag.random();
+b = numberBag.random();
+c = numberBag.random();
+d = numberBag.random();
+e = numberBag.random();
+
+total = a + b + c + d + e;
+a = a / total;
+b = b / total;
+c = c / total;
+d = d / total;
+e = e / total;
+
+var sumToOne : Bag = new Bag;
+sumToOne.add(a);
+sumToOne.add(b);
+sumToOne.add(c);
+sumToOne.add(d);
+sumToOne.add(e);
+
+%]
+
+standAlone
+Capability customer[%=n%]satisfaction
+{	
+	Measurement customer[%=n%]satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+		providedValue 0.0
+		script "output = 0 [%
+		for (value in randomRequirementBag)
+		{
+			var weight = sumToOne.first;
+			sumToOne.remove(weight);
+			%]+ [%=weight%] * getGlobalMeasure(\"req[%=value%]\")[%
+		}
+		%]"
+	}
+}
+
+[%
+}
+%]
+
+[%
+for (n in 1.to(requirementCount))
+{
+var randomNumber : Any = 0.to(10).random();
+var r : Integer = 1.to(requirementCount).random();
+
+%]
+Component feature[%=n%]
+{
+	CapabilityProvision requirement[%=n%]
+	{
+		Measurement req[%=n%]
+		{
+			providedValue 1.0
+		}
+	}
+	
+	[%
+	if (r > n) //Random if there is a dependency + no dependency loops possible
+	{
+	%]
+	Capability requirement[%=r%]
+	{
+		Measurement req[%=r%]
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	[%
+	}
+	%]
+	
+	Cost Money [%=randomNumber%].0
+}
+
+Capability requirement[%=n%]
+{	
+	Measurement req[%=n%]
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+[%
+}
+
+%]
+
+
+

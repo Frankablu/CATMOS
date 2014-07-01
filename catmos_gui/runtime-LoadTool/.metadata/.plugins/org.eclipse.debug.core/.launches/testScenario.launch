@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.epsilon.eol.eclipse.dt.launching.EolLaunchConfigurationDelegate">
+<listAttribute key="models">
+<listEntry value="#&#10;#Mon May 20 13:13:40 BST 2013&#10;isMetamodelFileBased=false&#10;name=scenario&#10;readOnLoad=true&#10;storeOnDisposal=false&#10;aliases=&#10;cached=true&#10;fileBasedMetamodelUri=&#10;metamodelUri=ScenarioModel&#10;modelUri=platform\:/resource/ThroughLifeAutoNextReleaseProblem/ThroughLifeAutoNextReleaseProblem.scen&#10;type=EMF&#10;modelFile=/ThroughLifeAutoNextReleaseProblem/ThroughLifeAutoNextReleaseProblem.scen&#10;expand=true&#10;metamodelFile=&#10;"/>
+</listAttribute>
+<stringAttribute key="source" value="/Tool/Scripts/testScenario.eol"/>
+</launchConfiguration>

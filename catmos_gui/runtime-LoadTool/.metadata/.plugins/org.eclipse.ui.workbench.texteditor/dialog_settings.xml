@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="263" key="DIALOG_WIDTH"/>
+		<item value="277" key="DIALOG_Y_ORIGIN"/>
+		<item value="399" key="DIALOG_HEIGHT"/>
+		<item value="66" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="customer1" key="selection"/>
+		<list key="findhistory">
+			<item value="customer1"/>
+			<item value="no entry"/>
+			<item value="customer10"/>
+			<item value="Hard Target"/>
+			<item value="hard target"/>
+			<item value="hard targt"/>
+			<item value="L118 Service Contract"/>
+			<item value="L118 Light Gun Fleet"/>
+		</list>
+		<list key="replacehistory">
+			<item value="customerCount"/>
+			<item value="requirementCount"/>
+			<item value="2016"/>
+			<item value="Global Hawk"/>
+			<item value="ExistingComponent"/>
+			<item value="Stopping Enemy Crossings"/>
+			<item value="Ground Fire Power"/>
+			<item value="Cold"/>
+		</list>
+	</section>
+</section>

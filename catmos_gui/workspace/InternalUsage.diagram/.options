@@ -1,0 +1,7 @@
+# Tracing options for the InternalUsage.diagram plug-in
+
+# Common issues
+InternalUsage.diagram/debug=false
+
+# Visual IDs
+InternalUsage.diagram/debug/visualID=false

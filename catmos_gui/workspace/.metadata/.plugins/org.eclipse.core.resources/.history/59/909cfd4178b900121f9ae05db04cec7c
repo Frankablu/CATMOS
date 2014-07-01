@@ -1,0 +1,149 @@
+
+/*
+ * 
+ */
+package ScenarioModel.diagram.edit.policies;
+
+/**
+ * @generated
+ */
+public class OpenDiagramEditPolicy extends org.eclipse.gmf.runtime.diagram.ui.editpolicies.OpenEditPolicy {
+
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getOpenCommand(org.eclipse.gef.Request request) {
+		org.eclipse.gef.EditPart targetEditPart = getTargetEditPart(request);
+		if (false == targetEditPart.getModel() instanceof org.eclipse.gmf.runtime.notation.View) {
+			return null;
+		}
+		org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) targetEditPart.getModel();
+		org.eclipse.gmf.runtime.notation.Style link = view.getStyle(org.eclipse.gmf.runtime.notation.NotationPackage.eINSTANCE.getHintedDiagramLinkStyle());
+		if (false == link instanceof org.eclipse.gmf.runtime.notation.HintedDiagramLinkStyle) {
+			return null;
+		}
+		return new org.eclipse.gmf.runtime.diagram.ui.commands.ICommandProxy(new OpenDiagramCommand((org.eclipse.gmf.runtime.notation.HintedDiagramLinkStyle) link));
+	}
+
+
+	/**
+ * @generated
+ */
+	private static class OpenDiagramCommand extends org.eclipse.gmf.runtime.emf.commands.core.command.AbstractTransactionalCommand {
+
+		/**
+ * @generated
+ */
+		private final org.eclipse.gmf.runtime.notation.HintedDiagramLinkStyle diagramFacet;
+
+		/**
+ * @generated
+ */
+		OpenDiagramCommand(org.eclipse.gmf.runtime.notation.HintedDiagramLinkStyle linkStyle) {
+			// editing domain is taken for original diagram, 
+			// if we open diagram from another file, we should use another editing domain
+			super(org.eclipse.emf.transaction.util.TransactionUtil.getEditingDomain(linkStyle), ScenarioModel.diagram.part.Messages.CommandName_OpenDiagram, null);
+			diagramFacet = linkStyle;
+		}
+
+		// FIXME canExecute if  !(readOnly && getDiagramToOpen == null), i.e. open works on ro diagrams only when there's associated diagram already
+
+		/**
+ * @generated
+ */
+		protected org.eclipse.gmf.runtime.common.core.command.CommandResult doExecuteWithResult(org.eclipse.core.runtime.IProgressMonitor monitor, org.eclipse.core.runtime.IAdaptable info) throws org.eclipse.core.commands.ExecutionException {
+			try {
+				org.eclipse.gmf.runtime.notation.Diagram diagram = getDiagramToOpen();
+				if (diagram == null) {
+					diagram = intializeNewDiagram();
+				}
+				org.eclipse.emf.common.util.URI uri = org.eclipse.emf.ecore.util.EcoreUtil.getURI(diagram);
+String editorName = uri.lastSegment() + '#' + diagram.eResource().getContents().indexOf(diagram);
+org.eclipse.ui.IEditorInput editorInput = new org.eclipse.emf.common.ui.URIEditorInput(uri, editorName);
+				org.eclipse.ui.IWorkbenchPage page = org.eclipse.ui.PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
+				page.openEditor(editorInput, getEditorID());
+				return org.eclipse.gmf.runtime.common.core.command.CommandResult.newOKCommandResult();
+			} catch (Exception ex) {
+				throw new org.eclipse.core.commands.ExecutionException("Can't open diagram", ex);
+			}
+		}
+
+		/**
+ * @generated
+ */
+		protected org.eclipse.gmf.runtime.notation.Diagram getDiagramToOpen() {
+			return diagramFacet.getDiagramLink();
+		}
+
+		/**
+ * @generated
+ */
+		protected org.eclipse.gmf.runtime.notation.Diagram intializeNewDiagram() throws org.eclipse.core.commands.ExecutionException {
+			org.eclipse.gmf.runtime.notation.Diagram d = org.eclipse.gmf.runtime.diagram.core.services.ViewService.createDiagram(getDiagramDomainElement(), getDiagramKind(), getPreferencesHint());
+			if (d == null) {
+				throw new org.eclipse.core.commands.ExecutionException("Can't create diagram of '" + getDiagramKind() + "' kind");
+			}
+			diagramFacet.setDiagramLink(d);
+			assert diagramFacet.eResource() != null;
+			diagramFacet.eResource().getContents().add(d);
+			org.eclipse.emf.ecore.EObject container = diagramFacet.eContainer();
+			while (container instanceof org.eclipse.gmf.runtime.notation.View) {
+				((org.eclipse.gmf.runtime.notation.View) container).persist();
+				container = container.eContainer();
+			}
+			try {
+							new org.eclipse.ui.actions.WorkspaceModifyOperation() {
+					protected void execute(org.eclipse.core.runtime.IProgressMonitor monitor) throws org.eclipse.core.runtime.CoreException, java.lang.reflect.InvocationTargetException, InterruptedException {
+						try {
+							for (java.util.Iterator it = diagramFacet.eResource().getResourceSet().getResources().iterator(); it.hasNext();) {
+					org.eclipse.emf.ecore.resource.Resource nextResource = (org.eclipse.emf.ecore.resource.Resource) it.next();
+					if (nextResource.isLoaded() && !getEditingDomain().isReadOnly(nextResource)) {
+						nextResource.save(ScenarioModel.diagram.part.ScenarioModelDiagramEditorUtil.getSaveOptions());
+					}
+				}
+									} catch (java.io.IOException ex) {
+							throw new java.lang.reflect.InvocationTargetException(ex, "Save operation failed");
+						}		
+					}
+				}.run(null);
+			} catch (java.lang.reflect.InvocationTargetException e) {
+				throw new org.eclipse.core.commands.ExecutionException("Can't create diagram of '" + getDiagramKind() + "' kind", e);
+			} catch (InterruptedException e) {
+				throw new org.eclipse.core.commands.ExecutionException("Can't create diagram of '" + getDiagramKind() + "' kind", e);
+			}
+						return d;
+		}
+
+		/**
+ * @generated
+ */
+		protected org.eclipse.emf.ecore.EObject getDiagramDomainElement() {
+			// use same element as associated with EP
+			return ((org.eclipse.gmf.runtime.notation.View) diagramFacet.eContainer()).getElement();
+		}
+
+		/**
+ * @generated
+ */
+		protected org.eclipse.gmf.runtime.diagram.core.preferences.PreferencesHint getPreferencesHint() {
+			// XXX prefhint from target diagram's editor?
+			return ScenarioModel.diagram.part.ScenarioModelDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT;
+		}
+
+		/**
+ * @generated
+ */
+		protected String getDiagramKind() {
+			return ScenarioModel.diagram.edit.parts.ScenarioEditPart.MODEL_ID;
+		}
+
+		/**
+ * @generated
+ */
+		protected String getEditorID() {
+			return ScenarioModel.diagram.part.ScenarioModelDiagramEditor.ID;
+		}
+	}
+
+}

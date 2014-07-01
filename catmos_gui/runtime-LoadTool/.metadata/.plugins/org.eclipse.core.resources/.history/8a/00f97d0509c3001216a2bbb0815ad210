@@ -1,0 +1,11 @@
+
+
+operation Any getAddress()
+{
+	return "127.0.0.1";
+}
+
+operation Any getPort()
+{
+	return 11101;
+}

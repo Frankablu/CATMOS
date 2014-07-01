@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="ScenarioModel">
+  <OurObjects xsi:type="p:Capability" name="Mineral Mining" startDate="0" endDate="1200" accumulation="//@OurObjects.0/@measurements.0" satisfiedBy="//@OurObjects.19/@provides.0 //@OurObjects.10/@provides.0 //@OurObjects.14/@provides.0 //@OurObjects.18/@provides.0 //@OurObjects.17/@provides.0 //@OurObjects.15/@provides.0 //@OurObjects.13/@provides.0 //@OurObjects.11/@provides.0 //@OurObjects.9/@provides.0 //@OurObjects.12/@provides.0 //@OurObjects.16/@provides.0 //@OurObjects.20/@provides.0">
+    <measurements name="Drone count" criticalValue="0.0" benchmarkValue="20.0" providedValue="12.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Overlord" startDate="0" endDate="1200" accumulation="//@OurObjects.1/@measurements.0" satisfiedBy="//@OurObjects.22/@provides.0 //@OurObjects.24/@provides.0 //@OurObjects.23/@provides.0 //@OurObjects.21/@provides.0">
+    <measurements name="Overlord count" criticalValue="0.0" benchmarkValue="5.0" providedValue="4.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Roaches" searchObjective="true" startDate="0" endDate="1200" status="0.0" colour="Red" accumulation="//@OurObjects.2/@measurements.0" satisfiedBy="//@OurObjects.6/@provides.0 //@OurObjects.7/@provides.0 //@OurObjects.8/@provides.0 //@OurObjects.5/@provides.0">
+    <measurements name="Roach count" criticalValue="0.0" benchmarkValue="7.0" providedValue="4.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Roach Warren" startDate="-1" endDate="-1">
+    <provides xsi:type="p:CapabilityProvision" name="Roach Production" satisfies="//@OurObjects.6/@requires.0 //@OurObjects.7/@requires.0 //@OurObjects.8/@requires.0 //@OurObjects.5/@requires.0"/>
+    <requires name="Spawning Pool" startDate="-1" endDate="-1" sequentialScheduling="true" satisfiedBy="//@OurObjects.4/@provides.0"/>
+    <costs name="Larva" amount="1.0"/>
+    <costs name="Minerals" amount="200.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Spawning Pool" startDate="-1" endDate="-1">
+    <provides xsi:type="p:CapabilityProvision" name="Spawning Pool" satisfies="//@OurObjects.3/@requires.0"/>
+    <costs name="Larva" amount="1.0"/>
+    <costs name="Minerals" amount="250.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Roach:2" startDate="-1" endDate="-1">
+    <provides xsi:type="p:CapabilityProvision" name="Roaches" reuse="1" satisfies="//@OurObjects.2">
+      <measurements name="Roach count" providedValue="1.0"/>
+    </provides>
+    <requires name="Roach Production" sequentialScheduling="true" satisfiedBy="//@OurObjects.3/@provides.0"/>
+    <costs name="Minerals" amount="75.0"/>
+    <costs name="Larva" amount="1.0"/>
+    <costs name="Supply" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Roach:4" startDate="-1" endDate="-1">
+    <provides xsi:type="p:CapabilityProvision" name="Roaches" reuse="1" satisfies="//@OurObjects.2">
+      <measurements name="Roach count" providedValue="1.0"/>
+    </provides>
+    <requires name="Roach Production" sequentialScheduling="true" satisfiedBy="//@OurObjects.3/@provides.0"/>
+    <costs name="Minerals" amount="75.0"/>
+    <costs name="Larva" amount="1.0"/>
+    <costs name="Supply" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Roach:5" startDate="-1" endDate="-1">
+    <provides xsi:type="p:CapabilityProvision" name="Roaches" reuse="1" satisfies="//@OurObjects.2">
+      <measurements name="Roach count" providedValue="1.0"/>
+    </provides>
+    <requires name="Roach Production" sequentialScheduling="true" satisfiedBy="//@OurObjects.3/@provides.0"/>
+    <costs name="Minerals" amount="75.0"/>
+    <costs name="Larva" amount="1.0"/>
+    <costs name="Supply" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Roach:6" startDate="-1" endDate="-1">
+    <provides xsi:type="p:CapabilityProvision" name="Roaches" reuse="1" satisfies="//@OurObjects.2">
+      <measurements name="Roach count" providedValue="1.0"/>
+    </provides>
+    <requires name="Roach Production" sequentialScheduling="true" satisfiedBy="//@OurObjects.3/@provides.0"/>
+    <costs name="Minerals" amount="75.0"/>
+    <costs name="Larva" amount="1.0"/>
+    <costs name="Supply" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:2" startDate="-1" endDate="-1">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="Drone count" providedValue="1.0"/>
+    </provides>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+    <costs name="Supply" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:4" startDate="-1" endDate="-1">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="Drone count" providedValue="1.0"/>
+    </provides>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+    <costs name="Supply" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:5" startDate="-1" endDate="-1">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="Drone count" providedValue="1.0"/>
+    </provides>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+    <costs name="Supply" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:6" startDate="-1" endDate="-1">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="Drone count" providedValue="1.0"/>
+    </provides>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+    <costs name="Supply" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:8" startDate="-1" endDate="-1">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="Drone count" providedValue="1.0"/>
+    </provides>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+    <costs name="Supply" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:9" startDate="-1" endDate="-1">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="Drone count" providedValue="1.0"/>
+    </provides>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+    <costs name="Supply" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:13" startDate="-1" endDate="-1">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="Drone count" providedValue="1.0"/>
+    </provides>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+    <costs name="Supply" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:14" startDate="-1" endDate="-1">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="Drone count" providedValue="1.0"/>
+    </provides>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+    <costs name="Supply" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:15" startDate="-1" endDate="-1">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="Drone count" providedValue="1.0"/>
+    </provides>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+    <costs name="Supply" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:17" startDate="-1" endDate="-1">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="Drone count" providedValue="1.0"/>
+    </provides>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+    <costs name="Supply" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:18" startDate="-1" endDate="-1">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="Drone count" providedValue="1.0"/>
+    </provides>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+    <costs name="Supply" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mining Drone:20" startDate="-1" endDate="-1">
+    <provides xsi:type="p:CapabilityProvision" name="Mineral Mining" reuse="1" satisfies="//@OurObjects.0">
+      <measurements name="Drone count" providedValue="1.0"/>
+    </provides>
+    <costs name="Minerals" amount="50.0"/>
+    <costs name="Minerals" amount="-5.0" startAfter="7" repeatDuration="7"/>
+    <costs name="Supply" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Overlord:2" startDate="0" endDate="1200">
+    <provides xsi:type="p:CapabilityProvision" name="Overlord" reuse="1" satisfies="//@OurObjects.1">
+      <measurements name="Overlord count" providedValue="1.0"/>
+    </provides>
+    <costs name="Supply" amount="-8.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Overlord:3" startDate="0" endDate="1200">
+    <provides xsi:type="p:CapabilityProvision" name="Overlord" reuse="1" satisfies="//@OurObjects.1">
+      <measurements name="Overlord count" providedValue="1.0"/>
+    </provides>
+    <costs name="Supply" amount="-8.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Overlord:4" startDate="0" endDate="1200">
+    <provides xsi:type="p:CapabilityProvision" name="Overlord" reuse="1" satisfies="//@OurObjects.1">
+      <measurements name="Overlord count" providedValue="1.0"/>
+    </provides>
+    <costs name="Supply" amount="-8.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Overlord:5" startDate="0" endDate="1200">
+    <provides xsi:type="p:CapabilityProvision" name="Overlord" reuse="1" satisfies="//@OurObjects.1">
+      <measurements name="Overlord count" providedValue="1.0"/>
+    </provides>
+    <costs name="Supply" amount="-8.0"/>
+  </OurObjects>
+</p:Scenario>

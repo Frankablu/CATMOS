@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;AutoNextReleaseProblem/Results/Copy (5) of 2DParetoFront.png&apos; to &apos;Copy (5) of 2DParetoFront Parellel.png&apos;" description="Rename resource &apos;Copy (5) of 2DParetoFront.png&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Results/Copy (5) of 2DParetoFront.png" name="Copy (5) of 2DParetoFront Parellel.png" stamp="1389279392848" updateReferences="true"/>
+</session>

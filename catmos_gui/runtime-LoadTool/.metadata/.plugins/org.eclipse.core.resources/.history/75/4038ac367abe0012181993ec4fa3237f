@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="ScenarioModel">
+  <OurObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" status="1.23529" colour="Yellow">
+    <measurements name="weightedSatisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.235294" script="output = 0.4117647 * getGlobalMeasure('customer1satisfaction') + 0.05882353 * getGlobalMeasure('customer2satisfaction') + 0.11764706 * getGlobalMeasure('customer3satisfaction') + 0.1764706 * getGlobalMeasure('customer4satisfaction') + 0.23529412 * getGlobalMeasure('customer5satisfaction')"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer1satisfaction" status="0.0" colour="Red" satisfiedBy="//@OurObjects.6/@provides.0">
+    <measurements name="customer1satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer2satisfaction" status="0.0" colour="Red" satisfiedBy="//@OurObjects.7/@provides.0">
+    <measurements name="customer2satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer3satisfaction" status="0.0" colour="Red" satisfiedBy="//@OurObjects.8/@provides.0">
+    <measurements name="customer3satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer4satisfaction" status="0.0" colour="Red" satisfiedBy="//@OurObjects.9/@provides.0">
+    <measurements name="customer4satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer5satisfaction" status="2.0" colour="Green" satisfiedBy="//@OurObjects.10/@provides.0">
+    <measurements name="customer5satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="customer1">
+    <provides xsi:type="p:CapabilityProvision" name="customer1satisfaction" satisfies="//@OurObjects.1">
+      <measurements name="customer1satisfaction" providedValue="0.0" script="output = 0 + 0.23529412 * getMeasure(&quot;req21&quot;)+ 0.05882353 * getMeasure(&quot;req50&quot;)+ 0.29411766 * getMeasure(&quot;req15&quot;)+ 0.23529412 * getMeasure(&quot;req16&quot;)+ 0.1764706 * getMeasure(&quot;req13&quot;)"/>
+    </provides>
+    <requires name="requirement21">
+      <measurements name="req21" criticalValue="0.0" benchmarkValue="1.0"/>
+    </requires>
+    <requires name="requirement50">
+      <measurements name="req50" criticalValue="0.0" benchmarkValue="1.0"/>
+    </requires>
+    <requires name="requirement15">
+      <measurements name="req15" criticalValue="0.0" benchmarkValue="1.0"/>
+    </requires>
+    <requires name="requirement16">
+      <measurements name="req16" criticalValue="0.0" benchmarkValue="1.0"/>
+    </requires>
+    <requires name="requirement13">
+      <measurements name="req13" criticalValue="0.0" benchmarkValue="1.0"/>
+    </requires>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="customer2">
+    <provides xsi:type="p:CapabilityProvision" name="customer2satisfaction" satisfies="//@OurObjects.2">
+      <measurements name="customer2satisfaction" providedValue="0.0" script="output = 0 + 0.5263158 * getMeasure(&quot;req23&quot;)+ 0.15789473 * getMeasure(&quot;req35&quot;)+ 0.10526316 * getMeasure(&quot;req14&quot;)+ 0.15789473 * getMeasure(&quot;req47&quot;)+ 0.05263158 * getMeasure(&quot;req41&quot;)"/>
+    </provides>
+    <requires name="requirement23" status="2.0" colour="Green">
+      <measurements name="req23" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+    </requires>
+    <requires name="requirement35">
+      <measurements name="req35" criticalValue="0.0" benchmarkValue="1.0"/>
+    </requires>
+    <requires name="requirement14">
+      <measurements name="req14" criticalValue="0.0" benchmarkValue="1.0"/>
+    </requires>
+    <requires name="requirement47">
+      <measurements name="req47" criticalValue="0.0" benchmarkValue="1.0"/>
+    </requires>
+    <requires name="requirement41">
+      <measurements name="req41" criticalValue="0.0" benchmarkValue="1.0"/>
+    </requires>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="customer3">
+    <provides xsi:type="p:CapabilityProvision" name="customer3satisfaction" satisfies="//@OurObjects.3">
+      <measurements name="customer3satisfaction" providedValue="0.0" script="output = 0 + 0.22727273 * getMeasure(&quot;req11&quot;)+ 0.3181818 * getMeasure(&quot;req30&quot;)+ 0.09090909 * getMeasure(&quot;req32&quot;)+ 0.09090909 * getMeasure(&quot;req50&quot;)+ 0.27272728 * getMeasure(&quot;req7&quot;)"/>
+    </provides>
+    <requires name="requirement11">
+      <measurements name="req11" criticalValue="0.0" benchmarkValue="1.0"/>
+    </requires>
+    <requires name="requirement30">
+      <measurements name="req30" criticalValue="0.0" benchmarkValue="1.0"/>
+    </requires>
+    <requires name="requirement32">
+      <measurements name="req32" criticalValue="0.0" benchmarkValue="1.0"/>
+    </requires>
+    <requires name="requirement50">
+      <measurements name="req50" criticalValue="0.0" benchmarkValue="1.0"/>
+    </requires>
+    <requires name="requirement7">
+      <measurements name="req7" criticalValue="0.0" benchmarkValue="1.0"/>
+    </requires>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="customer4">
+    <provides xsi:type="p:CapabilityProvision" name="customer4satisfaction" satisfies="//@OurObjects.4">
+      <measurements name="customer4satisfaction" providedValue="0.0" script="output = 0 + 0.22580644 * getMeasure(&quot;req1&quot;)+ 0.22580644 * getMeasure(&quot;req16&quot;)+ 0.06451613 * getMeasure(&quot;req43&quot;)+ 0.19354838 * getMeasure(&quot;req7&quot;)+ 0.29032257 * getMeasure(&quot;req3&quot;)"/>
+    </provides>
+    <requires name="requirement1">
+      <measurements name="req1" criticalValue="0.0" benchmarkValue="1.0"/>
+    </requires>
+    <requires name="requirement16">
+      <measurements name="req16" criticalValue="0.0" benchmarkValue="1.0"/>
+    </requires>
+    <requires name="requirement43">
+      <measurements name="req43" criticalValue="0.0" benchmarkValue="1.0"/>
+    </requires>
+    <requires name="requirement7">
+      <measurements name="req7" criticalValue="0.0" benchmarkValue="1.0"/>
+    </requires>
+    <requires name="requirement3">
+      <measurements name="req3" criticalValue="0.0" benchmarkValue="1.0"/>
+    </requires>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="customer5">
+    <provides xsi:type="p:CapabilityProvision" name="customer5satisfaction" satisfies="//@OurObjects.5">
+      <measurements name="customer5satisfaction" providedValue="0.0" script="output = 0 + 0.30769232 * getMeasure(&quot;req27&quot;)+ 0.15384616 * getMeasure(&quot;req19&quot;)+ 0.07692308 * getMeasure(&quot;req40&quot;)+ 0.23076923 * getMeasure(&quot;req5&quot;)+ 0.23076923 * getMeasure(&quot;req9&quot;)"/>
+    </provides>
+    <requires name="requirement27" status="2.0" colour="Green" satisfiedBy="//@OurObjects.16/@provides.0">
+      <measurements name="req27" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+    </requires>
+    <requires name="requirement19" status="2.0" colour="Green" satisfiedBy="//@OurObjects.13/@provides.0">
+      <measurements name="req19" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+    </requires>
+    <requires name="requirement40" status="2.0" colour="Green" satisfiedBy="//@OurObjects.18/@provides.0">
+      <measurements name="req40" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+    </requires>
+    <requires name="requirement5" status="2.0" colour="Green" satisfiedBy="//@OurObjects.11/@provides.0">
+      <measurements name="req5" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+    </requires>
+    <requires name="requirement9" status="2.0" colour="Green" satisfiedBy="//@OurObjects.12/@provides.0">
+      <measurements name="req9" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+    </requires>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature5">
+    <provides xsi:type="p:CapabilityProvision" name="requirement5" satisfies="//@OurObjects.10/@requires.3">
+      <measurements name="req5" providedValue="1.0"/>
+    </provides>
+    <requires name="requirement20" status="2.0" colour="Green" satisfiedBy="//@OurObjects.14/@provides.0">
+      <measurements name="req20" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+    </requires>
+    <costs name="Money" amount="7.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature9">
+    <provides xsi:type="p:CapabilityProvision" name="requirement9" satisfies="//@OurObjects.10/@requires.4">
+      <measurements name="req9" providedValue="1.0"/>
+    </provides>
+    <requires name="requirement23" satisfiedBy="//@OurObjects.15/@provides.0">
+      <measurements name="req23" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+    </requires>
+    <costs name="Money" amount="5.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature19">
+    <provides xsi:type="p:CapabilityProvision" name="requirement19" satisfies="//@OurObjects.10/@requires.1">
+      <measurements name="req19" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="6.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature20">
+    <provides xsi:type="p:CapabilityProvision" name="requirement20" satisfies="//@OurObjects.11/@requires.0">
+      <measurements name="req20" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="0.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature23">
+    <provides xsi:type="p:CapabilityProvision" name="requirement23" satisfies="//@OurObjects.12/@requires.0">
+      <measurements name="req23" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature27">
+    <provides xsi:type="p:CapabilityProvision" name="requirement27" satisfies="//@OurObjects.10/@requires.0">
+      <measurements name="req27" providedValue="1.0"/>
+    </provides>
+    <requires name="requirement37" status="2.0" colour="Green" satisfiedBy="//@OurObjects.17/@provides.0">
+      <measurements name="req37" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+    </requires>
+    <costs name="Money" amount="6.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature37">
+    <provides xsi:type="p:CapabilityProvision" name="requirement37" satisfies="//@OurObjects.16/@requires.0">
+      <measurements name="req37" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="4.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature40">
+    <provides xsi:type="p:CapabilityProvision" name="requirement40" satisfies="//@OurObjects.10/@requires.2">
+      <measurements name="req40" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="4.0"/>
+  </OurObjects>
+</p:Scenario>

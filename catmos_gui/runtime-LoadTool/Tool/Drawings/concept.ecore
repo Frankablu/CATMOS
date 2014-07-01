@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ConceptDrawing"
+    nsURI="ConceptDrawing" nsPrefix="p">
+  <eClassifiers xsi:type="ecore:EClass" name="Capability">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="wantedMeasurements" upperBound="-1"
+        eType="#//Measurement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decomposes" upperBound="-1"
+        eType="#//Capability" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="satisfiedBy" upperBound="-1"
+        eType="#//CapabilityProvision" eOpposite="#//CapabilityProvision/satisfies"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="satisfiedBy" upperBound="-1"
+        eType="#//CapabilityProvision"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CapabilityProvision">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="providedMeasurements" upperBound="-1"
+        eType="#//Measurement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="satisfies" upperBound="-1"
+        eType="#//Capability" eOpposite="#//Capability/satisfiedBy"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Component">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="providedCapabilities" upperBound="-1"
+        eType="#//CapabilityProvision" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="wantedCapabilities" upperBound="-1"
+        eType="#//Capability" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="componentCosts" upperBound="-1"
+        eType="#//Cost" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Measurement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Cost"/>
+</ecore:EPackage>

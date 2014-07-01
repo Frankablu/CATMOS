@@ -1,0 +1,245 @@
+
+ThroughLifePlanning "7RoachRushTemp"
+{
+	popSize 10
+	genCount 1
+	
+	startDate "0"
+	endDate "1200"
+	
+	ExistingComponent "Hatchery" 1 startDate "0" endDate "inf"
+	ExistingComponent "Starting Drone" 5 startDate "0" endDate "inf"
+	
+	AcquirableComponent "Mining Drone" 20 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent "Gas Mining Drone" 3 acquisitionTime "0" lifeSpan "inf"
+	AcquirableComponent "Roach" 7 acquisitionTime "27" lifeSpan "inf"
+	AcquirableComponent "Roach Warren" 1 acquisitionTime "55" lifeSpan "inf"
+	AcquirableComponent "Spawning Pool" 1 acquisitionTime "65" lifeSpan "inf"
+	AcquirableComponent "Extractor" 1 acquisitionTime "30" lifeSpan "inf"
+	AcquirableComponent "Overlord" 5 acquisitionTime "25" lifeSpan "inf"
+	AcquirableComponent "Queen" 1 acquisitionTime "50" lifeSpan "inf"
+	
+	Budget Minerals
+	{
+		amount 50.0
+		startDate "0"
+	}
+	
+	Budget Supply
+	{
+		amount 10.0
+		startDate "0"
+	}
+	
+	Budget Larva
+	{
+		amount 1.0
+		startDate "0"
+		repeatDuration "15"
+	}
+}
+
+//Income Capabilities
+//Strictly speaking the tool does not support negative costs (Building something generates more money)
+//Hence these capabilities are needed to make the tool select these for inclusion
+Capability "Mineral Mining"
+{	
+	accumulation "Mining Drone count"
+	
+	startDate "0"
+	endDate "inf"
+	
+	Measurement "Mining Drone count"
+	{
+		criticalValue 0.0
+		benchmarkValue 20.0
+	}
+}
+
+Capability "Gas Mineral Mining"
+{
+	accumulation "Gas Mining Drone count"
+	
+	startDate "0"
+	endDate "inf"
+	
+	Measurement "Gas Mining Drone count"
+	{
+		criticalValue 0.0
+		benchmarkValue 3.0
+	}
+}
+
+Capability "Larva Production"
+{
+	accumulation "Extra Larva"
+	
+	startDate "0"
+	endDate "inf"
+	
+	Measurement "Extra Larva"
+	{
+		criticalValue 0.0
+		benchmarkValue 4.0
+	}
+}
+
+Capability "Extractor"
+{
+	startDate "0"
+	endDate "inf"
+}
+
+Capability "Overlord" {
+	accumulation "Overlord Count"
+	
+	startDate "0"
+	endDate "inf"
+	
+	Measurement "Overlord Count"
+	{
+		criticalValue 0.0
+		benchmarkValue 5.0
+	}
+}
+
+//We want 7 roaches as early as possible!
+searchObjective
+Capability "Roach"
+{	
+	accumulation "Roach count"
+	
+	startDate "0"
+	endDate "inf"
+	
+	Measurement "Roach count"
+	{
+		criticalValue 0.0
+		benchmarkValue 7.0
+	}
+}
+
+Component "Roach"
+{
+	CapabilityProvision "Roach"
+	{
+		reuse 1
+		Measurement "Roach count"
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Capability "Supply" {}
+	sequentialScheduling
+	Capability "Roach Production" {}
+	
+	Cost Minerals 75.0
+	Cost Gas 25.0
+	Cost Larva 1.0
+}
+
+Component "Roach Warren"
+{
+	CapabilityProvision "Roach Production" {}
+	
+	sequentialScheduling
+	Capability "Spawning Pool" {}
+	
+	Cost Larva 1.0
+	Cost Minerals 200.0 //+50 for drone
+}
+
+Component "Spawning Pool"
+{
+	CapabilityProvision "Spawning Pool" {}
+	
+	Cost Larva 1.0
+	Cost Minerals 250.0 //+50 for drone
+}
+
+Component "Mining Drone"
+{
+	CapabilityProvision "Mineral Mining" { Measurement "Mining Drone count" { providedValue 1.0 }}
+	
+	Cost Minerals 50.0
+	Cost Larva 1.0
+	Cost Supply 1.0
+	
+	Cost Minerals -5.0
+	{
+		startAfter "7"
+		repeatDuration "7"
+	}
+}
+
+Component "Starting Drone"
+{
+	CapabilityProvision "Mineral Mining" { Measurement "Mining Drone count" { providedValue 1.0 }}
+	
+	Cost Supply 1.0
+	
+	Cost Minerals -5.0
+	{
+		startAfter "7"
+		repeatDuration "7"
+	}
+}
+
+
+Component "Hatchery" {}
+
+Component "Gas Mining Drone"
+{
+	CapabilityProvision "Gas Mineral Mining" { Measurement "Gas Mining Drone count" { providedValue 1.0 }}
+	
+	Cost Minerals 50.0
+	Cost Larva 1.0
+	Cost Supply 1.0
+	Cost ExtractorPlace 1.0
+	
+	Cost Gas -5.0
+	{
+		startAfter "7"
+		repeatDuration "7"
+	}
+}
+
+Component "Extractor"
+{
+	CapabilityProvision "Extractor" {}
+	Cost ExtractorPlace -3.0
+	Cost Minerals 75.0
+}
+
+Component "Overlord"
+{
+	CapabilityProvision Overlord { Measurement "Overlord Count" { providedValue 1.0 } }
+	
+	Cost Supply -8.0
+	Cost Minerals 100.0
+	Cost Larva 1.0
+}
+
+Component "Queen"
+{
+	CapabilityProvision "Larva Production"
+	{
+		Measurement "Extra Larva"
+		{
+			providedValue 1.0 //Doesn't Matter
+		}
+	}
+	
+	sequentialScheduling
+	Capability "Spawning Pool" {}
+	
+	Cost Larva -4.0
+	{
+		startAfter "40"
+		repeatDuration "40"
+	}
+	
+	Cost Supply 2.0
+	Cost Minerals 150.0
+}

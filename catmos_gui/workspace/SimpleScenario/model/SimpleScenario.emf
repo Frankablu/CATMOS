@@ -1,0 +1,66 @@
+@namespace(
+	uri="SimpleScenario",
+	prefix="p")
+package SimpleScenario;
+
+@gmf.diagram(foo="bar")
+class Scenario
+{
+   @gmf.compartment(foo="bar")
+   val OurObject[*] OurObjects;
+}
+
+class OurObject
+{
+   
+}
+
+@gmf.node(label="name,colour",label.pattern="{0} : {1}")
+class Capability extends OurObject
+{
+   attr String name;
+   attr Boolean searchObjective;
+   attr Boolean standAlone; //Nothing satisfies
+   attr Integer reuse;
+   attr String startDate;
+   attr String endDate;
+   attr Float status;
+   attr String colour;
+   attr Boolean sequentialScheduling;
+   
+   @gmf.link(target.decoration="arrow", style="dash", color="0,0,255")
+   ref Capability[*] decomposes;
+   
+   ref Capability[*]#satisfies satisfiedBy;
+   @gmf.link(target.decoration="arrow", style="dash", color="0,0,255")
+   ref Capability[*]#satisfiedBy satisfies;
+}
+
+@gmf.node(label="name")
+class Component extends OurObject
+{
+   attr String name;
+   
+   //For output from scheduler
+   attr String startDate;
+   attr String endDate;
+   
+   @gmf.compartment(foo="bar")
+   val Capability[*] provides;
+   
+   @gmf.compartment(foo="bar")
+   val CapabilityUpgrade[*] upgrades;
+   
+   @gmf.compartment(foo="bar")
+   val Capability[*] requires;
+}
+
+@gmf.node(label="name")
+class CapabilityUpgrade
+{
+   attr String name;
+   attr String targetComponent;
+   
+   @gmf.link(target.decoration="arrow", style="dash", color="0,0,255")
+   ref Component[0..1] upgrading;
+}

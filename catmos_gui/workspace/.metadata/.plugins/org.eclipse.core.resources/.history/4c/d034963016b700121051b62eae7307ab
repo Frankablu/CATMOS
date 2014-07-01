@@ -1,0 +1,17 @@
+/*
+ * 
+ */
+package Scenario.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramConnectionsPreferencePage extends org.eclipse.gmf.runtime.diagram.ui.preferences.ConnectionsPreferencePage {
+
+	/**
+ * @generated
+ */
+	public DiagramConnectionsPreferencePage() {
+		setPreferenceStore(Scenario.diagram.part.ScenarioDiagramEditorPlugin.getInstance().getPreferenceStore());
+	}
+}

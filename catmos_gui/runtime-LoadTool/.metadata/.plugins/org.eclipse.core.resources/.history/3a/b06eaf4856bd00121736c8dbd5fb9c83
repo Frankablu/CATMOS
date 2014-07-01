@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="CapOverTime">
+  <p:CapabilityOverTime>
+    <timePeriods name="base">
+      <ourObjects xsi:type="p:Capability" name="ourMainGoal" searchObjective="true" startDate="01/01/2013" endDate="01/12/2013">
+        <measurements name="satisfactionLevel" criticalValue="1.0" benchmarkValue="10.0"/>
+      </ourObjects>
+    </timePeriods>
+  </p:CapabilityOverTime>
+  <p:CapabilityOverTime>
+    <timePeriods name="base">
+      <ourObjects xsi:type="p:Capability" name="ourMainGoal" searchObjective="true" startDate="01/01/2013" endDate="01/12/2013">
+        <measurements name="satisfactionLevel" criticalValue="1.0" benchmarkValue="10.0"/>
+      </ourObjects>
+    </timePeriods>
+  </p:CapabilityOverTime>
+</xmi:XMI>
