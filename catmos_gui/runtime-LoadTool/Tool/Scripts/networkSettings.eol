@@ -18,7 +18,7 @@ operation Any getPort()
 
 operation Any getPreamble()
 {
-	//return ""; //No preamble for single server single core usage
+	return ""; //No preamble for single server single core usage
 	
 	/*
 	return "

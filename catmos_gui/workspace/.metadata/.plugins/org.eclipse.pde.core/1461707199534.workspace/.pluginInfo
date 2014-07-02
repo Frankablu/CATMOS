@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<bundle bundleID="1125" localization="plugin" name="%pluginName" project="CapabilityOverTime" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1126" class="internalusage.diagram.part.InternalusageDiagramEditorPlugin" localization="plugin" name="%pluginName" project="InternalUsage.diagram" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1127" localization="plugin" name="%pluginName" project="SimpleScenario.tests" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1128" localization="OSGI-INF/l10n/bundle" name="org.xtext.Scenario.tests" project="org.xtext.Scenario.tests" provider="My Company"/>
+	<bundle bundleID="1129" localization="plugin" name="%pluginName" project="ScenarioModel" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1130" class="org.xtext.ui.internal.ScenarioActivator" localization="OSGI-INF/l10n/bundle" name="org.xtext.Scenario.ui" project="org.xtext.Scenario.ui" provider="My Company"/>
+	<bundle bundleID="1131" class="CapOverTime.provider.CapOverTimeEditPlugin$Implementation" localization="plugin" name="%pluginName" project="CapabilityOverTime.edit" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1132" class="SimpleScenario.diagram.part.SimpleScenarioDiagramEditorPlugin" localization="plugin" name="%pluginName" project="SimpleScenario.diagram" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1133" class="SimpleScenario.presentation.SimpleScenarioEditorPlugin$Implementation" localization="plugin" name="%pluginName" project="SimpleScenario.editor" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1134" class="org.eclipse.epsilon.examples.tools.Activator" localization="OSGI-INF/l10n/bundle" name="EolRunTool" project="org.eclipse.epsilon.examples.tools">
+		<library name="jpl.jar"/>
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1135" class="ScenarioModel.provider.ScenarioModelEditPlugin$Implementation" localization="plugin" name="%pluginName" project="ScenarioModel.edit" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1136" class="internalusage.provider.InternalusageEditPlugin$Implementation" localization="plugin" name="%pluginName" project="InternalUsage.edit" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1137" class="CapOverTime.diagram.part.CapOverTimeDiagramEditorPlugin" localization="plugin" name="%pluginName" project="CapabilityOverTime.diagram" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1138" class="ScenarioModel.presentation.ScenarioModelEditorPlugin$Implementation" localization="plugin" name="%pluginName" project="ScenarioModel.editor" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1139" class="SimpleScenario.provider.SimpleScenarioEditPlugin$Implementation" localization="plugin" name="%pluginName" project="SimpleScenario.edit" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1140" localization="plugin" name="%pluginName" project="InternalUsage.tests" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1141" localization="OSGI-INF/l10n/bundle" name="Jfreechart" project="jfreechart">
+		<library name="jfreechart-1.0.14.jar"/>
+		<library name="jcommon-1.0.17.jar"/>
+	</bundle>
+	<bundle bundleID="1142" class="internalusage.presentation.InternalusageEditorPlugin$Implementation" localization="plugin" name="%pluginName" project="InternalUsage.editor" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1143" class="ScenarioModel.diagram.part.ScenarioModelDiagramEditorPlugin" localization="plugin" name="%pluginName" project="ScenarioModel.diagram" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1144" localization="plugin" name="%pluginName" project="InternalUsage" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1145" localization="plugin" name="%pluginName" project="ScenarioModel.tests" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1146" localization="plugin" name="%pluginName" project="SimpleScenario" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1147" localization="plugin" name="%pluginName" project="CapabilityOverTime.tests" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1148" class="CapOverTime.presentation.CapOverTimeEditorPlugin$Implementation" localization="plugin" name="%pluginName" project="CapabilityOverTime.editor" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1149" localization="OSGI-INF/l10n/bundle" name="org.xtext.Scenario" project="org.xtext.Scenario" provider="My Company"/>
+</map>
