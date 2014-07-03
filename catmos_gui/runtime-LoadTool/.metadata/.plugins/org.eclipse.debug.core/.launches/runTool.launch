@@ -2,7 +2,7 @@
 <launchConfiguration type="org.epsilon.eol.eclipse.dt.launching.EolLaunchConfigurationDelegate">
 <booleanAttribute key="fine_grained_profiling" value="false"/>
 <listAttribute key="models">
-<listEntry value="#&#10;#Mon Jun 30 19:57:37 BST 2014&#10;isMetamodelFileBased=false&#10;name=scenario&#10;readOnLoad=true&#10;storeOnDisposal=false&#10;aliases=&#10;cached=true&#10;fileBasedMetamodelUri=&#10;metamodelUri=ScenarioModel&#10;modelUri=platform\:/resource/AutoNextReleaseProblem/AutoNextReleaseProblem.scen&#10;type=EMF&#10;modelFile=/AutoNextReleaseProblem/AutoNextReleaseProblem.scen&#10;expand=true&#10;metamodelFile=&#10;"/>
+<listEntry value="#&#10;#Thu Jul 03 20:01:02 BST 2014&#10;isMetamodelFileBased=false&#10;name=scenario&#10;readOnLoad=true&#10;storeOnDisposal=false&#10;aliases=&#10;cached=true&#10;fileBasedMetamodelUri=&#10;metamodelUri=ScenarioModel&#10;modelUri=platform\:/resource/TeaMaking/TeaMaking.scen&#10;type=EMF&#10;modelFile=/TeaMaking/TeaMaking.scen&#10;expand=true&#10;metamodelFile=&#10;"/>
 </listAttribute>
 <booleanAttribute key="profile_model_loading" value="false"/>
 <booleanAttribute key="profiling_enabled" value="false"/>

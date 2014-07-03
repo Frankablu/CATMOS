@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="ScenarioModel">
+  <OurObjects xsi:type="p:Capability" name="Good Tea" searchObjective="true" decomposes="//@OurObjects.1 //@OurObjects.2 //@OurObjects.3">
+    <measurements name="Tea Rating" criticalValue="1.0" benchmarkValue="5.0" script="output = TeaRating()"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Tea">
+    <measurements name="Flavour">
+      <criticalValues name="Good"/>
+      <benchmarkValues name="Excellent"/>
+    </measurements>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Water">
+    <measurements name="Temperature" criticalValue="30.0" benchmarkValue="70.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Container">
+    <measurements name="Insulation">
+      <criticalValues name="Bad"/>
+      <benchmarkValues name="Good"/>
+    </measurements>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Tea Bags">
+    <provides xsi:type="p:CapabilityProvision" name="Tea">
+      <measurements name="Flavour">
+        <providedValues name="Good"/>
+      </measurements>
+    </provides>
+    <costs name="Money" amount="4.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Hot Water Tap">
+    <provides xsi:type="p:CapabilityProvision" name="Water">
+      <measurements name="Temperature" providedValue="50.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mug">
+    <provides xsi:type="p:CapabilityProvision" name="Container">
+      <measurements name="Insulation">
+        <providedValues name="Good"/>
+      </measurements>
+    </provides>
+    <costs name="Money" amount="4.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Cold Water Tap">
+    <provides xsi:type="p:CapabilityProvision" name="Water">
+      <measurements name="Temperature" providedValue="10.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Kettle">
+    <provides xsi:type="p:CapabilityProvision" name="Water">
+      <measurements name="Temperature" providedValue="100.0"/>
+    </provides>
+    <requires name="Water"/>
+    <costs name="Money" amount="10.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Plastic Cup">
+    <provides xsi:type="p:CapabilityProvision" name="Container">
+      <measurements name="Insulation">
+        <providedValues name="Bad"/>
+      </measurements>
+    </provides>
+    <costs name="Money" amount="0.2"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Tea Maker">
+    <provides xsi:type="p:CapabilityProvision" name="Water">
+      <measurements name="Temperature" providedValue="75.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Tea">
+      <measurements name="Flavour">
+        <providedValues name="Excellent"/>
+      </measurements>
+    </provides>
+    <requires name="Water"/>
+    <requires name="Tea"/>
+    <costs name="Money" amount="35.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:QualitativeValueDictionary" name="Excellent" greaterThan="//@OurObjects.12"/>
+  <OurObjects xsi:type="p:QualitativeValueDictionary" name="Good" greaterThan="//@OurObjects.13" lessThan="//@OurObjects.11"/>
+  <OurObjects xsi:type="p:QualitativeValueDictionary" name="Bad" lessThan="//@OurObjects.12"/>
+  <OurObjects xsi:type="p:Component" name="Cold Water Tap:E1">
+    <provides xsi:type="p:CapabilityProvision" name="Water">
+      <measurements name="Temperature" providedValue="10.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Hot Water Tap:E1">
+    <provides xsi:type="p:CapabilityProvision" name="Water">
+      <measurements name="Temperature" providedValue="50.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Tea Bags:1">
+    <provides xsi:type="p:CapabilityProvision" name="Tea">
+      <measurements name="Flavour">
+        <providedValues name="Good"/>
+      </measurements>
+    </provides>
+    <costs name="Money" amount="4.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mug:1">
+    <provides xsi:type="p:CapabilityProvision" name="Container">
+      <measurements name="Insulation">
+        <providedValues name="Good"/>
+      </measurements>
+    </provides>
+    <costs name="Money" amount="4.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Kettle:1">
+    <provides xsi:type="p:CapabilityProvision" name="Water">
+      <measurements name="Temperature" providedValue="100.0"/>
+    </provides>
+    <requires name="Water"/>
+    <costs name="Money" amount="10.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Plastic Cup:1">
+    <provides xsi:type="p:CapabilityProvision" name="Container">
+      <measurements name="Insulation">
+        <providedValues name="Bad"/>
+      </measurements>
+    </provides>
+    <costs name="Money" amount="0.2"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Tea Maker:1">
+    <provides xsi:type="p:CapabilityProvision" name="Water">
+      <measurements name="Temperature" providedValue="75.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Tea">
+      <measurements name="Flavour">
+        <providedValues name="Excellent"/>
+      </measurements>
+    </provides>
+    <requires name="Water"/>
+    <requires name="Tea"/>
+    <costs name="Money" amount="35.0"/>
+  </OurObjects>
+</p:Scenario>

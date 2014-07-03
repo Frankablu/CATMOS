@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <p:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="ScenarioModel">
-  <OurObjects xsi:type="p:Capability" name="Good Tea" searchObjective="true" status="1.28571" colour="Yellow" decomposes="//@OurObjects.1 //@OurObjects.2 //@OurObjects.3">
-    <measurements name="Tea Rating" criticalValue="1.0" benchmarkValue="5.0" providedValue="2.14286" script="output = TeaRating()"/>
+  <OurObjects xsi:type="p:Capability" name="Good Tea" searchObjective="true" status="1.53571" colour="Yellow" decomposes="//@OurObjects.1 //@OurObjects.2 //@OurObjects.3">
+    <measurements name="Tea Rating" criticalValue="1.0" benchmarkValue="5.0" providedValue="3.14286" script="output = TeaRating()"/>
   </OurObjects>
   <OurObjects xsi:type="p:Capability" name="Tea" status="1.0" colour="Yellow" satisfiedBy="//@OurObjects.8/@provides.0">
     <measurements name="Flavour">
@@ -14,11 +14,12 @@
   <OurObjects xsi:type="p:Capability" name="Water" status="1.5" colour="Yellow" satisfiedBy="//@OurObjects.7/@provides.0">
     <measurements name="Temperature" criticalValue="30.0" benchmarkValue="70.0" providedValue="50.0"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Capability" name="Container" status="1.0" colour="Yellow" satisfiedBy="//@OurObjects.9/@provides.0">
+  <OurObjects xsi:type="p:Capability" name="Container" status="2.0" colour="Green" satisfiedBy="//@OurObjects.9/@provides.0">
     <measurements name="Insulation">
       <criticalValues name="Bad"/>
       <benchmarkValues name="Good"/>
       <providedValues name="Bad"/>
+      <providedValues name="Good"/>
     </measurements>
   </OurObjects>
   <OurObjects xsi:type="p:QualitativeValueDictionary" name="Excellent" greaterThan="//@OurObjects.5"/>
@@ -37,12 +38,12 @@
     </provides>
     <costs name="Money" amount="4.0"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Component" name="Plastic Cup:1">
+  <OurObjects xsi:type="p:Component" name="Mug:1">
     <provides xsi:type="p:CapabilityProvision" name="Container" satisfies="//@OurObjects.3">
       <measurements name="Insulation">
-        <providedValues name="Bad"/>
+        <providedValues name="Good"/>
       </measurements>
     </provides>
-    <costs name="Money" amount="0.2"/>
+    <costs name="Money" amount="4.0"/>
   </OurObjects>
 </p:Scenario>

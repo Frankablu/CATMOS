@@ -30,4 +30,7 @@ catmos_server portNumber to run
 
 Windows:
 Install SWI-Prolog from http://www.swi-prolog.org/
-Use pre-compiled binary
+Install vcredist_x86.exe (included in the directory)
+
+Run catmos_server.exe
+Use command prompt to call catmos_server portNumber for running multiple copies (Untested on windows)
