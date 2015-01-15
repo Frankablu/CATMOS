@@ -13,16 +13,16 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="customer1" key="selection"/>
+		<item value="searchObjective" key="selection"/>
 		<list key="findhistory">
+			<item value="searchobjective"/>
+			<item value="mine"/>
+			<item value="searchObjective"/>
+			<item value="rcreate"/>
 			<item value="customer1"/>
 			<item value="no entry"/>
 			<item value="customer10"/>
 			<item value="Hard Target"/>
-			<item value="hard target"/>
-			<item value="hard targt"/>
-			<item value="L118 Service Contract"/>
-			<item value="L118 Light Gun Fleet"/>
 		</list>
 		<list key="replacehistory">
 			<item value="customerCount"/>

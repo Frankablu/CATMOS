@@ -1,0 +1,91 @@
+
+<html>
+<title>CATMOS - Capability Acquisition Technique with Multi-objective Search</title>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<myindex>
+<a href="http://www.catmos.co.uk/index.html">Main Page</a><br>
+<a href="http://www.catmos.co.uk/install.html">Installation</a><br>
+<a href="http://www.catmos.co.uk/thesis.html">Thesis</a><br>
+<a href="http://www.frankroystonburton.co.uk">My Personal Website</a><br>
+</myindex>
+<mycontent>
+The CATMOS prototype is hosted on <a href="https://github.com/Frankablu/CATMOS">git hub here</a>.<br>
+<br>
+
+<b>Installation Instructions:</b><br>
+<br>
+
+The CATMOS tool was developed as a research prototype and makes <br> use of a large number of dependencies that need to be installed first. <br>
+<br>
+CATMOS is split into a client component and a server component. <br>
+<br>
+The server component is used performing the computational expensive <br> runs and can be run on different computer to 
+the client which is used for controlling the tool. <br>
+<br>
+1. Download the latest release of the CATMOS tool here: <a href="https://github.com/Frankablu/CATMOS/releases"><b>Download link</b></a><br>
+<br>
+<b>Windows Install Instructions: </b><br>
+<br>
+2. Install SWI-Prolog from <a href="http://www.swi-prolog.org/Download.html">http://www.swi-prolog.org/Download.html</a><br>
+3. Run catmos_server.exe to start the backend process <br>
+It will listen on port 11100 by default. <br>
+You can call the program with an argument such as catmos_server.exe 11101 to change the listening port number <br>
+to run multiple copies of the server process. Each process is single threaded but multiple copies can be used <br>
+together to make use of multiple core processors. <br>
+<br>
+Now follow Client Install Instructions below. <br>
+<br>
+<b>Linux/Unix/Mac OS X Install Instructions </b><br>
+2. Install SWI-Prolog, Boost, Lua, gcc & Make using your package manager. <br>
+<br>
+Examples: <br>
+<b>Archlinux: </b> pacman -S swi-prolog boost lua gcc make <br>
+<br>
+<b>Mac OS X: <a href="https://www.macports.org">Via Macports: </a></b> port install swi-prolog boost lua <br>
+Install the Xcode Command Line Tools<br>
+<br>
+3. Enter the catmos_server directory via the command line and run: <br>
+su<br>
+make && make install<br>
+<br>
+catmos_server or catmos_server portNumber starts the server process. <br>
+To use multiple cores you need to start multiple processes on different port numbers. <br>
+<br>
+<b>Client Install Instructions:</b><br>
+<br>
+The client install is the same for Windows, Linux & Mac OS X. <br>
+<br>
+Download and install Eclipse Epsilon from <a href="http://www.eclipse.org/epsilon/download/">http://www.eclipse.org/epsilon/download/</a> <br>
+<br>
+<b>4. Run Eclipse Epsilon and point the workspace to the catmos_gui directory.</b> <br>
+<br>
+<b>5. Install the XText component. </b><br>
+On the Menu Bar: Help > Install Modelling Components > XText <br>
+<br>
+<b>6. Click on the Green Circle with White Arrow on the toolbar and select Load Tool. </b><br>
+<br>
+<b>7. Click on the Green Circle with White Arrow on the toolbar and select Run Configurations. </b>
+Now select runTool > Models > scenario > Edit > Model File: > Point this to the example you wish to run i.e. /AutoNextReleaseProblem/AutoNextReleaseProblem.scen > Ok > Run <br>
+<br>
+<b>8. Click on the Green Circle with White Arrow on the toolbar and select getParetoFront to retrieve the Pareto front.</b><br>
+The results will be in the folder called Results/ from where the .scen file was loaded <br>
+In this example: /AutoNextReleaseProblem/Results/ <br>
+<br>
+<b>9. Network settings such as running on multiple processes can be accessed by editing Tool > networkSettings.eol</b><br>
+getAddress & getPort need to be set to a server process. <br>
+preamble is used to tell the server process to connect to other server processes (See comments for example) <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</mycontent>
+    
+</body>
+</html>

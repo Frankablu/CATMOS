@@ -35,9 +35,10 @@ ThroughLifePlanning UAV { popSize 200 genCount 200
 	Budget "Money" { amount 45.0 startDate "01/12/2014" }
 	Budget "Money" { amount 45.0 startDate "01/06/2016" }
 	
+	DesireLow Money
 }
 
-//searchObjective
+searchObjective
 Capability "Overall Score"
 {
 	startDate "01/01/2014" endDate "31/12/2016"
@@ -45,7 +46,7 @@ Capability "Overall Score"
 		decomposes ("Route Clearance","Hold Forward Base", "Prevent Enemy Crossings")
 }
 
-searchObjective
+//searchObjective
 Capability "Route Clearance"
 {
 	startDate "01/01/2014" endDate "31/12/2016"
@@ -75,7 +76,7 @@ Capability "Mine Clearance Solution"
 		Measurement "Mine Clearance Per Day" { criticalValue 10.0 benchmarkValue 40.0 }
 }
 
-searchObjective
+//searchObjective
 Capability "Hold Forward Base"
 {
 	startDate "01/01/2014" endDate "31/12/2016"
@@ -118,7 +119,7 @@ Capability "Supply Goods" //Includes Ammo
 	Measurement "Goods Kilograms" {  criticalValue 0.0 benchmarkValue 75000.0 }
 }
 
-searchObjective
+//searchObjective
 Capability "Prevent Enemy Crossings"
 {
 	startDate "01/01/2014" endDate "31/12/2016"
@@ -183,7 +184,7 @@ Component "Mastiff Fleet" //100 Mastiff's
 	//Carries
 	CapabilityProvision "Troop Transport" { reuse 3 }
 	
-	Cost Money 25.0 //£250,000 each
+	Cost Money 25.0 //ï¿½250,000 each
 }
 
 Component "Vector Fleet" //100 Vectors
@@ -194,7 +195,7 @@ Component "Vector Fleet" //100 Vectors
 	//Carries
 	CapabilityProvision "Troop Transport" { reuse 1 }
 	
-	Cost Money 15.0 //£150,000 each
+	Cost Money 15.0 //ï¿½150,000 each
 }
 
 Component "Troop Regiment"
@@ -210,7 +211,7 @@ Component "L118 Light Gun Fleet" //10 Artillery Pieces
 {
 	CapabilityProvision "Hard Target Removal" { reuse 1 Measurement "Hard Target Removal" { script "output = LightGun()" } }
 	Capability "Light Gun Tow" {} Capability "L118 Service Contract" {}
-	Cost Money 5.0 //£500,000 each
+	Cost Money 5.0 //ï¿½500,000 each
 }
 
 Component "L118 Existing Service Contract"
@@ -218,7 +219,7 @@ Component "L118 Existing Service Contract"
 	CapabilityProvision "L118 Service Contract" {}
 }
 
-Component "L118 New Service Contract" //£15 million maintenance
+Component "L118 New Service Contract" //ï¿½15 million maintenance
 {
 	CapabilityProvision "L118 Service Contract" {}
 	Cost Money 15.0
@@ -228,7 +229,7 @@ Component "L118 Light Gun Fleet New" //10 Artillery Pieces
 {
 	CapabilityProvision "Hard Target Removal" { reuse 1 Measurement "Hard Target Removal" { script "output = LightGun()" } }
 	Capability "Light Gun Tow" {}
-	Cost Money 5.0 //£500,000 each
+	Cost Money 5.0 //ï¿½500,000 each
 }
 
 Component "Mobile Artillery Battlefield Radar"
@@ -248,7 +249,7 @@ Component "Land Rover 101 FC Fleet" //Tows The Artillery Piece Into Position
 {
 	CapabilityProvision "Light Gun Tow" { reuse 1 }
 	CapabilityProvision "Radar Mount" {}
-	Cost Money 12.0 //£120,000 each
+	Cost Money 12.0 //ï¿½120,000 each
 }
 
 //Mine Clearance
@@ -294,7 +295,7 @@ Component "Global Hawk"
 {
 	CapabilityProvision "Surveillance Static Targets" { reuse 1 Measurement "Surveillance Static Targets" { providedValue 45.0 }}
 	CapabilityProvision "Surveillance Moving Targets" { reuse 1 Measurement "Surveillance Moving Targets" { providedValue 25.0 }}
-	Cost Money 125.0 //£125 million
+	Cost Money 125.0 //ï¿½125 million
 }
 
 Component "Reacher Fleet"
@@ -319,7 +320,7 @@ Component "MQ-9 Reaper"
 	CapabilityProvision "Hard Target Removal" { reuse 1 Measurement "Hard Target Removal" { providedValue 30.0 } }
 	CapabilityProvision "Surveillance Static Targets" { reuse 1 Measurement "Surveillance Static Targets" { providedValue 10.0 }}
 	CapabilityProvision "Surveillance Moving Targets" { reuse 1 Measurement "Surveillance Moving Targets" { providedValue 5.0 }}
-	Cost Money 10.5 //£10.5 million
+	Cost Money 10.5 //ï¿½10.5 million
 }
 
 Component "SAS Training"
@@ -334,7 +335,7 @@ Component "SAS Training"
 			CapabilityProvision "Surveillance Moving Targets" { reuse 1 Measurement "Surveillance Moving Targets" { providedValue 5.0 }}
 		}
 	}
-	Cost Money 8.0 //£8 Million
+	Cost Money 8.0 //ï¿½8 Million
 }
 
 

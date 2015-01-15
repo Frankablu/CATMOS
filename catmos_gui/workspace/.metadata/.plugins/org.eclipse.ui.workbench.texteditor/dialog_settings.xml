@@ -13,16 +13,16 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="sequential" key="selection"/>
+		<item value="CapOverTime" key="selection"/>
 		<list key="findhistory">
-			<item value="sequential"/>
-			<item value="no"/>
-			<item value="nonew"/>
-			<item value="upgrade"/>
-			<item value="upgrades"/>
-			<item value="component"/>
-			<item value="provide"/>
-			<item value="provides"/>
+			<item value="capovertime"/>
+			<item value="chart"/>
+			<item value="font"/>
+			<item value="xyplot"/>
+			<item value="2dpareto"/>
+			<item value="paretofr"/>
+			<item value="existing"/>
+			<item value="cost"/>
 		</list>
 		<list key="replacehistory">
 			<item value="OurObject"/>

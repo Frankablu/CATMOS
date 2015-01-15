@@ -2,31 +2,16 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="CapOverTime">
   <p:CapabilityOverTime>
     <timePeriods startDate="0" endDate="13">
-      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.0" colour="Yellow"/>
+      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.14822" colour="Yellow"/>
     </timePeriods>
-    <timePeriods startDate="14" endDate="26">
-      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.22345" colour="Yellow"/>
-    </timePeriods>
-    <timePeriods startDate="27" endDate="30">
-      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.22345" colour="Yellow"/>
-    </timePeriods>
-    <timePeriods startDate="31" endDate="47">
-      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.35943" colour="Yellow"/>
-    </timePeriods>
-    <timePeriods startDate="48" endDate="60">
-      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.35943" colour="Yellow"/>
-    </timePeriods>
-    <timePeriods startDate="61" endDate="61">
-      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.43763" colour="Yellow"/>
-    </timePeriods>
-    <timePeriods startDate="62" endDate="333">
-      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.50934" colour="Yellow"/>
+    <timePeriods startDate="14" endDate="333">
+      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.2565" colour="Yellow"/>
     </timePeriods>
     <timePeriods startDate="334" endDate="362">
-      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.50934" colour="Yellow"/>
+      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.2565" colour="Yellow"/>
     </timePeriods>
     <timePeriods startDate="363" endDate="363">
-      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.50934" colour="Yellow"/>
+      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.2565" colour="Yellow"/>
     </timePeriods>
   </p:CapabilityOverTime>
   <p:Capability name="customer1satisfaction" standAlone="true" startDate="01/01/2013" endDate="01/12/2013"/>

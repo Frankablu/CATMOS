@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="ScenarioModel">
+  <OurObjects xsi:type="p:Capability" name="Overall Score" searchObjective="true" startDate="0" endDate="1095" status="-1.84768" colour="Red" decomposes="//@OurObjects.1 //@OurObjects.5 //@OurObjects.11">
+    <measurements name="Overall Score" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.86259" script="output = OverallScore()"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Route Clearance" startDate="0" endDate="1095" decomposes="//@OurObjects.2 //@OurObjects.3 //@OurObjects.4 //@OurObjects.14">
+    <measurements name="Route Clearance" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.691071" script="output = RouteClearance()"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Ground Fire Power" startDate="0" endDate="1095" accumulation="//@OurObjects.2/@measurements.0" satisfiedBy="//@OurObjects.20/@provides.0 //@OurObjects.23/@provides.0 //@OurObjects.18/@provides.0 //@OurObjects.22/@provides.0 //@OurObjects.21/@provides.0 //@OurObjects.26/@provides.0 //@OurObjects.25/@provides.0 //@OurObjects.24/@provides.0 //@OurObjects.19/@provides.0 //@OurObjects.27/@provides.0">
+    <measurements name="Ground Fire Power" criticalValue="0.0" benchmarkValue="7000.0" providedValue="5420.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Hard Target Removal" startDate="0" endDate="1095" accumulation="//@OurObjects.3/@measurements.0" satisfiedBy="//@OurObjects.28/@provides.0 //@OurObjects.31/@provides.0 //@OurObjects.30/@provides.0 //@OurObjects.55/@provides.0 //@OurObjects.29/@provides.0">
+    <measurements name="Hard Target Removal" criticalValue="0.0" benchmarkValue="100.0" providedValue="24.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Mine Clearance Solution" startDate="0" endDate="1095" satisfiedBy="//@OurObjects.40/@provides.0">
+    <measurements name="Chance of Death" criticalValue="10.0" benchmarkValue="0.0" providedValue="5.0"/>
+    <measurements name="Mine Clearance Per Day" criticalValue="10.0" benchmarkValue="40.0" providedValue="50.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Hold Forward Base" startDate="0" endDate="1095" decomposes="//@OurObjects.6 //@OurObjects.7">
+    <measurements name="Hold Forward Base" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.896286" script="output = HoldForwardBase()"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Establish Forward Base" startDate="0" endDate="1095" satisfiedBy="//@OurObjects.41/@provides.0"/>
+  <OurObjects xsi:type="p:Capability" name="Supply Forward Base" startDate="0" endDate="1095" decomposes="//@OurObjects.8 //@OurObjects.9 //@OurObjects.10">
+    <measurements name="Supply Forward Base" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.792571" script="output = SupplyForwardBase()"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Supply Water" startDate="0" endDate="1095" accumulation="//@OurObjects.8/@measurements.0" satisfiedBy="//@OurObjects.45/@provides.0 //@OurObjects.44/@provides.0 //@OurObjects.46/@provides.0">
+    <measurements name="Water Liters" criticalValue="0.0" benchmarkValue="50000.0" providedValue="54000.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Supply Fuel" startDate="0" endDate="1095" accumulation="//@OurObjects.9/@measurements.0" satisfiedBy="//@OurObjects.43/@provides.0 //@OurObjects.42/@provides.0">
+    <measurements name="Fuel Liters" criticalValue="0.0" benchmarkValue="70000.0" providedValue="40000.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Supply Goods" startDate="0" endDate="1095" accumulation="//@OurObjects.10/@measurements.0" satisfiedBy="//@OurObjects.47/@provides.0 //@OurObjects.49/@provides.0 //@OurObjects.48/@provides.0 //@OurObjects.50/@provides.0">
+    <measurements name="Goods Kilograms" criticalValue="0.0" benchmarkValue="75000.0" providedValue="60000.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Prevent Enemy Crossings" startDate="0" endDate="1095" decomposes="//@OurObjects.12 //@OurObjects.13">
+    <measurements name="Prevent Enemy Crossings" criticalValue="0.75" benchmarkValue="1.0" providedValue="0.6" script="output = PreventEnemyCrossings()"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Detect Enemy Crossings" standAlone="true" startDate="0" endDate="1095">
+    <measurements name="Detect Enemy Crossings" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.6" script="output = DetectEnemyCrossings()"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Stopping Enemy Crossings" startDate="0" endDate="1095" decomposes="//@OurObjects.2 //@OurObjects.14 //@OurObjects.17">
+    <measurements name="Enemy Crossings Stopped Percentage" criticalValue="0.75" benchmarkValue="1.0" providedValue="1.0" script="output = StopEnemyCrossings()"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Command and Control" startDate="0" endDate="1095" accumulation="//@OurObjects.14/@measurements.0" satisfiedBy="//@OurObjects.52/@provides.0 //@OurObjects.53/@provides.0 //@OurObjects.41/@provides.1">
+    <measurements name="Command and Control Infrastructure" criticalValue="0.0" benchmarkValue="100.0" providedValue="100.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Surveillance" startDate="0" endDate="1095" decomposes="//@OurObjects.16 //@OurObjects.17">
+    <measurements name="Surveillance" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.6" script="output = Surveillance()"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Surveillance Static Targets" startDate="0" endDate="1095" accumulation="//@OurObjects.16/@measurements.0" satisfiedBy="//@OurObjects.24/@provides.1 //@OurObjects.25/@provides.1 //@OurObjects.26/@provides.1 //@OurObjects.23/@provides.1 //@OurObjects.51/@provides.0 //@OurObjects.27/@provides.1">
+    <measurements name="Surveillance Static Targets" criticalValue="0.0" benchmarkValue="100.0" providedValue="60.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="Surveillance Moving Targets" startDate="0" endDate="1095" accumulation="//@OurObjects.17/@measurements.0" satisfiedBy="//@OurObjects.27/@provides.2 //@OurObjects.33/@provides.0 //@OurObjects.51/@provides.1 //@OurObjects.25/@provides.2 //@OurObjects.24/@provides.2 //@OurObjects.23/@provides.2 //@OurObjects.26/@provides.2 //@OurObjects.35/@provides.0 //@OurObjects.32/@provides.0 //@OurObjects.34/@provides.0">
+    <measurements name="Surveillance Moving Targets" criticalValue="0.0" benchmarkValue="100.0" providedValue="60.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mastiff Fleet:E1" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Ground Fire Power" reuse="1" satisfies="//@OurObjects.2">
+      <measurements name="Ground Fire Power" providedValue="100.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Troop Transport" reuse="3" satisfies="//@OurObjects.27/@requires.0 //@OurObjects.24/@requires.0"/>
+    <costs name="Money" amount="25.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mastiff Fleet:E2" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Ground Fire Power" reuse="1" satisfies="//@OurObjects.2">
+      <measurements name="Ground Fire Power" providedValue="100.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Troop Transport" reuse="3" satisfies="//@OurObjects.25/@requires.0 //@OurObjects.26/@requires.0"/>
+    <costs name="Money" amount="25.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mastiff Fleet:E3" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Ground Fire Power" reuse="1" satisfies="//@OurObjects.2">
+      <measurements name="Ground Fire Power" providedValue="100.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Troop Transport" reuse="3"/>
+    <costs name="Money" amount="25.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Vector Fleet:E1" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Ground Fire Power" reuse="1" satisfies="//@OurObjects.2">
+      <measurements name="Ground Fire Power" providedValue="60.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Troop Transport" reuse="1" satisfies="//@OurObjects.23/@requires.0"/>
+    <costs name="Money" amount="15.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Vector Fleet:E2" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Ground Fire Power" reuse="1" satisfies="//@OurObjects.2">
+      <measurements name="Ground Fire Power" providedValue="60.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Troop Transport" reuse="1"/>
+    <costs name="Money" amount="15.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Troop Regiment:E1" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Ground Fire Power" reuse="1" satisfies="//@OurObjects.2">
+      <measurements name="Ground Fire Power" providedValue="1000.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Surveillance Static Targets" reuse="1" satisfies="//@OurObjects.16">
+      <measurements name="Surveillance Static Targets" providedValue="3.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Surveillance Moving Targets" reuse="1" satisfies="//@OurObjects.17">
+      <measurements name="Surveillance Moving Targets" providedValue="3.0"/>
+    </provides>
+    <requires name="Troop Transport" satisfiedBy="//@OurObjects.21/@provides.1"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Troop Regiment:E2" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Ground Fire Power" reuse="1" satisfies="//@OurObjects.2">
+      <measurements name="Ground Fire Power" providedValue="1000.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Surveillance Static Targets" reuse="1" satisfies="//@OurObjects.16">
+      <measurements name="Surveillance Static Targets" providedValue="3.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Surveillance Moving Targets" reuse="1" satisfies="//@OurObjects.17">
+      <measurements name="Surveillance Moving Targets" providedValue="3.0"/>
+    </provides>
+    <requires name="Troop Transport" satisfiedBy="//@OurObjects.18/@provides.1"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Troop Regiment:E3" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Ground Fire Power" reuse="1" satisfies="//@OurObjects.2">
+      <measurements name="Ground Fire Power" providedValue="1000.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Surveillance Static Targets" reuse="1" satisfies="//@OurObjects.16">
+      <measurements name="Surveillance Static Targets" providedValue="3.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Surveillance Moving Targets" reuse="1" satisfies="//@OurObjects.17">
+      <measurements name="Surveillance Moving Targets" providedValue="3.0"/>
+    </provides>
+    <requires name="Troop Transport" satisfiedBy="//@OurObjects.19/@provides.1"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Troop Regiment:E4" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Ground Fire Power" reuse="1" satisfies="//@OurObjects.2">
+      <measurements name="Ground Fire Power" providedValue="1000.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Surveillance Static Targets" reuse="1" satisfies="//@OurObjects.16">
+      <measurements name="Surveillance Static Targets" providedValue="3.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Surveillance Moving Targets" reuse="1" satisfies="//@OurObjects.17">
+      <measurements name="Surveillance Moving Targets" providedValue="3.0"/>
+    </provides>
+    <requires name="Troop Transport" satisfiedBy="//@OurObjects.19/@provides.1"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Troop Regiment:E5" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Ground Fire Power" reuse="1" satisfies="//@OurObjects.2">
+      <measurements name="Ground Fire Power" providedValue="1000.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Surveillance Static Targets" reuse="1" satisfies="//@OurObjects.16">
+      <measurements name="Surveillance Static Targets" providedValue="3.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Surveillance Moving Targets" reuse="1" satisfies="//@OurObjects.17">
+      <measurements name="Surveillance Moving Targets" providedValue="3.0"/>
+    </provides>
+    <requires name="Troop Transport" satisfiedBy="//@OurObjects.18/@provides.1"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="L118 Light Gun Fleet:E1" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Hard Target Removal" reuse="1" satisfies="//@OurObjects.3">
+      <measurements name="Hard Target Removal" script="output = LightGun()"/>
+    </provides>
+    <requires name="Light Gun Tow"/>
+    <requires name="L118 Service Contract"/>
+    <costs name="Money" amount="5.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="L118 Light Gun Fleet:E2" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Hard Target Removal" reuse="1" satisfies="//@OurObjects.3">
+      <measurements name="Hard Target Removal" script="output = LightGun()"/>
+    </provides>
+    <requires name="Light Gun Tow" satisfiedBy="//@OurObjects.37/@provides.0"/>
+    <requires name="L118 Service Contract" satisfiedBy="//@OurObjects.54/@provides.0"/>
+    <costs name="Money" amount="5.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="L118 Light Gun Fleet:E4" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Hard Target Removal" reuse="1" satisfies="//@OurObjects.3">
+      <measurements name="Hard Target Removal" script="output = LightGun()"/>
+    </provides>
+    <requires name="Light Gun Tow" satisfiedBy="//@OurObjects.39/@provides.0"/>
+    <requires name="L118 Service Contract" satisfiedBy="//@OurObjects.54/@provides.0"/>
+    <costs name="Money" amount="5.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="L118 Light Gun Fleet:E5" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Hard Target Removal" reuse="1" satisfies="//@OurObjects.3">
+      <measurements name="Hard Target Removal" script="output = LightGun()"/>
+    </provides>
+    <requires name="Light Gun Tow" satisfiedBy="//@OurObjects.38/@provides.0"/>
+    <requires name="L118 Service Contract" satisfiedBy="//@OurObjects.54/@provides.0"/>
+    <costs name="Money" amount="5.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mobile Artillery Battlefield Radar:E1" startDate="01/01/2014" endDate="31/07/2014">
+    <provides xsi:type="p:CapabilityProvision" name="Surveillance Moving Targets" reuse="1" satisfies="//@OurObjects.17">
+      <measurements name="Surveillance Moving Targets" providedValue="5.0"/>
+    </provides>
+    <requires name="Radar Mount" satisfiedBy="//@OurObjects.39/@provides.1"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mobile Artillery Battlefield Radar:E2" startDate="01/01/2014" endDate="31/07/2014">
+    <provides xsi:type="p:CapabilityProvision" name="Surveillance Moving Targets" reuse="1" satisfies="//@OurObjects.17">
+      <measurements name="Surveillance Moving Targets" providedValue="5.0"/>
+    </provides>
+    <requires name="Radar Mount" satisfiedBy="//@OurObjects.36/@provides.1"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mobile Artillery Battlefield Radar:E3" startDate="01/01/2014" endDate="31/07/2014">
+    <provides xsi:type="p:CapabilityProvision" name="Surveillance Moving Targets" reuse="1" satisfies="//@OurObjects.17">
+      <measurements name="Surveillance Moving Targets" providedValue="5.0"/>
+    </provides>
+    <requires name="Radar Mount" satisfiedBy="//@OurObjects.37/@provides.1 //@OurObjects.39/@provides.1"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mobile Artillery Battlefield Radar:E4" startDate="01/01/2014" endDate="31/07/2014">
+    <provides xsi:type="p:CapabilityProvision" name="Surveillance Moving Targets" reuse="1" satisfies="//@OurObjects.17">
+      <measurements name="Surveillance Moving Targets" providedValue="5.0"/>
+    </provides>
+    <requires name="Radar Mount" satisfiedBy="//@OurObjects.37/@provides.1"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Land Rover 101 FC Fleet:E1" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Light Gun Tow" reuse="1" satisfies="//@OurObjects.55/@requires.0"/>
+    <provides xsi:type="p:CapabilityProvision" name="Radar Mount" satisfies="//@OurObjects.33/@requires.0"/>
+    <costs name="Money" amount="12.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Land Rover 101 FC Fleet:E2" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Light Gun Tow" reuse="1" satisfies="//@OurObjects.29/@requires.0"/>
+    <provides xsi:type="p:CapabilityProvision" name="Radar Mount" satisfies="//@OurObjects.35/@requires.0 //@OurObjects.34/@requires.0"/>
+    <costs name="Money" amount="12.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Land Rover 101 FC Fleet:E3" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Light Gun Tow" reuse="1" satisfies="//@OurObjects.31/@requires.0"/>
+    <provides xsi:type="p:CapabilityProvision" name="Radar Mount"/>
+    <costs name="Money" amount="12.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Land Rover 101 FC Fleet:E4" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Light Gun Tow" reuse="1" satisfies="//@OurObjects.30/@requires.0"/>
+    <provides xsi:type="p:CapabilityProvision" name="Radar Mount" satisfies="//@OurObjects.32/@requires.0 //@OurObjects.34/@requires.0"/>
+    <costs name="Money" amount="12.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Buffalo Fleet:E1" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Mine Clearance Solution" satisfies="//@OurObjects.4">
+      <measurements name="Chance of Death" providedValue="5.0"/>
+      <measurements name="Mine Clearance Per Day" providedValue="50.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Engineering Team with Equipment:E1" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Establish Forward Base" satisfies="//@OurObjects.6">
+      <measurements name="Base Quality" providedValue="0.0" script="output = BaseQuality()"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Command and Control" reuse="1" satisfies="//@OurObjects.14">
+      <measurements name="Command and Control Infrastructure" providedValue="40.0"/>
+    </provides>
+    <costs name="Money" amount="5.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Oshkosh Wheeled Tanker Fuel Fleet:E1" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Supply Fuel" reuse="1" satisfies="//@OurObjects.9">
+      <measurements name="Fuel Liters" providedValue="20000.0"/>
+    </provides>
+    <costs name="Money" amount="3.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Oshkosh Wheeled Tanker Fuel Fleet:E2" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Supply Fuel" reuse="1" satisfies="//@OurObjects.9">
+      <measurements name="Fuel Liters" providedValue="20000.0"/>
+    </provides>
+    <costs name="Money" amount="3.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Oshkosh Wheeled Tanker Water Fleet:E1" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Supply Water" reuse="1" satisfies="//@OurObjects.8">
+      <measurements name="Water Liters" providedValue="18000.0"/>
+    </provides>
+    <costs name="Money" amount="3.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Oshkosh Wheeled Tanker Water Fleet:E2" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Supply Water" reuse="1" satisfies="//@OurObjects.8">
+      <measurements name="Water Liters" providedValue="18000.0"/>
+    </provides>
+    <costs name="Money" amount="3.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Oshkosh Wheeled Tanker Water Fleet:E3" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Supply Water" reuse="1" satisfies="//@OurObjects.8">
+      <measurements name="Water Liters" providedValue="18000.0"/>
+    </provides>
+    <costs name="Money" amount="3.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Leyland DROPS Fleet:E1" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Supply Goods" reuse="1" satisfies="//@OurObjects.10">
+      <measurements name="Goods Kilograms" providedValue="15000.0"/>
+    </provides>
+    <costs name="Money" amount="3.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Leyland DROPS Fleet:E2" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Supply Goods" reuse="1" satisfies="//@OurObjects.10">
+      <measurements name="Goods Kilograms" providedValue="15000.0"/>
+    </provides>
+    <costs name="Money" amount="3.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Leyland DROPS Fleet:E3" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Supply Goods" reuse="1" satisfies="//@OurObjects.10">
+      <measurements name="Goods Kilograms" providedValue="15000.0"/>
+    </provides>
+    <costs name="Money" amount="3.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Leyland DROPS Fleet:E4" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Supply Goods" reuse="1" satisfies="//@OurObjects.10">
+      <measurements name="Goods Kilograms" providedValue="15000.0"/>
+    </provides>
+    <costs name="Money" amount="3.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Global Hawk:E1" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Surveillance Static Targets" reuse="1" satisfies="//@OurObjects.16">
+      <measurements name="Surveillance Static Targets" providedValue="45.0"/>
+    </provides>
+    <provides xsi:type="p:CapabilityProvision" name="Surveillance Moving Targets" reuse="1" satisfies="//@OurObjects.17">
+      <measurements name="Surveillance Moving Targets" providedValue="25.0"/>
+    </provides>
+    <costs name="Money" amount="125.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Reacher Fleet:E1" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Command and Control" reuse="1" satisfies="//@OurObjects.14">
+      <measurements name="Command and Control Infrastructure" providedValue="20.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Bowman:E1" startDate="01/01/2014" endDate="31/12/2016">
+    <provides xsi:type="p:CapabilityProvision" name="Command and Control" reuse="1" satisfies="//@OurObjects.14">
+      <measurements name="Command and Control Infrastructure" providedValue="40.0"/>
+    </provides>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="L118 Existing Service Contract:E1" startDate="01/01/2014" endDate="01/01/2015">
+    <provides xsi:type="p:CapabilityProvision" name="L118 Service Contract" satisfies="//@OurObjects.31/@requires.1 //@OurObjects.29/@requires.1 //@OurObjects.30/@requires.1"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="L118 Light Gun Fleet New:3" startDate="05/03/2014" endDate="01/03/2029">
+    <provides xsi:type="p:CapabilityProvision" name="Hard Target Removal" reuse="1" satisfies="//@OurObjects.3">
+      <measurements name="Hard Target Removal" script="output = LightGun()"/>
+    </provides>
+    <requires name="Light Gun Tow" satisfiedBy="//@OurObjects.36/@provides.0"/>
+    <costs name="Money" amount="5.0"/>
+  </OurObjects>
+</p:Scenario>

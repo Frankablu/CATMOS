@@ -1,45 +1,43 @@
 <?xml version="1.0" encoding="ASCII"?>
 <p:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="ScenarioModel">
-  <OurObjects xsi:type="p:Capability" name="overallSatisfaction" status="1.584" colour="Yellow" decomposes="//@OurObjects.1 //@OurObjects.2">
-    <measurements name="weightedSatisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.584" script="output = 0.6 * getCapability(&quot;Shop Manager&quot;) + 0.4 * getCapability(&quot;Shop Clerk&quot;)"/>
+  <OurObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" status="1.72" colour="Yellow" decomposes="//@OurObjects.1 //@OurObjects.2">
+    <measurements name="weightedSatisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.72" script="output = 0.6 * getCapability(&quot;Shop Manager&quot;) + 0.4 * getCapability(&quot;Shop Clerk&quot;)"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Capability" name="Shop Manager" searchObjective="true" status="1.8" colour="Yellow" decomposes="//@OurObjects.3 //@OurObjects.4 //@OurObjects.5">
+  <OurObjects xsi:type="p:Capability" name="Shop Manager" status="1.8" colour="Yellow" decomposes="//@OurObjects.3 //@OurObjects.4 //@OurObjects.5">
     <measurements name="Shop Manager Satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.8" script="output = 0.4 * getCapability(&quot;Monthly Reports&quot;) + 0.2 * getCapability(&quot;Email Notification&quot;) &#xA;        + 0.4 * getCapability(&quot;Automatically Generating Orders&quot;)"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Capability" name="Shop Clerk" searchObjective="true" status="1.26" colour="Yellow" decomposes="//@OurObjects.6 //@OurObjects.7 //@OurObjects.5">
-    <measurements name="Shop Clerk Satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.26" script="output = 0.5 * getCapability(&quot;Easier Stock Handling&quot;) + 0.4 * getCapability(&quot;Better Userinterface&quot;) &#xA;        + 0.1 * getCapability(&quot;Automatically Generating Orders&quot;)"/>
+  <OurObjects xsi:type="p:Capability" name="Shop Clerk" status="1.6" colour="Yellow" decomposes="//@OurObjects.6 //@OurObjects.7 //@OurObjects.5">
+    <measurements name="Shop Clerk Satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.6" script="output = 0.5 * getCapability(&quot;Easier Stock Handling&quot;) + 0.4 * getCapability(&quot;Better Userinterface&quot;) &#xA;        + 0.1 * getCapability(&quot;Automatically Generating Orders&quot;)"/>
   </OurObjects>
   <OurObjects xsi:type="p:Capability" name="Monthly Reports" status="2.0" colour="Green" satisfiedBy="//@OurObjects.11/@provides.0"/>
   <OurObjects xsi:type="p:Capability" name="Email Notification"/>
   <OurObjects xsi:type="p:Capability" name="Automatically Generating Orders" status="2.0" colour="Green" satisfiedBy="//@OurObjects.9/@provides.0"/>
-  <OurObjects xsi:type="p:Capability" name="Easier Stock Handling"/>
-  <OurObjects xsi:type="p:Capability" name="Better Userinterface" status="1.4" colour="Yellow" satisfiedBy="//@OurObjects.12/@provides.0">
-    <measurements name="User Satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.4"/>
+  <OurObjects xsi:type="p:Capability" name="Easier Stock Handling" status="2.0" colour="Green" satisfiedBy="//@OurObjects.12/@provides.0"/>
+  <OurObjects xsi:type="p:Capability" name="Better Userinterface">
+    <measurements name="User Satisfaction" criticalValue="0.0" benchmarkValue="1.0"/>
   </OurObjects>
   <OurObjects xsi:type="p:Component" name="Stock Reordering Algorithm:1">
     <provides xsi:type="p:CapabilityProvision" name="Stock Reordering Algorithm" status="2.0" colour="Green" satisfies="//@OurObjects.9/@requires.0"/>
     <requires name="Stock Management System" status="2.0" colour="Green" satisfiedBy="//@OurObjects.10/@provides.0"/>
-    <costs name="Money" amount="40.0"/>
+    <costs name="Money" amount="400.0"/>
   </OurObjects>
   <OurObjects xsi:type="p:Component" name="Invoice Generator:1">
     <provides xsi:type="p:CapabilityProvision" name="Automatically Generating Orders" satisfies="//@OurObjects.5"/>
     <requires name="Stock Reordering Algorithm" satisfiedBy="//@OurObjects.8/@provides.0"/>
-    <costs name="Money" amount="30.0"/>
+    <costs name="Money" amount="300.0"/>
   </OurObjects>
   <OurObjects xsi:type="p:Component" name="Stock Management System:1">
-    <provides xsi:type="p:CapabilityProvision" name="Stock Management System" satisfies="//@OurObjects.11/@requires.0 //@OurObjects.12/@requires.0 //@OurObjects.8/@requires.0"/>
-    <costs name="Money" amount="40.0"/>
+    <provides xsi:type="p:CapabilityProvision" name="Stock Management System" satisfies="//@OurObjects.11/@requires.0 //@OurObjects.8/@requires.0 //@OurObjects.12/@requires.0"/>
+    <costs name="Money" amount="400.0"/>
   </OurObjects>
   <OurObjects xsi:type="p:Component" name="Monthly Report:1">
     <provides xsi:type="p:CapabilityProvision" name="Monthly Reports" satisfies="//@OurObjects.3"/>
     <requires name="Stock Management System" satisfiedBy="//@OurObjects.10/@provides.0"/>
-    <costs name="Money" amount="25.0"/>
+    <costs name="Money" amount="250.0"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Component" name="Pre written GUI:1">
-    <provides xsi:type="p:CapabilityProvision" name="Better Userinterface" satisfies="//@OurObjects.7">
-      <measurements name="User Satisfaction" providedValue="0.4"/>
-    </provides>
+  <OurObjects xsi:type="p:Component" name="Barcode Scanning System:1">
+    <provides xsi:type="p:CapabilityProvision" name="Easier Stock Handling" satisfies="//@OurObjects.6"/>
     <requires name="Stock Management System" satisfiedBy="//@OurObjects.10/@provides.0"/>
-    <costs name="Money" amount="5.0"/>
+    <costs name="Money" amount="450.0"/>
   </OurObjects>
 </p:Scenario>

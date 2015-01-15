@@ -1,0 +1,16 @@
+
+body {
+    background-color: #b0c4de;
+}
+
+myindex {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+}
+
+mycontent {
+    position: absolute;
+    left: 200px;
+    top: 40px;
+}

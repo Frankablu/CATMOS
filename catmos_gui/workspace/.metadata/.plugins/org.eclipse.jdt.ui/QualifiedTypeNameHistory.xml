@@ -13,4 +13,10 @@
 <fullyQualifiedTypeName name="org.jfree.chart.ChartUtilities"/>
 <fullyQualifiedTypeName name="org.jfree.chart.renderer.xy.XYItemRenderer"/>
 <fullyQualifiedTypeName name="org.eclipse.core.resources.IFile"/>
+<fullyQualifiedTypeName name="org.jfree.chart.plot.CategoryPlot"/>
+<fullyQualifiedTypeName name="org.jfree.chart.axis.CategoryAxis"/>
+<fullyQualifiedTypeName name="org.jfree.chart.axis.ValueAxis"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.graphics.Font"/>
+<fullyQualifiedTypeName name="java.awt.Font"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
 </qualifiedTypeNameHistroy>

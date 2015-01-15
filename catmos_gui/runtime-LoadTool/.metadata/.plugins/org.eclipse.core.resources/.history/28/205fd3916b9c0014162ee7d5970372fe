@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="ScenarioModel">
+  <OurObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="weightedSatisfaction" criticalValue="0.0" benchmarkValue="100.0" providedValue="0.0" script="output = getGlobalMeasure('customer1satisfaction') + getGlobalMeasure('customer2satisfaction') + getGlobalMeasure('customer3satisfaction') + getGlobalMeasure('customer4satisfaction')"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer1satisfaction">
+    <measurements name="customer1satisfaction" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer2satisfaction">
+    <measurements name="customer2satisfaction" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer3satisfaction">
+    <measurements name="customer3satisfaction" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer4satisfaction">
+    <measurements name="customer4satisfaction" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+</p:Scenario>

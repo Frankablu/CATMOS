@@ -5,7 +5,7 @@ ThroughLifePlanning ThroughLifeAutoNextReleaseProblem
 	genCount 100
 	
 	startDate "01/01/2013"
-	endDate "01/12/2013"
+	endDate "31/12/2013"
 	
 	[%
 	for (feature in 1.to(50))

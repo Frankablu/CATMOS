@@ -31,6 +31,7 @@ public:
     std::vector<networkConnection*> connections;
     
     std::vector<genoType*> searchPopulation;
+    
     createInitialSolution initialSolutionCreater;
     bool throughLife;
     scheduler *ourScheduler;
@@ -58,6 +59,8 @@ public:
     void repairSolution(genoType *solution, bool check);
     
     void setConnections(std::vector<networkConnection*> ourConnections);
+    
+    void cleanUpMemory();
     
 };
 

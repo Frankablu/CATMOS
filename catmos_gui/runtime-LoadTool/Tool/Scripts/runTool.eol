@@ -1,4 +1,6 @@
 
+import "networkSettings.eol";
+
 var runTool = new Native("org.eclipse.epsilon.examples.tools.RunTool");
 
 var name : String = scenario!RunConfiguration.all().first.name;
@@ -147,6 +149,12 @@ if (errorCount == 0)
 {
 	"Running".println();
 	runTool.getDateTime().println();
+	
+	"Attempting to connect to: ".print();
+	getAddress().print();
+	":".print();
+	getPort().println();
+	"(networkSettings.eol contains the server settings)".println();
 	
 	runTool.setupEOL();
 	runTool.eolLoadModel("scenario","/"+name+"/"+name+".scen","ScenarioModel","r");

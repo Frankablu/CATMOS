@@ -2,8 +2,8 @@
 
 FindTradeOffs NextReleaseProblem
 {
-	popSize 10
-	genCount 10
+	popSize 100
+	genCount 100
 	
 	ExistingComponent customer1 1
 	ExistingComponent customer2 1
@@ -28,7 +28,7 @@ Capability overallSatisfaction
 	Measurement weightedSatisfaction
 	{
 		criticalValue 0.0
-		benchmarkValue 100.0
+		benchmarkValue 4.0
 		script "output = getGlobalMeasure(\'customer1satisfaction\') + getGlobalMeasure(\'customer2satisfaction\') + getGlobalMeasure(\'customer3satisfaction\') + getGlobalMeasure(\'customer4satisfaction\')"
 	}
 }

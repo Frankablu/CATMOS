@@ -1,0 +1,1716 @@
+<?xml version="1.0" encoding="ASCII"?>
+<p:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="ScenarioModel">
+  <OurObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" status="1.1995" colour="Yellow">
+    <measurements name="weightedSatisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.199503" script="output = 0.021226415 * getGlobalMeasure('customer1satisfaction') + 0.023584906 * getGlobalMeasure('customer2satisfaction') + 0.014150944 * getGlobalMeasure('customer3satisfaction') + 0.021226415 * getGlobalMeasure('customer4satisfaction') + 0.018867925 * getGlobalMeasure('customer5satisfaction') + 0.018867925 * getGlobalMeasure('customer6satisfaction') + 0.0023584906 * getGlobalMeasure('customer7satisfaction') + 0.014150944 * getGlobalMeasure('customer8satisfaction') + 0.004716981 * getGlobalMeasure('customer9satisfaction') + 0.016509434 * getGlobalMeasure('customer10satisfaction') + 0.004716981 * getGlobalMeasure('customer11satisfaction') + 0.014150944 * getGlobalMeasure('customer12satisfaction') + 0.0023584906 * getGlobalMeasure('customer13satisfaction') + 0.023584906 * getGlobalMeasure('customer14satisfaction') + 0.0023584906 * getGlobalMeasure('customer15satisfaction') + 0.021226415 * getGlobalMeasure('customer16satisfaction') + 0.021226415 * getGlobalMeasure('customer17satisfaction') + 0.0023584906 * getGlobalMeasure('customer18satisfaction') + 0.011792453 * getGlobalMeasure('customer19satisfaction') + 0.0023584906 * getGlobalMeasure('customer20satisfaction') + 0.014150944 * getGlobalMeasure('customer21satisfaction') + 0.011792453 * getGlobalMeasure('customer22satisfaction') + 0.009433962 * getGlobalMeasure('customer23satisfaction') + 0.007075472 * getGlobalMeasure('customer24satisfaction') + 0.018867925 * getGlobalMeasure('customer25satisfaction') + 0.009433962 * getGlobalMeasure('customer26satisfaction') + 0.007075472 * getGlobalMeasure('customer27satisfaction') + 0.009433962 * getGlobalMeasure('customer28satisfaction') + 0.009433962 * getGlobalMeasure('customer29satisfaction') + 0.018867925 * getGlobalMeasure('customer30satisfaction') + 0.007075472 * getGlobalMeasure('customer31satisfaction') + 0.0023584906 * getGlobalMeasure('customer32satisfaction') + 0.023584906 * getGlobalMeasure('customer33satisfaction') + 0.023584906 * getGlobalMeasure('customer34satisfaction') + 0.016509434 * getGlobalMeasure('customer35satisfaction') + 0.021226415 * getGlobalMeasure('customer36satisfaction') + 0.023584906 * getGlobalMeasure('customer37satisfaction') + 0.021226415 * getGlobalMeasure('customer38satisfaction') + 0.016509434 * getGlobalMeasure('customer39satisfaction') + 0.023584906 * getGlobalMeasure('customer40satisfaction') + 0.0023584906 * getGlobalMeasure('customer41satisfaction') + 0.004716981 * getGlobalMeasure('customer42satisfaction') + 0.023584906 * getGlobalMeasure('customer43satisfaction') + 0.009433962 * getGlobalMeasure('customer44satisfaction') + 0.0023584906 * getGlobalMeasure('customer45satisfaction') + 0.014150944 * getGlobalMeasure('customer46satisfaction') + 0.016509434 * getGlobalMeasure('customer47satisfaction') + 0.021226415 * getGlobalMeasure('customer48satisfaction') + 0.009433962 * getGlobalMeasure('customer49satisfaction') + 0.0023584906 * getGlobalMeasure('customer50satisfaction') + 0.004716981 * getGlobalMeasure('customer51satisfaction') + 0.007075472 * getGlobalMeasure('customer52satisfaction') + 0.021226415 * getGlobalMeasure('customer53satisfaction') + 0.007075472 * getGlobalMeasure('customer54satisfaction') + 0.0023584906 * getGlobalMeasure('customer55satisfaction') + 0.016509434 * getGlobalMeasure('customer56satisfaction') + 0.014150944 * getGlobalMeasure('customer57satisfaction') + 0.023584906 * getGlobalMeasure('customer58satisfaction') + 0.007075472 * getGlobalMeasure('customer59satisfaction') + 0.023584906 * getGlobalMeasure('customer60satisfaction') + 0.016509434 * getGlobalMeasure('customer61satisfaction') + 0.021226415 * getGlobalMeasure('customer62satisfaction') + 0.004716981 * getGlobalMeasure('customer63satisfaction') + 0.018867925 * getGlobalMeasure('customer64satisfaction') + 0.016509434 * getGlobalMeasure('customer65satisfaction') + 0.009433962 * getGlobalMeasure('customer66satisfaction') + 0.011792453 * getGlobalMeasure('customer67satisfaction') + 0.007075472 * getGlobalMeasure('customer68satisfaction') + 0.004716981 * getGlobalMeasure('customer69satisfaction') + 0.014150944 * getGlobalMeasure('customer70satisfaction') + 0.0023584906 * getGlobalMeasure('customer71satisfaction') + 0.004716981 * getGlobalMeasure('customer72satisfaction') + 0.014150944 * getGlobalMeasure('customer73satisfaction') + 0.023584906 * getGlobalMeasure('customer74satisfaction') + 0.0023584906 * getGlobalMeasure('customer75satisfaction') + 0.016509434 * getGlobalMeasure('customer76satisfaction') + 0.0023584906 * getGlobalMeasure('customer77satisfaction') + 0.0023584906 * getGlobalMeasure('customer78satisfaction') + 0.009433962 * getGlobalMeasure('customer79satisfaction') + 0.007075472 * getGlobalMeasure('customer80satisfaction') + 0.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer1satisfaction" standAlone="true" status="1.2" colour="Yellow">
+    <measurements name="customer1satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.2" script="output = 0 + 0.17142858 * getGlobalMeasure(&quot;req246&quot;)+ 0.2 * getGlobalMeasure(&quot;req14&quot;)+ 0.17142858 * getGlobalMeasure(&quot;req42&quot;)+ 0.25714287 * getGlobalMeasure(&quot;req259&quot;)+ 0.2 * getGlobalMeasure(&quot;req184&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer2satisfaction" standAlone="true" status="1.45" colour="Yellow">
+    <measurements name="customer2satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.45" script="output = 0 + 0.1 * getGlobalMeasure(&quot;req295&quot;)+ 0.45 * getGlobalMeasure(&quot;req22&quot;)+ 0.1 * getGlobalMeasure(&quot;req138&quot;)+ 0.15 * getGlobalMeasure(&quot;req29&quot;)+ 0.2 * getGlobalMeasure(&quot;req347&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer3satisfaction" standAlone="true" status="1.41176" colour="Yellow">
+    <measurements name="customer3satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.411765" script="output = 0 + 0.1764706 * getGlobalMeasure(&quot;req54&quot;)+ 0.29411766 * getGlobalMeasure(&quot;req347&quot;)+ 0.05882353 * getGlobalMeasure(&quot;req106&quot;)+ 0.05882353 * getGlobalMeasure(&quot;req156&quot;)+ 0.4117647 * getGlobalMeasure(&quot;req197&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer4satisfaction" standAlone="true" status="1.33333" colour="Yellow">
+    <measurements name="customer4satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.333333" script="output = 0 + 0.2962963 * getGlobalMeasure(&quot;req148&quot;)+ 0.33333334 * getGlobalMeasure(&quot;req217&quot;)+ 0.074074075 * getGlobalMeasure(&quot;req188&quot;)+ 0.18518518 * getGlobalMeasure(&quot;req32&quot;)+ 0.11111111 * getGlobalMeasure(&quot;req144&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer5satisfaction" standAlone="true" status="1.33333" colour="Yellow">
+    <measurements name="customer5satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.333333" script="output = 0 + 0.033333335 * getGlobalMeasure(&quot;req97&quot;)+ 0.33333334 * getGlobalMeasure(&quot;req113&quot;)+ 0.23333333 * getGlobalMeasure(&quot;req77&quot;)+ 0.13333334 * getGlobalMeasure(&quot;req150&quot;)+ 0.26666668 * getGlobalMeasure(&quot;req100&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer6satisfaction" standAlone="true" status="1.16667" colour="Yellow">
+    <measurements name="customer6satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.166667" script="output = 0 + 0.041666668 * getGlobalMeasure(&quot;req127&quot;)+ 0.20833333 * getGlobalMeasure(&quot;req240&quot;)+ 0.33333334 * getGlobalMeasure(&quot;req265&quot;)+ 0.25 * getGlobalMeasure(&quot;req204&quot;)+ 0.16666667 * getGlobalMeasure(&quot;req107&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer7satisfaction" standAlone="true" status="1.2" colour="Yellow">
+    <measurements name="customer7satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.2" script="output = 0 + 0.22857143 * getGlobalMeasure(&quot;req112&quot;)+ 0.2857143 * getGlobalMeasure(&quot;req295&quot;)+ 0.057142857 * getGlobalMeasure(&quot;req387&quot;)+ 0.22857143 * getGlobalMeasure(&quot;req52&quot;)+ 0.2 * getGlobalMeasure(&quot;req334&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer8satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer8satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.1 * getGlobalMeasure(&quot;req298&quot;)+ 0.2 * getGlobalMeasure(&quot;req321&quot;)+ 0.35 * getGlobalMeasure(&quot;req30&quot;)+ 0.15 * getGlobalMeasure(&quot;req64&quot;)+ 0.2 * getGlobalMeasure(&quot;req175&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer9satisfaction" standAlone="true" status="1.05714" colour="Yellow">
+    <measurements name="customer9satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0571429" script="output = 0 + 0.17142858 * getGlobalMeasure(&quot;req270&quot;)+ 0.057142857 * getGlobalMeasure(&quot;req373&quot;)+ 0.2857143 * getGlobalMeasure(&quot;req137&quot;)+ 0.25714287 * getGlobalMeasure(&quot;req367&quot;)+ 0.22857143 * getGlobalMeasure(&quot;req91&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer10satisfaction" standAlone="true" status="1.22222" colour="Yellow">
+    <measurements name="customer10satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.222222" script="output = 0 + 0.11111111 * getGlobalMeasure(&quot;req380&quot;)+ 0.18518518 * getGlobalMeasure(&quot;req47&quot;)+ 0.22222222 * getGlobalMeasure(&quot;req280&quot;)+ 0.14814815 * getGlobalMeasure(&quot;req336&quot;)+ 0.33333334 * getGlobalMeasure(&quot;req162&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer11satisfaction" standAlone="true" status="1.24324" colour="Yellow">
+    <measurements name="customer11satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.243243" script="output = 0 + 0.24324325 * getGlobalMeasure(&quot;req350&quot;)+ 0.24324325 * getGlobalMeasure(&quot;req164&quot;)+ 0.1891892 * getGlobalMeasure(&quot;req371&quot;)+ 0.08108108 * getGlobalMeasure(&quot;req338&quot;)+ 0.24324325 * getGlobalMeasure(&quot;req64&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer12satisfaction" standAlone="true" status="1.21429" colour="Yellow">
+    <measurements name="customer12satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.214286" script="output = 0 + 0.14285715 * getGlobalMeasure(&quot;req363&quot;)+ 0.14285715 * getGlobalMeasure(&quot;req62&quot;)+ 0.35714287 * getGlobalMeasure(&quot;req51&quot;)+ 0.21428572 * getGlobalMeasure(&quot;req107&quot;)+ 0.14285715 * getGlobalMeasure(&quot;req73&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer13satisfaction" standAlone="true" status="1.26923" colour="Yellow">
+    <measurements name="customer13satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.269231" script="output = 0 + 0.34615386 * getGlobalMeasure(&quot;req169&quot;)+ 0.07692308 * getGlobalMeasure(&quot;req5&quot;)+ 0.23076923 * getGlobalMeasure(&quot;req15&quot;)+ 0.07692308 * getGlobalMeasure(&quot;req257&quot;)+ 0.26923078 * getGlobalMeasure(&quot;req384&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer14satisfaction" standAlone="true" status="1.28571" colour="Yellow">
+    <measurements name="customer14satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.285714" script="output = 0 + 0.04761905 * getGlobalMeasure(&quot;req45&quot;)+ 0.04761905 * getGlobalMeasure(&quot;req203&quot;)+ 0.14285715 * getGlobalMeasure(&quot;req6&quot;)+ 0.2857143 * getGlobalMeasure(&quot;req370&quot;)+ 0.47619048 * getGlobalMeasure(&quot;req218&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer15satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer15satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.03125 * getGlobalMeasure(&quot;req13&quot;)+ 0.3125 * getGlobalMeasure(&quot;req15&quot;)+ 0.09375 * getGlobalMeasure(&quot;req150&quot;)+ 0.25 * getGlobalMeasure(&quot;req46&quot;)+ 0.3125 * getGlobalMeasure(&quot;req344&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer16satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer16satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.071428575 * getGlobalMeasure(&quot;req112&quot;)+ 0.14285715 * getGlobalMeasure(&quot;req182&quot;)+ 0.14285715 * getGlobalMeasure(&quot;req231&quot;)+ 0.35714287 * getGlobalMeasure(&quot;req172&quot;)+ 0.2857143 * getGlobalMeasure(&quot;req208&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer17satisfaction" standAlone="true" status="1.44" colour="Yellow">
+    <measurements name="customer17satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.44" script="output = 0 + 0.2 * getGlobalMeasure(&quot;req364&quot;)+ 0.2 * getGlobalMeasure(&quot;req196&quot;)+ 0.16 * getGlobalMeasure(&quot;req211&quot;)+ 0.16 * getGlobalMeasure(&quot;req28&quot;)+ 0.28 * getGlobalMeasure(&quot;req373&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer18satisfaction" standAlone="true" status="1.28571" colour="Yellow">
+    <measurements name="customer18satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.285714" script="output = 0 + 0.23809524 * getGlobalMeasure(&quot;req339&quot;)+ 0.33333334 * getGlobalMeasure(&quot;req325&quot;)+ 0.04761905 * getGlobalMeasure(&quot;req55&quot;)+ 0.0952381 * getGlobalMeasure(&quot;req227&quot;)+ 0.2857143 * getGlobalMeasure(&quot;req370&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer19satisfaction" standAlone="true" status="1.14286" colour="Yellow">
+    <measurements name="customer19satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.142857" script="output = 0 + 0.32142857 * getGlobalMeasure(&quot;req352&quot;)+ 0.14285715 * getGlobalMeasure(&quot;req358&quot;)+ 0.14285715 * getGlobalMeasure(&quot;req125&quot;)+ 0.14285715 * getGlobalMeasure(&quot;req366&quot;)+ 0.25 * getGlobalMeasure(&quot;req51&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer20satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer20satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.08695652 * getGlobalMeasure(&quot;req61&quot;)+ 0.04347826 * getGlobalMeasure(&quot;req188&quot;)+ 0.26086956 * getGlobalMeasure(&quot;req343&quot;)+ 0.17391305 * getGlobalMeasure(&quot;req336&quot;)+ 0.4347826 * getGlobalMeasure(&quot;req145&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer21satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer21satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.11764706 * getGlobalMeasure(&quot;req380&quot;)+ 0.2647059 * getGlobalMeasure(&quot;req225&quot;)+ 0.2647059 * getGlobalMeasure(&quot;req129&quot;)+ 0.11764706 * getGlobalMeasure(&quot;req342&quot;)+ 0.23529412 * getGlobalMeasure(&quot;req178&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer22satisfaction" standAlone="true" status="1.25" colour="Yellow">
+    <measurements name="customer22satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.25" script="output = 0 + 0.25 * getGlobalMeasure(&quot;req13&quot;)+ 0.25 * getGlobalMeasure(&quot;req396&quot;)+ 0.32142857 * getGlobalMeasure(&quot;req252&quot;)+ 0.035714287 * getGlobalMeasure(&quot;req58&quot;)+ 0.14285715 * getGlobalMeasure(&quot;req233&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer23satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer23satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.2580645 * getGlobalMeasure(&quot;req282&quot;)+ 0.12903225 * getGlobalMeasure(&quot;req380&quot;)+ 0.06451613 * getGlobalMeasure(&quot;req44&quot;)+ 0.29032257 * getGlobalMeasure(&quot;req6&quot;)+ 0.2580645 * getGlobalMeasure(&quot;req160&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer24satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer24satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.15151516 * getGlobalMeasure(&quot;req199&quot;)+ 0.21212122 * getGlobalMeasure(&quot;req13&quot;)+ 0.27272728 * getGlobalMeasure(&quot;req108&quot;)+ 0.24242425 * getGlobalMeasure(&quot;req216&quot;)+ 0.121212125 * getGlobalMeasure(&quot;req238&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer25satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer25satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.20833333 * getGlobalMeasure(&quot;req317&quot;)+ 0.375 * getGlobalMeasure(&quot;req36&quot;)+ 0.041666668 * getGlobalMeasure(&quot;req138&quot;)+ 0.29166666 * getGlobalMeasure(&quot;req18&quot;)+ 0.083333336 * getGlobalMeasure(&quot;req17&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer26satisfaction" standAlone="true" status="1.29167" colour="Yellow">
+    <measurements name="customer26satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.291667" script="output = 0 + 0.041666668 * getGlobalMeasure(&quot;req113&quot;)+ 0.25 * getGlobalMeasure(&quot;req394&quot;)+ 0.375 * getGlobalMeasure(&quot;req204&quot;)+ 0.29166666 * getGlobalMeasure(&quot;req209&quot;)+ 0.041666668 * getGlobalMeasure(&quot;req43&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer27satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer27satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.16666667 * getGlobalMeasure(&quot;req105&quot;)+ 0.33333334 * getGlobalMeasure(&quot;req346&quot;)+ 0.055555556 * getGlobalMeasure(&quot;req84&quot;)+ 0.055555556 * getGlobalMeasure(&quot;req312&quot;)+ 0.3888889 * getGlobalMeasure(&quot;req47&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer28satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer28satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.47058824 * getGlobalMeasure(&quot;req215&quot;)+ 0.23529412 * getGlobalMeasure(&quot;req77&quot;)+ 0.11764706 * getGlobalMeasure(&quot;req181&quot;)+ 0.05882353 * getGlobalMeasure(&quot;req166&quot;)+ 0.11764706 * getGlobalMeasure(&quot;req21&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer29satisfaction" standAlone="true" status="1.07692" colour="Yellow">
+    <measurements name="customer29satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0769231" script="output = 0 + 0.07692308 * getGlobalMeasure(&quot;req195&quot;)+ 0.23076923 * getGlobalMeasure(&quot;req91&quot;)+ 0.20512821 * getGlobalMeasure(&quot;req79&quot;)+ 0.23076923 * getGlobalMeasure(&quot;req30&quot;)+ 0.25641027 * getGlobalMeasure(&quot;req53&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer30satisfaction" standAlone="true" status="1.3" colour="Yellow">
+    <measurements name="customer30satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.3" script="output = 0 + 0.1 * getGlobalMeasure(&quot;req91&quot;)+ 0.2 * getGlobalMeasure(&quot;req276&quot;)+ 0.15 * getGlobalMeasure(&quot;req149&quot;)+ 0.25 * getGlobalMeasure(&quot;req298&quot;)+ 0.3 * getGlobalMeasure(&quot;req254&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer31satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer31satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.125 * getGlobalMeasure(&quot;req228&quot;)+ 0.28125 * getGlobalMeasure(&quot;req154&quot;)+ 0.3125 * getGlobalMeasure(&quot;req123&quot;)+ 0.1875 * getGlobalMeasure(&quot;req216&quot;)+ 0.09375 * getGlobalMeasure(&quot;req266&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer32satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer32satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.2857143 * getGlobalMeasure(&quot;req265&quot;)+ 0.0952381 * getGlobalMeasure(&quot;req315&quot;)+ 0.23809524 * getGlobalMeasure(&quot;req105&quot;)+ 0.2857143 * getGlobalMeasure(&quot;req70&quot;)+ 0.0952381 * getGlobalMeasure(&quot;req300&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer33satisfaction" standAlone="true" status="1.31034" colour="Yellow">
+    <measurements name="customer33satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.310345" script="output = 0 + 0.13793103 * getGlobalMeasure(&quot;req355&quot;)+ 0.06896552 * getGlobalMeasure(&quot;req130&quot;)+ 0.31034482 * getGlobalMeasure(&quot;req195&quot;)+ 0.20689656 * getGlobalMeasure(&quot;req364&quot;)+ 0.27586207 * getGlobalMeasure(&quot;req387&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer34satisfaction" standAlone="true" status="1.54545" colour="Yellow">
+    <measurements name="customer34satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.545455" script="output = 0 + 0.3030303 * getGlobalMeasure(&quot;req334&quot;)+ 0.18181819 * getGlobalMeasure(&quot;req125&quot;)+ 0.24242425 * getGlobalMeasure(&quot;req223&quot;)+ 0.121212125 * getGlobalMeasure(&quot;req255&quot;)+ 0.15151516 * getGlobalMeasure(&quot;req233&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer35satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer35satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.33333334 * getGlobalMeasure(&quot;req220&quot;)+ 0.16666667 * getGlobalMeasure(&quot;req347&quot;)+ 0.33333334 * getGlobalMeasure(&quot;req188&quot;)+ 0.13333334 * getGlobalMeasure(&quot;req220&quot;)+ 0.033333335 * getGlobalMeasure(&quot;req327&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer36satisfaction" standAlone="true" status="1.05" colour="Yellow">
+    <measurements name="customer36satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.05" script="output = 0 + 0.2 * getGlobalMeasure(&quot;req242&quot;)+ 0.1 * getGlobalMeasure(&quot;req366&quot;)+ 0.35 * getGlobalMeasure(&quot;req288&quot;)+ 0.3 * getGlobalMeasure(&quot;req244&quot;)+ 0.05 * getGlobalMeasure(&quot;req200&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer37satisfaction" standAlone="true" status="1.46667" colour="Yellow">
+    <measurements name="customer37satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.466667" script="output = 0 + 0.06666667 * getGlobalMeasure(&quot;req21&quot;)+ 0.46666667 * getGlobalMeasure(&quot;req195&quot;)+ 0.13333334 * getGlobalMeasure(&quot;req243&quot;)+ 0.13333334 * getGlobalMeasure(&quot;req5&quot;)+ 0.2 * getGlobalMeasure(&quot;req263&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer38satisfaction" standAlone="true" status="1.17647" colour="Yellow">
+    <measurements name="customer38satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.176471" script="output = 0 + 0.1764706 * getGlobalMeasure(&quot;req87&quot;)+ 0.1764706 * getGlobalMeasure(&quot;req350&quot;)+ 0.14705883 * getGlobalMeasure(&quot;req190&quot;)+ 0.29411766 * getGlobalMeasure(&quot;req248&quot;)+ 0.20588236 * getGlobalMeasure(&quot;req289&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer39satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer39satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.1764706 * getGlobalMeasure(&quot;req257&quot;)+ 0.23529412 * getGlobalMeasure(&quot;req194&quot;)+ 0.11764706 * getGlobalMeasure(&quot;req236&quot;)+ 0.1764706 * getGlobalMeasure(&quot;req127&quot;)+ 0.29411766 * getGlobalMeasure(&quot;req1&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer40satisfaction" standAlone="true" status="1.44444" colour="Yellow">
+    <measurements name="customer40satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.444444" script="output = 0 + 0.18518518 * getGlobalMeasure(&quot;req22&quot;)+ 0.074074075 * getGlobalMeasure(&quot;req356&quot;)+ 0.25925925 * getGlobalMeasure(&quot;req121&quot;)+ 0.11111111 * getGlobalMeasure(&quot;req299&quot;)+ 0.37037036 * getGlobalMeasure(&quot;req41&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer41satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer41satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.074074075 * getGlobalMeasure(&quot;req270&quot;)+ 0.18518518 * getGlobalMeasure(&quot;req262&quot;)+ 0.37037036 * getGlobalMeasure(&quot;req164&quot;)+ 0.33333334 * getGlobalMeasure(&quot;req315&quot;)+ 0.037037037 * getGlobalMeasure(&quot;req314&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer42satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer42satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.20833333 * getGlobalMeasure(&quot;req111&quot;)+ 0.20833333 * getGlobalMeasure(&quot;req46&quot;)+ 0.29166666 * getGlobalMeasure(&quot;req90&quot;)+ 0.125 * getGlobalMeasure(&quot;req348&quot;)+ 0.16666667 * getGlobalMeasure(&quot;req64&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer43satisfaction" standAlone="true" status="1.25" colour="Yellow">
+    <measurements name="customer43satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.25" script="output = 0 + 0.25 * getGlobalMeasure(&quot;req350&quot;)+ 0.19444445 * getGlobalMeasure(&quot;req178&quot;)+ 0.083333336 * getGlobalMeasure(&quot;req80&quot;)+ 0.22222222 * getGlobalMeasure(&quot;req181&quot;)+ 0.25 * getGlobalMeasure(&quot;req173&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer44satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer44satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.1724138 * getGlobalMeasure(&quot;req156&quot;)+ 0.1724138 * getGlobalMeasure(&quot;req154&quot;)+ 0.31034482 * getGlobalMeasure(&quot;req15&quot;)+ 0.2413793 * getGlobalMeasure(&quot;req382&quot;)+ 0.10344828 * getGlobalMeasure(&quot;req88&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer45satisfaction" standAlone="true" status="1.03846" colour="Yellow">
+    <measurements name="customer45satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0384615" script="output = 0 + 0.34615386 * getGlobalMeasure(&quot;req247&quot;)+ 0.23076923 * getGlobalMeasure(&quot;req368&quot;)+ 0.26923078 * getGlobalMeasure(&quot;req291&quot;)+ 0.115384616 * getGlobalMeasure(&quot;req138&quot;)+ 0.03846154 * getGlobalMeasure(&quot;req350&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer46satisfaction" standAlone="true" status="1.19355" colour="Yellow">
+    <measurements name="customer46satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.193548" script="output = 0 + 0.19354838 * getGlobalMeasure(&quot;req121&quot;)+ 0.29032257 * getGlobalMeasure(&quot;req123&quot;)+ 0.29032257 * getGlobalMeasure(&quot;req191&quot;)+ 0.032258064 * getGlobalMeasure(&quot;req347&quot;)+ 0.19354838 * getGlobalMeasure(&quot;req297&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer47satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer47satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.16 * getGlobalMeasure(&quot;req294&quot;)+ 0.16 * getGlobalMeasure(&quot;req261&quot;)+ 0.12 * getGlobalMeasure(&quot;req145&quot;)+ 0.16 * getGlobalMeasure(&quot;req35&quot;)+ 0.4 * getGlobalMeasure(&quot;req104&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer48satisfaction" standAlone="true" status="1.63636" colour="Yellow">
+    <measurements name="customer48satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.636364" script="output = 0 + 0.15151516 * getGlobalMeasure(&quot;req280&quot;)+ 0.09090909 * getGlobalMeasure(&quot;req323&quot;)+ 0.21212122 * getGlobalMeasure(&quot;req223&quot;)+ 0.27272728 * getGlobalMeasure(&quot;req399&quot;)+ 0.27272728 * getGlobalMeasure(&quot;req22&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer49satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer49satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.18518518 * getGlobalMeasure(&quot;req268&quot;)+ 0.037037037 * getGlobalMeasure(&quot;req136&quot;)+ 0.18518518 * getGlobalMeasure(&quot;req157&quot;)+ 0.2962963 * getGlobalMeasure(&quot;req63&quot;)+ 0.2962963 * getGlobalMeasure(&quot;req87&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer50satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer50satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.14285715 * getGlobalMeasure(&quot;req167&quot;)+ 0.32142857 * getGlobalMeasure(&quot;req246&quot;)+ 0.2857143 * getGlobalMeasure(&quot;req194&quot;)+ 0.10714286 * getGlobalMeasure(&quot;req88&quot;)+ 0.14285715 * getGlobalMeasure(&quot;req36&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer51satisfaction" standAlone="true" status="1.15625" colour="Yellow">
+    <measurements name="customer51satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.15625" script="output = 0 + 0.25 * getGlobalMeasure(&quot;req27&quot;)+ 0.15625 * getGlobalMeasure(&quot;req396&quot;)+ 0.28125 * getGlobalMeasure(&quot;req205&quot;)+ 0.0625 * getGlobalMeasure(&quot;req168&quot;)+ 0.25 * getGlobalMeasure(&quot;req118&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer52satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer52satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.11111111 * getGlobalMeasure(&quot;req186&quot;)+ 0.074074075 * getGlobalMeasure(&quot;req173&quot;)+ 0.33333334 * getGlobalMeasure(&quot;req226&quot;)+ 0.33333334 * getGlobalMeasure(&quot;req242&quot;)+ 0.14814815 * getGlobalMeasure(&quot;req70&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer53satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer53satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.18181819 * getGlobalMeasure(&quot;req4&quot;)+ 0.3030303 * getGlobalMeasure(&quot;req348&quot;)+ 0.09090909 * getGlobalMeasure(&quot;req232&quot;)+ 0.24242425 * getGlobalMeasure(&quot;req29&quot;)+ 0.18181819 * getGlobalMeasure(&quot;req75&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer54satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer54satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.13043478 * getGlobalMeasure(&quot;req329&quot;)+ 0.17391305 * getGlobalMeasure(&quot;req266&quot;)+ 0.04347826 * getGlobalMeasure(&quot;req218&quot;)+ 0.3043478 * getGlobalMeasure(&quot;req138&quot;)+ 0.3478261 * getGlobalMeasure(&quot;req169&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer55satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer55satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.27586207 * getGlobalMeasure(&quot;req176&quot;)+ 0.13793103 * getGlobalMeasure(&quot;req16&quot;)+ 0.13793103 * getGlobalMeasure(&quot;req110&quot;)+ 0.13793103 * getGlobalMeasure(&quot;req213&quot;)+ 0.31034482 * getGlobalMeasure(&quot;req192&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer56satisfaction" standAlone="true" status="1.29032" colour="Yellow">
+    <measurements name="customer56satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.290323" script="output = 0 + 0.2580645 * getGlobalMeasure(&quot;req353&quot;)+ 0.09677419 * getGlobalMeasure(&quot;req179&quot;)+ 0.29032257 * getGlobalMeasure(&quot;req361&quot;)+ 0.09677419 * getGlobalMeasure(&quot;req37&quot;)+ 0.2580645 * getGlobalMeasure(&quot;req255&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer57satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer57satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.21052632 * getGlobalMeasure(&quot;req336&quot;)+ 0.15789473 * getGlobalMeasure(&quot;req209&quot;)+ 0.21052632 * getGlobalMeasure(&quot;req110&quot;)+ 0.21052632 * getGlobalMeasure(&quot;req42&quot;)+ 0.21052632 * getGlobalMeasure(&quot;req21&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer58satisfaction" standAlone="true" status="1.09091" colour="Yellow">
+    <measurements name="customer58satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0909091" script="output = 0 + 0.18181819 * getGlobalMeasure(&quot;req90&quot;)+ 0.21212122 * getGlobalMeasure(&quot;req198&quot;)+ 0.3030303 * getGlobalMeasure(&quot;req307&quot;)+ 0.09090909 * getGlobalMeasure(&quot;req254&quot;)+ 0.21212122 * getGlobalMeasure(&quot;req158&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer59satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer59satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.055555556 * getGlobalMeasure(&quot;req141&quot;)+ 0.22222222 * getGlobalMeasure(&quot;req346&quot;)+ 0.22222222 * getGlobalMeasure(&quot;req388&quot;)+ 0.22222222 * getGlobalMeasure(&quot;req274&quot;)+ 0.2777778 * getGlobalMeasure(&quot;req25&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer60satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer60satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.121212125 * getGlobalMeasure(&quot;req7&quot;)+ 0.24242425 * getGlobalMeasure(&quot;req175&quot;)+ 0.3030303 * getGlobalMeasure(&quot;req371&quot;)+ 0.121212125 * getGlobalMeasure(&quot;req58&quot;)+ 0.21212122 * getGlobalMeasure(&quot;req284&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer61satisfaction" standAlone="true" status="1.46875" colour="Yellow">
+    <measurements name="customer61satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.46875" script="output = 0 + 0.3125 * getGlobalMeasure(&quot;req197&quot;)+ 0.1875 * getGlobalMeasure(&quot;req124&quot;)+ 0.09375 * getGlobalMeasure(&quot;req46&quot;)+ 0.25 * getGlobalMeasure(&quot;req199&quot;)+ 0.15625 * getGlobalMeasure(&quot;req334&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer62satisfaction" standAlone="true" status="1.62069" colour="Yellow">
+    <measurements name="customer62satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.62069" script="output = 0 + 0.10344828 * getGlobalMeasure(&quot;req143&quot;)+ 0.1724138 * getGlobalMeasure(&quot;req100&quot;)+ 0.31034482 * getGlobalMeasure(&quot;req328&quot;)+ 0.10344828 * getGlobalMeasure(&quot;req345&quot;)+ 0.31034482 * getGlobalMeasure(&quot;req207&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer63satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer63satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.2173913 * getGlobalMeasure(&quot;req351&quot;)+ 0.2173913 * getGlobalMeasure(&quot;req134&quot;)+ 0.1521739 * getGlobalMeasure(&quot;req35&quot;)+ 0.2173913 * getGlobalMeasure(&quot;req116&quot;)+ 0.19565217 * getGlobalMeasure(&quot;req21&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer64satisfaction" standAlone="true" status="1.29167" colour="Yellow">
+    <measurements name="customer64satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.291667" script="output = 0 + 0.041666668 * getGlobalMeasure(&quot;req94&quot;)+ 0.29166666 * getGlobalMeasure(&quot;req275&quot;)+ 0.125 * getGlobalMeasure(&quot;req56&quot;)+ 0.25 * getGlobalMeasure(&quot;req120&quot;)+ 0.29166666 * getGlobalMeasure(&quot;req207&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer65satisfaction" standAlone="true" status="1.14286" colour="Yellow">
+    <measurements name="customer65satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.142857" script="output = 0 + 0.14285715 * getGlobalMeasure(&quot;req211&quot;)+ 0.35714287 * getGlobalMeasure(&quot;req29&quot;)+ 0.071428575 * getGlobalMeasure(&quot;req218&quot;)+ 0.25 * getGlobalMeasure(&quot;req343&quot;)+ 0.17857143 * getGlobalMeasure(&quot;req392&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer66satisfaction" standAlone="true" status="1.2439" colour="Yellow">
+    <measurements name="customer66satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.243902" script="output = 0 + 0.14634146 * getGlobalMeasure(&quot;req229&quot;)+ 0.24390244 * getGlobalMeasure(&quot;req45&quot;)+ 0.24390244 * getGlobalMeasure(&quot;req22&quot;)+ 0.19512194 * getGlobalMeasure(&quot;req317&quot;)+ 0.17073171 * getGlobalMeasure(&quot;req89&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer67satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer67satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.21052632 * getGlobalMeasure(&quot;req148&quot;)+ 0.2631579 * getGlobalMeasure(&quot;req95&quot;)+ 0.2631579 * getGlobalMeasure(&quot;req199&quot;)+ 0.078947365 * getGlobalMeasure(&quot;req115&quot;)+ 0.18421052 * getGlobalMeasure(&quot;req69&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer68satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer68satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.055555556 * getGlobalMeasure(&quot;req55&quot;)+ 0.44444445 * getGlobalMeasure(&quot;req276&quot;)+ 0.33333334 * getGlobalMeasure(&quot;req133&quot;)+ 0.11111111 * getGlobalMeasure(&quot;req75&quot;)+ 0.055555556 * getGlobalMeasure(&quot;req289&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer69satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer69satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.121212125 * getGlobalMeasure(&quot;req162&quot;)+ 0.24242425 * getGlobalMeasure(&quot;req267&quot;)+ 0.27272728 * getGlobalMeasure(&quot;req75&quot;)+ 0.24242425 * getGlobalMeasure(&quot;req346&quot;)+ 0.121212125 * getGlobalMeasure(&quot;req297&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer70satisfaction" standAlone="true" status="1.22222" colour="Yellow">
+    <measurements name="customer70satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.222222" script="output = 0 + 0.13333334 * getGlobalMeasure(&quot;req102&quot;)+ 0.22222222 * getGlobalMeasure(&quot;req153&quot;)+ 0.22222222 * getGlobalMeasure(&quot;req343&quot;)+ 0.22222222 * getGlobalMeasure(&quot;req100&quot;)+ 0.2 * getGlobalMeasure(&quot;req103&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer71satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer71satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.33333334 * getGlobalMeasure(&quot;req110&quot;)+ 0.037037037 * getGlobalMeasure(&quot;req316&quot;)+ 0.22222222 * getGlobalMeasure(&quot;req335&quot;)+ 0.074074075 * getGlobalMeasure(&quot;req321&quot;)+ 0.33333334 * getGlobalMeasure(&quot;req365&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer72satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer72satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.11111111 * getGlobalMeasure(&quot;req14&quot;)+ 0.22222222 * getGlobalMeasure(&quot;req346&quot;)+ 0.055555556 * getGlobalMeasure(&quot;req89&quot;)+ 0.055555556 * getGlobalMeasure(&quot;req142&quot;)+ 0.5555556 * getGlobalMeasure(&quot;req105&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer73satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer73satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.1627907 * getGlobalMeasure(&quot;req41&quot;)+ 0.18604651 * getGlobalMeasure(&quot;req97&quot;)+ 0.18604651 * getGlobalMeasure(&quot;req376&quot;)+ 0.23255815 * getGlobalMeasure(&quot;req246&quot;)+ 0.23255815 * getGlobalMeasure(&quot;req159&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer74satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer74satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.3125 * getGlobalMeasure(&quot;req19&quot;)+ 0.21875 * getGlobalMeasure(&quot;req160&quot;)+ 0.28125 * getGlobalMeasure(&quot;req375&quot;)+ 0.09375 * getGlobalMeasure(&quot;req387&quot;)+ 0.09375 * getGlobalMeasure(&quot;req174&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer75satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer75satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.34615386 * getGlobalMeasure(&quot;req253&quot;)+ 0.23076923 * getGlobalMeasure(&quot;req247&quot;)+ 0.15384616 * getGlobalMeasure(&quot;req198&quot;)+ 0.115384616 * getGlobalMeasure(&quot;req303&quot;)+ 0.15384616 * getGlobalMeasure(&quot;req183&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer76satisfaction" standAlone="true" status="1.34483" colour="Yellow">
+    <measurements name="customer76satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.344828" script="output = 0 + 0.3448276 * getGlobalMeasure(&quot;req185&quot;)+ 0.06896552 * getGlobalMeasure(&quot;req196&quot;)+ 0.2413793 * getGlobalMeasure(&quot;req151&quot;)+ 0.10344828 * getGlobalMeasure(&quot;req307&quot;)+ 0.2413793 * getGlobalMeasure(&quot;req112&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer77satisfaction" standAlone="true" status="1.0" colour="Yellow">
+    <measurements name="customer77satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0 + 0.25 * getGlobalMeasure(&quot;req307&quot;)+ 0.1 * getGlobalMeasure(&quot;req59&quot;)+ 0.5 * getGlobalMeasure(&quot;req12&quot;)+ 0.1 * getGlobalMeasure(&quot;req271&quot;)+ 0.05 * getGlobalMeasure(&quot;req368&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer78satisfaction" standAlone="true" status="1.28" colour="Yellow">
+    <measurements name="customer78satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.28" script="output = 0 + 0.28 * getGlobalMeasure(&quot;req250&quot;)+ 0.12 * getGlobalMeasure(&quot;req5&quot;)+ 0.28 * getGlobalMeasure(&quot;req211&quot;)+ 0.04 * getGlobalMeasure(&quot;req180&quot;)+ 0.28 * getGlobalMeasure(&quot;req120&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer79satisfaction" standAlone="true" status="1.4" colour="Yellow">
+    <measurements name="customer79satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.4" script="output = 0 + 0.114285715 * getGlobalMeasure(&quot;req398&quot;)+ 0.2 * getGlobalMeasure(&quot;req84&quot;)+ 0.22857143 * getGlobalMeasure(&quot;req59&quot;)+ 0.2857143 * getGlobalMeasure(&quot;req350&quot;)+ 0.17142858 * getGlobalMeasure(&quot;req30&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="customer80satisfaction" standAlone="true" status="1.25806" colour="Yellow">
+    <measurements name="customer80satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.258064" script="output = 0 + 0.2580645 * getGlobalMeasure(&quot;req10&quot;)+ 0.32258064 * getGlobalMeasure(&quot;req258&quot;)+ 0.09677419 * getGlobalMeasure(&quot;req298&quot;)+ 0.06451613 * getGlobalMeasure(&quot;req305&quot;)+ 0.2580645 * getGlobalMeasure(&quot;req334&quot;)"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement1">
+    <measurements name="req1" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement2">
+    <measurements name="req2" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement3">
+    <measurements name="req3" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement4">
+    <measurements name="req4" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement5">
+    <measurements name="req5" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement6">
+    <measurements name="req6" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement7">
+    <measurements name="req7" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement8">
+    <measurements name="req8" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement9">
+    <measurements name="req9" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement10">
+    <measurements name="req10" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement11">
+    <measurements name="req11" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement12">
+    <measurements name="req12" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement13">
+    <measurements name="req13" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement14">
+    <measurements name="req14" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement15">
+    <measurements name="req15" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement16">
+    <measurements name="req16" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement17">
+    <measurements name="req17" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement18">
+    <measurements name="req18" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement19">
+    <measurements name="req19" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement20">
+    <measurements name="req20" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement21">
+    <measurements name="req21" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement22">
+    <measurements name="req22" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement23">
+    <measurements name="req23" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement24">
+    <measurements name="req24" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement25">
+    <measurements name="req25" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement26">
+    <measurements name="req26" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement27">
+    <measurements name="req27" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement28">
+    <measurements name="req28" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement29">
+    <measurements name="req29" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement30">
+    <measurements name="req30" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement31">
+    <measurements name="req31" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement32">
+    <measurements name="req32" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement33">
+    <measurements name="req33" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement34">
+    <measurements name="req34" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement35">
+    <measurements name="req35" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement36">
+    <measurements name="req36" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement37">
+    <measurements name="req37" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement38">
+    <measurements name="req38" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement39">
+    <measurements name="req39" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement40">
+    <measurements name="req40" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement41">
+    <measurements name="req41" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement42">
+    <measurements name="req42" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement43">
+    <measurements name="req43" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement44">
+    <measurements name="req44" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement45">
+    <measurements name="req45" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement46">
+    <measurements name="req46" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement47">
+    <measurements name="req47" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement48">
+    <measurements name="req48" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement49">
+    <measurements name="req49" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement50">
+    <measurements name="req50" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement51">
+    <measurements name="req51" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement52">
+    <measurements name="req52" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement53">
+    <measurements name="req53" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement54">
+    <measurements name="req54" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement55">
+    <measurements name="req55" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement56">
+    <measurements name="req56" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement57">
+    <measurements name="req57" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement58">
+    <measurements name="req58" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement59">
+    <measurements name="req59" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement60">
+    <measurements name="req60" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement61">
+    <measurements name="req61" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement62">
+    <measurements name="req62" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement63">
+    <measurements name="req63" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement64">
+    <measurements name="req64" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement65">
+    <measurements name="req65" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement66">
+    <measurements name="req66" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement67">
+    <measurements name="req67" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement68">
+    <measurements name="req68" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement69">
+    <measurements name="req69" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement70">
+    <measurements name="req70" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement71">
+    <measurements name="req71" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement72">
+    <measurements name="req72" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement73">
+    <measurements name="req73" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement74">
+    <measurements name="req74" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement75">
+    <measurements name="req75" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement76">
+    <measurements name="req76" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement77">
+    <measurements name="req77" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement78">
+    <measurements name="req78" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement79">
+    <measurements name="req79" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement80">
+    <measurements name="req80" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement81">
+    <measurements name="req81" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement82">
+    <measurements name="req82" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement83">
+    <measurements name="req83" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement84">
+    <measurements name="req84" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement85">
+    <measurements name="req85" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement86">
+    <measurements name="req86" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement87">
+    <measurements name="req87" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement88">
+    <measurements name="req88" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement89">
+    <measurements name="req89" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement90">
+    <measurements name="req90" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement91">
+    <measurements name="req91" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement92">
+    <measurements name="req92" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement93">
+    <measurements name="req93" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement94">
+    <measurements name="req94" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement95">
+    <measurements name="req95" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement96">
+    <measurements name="req96" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement97">
+    <measurements name="req97" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement98">
+    <measurements name="req98" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement99">
+    <measurements name="req99" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement100">
+    <measurements name="req100" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement101">
+    <measurements name="req101" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement102">
+    <measurements name="req102" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement103" status="0.0" colour="Red" satisfiedBy="//@OurObjects.483/@provides.0">
+    <measurements name="req103" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement104" status="0.0" colour="Red" satisfiedBy="//@OurObjects.484/@provides.0">
+    <measurements name="req104" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement105">
+    <measurements name="req105" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement106">
+    <measurements name="req106" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement107" status="2.0" colour="Green" satisfiedBy="//@OurObjects.485/@provides.0">
+    <measurements name="req107" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement108">
+    <measurements name="req108" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement109">
+    <measurements name="req109" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement110">
+    <measurements name="req110" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement111">
+    <measurements name="req111" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement112">
+    <measurements name="req112" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement113" status="2.0" colour="Green" satisfiedBy="//@OurObjects.486/@provides.0">
+    <measurements name="req113" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement114">
+    <measurements name="req114" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement115">
+    <measurements name="req115" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement116">
+    <measurements name="req116" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement117" status="0.0" colour="Red" satisfiedBy="//@OurObjects.487/@provides.0">
+    <measurements name="req117" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement118">
+    <measurements name="req118" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement119">
+    <measurements name="req119" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement120">
+    <measurements name="req120" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement121">
+    <measurements name="req121" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement122">
+    <measurements name="req122" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement123">
+    <measurements name="req123" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement124">
+    <measurements name="req124" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement125">
+    <measurements name="req125" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement126">
+    <measurements name="req126" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement127">
+    <measurements name="req127" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement128">
+    <measurements name="req128" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement129">
+    <measurements name="req129" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement130">
+    <measurements name="req130" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement131">
+    <measurements name="req131" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement132">
+    <measurements name="req132" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement133">
+    <measurements name="req133" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement134">
+    <measurements name="req134" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement135">
+    <measurements name="req135" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement136">
+    <measurements name="req136" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement137">
+    <measurements name="req137" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement138">
+    <measurements name="req138" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement139">
+    <measurements name="req139" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement140">
+    <measurements name="req140" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement141">
+    <measurements name="req141" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement142">
+    <measurements name="req142" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement143">
+    <measurements name="req143" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement144">
+    <measurements name="req144" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement145">
+    <measurements name="req145" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement146" status="0.0" colour="Red" satisfiedBy="//@OurObjects.489/@provides.0">
+    <measurements name="req146" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement147">
+    <measurements name="req147" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement148">
+    <measurements name="req148" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement149">
+    <measurements name="req149" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement150">
+    <measurements name="req150" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement151" status="0.0" colour="Red" satisfiedBy="//@OurObjects.490/@provides.0">
+    <measurements name="req151" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement152">
+    <measurements name="req152" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement153" status="2.0" colour="Green" satisfiedBy="//@OurObjects.491/@provides.0">
+    <measurements name="req153" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement154">
+    <measurements name="req154" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement155">
+    <measurements name="req155" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement156">
+    <measurements name="req156" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement157">
+    <measurements name="req157" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement158">
+    <measurements name="req158" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement159">
+    <measurements name="req159" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement160">
+    <measurements name="req160" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement161">
+    <measurements name="req161" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement162">
+    <measurements name="req162" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement163">
+    <measurements name="req163" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement164">
+    <measurements name="req164" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement165">
+    <measurements name="req165" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement166">
+    <measurements name="req166" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement167">
+    <measurements name="req167" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement168">
+    <measurements name="req168" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement169">
+    <measurements name="req169" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement170">
+    <measurements name="req170" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement171">
+    <measurements name="req171" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement172">
+    <measurements name="req172" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement173">
+    <measurements name="req173" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement174">
+    <measurements name="req174" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement175">
+    <measurements name="req175" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement176">
+    <measurements name="req176" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement177">
+    <measurements name="req177" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement178">
+    <measurements name="req178" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement179">
+    <measurements name="req179" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement180">
+    <measurements name="req180" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement181">
+    <measurements name="req181" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement182">
+    <measurements name="req182" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement183">
+    <measurements name="req183" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement184" status="2.0" colour="Green" satisfiedBy="//@OurObjects.492/@provides.0">
+    <measurements name="req184" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement185">
+    <measurements name="req185" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement186">
+    <measurements name="req186" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement187">
+    <measurements name="req187" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement188">
+    <measurements name="req188" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement189">
+    <measurements name="req189" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement190">
+    <measurements name="req190" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement191">
+    <measurements name="req191" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement192">
+    <measurements name="req192" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement193">
+    <measurements name="req193" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement194">
+    <measurements name="req194" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement195" status="2.0" colour="Green" satisfiedBy="//@OurObjects.494/@provides.0">
+    <measurements name="req195" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement196">
+    <measurements name="req196" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement197" status="2.0" colour="Green" satisfiedBy="//@OurObjects.495/@provides.0">
+    <measurements name="req197" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement198">
+    <measurements name="req198" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement199">
+    <measurements name="req199" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement200" status="2.0" colour="Green" satisfiedBy="//@OurObjects.496/@provides.0">
+    <measurements name="req200" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement201">
+    <measurements name="req201" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement202">
+    <measurements name="req202" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement203">
+    <measurements name="req203" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement204">
+    <measurements name="req204" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement205">
+    <measurements name="req205" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement206">
+    <measurements name="req206" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement207">
+    <measurements name="req207" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement208">
+    <measurements name="req208" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement209">
+    <measurements name="req209" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement210">
+    <measurements name="req210" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement211" status="2.0" colour="Green" satisfiedBy="//@OurObjects.498/@provides.0">
+    <measurements name="req211" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement212">
+    <measurements name="req212" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement213">
+    <measurements name="req213" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement214">
+    <measurements name="req214" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement215">
+    <measurements name="req215" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement216">
+    <measurements name="req216" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement217" status="2.0" colour="Green" satisfiedBy="//@OurObjects.499/@provides.0">
+    <measurements name="req217" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement218">
+    <measurements name="req218" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement219">
+    <measurements name="req219" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement220">
+    <measurements name="req220" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement221">
+    <measurements name="req221" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement222">
+    <measurements name="req222" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement223">
+    <measurements name="req223" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement224">
+    <measurements name="req224" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement225">
+    <measurements name="req225" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement226">
+    <measurements name="req226" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement227">
+    <measurements name="req227" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement228">
+    <measurements name="req228" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement229">
+    <measurements name="req229" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement230">
+    <measurements name="req230" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement231">
+    <measurements name="req231" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement232">
+    <measurements name="req232" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement233">
+    <measurements name="req233" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement234">
+    <measurements name="req234" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement235">
+    <measurements name="req235" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement236">
+    <measurements name="req236" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement237">
+    <measurements name="req237" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement238">
+    <measurements name="req238" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement239">
+    <measurements name="req239" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement240">
+    <measurements name="req240" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement241">
+    <measurements name="req241" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement242">
+    <measurements name="req242" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement243">
+    <measurements name="req243" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement244">
+    <measurements name="req244" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement245">
+    <measurements name="req245" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement246">
+    <measurements name="req246" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement247">
+    <measurements name="req247" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement248">
+    <measurements name="req248" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement249">
+    <measurements name="req249" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement250">
+    <measurements name="req250" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement251">
+    <measurements name="req251" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement252">
+    <measurements name="req252" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement253">
+    <measurements name="req253" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement254" status="2.0" colour="Green" satisfiedBy="//@OurObjects.501/@provides.0">
+    <measurements name="req254" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement255">
+    <measurements name="req255" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement256">
+    <measurements name="req256" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement257">
+    <measurements name="req257" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement258">
+    <measurements name="req258" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement259">
+    <measurements name="req259" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement260">
+    <measurements name="req260" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement261">
+    <measurements name="req261" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement262">
+    <measurements name="req262" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement263">
+    <measurements name="req263" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement264">
+    <measurements name="req264" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement265">
+    <measurements name="req265" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement266">
+    <measurements name="req266" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement267">
+    <measurements name="req267" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement268">
+    <measurements name="req268" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement269">
+    <measurements name="req269" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement270">
+    <measurements name="req270" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement271">
+    <measurements name="req271" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement272">
+    <measurements name="req272" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement273">
+    <measurements name="req273" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement274">
+    <measurements name="req274" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement275">
+    <measurements name="req275" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement276">
+    <measurements name="req276" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement277">
+    <measurements name="req277" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement278">
+    <measurements name="req278" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement279">
+    <measurements name="req279" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement280" status="2.0" colour="Green" satisfiedBy="//@OurObjects.502/@provides.0">
+    <measurements name="req280" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement281">
+    <measurements name="req281" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement282">
+    <measurements name="req282" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement283">
+    <measurements name="req283" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement284">
+    <measurements name="req284" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement285" status="2.0" colour="Green">
+    <measurements name="req285" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement286">
+    <measurements name="req286" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement287" status="2.0" colour="Green">
+    <measurements name="req287" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement288">
+    <measurements name="req288" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement289">
+    <measurements name="req289" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement290">
+    <measurements name="req290" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement291">
+    <measurements name="req291" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement292">
+    <measurements name="req292" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement293">
+    <measurements name="req293" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement294">
+    <measurements name="req294" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement295">
+    <measurements name="req295" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement296">
+    <measurements name="req296" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement297">
+    <measurements name="req297" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement298">
+    <measurements name="req298" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement299">
+    <measurements name="req299" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement300">
+    <measurements name="req300" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement301">
+    <measurements name="req301" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement302">
+    <measurements name="req302" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement303">
+    <measurements name="req303" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement304">
+    <measurements name="req304" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement305">
+    <measurements name="req305" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement306">
+    <measurements name="req306" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement307">
+    <measurements name="req307" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement308">
+    <measurements name="req308" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement309">
+    <measurements name="req309" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement310">
+    <measurements name="req310" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement311">
+    <measurements name="req311" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement312">
+    <measurements name="req312" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement313">
+    <measurements name="req313" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement314">
+    <measurements name="req314" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement315">
+    <measurements name="req315" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement316">
+    <measurements name="req316" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement317">
+    <measurements name="req317" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement318">
+    <measurements name="req318" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement319">
+    <measurements name="req319" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement320">
+    <measurements name="req320" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement321">
+    <measurements name="req321" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement322">
+    <measurements name="req322" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement323">
+    <measurements name="req323" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement324">
+    <measurements name="req324" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement325">
+    <measurements name="req325" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement326">
+    <measurements name="req326" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement327">
+    <measurements name="req327" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement328" status="2.0" colour="Green">
+    <measurements name="req328" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement329">
+    <measurements name="req329" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement330">
+    <measurements name="req330" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement331">
+    <measurements name="req331" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement332">
+    <measurements name="req332" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement333" status="2.0" colour="Green">
+    <measurements name="req333" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement334" status="2.0" colour="Green" satisfiedBy="//@OurObjects.507/@provides.0">
+    <measurements name="req334" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement335">
+    <measurements name="req335" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement336">
+    <measurements name="req336" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement337">
+    <measurements name="req337" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement338">
+    <measurements name="req338" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement339">
+    <measurements name="req339" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement340">
+    <measurements name="req340" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement341">
+    <measurements name="req341" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement342">
+    <measurements name="req342" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement343">
+    <measurements name="req343" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement344">
+    <measurements name="req344" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement345">
+    <measurements name="req345" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement346">
+    <measurements name="req346" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement347">
+    <measurements name="req347" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement348">
+    <measurements name="req348" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement349">
+    <measurements name="req349" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement350" status="2.0" colour="Green">
+    <measurements name="req350" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement351">
+    <measurements name="req351" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement352">
+    <measurements name="req352" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement353">
+    <measurements name="req353" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement354">
+    <measurements name="req354" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement355">
+    <measurements name="req355" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement356">
+    <measurements name="req356" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement357">
+    <measurements name="req357" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement358" status="2.0" colour="Green">
+    <measurements name="req358" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement359">
+    <measurements name="req359" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement360">
+    <measurements name="req360" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement361" status="2.0" colour="Green" satisfiedBy="//@OurObjects.510/@provides.0">
+    <measurements name="req361" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement362">
+    <measurements name="req362" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement363">
+    <measurements name="req363" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement364">
+    <measurements name="req364" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement365">
+    <measurements name="req365" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement366">
+    <measurements name="req366" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement367">
+    <measurements name="req367" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement368">
+    <measurements name="req368" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement369">
+    <measurements name="req369" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement370" status="2.0" colour="Green" satisfiedBy="//@OurObjects.511/@provides.0">
+    <measurements name="req370" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement371">
+    <measurements name="req371" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement372">
+    <measurements name="req372" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement373" status="2.0" colour="Green">
+    <measurements name="req373" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement374">
+    <measurements name="req374" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement375">
+    <measurements name="req375" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement376">
+    <measurements name="req376" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement377">
+    <measurements name="req377" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement378">
+    <measurements name="req378" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement379">
+    <measurements name="req379" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement380">
+    <measurements name="req380" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement381">
+    <measurements name="req381" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement382">
+    <measurements name="req382" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement383">
+    <measurements name="req383" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement384" status="2.0" colour="Green">
+    <measurements name="req384" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement385">
+    <measurements name="req385" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement386">
+    <measurements name="req386" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement387">
+    <measurements name="req387" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement388">
+    <measurements name="req388" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement389">
+    <measurements name="req389" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement390">
+    <measurements name="req390" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement391">
+    <measurements name="req391" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement392">
+    <measurements name="req392" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement393">
+    <measurements name="req393" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement394" status="2.0" colour="Green">
+    <measurements name="req394" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement395">
+    <measurements name="req395" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement396" status="2.0" colour="Green" satisfiedBy="//@OurObjects.516/@provides.0">
+    <measurements name="req396" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement397">
+    <measurements name="req397" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement398" status="2.0" colour="Green">
+    <measurements name="req398" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement399">
+    <measurements name="req399" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Capability" name="requirement400">
+    <measurements name="req400" criticalValue="0.0" benchmarkValue="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature22:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement22">
+      <measurements name="req22" providedValue="1.0"/>
+    </provides>
+    <requires name="requirement285" satisfiedBy="//@OurObjects.503/@provides.0">
+      <measurements name="req285" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+    </requires>
+    <costs name="Money" amount="8.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature99:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement99">
+      <measurements name="req99" providedValue="1.0"/>
+    </provides>
+    <requires name="requirement384" satisfiedBy="//@OurObjects.514/@provides.0">
+      <measurements name="req384" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+    </requires>
+    <costs name="Money" amount="2.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature103:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement103" satisfies="//@OurObjects.183">
+      <measurements name="req103" providedValue="1.0"/>
+    </provides>
+    <requires name="requirement146">
+      <measurements name="req146" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0"/>
+    </requires>
+    <costs name="Money" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature104:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement104" satisfies="//@OurObjects.184">
+      <measurements name="req104" providedValue="1.0"/>
+    </provides>
+    <requires name="requirement170">
+      <measurements name="req170" criticalValue="0.0" benchmarkValue="1.0"/>
+    </requires>
+    <costs name="Money" amount="5.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature107:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement107" satisfies="//@OurObjects.187">
+      <measurements name="req107" providedValue="1.0"/>
+    </provides>
+    <requires name="requirement394" satisfiedBy="//@OurObjects.515/@provides.0">
+      <measurements name="req394" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+    </requires>
+    <costs name="Money" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature113:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement113" satisfies="//@OurObjects.193">
+      <measurements name="req113" providedValue="1.0"/>
+    </provides>
+    <requires name="requirement350" satisfiedBy="//@OurObjects.508/@provides.0">
+      <measurements name="req350" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+    </requires>
+    <costs name="Money" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature117:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement117" satisfies="//@OurObjects.197">
+      <measurements name="req117" providedValue="1.0"/>
+    </provides>
+    <requires name="requirement308">
+      <measurements name="req308" criticalValue="0.0" benchmarkValue="1.0"/>
+    </requires>
+    <costs name="Money" amount="9.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature121:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement121">
+      <measurements name="req121" providedValue="1.0"/>
+    </provides>
+    <requires name="requirement358" satisfiedBy="//@OurObjects.509/@provides.0">
+      <measurements name="req358" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+    </requires>
+    <costs name="Money" amount="8.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature146:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement146" satisfies="//@OurObjects.226">
+      <measurements name="req146" providedValue="1.0"/>
+    </provides>
+    <requires name="requirement165">
+      <measurements name="req165" criticalValue="0.0" benchmarkValue="1.0"/>
+    </requires>
+    <costs name="Money" amount="5.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature151:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement151" satisfies="//@OurObjects.231">
+      <measurements name="req151" providedValue="1.0"/>
+    </provides>
+    <requires name="requirement172">
+      <measurements name="req172" criticalValue="0.0" benchmarkValue="1.0"/>
+    </requires>
+    <costs name="Money" amount="3.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature153:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement153" satisfies="//@OurObjects.233">
+      <measurements name="req153" providedValue="1.0"/>
+    </provides>
+    <requires name="requirement333" satisfiedBy="//@OurObjects.506/@provides.0">
+      <measurements name="req333" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+    </requires>
+    <costs name="Money" amount="2.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature184:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement184" satisfies="//@OurObjects.264">
+      <measurements name="req184" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="2.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature185:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement185">
+      <measurements name="req185" providedValue="1.0"/>
+    </provides>
+    <requires name="requirement373" satisfiedBy="//@OurObjects.512/@provides.0">
+      <measurements name="req373" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+    </requires>
+    <costs name="Money" amount="6.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature195:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement195" satisfies="//@OurObjects.275">
+      <measurements name="req195" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="2.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature197:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement197" satisfies="//@OurObjects.277">
+      <measurements name="req197" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="3.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature200:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement200" satisfies="//@OurObjects.280">
+      <measurements name="req200" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="5.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature207:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement207">
+      <measurements name="req207" providedValue="1.0"/>
+    </provides>
+    <requires name="requirement287" satisfiedBy="//@OurObjects.504/@provides.0">
+      <measurements name="req287" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+    </requires>
+    <costs name="Money" amount="5.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature211:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement211" satisfies="//@OurObjects.291">
+      <measurements name="req211" providedValue="1.0"/>
+    </provides>
+    <requires name="requirement398" satisfiedBy="//@OurObjects.517/@provides.0">
+      <measurements name="req398" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+    </requires>
+    <costs name="Money" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature217:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement217" satisfies="//@OurObjects.297">
+      <measurements name="req217" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature223:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement223">
+      <measurements name="req223" providedValue="1.0"/>
+    </provides>
+    <requires name="requirement328" satisfiedBy="//@OurObjects.505/@provides.0">
+      <measurements name="req328" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+    </requires>
+    <costs name="Money" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature254:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement254" satisfies="//@OurObjects.334">
+      <measurements name="req254" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="2.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature280:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement280" satisfies="//@OurObjects.360">
+      <measurements name="req280" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="7.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature285:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement285" satisfies="//@OurObjects.481/@requires.0">
+      <measurements name="req285" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="8.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature287:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement287" satisfies="//@OurObjects.497/@requires.0">
+      <measurements name="req287" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature328:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement328" satisfies="//@OurObjects.500/@requires.0">
+      <measurements name="req328" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="9.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature333:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement333" satisfies="//@OurObjects.491/@requires.0">
+      <measurements name="req333" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="8.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature334:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement334" satisfies="//@OurObjects.414">
+      <measurements name="req334" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="5.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature350:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement350" satisfies="//@OurObjects.486/@requires.0">
+      <measurements name="req350" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="6.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature358:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement358" satisfies="//@OurObjects.488/@requires.0">
+      <measurements name="req358" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature361:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement361" satisfies="//@OurObjects.441">
+      <measurements name="req361" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="10.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature370:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement370" satisfies="//@OurObjects.450">
+      <measurements name="req370" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="2.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature373:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement373" satisfies="//@OurObjects.493/@requires.0">
+      <measurements name="req373" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="3.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature377:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement377">
+      <measurements name="req377" providedValue="1.0"/>
+    </provides>
+    <requires name="requirement398" satisfiedBy="//@OurObjects.517/@provides.0">
+      <measurements name="req398" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+    </requires>
+    <costs name="Money" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature384:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement384" satisfies="//@OurObjects.482/@requires.0">
+      <measurements name="req384" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="4.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature394:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement394" satisfies="//@OurObjects.485/@requires.0">
+      <measurements name="req394" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="3.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature396:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement396" satisfies="//@OurObjects.476">
+      <measurements name="req396" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="1.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="feature398:1">
+    <provides xsi:type="p:CapabilityProvision" name="requirement398" satisfies="//@OurObjects.513/@requires.0 //@OurObjects.498/@requires.0">
+      <measurements name="req398" providedValue="1.0"/>
+    </provides>
+    <costs name="Money" amount="8.0"/>
+  </OurObjects>
+</p:Scenario>

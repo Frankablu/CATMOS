@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <p:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="ScenarioModel">
-  <OurObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="0" endDate="334" status="-1.80056" colour="Red">
-    <measurements name="weightedSatisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.08088" script="output = 0.035714287 * getGlobalMeasure('customer1satisfaction') + 0.21428572 * getGlobalMeasure('customer2satisfaction') + 0.35714287 * getGlobalMeasure('customer3satisfaction') + 0.25 * getGlobalMeasure('customer4satisfaction') + 0.14285715 * getGlobalMeasure('customer5satisfaction') + 0.25 * getGlobalMeasure('customer6satisfaction') + 0.25 * getGlobalMeasure('customer7satisfaction') + 0.035714287 * getGlobalMeasure('customer8satisfaction') + 0.35714287 * getGlobalMeasure('customer9satisfaction') + 0.14285715 * getGlobalMeasure('customer10satisfaction')"/>
+  <OurObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="0" endDate="334" status="-1.68223" colour="Red">
+    <measurements name="weightedSatisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.16979" script="output = 0.035714287 * getGlobalMeasure('customer1satisfaction') + 0.21428572 * getGlobalMeasure('customer2satisfaction') + 0.35714287 * getGlobalMeasure('customer3satisfaction') + 0.25 * getGlobalMeasure('customer4satisfaction') + 0.14285715 * getGlobalMeasure('customer5satisfaction') + 0.25 * getGlobalMeasure('customer6satisfaction') + 0.25 * getGlobalMeasure('customer7satisfaction') + 0.035714287 * getGlobalMeasure('customer8satisfaction') + 0.35714287 * getGlobalMeasure('customer9satisfaction') + 0.14285715 * getGlobalMeasure('customer10satisfaction')"/>
   </OurObjects>
   <OurObjects xsi:type="p:Capability" name="customer1satisfaction" standAlone="true" startDate="0" endDate="334">
     <measurements name="customer1satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.7" script="output = 0 + 0.3 * getGlobalMeasure(&quot;req100&quot;)+ 0.2 * getGlobalMeasure(&quot;req12&quot;)+ 0.16666667 * getGlobalMeasure(&quot;req48&quot;)+ 0.1 * getGlobalMeasure(&quot;req47&quot;)+ 0.23333333 * getGlobalMeasure(&quot;req98&quot;)"/>
@@ -10,7 +10,7 @@
     <measurements name="customer2satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.413793" script="output = 0 + 0.27586207 * getGlobalMeasure(&quot;req55&quot;)+ 0.27586207 * getGlobalMeasure(&quot;req80&quot;)+ 0.10344828 * getGlobalMeasure(&quot;req60&quot;)+ 0.03448276 * getGlobalMeasure(&quot;req38&quot;)+ 0.31034482 * getGlobalMeasure(&quot;req7&quot;)"/>
   </OurObjects>
   <OurObjects xsi:type="p:Capability" name="customer3satisfaction" standAlone="true" startDate="0" endDate="334">
-    <measurements name="customer3satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.515152" script="output = 0 + 0.21212122 * getGlobalMeasure(&quot;req65&quot;)+ 0.27272728 * getGlobalMeasure(&quot;req98&quot;)+ 0.27272728 * getGlobalMeasure(&quot;req41&quot;)+ 0.060606062 * getGlobalMeasure(&quot;req73&quot;)+ 0.18181819 * getGlobalMeasure(&quot;req83&quot;)"/>
+    <measurements name="customer3satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.727273" script="output = 0 + 0.21212122 * getGlobalMeasure(&quot;req65&quot;)+ 0.27272728 * getGlobalMeasure(&quot;req98&quot;)+ 0.27272728 * getGlobalMeasure(&quot;req41&quot;)+ 0.060606062 * getGlobalMeasure(&quot;req73&quot;)+ 0.18181819 * getGlobalMeasure(&quot;req83&quot;)"/>
   </OurObjects>
   <OurObjects xsi:type="p:Capability" name="customer4satisfaction" standAlone="true" startDate="0" endDate="334">
     <measurements name="customer4satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.24" script="output = 0 + 0.16 * getGlobalMeasure(&quot;req32&quot;)+ 0.2 * getGlobalMeasure(&quot;req98&quot;)+ 0.32 * getGlobalMeasure(&quot;req29&quot;)+ 0.28 * getGlobalMeasure(&quot;req19&quot;)+ 0.04 * getGlobalMeasure(&quot;req64&quot;)"/>
@@ -19,7 +19,7 @@
     <measurements name="customer5satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.3125" script="output = 0 + 0.3125 * getGlobalMeasure(&quot;req64&quot;)+ 0.1875 * getGlobalMeasure(&quot;req19&quot;)+ 0.1875 * getGlobalMeasure(&quot;req14&quot;)+ 0.09375 * getGlobalMeasure(&quot;req19&quot;)+ 0.21875 * getGlobalMeasure(&quot;req52&quot;)"/>
   </OurObjects>
   <OurObjects xsi:type="p:Capability" name="customer6satisfaction" standAlone="true" startDate="0" endDate="334">
-    <measurements name="customer6satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.368421" script="output = 0 + 0.21052632 * getGlobalMeasure(&quot;req6&quot;)+ 0.2631579 * getGlobalMeasure(&quot;req93&quot;)+ 0.10526316 * getGlobalMeasure(&quot;req39&quot;)+ 0.36842105 * getGlobalMeasure(&quot;req34&quot;)+ 0.05263158 * getGlobalMeasure(&quot;req65&quot;)"/>
+    <measurements name="customer6satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.421053" script="output = 0 + 0.21052632 * getGlobalMeasure(&quot;req6&quot;)+ 0.2631579 * getGlobalMeasure(&quot;req93&quot;)+ 0.10526316 * getGlobalMeasure(&quot;req39&quot;)+ 0.36842105 * getGlobalMeasure(&quot;req34&quot;)+ 0.05263158 * getGlobalMeasure(&quot;req65&quot;)"/>
   </OurObjects>
   <OurObjects xsi:type="p:Capability" name="customer7satisfaction" standAlone="true" startDate="0" endDate="334">
     <measurements name="customer7satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.869565" script="output = 0 + 0.13043478 * getGlobalMeasure(&quot;req60&quot;)+ 0.3478261 * getGlobalMeasure(&quot;req38&quot;)+ 0.39130434 * getGlobalMeasure(&quot;req91&quot;)+ 0.04347826 * getGlobalMeasure(&quot;req20&quot;)+ 0.08695652 * getGlobalMeasure(&quot;req74&quot;)"/>
@@ -147,8 +147,8 @@
   <OurObjects xsi:type="p:Capability" name="requirement38" startDate="01/01/2013" endDate="01/12/2013" satisfiedBy="//@OurObjects.111/@provides.0">
     <measurements name="req38" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Capability" name="requirement39" startDate="01/01/2013" endDate="01/12/2013" satisfiedBy="//@OurObjects.112/@provides.0">
-    <measurements name="req39" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  <OurObjects xsi:type="p:Capability" name="requirement39" startDate="01/01/2013" endDate="01/12/2013">
+    <measurements name="req39" criticalValue="0.0" benchmarkValue="1.0"/>
   </OurObjects>
   <OurObjects xsi:type="p:Capability" name="requirement40" startDate="01/01/2013" endDate="01/12/2013">
     <measurements name="req40" criticalValue="0.0" benchmarkValue="1.0"/>
@@ -198,8 +198,8 @@
   <OurObjects xsi:type="p:Capability" name="requirement55" startDate="01/01/2013" endDate="01/12/2013">
     <measurements name="req55" criticalValue="0.0" benchmarkValue="1.0"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Capability" name="requirement56" startDate="01/01/2013" endDate="01/12/2013" satisfiedBy="//@OurObjects.113/@provides.0">
-    <measurements name="req56" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  <OurObjects xsi:type="p:Capability" name="requirement56" startDate="01/01/2013" endDate="01/12/2013">
+    <measurements name="req56" criticalValue="0.0" benchmarkValue="1.0"/>
   </OurObjects>
   <OurObjects xsi:type="p:Capability" name="requirement57" startDate="01/01/2013" endDate="01/12/2013">
     <measurements name="req57" criticalValue="0.0" benchmarkValue="1.0"/>
@@ -210,14 +210,14 @@
   <OurObjects xsi:type="p:Capability" name="requirement59" startDate="01/01/2013" endDate="01/12/2013">
     <measurements name="req59" criticalValue="0.0" benchmarkValue="1.0"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Capability" name="requirement60" startDate="01/01/2013" endDate="01/12/2013" satisfiedBy="//@OurObjects.114/@provides.0">
-    <measurements name="req60" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  <OurObjects xsi:type="p:Capability" name="requirement60" startDate="01/01/2013" endDate="01/12/2013">
+    <measurements name="req60" criticalValue="0.0" benchmarkValue="1.0"/>
   </OurObjects>
   <OurObjects xsi:type="p:Capability" name="requirement61" startDate="01/01/2013" endDate="01/12/2013">
     <measurements name="req61" criticalValue="0.0" benchmarkValue="1.0"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Capability" name="requirement62" startDate="01/01/2013" endDate="01/12/2013" satisfiedBy="//@OurObjects.115/@provides.0">
-    <measurements name="req62" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0"/>
+  <OurObjects xsi:type="p:Capability" name="requirement62" startDate="01/01/2013" endDate="01/12/2013">
+    <measurements name="req62" criticalValue="0.0" benchmarkValue="1.0"/>
   </OurObjects>
   <OurObjects xsi:type="p:Capability" name="requirement63" startDate="01/01/2013" endDate="01/12/2013">
     <measurements name="req63" criticalValue="0.0" benchmarkValue="1.0"/>
@@ -225,8 +225,8 @@
   <OurObjects xsi:type="p:Capability" name="requirement64" startDate="01/01/2013" endDate="01/12/2013">
     <measurements name="req64" criticalValue="0.0" benchmarkValue="1.0"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Capability" name="requirement65" startDate="01/01/2013" endDate="01/12/2013">
-    <measurements name="req65" criticalValue="0.0" benchmarkValue="1.0"/>
+  <OurObjects xsi:type="p:Capability" name="requirement65" startDate="01/01/2013" endDate="01/12/2013" satisfiedBy="//@OurObjects.112/@provides.0">
+    <measurements name="req65" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
   </OurObjects>
   <OurObjects xsi:type="p:Capability" name="requirement66" startDate="01/01/2013" endDate="01/12/2013">
     <measurements name="req66" criticalValue="0.0" benchmarkValue="1.0"/>
@@ -237,8 +237,8 @@
   <OurObjects xsi:type="p:Capability" name="requirement68" startDate="01/01/2013" endDate="01/12/2013">
     <measurements name="req68" criticalValue="0.0" benchmarkValue="1.0"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Capability" name="requirement69" startDate="01/01/2013" endDate="01/12/2013" satisfiedBy="//@OurObjects.116/@provides.0">
-    <measurements name="req69" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  <OurObjects xsi:type="p:Capability" name="requirement69" startDate="01/01/2013" endDate="01/12/2013">
+    <measurements name="req69" criticalValue="0.0" benchmarkValue="1.0"/>
   </OurObjects>
   <OurObjects xsi:type="p:Capability" name="requirement70" startDate="01/01/2013" endDate="01/12/2013">
     <measurements name="req70" criticalValue="0.0" benchmarkValue="1.0"/>
@@ -258,7 +258,7 @@
   <OurObjects xsi:type="p:Capability" name="requirement75" startDate="01/01/2013" endDate="01/12/2013">
     <measurements name="req75" criticalValue="0.0" benchmarkValue="1.0"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Capability" name="requirement76" startDate="01/01/2013" endDate="01/12/2013" satisfiedBy="//@OurObjects.117/@provides.0">
+  <OurObjects xsi:type="p:Capability" name="requirement76" startDate="01/01/2013" endDate="01/12/2013">
     <measurements name="req76" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
   </OurObjects>
   <OurObjects xsi:type="p:Capability" name="requirement77" startDate="01/01/2013" endDate="01/12/2013">
@@ -267,8 +267,8 @@
   <OurObjects xsi:type="p:Capability" name="requirement78" startDate="01/01/2013" endDate="01/12/2013">
     <measurements name="req78" criticalValue="0.0" benchmarkValue="1.0"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Capability" name="requirement79" startDate="01/01/2013" endDate="01/12/2013" satisfiedBy="//@OurObjects.118/@provides.0">
-    <measurements name="req79" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0"/>
+  <OurObjects xsi:type="p:Capability" name="requirement79" startDate="01/01/2013" endDate="01/12/2013">
+    <measurements name="req79" criticalValue="0.0" benchmarkValue="1.0"/>
   </OurObjects>
   <OurObjects xsi:type="p:Capability" name="requirement80" startDate="01/01/2013" endDate="01/12/2013">
     <measurements name="req80" criticalValue="0.0" benchmarkValue="1.0"/>
@@ -279,7 +279,7 @@
   <OurObjects xsi:type="p:Capability" name="requirement82" startDate="01/01/2013" endDate="01/12/2013">
     <measurements name="req82" criticalValue="0.0" benchmarkValue="1.0"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Capability" name="requirement83" startDate="01/01/2013" endDate="01/12/2013" satisfiedBy="//@OurObjects.119/@provides.0">
+  <OurObjects xsi:type="p:Capability" name="requirement83" startDate="01/01/2013" endDate="01/12/2013" satisfiedBy="//@OurObjects.114/@provides.0">
     <measurements name="req83" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
   </OurObjects>
   <OurObjects xsi:type="p:Capability" name="requirement84" startDate="01/01/2013" endDate="01/12/2013">
@@ -303,14 +303,14 @@
   <OurObjects xsi:type="p:Capability" name="requirement90" startDate="01/01/2013" endDate="01/12/2013">
     <measurements name="req90" criticalValue="0.0" benchmarkValue="1.0"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Capability" name="requirement91" startDate="01/01/2013" endDate="01/12/2013" satisfiedBy="//@OurObjects.120/@provides.0">
+  <OurObjects xsi:type="p:Capability" name="requirement91" startDate="01/01/2013" endDate="01/12/2013" satisfiedBy="//@OurObjects.115/@provides.0">
     <measurements name="req91" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
   </OurObjects>
   <OurObjects xsi:type="p:Capability" name="requirement92" startDate="01/01/2013" endDate="01/12/2013">
     <measurements name="req92" criticalValue="0.0" benchmarkValue="1.0"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Capability" name="requirement93" startDate="01/01/2013" endDate="01/12/2013" satisfiedBy="//@OurObjects.121/@provides.0">
-    <measurements name="req93" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  <OurObjects xsi:type="p:Capability" name="requirement93" startDate="01/01/2013" endDate="01/12/2013">
+    <measurements name="req93" criticalValue="0.0" benchmarkValue="1.0"/>
   </OurObjects>
   <OurObjects xsi:type="p:Capability" name="requirement94" startDate="01/01/2013" endDate="01/12/2013">
     <measurements name="req94" criticalValue="0.0" benchmarkValue="1.0"/>
@@ -324,97 +324,52 @@
   <OurObjects xsi:type="p:Capability" name="requirement97" startDate="01/01/2013" endDate="01/12/2013">
     <measurements name="req97" criticalValue="0.0" benchmarkValue="1.0"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Capability" name="requirement98" startDate="01/01/2013" endDate="01/12/2013" satisfiedBy="//@OurObjects.122/@provides.0">
+  <OurObjects xsi:type="p:Capability" name="requirement98" startDate="01/01/2013" endDate="01/12/2013" satisfiedBy="//@OurObjects.116/@provides.0">
     <measurements name="req98" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
   </OurObjects>
   <OurObjects xsi:type="p:Capability" name="requirement99" startDate="01/01/2013" endDate="01/12/2013">
     <measurements name="req99" criticalValue="0.0" benchmarkValue="1.0"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Capability" name="requirement100" startDate="01/01/2013" endDate="01/12/2013" satisfiedBy="//@OurObjects.123/@provides.0">
-    <measurements name="req100" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  <OurObjects xsi:type="p:Capability" name="requirement100" startDate="01/01/2013" endDate="01/12/2013">
+    <measurements name="req100" criticalValue="0.0" benchmarkValue="1.0"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Component" name="feature38:1" startDate="02/03/2013" endDate="30/01/2014">
+  <OurObjects xsi:type="p:Component" name="feature38:1" startDate="31/01/2013" endDate="30/01/2014">
     <provides xsi:type="p:CapabilityProvision" name="requirement38" satisfies="//@OurObjects.48">
       <measurements name="req38" providedValue="1.0"/>
     </provides>
     <costs name="Money" amount="7.0"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Component" name="feature39:1" startDate="02/03/2013" endDate="30/01/2014">
-    <provides xsi:type="p:CapabilityProvision" name="requirement39" satisfies="//@OurObjects.49">
-      <measurements name="req39" providedValue="1.0"/>
+  <OurObjects xsi:type="p:Component" name="feature65:1" startDate="01/01/2013" endDate="31/12/2013">
+    <provides xsi:type="p:CapabilityProvision" name="requirement65" satisfies="//@OurObjects.75">
+      <measurements name="req65" providedValue="1.0"/>
     </provides>
-    <costs name="Money" amount="0.0"/>
-  </OurObjects>
-  <OurObjects xsi:type="p:Component" name="feature56:1" startDate="01/01/2013" endDate="01/12/2013">
-    <provides xsi:type="p:CapabilityProvision" name="requirement56" satisfies="//@OurObjects.66">
-      <measurements name="req56" providedValue="1.0"/>
-    </provides>
-    <costs name="Money" amount="0.0"/>
-  </OurObjects>
-  <OurObjects xsi:type="p:Component" name="feature60:1" startDate="31/01/2013" endDate="31/12/2013">
-    <provides xsi:type="p:CapabilityProvision" name="requirement60" satisfies="//@OurObjects.70">
-      <measurements name="req60" providedValue="1.0"/>
-    </provides>
+    <requires name="requirement76" satisfiedBy="//@OurObjects.113/@provides.0">
+      <measurements name="req76" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+    </requires>
     <costs name="Money" amount="6.0"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Component" name="feature62:1" startDate="31/01/2013" endDate="31/12/2013">
-    <provides xsi:type="p:CapabilityProvision" name="requirement62" satisfies="//@OurObjects.72">
-      <measurements name="req62" providedValue="1.0"/>
-    </provides>
-    <requires name="requirement74">
-      <measurements name="req74" criticalValue="0.0" benchmarkValue="1.0"/>
-    </requires>
-    <costs name="Money" amount="0.0"/>
-  </OurObjects>
-  <OurObjects xsi:type="p:Component" name="feature69:1" startDate="01/01/2013" endDate="01/12/2013">
-    <provides xsi:type="p:CapabilityProvision" name="requirement69" satisfies="//@OurObjects.79">
-      <measurements name="req69" providedValue="1.0"/>
-    </provides>
-    <costs name="Money" amount="0.0"/>
-  </OurObjects>
-  <OurObjects xsi:type="p:Component" name="feature76:1" startDate="01/01/2013" endDate="01/12/2013">
-    <provides xsi:type="p:CapabilityProvision" name="requirement76" satisfies="//@OurObjects.86">
+  <OurObjects xsi:type="p:Component" name="feature76:1" startDate="05/01/2013" endDate="04/01/2014">
+    <provides xsi:type="p:CapabilityProvision" name="requirement76" satisfies="//@OurObjects.112/@requires.0">
       <measurements name="req76" providedValue="1.0"/>
     </provides>
     <costs name="Money" amount="0.0"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Component" name="feature79:1" startDate="01/04/2013" endDate="01/03/2014">
-    <provides xsi:type="p:CapabilityProvision" name="requirement79" satisfies="//@OurObjects.89">
-      <measurements name="req79" providedValue="1.0"/>
-    </provides>
-    <requires name="requirement91">
-      <measurements name="req91" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
-    </requires>
-    <costs name="Money" amount="10.0"/>
-  </OurObjects>
-  <OurObjects xsi:type="p:Component" name="feature83:1" startDate="01/04/2013" endDate="01/03/2014">
+  <OurObjects xsi:type="p:Component" name="feature83:1" startDate="31/01/2013" endDate="30/01/2014">
     <provides xsi:type="p:CapabilityProvision" name="requirement83" satisfies="//@OurObjects.93">
       <measurements name="req83" providedValue="1.0"/>
     </provides>
     <costs name="Money" amount="0.0"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Component" name="feature91:1" startDate="01/01/2013" endDate="01/12/2013">
+  <OurObjects xsi:type="p:Component" name="feature91:1" startDate="02/03/2013" endDate="01/03/2014">
     <provides xsi:type="p:CapabilityProvision" name="requirement91" satisfies="//@OurObjects.101">
       <measurements name="req91" providedValue="1.0"/>
     </provides>
     <costs name="Money" amount="5.0"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Component" name="feature93:1" startDate="01/04/2013" endDate="01/03/2014">
-    <provides xsi:type="p:CapabilityProvision" name="requirement93" satisfies="//@OurObjects.103">
-      <measurements name="req93" providedValue="1.0"/>
-    </provides>
-    <costs name="Money" amount="5.0"/>
-  </OurObjects>
-  <OurObjects xsi:type="p:Component" name="feature98:1" startDate="31/01/2013" endDate="31/12/2013">
+  <OurObjects xsi:type="p:Component" name="feature98:1" startDate="31/01/2013" endDate="30/01/2014">
     <provides xsi:type="p:CapabilityProvision" name="requirement98" satisfies="//@OurObjects.108">
       <measurements name="req98" providedValue="1.0"/>
     </provides>
     <costs name="Money" amount="5.0"/>
-  </OurObjects>
-  <OurObjects xsi:type="p:Component" name="feature100:1" startDate="31/01/2013" endDate="31/12/2013">
-    <provides xsi:type="p:CapabilityProvision" name="requirement100" satisfies="//@OurObjects.110">
-      <measurements name="req100" providedValue="1.0"/>
-    </provides>
-    <costs name="Money" amount="2.0"/>
   </OurObjects>
 </p:Scenario>

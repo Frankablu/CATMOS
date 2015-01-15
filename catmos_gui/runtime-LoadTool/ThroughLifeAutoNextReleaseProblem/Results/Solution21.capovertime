@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="CapOverTime">
+  <p:CapabilityOverTime>
+    <timePeriods startDate="0" endDate="13">
+      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.0" colour="Yellow"/>
+    </timePeriods>
+    <timePeriods startDate="14" endDate="333">
+      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.26614" colour="Yellow"/>
+    </timePeriods>
+    <timePeriods startDate="334" endDate="362">
+      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.26614" colour="Yellow"/>
+    </timePeriods>
+    <timePeriods startDate="363" endDate="363">
+      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.26614" colour="Yellow"/>
+    </timePeriods>
+  </p:CapabilityOverTime>
+  <p:Capability name="customer1satisfaction" standAlone="true" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="customer2satisfaction" standAlone="true" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="customer3satisfaction" standAlone="true" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="customer4satisfaction" standAlone="true" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="customer5satisfaction" standAlone="true" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement1"/>
+  <p:Capability name="requirement46"/>
+  <p:Capability name="requirement1" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement2"/>
+  <p:Capability name="requirement20"/>
+  <p:Capability name="requirement2" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement3"/>
+  <p:Capability name="requirement26"/>
+  <p:Capability name="requirement3" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement4"/>
+  <p:Capability name="requirement37"/>
+  <p:Capability name="requirement4" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement5"/>
+  <p:Capability name="requirement47"/>
+  <p:Capability name="requirement5" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement6"/>
+  <p:Capability name="requirement11"/>
+  <p:Capability name="requirement6" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement7"/>
+  <p:Capability name="requirement40"/>
+  <p:Capability name="requirement7" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement8"/>
+  <p:Capability name="requirement8" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement9"/>
+  <p:Capability name="requirement35"/>
+  <p:Capability name="requirement9" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement10"/>
+  <p:Capability name="requirement10" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement11"/>
+  <p:Capability name="requirement32"/>
+  <p:Capability name="requirement11" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement12"/>
+  <p:Capability name="requirement15"/>
+  <p:Capability name="requirement12" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement13"/>
+  <p:Capability name="requirement49"/>
+  <p:Capability name="requirement13" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement14"/>
+  <p:Capability name="requirement36"/>
+  <p:Capability name="requirement14" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement15"/>
+  <p:Capability name="requirement27"/>
+  <p:Capability name="requirement15" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement16"/>
+  <p:Capability name="requirement16" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement17"/>
+  <p:Capability name="requirement30"/>
+  <p:Capability name="requirement17" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement18"/>
+  <p:Capability name="requirement21"/>
+  <p:Capability name="requirement18" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement19"/>
+  <p:Capability name="requirement26"/>
+  <p:Capability name="requirement19" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement20"/>
+  <p:Capability name="requirement20" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement21"/>
+  <p:Capability name="requirement35"/>
+  <p:Capability name="requirement21" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement22"/>
+  <p:Capability name="requirement22" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement23"/>
+  <p:Capability name="requirement40"/>
+  <p:Capability name="requirement23" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement24"/>
+  <p:Capability name="requirement24" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement25"/>
+  <p:Capability name="requirement25" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement26"/>
+  <p:Capability name="requirement50"/>
+  <p:Capability name="requirement26" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement27"/>
+  <p:Capability name="requirement27" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement28"/>
+  <p:Capability name="requirement28" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement29"/>
+  <p:Capability name="requirement36"/>
+  <p:Capability name="requirement29" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement30"/>
+  <p:Capability name="requirement30" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement31"/>
+  <p:Capability name="requirement31" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement32"/>
+  <p:Capability name="requirement32" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement33"/>
+  <p:Capability name="requirement33" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement34"/>
+  <p:Capability name="requirement34" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement35"/>
+  <p:Capability name="requirement35" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement36"/>
+  <p:Capability name="requirement36" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement37"/>
+  <p:Capability name="requirement37" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement38"/>
+  <p:Capability name="requirement38" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement39"/>
+  <p:Capability name="requirement39" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement40"/>
+  <p:Capability name="requirement40" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement41"/>
+  <p:Capability name="requirement41" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement42"/>
+  <p:Capability name="requirement42" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement43"/>
+  <p:Capability name="requirement43" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement44"/>
+  <p:Capability name="requirement44" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement45"/>
+  <p:Capability name="requirement45" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement46"/>
+  <p:Capability name="requirement46" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement47"/>
+  <p:Capability name="requirement47" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement48"/>
+  <p:Capability name="requirement48" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement49"/>
+  <p:Capability name="requirement49" startDate="01/01/2013" endDate="01/12/2013"/>
+  <p:Capability name="requirement50"/>
+  <p:Capability name="requirement50" startDate="01/01/2013" endDate="01/12/2013"/>
+</xmi:XMI>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="SimpleScenario">
+  <OurObjects xsi:type="p:Capability" name="Overall Score" startDate="0" endDate="1095" decomposes="//@OurObjects.1 //@OurObjects.5 //@OurObjects.11"/>
+  <OurObjects xsi:type="p:Capability" name="Route Clearance" searchObjective="true" startDate="0" endDate="1095" status="-1.93136" colour="Red" decomposes="//@OurObjects.2 //@OurObjects.3 //@OurObjects.4 //@OurObjects.14"/>
+  <OurObjects xsi:type="p:Capability" name="Ground Fire Power" startDate="0" endDate="1095" satisfiedBy="//@OurObjects.19/@provides.0 //@OurObjects.18/@provides.0 //@OurObjects.20/@provides.0"/>
+  <OurObjects xsi:type="p:Capability" name="Hard Target Removal" startDate="0" endDate="1095" satisfiedBy="//@OurObjects.33/@provides.0 //@OurObjects.34/@provides.0 //@OurObjects.21/@provides.0"/>
+  <OurObjects xsi:type="p:Capability" name="Mine Clearance Solution" startDate="0" endDate="1095" satisfiedBy="//@OurObjects.24/@provides.0"/>
+  <OurObjects xsi:type="p:Capability" name="Hold Forward Base" searchObjective="true" startDate="0" endDate="1095" status="-1.89455" colour="Red" decomposes="//@OurObjects.6 //@OurObjects.7"/>
+  <OurObjects xsi:type="p:Capability" name="Establish Forward Base" startDate="0" endDate="1095" satisfiedBy="//@OurObjects.25/@provides.0"/>
+  <OurObjects xsi:type="p:Capability" name="Supply Forward Base" startDate="0" endDate="1095" decomposes="//@OurObjects.8 //@OurObjects.9 //@OurObjects.10"/>
+  <OurObjects xsi:type="p:Capability" name="Supply Water" startDate="0" endDate="1095" satisfiedBy="//@OurObjects.27/@provides.0"/>
+  <OurObjects xsi:type="p:Capability" name="Supply Fuel" startDate="0" endDate="1095" satisfiedBy="//@OurObjects.26/@provides.0"/>
+  <OurObjects xsi:type="p:Capability" name="Supply Goods" startDate="0" endDate="1095" satisfiedBy="//@OurObjects.28/@provides.0"/>
+  <OurObjects xsi:type="p:Capability" name="Prevent Enemy Crossings" searchObjective="true" startDate="0" endDate="1095" status="-1.45808" colour="Red" decomposes="//@OurObjects.12 //@OurObjects.13"/>
+  <OurObjects xsi:type="p:Capability" name="Detect Enemy Crossings" standAlone="true" startDate="0" endDate="1095"/>
+  <OurObjects xsi:type="p:Capability" name="Stopping Enemy Crossings" startDate="0" endDate="1095" decomposes="//@OurObjects.2 //@OurObjects.14 //@OurObjects.17"/>
+  <OurObjects xsi:type="p:Capability" name="Command and Control" startDate="0" endDate="1095" satisfiedBy="//@OurObjects.30/@provides.0 //@OurObjects.31/@provides.0 //@OurObjects.25/@provides.1"/>
+  <OurObjects xsi:type="p:Capability" name="Surveillance" startDate="0" endDate="1095" decomposes="//@OurObjects.16 //@OurObjects.17"/>
+  <OurObjects xsi:type="p:Capability" name="Surveillance Static Targets" startDate="0" endDate="1095" satisfiedBy="//@OurObjects.20/@provides.1 //@OurObjects.34/@provides.1 //@OurObjects.29/@provides.0"/>
+  <OurObjects xsi:type="p:Capability" name="Surveillance Moving Targets" startDate="0" endDate="1095" satisfiedBy="//@OurObjects.29/@provides.1 //@OurObjects.20/@provides.2 //@OurObjects.22/@provides.0 //@OurObjects.34/@provides.2 //@OurObjects.36/@provides.0"/>
+  <OurObjects xsi:type="p:Component" name="Mastiff Fleet:E1,E2,E3" startDate="01/01/2014" endDate="31/12/2016">
+    <provides name="Ground Fire Power" reuse="1" satisfies="//@OurObjects.2"/>
+    <provides name="Troop Transport" reuse="3" satisfies="//@OurObjects.20/@requires.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Vector Fleet:E1,E2" startDate="01/01/2014" endDate="31/12/2016">
+    <provides name="Ground Fire Power" reuse="1" satisfies="//@OurObjects.2"/>
+    <provides name="Troop Transport" reuse="1"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Troop Regiment:E1,E2,E3,E4,E5" startDate="01/01/2014" endDate="31/12/2016">
+    <provides name="Ground Fire Power" reuse="1" satisfies="//@OurObjects.2"/>
+    <provides name="Surveillance Static Targets" reuse="1" satisfies="//@OurObjects.16"/>
+    <provides name="Surveillance Moving Targets" reuse="1" satisfies="//@OurObjects.17"/>
+    <requires name="Troop Transport" satisfiedBy="//@OurObjects.18/@provides.1"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="L118 Light Gun Fleet:E1,E2,E3,E4,E5" startDate="01/01/2014" endDate="31/12/2016">
+    <provides name="Hard Target Removal" reuse="1" satisfies="//@OurObjects.3"/>
+    <requires name="Light Gun Tow" satisfiedBy="//@OurObjects.23/@provides.0"/>
+    <requires name="L118 Service Contract" satisfiedBy="//@OurObjects.32/@provides.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mobile Artillery Battlefield Radar:E1,E2,E3,E4,E5" startDate="01/01/2014" endDate="31/07/2014">
+    <provides name="Surveillance Moving Targets" reuse="1" satisfies="//@OurObjects.17"/>
+    <requires name="Radar Mount" satisfiedBy="//@OurObjects.23/@provides.1"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Land Rover 101 FC Fleet:E1,E2,E3,E4,E5" startDate="01/01/2014" endDate="31/12/2016">
+    <provides name="Light Gun Tow" reuse="1" satisfies="//@OurObjects.21/@requires.0"/>
+    <provides name="Radar Mount" satisfies="//@OurObjects.22/@requires.0 //@OurObjects.36/@requires.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Buffalo Fleet:E1" startDate="01/01/2014" endDate="31/12/2016">
+    <provides name="Mine Clearance Solution" satisfies="//@OurObjects.4"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Engineering Team with Equipment:E1" startDate="01/01/2014" endDate="31/12/2016">
+    <provides name="Establish Forward Base" satisfies="//@OurObjects.6"/>
+    <provides name="Command and Control" reuse="1" satisfies="//@OurObjects.14"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Oshkosh Wheeled Tanker Fuel Fleet:E1,E2" startDate="01/01/2014" endDate="31/12/2016">
+    <provides name="Supply Fuel" reuse="1" satisfies="//@OurObjects.9"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Oshkosh Wheeled Tanker Water Fleet:E1,E2,E3" startDate="01/01/2014" endDate="31/12/2016">
+    <provides name="Supply Water" reuse="1" satisfies="//@OurObjects.8"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Leyland DROPS Fleet:E1,E2,E3,E4" startDate="01/01/2014" endDate="31/12/2016">
+    <provides name="Supply Goods" reuse="1" satisfies="//@OurObjects.10"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Global Hawk:E1" startDate="01/01/2014" endDate="31/12/2016">
+    <provides name="Surveillance Static Targets" reuse="1" satisfies="//@OurObjects.16"/>
+    <provides name="Surveillance Moving Targets" reuse="1" satisfies="//@OurObjects.17"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Reacher Fleet:E1" startDate="01/01/2014" endDate="31/12/2016">
+    <provides name="Command and Control" reuse="1" satisfies="//@OurObjects.14"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Bowman:E1" startDate="01/01/2014" endDate="31/12/2016">
+    <provides name="Command and Control" reuse="1" satisfies="//@OurObjects.14"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="L118 Existing Service Contract:E1" startDate="01/01/2014" endDate="01/01/2015">
+    <provides name="L118 Service Contract" satisfies="//@OurObjects.21/@requires.1"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="L118 Light Gun Fleet New:4" startDate="05/03/2014" endDate="01/03/2029">
+    <provides name="Hard Target Removal" reuse="1" satisfies="//@OurObjects.3"/>
+    <requires name="Light Gun Tow"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="MQ-9 Reaper:1,2,3,4,5" startDate="31/08/2014" endDate="27/08/2029">
+    <provides name="Hard Target Removal" reuse="1" satisfies="//@OurObjects.3"/>
+    <provides name="Surveillance Static Targets" reuse="1" satisfies="//@OurObjects.16"/>
+    <provides name="Surveillance Moving Targets" reuse="1" satisfies="//@OurObjects.17"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="SAS Training:2,3,5" startDate="05/03/2014" endDate="27/02/2039">
+    <upgrades name="Better Training" targetComponent="Troop Regiment" upgrading="//@OurObjects.20"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Mobile Artillery Battlefield Radar Foreign:1,2,3,4,5" startDate="01/12/2014" endDate="27/11/2029">
+    <provides name="Surveillance Moving Targets" reuse="1" satisfies="//@OurObjects.17"/>
+    <requires name="Radar Mount" satisfiedBy="//@OurObjects.23/@provides.1"/>
+  </OurObjects>
+</p:Scenario>

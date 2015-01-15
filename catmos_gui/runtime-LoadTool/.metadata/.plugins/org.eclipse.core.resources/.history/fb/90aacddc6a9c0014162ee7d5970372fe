@@ -1,0 +1,173 @@
+
+import "networkSettings.eol";
+
+var runTool = new Native("org.eclipse.epsilon.examples.tools.RunTool");
+
+var name : String = scenario!RunConfiguration.all().first.name;
+
+//Test Script
+"Testing Scenario File".println();
+
+var allCap : Collection = Capability.all();
+var errorCount : Integer = 0;
+
+for (cap in allCap)
+{
+	var matchingCapProv : Collection = CapabilityProvision.all().select(x|x.name == cap.name);
+	if (matchingCapProv.size() == 0 and cap.standAlone <> true and cap.decomposes.size() == 0)
+	{
+		"Error".println();
+		"No matching capability provision for ".print();
+		cap.println();
+		errorCount = errorCount + 1;
+	}
+	if (matchingCapProv.size() > 0)
+	{
+		if (cap.accumulation <> null)
+		{
+			for (match in matchingCapProv)
+			{
+				if (match.reuse == null)
+				{
+					"Error".println();
+					"The reuse field is not set for ".println();
+					match.println();
+					"It can be used an unlimited amount of times to satisfy".println();
+					cap.println();
+					errorCount = errorCount + 1;
+				}
+			}
+		}
+	}
+}
+
+var providedMeasurements : Collection = CapabilityProvision.all().collect(x|x.measurements).flatten();
+var desiredMeasurements : Collection = Capability.all().select(x|x.isTypeOf(Capability)).collect(x|x.measurements).flatten();
+	
+for (desired in desiredMeasurements)
+{
+	if (providedMeasurements.select(x|x.name == desired.name).size() == 0 and desired.script.size() == 0)
+	{
+		"Error".println();
+		"No matching measurement for ".print();
+		desired.println();
+		"Alternative problem: Missing script".println();
+		
+		errorCount = errorCount + 1;
+	}
+}
+
+if (ThroughLifePlanning.all().size() == 1)
+{
+	for (cap in Scenario.all().first.OurObjects.select(x|x.isTypeOf(Capability)))
+	{
+		if (cap.startDate == null or cap.endDate == null)
+		{
+			"Error".println();
+			"Through Life Planning Is Enabled However".println();
+			cap.println();
+			"does not have a startDate / endDate".println();
+			
+			errorCount = errorCount + 1;
+		}
+	}
+}
+
+//Check Existing Components / Acquirable Components match with
+//the information provided for the Components
+
+var allComponentName : Collection = Component.all().collect(x|x.name).flatten();
+var allExistingAcquirableComponentName : Collection = ComponentU.all().collect(x|x.name).flatten();
+
+var noEntry : Collection = allExistingAcquirableComponentName.excludingAll(allComponentName);
+var noDescription : Collection = allComponentName.excludingAll(allExistingAcquirableComponentName);
+
+for (entry in noEntry)
+{
+	"Error".println();
+	"No entry at the top for".println();
+	entry.println();
+	errorCount = errorCount + 1;
+}
+
+for (entry in noDescription)
+{
+	"Error".println();
+	"No details found for".println();
+	entry.println();
+	errorCount = errorCount + 1;
+}
+
+for (entry in ComponentU.all())
+{
+	if (entry.quantity == null)
+	{
+		"Error".println();
+		"Failed to set quantity for".println();
+		entry.println();
+		errorCount = errorCount + 1;
+	}
+}
+
+var accCap = allCap.select(x|x.accumulation <> null);
+for (capability in accCap)
+{
+	if (accCap.select(x|x.name == capability.name).size() > 1)
+	{
+		"Error".println();
+		"Duplicate capabilities not supported with Accumulation feature".println();
+		capability.println();
+		errorCount = errorCount + 1;
+	}
+}
+
+for (change in CapabilityChange)
+{
+	if (change.name <> "add" and change.name <> "mod" and change.name <> "del")
+	{
+		"Error".println();
+		change.println();
+		"Must either add, mod or del not unknown operation: ".print(); change.name.println();
+		errorCount = errorCount + 1;
+	}
+}
+
+"Tests Complete".println();
+
+if (errorCount > 0)
+{
+	errorCount.print();
+	" errors detected".println();
+	
+	"Aborting Run!".println();
+}
+
+
+//End Test Script
+
+if (errorCount == 0)
+{
+	"Running".println();
+	runTool.getDateTime().println();
+	
+	"Attempting to connect to:".println();
+	getAddress().println();
+	getPort().println();
+	
+	runTool.setupEOL();
+	runTool.eolLoadModel("scenario","/"+name+"/"+name+".scen","ScenarioModel","r");
+	runTool.runEOL("/Tool/Scripts/setupNetworkProblem.eol");
+	
+	runTool.setupEOL();
+	runTool.eolLoadModel("scenario","/"+name+"/"+name+".scen","ScenarioModel","r");
+	runTool.eolLoadModel("internal","/Tool/Models/Internal.internalusage","internalusage","rw");
+	runTool.runEOL("/Tool/Scripts/retrieveParetoFront.eol");
+	
+	runTool.setupEOL();
+	runTool.eolLoadModel("scenario","/"+name+"/"+name+".scen","ScenarioModel","r");
+	runTool.eolLoadModel("internal","/Tool/Models/Internal.internalusage","internalusage","r");
+	runTool.runEOL("/Tool/Scripts/getAllMeasurements.eol");
+	
+	"Done".println();
+	runTool.getDateTime().println();
+}

@@ -1,6 +1,8 @@
 package org.eclipse.epsilon.examples.tools;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -17,7 +19,6 @@ import java.util.Hashtable;
 import java.util.Random;
 import java.io.*;
 import java.net.*;
-
 import java.lang.String;
 
 import jpl.Atom;
@@ -51,6 +52,9 @@ import org.jfree.chart.ChartFrame;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.JFreeChart;
+import org.jfree.chart.axis.CategoryAxis;
+import org.jfree.chart.axis.ValueAxis;
+import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.XYItemRenderer;
@@ -62,10 +66,13 @@ import org.jfree.data.time.Month;
 import org.jfree.data.xy.XYDataset;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
+
 import java.util.GregorianCalendar;
+
 import org.jfree.chart.ChartUtilities.*;
 
 import javax.swing.JFrame;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -158,6 +165,20 @@ public class RunTool {
 		
         //JFreeChart chart = ChartFactory.createScatterPlot("Capability Over Time","Time","Capability",dataSet,PlotOrientation.VERTICAL,true,true,false);
 		JFreeChart chart = ChartFactory.createXYLineChart("Capability Over Time","Time","Capability",dataSet,PlotOrientation.VERTICAL,true,true,false);
+		XYPlot plot = chart.getXYPlot();
+        plot.setBackgroundPaint(Color.white);
+        ValueAxis axis = plot.getDomainAxis();
+        
+        ValueAxis axis2 = plot.getRangeAxis();
+        
+        Font font = new Font("Dialog", Font.PLAIN, 18);
+        axis.setTickLabelFont(font);
+        Font font2 = new Font("Dialog", Font.PLAIN, 18);
+        axis2.setTickLabelFont(font2);
+        
+        Font font3 = new Font("Dialog", Font.PLAIN, 36); 
+        plot.getDomainAxis().setLabelFont(font3);
+        plot.getRangeAxis().setLabelFont(font3);
 		
         File myFile = new File(ResourcesPlugin.getWorkspace().getRoot().getLocation().addTrailingSeparator()+scatterName+"/Results/CapOverTime"+scatterSolutionNumber+".png");
 		
@@ -1724,6 +1745,21 @@ public class RunTool {
 			}
 			
 	        JFreeChart chart = ChartFactory.createScatterPlot("Pareto Front","Capability","Cost",dataSet,PlotOrientation.VERTICAL,true,true,false);
+	        
+	        XYPlot plot = chart.getXYPlot();
+	        plot.setBackgroundPaint(Color.white);
+	        ValueAxis axis = plot.getDomainAxis();
+	        
+	        ValueAxis axis2 = plot.getRangeAxis();
+	        
+	        Font font = new Font("Dialog", Font.PLAIN, 18);
+	        axis.setTickLabelFont(font);
+	        Font font2 = new Font("Dialog", Font.PLAIN, 18);
+	        axis2.setTickLabelFont(font2);
+	        
+	        Font font3 = new Font("Dialog", Font.PLAIN, 36); 
+	        plot.getDomainAxis().setLabelFont(font3);
+	        plot.getRangeAxis().setLabelFont(font3);
 	        
 	        File myFile = new File(ResourcesPlugin.getWorkspace().getRoot().getLocation().addTrailingSeparator()+PFname+"/Results/2DParetoFront.png");
 			

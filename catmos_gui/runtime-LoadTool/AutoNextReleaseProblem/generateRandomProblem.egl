@@ -3,8 +3,8 @@ FindTradeOffs AutoNextReleaseProblem {
 	popSize 200 genCount 50
 	
 	[%
-	var customerCount : Integer = 100;
-	var requirementCount : Integer = 200;
+	var customerCount : Integer = 3;
+	var requirementCount : Integer = 50;
 	
 	for (feature in 1.to(requirementCount))
 	{

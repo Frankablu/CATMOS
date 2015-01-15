@@ -1,0 +1,308 @@
+
+
+FindTradeOffs NextReleaseProblem
+{
+	popSize 10
+	genCount 10
+	
+	ExistingComponent customer1 1
+	ExistingComponent customer2 1
+	ExistingComponent customer3 1
+	ExistingComponent customer4 1
+	
+	AcquirableComponent feature1 1
+	AcquirableComponent feature2 1
+	AcquirableComponent feature3 1
+	AcquirableComponent feature4 1
+	AcquirableComponent feature5 1
+	AcquirableComponent feature6 1
+	AcquirableComponent feature7 1
+	
+	DesireLow "Money"
+}
+
+standAlone
+searchObjective
+Capability overallSatisfaction
+{
+	Measurement weightedSatisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 100.0
+		script "output = getGlobalMeasure(\'customer1satisfaction\') + getGlobalMeasure(\'customer2satisfaction\') + getGlobalMeasure(\'customer3satisfaction\') + getGlobalMeasure(\'customer4satisfaction\')"
+	}
+}
+
+Capability customer1satisfaction
+{
+	Measurement customer1satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Capability customer2satisfaction
+{
+	Measurement customer2satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Capability customer3satisfaction
+{
+	Measurement customer3satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Capability customer4satisfaction
+{
+	Measurement customer4satisfaction
+	{
+		criticalValue 0.0
+		benchmarkValue 1.0
+	}
+}
+
+Component customer1
+{	
+	CapabilityProvision customer1satisfaction
+	{
+		Measurement customer1satisfaction
+		{
+			providedValue 0.0
+			script "output = 0.35 * getMeasure(\"req1\") + 0.65 * getMeasure(\"req2\")"
+		}
+	}
+	
+	Capability requirement1
+	{
+		Measurement req1
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Capability requirement2
+	{
+		Measurement req2
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+}
+
+Component customer2
+{
+	CapabilityProvision customer2satisfaction
+	{
+		Measurement customer2satisfaction
+		{
+			providedValue 0.0
+			script "output = 0.3 * getMeasure(\"req1\") + 0.3 * getMeasure(\"req2\") + 0.4 * getMeasure(\"req3\")"
+		}
+	}
+	
+	Capability requirement1
+	{
+		Measurement req1
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Capability requirement2
+	{
+		Measurement req2
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Capability requirement3
+	{
+		Measurement req3
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+}
+
+Component customer3
+{
+	CapabilityProvision customer3satisfaction
+	{
+		Measurement customer3satisfaction
+		{
+			providedValue 0.0
+			script "output = 0.2 * getMeasure(\"req3\") + 0.4 * getMeasure(\"req4\") + 0.4 * getMeasure(\"req5\")"
+		}
+	}
+	
+	Capability requirement3
+	{
+		Measurement req3
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Capability requirement4
+	{
+		Measurement req4
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Capability requirement5
+	{
+		Measurement req5
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+}
+
+Component customer4
+{
+	CapabilityProvision customer4satisfaction
+	{
+		Measurement customer4satisfaction
+		{
+			providedValue 0.0
+			script "output = 0.2 * getMeasure(\"req5\") + 0.5 * getMeasure(\"req6\") + 0.3 * getMeasure(\"req7\")"
+		}
+	}
+	
+	Capability requirement5
+	{
+		Measurement req5
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Capability requirement6
+	{
+		Measurement req6
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+	
+	Capability requirement7
+	{
+		Measurement req7
+		{
+			criticalValue 0.0
+			benchmarkValue 1.0
+		}
+	}
+}
+
+Component feature1
+{
+	CapabilityProvision requirement1
+	{
+		Measurement req1
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Cost Money 10.0
+}
+
+Component feature2
+{
+	CapabilityProvision requirement2
+	{
+		Measurement req2
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Cost Money 20.0
+}
+
+Component feature3
+{
+	CapabilityProvision requirement3
+	{
+		Measurement req3
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Cost Money 30.0
+}
+
+Component feature4
+{
+	CapabilityProvision requirement4
+	{
+		Measurement req4
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Cost Money 40.0
+}
+
+Component feature5
+{
+	CapabilityProvision requirement5
+	{
+		Measurement req5
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Cost Money 50.0
+}
+
+Component feature6
+{
+	CapabilityProvision requirement6
+	{
+		Measurement req6
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Cost Money 60.0
+}
+
+Component feature7
+{
+	CapabilityProvision requirement7
+	{
+		Measurement req7
+		{
+			providedValue 1.0
+		}
+	}
+	
+	Cost Money 70.0
+}

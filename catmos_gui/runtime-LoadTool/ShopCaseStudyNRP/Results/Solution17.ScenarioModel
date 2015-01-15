@@ -1,37 +1,45 @@
 <?xml version="1.0" encoding="ASCII"?>
 <p:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="ScenarioModel">
-  <OurObjects xsi:type="p:Capability" name="overallSatisfaction" status="1.16" colour="Yellow" decomposes="//@OurObjects.1 //@OurObjects.2">
-    <measurements name="weightedSatisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.16" script="output = 0.6 * getCapability(&quot;Shop Manager&quot;) + 0.4 * getCapability(&quot;Shop Clerk&quot;)"/>
+  <OurObjects xsi:type="p:Capability" name="overallSatisfaction" status="1.464" colour="Yellow" decomposes="//@OurObjects.1 //@OurObjects.2">
+    <measurements name="weightedSatisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.464" script="output = 0.6 * getCapability(&quot;Shop Manager&quot;) + 0.4 * getCapability(&quot;Shop Clerk&quot;)"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Capability" name="Shop Manager" searchObjective="true" status="1.0" colour="Yellow" decomposes="//@OurObjects.3 //@OurObjects.4 //@OurObjects.5">
-    <measurements name="Shop Manager Satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.0" script="output = 0.4 * getCapability(&quot;Monthly Reports&quot;) + 0.2 * getCapability(&quot;Email Notification&quot;) &#xA;        + 0.4 * getCapability(&quot;Automatically Generating Orders&quot;)"/>
+  <OurObjects xsi:type="p:Capability" name="Shop Manager" searchObjective="true" status="1.6" colour="Yellow" decomposes="//@OurObjects.3 //@OurObjects.4 //@OurObjects.5">
+    <measurements name="Shop Manager Satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.6" script="output = 0.4 * getCapability(&quot;Monthly Reports&quot;) + 0.2 * getCapability(&quot;Email Notification&quot;) &#xA;        + 0.4 * getCapability(&quot;Automatically Generating Orders&quot;)"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Capability" name="Shop Clerk" searchObjective="true" status="1.4" colour="Yellow" decomposes="//@OurObjects.6 //@OurObjects.7 //@OurObjects.5">
-    <measurements name="Shop Clerk Satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.4" script="output = 0.5 * getCapability(&quot;Easier Stock Handling&quot;) + 0.4 * getCapability(&quot;Better Userinterface&quot;) &#xA;        + 0.1 * getCapability(&quot;Automatically Generating Orders&quot;)"/>
+  <OurObjects xsi:type="p:Capability" name="Shop Clerk" searchObjective="true" status="1.26" colour="Yellow" decomposes="//@OurObjects.6 //@OurObjects.7 //@OurObjects.5">
+    <measurements name="Shop Clerk Satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.26" script="output = 0.5 * getCapability(&quot;Easier Stock Handling&quot;) + 0.4 * getCapability(&quot;Better Userinterface&quot;) &#xA;        + 0.1 * getCapability(&quot;Automatically Generating Orders&quot;)"/>
   </OurObjects>
   <OurObjects xsi:type="p:Capability" name="Monthly Reports"/>
-  <OurObjects xsi:type="p:Capability" name="Email Notification"/>
-  <OurObjects xsi:type="p:Capability" name="Automatically Generating Orders"/>
+  <OurObjects xsi:type="p:Capability" name="Email Notification" status="2.0" colour="Green" satisfiedBy="//@OurObjects.8/@provides.0"/>
+  <OurObjects xsi:type="p:Capability" name="Automatically Generating Orders" status="2.0" colour="Green" satisfiedBy="//@OurObjects.10/@provides.0"/>
   <OurObjects xsi:type="p:Capability" name="Easier Stock Handling"/>
-  <OurObjects xsi:type="p:Capability" name="Better Userinterface" status="2.0" colour="Green" satisfiedBy="//@OurObjects.10/@provides.0 //@OurObjects.9/@provides.0">
-    <measurements name="User Satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="1.0"/>
+  <OurObjects xsi:type="p:Capability" name="Better Userinterface" status="1.4" colour="Yellow" satisfiedBy="//@OurObjects.12/@provides.0">
+    <measurements name="User Satisfaction" criticalValue="0.0" benchmarkValue="1.0" providedValue="0.4"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Component" name="Stock Management System:1">
-    <provides xsi:type="p:CapabilityProvision" name="Stock Management System" status="2.0" colour="Green" satisfies="//@OurObjects.9/@requires.0"/>
+  <OurObjects xsi:type="p:Component" name="Email Notifications:1">
+    <provides xsi:type="p:CapabilityProvision" name="Email Notification" satisfies="//@OurObjects.4"/>
+    <requires name="Stock Reordering Algorithm" status="2.0" colour="Green" satisfiedBy="//@OurObjects.9/@provides.0"/>
+    <costs name="Money" amount="30.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Stock Reordering Algorithm:1">
+    <provides xsi:type="p:CapabilityProvision" name="Stock Reordering Algorithm" satisfies="//@OurObjects.8/@requires.0 //@OurObjects.10/@requires.0"/>
+    <requires name="Stock Management System" status="2.0" colour="Green" satisfiedBy="//@OurObjects.11/@provides.0"/>
     <costs name="Money" amount="40.0"/>
   </OurObjects>
-  <OurObjects xsi:type="p:Component" name="New GUI:1">
-    <provides xsi:type="p:CapabilityProvision" name="Better Userinterface" satisfies="//@OurObjects.7">
-      <measurements name="User Satisfaction" providedValue="1.0"/>
-    </provides>
-    <requires name="Stock Management System" satisfiedBy="//@OurObjects.8/@provides.0"/>
-    <costs name="Money" amount="25.0"/>
+  <OurObjects xsi:type="p:Component" name="Invoice Generator:1">
+    <provides xsi:type="p:CapabilityProvision" name="Automatically Generating Orders" satisfies="//@OurObjects.5"/>
+    <requires name="Stock Reordering Algorithm" satisfiedBy="//@OurObjects.9/@provides.0"/>
+    <costs name="Money" amount="30.0"/>
+  </OurObjects>
+  <OurObjects xsi:type="p:Component" name="Stock Management System:1">
+    <provides xsi:type="p:CapabilityProvision" name="Stock Management System" satisfies="//@OurObjects.9/@requires.0 //@OurObjects.12/@requires.0"/>
+    <costs name="Money" amount="40.0"/>
   </OurObjects>
   <OurObjects xsi:type="p:Component" name="Pre written GUI:1">
     <provides xsi:type="p:CapabilityProvision" name="Better Userinterface" satisfies="//@OurObjects.7">
       <measurements name="User Satisfaction" providedValue="0.4"/>
     </provides>
-    <requires name="Stock Management System"/>
+    <requires name="Stock Management System" satisfiedBy="//@OurObjects.11/@provides.0"/>
     <costs name="Money" amount="5.0"/>
   </OurObjects>
 </p:Scenario>

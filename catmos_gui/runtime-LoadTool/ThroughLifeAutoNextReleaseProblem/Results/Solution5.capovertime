@@ -4,35 +4,17 @@
     <timePeriods startDate="0" endDate="13">
       <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.0" colour="Yellow"/>
     </timePeriods>
-    <timePeriods startDate="14" endDate="16">
-      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.04888" colour="Yellow"/>
+    <timePeriods startDate="14" endDate="30">
+      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.14649" colour="Yellow"/>
     </timePeriods>
-    <timePeriods startDate="17" endDate="26">
-      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.11499" colour="Yellow"/>
-    </timePeriods>
-    <timePeriods startDate="27" endDate="30">
-      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.11499" colour="Yellow"/>
-    </timePeriods>
-    <timePeriods startDate="31" endDate="47">
-      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.34821" colour="Yellow"/>
-    </timePeriods>
-    <timePeriods startDate="48" endDate="60">
-      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.34821" colour="Yellow"/>
-    </timePeriods>
-    <timePeriods startDate="61" endDate="61">
-      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.41808" colour="Yellow"/>
-    </timePeriods>
-    <timePeriods startDate="62" endDate="90">
-      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.48978" colour="Yellow"/>
-    </timePeriods>
-    <timePeriods startDate="91" endDate="333">
-      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.56799" colour="Yellow"/>
+    <timePeriods startDate="31" endDate="333">
+      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.42934" colour="Yellow"/>
     </timePeriods>
     <timePeriods startDate="334" endDate="362">
-      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.56799" colour="Yellow"/>
+      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.42934" colour="Yellow"/>
     </timePeriods>
     <timePeriods startDate="363" endDate="363">
-      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.56799" colour="Yellow"/>
+      <ourObjects xsi:type="p:Capability" name="overallSatisfaction" searchObjective="true" standAlone="true" startDate="01/01/2013" endDate="01/12/2013" status="1.42934" colour="Yellow"/>
     </timePeriods>
   </p:CapabilityOverTime>
   <p:Capability name="customer1satisfaction" standAlone="true" startDate="01/01/2013" endDate="01/12/2013"/>

@@ -5,7 +5,7 @@ ThroughLifePlanning ThroughLifeAutoNextReleaseProblemHundred
 	genCount 100
 	
 	startDate "01/01/2013"
-	endDate "01/12/2013"
+	endDate "31/12/2013"
 	
 	AcquirableComponent feature1 1 acquisitionTime "20" lifeSpan "inf"
 	AcquirableComponent feature2 1 acquisitionTime "15" lifeSpan "inf"

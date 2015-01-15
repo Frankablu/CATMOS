@@ -3,7 +3,7 @@
 	<section name="CopyToImageDialog">
 		<item value="png" key="CopyToImageDialog.imageFormat"/>
 		<item value="/Users/frankrburton/Documents/phd/git/Thesis" key="CopyToImageDialog.folder"/>
-		<item value="false" key="CopyToImageDialog.overwriteExisting"/>
 		<item value="false" key="CopyToImageDialog.exportToHTML"/>
+		<item value="false" key="CopyToImageDialog.overwriteExisting"/>
 	</section>
 </section>

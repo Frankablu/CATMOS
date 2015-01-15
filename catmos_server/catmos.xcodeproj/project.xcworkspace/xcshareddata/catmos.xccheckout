@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>83DFDB0E-5D93-4AD9-8AB2-21C6AAAA360A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>catmos</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F23C99F04714EB1F3CC767DC1417341CAA2F22C3</key>
+		<string>github.com:Frankablu/CATMOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>catmos_server/catmos.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F23C99F04714EB1F3CC767DC1417341CAA2F22C3</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:Frankablu/CATMOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F23C99F04714EB1F3CC767DC1417341CAA2F22C3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F23C99F04714EB1F3CC767DC1417341CAA2F22C3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>github</string>
+		</dict>
+	</array>
+</dict>
+</plist>
